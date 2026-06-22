@@ -1,37 +1,34 @@
 # Healing Sanctuaries
 
-A collection of 14 cinematic, immersive websites for spiritual healing modalities. Each site features a dark, moody, high-end aesthetic with parallax effects, scroll animations, and elegant typography.
+14 completely unique, cinematic websites for spiritual healing modalities. Each site has its own aesthetic, hero system, navigation, motion personality, color palette, and typography — NO cookie-cutter templates.
 
 ## Project Structure
 
 ```
 healing-sanctuaries/
-├── style.css              # Shared cinematic template styles
-├── script.js              # Shared JavaScript (preloader, parallax, nav)
-├── README.md              # This file
+├── README.md
 ├── .gitignore
 │
-├── 01-craniosacral/       # Craniosacral Therapy — Deep Teal
-├── 02-daode/              # Daode Xin Xi — Jade Green
-├── 03-kabiraji/           # Kabiraji Healing — Earth Brown
-├── 04-curanderismo/       # Curanderismo — Cardinal Red
-├── 05-labyrinth/          # Labyrinth Walking — Mystical Purple
-├── 06-johrei/             # Johrei — Gold
-├── 07-enochian/           # Enochian Healing — Deep Midnight
-├── 08-chronokinesis/      # Chronokinesis Healing — Burnt Orange
-├── 09-zero-point/         # Zero-Point Field Healing — Electric Cyan
-├── 10-sufi-dhikr/         # Sufi Dhikr Healing — Deep Crimson
-├── 11-merkaba/            # Merkaba Light Body — Amethyst Purple
-├── 12-necromantic/        # Necromantic Healing — Shadow Grey
-├── 13-geomancy/           # Geomancy — Earthen Brown
-└── 14-tulpa/              # Tulpa/Egregore Healing — Magenta Pink
+├── 01-craniosacral/       # Wabi-Sabi — "The Silence Before"
+├── 02-daode/              # Sacred Geometry — "The Gesture"
+├── 03-kabiraji/           # Organic Morphic — "The Reveal"
+├── 04-curanderismo/       # Maximalist Collage — "The Chaos"
+├── 05-labyrinth/          # Film Noir Digital — "The Tension"
+├── 06-johrei/             # Quiet Luxury — "The Weight"
+├── 07-enochian/           # Dark Luxury — "The Command"
+├── 08-chronokinesis/      # Retrofuturism — "The Countdown"
+├── 09-zero-point/         # Deep Ocean — "The Stillness"
+├── 10-sufi-dhikr/         # Mythological Archive — "The Ritual"
+├── 11-merkaba/            # Sacred Geometry — "The Vessel"
+├── 12-necromantic/        # Film Noir Digital — "The Shadow"
+├── 13-geomancy/           # Raw Earth — "The Foundation"
+└── 14-tulpa/              # Kinetic Typography — "The Manifestation"
 ```
 
 Each modality folder contains:
-- `index.html` — Complete single-page website
-- `style.css` — Modality-specific accent color
-- `script.js` — Links to shared script
-- `images/` — Placeholder folder for generated images
+- `index.html` — Complete single-page website (self-contained, no shared templates)
+- `style.css` or `styles.css` — Modality-specific styles
+- `script.js` — Modality-specific JavaScript
 - `image-prompts.txt` — 20 cinematic AI image prompts
 
 ## Modalities
@@ -71,21 +68,35 @@ Each modality folder contains:
 
 ## Design Features
 
-- **Dark Cinematic Aesthetic** — Deep blacks, charcoal backgrounds, golden accents
-- **Preloader** — Counter animation on page load
-- **Sticky Navigation** — Anchor links with mix-blend-mode
-- **Parallax Effects** — Hero background parallax on scroll
-- **Scroll Reveals** — Fade-in animations triggered by scroll
-- **Hover Effects** — Card tilts, image zooms, underline transitions
-- **Responsive** — Mobile, tablet, and desktop layouts
-- **Reduced Motion** — Respects `prefers-reduced-motion`
+Each site is completely unique with its own creative DNA:
+
+### Unique Aesthetics
+- Wabi-Sabi, Sacred Geometry, Organic Morphic, Maximalist Collage
+- Film Noir Digital, Quiet Luxury, Dark Luxury, Retrofuturism
+- Deep Ocean, Mythological Archive, Raw Earth, Kinetic Typography
+
+### Unique Hero Types
+- The Silence, The Gesture, The Reveal, The Chaos
+- The Tension, The Weight, The Command, The Countdown
+- The Stillness, The Ritual, The Vessel, The Shadow
+- The Foundation, The Manifestation
+
+### Unique Navigation Systems
+- None (scroll only), Circular Mandala, Vertical Text, Hidden
+- Side Data Labels, Bottom Bar, Circular Edge, None visible
+
+### Unique Motion Personalities
+- Meditative (1.8s), Flowing (1.6s), Mechanical (1.0s)
+- Pulsing (2.0s), Glitch (0.8s), Whirling (1.4s)
 
 ## Tech Stack
 
 - HTML5 (semantic)
-- CSS3 (custom properties, grid, flexbox)
+- CSS3 (custom properties, grid, flexbox, animations)
 - Vanilla JavaScript (no dependencies)
-- Google Fonts (Playfair Display, Lora)
+- Google Fonts (unique per modality)
+- SVG (inline artwork and animations)
+- Canvas (particle effects, backgrounds)
 
 ## Image Prompts
 
