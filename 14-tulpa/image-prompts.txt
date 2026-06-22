@@ -97,3 +97,23 @@ Prompt 20: Final image of complete tulpa creation, separate yet connected, elect
 Style: Cinematic photography, surreal
 Mood: Complete creation, powerful, electric
 Lighting: Full neon illumination
+
+Prompt 21: Five abstract pillars of light in violet and magenta, each a different sacred geometry
+Style: Abstract photography, geometric
+Mood: Foundational, electric, wise
+Lighting: Multi-source neon
+
+Prompt 22: Minimal sanctuary interior, white walls, single magenta thread on ceiling
+Style: Interior photography, minimal
+Mood: Sacred, quiet, electric
+Lighting: Soft ambient with magenta accent
+
+Prompt 23: Person in meditation surrounded by floating thought-entity forms, magenta glow
+Style: Conceptual photography, spiritual
+Mood: Courageous, electric, transformative
+Lighting: Inner glow magenta
+
+Prompt 24: Collective egregore visualization, massive magenta web connecting people
+Style: Digital photography, network
+Mood: Vast, hidden, electric
+Lighting: Network glow magenta

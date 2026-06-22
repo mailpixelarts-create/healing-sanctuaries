@@ -222,7 +222,7 @@ body {
 }
 
 .hero-title {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .title-line {
@@ -238,6 +238,17 @@ body {
 .title-accent {
     font-weight: 600;
     color: var(--burnt-orange);
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    color: rgba(245, 240, 232, 0.65);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
 }
 
 .hero-counter {
@@ -611,6 +622,8 @@ body {
     font-size: 1.1rem;
     color: rgba(245, 240, 232, 0.7);
     margin-bottom: 4rem;
+    max-width: 700px;
+    line-height: 1.8;
 }
 
 .timeline-container {
@@ -704,12 +717,13 @@ body {
     font-size: 0.95rem;
     color: rgba(245, 240, 232, 0.7);
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .timeline-data {
     display: flex;
     gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .data-tag {
@@ -721,6 +735,352 @@ body {
     border: 1px solid rgba(255, 107, 53, 0.3);
     border-radius: 2px;
     color: var(--burnt-orange);
+}
+
+/* ═══════════════════════════════════════
+   PHILOSOPHY SECTION
+   ═══════════════════════════════════════ */
+
+.philosophy-section {
+    padding: 8rem 4rem;
+    background: var(--warm-cream);
+}
+
+.philosophy-section .section-title {
+    color: var(--deep-charcoal);
+}
+
+.philosophy-intro {
+    font-size: 1.1rem;
+    color: var(--soft-charcoal);
+    max-width: 700px;
+    margin-bottom: 4rem;
+    line-height: 1.8;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pillar-card {
+    padding: 2.5rem;
+    background: white;
+    border: 1px solid rgba(42, 42, 42, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--burnt-orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.pillar-card:hover::before {
+    transform: scaleX(1);
+}
+
+.pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(42, 42, 42, 0.1);
+}
+
+.pillar-number {
+    font-family: var(--font-technical);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: rgba(42, 42, 42, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+.pillar-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--burnt-orange);
+    margin-bottom: 1.5rem;
+}
+
+.pillar-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.pillar-title {
+    font-family: var(--font-technical);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    color: var(--deep-charcoal);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.pillar-text {
+    font-size: 0.9rem;
+    color: var(--soft-charcoal);
+    line-height: 1.8;
+}
+
+/* ═══════════════════════════════════════
+   TESTIMONIALS SECTION
+   ═══════════════════════════════════════ */
+
+.testimonials-section {
+    padding: 8rem 4rem;
+    background: var(--deep-charcoal);
+    color: var(--warm-cream);
+}
+
+.testimonials-section .section-title {
+    color: var(--warm-cream);
+}
+
+.testimonials-intro {
+    font-size: 1.1rem;
+    color: rgba(245, 240, 232, 0.7);
+    max-width: 600px;
+    margin-bottom: 4rem;
+    line-height: 1.7;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial-card {
+    padding: 2.5rem;
+    background: rgba(245, 240, 232, 0.04);
+    border: 1px solid rgba(255, 107, 53, 0.15);
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card:hover {
+    border-color: var(--burnt-orange);
+    background: rgba(255, 107, 53, 0.06);
+    transform: translateY(-4px);
+}
+
+.testimonial-quote {
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--burnt-orange);
+    opacity: 0.4;
+    margin-bottom: -1rem;
+    height: 2rem;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    color: rgba(245, 240, 232, 0.8);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 107, 53, 0.15);
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.author-name {
+    font-family: var(--font-technical);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--warm-cream);
+}
+
+.author-detail {
+    font-family: var(--font-technical);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: rgba(245, 240, 232, 0.5);
+}
+
+.testimonial-session {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
+
+.session-label {
+    font-family: var(--font-technical);
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    color: rgba(245, 240, 232, 0.4);
+}
+
+.session-value {
+    font-family: var(--font-technical);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--burnt-orange);
+}
+
+/* ═══════════════════════════════════════
+   JOURNEY SECTION
+   ═══════════════════════════════════════ */
+
+.journey-section {
+    padding: 8rem 4rem;
+    background: var(--cream-dark);
+}
+
+.journey-section .section-title {
+    color: var(--deep-charcoal);
+}
+
+.journey-intro {
+    font-size: 1.1rem;
+    color: var(--soft-charcoal);
+    max-width: 650px;
+    margin-bottom: 4rem;
+    line-height: 1.8;
+}
+
+.journey-steps {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.journey-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.journey-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-connector {
+    position: absolute;
+    left: 24px;
+    top: 50px;
+    bottom: -50px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--burnt-orange), rgba(255, 107, 53, 0.2));
+}
+
+.journey-step:last-child .step-connector {
+    display: none;
+}
+
+.step-marker {
+    position: relative;
+    width: 48px;
+    min-width: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.step-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--burnt-orange);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    font-family: var(--font-technical);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: rgba(42, 42, 42, 0.4);
+}
+
+.step-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background: var(--warm-cream);
+    border: 1px solid rgba(42, 42, 42, 0.08);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.step-content:hover {
+    border-color: var(--burnt-orange);
+    box-shadow: 0 8px 30px rgba(42, 42, 42, 0.08);
+}
+
+.step-phase {
+    font-family: var(--font-technical);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--burnt-orange);
+    margin-bottom: 0.75rem;
+}
+
+.step-title {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--deep-charcoal);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.step-text {
+    font-size: 0.95rem;
+    color: var(--soft-charcoal);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.step-data {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.journey-note {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    background: rgba(255, 107, 53, 0.06);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    border-radius: 4px;
+}
+
+.note-label {
+    font-family: var(--font-technical);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--burnt-orange);
+    margin-bottom: 0.75rem;
+}
+
+.note-text {
+    font-size: 0.9rem;
+    color: var(--soft-charcoal);
+    line-height: 1.8;
 }
 
 .quote-section {
@@ -1058,6 +1418,12 @@ body {
     color: rgba(245, 240, 232, 0.4);
 }
 
+@media (max-width: 1200px) {
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
     .temporal-split {
         grid-template-columns: 1fr;
@@ -1078,6 +1444,10 @@ body {
 
     .coordinates-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1140,6 +1510,33 @@ body {
 
     .timeline-item {
         padding-left: 60px;
+    }
+
+    .philosophy-section {
+        padding: 4rem 2rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-section {
+        padding: 4rem 2rem;
+    }
+
+    .journey-section {
+        padding: 4rem 2rem;
+    }
+
+    .journey-step {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .step-connector {
+        left: 24px;
+        top: 50px;
+        bottom: -30px;
     }
 
     .quote-section {

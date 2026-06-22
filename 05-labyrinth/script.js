@@ -116,10 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const aboutTitle = document.querySelector('.about-title');
         const aboutDescription = document.querySelector('.about-description');
         const aboutStats = document.querySelector('.about-stats');
+        const aboutAdditional = document.querySelector('.about-additional');
         
         if (aboutTitle) aboutTitle.classList.add('fade-in');
         if (aboutDescription) aboutDescription.classList.add('fade-in');
         if (aboutStats) aboutStats.classList.add('fade-in');
+        if (aboutAdditional) aboutAdditional.classList.add('fade-in');
 
         // Practices
         document.querySelectorAll('.practice-card').forEach((card, index) => {
@@ -127,9 +129,42 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('fade-in');
         });
 
+        // Philosophy
+        document.querySelectorAll('.pillar').forEach((pillar, index) => {
+            pillar.style.transitionDelay = `${index * 0.15}s`;
+            pillar.classList.add('fade-in');
+        });
+
+        const philosophyIntro = document.querySelector('.philosophy-intro');
+        if (philosophyIntro) philosophyIntro.classList.add('fade-in');
+
+        // Testimonials
+        document.querySelectorAll('.testimonial-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.2}s`;
+            card.classList.add('fade-in');
+        });
+
+        const testimonialsIntro = document.querySelector('.testimonials-intro');
+        if (testimonialsIntro) testimonialsIntro.classList.add('fade-in');
+
+        // Journey
+        document.querySelectorAll('.journey-step').forEach((step, index) => {
+            step.style.transitionDelay = `${index * 0.1}s`;
+            step.classList.add('fade-in');
+        });
+
+        const journeyIntro = document.querySelector('.journey-intro');
+        if (journeyIntro) journeyIntro.classList.add('fade-in');
+
+        const journeyPractical = document.querySelector('.journey-practical');
+        if (journeyPractical) journeyPractical.classList.add('fade-in');
+
         // Quote
         const quoteText = document.querySelector('.quote-text');
         if (quoteText) quoteText.classList.add('fade-in');
+
+        const quoteSecondary = document.querySelector('.quote-secondary');
+        if (quoteSecondary) quoteSecondary.classList.add('fade-in');
 
         // Arrival
         const arrivalTitle = document.querySelector('.arrival-title');

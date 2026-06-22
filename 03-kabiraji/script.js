@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- SCROLL REVEAL ---
   const revealElements = document.querySelectorAll(
     '.about-inner, .sacred-heading, .section-label, .practice, ' +
+    '.philosophy-heading, .philosophy-intro, .pillar, ' +
+    '.testimonials-heading, .testimonial-card, ' +
+    '.journey-heading, .journey-intro, .journey-step, .journey-note, ' +
     '.quote-translation, .arrival-details, .footer-inner'
   );
 
@@ -78,6 +81,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const vtSection = document.querySelector('.vertical-text');
   if (vtSection) vtObserver.observe(vtSection);
+
+  // --- PILLAR KANJI STAGGER ---
+  const pillarKanjis = document.querySelectorAll('.pillar-kanji');
+
+  const pillarObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const kanji = entry.target.querySelector('.pillar-kanji');
+        if (kanji) {
+          kanji.style.transition = 'opacity 1.6s ease 0.3s';
+          kanji.style.opacity = '0.35';
+        }
+        pillarObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  document.querySelectorAll('.pillar').forEach(p => pillarObserver.observe(p));
+
+  // --- STEP NUMBER STAGGER ---
+  const stepObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'opacity 1.6s ease';
+        entry.target.style.opacity = '1';
+        stepObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  document.querySelectorAll('.step-number').forEach(step => {
+    step.style.opacity = '0';
+    stepObserver.observe(step);
+  });
 
   // --- PARALLAX BLOBS ---
   let ticking = false;

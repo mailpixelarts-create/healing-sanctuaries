@@ -95,7 +95,7 @@ function initCosmicCanvas() {
         ctx.stroke();
     }
 
-    function drawOrbit Rings(time) {
+    function drawOrbitRings(time) {
         const centerX = canvas.width * 0.7;
         const centerY = canvas.height * 0.3;
 
@@ -303,7 +303,10 @@ function initScrollAnimations() {
     const animateElements = document.querySelectorAll(
         '.section-label, .section-title, .temporal-intro, .temporal-text, ' +
         '.temporal-stats, .timeline-item, .quote-container, .coord-card, ' +
-        '.address-card, .cta-container'
+        '.address-card, .cta-container, ' +
+        '.philosophy-intro, .pillar-card, ' +
+        '.testimonials-intro, .testimonial-card, ' +
+        '.journey-intro, .journey-step, .journey-note'
     );
 
     animateElements.forEach(el => {
@@ -325,6 +328,21 @@ function initScrollAnimations() {
     const timelineItems = document.querySelectorAll('.timeline-item');
     timelineItems.forEach((item, index) => {
         item.style.transitionDelay = `${index * 0.2}s`;
+    });
+
+    const pillarCards = document.querySelectorAll('.pillar-card');
+    pillarCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.12}s`;
+    });
+
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.15}s`;
+    });
+
+    const journeySteps = document.querySelectorAll('.journey-step');
+    journeySteps.forEach((step, index) => {
+        step.style.transitionDelay = `${index * 0.15}s`;
     });
 
     const coordCards = document.querySelectorAll('.coord-card');

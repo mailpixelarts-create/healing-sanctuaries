@@ -381,6 +381,9 @@ input { font-family: inherit; }
 
 .about__label,
 .sacred__label,
+.philosophy__label,
+.testimonials__label,
+.journey__label,
 .arrival__label {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -393,6 +396,9 @@ input { font-family: inherit; }
 
 .about__heading,
 .sacred__heading,
+.philosophy__heading,
+.testimonials__heading,
+.journey__heading,
 .arrival__heading {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 5vw, 3.8rem);
@@ -414,6 +420,39 @@ input { font-family: inherit; }
   line-height: 1.85;
   color: var(--sand);
   font-weight: 400;
+}
+
+.about__details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--earth-deep);
+  border-bottom: 1px solid var(--earth-deep);
+}
+
+.about__detail {
+  text-align: center;
+}
+
+.about__detail-num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--earth-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.about__detail-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--stone-light);
+  line-height: 1.5;
 }
 
 .about__notes {
@@ -488,6 +527,14 @@ input { font-family: inherit; }
 .sacred__inner {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.sacred__intro {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--sand);
+  max-width: 700px;
+  margin-bottom: 4rem;
 }
 
 .sacred__grid {
@@ -653,6 +700,305 @@ input { font-family: inherit; }
   color: var(--sand-dark);
   font-weight: 400;
   line-height: 1.65;
+  margin-bottom: 1.2rem;
+}
+
+.sacred__card-desc {
+  font-size: 0.85rem;
+  color: var(--stone-light);
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.sacred__note {
+  margin-top: 4rem;
+  padding: 1.5rem 2rem;
+  border-left: 1px solid var(--earth-deep);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.sacred__note-marker {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--earth);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.sacred__note-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--sand-dark);
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  font-style: italic;
+}
+
+/* ---- PHILOSOPHY ---- */
+.philosophy {
+  position: relative;
+  z-index: 2;
+  padding: 10rem 2rem 12rem;
+}
+
+.philosophy__bg-texture {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--soil) 0%, var(--soil-mid) 40%, var(--soil-mid) 60%, var(--soil) 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+.philosophy__inner {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.philosophy__intro {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--sand);
+  max-width: 700px;
+  margin-bottom: 5rem;
+}
+
+.philosophy__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.philosophy__pillar {
+  display: grid;
+  grid-template-columns: 60px 1px 1fr;
+  gap: 2.5rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--earth-deep);
+}
+
+.philosophy__pillar:last-child {
+  border-bottom: 1px solid var(--earth-deep);
+}
+
+.philosophy__pillar-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--earth);
+  padding-top: 0.3rem;
+}
+
+.philosophy__pillar-line {
+  width: 1px;
+  height: 100%;
+  background: var(--earth-deep);
+}
+
+.philosophy__pillar-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.philosophy__pillar-text {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--sand);
+  font-weight: 400;
+}
+
+/* ---- TESTIMONIALS ---- */
+.testimonials {
+  position: relative;
+  z-index: 2;
+  padding: 10rem 2rem 12rem;
+  background: var(--soil);
+}
+
+.testimonials__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.testimonials__card {
+  padding: 2.5rem 2rem;
+  background: linear-gradient(180deg, var(--soil-mid) 0%, var(--soil) 100%);
+  border: 1px solid var(--earth-deep);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.4s var(--ease-precise);
+}
+
+.testimonials__card:hover {
+  border-color: var(--earth);
+}
+
+.testimonials__card-line {
+  width: 30px;
+  height: 1px;
+  background: var(--earth);
+  margin-bottom: 2rem;
+}
+
+.testimonials__quote {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--sand);
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.testimonials__author {
+  border-top: 1px solid var(--earth-deep);
+  padding-top: 1.5rem;
+}
+
+.testimonials__author-name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.3rem;
+}
+
+.testimonials__author-detail {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--stone-light);
+  letter-spacing: 0.05em;
+  font-weight: 300;
+}
+
+/* ---- JOURNEY ---- */
+.journey {
+  position: relative;
+  z-index: 2;
+  padding: 10rem 2rem 12rem;
+}
+
+.journey__bg-texture {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--soil) 0%, var(--soil-mid) 30%, var(--soil-mid) 70%, var(--soil) 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.07'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+.journey__inner {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.journey__intro {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--sand);
+  max-width: 650px;
+  margin-bottom: 5rem;
+}
+
+.journey__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.journey__step {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 2.5rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--earth-deep);
+}
+
+.journey__step:last-child {
+  border-bottom: 1px solid var(--earth-deep);
+}
+
+.journey__step-num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journey__step-num-text {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--earth);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.journey__step-line {
+  width: 1px;
+  flex: 1;
+  background: var(--earth-deep);
+}
+
+.journey__step-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.journey__step-text {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--sand);
+  font-weight: 400;
+}
+
+.journey__note {
+  margin-top: 4rem;
+  padding: 1.5rem 2rem;
+  border-left: 1px solid var(--earth-deep);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.journey__note-marker {
+  color: var(--earth);
+  font-size: 0.9rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.journey__note-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--sand-dark);
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  font-style: italic;
 }
 
 /* ---- QUOTE ---- */
@@ -743,13 +1089,21 @@ input { font-family: inherit; }
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: var(--cream);
+}
+
+.arrival__intro {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--sand);
+  text-align: left;
+  margin-bottom: 3rem;
 }
 
 .arrival__coords {
   text-align: left;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   padding: 1.5rem;
   border: 1px solid var(--earth-deep);
   background: var(--soil-mid);
@@ -771,7 +1125,7 @@ input { font-family: inherit; }
   font-size: 0.65rem;
   letter-spacing: 0.15em;
   color: var(--earth);
-  width: 40px;
+  width: 50px;
   flex-shrink: 0;
 }
 
@@ -780,6 +1134,42 @@ input { font-family: inherit; }
   font-size: 0.75rem;
   color: var(--sand);
   letter-spacing: 0.03em;
+}
+
+.arrival__details {
+  text-align: left;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border: 1px solid var(--earth-deep);
+  background: var(--soil-mid);
+}
+
+.arrival__detail {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--earth-deep);
+}
+
+.arrival__detail:last-child {
+  border-bottom: none;
+}
+
+.arrival__detail-key {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--earth);
+  width: 100px;
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+}
+
+.arrival__detail-val {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  color: var(--sand);
+  line-height: 1.5;
 }
 
 .arrival__form {
@@ -921,7 +1311,16 @@ input { font-family: inherit; }
   letter-spacing: 0.05em;
 }
 
-/* ---- RESPONSIVE ---- */
+.footer__coords {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--stone-dark);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+}
+
+/* ---- SITE FOOTER ---- */
 .site-footer {
   text-align: center;
   padding: 3rem 2rem;
@@ -936,15 +1335,57 @@ input { font-family: inherit; }
   margin: 0.3rem 0;
 }
 
+/* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+  .philosophy__pillar {
+    grid-template-columns: 40px 1px 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about__columns {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
+  .about__details {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .sacred__grid {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+
+  .philosophy__pillar {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .philosophy__pillar-line {
+    display: none;
+  }
+
+  .journey__step {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .journey__step-num {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .journey__step-line {
+    width: 40px;
+    height: 1px;
   }
 
   .scroll-marker {
@@ -964,6 +1405,18 @@ input { font-family: inherit; }
   }
 
   .sacred {
+    padding: 8rem 1.5rem;
+  }
+
+  .philosophy {
+    padding: 8rem 1.5rem;
+  }
+
+  .testimonials {
+    padding: 8rem 1.5rem;
+  }
+
+  .journey {
     padding: 8rem 1.5rem;
   }
 
@@ -988,6 +1441,11 @@ input { font-family: inherit; }
     flex-direction: column;
     gap: 0.3rem;
   }
+
+  .arrival__detail {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -997,7 +1455,14 @@ input { font-family: inherit; }
 
   .about__heading,
   .sacred__heading,
+  .philosophy__heading,
+  .testimonials__heading,
+  .journey__heading,
   .arrival__heading {
     font-size: 2rem;
+  }
+
+  .about__detail-num {
+    font-size: 1.5rem;
   }
 }

@@ -117,7 +117,9 @@
     'LEY-072',
     'NODE PRIMARY',
     'DEPTH 3.2m',
-    'ALIGNMENT 97.4%'
+    'ALIGNMENT 97.4%',
+    'EARTH MEMORY',
+    'STONE WITNESS'
   ];
 
   function updateScrollMarker() {
@@ -153,6 +155,32 @@
   }
 
   window.addEventListener('scroll', updateNav, { passive: true });
+
+  // ---- ACTIVE NAV HIGHLIGHT ----
+  const navLabels = document.querySelectorAll('.nav__label');
+  const sections = ['about', 'sacred', 'philosophy', 'testimonials', 'journey', 'arrival'];
+
+  function updateActiveNav() {
+    const scrollTop = window.pageYOffset + window.innerHeight * 0.4;
+
+    let activeIndex = 0;
+    sections.forEach((id, i) => {
+      const section = document.getElementById(id);
+      if (section && section.offsetTop <= scrollTop) {
+        activeIndex = i;
+      }
+    });
+
+    navLabels.forEach((label, i) => {
+      if (i === activeIndex) {
+        label.style.opacity = '1';
+      } else {
+        label.style.opacity = '';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
 
   // ---- INTERSECTION OBSERVER ----
   const observerOptions = {

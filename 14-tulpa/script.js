@@ -5,7 +5,7 @@
   // HERO PARTICLES — floating thought-form words
   // ═══════════════════════════════════════════
   const heroParticles = document.getElementById('hero-particles');
-  const thoughtWords = ['THINK', 'FORM', 'SHAPE', 'CREATE', 'MIND', 'TULPA', 'EGEREGO', 'SOUL', 'VOID', 'MANIFEST', 'INTENT', 'WILL'];
+  const thoughtWords = ['THINK', 'FORM', 'SHAPE', 'CREATE', 'MIND', 'TULPA', 'EGREGORE', 'SOUL', 'VOID', 'MANIFEST', 'INTENT', 'WILL', 'WEAVE', 'BUILD', 'DREAM'];
 
   function createHeroParticle() {
     const el = document.createElement('span');
@@ -28,6 +28,9 @@
   const kineticWords = document.querySelectorAll('.kinetic-word');
   const aboutTexts = document.querySelectorAll('.about-text .word');
   const practiceCards = document.querySelectorAll('.practice-card');
+  const pillars = document.querySelectorAll('.pillar');
+  const testimonials = document.querySelectorAll('.testimonial-card');
+  const journeySteps = document.querySelectorAll('.journey-step');
 
   const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
 
@@ -75,6 +78,48 @@
     card.style.transform = 'translateY(40px)';
     card.style.transition = `all 0.6s cubic-bezier(0.23, 1, 0.32, 1) ${i * 0.15}s`;
     practiceObserver.observe(card);
+  });
+
+  // Philosophy pillars stagger
+  const pillarObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  pillars.forEach((pillar, i) => {
+    pillar.style.transitionDelay = `${i * 0.12}s`;
+    pillarObserver.observe(pillar);
+  });
+
+  // Testimonial cards stagger
+  const testimonialObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  testimonials.forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.15}s`;
+    testimonialObserver.observe(card);
+  });
+
+  // Journey steps stagger
+  const journeyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  journeySteps.forEach((step, i) => {
+    step.style.transitionDelay = `${i * 0.15}s`;
+    journeyObserver.observe(step);
   });
 
   // ═══════════════════════════════════════════

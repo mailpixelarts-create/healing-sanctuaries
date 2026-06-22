@@ -97,3 +97,53 @@ Prompt 20: Final image of person standing in alignment with standing stones and 
 Style: Cinematic landscape, spiritual
 Mood: Connected, empowered, whole
 Lighting: Atmospheric golden light
+
+Prompt 21: Cracked earth with new growth emerging, resilience, renewal
+Style: Macro photography, nature
+Mood: Hopeful, grounded, alive
+Lighting: Soft morning light on soil
+
+Prompt 22: Underground crystal formation, quartz veins in rock, hidden geometry
+Style: Geological photography, detail
+Mood: Ancient, powerful, hidden
+Lighting: Internal glow on crystals
+
+Prompt 23: Person walking barefoot on ancient stone path, connection to earth
+Style: Documentary photography, movement
+Mood: Grounded, present, intentional
+Lighting: Warm afternoon light
+
+Prompt 24: Stone circle at dawn with morning mist, energy lines visible
+Style: Landscape photography, mystical
+Mood: Powerful, aligned, timeless
+Lighting: First light of dawn
+
+Prompt 25: Hands cupping soil with worms and roots, living earth
+Style: Macro photography, biological
+Mood: Alive, connected, fertile
+Lighting: Natural earth tones
+
+Prompt 26: Aerial view of ancient landscape with ley line overlay
+Style: Aerial photography, conceptual
+Mood: Connected, vast, hidden
+Lighting: Golden hour from above
+
+Prompt 27: Dowsing rods crossing over earth, moment of detection
+Style: Documentary photography, ritual
+Mood: Focused, intuitive, precise
+Lighting: Natural outdoor light
+
+Prompt 28: Quartz crystal cluster on dark earth, energy point
+Style: Detail photography, mineral
+Mood: Powerful, ancient, precise
+Lighting: Focused light on crystal
+
+Prompt 29: Person sitting among standing stones, meditative, earthen tones
+Style: Environmental portrait, peaceful
+Mood: Connected, still, ancient
+Lighting: Soft diffused light
+
+Prompt 30: Final wide shot of sanctuary landscape at dusk, earth energy visible
+Style: Cinematic landscape, closing
+Mood: Whole, connected, timeless
+Lighting: Dusk golden hour

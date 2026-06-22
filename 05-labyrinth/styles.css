@@ -328,6 +328,18 @@ body {
     margin-bottom: 40px;
 }
 
+.hero-intro {
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.hero-intro p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
 .hero-meta {
     display: flex;
     align-items: center;
@@ -519,6 +531,19 @@ body {
     margin: 30px 0 !important;
 }
 
+.about-additional {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.about-additional p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
 .about-stats {
     display: flex;
     gap: 40px;
@@ -557,7 +582,15 @@ body {
 .section-title {
     font-size: clamp(36px, 5vw, 56px);
     font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.practices-intro {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--text-secondary);
     margin-bottom: 60px;
+    max-width: 700px;
 }
 
 .practices-grid {
@@ -570,6 +603,7 @@ body {
     background: var(--deep-black);
     border: 1px solid #1a1a1a;
     transition: border-color 0.5s ease, transform 0.5s ease;
+    position: relative;
 }
 
 .practice-card:hover {
@@ -662,6 +696,314 @@ body {
     padding: 5px 10px;
     border: 1px solid #2a2a2a;
     color: var(--text-muted);
+}
+
+/* ==========================================
+   PHILOSOPHY SECTION — THE PATH THROUGH
+   ========================================== */
+.philosophy {
+    position: relative;
+    padding: 120px 80px;
+    padding-left: 140px;
+    background: var(--deep-black);
+}
+
+.philosophy-intro {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 80px;
+    max-width: 700px;
+}
+
+.philosophy-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.pillar {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 60px 0;
+    border-bottom: 1px solid #1a1a1a;
+    transition: background 0.5s ease;
+}
+
+.pillar:first-child {
+    border-top: 1px solid #1a1a1a;
+}
+
+.pillar:hover {
+    background: rgba(107, 91, 149, 0.03);
+}
+
+.pillar-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pillar-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.pillar-content {
+    max-width: 600px;
+}
+
+.pillar-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--mystical-purple);
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.pillar-title {
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.pillar-desc {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* ==========================================
+   TESTIMONIALS SECTION
+   ========================================== */
+.testimonials {
+    position: relative;
+    padding: 120px 80px;
+    padding-left: 140px;
+    background: var(--darker-surface);
+}
+
+.testimonials-intro {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 60px;
+    max-width: 700px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.testimonial-card {
+    background: var(--deep-black);
+    border: 1px solid #1a1a1a;
+    padding: 40px;
+    position: relative;
+    transition: border-color 0.5s ease, transform 0.5s ease;
+}
+
+.testimonial-card:hover {
+    border-color: var(--mystical-purple);
+    transform: translateY(-3px);
+}
+
+.testimonial-quote-mark {
+    font-size: 60px;
+    color: var(--mystical-purple);
+    opacity: 0.3;
+    line-height: 0;
+    margin-bottom: 20px;
+}
+
+.testimonial-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.author-name {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.author-location {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.author-walks {
+    text-align: right;
+}
+
+.walk-count {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--mystical-purple);
+    display: block;
+    line-height: 1;
+}
+
+.walk-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.testimonial-data {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.data-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    border: 1px solid #2a2a2a;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   JOURNEY SECTION — YOUR FIRST VISIT
+   ========================================== */
+.journey {
+    position: relative;
+    padding: 120px 80px;
+    padding-left: 140px;
+    background: var(--deep-black);
+}
+
+.journey-intro {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 80px;
+    max-width: 700px;
+}
+
+.journey-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 80px;
+}
+
+.journey-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 40px;
+    padding: 50px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.journey-step:first-child {
+    border-top: 1px solid #1a1a1a;
+}
+
+.step-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--mystical-purple);
+    letter-spacing: 2px;
+}
+
+.step-line {
+    width: 1px;
+    flex: 1;
+    background: linear-gradient(180deg, var(--mystical-purple) 0%, transparent 100%);
+    margin-top: 15px;
+}
+
+.step-content {
+    max-width: 600px;
+}
+
+.step-title {
+    font-size: clamp(20px, 2.5vw, 24px);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.step-desc {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.step-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Journey Practical */
+.journey-practical {
+    background: var(--darker-surface);
+    border: 1px solid #1a1a1a;
+    padding: 50px;
+}
+
+.practical-title {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.practical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.practical-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.practical-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--mystical-purple);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.practical-value {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
 }
 
 /* ==========================================
@@ -776,6 +1118,50 @@ body {
     font-size: 10px;
     letter-spacing: 3px;
     color: var(--text-muted);
+}
+
+/* Secondary Quote */
+.quote-secondary {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.inscription-secondary {
+    position: relative;
+}
+
+.quote-mark-secondary {
+    font-size: 50px;
+    color: var(--mystical-purple);
+    opacity: 0.2;
+    line-height: 0;
+    position: absolute;
+    top: 15px;
+    left: -15px;
+}
+
+.quote-mark-secondary-end {
+    left: auto;
+    right: -15px;
+    top: auto;
+    bottom: -30px;
+}
+
+.quote-text-secondary {
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    padding: 0 30px;
+}
+
+.inscription-footer-secondary {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .quote-coords {
@@ -976,8 +1362,9 @@ body {
 
 .footer-links {
     display: flex;
-    gap: 25px;
+    gap: 15px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-link {
@@ -1106,6 +1493,20 @@ body {
         max-width: 50%;
         margin: 0 auto;
     }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-grid .testimonial-card:last-child {
+        grid-column: span 2;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    
+    .practical-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 992px) {
@@ -1116,6 +1517,9 @@ body {
     .hero-content,
     .about,
     .practices,
+    .philosophy,
+    .testimonials,
+    .journey,
     .quote,
     .arrival,
     .footer {
@@ -1137,6 +1541,16 @@ body {
     .arrival-map {
         max-width: 400px;
         margin: 0 auto;
+    }
+    
+    .pillar {
+        grid-template-columns: 100px 1fr;
+        gap: 40px;
+    }
+    
+    .journey-step {
+        grid-template-columns: 60px 1fr;
+        gap: 30px;
     }
 }
 
@@ -1162,6 +1576,9 @@ body {
     .hero-content,
     .about,
     .practices,
+    .philosophy,
+    .testimonials,
+    .journey,
     .quote,
     .arrival,
     .footer {
@@ -1174,6 +1591,15 @@ body {
     }
     
     .practices-grid .practice-card:last-child {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid .testimonial-card:last-child {
         grid-column: span 1;
         max-width: 100%;
     }
@@ -1214,6 +1640,39 @@ body {
     .meta-divider {
         display: none;
     }
+    
+    .pillar {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .pillar-visual {
+        display: none;
+    }
+    
+    .journey-step {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .step-number {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .step-line {
+        display: none;
+    }
+    
+    .journey-practical {
+        padding: 30px 20px;
+    }
+    
+    .inscription-footer,
+    .inscription-footer-secondary {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1242,6 +1701,10 @@ body {
     .cta-button {
         padding: 15px 25px;
         font-size: 10px;
+    }
+    
+    .testimonial-card {
+        padding: 30px 20px;
     }
 }
 

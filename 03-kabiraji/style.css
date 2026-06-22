@@ -36,7 +36,10 @@ body {
 /* Grain overlay mixin */
 .hero-grain,
 .about-grain,
-.sacred-grain {
+.sacred-grain,
+.philosophy-grain,
+.testimonials-grain,
+.journey-grain {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -451,6 +454,284 @@ body {
 }
 
 /* ================================
+   PHILOSOPHY — THE WAY OF KABIRAJI
+   ================================ */
+.philosophy {
+  position: relative;
+  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.philosophy-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.philosophy-heading {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: var(--earth);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.philosophy-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto clamp(3rem, 6vw, 5rem);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--earth-dark);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vw, 4rem);
+}
+
+.pillar {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: flex-start;
+  padding: 2rem;
+  background: rgba(201, 160, 160, 0.06);
+  border-radius: 20px;
+  transition: background 0.8s ease, transform 1.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.pillar:hover {
+  background: rgba(201, 160, 160, 0.12);
+  transform: translateX(4px);
+}
+
+.pillar-kanji {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--rose);
+  opacity: 0.35;
+  line-height: 1;
+  flex-shrink: 0;
+  width: clamp(50px, 8vw, 70px);
+  text-align: center;
+}
+
+.pillar-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  color: var(--earth);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.pillar-desc {
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  color: var(--earth-dark);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.pillar-desc em {
+  font-style: italic;
+  color: var(--earth);
+}
+
+/* ================================
+   TESTIMONIALS
+   ================================ */
+.testimonials {
+  position: relative;
+  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+  background: linear-gradient(180deg, var(--cream-dark) 0%, var(--cream) 100%);
+  overflow: hidden;
+}
+
+.testimonials-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonials-heading {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: var(--earth);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.testimonial-card {
+  position: relative;
+  padding: 2.5rem 2.5rem 2rem;
+  background: rgba(250, 243, 232, 0.8);
+  border-radius: 20px;
+  border: 1px solid rgba(201, 160, 160, 0.15);
+  transition: transform 1.6s cubic-bezier(0.23, 1, 0.32, 1),
+              border-color 0.8s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 160, 160, 0.3);
+}
+
+.testimonial-quote {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 4rem;
+  color: var(--rose);
+  opacity: 0.25;
+  line-height: 1;
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.testimonial-text {
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  color: var(--earth-dark);
+  font-weight: 300;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.testimonial-name {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--earth);
+  letter-spacing: 0.05em;
+}
+
+.testimonial-detail {
+  font-size: 0.8rem;
+  color: var(--earth-light);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+/* ================================
+   JOURNEY — YOUR FIRST VISIT
+   ================================ */
+.journey {
+  position: relative;
+  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.journey-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.journey-heading {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: var(--earth);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.journey-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto clamp(3rem, 6vw, 5rem);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--earth-dark);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.journey-step {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: flex-start;
+}
+
+.step-number {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--rose);
+  opacity: 0.4;
+  line-height: 1;
+  flex-shrink: 0;
+  width: clamp(45px, 7vw, 60px);
+  text-align: center;
+  padding-top: 0.2rem;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  color: var(--earth);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.step-desc {
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  color: var(--earth-dark);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.journey-note {
+  text-align: center;
+  padding: 2rem 2.5rem;
+  background: rgba(201, 160, 160, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(201, 160, 160, 0.15);
+}
+
+.journey-note p {
+  font-size: clamp(0.85rem, 1.3vw, 0.95rem);
+  color: var(--earth-dark);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.journey-note strong {
+  font-weight: 500;
+  color: var(--earth);
+}
+
+/* ================================
    QUOTE — VERTICAL JAPANESE
    ================================ */
 .quote-section {
@@ -505,6 +786,15 @@ body {
   opacity: 0.85;
 }
 
+.quote-attr {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.15em;
+  margin-top: 1.2rem;
+  opacity: 0.5 !important;
+}
+
 /* ================================
    ARRIVAL
    ================================ */
@@ -524,7 +814,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .arrival-phone {
@@ -563,6 +853,34 @@ body {
   color: var(--earth-dark);
   font-weight: 300;
   line-height: 1.8;
+}
+
+.arrival-hours {
+  margin-top: 0.5rem;
+}
+
+.hours-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--earth);
+  margin-bottom: 0.8rem;
+}
+
+.arrival-hours p {
+  font-size: clamp(0.85rem, 1.3vw, 0.95rem);
+  color: var(--earth-dark);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.arrival-note {
+  font-size: 0.8rem;
+  color: var(--earth-light);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
 }
 
 /* ================================
@@ -670,5 +988,27 @@ body {
   .nav-orb {
     top: 1.2rem;
     right: 1.2rem;
+  }
+
+  .pillar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .journey-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial-card {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .testimonial-quote {
+    font-size: 3rem;
+    top: 0.5rem;
+    left: 1rem;
   }
 }

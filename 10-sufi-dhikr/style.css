@@ -651,6 +651,326 @@ body {
     display: inline-block;
 }
 
+/* --- Philosophy Section --- */
+.philosophy {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--paper-dark);
+    overflow: hidden;
+}
+
+.philosophy-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 30%, rgba(139,0,0,0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 70%, rgba(139,0,0,0.04) 0%, transparent 50%),
+        linear-gradient(180deg, var(--paper-dark) 0%, var(--paper) 100%);
+}
+
+.philosophy-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.philosophy-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.philosophy-ornament {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.philosophy-ornament-svg {
+    width: 100px;
+    height: 40px;
+}
+
+.section-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-light);
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+.philosophy-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.pillar-card {
+    text-align: center;
+    padding: 30px;
+}
+
+.pillar-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+}
+
+.pillar-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 15px;
+}
+
+.pillar-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--ink-light);
+}
+
+.philosophy-closing {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.philosophy-quote {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.philosophy-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--crimson);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.philosophy-quote span {
+    font-family: 'Lora', serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--sepia);
+    opacity: 0.7;
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--paper);
+    overflow: hidden;
+}
+
+.testimonials-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(139,0,0,0.03) 0%, transparent 50%),
+        var(--paper);
+}
+
+.testimonials-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.testimonial-card {
+    background: var(--paper-dark);
+    padding: 40px 30px;
+    position: relative;
+    border: 1px solid var(--sepia);
+    transition: all 0.4s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(42,26,10,0.1);
+}
+
+.testimonial-ornament {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+}
+
+.testimonial-quote {
+    margin-bottom: 25px;
+}
+
+.testimonial-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--ink-light);
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.author-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+}
+
+.author-detail {
+    font-family: 'Lora', serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--sepia);
+}
+
+/* --- Journey Section --- */
+.journey {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--paper-dark);
+    overflow: hidden;
+}
+
+.journey-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 80%, rgba(139,0,0,0.04) 0%, transparent 50%),
+        linear-gradient(180deg, var(--paper-dark) 0%, var(--paper) 100%);
+}
+
+.journey-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.journey-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.journey-ornament {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.journey-ornament-svg {
+    width: 150px;
+    height: 30px;
+}
+
+.journey-steps {
+    margin-bottom: 60px;
+}
+
+.journey-step {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+.step-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--ink-light);
+}
+
+.journey-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+    padding: 40px;
+    background: var(--paper);
+    border: 1px solid var(--sepia);
+}
+
+.journey-detail {
+    border-left: 2px solid var(--sepia);
+    padding-left: 20px;
+}
+
+.journey-detail .detail-label {
+    display: block;
+    font-family: 'Lora', serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--crimson);
+    margin-bottom: 5px;
+}
+
+.journey-detail .detail-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+.journey-cta {
+    text-align: center;
+}
+
+/* --- Sacred Art Footer --- */
+.sacred-footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--sepia);
+}
+
+.sacred-note {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    opacity: 0.8;
+}
+
 /* --- Quote Section --- */
 .quote-section {
     position: relative;
@@ -988,6 +1308,22 @@ body {
     .waveform-container {
         width: 95%;
     }
+
+    .philosophy-pillars {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .journey-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1000,6 +1336,18 @@ body {
     }
 
     .sacred-art {
+        padding: 80px 15px;
+    }
+
+    .philosophy {
+        padding: 80px 15px;
+    }
+
+    .testimonials {
+        padding: 80px 15px;
+    }
+
+    .journey {
         padding: 80px 15px;
     }
 
@@ -1018,6 +1366,14 @@ body {
     .practice-circle {
         width: 180px;
         height: 180px;
+    }
+
+    .journey-details {
+        padding: 25px;
+    }
+
+    .testimonial-card {
+        padding: 30px 20px;
     }
 }
 

@@ -15,6 +15,16 @@
     '.about-body',
     '.sacred-label',
     '.sacred-column',
+    '.philosophy-label',
+    '.philosophy-title',
+    '.philosophy-divider',
+    '.philosophy-pillar',
+    '.testimonials-label',
+    '.testimonial-card',
+    '.journey-label',
+    '.journey-title',
+    '.journey-divider',
+    '.journey-step',
     '.arrival-inner'
   ];
 

@@ -160,6 +160,7 @@ body {
     transition: opacity 1.6s cubic-bezier(0.23, 1, 0.32, 1),
                 visibility 1.6s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 10;
+    overflow-y: auto;
 }
 
 .section.active {
@@ -170,15 +171,30 @@ body {
 .section-content {
     width: 100%;
     max-width: 1200px;
-    padding: 0 5%;
+    padding: 4rem 5%;
     position: relative;
     z-index: 5;
+    margin: auto;
 }
 
 /* Home Section */
 .home-content {
     text-align: center;
     padding: 10% 0;
+    position: relative;
+}
+
+.home-mist {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(74, 124, 89, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: pulse 8s ease-in-out infinite;
 }
 
 .hero-title {
@@ -226,6 +242,39 @@ body {
     animation: fadeIn 1.6s cubic-bezier(0.23, 1, 0.32, 1) 1s forwards;
     font-size: clamp(0.8rem, 1.5vw, 1rem);
     letter-spacing: 0.1em;
+}
+
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 1.6s cubic-bezier(0.23, 1, 0.32, 1) 1.4s forwards;
+    text-align: center;
+}
+
+.scroll-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    color: var(--jade-light);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--jade), transparent);
+    margin: 0 auto;
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 0.8; transform: scaleY(1.3); }
 }
 
 /* About Section */
@@ -280,13 +329,27 @@ body {
 .section-about.active .about-body p:nth-child(1) { transition-delay: 0.2s; }
 .section-about.active .about-body p:nth-child(2) { transition-delay: 0.4s; }
 .section-about.active .about-body p:nth-child(3) { transition-delay: 0.6s; }
+.section-about.active .about-body p:nth-child(4) { transition-delay: 0.8s; }
+.section-about.active .about-body p:nth-child(5) { transition-delay: 1.0s; }
 
 /* Practices Section */
 .practices-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+}
+
+.practices-container::after {
+    display: none;
+}
+
+.practices-orbit {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
     min-height: 60vh;
+    align-items: center;
 }
 
 .practice-orbit {
@@ -298,8 +361,8 @@ body {
 
 .practice-circle {
     position: relative;
-    width: 220px;
-    height: 220px;
+    width: 240px;
+    height: 240px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -358,6 +421,386 @@ body {
     line-height: 1.5;
 }
 
+.practice-detail {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    color: var(--jade-light);
+    margin-top: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.practices-note {
+    text-align: center;
+    max-width: 600px;
+    margin: 3rem auto 0;
+}
+
+.practices-note p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: var(--white-soft);
+    line-height: 1.7;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Philosophy Section */
+.philosophy-intro {
+    font-family: 'Noto Serif Display', serif;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: var(--white-soft);
+    line-height: 1.8;
+    max-width: 700px;
+    margin-bottom: 3rem;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
+}
+
+.section-philosophy.active .philosophy-intro {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.virtues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.virtue-card {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(74, 124, 89, 0.2);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    transform: translateY(30px);
+    position: relative;
+    overflow: hidden;
+}
+
+.virtue-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 1.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.virtue-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+}
+
+.virtue-card:hover::before {
+    opacity: 1;
+}
+
+.section-philosophy.active .virtue-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-philosophy.active .virtue-card:nth-child(1) { transition-delay: 0.3s; }
+.section-philosophy.active .virtue-card:nth-child(2) { transition-delay: 0.45s; }
+.section-philosophy.active .virtue-card:nth-child(3) { transition-delay: 0.6s; }
+.section-philosophy.active .virtue-card:nth-child(4) { transition-delay: 0.75s; }
+.section-philosophy.active .virtue-card:nth-child(5) { transition-delay: 0.9s; }
+
+.virtue-symbol {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.virtue-card:hover .virtue-symbol {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.virtue-name {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    margin-bottom: 0.3rem;
+}
+
+.virtue-element {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    color: var(--jade-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.virtue-desc {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    color: var(--white-soft);
+    line-height: 1.6;
+}
+
+.philosophy-footer {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.philosophy-footer p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: var(--white-soft);
+    line-height: 1.7;
+    opacity: 0;
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.32, 1) 1.2s;
+}
+
+.section-philosophy.active .philosophy-footer p {
+    opacity: 0.7;
+}
+
+/* Testimonials Section */
+.testimonials-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: rgba(26, 26, 26, 0.4);
+    border-left: 2px solid var(--jade);
+    padding: 2rem 2.5rem;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.section-testimonials.active .testimonial-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-testimonials.active .testimonial-card:nth-child(1) { transition-delay: 0.2s; }
+.section-testimonials.active .testimonial-card:nth-child(2) { transition-delay: 0.4s; }
+.section-testimonials.active .testimonial-card:nth-child(3) { transition-delay: 0.6s; }
+
+.testimonial-quote-mark {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 4rem;
+    color: var(--gold);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: -1rem;
+}
+
+.testimonial-text {
+    font-family: 'Noto Serif Display', serif;
+    font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+    color: var(--white-soft);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-sigil {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--jade);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+.testimonial-name {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.testimonial-role {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    color: var(--jade-light);
+    letter-spacing: 0.05em;
+}
+
+/* Journey Section */
+.journey-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.journey-timeline {
+    position: relative;
+}
+
+.journey-step {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.section-journey.active .journey-step {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-journey.active .journey-step:nth-child(1) { transition-delay: 0.2s; }
+.section-journey.active .journey-step:nth-child(2) { transition-delay: 0.35s; }
+.section-journey.active .journey-step:nth-child(3) { transition-delay: 0.5s; }
+.section-journey.active .journey-step:nth-child(4) { transition-delay: 0.65s; }
+.section-journey.active .journey-step:nth-child(5) { transition-delay: 0.8s; }
+
+.step-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.step-number {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--jade);
+    border-radius: 50%;
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.journey-step:hover .step-number {
+    background: rgba(74, 124, 89, 0.15);
+    border-color: var(--gold);
+}
+
+.step-line {
+    width: 1px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--jade), transparent);
+    margin-top: 0.5rem;
+    opacity: 0.3;
+}
+
+.journey-step:last-child .step-line {
+    display: none;
+}
+
+.step-content {
+    padding-top: 0.5rem;
+}
+
+.step-title {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.step-desc {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: var(--white-soft);
+    line-height: 1.7;
+}
+
+.journey-sidebar {
+    position: sticky;
+    top: 10vh;
+}
+
+.journey-details {
+    background: rgba(26, 26, 26, 0.5);
+    border: 1px solid rgba(74, 124, 89, 0.2);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.detail-heading {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(74, 124, 89, 0.1);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.detail-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    color: var(--jade-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.detail-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: var(--white-soft);
+}
+
+.journey-note {
+    padding: 1.5rem;
+    border-left: 2px solid var(--gold);
+}
+
+.journey-note p {
+    font-family: 'Noto Serif Display', serif;
+    font-size: 0.95rem;
+    color: var(--white-soft);
+    line-height: 1.7;
+    font-style: italic;
+    opacity: 0.8;
+}
+
 /* Quote Section */
 .quote-container {
     text-align: center;
@@ -410,6 +853,32 @@ body {
     animation: flowWater 4s linear infinite;
 }
 
+.quote-secondary {
+    margin-top: 4rem;
+    opacity: 0;
+    transition: all 1.6s cubic-bezier(0.23, 1, 0.32, 1) 1.4s;
+}
+
+.section-quote.active .quote-secondary {
+    opacity: 1;
+}
+
+.secondary-line {
+    font-family: 'Noto Serif Display', serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--white-soft);
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+
+.secondary-source {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    color: var(--jade-light);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
 /* Arrival Section */
 .arrival-layout {
     display: flex;
@@ -458,6 +927,14 @@ body {
     line-height: 1.8;
 }
 
+.arrival-hours {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    color: var(--jade-light);
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+}
+
 .email-link {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1rem;
@@ -469,6 +946,14 @@ body {
 
 .email-link:hover {
     color: var(--jade-light);
+}
+
+.arrival-phone {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: var(--white-soft);
+    margin-top: 0.8rem;
+    opacity: 0.7;
 }
 
 /* Footer */
@@ -551,20 +1036,6 @@ body {
 }
 
 /* Responsive */
-.site-footer {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: #0a0a0a;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-.site-footer p {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.1em;
-  margin: 0.3rem 0;
-}
-
 @media (max-width: 768px) {
     .mandala-svg {
         width: 90vw;
@@ -589,5 +1060,25 @@ body {
 
     .section-title {
         font-size: 1.8rem;
+    }
+
+    .virtues-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-sidebar {
+        position: static;
+    }
+
+    .testimonials-container {
+        max-width: 100%;
+    }
+
+    .section-content {
+        padding: 2rem 5%;
     }
 }

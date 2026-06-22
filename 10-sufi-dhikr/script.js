@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mandalaSvg = document.querySelector('.mandala-svg');
         const mandalaPattern = document.querySelector('.mandala-pattern');
         const navDots = document.querySelectorAll('.nav-dot');
-        const sections = ['hero', 'about', 'sacred-art', 'quote'];
+        const sections = ['hero', 'about', 'sacred-art', 'philosophy', 'testimonials', 'journey', 'quote'];
 
         if (!nav || !mandalaSvg) return;
 
@@ -158,6 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
             { selector: '.about-manuscript', delay: 0 },
             { selector: '.sacred-header', delay: 0 },
             { selector: '.practice-card', delay: 0, stagger: true },
+            { selector: '.philosophy-header', delay: 0 },
+            { selector: '.pillar-card', delay: 0, stagger: true },
+            { selector: '.testimonials-header', delay: 0 },
+            { selector: '.testimonial-card', delay: 0, stagger: true },
+            { selector: '.journey-header', delay: 0 },
+            { selector: '.journey-step', delay: 0, stagger: true },
             { selector: '.rumi-quote', delay: 0 },
             { selector: '.quote-secondary', delay: 0.2 },
             { selector: '.arrival-content', delay: 0 },

@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initQuoteAnimation();
     initPracticeInteractions();
+    initPhilosophyAnimations();
+    initJourneyAnimations();
+    initTestimonialAnimations();
 });
 
 // Particles System — Flowing Mist
@@ -182,7 +185,7 @@ function initNavigation() {
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
-        const sectionOrder = ['home', 'about', 'practices', 'quote', 'arrival'];
+        const sectionOrder = ['home', 'about', 'practices', 'philosophy', 'testimonials', 'journey', 'quote', 'arrival'];
         const currentIndex = sectionOrder.indexOf(currentSection);
 
         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
@@ -203,7 +206,7 @@ function initNavigation() {
     document.addEventListener('wheel', (e) => {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
-            const sectionOrder = ['home', 'about', 'practices', 'quote', 'arrival'];
+            const sectionOrder = ['home', 'about', 'practices', 'philosophy', 'testimonials', 'journey', 'quote', 'arrival'];
             const currentIndex = sectionOrder.indexOf(currentSection);
 
             if (e.deltaY > 0) {
@@ -286,6 +289,67 @@ function initPracticeInteractions() {
                 ring.style.borderColor = '';
                 ring.style.opacity = '';
             }
+        });
+    });
+}
+
+// Philosophy Section — Virtue Card Hover Effects
+function initPhilosophyAnimations() {
+    const virtueCards = document.querySelectorAll('.virtue-card');
+
+    virtueCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            const symbol = card.querySelector('.virtue-symbol');
+            if (symbol) {
+                symbol.style.transform = 'scale(1.15) rotate(5deg)';
+            }
+        });
+
+        card.addEventListener('mouseleave', () => {
+            const symbol = card.querySelector('.virtue-symbol');
+            if (symbol) {
+                symbol.style.transform = '';
+            }
+        });
+    });
+}
+
+// Journey Section — Step Hover Effects
+function initJourneyAnimations() {
+    const journeySteps = document.querySelectorAll('.journey-step');
+
+    journeySteps.forEach(step => {
+        step.addEventListener('mouseenter', () => {
+            const marker = step.querySelector('.step-number');
+            if (marker) {
+                marker.style.background = 'rgba(74, 124, 89, 0.2)';
+                marker.style.borderColor = 'var(--gold)';
+            }
+        });
+
+        step.addEventListener('mouseleave', () => {
+            const marker = step.querySelector('.step-number');
+            if (marker) {
+                marker.style.background = '';
+                marker.style.borderColor = '';
+            }
+        });
+    });
+}
+
+// Testimonials Section — Card Hover Effects
+function initTestimonialAnimations() {
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+    testimonialCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.borderLeftColor = 'var(--gold)';
+            card.style.background = 'rgba(26, 26, 26, 0.6)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.borderLeftColor = '';
+            card.style.background = '';
         });
     });
 }

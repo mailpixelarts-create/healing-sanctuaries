@@ -3,7 +3,7 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('.about, .sacred, .quote, .arrival');
+  const sections = document.querySelectorAll('.about, .sacred, .philosophy, .testimonials, .journey, .quote, .arrival');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
