@@ -3,161 +3,259 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geomancy — Earth Keeper Rowan Stonecaller | Healing Sanctuary</title>
-  <meta name="description" content="Earth energy healing with Earth Keeper Rowan Stonecaller in Glastonbury, UK. Listening to the wisdom of the land.">
+  <title>Geomancy — Listening to the Wisdom of the Land</title>
+  <meta name="description" content="Earth energy healing through ley lines, sacred sites, and power places. Earth Keeper Rowan Stonecaller in Glastonbury, Somerset.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- PRELOADER -->
-  <div class="preloader">
-    <div class="preloader-count">0</div>
-    <div class="preloader-text">Entering the Sanctuary</div>
+  <!-- Scroll Marker -->
+  <div class="scroll-marker" id="scrollMarker">
+    <span class="scroll-marker__coord" id="scrollCoord">LAT 51.1485° N</span>
+    <span class="scroll-marker__line"></span>
+    <span class="scroll-marker__depth" id="scrollDepth">0m</span>
   </div>
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <a href="#home" class="nav-logo">Earth Keeper Rowan Stonecaller</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#sacred-art">Sacred Art</a></li>
-      <li><a href="#arrival">Arrival</a></li>
-    </ul>
-    <div class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- Earth Texture Canvas -->
+  <canvas id="earthCanvas"></canvas>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero__texture"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__coordinates">
+      <span class="hero__coord-item">51.1485° N</span>
+      <span class="hero__coord-sep">/</span>
+      <span class="hero__coord-item">2.5953° W</span>
+      <span class="hero__coord-sep">/</span>
+      <span class="hero__coord-item">LEY-072</span>
+    </div>
+    <div class="hero__content">
+      <p class="hero__pre fade-from-earth">Earth Energy Healing</p>
+      <h1 class="hero__title fade-from-earth">
+        <span class="hero__title-line">Geomancy</span>
+      </h1>
+      <p class="hero__tagline fade-from-earth">Listening to the Wisdom of the Land</p>
+    </div>
+    <div class="hero__ley-lines">
+      <svg class="hero__ley-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line x1="0" y1="30" x2="100" y2="70" class="hero__ley-line"/>
+        <line x1="20" y1="0" x2="80" y2="100" class="hero__ley-line hero__ley-line--secondary"/>
+        <line x1="100" y1="20" x2="0" y2="80" class="hero__ley-line hero__ley-line--tertiary"/>
+      </svg>
+    </div>
+    <div class="hero__scroll-hint">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#about" class="nav__label">
+        <span class="nav__num">01</span>
+        <span class="nav__text">Origin</span>
+        <span class="nav__coord">51.14°N</span>
+      </a>
+      <a href="#sacred" class="nav__label">
+        <span class="nav__num">02</span>
+        <span class="nav__text">Sacred Art</span>
+        <span class="nav__coord">LEY-072</span>
+      </a>
+      <a href="#quote" class="nav__label">
+        <span class="nav__num">03</span>
+        <span class="nav__text">Inscription</span>
+        <span class="nav__coord">3.2KYa</span>
+      </a>
+      <a href="#arrival" class="nav__label">
+        <span class="nav__num">04</span>
+        <span class="nav__text">Arrival</span>
+        <span class="nav__coord">BA6 9AA</span>
+      </a>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-bg" style="background-image: url('images/hero-geomancy.jpg')"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-tagline">Listening to the Wisdom of the Land</p>
-      <h1 class="hero-title">Geomancy</h1>
-      <p class="hero-subtitle">Earth energy healing through the art of reading and harmonizing the energy of the land itself. Restoring the ancient covenant between humanity and the earth.</p>
-      <a href="#arrival" class="hero-cta">Begin Your Journey</a>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="hero-scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">About the Healer</span>
-      <h2 class="section-title">Earth Keeper Rowan Stonecaller</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-image reveal-left">
-        <div class="image-placeholder">Earth Keeper Rowan Stonecaller Portrait</div>
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="about__bg-texture"></div>
+    <div class="about__inner">
+      <div class="about__label surface-from-earth">01 / Origin</div>
+      <h2 class="about__heading surface-from-earth">The Land<br>Remembers</h2>
+      <div class="about__columns">
+        <p class="about__text surface-from-earth">
+          Earth Keeper Rowan has spent 30 years mapping and working with the earth's energy lines, 
+          sacred sites, and power places. Geomancy is the art of reading and harmonizing the 
+          energy of the land itself.
+        </p>
+        <p class="about__text surface-from-earth">
+          Every stone holds memory. Every ley line carries ancient wisdom. The earth speaks to those 
+          who know how to listen — through the subtle vibrations beneath our feet, the alignment of 
+          standing stones, the resonance of sacred geometry written into the landscape.
+        </p>
       </div>
-      <div class="about-content reveal-right">
-        <h3>Thirty Years Walking the Ley Lines</h3>
-        <p>Earth Keeper Rowan has spent thirty years mapping and working with the earth's energy lines, sacred sites, and power places. His journey began at Avebury, where he first felt the earth's energy pulse beneath his feet — and knew that his life's work was to listen to what the land had to say.</p>
-        <p>Geomancy is the art of reading and harmonizing the energy of the land itself. Illness, both personal and planetary, arises when the relationship between humans and the earth is disrupted. When we build on sacred sites without permission, divert waterways, or poison the soil, we sever the ancient covenant that sustains all life.</p>
-        <p>Rowan's work restores this covenant. Using divining rods, crystal pendulums, and direct earth-sensing abilities developed over decades, he reads the energy patterns of the land and works to restore harmony. His Glastonbury sanctuary sits on a convergence of three major ley lines, making it one of the most powerful earth energy healing centers in Britain.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SACRED ART SECTION -->
-  <section id="sacred-art" class="section section-darker">
-    <div class="section-header">
-      <span class="section-label">The Sacred Art</span>
-      <h2 class="section-title">Healing Modalities</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-number">01</div>
-        <h3>Ley Line Alignment</h3>
-        <p>Tuning personal energy to the earth's sacred geometry network. Ley lines are invisible channels of earth energy that connect sacred sites across the landscape. By aligning one's personal energy field with these lines, the client receives the healing vibrations that the earth naturally transmits through its meridian system.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">02</div>
-        <h3>Site Clearing Ceremony</h3>
-        <p>Releasing stagnant or negative energy from land and buildings. When trauma occurs on a piece of land — battlefields, accident sites, places of suffering — the energy becomes trapped in the earth. This ceremony releases that trapped energy and restores the land to its natural state of purity and vitality.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">03</div>
-        <h3>Earth Acupuncture</h3>
-        <p>Placing crystals and sacred objects at key points to restore land harmony. Just as acupuncture needles balance the body's energy meridians, Earth Acupuncture balances the earth's energy meridians. Rowan places crystals, stones, and sacred objects at precise locations to restore flow and harmony to disrupted land energy.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE SECTION -->
-  <section class="quote-block">
-    <blockquote class="quote-text">The wound is the place where the Light enters you.</blockquote>
-    <cite class="quote-author">— Rumi</cite>
-  </section>
-
-  <!-- ARRIVAL SECTION -->
-  <section id="arrival" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">Arrival</span>
-      <h2 class="section-title">Begin Your Healing</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="arrival-grid">
-      <div class="arrival-info reveal-left">
-        <h3>Visit the Sanctuary</h3>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Address</span>
-          <span class="arrival-detail-value">555 Ley Line Road<br>Glastonbury, Somerset BA6 9AA, UK</span>
+      <div class="about__notes surface-from-earth">
+        <div class="about__note">
+          <span class="about__note-marker">+</span>
+          <span class="about__note-text">ley line crossing detected — primary node</span>
         </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Hours</span>
-          <span class="arrival-detail-value">Monday — Saturday<br>8:00 AM — 6:00 PM</span>
+        <div class="about__note">
+          <span class="about__note-marker">+</span>
+          <span class="about__note-text">earth acupuncture point — quartz cluster beneath</span>
         </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Contact</span>
-          <span class="arrival-detail-value">sanctuary@geomancy-earth.co.uk<br>+44 (0)1458 831 0555</span>
+        <div class="about__note">
+          <span class="about__note-marker">+</span>
+          <span class="about__note-text">site clearing completed — stagnant energy released</span>
         </div>
       </div>
-      <div class="arrival-form reveal-right">
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder=" " required>
-            <label>Your Name</label>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder=" " required>
-            <label>Email Address</label>
-          </div>
-          <div class="form-group">
-            <textarea rows="4" placeholder=" " required></textarea>
-            <label>Share Your Intention</label>
-          </div>
-          <button type="submit" class="btn">Request a Session</button>
-        </form>
+      <div class="about__keeper surface-from-earth">
+        <div class="about__keeper-line"></div>
+        <div>
+          <span class="about__keeper-name">Earth Keeper Rowan Stonecaller</span>
+          <span class="about__keeper-title">Geomancer & Sacred Site Guardian</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===================== SACRED ART ===================== -->
+  <section class="sacred" id="sacred">
+    <div class="sacred__inner">
+      <div class="sacred__label surface-from-earth">02 / Sacred Art</div>
+      <h2 class="sacred__heading surface-from-earth">Three Earth<br>Practices</h2>
+
+      <div class="sacred__grid">
+        <!-- Practice 1 -->
+        <div class="sacred__card surface-from-earth">
+          <div class="sacred__diagram">
+            <svg class="sacred__svg" viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="80" class="sacred__circle"/>
+              <circle cx="100" cy="100" r="50" class="sacred__circle sacred__circle--inner"/>
+              <circle cx="100" cy="100" r="20" class="sacred__circle sacred__circle--core"/>
+              <line x1="100" y1="20" x2="100" y2="180" class="sacred__line"/>
+              <line x1="20" y1="100" x2="180" y2="100" class="sacred__line"/>
+              <line x1="43" y1="43" x2="157" y2="157" class="sacred__line sacred__line--diag"/>
+              <line x1="157" y1="43" x2="43" y2="157" class="sacred__line sacred__line--diag"/>
+              <circle cx="100" cy="20" r="4" class="sacred__node"/>
+              <circle cx="100" cy="180" r="4" class="sacred__node"/>
+              <circle cx="20" cy="100" r="4" class="sacred__node"/>
+              <circle cx="180" cy="100" r="4" class="sacred__node"/>
+            </svg>
+            <span class="sacred__diagram-label">LEY-072 / PRIMARY</span>
+          </div>
+          <h3 class="sacred__card-title">Ley Line Alignment</h3>
+          <p class="sacred__card-text">Tuning personal energy to the earth's sacred geometry.</p>
+        </div>
+
+        <!-- Practice 2 -->
+        <div class="sacred__card surface-from-earth">
+          <div class="sacred__diagram">
+            <svg class="sacred__svg" viewBox="0 0 200 200">
+              <polygon points="100,20 180,80 150,170 50,170 20,80" class="sacred__polygon"/>
+              <polygon points="100,50 155,85 140,145 60,145 45,85" class="sacred__polygon sacred__polygon--inner"/>
+              <circle cx="100" cy="100" r="15" class="sacred__circle sacred__circle--core"/>
+              <circle cx="100" cy="20" r="5" class="sacred__node sacred__node--active"/>
+              <circle cx="180" cy="80" r="5" class="sacred__node sacred__node--active"/>
+              <circle cx="150" cy="170" r="5" class="sacred__node sacred__node--active"/>
+              <circle cx="50" cy="170" r="5" class="sacred__node sacred__node--active"/>
+              <circle cx="20" cy="80" r="5" class="sacred__node sacred__node--active"/>
+            </svg>
+            <span class="sacred__diagram-label">CLEAR / CEREMONY</span>
+          </div>
+          <h3 class="sacred__card-title">Site Clearing Ceremony</h3>
+          <p class="sacred__card-text">Releasing stagnant energy from land and sacred spaces.</p>
+        </div>
+
+        <!-- Practice 3 -->
+        <div class="sacred__card surface-from-earth">
+          <div class="sacred__diagram">
+            <svg class="sacred__svg" viewBox="0 0 200 200">
+              <rect x="40" y="40" width="120" height="120" class="sacred__rect"/>
+              <line x1="40" y1="100" x2="160" y2="100" class="sacred__line"/>
+              <line x1="100" y1="40" x2="100" y2="160" class="sacred__line"/>
+              <circle cx="70" cy="70" r="8" class="sacred__crystal"/>
+              <circle cx="130" cy="70" r="8" class="sacred__crystal"/>
+              <circle cx="70" cy="130" r="8" class="sacred__crystal"/>
+              <circle cx="130" cy="130" r="8" class="sacred__crystal"/>
+              <circle cx="100" cy="100" r="12" class="sacred__crystal sacred__crystal--center"/>
+              <line x1="70" y1="70" x2="100" y2="100" class="sacred__line sacred__line--connect"/>
+              <line x1="130" y1="70" x2="100" y2="100" class="sacred__line sacred__line--connect"/>
+              <line x1="70" y1="130" x2="100" y2="100" class="sacred__line sacred__line--connect"/>
+              <line x1="130" y1="130" x2="100" y2="100" class="sacred__line sacred__line--connect"/>
+            </svg>
+            <span class="sacred__diagram-label">ACU / POINTS-05</span>
+          </div>
+          <h3 class="sacred__card-title">Earth Acupuncture</h3>
+          <p class="sacred__card-text">Placing crystals at key points to rebalance earth energy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUOTE ===================== -->
+  <section class="quote" id="quote">
+    <div class="quote__bg-stone"></div>
+    <div class="quote__inner">
+      <div class="quote__line surface-from-earth"></div>
+      <blockquote class="quote__text surface-from-earth">
+        "The earth does not forget. Every footstep, every prayer, every stone placed with intention — 
+        the land remembers. To read geomancy is to remember with the earth."
+      </blockquote>
+      <div class="quote__source surface-from-earth">
+        <span class="quote__source-name">Earth Keeper Rowan Stonecaller</span>
+        <span class="quote__source-divider">—</span>
+        <span class="quote__source-title">3,200 Years of Earth Memory</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ARRIVAL ===================== -->
+  <section class="arrival" id="arrival">
+    <div class="arrival__inner">
+      <div class="arrival__label surface-from-earth">04 / Arrival</div>
+      <h2 class="arrival__heading surface-from-earth">Find the<br>Power Place</h2>
+      <div class="arrival__coords surface-from-earth">
+        <div class="arrival__coord-row">
+          <span class="arrival__coord-key">LAT</span>
+          <span class="arrival__coord-val">51.1485° N</span>
+        </div>
+        <div class="arrival__coord-row">
+          <span class="arrival__coord-key">LON</span>
+          <span class="arrival__coord-val">2.5953° W</span>
+        </div>
+        <div class="arrival__coord-row">
+          <span class="arrival__coord-key">LEY</span>
+          <span class="arrival__coord-val">St. Michael Line — Node 072</span>
+        </div>
+        <div class="arrival__coord-row">
+          <span class="arrival__coord-key">ADDR</span>
+          <span class="arrival__coord-val">555 Ley Line Road, Glastonbury, Somerset BA6 9AA, UK</span>
+        </div>
+      </div>
+      <form class="arrival__form surface-from-earth" onsubmit="event.preventDefault();">
+        <div class="arrival__field">
+          <label class="arrival__field-label">YOUR COORDINATES</label>
+          <input type="text" class="arrival__input" placeholder="Enter your location or postcode" required aria-label="Your location">
+        </div>
+        <button type="submit" class="arrival__btn">Align to Earth</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <p class="footer-quote">"The wound is the place where the Light enters you."</p>
-    <span class="footer-author">— Rumi</span>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#sacred-art">Sacred Art</a>
-      <a href="#arrival">Arrival</a>
+    <div class="footer__stone" id="footerStone">
+      <div class="footer__stone-body"></div>
+      <div class="footer__stone-shadow"></div>
     </div>
-    <p class="footer-copy">&copy; 2026 Earth Keeper Rowan Stonecaller — Geomancy Earth Healing Sanctuary. All rights reserved.</p>
+    <div class="footer__info">
+      <span class="footer__healer">Earth Keeper Rowan Stonecaller</span>
+      <span class="footer__address">555 Ley Line Road, Glastonbury, Somerset BA6 9AA, UK</span>
+    </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

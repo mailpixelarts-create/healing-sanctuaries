@@ -3,161 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kabiraji Healing — Sensei Haruki Tanaka | Healing Sanctuary</title>
-  <meta name="description" content="Japanese energy medicine with Sensei Haruki Tanaka in Portland, OR. Drawing out what no longer serves.">
+  <title>Kabiraji Healing — Sensei Haruki Tanaka</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- PRELOADER -->
-  <div class="preloader">
-    <div class="preloader-count">0</div>
-    <div class="preloader-text">Entering the Sanctuary</div>
-  </div>
-
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <a href="#home" class="nav-logo">Sensei Haruki Tanaka</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#sacred-art">Sacred Art</a></li>
-      <li><a href="#arrival">Arrival</a></li>
-    </ul>
-    <div class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <!-- NAVIGATION TOGGLE -->
+  <button class="nav-orb" id="navOrb" aria-label="Open menu">
+    <span></span>
+  </button>
+  <nav class="hidden-nav" id="hiddenNav">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#sacred-art" class="nav-link">Sacred Art</a>
+    <a href="#arrival" class="nav-link">Arrival</a>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-bg" style="background-image: url('images/hero-zen-garden.jpg')"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-tagline">Drawing Out What No Longer Serves</p>
-      <h1 class="hero-title">Kabiraji<br>Healing</h1>
-      <p class="hero-subtitle">Japanese energy medicine spanning seven generations. Visible energy drawing that extracts and transmutes stagnant chi from the body's energy field.</p>
-      <a href="#arrival" class="hero-cta">Begin Your Journey</a>
+  <!-- HERO: Energy Blob Reveal -->
+  <section class="hero" id="hero">
+    <div class="hero-blobs">
+      <svg class="blob blob-1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <path class="blob-path" d="M300,520C180,520,80,420,80,300S180,80,300,80S520,180,520,300S420,520,300,520Z"/>
+      </svg>
+      <svg class="blob blob-2" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <path class="blob-path" d="M280,540C140,540,40,420,40,280S140,20,280,20S540,140,540,280S420,540,280,540Z"/>
+      </svg>
+      <svg class="blob blob-3" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <path class="blob-path" d="M320,560C160,560,40,400,40,280S160,0,320,0S560,120,560,280S480,560,320,560Z"/>
+      </svg>
     </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="hero-scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">About the Healer</span>
-      <h2 class="section-title">Sensei Haruki Tanaka</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-image reveal-left">
-        <div class="image-placeholder">Sensei Haruki Tanaka Portrait</div>
-      </div>
-      <div class="about-content reveal-right">
-        <h3>Seven Generations of Kabiraji Practice</h3>
-        <p>Sensei Tanaka descended from a lineage of Kabiraji practitioners spanning seven generations in Kyoto. The art of Kabiraji involves drawing energy patterns above the body to extract and transmute stagnant chi.</p>
-        <p>Unlike Reiki, Kabiraji works with visible energy drawing — the practitioner's hands create intricate patterns that are felt as heat, vibration, and release. Each movement is precise, inherited through centuries of practice, and adapted to each individual's unique energy signature.</p>
-        <p>His Portland sanctuary brings this ancient Japanese healing art to the Pacific Northwest, where the region's natural beauty and contemplative atmosphere provide the perfect setting for deep energetic work and transformation.</p>
-      </div>
+    <div class="hero-grain"></div>
+    <div class="hero-tagline" id="heroTagline">
+      <span class="tagline-jp">カビラジ</span>
+      <span class="tagline-en">Drawing Out What No Longer Serves</span>
     </div>
   </section>
 
-  <!-- SACRED ART SECTION -->
-  <section id="sacred-art" class="section section-darker">
-    <div class="section-header">
-      <span class="section-label">The Sacred Art</span>
-      <h2 class="section-title">Healing Modalities</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-number">01</div>
-        <h3>Energy Extraction Drawing</h3>
-        <p>Hand movements that draw stagnation from the body's energy field. The practitioner's hands create intricate patterns above the skin, pulling dense, stagnant energy upward and outward, transforming it through specific hand positions passed down through seven generations.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">02</div>
-        <h3>Five Point Harmonization</h3>
-        <p>Crystal placement on the five major dantians — the energy centers of the body. Each crystal is selected for its resonance with the specific dantian, creating a harmonic field that supports the body's natural healing processes and restores energetic balance.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">03</div>
-        <h3>Ki Flow Restoration</h3>
-        <p>Dynamic movement meditation to restore life force circulation. Inspired by martial arts principles, this practice combines breath work, precise body positioning, and energy channeling to reactivate the body's natural ki flow and restore vitality.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE SECTION -->
-  <section class="quote-block">
-    <blockquote class="quote-text">The wound is the place where the Light enters you.</blockquote>
-    <cite class="quote-author">— Rumi</cite>
-  </section>
-
-  <!-- ARRIVAL SECTION -->
-  <section id="arrival" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">Arrival</span>
-      <h2 class="section-title">Begin Your Healing</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="arrival-grid">
-      <div class="arrival-info reveal-left">
-        <h3>Visit the Sanctuary</h3>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Address</span>
-          <span class="arrival-detail-value">423 Cherry Blossom Lane<br>Portland, OR 97204</span>
+  <!-- ABOUT: Circular rotating image + text -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-image-wrap">
+        <div class="about-image-circle" id="aboutCircle">
+          <img src="images/healer-portrait.jpg" alt="Sensei Haruki Tanaka">
         </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Hours</span>
-          <span class="arrival-detail-value">Wednesday — Sunday<br>10:00 AM — 5:00 PM</span>
+        <div class="about-image-ring"></div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">The Lineage</span>
+        <h2 class="about-heading">Sensei Haruki Tanaka</h2>
+        <p class="about-body">
+          Sensei Tanaka descended from a lineage of Kabiraji practitioners spanning seven generations in Kyoto. The art of Kabiraji involves drawing energy patterns above the body to extract and transmute stagnant chi.
+        </p>
+        <p class="about-body">
+          Unlike Reiki, Kabiraji works with visible energy drawing — the practitioner's hands create intricate patterns that are felt as heat, vibration, and release.
+        </p>
+      </div>
+    </div>
+    <div class="about-grain"></div>
+  </section>
+
+  <!-- SACRED ART: Three practices as energy lines -->
+  <section class="sacred-art" id="sacred-art">
+    <div class="sacred-inner">
+      <span class="section-label center">Sacred Art</span>
+      <h2 class="sacred-heading center">Three Pillars of Kabiraji</h2>
+
+      <div class="practices">
+        <div class="practice" data-practice="1">
+          <svg class="energy-line" viewBox="0 0 400 120" preserveAspectRatio="none">
+            <path class="energy-path" d="M0,60 C60,20 120,100 200,60 S340,20 400,60"/>
+          </svg>
+          <div class="practice-content">
+            <span class="practice-number">一</span>
+            <h3 class="practice-title">Energy Extraction Drawing</h3>
+            <p class="practice-desc">Hand movements that draw stagnation from the body's energy field. The practitioner's hands become conduits, pulling tangled energy into coherent patterns for release.</p>
+          </div>
         </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Contact</span>
-          <span class="arrival-detail-value">sanctuary@harukitanaka.com<br>(503) 555-0186</span>
+
+        <div class="practice" data-practice="2">
+          <svg class="energy-line" viewBox="0 0 400 120" preserveAspectRatio="none">
+            <path class="energy-path" d="M0,60 C80,100 140,10 200,60 S320,100 400,60"/>
+          </svg>
+          <div class="practice-content">
+            <span class="practice-number">二</span>
+            <h3 class="practice-title">Five Point Harmonization</h3>
+            <p class="practice-desc">Crystal placement on the five major dantians — energy centers that govern the flow of life force through the physical and subtle bodies.</p>
+          </div>
+        </div>
+
+        <div class="practice" data-practice="3">
+          <svg class="energy-line" viewBox="0 0 400 120" preserveAspectRatio="none">
+            <path class="energy-path" d="M0,60 C40,10 100,100 200,60 S360,10 400,60"/>
+          </svg>
+          <div class="practice-content">
+            <span class="practice-number">三</span>
+            <h3 class="practice-title">Ki Flow Restoration</h3>
+            <p class="practice-desc">Dynamic movement meditation to restore life force circulation. The body remembers its natural rhythm when guided by ancient patterns of movement.</p>
+          </div>
         </div>
       </div>
-      <div class="arrival-form reveal-right">
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder=" " required>
-            <label>Your Name</label>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder=" " required>
-            <label>Email Address</label>
-          </div>
-          <div class="form-group">
-            <textarea rows="4" placeholder=" " required></textarea>
-            <label>Share Your Intention</label>
-          </div>
-          <button type="submit" class="btn">Request a Session</button>
-        </form>
+    </div>
+    <div class="sacred-grain"></div>
+  </section>
+
+  <!-- QUOTE: Vertical Japanese calligraphy style -->
+  <section class="quote-section">
+    <div class="quote-inner">
+      <div class="vertical-text">
+        <span class="vt-char">気</span>
+        <span class="vt-char">は</span>
+        <span class="vt-char">流</span>
+        <span class="vt-char">れ</span>
+        <span class="vt-char">る</span>
+      </div>
+      <div class="quote-translation">
+        <p>"Ki flows freely when stagnation is drawn out."</p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ARRIVAL: Minimal contact -->
+  <section class="arrival" id="arrival">
+    <div class="arrival-inner">
+      <span class="section-label center">Arrival</span>
+      <div class="arrival-details">
+        <a href="tel:+15031234567" class="arrival-phone">(503) 123-4567</a>
+        <p class="arrival-address">423 Cherry Blossom Lane<br>Portland, OR 97204</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER: Falling cherry blossom -->
   <footer class="footer">
-    <p class="footer-quote">"The wound is the place where the Light enters you."</p>
-    <span class="footer-author">— Rumi</span>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#sacred-art">Sacred Art</a>
-      <a href="#arrival">Arrival</a>
+    <div class="footer-inner">
+      <svg class="cherry-blossom" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+        <g class="petal-group">
+          <ellipse class="petal p1" cx="40" cy="20" rx="8" ry="18"/>
+          <ellipse class="petal p2" cx="56" cy="32" rx="8" ry="18" transform="rotate(72, 56, 32)"/>
+          <ellipse class="petal p3" cx="50" cy="54" rx="8" ry="18" transform="rotate(144, 50, 54)"/>
+          <ellipse class="petal p4" cx="30" cy="54" rx="8" ry="18" transform="rotate(216, 30, 54)"/>
+          <ellipse class="petal p5" cx="24" cy="32" rx="8" ry="18" transform="rotate(288, 24, 32)"/>
+          <circle cx="40" cy="40" r="4" fill="#c9a0a0"/>
+        </g>
+      </svg>
+      <p class="footer-text">© 2026 Kabiraji Healing</p>
     </div>
-    <p class="footer-copy">© 2026 Sensei Haruki Tanaka — Kabiraji Healing Sanctuary. All rights reserved.</p>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

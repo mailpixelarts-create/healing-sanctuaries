@@ -1,20 +1,58 @@
-1. Cinematic shot of a traditional Japanese garden in Portland with cherry blossoms in full bloom, stone lanterns, a still koi pond reflecting pink petals, morning mist rising, earthy brown and pink tones, 8K photorealistic
-2. Sensei Haruki Tanaka performing Kabiraji energy drawing above a patient's body, visible golden-brown energy patterns flowing from his hands, traditional Japanese healer's robes, focused meditative expression
-3. A Kyoto temple courtyard with ancient stone path leading to wooden gates, maple trees overhead, filtered sunlight creating dappled patterns, the weight of seven generations of healing tradition
-4. Close-up of hands creating intricate energy drawing patterns in the air, earthy golden light trails following the movements, Japanese calligraphy brushstrokes of energy, dark background
-5. Cherry blossom petals falling in slow motion over a zen meditation garden, raked sand patterns, stone arrangement, the gentle impermanence of healing captured in a single frame
-6. Interior of a Japanese healing room with tatami mats, shoji screens, minimal furnishings, a single scroll on the wall, soft natural light, the essence of wabi-sabi in healing space
-7. Five crystal points placed on a person's body at the major dantians, warm earthy light emanating from each crystal, Kabiraji harmonization ceremony, intimate healing moment
-8. A Japanese zen rock garden with carefully placed stones forming an energy pattern, raked concentric circles in sand, morning dew on moss, contemplative stillness
-9. Sensei Tanaka's hands mid-movement creating a Ki Flow restoration gesture, dynamic martial-arts-meets-healing movement captured with slight motion blur, traditional hakama flowing
-10. Cherry blossom branch with individual petals catching golden hour light, each petal a different shade of pink and brown, shallow depth of field, Japanese aesthetic beauty
-11. Abstract visualization of stagnant chi being drawn from the body as dark swirling energy being pulled upward by the practitioner's hands, transforming into light as it rises
-12. Traditional Japanese tea ceremony setup in a healing room context, matcha green against earthy browns, ritual preparation as metaphor for healing preparation
-13. Stone pathway through a Japanese maple grove in autumn, leaves of amber and brown carpeting the ground, light filtering through branches, the journey to the healing sanctuary
-14. Close-up of a Japanese incense stick burning, smoke creating spiraling patterns that mirror energy drawing movements, warm brown background, zen atmosphere
-15. A healing session in progress: practitioner standing over seated patient, hands creating visible energy extraction patterns above the head, traditional Japanese interior setting
-16. Ancient Japanese wooden healing tools arranged on a cloth: crystals, bells, singing bowls, arranged with intention and care, earthy tones dominating
-17. Portland Japanese garden bridge arching over a koi pond at twilight, lanterns lit, reflections shimmering, the meeting of Eastern healing and Western landscape
-18. Ki energy visualization: a human figure standing in mountain pose with earthy brown energy radiating outward from the palms, restoring life force circulation, cosmic background
-19. Cherry blossom petals arranged in a spiral pattern on dark earth, sacred geometry in nature, the Japanese concept of mono no aware — the beauty of transience
-20. Final hero image: the words "Drawing Out What No Longer Serves" in earthy brown light letters floating above a zen garden at sunset, cinematic typography, healing energy
+IMAGE PROMPTS — KABIRAJI HEALING
+=================================
+
+1. HERO BLOB / BACKGROUND
+   "Soft organic blob shapes on warm cream background, abstract energy
+   patterns in muted terracotta and rose tones, grain texture overlay,
+   zen aesthetic, minimal, no text, 4K"
+
+2. HEALER PORTRAIT
+   "Japanese male healer in his 60s, serene expression, wearing a
+   simple linen kimono in earth brown, standing in a traditional
+   Japanese tea room with warm wood and soft natural light, shallow
+   depth of field, cinematic photography"
+
+3. ENERGY EXTRACTION DRAWING
+   "Hands performing energy healing above a person's body, visible
+   flowing energy lines in warm rose and terracotta tones, abstract
+   light trails, organic flowing movement, soft bokeh background,
+   cinematic healing atmosphere"
+
+4. FIVE POINT HARMONIZATION
+   "Five crystal points placed on a person's energy centers, soft
+   warm light emanating from each crystal, Japanese zen aesthetic,
+   minimalist composition, terracotta and cream color palette,
+   peaceful healing session"
+
+5. KI FLOW RESTORATION
+   "Person in flowing meditation movement, dynamic energy lines
+   swirling around the body, Japanese garden background with cherry
+   blossoms, warm earth tones, motion blur suggesting flow and
+   restoration"
+
+6. JAPANESE GARDEN / TEA ROOM
+   "Traditional Japanese tea room interior, warm wood floors,
+   shoji screens with soft diffused light, minimal arrangement,
+   single ceramic vase with cherry blossom branch, earth brown
+   and cream tones, peaceful atmosphere"
+
+7. CHERRY BLOSSOM DETAIL
+   "Close-up of cherry blossom branch against soft cream sky,
+   single petal falling, warm natural light, shallow depth of
+   field, Japanese aesthetic, minimal composition"
+
+8. ZEN TEMPLE EXTERIOR
+   "Ancient Japanese temple entrance with stone path, surrounded
+   by cherry trees in bloom, warm afternoon light, earth brown
+   wood and cream plaster walls, peaceful atmosphere"
+
+9. CRYSTAL DETAIL
+   "Natural quartz crystal point on warm wooden surface, soft
+   directional light, earth tones, zen minimalism, healing
+   energy atmosphere"
+
+10. STONE PATH / JOURNEY
+    "Winding stone path through Japanese garden, cherry blossom
+    petals scattered on ground, warm afternoon light filtering
+    through trees, earth brown stones, cream gravel, peaceful
+    approach to healing sanctuary"

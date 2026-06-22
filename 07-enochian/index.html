@@ -1,163 +1,1061 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enochian Healing — Oracle Cassandra Nightshade | Healing Sanctuary</title>
-  <meta name="description" content="Angelic communication therapy with Oracle Cassandra Nightshade in Glastonbury, UK. Conversations with the divine.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enochian Healing — Conversations with the Divine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --midnight: #1a1a2e;
+            --gold: #b8860b;
+            --gold-light: #d4a542;
+            --warm-black: #0a0a0a;
+            --text-light: #e8e4dc;
+            --text-muted: #8a8578;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: var(--warm-black);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        /* VERTICAL NAVIGATION */
+        .vertical-nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 100vh;
+            background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(26,26,46,0.9) 100%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(184,134,11,0.2);
+        }
+
+        .nav-item {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            padding: 20px 8px;
+            font-family: 'Cinzel', serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.6s ease, text-shadow 0.6s ease;
+            position: relative;
+        }
+
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1px;
+            height: 15px;
+            background: var(--gold);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .nav-item:hover {
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(184,134,11,0.5);
+        }
+
+        .nav-item:hover::before {
+            opacity: 1;
+        }
+
+        .nav-item.active {
+            color: var(--gold);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            margin-left: 60px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--warm-black);
+        }
+
+        .hero-sigil {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-sigil svg {
+            width: 600px;
+            height: 600px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: sigilReveal 4s ease-out forwards;
+        }
+
+        @keyframes sigilReveal {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) rotate(-5deg);
+                filter: blur(10px);
+            }
+            50% {
+                opacity: 0.6;
+                filter: blur(2px);
+            }
+            100% {
+                opacity: 0.15;
+                transform: scale(1) rotate(0deg);
+                filter: blur(0);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out 1.5s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-tagline {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(36px, 6vw, 72px);
+            font-weight: 400;
+            letter-spacing: 6px;
+            line-height: 1.2;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 3s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(1.2); }
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            margin-left: 60px;
+            padding: 150px 80px;
+            position: relative;
+            background: linear-gradient(135deg, var(--warm-black) 0%, var(--midnight) 100%);
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-label {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .about-text h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(28px, 3vw, 42px);
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .about-visual {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .floating-sigil {
+            width: 350px;
+            height: 350px;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(3deg); }
+        }
+
+        .oracle-name {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: var(--gold-light);
+            letter-spacing: 3px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .oracle-title {
+            font-size: 13px;
+            color: var(--text-muted);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* SACRED ART SECTION */
+        .sacred-art {
+            margin-left: 60px;
+            padding: 150px 60px;
+            background: var(--warm-black);
+            position: relative;
+        }
+
+        .sacred-art::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.3;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .section-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(28px, 3vw, 42px);
+            font-weight: 400;
+            letter-spacing: 4px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            font-size: 15px;
+            color: var(--text-muted);
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        .practices-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .practice-card {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(180deg, rgba(26,26,46,0.3) 0%, rgba(10,10,10,0.8) 100%);
+            border: 1px solid rgba(184,134,11,0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.6s ease, border-color 0.6s ease;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(184,134,11,0.3);
+        }
+
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .practice-card:hover::before {
+            opacity: 1;
+        }
+
+        .sigil-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .sigil-container svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sigil-path {
+            stroke: var(--gold);
+            stroke-width: 1;
+            fill: none;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+
+        .practice-card.visible .sigil-path {
+            animation: drawSigil 3s ease-out forwards;
+        }
+
+        @keyframes drawSigil {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .practice-number {
+            font-family: 'Cinzel', serif;
+            font-size: 48px;
+            color: rgba(184,134,11,0.15);
+            margin-bottom: 20px;
+        }
+
+        .practice-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .practice-card p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* QUOTE SECTION */
+        .quote-section {
+            margin-left: 60px;
+            padding: 200px 80px;
+            background: linear-gradient(180deg, var(--warm-black) 0%, var(--midnight) 50%, var(--warm-black) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-content {
+            text-align: center;
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-mark {
+            font-family: 'Cinzel', serif;
+            font-size: 120px;
+            color: var(--gold);
+            opacity: 0.2;
+            line-height: 0.5;
+            margin-bottom: 40px;
+        }
+
+        .quote-text {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .quote-translation {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+
+        .quote-decoration {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(184,134,11,0.1);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: expandContract 4s ease-in-out infinite;
+        }
+
+        @keyframes expandContract {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.1;
+            }
+        }
+
+        .quote-decoration:nth-child(2) {
+            width: 500px;
+            height: 500px;
+            animation-delay: 0.5s;
+        }
+
+        /* ARRIVAL SECTION */
+        .arrival {
+            margin-left: 60px;
+            padding: 180px 80px;
+            background: var(--warm-black);
+            position: relative;
+        }
+
+        .arrival::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.3;
+        }
+
+        .arrival-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .arrival-sigil {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 50px;
+            opacity: 0.6;
+        }
+
+        .arrival h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .arrival p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .arrival-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(184,134,11,0.3);
+            padding: 20px 0;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 15px;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            transition: border-color 0.4s ease;
+        }
+
+        .form-input::placeholder {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .submit-btn {
+            margin-top: 30px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            padding: 18px 40px;
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(184,134,11,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            background: rgba(184,134,11,0.1);
+            box-shadow: 0 0 30px rgba(184,134,11,0.2);
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-left: 60px;
+            padding: 100px 60px;
+            background: var(--warm-black);
+            border-top: 1px solid rgba(184,134,11,0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-sigil {
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+            animation: fadeSigilIn 2s ease-out forwards;
+        }
+
+        @keyframes fadeSigilIn {
+            to { opacity: 0.4; }
+        }
+
+        .footer-info {
+            text-align: right;
+        }
+
+        .footer-address {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+
+        .footer-copy {
+            font-size: 11px;
+            color: rgba(138,133,120,0.5);
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+
+        /* AMBIENT PARTICLES */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 60px;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0;
+            animation: particleFloat 8s ease-in-out infinite;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) scale(0);
+            }
+            20% {
+                opacity: 0.6;
+            }
+            80% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(1);
+            }
+        }
+
+        /* SCROLL REVEAL */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .practices-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about, .sacred-art, .quote-section, .arrival, .footer {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vertical-nav {
+                width: 50px;
+            }
+
+            .nav-item {
+                font-size: 8px;
+                padding: 15px 5px;
+            }
+
+            .hero, .about, .sacred-art, .quote-section, .arrival, .footer {
+                margin-left: 50px;
+            }
+
+            .hero-sigil svg {
+                width: 300px;
+                height: 300px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .footer-info {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- VERTICAL NAVIGATION -->
+    <nav class="vertical-nav">
+        <a href="#hero" class="nav-item active">Home</a>
+        <a href="#about" class="nav-item">Oracle</a>
+        <a href="#practices" class="nav-item">Sacred Art</a>
+        <a href="#wisdom" class="nav-item">Wisdom</a>
+        <a href="#arrival" class="nav-item">Arrive</a>
+    </nav>
 
-  <!-- PRELOADER -->
-  <div class="preloader">
-    <div class="preloader-count">0</div>
-    <div class="preloader-text">Entering the Sanctuary</div>
-  </div>
+    <!-- AMBIENT PARTICLES -->
+    <div class="particles" id="particles"></div>
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <a href="#home" class="nav-logo">Oracle Cassandra Nightshade</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#sacred-art">Sacred Art</a></li>
-      <li><a href="#arrival">Arrival</a></li>
-    </ul>
-    <div class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-bg" style="background-image: url('images/hero-glastonbury.jpg')"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-tagline">Conversations with the Divine</p>
-      <h1 class="hero-title">Enochian<br>Healing</h1>
-      <p class="hero-subtitle">Angelic communication therapy through the Enochian language received by Dr. John Dee and Edward Kelley. Healing frequencies from the angelic realms.</p>
-      <a href="#arrival" class="hero-cta">Begin Your Journey</a>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="hero-scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">About the Healer</span>
-      <h2 class="section-title">Oracle Cassandra Nightshade</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-image reveal-left">
-        <div class="image-placeholder">Oracle Cassandra Nightshade Portrait</div>
-      </div>
-      <div class="about-content reveal-right">
-        <h3>The Enochian Language of the Angels</h3>
-        <p>Oracle Cassandra works with the Enochian language received by Dr. John Dee and Edward Kelley in the 16th century. Enochian healing involves communicating with angelic beings through the Enochian tablets to receive healing frequencies.</p>
-        <p>Each of the 30 Aethyrs corresponds to a different aspect of consciousness and healing. The Enochian system provides a precise language for communicating with higher dimensional beings who offer specific healing energies for body, mind, and spirit.</p>
-        <p>Her Glastonbury sanctuary, located in the heart of England's most mystical landscape, serves as a gateway between earthly and angelic realms. The sacred geometry of the Enochian system, combined with the powerful ley line energy of Glastonbury, creates a uniquely potent healing environment.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SACRED ART SECTION -->
-  <section id="sacred-art" class="section section-darker">
-    <div class="section-header">
-      <span class="section-label">The Sacred Art</span>
-      <h2 class="section-title">Healing Modalities</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-number">01</div>
-        <h3>Aethyr Trance Journey</h3>
-        <p>Guided meditation into the 30 Aethyrs for healing. Each Aethyr is a level of consciousness with specific healing properties. The practitioner guides the participant through these angelic realms, where healing frequencies address deep spiritual, emotional, and physical imbalances.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">02</div>
-        <h3>Enochian Tablet Activation</h3>
-        <p>Sacred geometry meditation on the four watchtowers. The Enochian tablets contain the precise geometric patterns of angelic communication. By meditating on these sacred forms, the practitioner activates the healing codes embedded within the geometry.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">03</div>
-        <h3>Angelic Frequency Attunement</h3>
-        <p>Receiving healing sounds from angelic realms. Each angelic being communicates through specific vibrational frequencies. Through Enochian calls and invocations, the practitioner attunes to these healing sounds, which restore harmony to the body's energy systems.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE SECTION -->
-  <section class="quote-block">
-    <blockquote class="quote-text">The wound is the place where the Light enters you.</blockquote>
-    <cite class="quote-author">— Rumi</cite>
-  </section>
-
-  <!-- ARRIVAL SECTION -->
-  <section id="arrival" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">Arrival</span>
-      <h2 class="section-title">Begin Your Healing</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="arrival-grid">
-      <div class="arrival-info reveal-left">
-        <h3>Visit the Sanctuary</h3>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Address</span>
-          <span class="arrival-detail-value">333 Twilight Road<br>Glastonbury, Somerset BA6 8BH, UK</span>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-sigil">
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Enochian Sigil Pattern -->
+                <defs>
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#b8860b;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#d4a542;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Outer Circle -->
+                <circle cx="200" cy="200" r="180" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.4"/>
+                <circle cx="200" cy="200" r="160" fill="none" stroke="url(#goldGrad)" stroke-width="0.3" opacity="0.3"/>
+                <!-- Inner Geometry -->
+                <polygon points="200,40 340,280 60,280" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.5"/>
+                <polygon points="200,360 60,120 340,120" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.5"/>
+                <!-- Center Pattern -->
+                <circle cx="200" cy="200" r="60" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.6"/>
+                <circle cx="200" cy="200" r="30" fill="none" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.4"/>
+                <line x1="200" y1="140" x2="200" y2="260" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
+                <line x1="140" y1="200" x2="260" y2="200" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
+                <!-- Corner Marks -->
+                <path d="M 200 20 L 200 50" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.4"/>
+                <path d="M 200 350 L 200 380" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.4"/>
+                <path d="M 20 200 L 50 200" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.4"/>
+                <path d="M 350 200 L 380 200" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.4"/>
+                <!-- Decorative Elements -->
+                <path d="M 120 120 Q 200 80 280 120" fill="none" stroke="url(#goldGrad)" stroke-width="0.3" opacity="0.3"/>
+                <path d="M 120 280 Q 200 320 280 280" fill="none" stroke="url(#goldGrad)" stroke-width="0.3" opacity="0.3"/>
+                <path d="M 120 120 Q 80 200 120 280" fill="none" stroke="url(#goldGrad)" stroke-width="0.3" opacity="0.3"/>
+                <path d="M 280 120 Q 320 200 280 280" fill="none" stroke="url(#goldGrad)" stroke-width="0.3" opacity="0.3"/>
+            </svg>
         </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Hours</span>
-          <span class="arrival-detail-value">Wednesday — Sunday<br>11:00 AM — 7:00 PM</span>
+        <div class="hero-content">
+            <p class="hero-tagline">Conversations with the Divine</p>
+            <h1 class="hero-title">Enochian<br>Healing</h1>
+            <p class="hero-subtitle">Angel frequencies • Sacred geometry • Ancient wisdom</p>
         </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Contact</span>
-          <span class="arrival-detail-value">sanctuary@cassandranightshade.co.uk<br>+44 (0)1458 555 0367</span>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
         </div>
-      </div>
-      <div class="arrival-form reveal-right">
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder=" " required>
-            <label>Your Name</label>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder=" " required>
-            <label>Email Address</label>
-          </div>
-          <div class="form-group">
-            <textarea rows="4" placeholder=" " required></textarea>
-            <label>Share Your Intention</label>
-          </div>
-          <button type="submit" class="btn">Request a Session</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-quote">"The wound is the place where the Light enters you."</p>
-    <span class="footer-author">— Rumi</span>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#sacred-art">Sacred Art</a>
-      <a href="#arrival">Arrival</a>
-    </div>
-    <p class="footer-copy">© 2026 Oracle Cassandra Nightshade — Enochian Healing Sanctuary. All rights reserved.</p>
-  </footer>
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <span class="section-label">The Oracle</span>
+                <h2>Ancient Language,<br>Divine Healing</h2>
+                <p>Oracle Cassandra Nightshade works with the Enochian language received by Dr. John Dee and Edward Kelley in the 16th century. This sacred tongue, spoken by angels, carries frequencies of transformation and healing.</p>
+                <p>Enochian healing involves communicating with angelic beings through the Enochian tablets to receive healing frequencies. Each of the 30 Aethyrs corresponds to a different aspect of consciousness and healing.</p>
+                <p>Through sacred geometry and angelic communication, each session opens pathways to higher realms of healing and understanding.</p>
+            </div>
+            <div class="about-visual">
+                <svg class="floating-sigil" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#b8860b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#d4a542;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="150" cy="150" r="130" fill="none" stroke="url(#goldGrad2)" stroke-width="0.5" opacity="0.4"/>
+                    <polygon points="150,30 270,220 30,220" fill="none" stroke="url(#goldGrad2)" stroke-width="0.5" opacity="0.3"/>
+                    <polygon points="150,270 30,80 270,80" fill="none" stroke="url(#goldGrad2)" stroke-width="0.5" opacity="0.3"/>
+                    <circle cx="150" cy="150" r="50" fill="none" stroke="url(#goldGrad2)" stroke-width="0.8" opacity="0.5"/>
+                    <circle cx="150" cy="150" r="20" fill="none" stroke="url(#goldGrad2)" stroke-width="0.5" opacity="0.3"/>
+                </svg>
+                <div class="oracle-name">Oracle Cassandra Nightshade</div>
+                <div class="oracle-title">Keeper of the Enochian Mysteries</div>
+            </div>
+        </div>
+    </section>
 
-  <script src="../script.js"></script>
+    <!-- SACRED ART SECTION -->
+    <section class="sacred-art" id="practices">
+        <div class="section-header reveal">
+            <span class="section-label" style="justify-content: center;">The Sacred Art</span>
+            <h2>Three Paths of<br>Angelic Communication</h2>
+            <p>Each practice opens a doorway to the divine realms</p>
+        </div>
+        <div class="practices-grid">
+            <div class="practice-card reveal">
+                <div class="sigil-container">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="60" r="50" class="sigil-path" style="stroke-dasharray: 314; stroke-dashoffset: 314;"/>
+                        <path d="M 60 10 L 60 110 M 10 60 L 110 60" class="sigil-path" style="stroke-dasharray: 200; stroke-dashoffset: 200; animation-delay: 0.5s;"/>
+                        <polygon points="60,25 90,75 30,75" class="sigil-path" style="stroke-dasharray: 200; stroke-dashoffset: 200; animation-delay: 1s;"/>
+                    </svg>
+                </div>
+                <div class="practice-number">I</div>
+                <h3>Aethyr Trance Journey</h3>
+                <p>Guided meditation into the 30 Aethyrs, each a realm of consciousness and healing frequencies from the angelic kingdoms.</p>
+            </div>
+            <div class="practice-card reveal">
+                <div class="sigil-container">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="20" width="80" height="80" class="sigil-path" style="stroke-dasharray: 320; stroke-dashoffset: 320;"/>
+                        <rect x="35" y="35" width="50" height="50" class="sigil-path" style="stroke-dasharray: 200; stroke-dashoffset: 200; animation-delay: 0.5s;"/>
+                        <circle cx="60" cy="60" r="15" class="sigil-path" style="stroke-dasharray: 94; stroke-dashoffset: 94; animation-delay: 1s;"/>
+                    </svg>
+                </div>
+                <div class="practice-number">II</div>
+                <h3>Tablet Activation</h3>
+                <p>Sacred geometry meditation on the four Watchtowers, activating the elemental tablets for protection and transformation.</p>
+            </div>
+            <div class="practice-card reveal">
+                <div class="sigil-container">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="60" r="45" class="sigil-path" style="stroke-dasharray: 283; stroke-dashoffset: 283;"/>
+                        <path d="M 60 15 Q 90 60 60 105 Q 30 60 60 15" class="sigil-path" style="stroke-dasharray: 200; stroke-dashoffset: 200; animation-delay: 0.5s;"/>
+                        <circle cx="60" cy="60" r="8" class="sigil-path" style="stroke-dasharray: 50; stroke-dashoffset: 50; animation-delay: 1s;"/>
+                    </svg>
+                </div>
+                <div class="practice-number">III</div>
+                <h3>Frequency Attunement</h3>
+                <p>Receiving healing sounds and frequencies directly from angelic realms, aligning your vibration with divine harmony.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE SECTION -->
+    <section class="quote-section" id="wisdom">
+        <div class="quote-decoration"></div>
+        <div class="quote-decoration"></div>
+        <div class="quote-content reveal">
+            <div class="quote-mark">"</div>
+            <p class="quote-text">OLAHO FARU MICALZO ADOPA,<br>OL PIANTAS MIRE IOIAD</p>
+            <p class="quote-translation">"The God of Righteousness is exalted above all, the Kingdom of God endureth forever"</p>
+        </div>
+    </section>
+
+    <!-- ARRIVAL SECTION -->
+    <section class="arrival" id="arrival">
+        <div class="arrival-content reveal">
+            <svg class="arrival-sigil" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="35" fill="none" stroke="#b8860b" stroke-width="0.5" opacity="0.6"/>
+                <polygon points="40,10 65,60 15,60" fill="none" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+                <circle cx="40" cy="40" r="15" fill="none" stroke="#b8860b" stroke-width="0.5" opacity="0.5"/>
+            </svg>
+            <h2>Begin Your Journey</h2>
+            <p>Receive a sacred invitation to explore the mysteries of Enochian healing. The angels await your presence.</p>
+            <form class="arrival-form" onsubmit="handleSubmit(event)">
+                <input type="email" class="form-input" placeholder="Your email address" required>
+                <button type="submit" class="submit-btn">Request Invitation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <svg class="footer-sigil" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+                <polygon points="50,15 80,70 20,70" fill="none" stroke="#b8860b" stroke-width="0.5" opacity="0.3"/>
+                <polygon points="50,85 20,30 80,30" fill="none" stroke="#b8860b" stroke-width="0.5" opacity="0.3"/>
+                <circle cx="50" cy="50" r="12" fill="none" stroke="#b8860b" stroke-width="0.5" opacity="0.5"/>
+            </svg>
+            <div class="footer-info">
+                <p class="footer-address">
+                    333 Twilight Road<br>
+                    Glastonbury, Somerset<br>
+                    BA6 8BH, UK
+                </p>
+                <p class="footer-copy">© 2026 Enochian Healing • All Mysteries Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Create ambient particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (6 + Math.random() * 4) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Scroll reveal animation
+        function handleScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            const practiceCards = document.querySelectorAll('.practice-card');
+
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+
+            practiceCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (cardTop < windowHeight - 100) {
+                    card.classList.add('visible');
+                }
+            });
+        }
+
+        // Active navigation
+        function updateNav() {
+            const sections = ['hero', 'about', 'practices', 'wisdom', 'arrival'];
+            const navItems = document.querySelectorAll('.nav-item');
+            let current = 'hero';
+
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                        current = sectionId;
+                    }
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form handler
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('.submit-btn');
+            btn.textContent = 'INVITATION SENT';
+            btn.style.background = 'rgba(184,134,11,0.2)';
+            setTimeout(() => {
+                btn.textContent = 'REQUEST INVITATION';
+                btn.style.background = 'transparent';
+            }, 3000);
+        }
+
+        // Initialize
+        createParticles();
+        window.addEventListener('scroll', () => {
+            handleScrollReveal();
+            updateNav();
+        });
+        handleScrollReveal();
+        updateNav();
+    </script>
 </body>
 </html>

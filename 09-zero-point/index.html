@@ -3,161 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zero-Point Field Healing — Dr. Nova Celestine | Healing Sanctuary</title>
-  <meta name="description" content="Quantum energy therapy with Dr. Nova Celestine in Taos, NM. Returning to the source of all creation through zero-point field healing.">
+  <title>Zero-Point Field Healing — Dr. Nova Celestine</title>
+  <meta name="description" content="Returning to the Source of All Creation. Quantum energy therapy by Dr. Nova Celestine in Taos, NM.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- PRELOADER -->
-  <div class="preloader">
-    <div class="preloader-count">0</div>
-    <div class="preloader-text">Entering the Sanctuary</div>
+  <!-- Scroll Progress Dot -->
+  <div class="scroll-dot" id="scrollDot">
+    <span class="scroll-dot__core"></span>
+    <span class="scroll-dot__ring"></span>
   </div>
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <a href="#home" class="nav-logo">Dr. Nova Celestine</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#sacred-art">Sacred Art</a></li>
-      <li><a href="#arrival">Arrival</a></li>
-    </ul>
-    <div class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-bg" style="background-image: url('images/hero-zero-point.jpg')"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-tagline">Returning to the Source of All Creation</p>
-      <h1 class="hero-title">Zero-Point<br>Field Healing</h1>
-      <p class="hero-subtitle">Quantum energy therapy that reconnects the body with the quantum vacuum — the source field from which all matter and healing emerge.</p>
-      <a href="#arrival" class="hero-cta">Begin Your Journey</a>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero__gradient"></div>
+    <div class="hero__content">
+      <p class="hero__pre fade-from-void">Quantum Energy Therapy</p>
+      <h1 class="hero__title fade-from-void">
+        <span class="hero__title-line">Zero-Point</span>
+        <span class="hero__title-line hero__title-line--accent">Field Healing</span>
+      </h1>
+      <p class="hero__tagline fade-from-void">Returning to the Source of All Creation</p>
     </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="hero-scroll-line"></div>
+    <div class="hero__scroll-hint">
+      <div class="hero__scroll-line"></div>
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">About the Healer</span>
-      <h2 class="section-title">Dr. Nova Celestine</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-image reveal-left">
-        <div class="image-placeholder">Dr. Nova Celestine Portrait</div>
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__label surface-from-void">Origin</div>
+      <h2 class="about__heading surface-from-void">The Quantum<br>Vacuum Within</h2>
+      <div class="about__columns">
+        <p class="about__text surface-from-void">
+          Dr. Nova Celestine holds dual PhDs in quantum physics and integrative medicine. 
+          She discovered that the zero-point field — the quantum vacuum that underlies all 
+          physical reality — contains the blueprint for perfect health.
+        </p>
+        <p class="about__text surface-from-void">
+          At the deepest level of matter, below atoms, below quarks, there is a field of 
+          infinite potential. This is the zero-point field: the source from which all 
+          particles emerge and to which all healing returns.
+        </p>
       </div>
-      <div class="about-content reveal-right">
-        <h3>The Quantum Vacuum as the Blueprint for Perfect Health</h3>
-        <p>Dr. Nova Celestine holds dual PhDs in quantum physics and integrative medicine from Stanford University. Her research at the intersection of these fields led her to the zero-point field — the quantum vacuum that underlies all physical reality.</p>
-        <p>The zero-point field is not empty space. It is an infinite field of potential energy from which all matter arises and to which all matter returns. Dr. Celestine discovered that this field contains the original blueprint for perfect health — a template that becomes distorted by stress, trauma, and environmental factors.</p>
-        <p>Zero-Point Field Healing works by reconnecting the client's biofield with this source energy. Using precise frequency attunements and quantum meditation techniques, Dr. Celestine helps the body remember its original state of wholeness, allowing innate intelligence to restore itself. Her Taos sanctuary sits at the intersection of the Sangre de Cristo Mountains and the high desert, where the thin air and vast skies create ideal conditions for quantum field work.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SACRED ART SECTION -->
-  <section id="sacred-art" class="section section-darker">
-    <div class="section-header">
-      <span class="section-label">The Sacred Art</span>
-      <h2 class="section-title">Healing Modalities</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-number">01</div>
-        <h3>Zero-Point Resonance</h3>
-        <p>Tuning the body's frequency to match the quantum vacuum state. Using precisely calibrated sound frequencies and electromagnetic fields, this modality brings the body's cells into resonance with the zero-point field. In this state, cells remember their original blueprint and begin self-repair processes that are normally dormant.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">02</div>
-        <h3>Quantum Field Meditation</h3>
-        <p>Guided visualization to access the zero-point field. Dr. Celestine leads clients into deep states of consciousness where the boundaries between self and field dissolve. In this expanded awareness, healing occurs not through force but through reconnection with the infinite potential that underlies all existence.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">03</div>
-        <h3>Biofield Recalibration</h3>
-        <p>Energy work that resets the body's electromagnetic signature. Every living being has a biofield — an electromagnetic pattern that surrounds and penetrates the physical body. When this field becomes corrupted by illness or trauma, physical symptoms follow. This modality clears and recalibrates the biofield to its optimal frequency.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE SECTION -->
-  <section class="quote-block">
-    <blockquote class="quote-text">The wound is the place where the Light enters you.</blockquote>
-    <cite class="quote-author">— Rumi</cite>
-  </section>
-
-  <!-- ARRIVAL SECTION -->
-  <section id="arrival" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">Arrival</span>
-      <h2 class="section-title">Begin Your Healing</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="arrival-grid">
-      <div class="arrival-info reveal-left">
-        <h3>Visit the Sanctuary</h3>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Address</span>
-          <span class="arrival-detail-value">777 Quantum Drive<br>Taos, NM 87571</span>
-        </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Hours</span>
-          <span class="arrival-detail-value">Monday — Friday<br>9:00 AM — 5:00 PM</span>
-        </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Contact</span>
-          <span class="arrival-detail-value">sanctuary@zeropointhealing.org<br>+1 (575) 758-0777</span>
+      <div class="about__dr surface-from-void">
+        <div class="about__dr-line"></div>
+        <div>
+          <span class="about__dr-name">Dr. Nova Celestine</span>
+          <span class="about__dr-title">Quantum Physics & Integrative Medicine</span>
         </div>
       </div>
-      <div class="arrival-form reveal-right">
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder=" " required>
-            <label>Your Name</label>
+    </div>
+  </section>
+
+  <!-- ===================== SACRED ART ===================== -->
+  <section class="sacred" id="sacred">
+    <div class="sacred__inner">
+      <div class="sacred__label surface-from-void">Sacred Art</div>
+      <h2 class="sacred__heading surface-from-void">Three Fields<br>of Resonance</h2>
+
+      <div class="sacred__grid">
+        <!-- Practice 1 -->
+        <div class="sacred__card surface-from-void">
+          <div class="sacred__field">
+            <div class="sacred__orb sacred__orb--1">
+              <div class="sacred__orb-core"></div>
+              <div class="sacred__orb-ring sacred__orb-ring--1"></div>
+              <div class="sacred__orb-ring sacred__orb-ring--2"></div>
+              <div class="sacred__orb-ring sacred__orb-ring--3"></div>
+            </div>
           </div>
-          <div class="form-group">
-            <input type="email" placeholder=" " required>
-            <label>Email Address</label>
+          <h3 class="sacred__card-title">Zero-Point Resonance</h3>
+          <p class="sacred__card-text">Tuning the body's frequency to match the quantum vacuum state.</p>
+        </div>
+
+        <!-- Practice 2 -->
+        <div class="sacred__card surface-from-void">
+          <div class="sacred__field">
+            <div class="sacred__orb sacred__orb--2">
+              <div class="sacred__orb-core"></div>
+              <div class="sacred__orb-ring sacred__orb-ring--1"></div>
+              <div class="sacred__orb-ring sacred__orb-ring--2"></div>
+              <div class="sacred__orb-ring sacred__orb-ring--3"></div>
+            </div>
           </div>
-          <div class="form-group">
-            <textarea rows="4" placeholder=" " required></textarea>
-            <label>Share Your Intention</label>
+          <h3 class="sacred__card-title">Quantum Field Meditation</h3>
+          <p class="sacred__card-text">Guided visualization to access the zero-point field.</p>
+        </div>
+
+        <!-- Practice 3 -->
+        <div class="sacred__card surface-from-void">
+          <div class="sacred__field">
+            <div class="sacred__orb sacred__orb--3">
+              <div class="sacred__orb-core"></div>
+              <div class="sacred__orb-ring sacred__orb-ring--1"></div>
+              <div class="sacred__orb-ring sacred__orb-ring--2"></div>
+              <div class="sacred__orb-ring sacred__orb-ring--3"></div>
+            </div>
           </div>
-          <button type="submit" class="btn">Request a Session</button>
-        </form>
+          <h3 class="sacred__card-title">Biofield Recalibration</h3>
+          <p class="sacred__card-text">Energy work that resets the body's electromagnetic signature.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===================== QUOTE ===================== -->
+  <section class="quote" id="quote">
+    <div class="quote__inner">
+      <div class="quote__line surface-from-void"></div>
+      <blockquote class="quote__text surface-from-void">
+        "The vacuum is not empty — it is the most dense medium in the universe. 
+        Every point in space contains the potential of all creation."
+      </blockquote>
+      <div class="quote__source surface-from-void">
+        <span class="quote__source-name">Dr. Nova Celestine</span>
+        <span class="quote__source-divider">—</span>
+        <span class="quote__source-title">Quantum Vacuum Theory of Health</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ARRIVAL ===================== -->
+  <section class="arrival" id="arrival">
+    <div class="arrival__inner">
+      <h2 class="arrival__heading surface-from-void">Return<br>to Source</h2>
+      <p class="arrival__text surface-from-void">Begin your journey back to the origin of all healing.</p>
+      <form class="arrival__form surface-from-void" onsubmit="event.preventDefault();">
+        <input type="email" class="arrival__input" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" class="arrival__btn">Enter the Field</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <p class="footer-quote">"The wound is the place where the Light enters you."</p>
-    <span class="footer-author">— Rumi</span>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#sacred-art">Sacred Art</a>
-      <a href="#arrival">Arrival</a>
+    <div class="footer__drift">
+      <div class="footer__particle"></div>
     </div>
-    <p class="footer-copy">&copy; 2026 Dr. Nova Celestine — Zero-Point Field Healing Sanctuary. All rights reserved.</p>
+    <div class="footer__info">
+      <span class="footer__healer">Dr. Nova Celestine</span>
+      <span class="footer__address">777 Quantum Drive, Taos, NM 87571</span>
+    </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

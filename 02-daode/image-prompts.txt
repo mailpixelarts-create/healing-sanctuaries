@@ -1,20 +1,53 @@
-1. Cinematic shot of Wudang Mountain temples emerging from morning mist, ancient stone steps leading upward through bamboo groves, jade green light filtering through clouds, ethereal Taoist atmosphere, 8K photorealistic
-2. Master Wei Linzhao seated in meditation position within a traditional Taoist temple, soft green light emanating from his dantian area, incense smoke curling upward, serene expression of deep cultivation
-3. Aerial view of a Taoist mountain sanctuary with curved rooftops, surrounded by ancient pine trees and flowing streams, mist rising from valleys, jade and emerald tones dominating
-4. Visualization of the microcosmic orbit as a luminous jade green circle of light flowing through a meditating figure, the governing vessel along the spine and conception vessel along the front glowing
-5. Five elements represented as glowing orbs of light arranged in a pentagon around a human figure: wood (green), fire (red), earth (yellow), metal (white), water (black), energy flowing between them
-6. Ancient Chinese calligraphy scroll with the characters for "Tao" and "Virtue" surrounded by jade green energy wisps, traditional ink painting meets modern energy visualization
-7. A flowing mountain stream cascading over moss-covered rocks, jade-green water creating natural patterns, morning light creating prismatic effects in the mist
-8. Interior of a Taoist meditation hall with wooden beams, soft lantern light, cushions arranged in a circle, scrolls on walls depicting the five elements, peaceful contemplative atmosphere
-9. Master Wei performing a standing meditation practice in a mountain meadow at dawn, morning dew on grass, wildflowers around him, gentle green aura surrounding his body
-10. The inner smile practice visualized as warm golden-green light spreading from the heart center to each organ, anatomical figure with glowing energy pathways, dark background
-11. Traditional Chinese garden with a jade-green pond reflecting koi fish, stone bridge, bamboo grove, morning mist rising, the perfect setting for Taoist cultivation
-12. Five element balancing ceremony: seasonal foods and herbs arranged on a round table corresponding to their elements, practitioner guiding energy flow with hand movements, warm lighting
-13. Abstract visualization of qi flowing through the body's meridian system, jade green lines of light connecting acupressure points, the three dantians glowing at forehead, heart, and lower abdomen
-14. Mountain temple courtyard at sunset, golden-green light filtering through ancient trees, a practitioner walking slowly in tai chi movement, stone carvings of Taoist symbols visible
-15. Close-up of hands in a mudra position with jade-green energy wisps rising from the palms, meditative focus, soft bokeh background of temple lanterns
-16. The cosmic dance of yin and yang visualized as swirling jade and silver energies around a central figure, sacred Taoist geometry, cosmic background with stars
-17. A traditional Taoist robe laid out on a meditation cushion, jade embroidery depicting cloud patterns, morning light catching the silk fibers, symbol of the practitioner's dedication
-18. Ancient Wudang mountain path with stone steps worn smooth by centuries of monks, surrounded by mist and ancient pines, a single figure walking upward toward the clouds
-19. Visualization of the three dantians as three glowing jade orbs within a human silhouette, connected by flowing energy channels, cosmic background with constellation patterns
-20. Final hero image: the character for "Tao" written in light above a mountain temple at dawn, jade-green energy radiating outward, the promise of ancient wisdom awakening
+# Daode Xin Xi — Cinematic Image Prompts
+# Sacred Geometry / Taoist Healing Aesthetic
+
+## Hero & Atmosphere
+1. "Wide cinematic shot of Wudang Mountain temples at dawn, golden mist swirling between jade green peaks, sacred geometry overlay, ethereal lighting, Taoist architecture, 8K, hyper-detailed"
+
+2. "Ancient Taoist temple interior with shafts of golden light piercing through incense smoke, mandala patterns on floor, jade green and gold color palette, atmospheric, mystical, cinematic"
+
+3. "Aerial view of winding mountain path through bamboo forest leading to hidden temple, morning mist, jade green tones, sacred geometry in the landscape, cinematic composition"
+
+4. "Close-up of flowing water over smooth jade stones in mountain stream, bokeh background of temple roof, golden hour lighting, serene, meditative atmosphere"
+
+5. "Abstract sacred geometry mandala floating in misty void, jade green and gold colors, divine proportions, spiritual, ethereal, digital art"
+
+## Meditation & Practice
+6. "Silhouette of Taoist master in meditation pose on mountain peak at sunrise, golden halo effect, mist below, spiritual, transcendent, cinematic"
+
+7. "Hands in Taoist mudra position with golden energy flowing between fingers, dark background, sacred geometry overlay, mystical, detailed"
+
+8. "Interior of meditation hall with single monk seated in lotus position, shaft of light from above, incense smoke creating patterns, serene, peaceful"
+
+9. "Close-up of eyes closed in deep meditation, reflection of mountain landscape in eyelids, double exposure effect, spiritual, ethereal"
+
+10. "Qi energy visualization as flowing golden rivers through human body silhouette, chakra points glowing jade green, dark background, mystical"
+
+## Sacred Objects & Details
+11. "Antique Taoist scroll with sacred calligraphy, jade weight holding it down, golden light, aged paper texture, mystical symbols, detailed"
+
+12. "Jade meditation beads arranged in mandala pattern on dark stone, golden light, macro photography, sacred geometry, spiritual"
+
+13. "Traditional Taoist incense burner with smoke forming sacred patterns, temple background, atmospheric lighting, mystical, cinematic"
+
+14. "Ancient bronze mirror reflecting Wudang Mountain, ornate frame with Taoist symbols, mystical reflection, golden light"
+
+15. "Flowing water over Feng Shui stones arranged in sacred pattern, macro shot, jade and gold tones, meditative, peaceful"
+
+## Nature & Landscape
+16. "Wudang Mountain peaks emerging from sea of clouds at sunset, golden light, jade green valleys below, mystical atmosphere, epic scale"
+
+17. "Bamboo forest with shafts of golden light creating sacred geometry patterns, mist, serene, meditative atmosphere, cinematic"
+
+18. "Waterfall cascading into jade green pool in hidden mountain valley, temple visible in distance, sacred geometry in water patterns"
+
+19. "Single lotus flower floating on still water reflecting full moon, jade green tones, gold highlights, serene, spiritual"
+
+20. "Five elements symbol (wood, fire, earth, metal, water) depicted in natural landscape, Taoist temple backdrop, cinematic, mystical"
+
+## Style Notes
+- Color palette: Jade green (#4a7c59), deep black (#0a0a0a), gold (#d4af37)
+- Lighting: Golden hour, shafts of light, atmospheric mist
+- Mood: Serene, mystical, ancient wisdom, flowing movement
+- Composition: Sacred geometry, golden ratio, mandala patterns
+- Quality: 8K, hyper-detailed, cinematic, atmospheric

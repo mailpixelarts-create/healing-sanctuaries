@@ -1,163 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daode Xin Xi — Master Wei Linzhao | Healing Sanctuary</title>
-  <meta name="description" content="Taoist heart-mind healing with Master Wei Linzhao in Berkeley, CA. The Tao that can be spoken is not the eternal Tao.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daode Xin Xi — The Way That Cannot Be Named</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;600;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- PRELOADER -->
-  <div class="preloader">
-    <div class="preloader-count">0</div>
-    <div class="preloader-text">Entering the Sanctuary</div>
-  </div>
+    <!-- Mandala Navigation Container -->
+    <div id="mandala-nav" class="mandala-nav">
+        <svg id="mandala-svg" viewBox="0 0 600 600" class="mandala-svg">
+            <!-- Outer rings -->
+            <circle cx="300" cy="300" r="280" class="mandala-ring ring-outer" />
+            <circle cx="300" cy="300" r="240" class="mandala-ring ring-mid" />
+            <circle cx="300" cy="300" r="180" class="mandala-ring ring-inner" />
+            <circle cx="300" cy="300" r="120" class="mandala-ring ring-core" />
+            <circle cx="300" cy="300" r="60" class="mandala-ring ring-center" />
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <a href="#home" class="nav-logo">Master Wei Linzhao</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#sacred-art">Sacred Art</a></li>
-      <li><a href="#arrival">Arrival</a></li>
-    </ul>
-    <div class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+            <!-- Sacred geometry petals -->
+            <g id="mandala-petals" class="mandala-petals">
+                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-1" />
+                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-2" />
+                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-3" />
+                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-4" />
+                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-5" />
+                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-6" />
+            </g>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-bg" style="background-image: url('images/hero-wudang.jpg')"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-tagline">The Tao That Can Be Spoken Is Not the Eternal Tao</p>
-      <h1 class="hero-title">Daode Xin Xi</h1>
-      <p class="hero-subtitle">Taoist heart-mind healing through the cultivation of the three dantians, the microcosmic orbit, and the five element cycle.</p>
-      <a href="#arrival" class="hero-cta">Begin Your Journey</a>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="hero-scroll-line"></div>
-    </div>
-  </section>
+            <!-- Inner sacred triangles -->
+            <g id="mandala-triangles" class="mandala-triangles">
+                <polygon points="300,100 450,400 150,400" class="mandala-triangle tri-1" />
+                <polygon points="300,500 150,200 450,200" class="mandala-triangle tri-2" />
+            </g>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">About the Healer</span>
-      <h2 class="section-title">Master Wei Linzhao</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-image reveal-left">
-        <div class="image-placeholder">Master Wei Linzhao Portrait</div>
-      </div>
-      <div class="about-content reveal-right">
-        <h3>22 Years of Taoist Training at Wudang Mountain</h3>
-        <p>Master Wei trained at Wudang Mountain under Taoist masters for 22 years, immersing himself in the ancient traditions of internal cultivation and energetic medicine that have been practiced for thousands of years.</p>
-        <p>Daode Xin Xi translates as "Way-Virtue Heart-Matter" — a system of energetic cultivation that works with the three dantians, the microcosmic orbit, and the five element cycle to restore harmony between heaven, earth, and human.</p>
-        <p>Master Wei's approach bridges ancient Taoist wisdom with contemporary understanding of energy medicine. His Berkeley sanctuary offers a space where the principles of wu wei (non-forced action) guide every healing interaction, allowing the body's natural qi to find its own path to balance.</p>
-      </div>
-    </div>
-  </section>
+            <!-- Navigation points -->
+            <g id="nav-points" class="nav-points">
+                <circle cx="300" cy="30" r="12" class="nav-point" data-section="about" />
+                <circle cx="540" cy="300" r="12" class="nav-point" data-section="practices" />
+                <circle cx="300" cy="570" r="12" class="nav-point" data-section="quote" />
+                <circle cx="60" cy="300" r="12" class="nav-point" data-section="arrival" />
+            </g>
 
-  <!-- SACRED ART SECTION -->
-  <section id="sacred-art" class="section section-darker">
-    <div class="section-header">
-      <span class="section-label">The Sacred Art</span>
-      <h2 class="section-title">Healing Modalities</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-number">01</div>
-        <h3>Microcosmic Orbit Meditation</h3>
-        <p>Circulation of qi through the governing and conception vessels, creating a continuous flow of vital energy that nourishes every organ and tissue. This foundational practice opens the body's primary energy pathways and cultivates deep inner stillness.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">02</div>
-        <h3>Five Element Balancing</h3>
-        <p>Seasonal and organ-based harmonization aligned with the Taoist five element cycle: wood, fire, earth, metal, and water. Each element corresponds to specific organs, emotions, and seasons, and balancing them restores the body's natural rhythm.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">03</div>
-        <h3>Inner Smile Practice</h3>
-        <p>Seated meditation directing healing energy to each organ through the cultivation of genuine inner joy. The practitioner smiles inwardly, sending warmth and positive energy to the heart, liver, lungs, kidneys, and spleen, awakening each organ's healing capacity.</p>
-      </div>
-    </div>
-  </section>
+            <!-- Section labels around mandala -->
+            <text x="300" y="55" class="mandala-label label-about" data-section="about">About</text>
+            <text x="555" y="305" class="mandala-label label-practices" data-section="practices">Practices</text>
+            <text x="300" y="595" class="mandala-label label-quote" data-section="quote">Quote</text>
+            <text x="45" y="305" class="mandala-label label-arrival" data-section="arrival">Arrival</text>
 
-  <!-- QUOTE SECTION -->
-  <section class="quote-block">
-    <blockquote class="quote-text">The wound is the place where the Light enters you.</blockquote>
-    <cite class="quote-author">— Rumi</cite>
-  </section>
-
-  <!-- ARRIVAL SECTION -->
-  <section id="arrival" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">Arrival</span>
-      <h2 class="section-title">Begin Your Healing</h2>
-      <div class="section-divider"></div>
+            <!-- Center emblem -->
+            <g class="center-emblem">
+                <text x="300" y="300" class="center-yin-yang">&#9784;</text>
+            </g>
+        </svg>
     </div>
-    <div class="arrival-grid">
-      <div class="arrival-info reveal-left">
-        <h3>Visit the Sanctuary</h3>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Address</span>
-          <span class="arrival-detail-value">1600 University Avenue<br>Berkeley, CA 94703</span>
+
+    <!-- Sections -->
+    <section id="home" class="section section-home active">
+        <div class="section-content">
+            <div class="home-content">
+                <h1 class="hero-title">
+                    <span class="title-line title-chinese">道德心息</span>
+                    <span class="title-line title-english">Daode Xin Xi</span>
+                    <span class="title-line title-sub">The Way That Cannot Be Named</span>
+                </h1>
+                <p class="hero-tagline">The Tao That Can Be Spoken Is Not the Eternal Tao</p>
+            </div>
         </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Hours</span>
-          <span class="arrival-detail-value">Monday — Friday<br>8:00 AM — 7:00 PM</span>
-        </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Contact</span>
-          <span class="arrival-detail-value">sanctuary@weilinzhao.com<br>(510) 555-0293</span>
-        </div>
-      </div>
-      <div class="arrival-form reveal-right">
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder=" " required>
-            <label>Your Name</label>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder=" " required>
-            <label>Email Address</label>
-          </div>
-          <div class="form-group">
-            <textarea rows="4" placeholder=" " required></textarea>
-            <label>Share Your Intention</label>
-          </div>
-          <button type="submit" class="btn">Request a Session</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-quote">"The wound is the place where the Light enters you."</p>
-    <span class="footer-author">— Rumi</span>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#sacred-art">Sacred Art</a>
-      <a href="#arrival">Arrival</a>
-    </div>
-    <p class="footer-copy">© 2026 Master Wei Linzhao — Daode Xin Xi Healing Sanctuary. All rights reserved.</p>
-  </footer>
+    <section id="about" class="section section-about">
+        <div class="section-content">
+            <div class="about-layout">
+                <div class="about-vertical-text">
+                    <p class="vertical-chinese">道德心息</p>
+                </div>
+                <div class="about-main">
+                    <h2 class="section-title">Way-Virtue Heart-Matter</h2>
+                    <div class="about-body">
+                        <p>Master Wei Linzhao trained at Wudang Mountain under Taoist masters for 22 years. Daode Xin Xi translates as "Way-Virtue Heart-Matter" — a system of energetic cultivation that works with the three dantians, the microcosmic orbit, and the five element cycle to restore harmony between heaven, earth, and human.</p>
+                        <p>This ancient lineage carries the essence of Taoist internal alchemy, refined through centuries of practice at the sacred peaks of Wudang, where mist-wrapped temples have witnessed the silent cultivation of countless masters.</p>
+                        <p>The practice transcends mere technique. It is a return to the natural state — the uncarved block, the empty vessel, the water that nourishes all things without striving.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="../script.js"></script>
+    <section id="practices" class="section section-practices">
+        <div class="section-content">
+            <h2 class="section-title">Sacred Arts</h2>
+            <div class="practices-container">
+                <div class="practice-orbit">
+                    <div class="practice-circle" data-practice="1">
+                        <div class="practice-ring"></div>
+                        <div class="practice-inner">
+                            <h3 class="practice-name">Microcosmic Orbit</h3>
+                            <p class="practice-desc">Circulation of qi through the governing and conception vessels</p>
+                        </div>
+                    </div>
+                    <div class="practice-circle" data-practice="2">
+                        <div class="practice-ring"></div>
+                        <div class="practice-inner">
+                            <h3 class="practice-name">Five Element Balancing</h3>
+                            <p class="practice-desc">Seasonal and organ-based harmonization</p>
+                        </div>
+                    </div>
+                    <div class="practice-circle" data-practice="3">
+                        <div class="practice-ring"></div>
+                        <div class="practice-inner">
+                            <h3 class="practice-name">Inner Smile</h3>
+                            <p class="practice-desc">Seated meditation directing healing energy to each organ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote" class="section section-quote">
+        <div class="section-content">
+            <div class="quote-container">
+                <div class="quote-text" id="flowing-quote">
+                    <span class="quote-line" data-delay="0">The Tao that can be spoken</span>
+                    <span class="quote-line" data-delay="1">is not the eternal Tao.</span>
+                    <span class="quote-line" data-delay="2">The name that can be named</span>
+                    <span class="quote-line" data-delay="3">is not the eternal name.</span>
+                    <span class="quote-line quote-source" data-delay="4">— Tao Te Ching, Chapter One</span>
+                </div>
+                <div class="water-flow"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="arrival" class="section section-arrival">
+        <div class="section-content">
+            <h2 class="section-title">Arrival</h2>
+            <div class="arrival-layout">
+                <div class="arrival-contact">
+                    <div class="contact-qr">
+                        <div class="qr-placeholder">
+                            <span class="qr-text">WeChat</span>
+                        </div>
+                    </div>
+                    <p class="arrival-address">1600 University Avenue<br>Berkeley, CA 94703</p>
+                </div>
+                <div class="arrival-email">
+                    <a href="mailto:practice@daodexinxi.com" class="email-link">practice@daodexinxi.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Symbol -->
+    <footer class="site-footer">
+        <div class="footer-symbol">
+            <svg viewBox="0 0 100 100" class="tao-symbol">
+                <circle cx="50" cy="50" r="48" class="tao-outer" />
+                <path d="M50,2 A48,48 0 0,1 50,98 A24,24 0 0,1 50,50 A24,24 0 0,0 50,2" class="tao-light" />
+                <circle cx="50" cy="26" r="6" class="tao-dot-dark" />
+                <circle cx="50" cy="74" r="6" class="tao-dot-light" />
+            </svg>
+        </div>
+    </footer>
+
+    <!-- Background particles -->
+    <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+    <script src="script.js"></script>
 </body>
 </html>

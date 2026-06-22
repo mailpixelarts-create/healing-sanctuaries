@@ -1,4 +1,989 @@
+/* ============================================
+   GEOMANCY — Listening to the Wisdom of the Land
+   Raw Earth Aesthetic / Earthen Textures
+   ============================================ */
+
 :root {
-  --accent: #8d6e63;
-  --accent-glow: rgba(141, 110, 99, 0.3);
+  --earth: #8d6e63;
+  --earth-deep: #5d4037;
+  --earth-light: #a1887f;
+  --sand: #c4b7a6;
+  --sand-light: #d7ccbe;
+  --sand-dark: #a89b8c;
+  --stone: #6b6b6b;
+  --stone-dark: #4a4a4a;
+  --stone-light: #8a8a8a;
+  --soil: #3e2723;
+  --soil-mid: #4e342e;
+  --cream: #f5f0e8;
+  --cream-dim: #f5f0e866;
+  --cream-faint: #f5f0e822;
+
+  --font-serif: 'Libre Baskerville', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  --ease-precise: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-earth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ---- RESET ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar { display: none; }
+
+body {
+  font-family: var(--font-serif);
+  background: var(--soil);
+  color: var(--cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input { font-family: inherit; }
+
+/* ---- SCROLL MARKER ---- */
+.scroll-marker {
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scroll-marker__coord {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--earth-light);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  opacity: 0.6;
+  transition: opacity 0.3s var(--ease-precise);
+}
+
+.scroll-marker__line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--earth), transparent);
+}
+
+.scroll-marker__depth {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--earth-light);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  opacity: 0.6;
+}
+
+/* ---- EARTH CANVAS ---- */
+#earthCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.hero__texture {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-conic-gradient(
+      var(--soil-mid) 0% 25%,
+      var(--soil) 0% 50%
+    ) 0 0 / 60px 60px,
+    repeating-conic-gradient(
+      var(--earth-deep) 0% 25%,
+      var(--soil-mid) 0% 50%
+    ) 30px 30px / 60px 60px;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.hero__texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% 50%, transparent 30%, var(--soil) 80%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, transparent 0%, var(--soil) 100%);
+  z-index: 1;
+}
+
+.hero__coordinates {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--earth-light);
+  opacity: 0.7;
+}
+
+.hero__coord-sep {
+  color: var(--stone);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero__pre {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--earth);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.hero__title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.05;
+  margin-bottom: 2rem;
+}
+
+.hero__title-line {
+  display: block;
+  font-size: clamp(3.5rem, 9vw, 8rem);
+  color: var(--cream);
+  text-shadow: 0 2px 40px var(--soil);
+}
+
+.hero__tagline {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--sand);
+  letter-spacing: 0.05em;
+}
+
+.hero__ley-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero__ley-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero__ley-line {
+  stroke: var(--earth);
+  stroke-width: 0.3;
+  opacity: 0.15;
+  stroke-dasharray: 8 12;
+  animation: leyFlow 20s linear infinite;
+}
+
+.hero__ley-line--secondary {
+  stroke: var(--sand-dark);
+  opacity: 0.1;
+  animation-delay: -7s;
+  animation-duration: 25s;
+}
+
+.hero__ley-line--tertiary {
+  stroke: var(--stone);
+  opacity: 0.08;
+  animation-delay: -14s;
+  animation-duration: 30s;
+}
+
+@keyframes leyFlow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -200; }
+}
+
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--earth), transparent);
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+  50% { opacity: 0.7; transform: scaleY(1); }
+}
+
+/* ---- FADE FROM EARTH ---- */
+.fade-from-earth {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(4px);
+  transition: opacity 1.0s var(--ease-earth),
+              transform 1.0s var(--ease-earth),
+              filter 1.0s var(--ease-earth);
+}
+
+.fade-from-earth.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.hero__content .fade-from-earth:nth-child(1) { transition-delay: 0.2s; }
+.hero__content .fade-from-earth:nth-child(2) { transition-delay: 0.5s; }
+.hero__content .fade-from-earth:nth-child(3) { transition-delay: 0.8s; }
+
+/* ---- SURFACE FROM EARTH ---- */
+.surface-from-earth {
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(3px);
+  transition: opacity 1.0s var(--ease-earth),
+              transform 1.0s var(--ease-earth),
+              filter 1.0s var(--ease-earth);
+}
+
+.surface-from-earth.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* ---- NAVIGATION ---- */
+.nav {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-precise);
+}
+
+.nav.is-visible {
+  opacity: 1;
+}
+
+.nav__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+  opacity: 0.4;
+  transition: opacity 0.3s var(--ease-precise);
+}
+
+.nav__label:hover {
+  opacity: 1;
+}
+
+.nav__num {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--earth);
+}
+
+.nav__text {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--sand);
+}
+
+.nav__coord {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--stone);
+}
+
+/* ---- ABOUT ---- */
+.about {
+  position: relative;
+  z-index: 2;
+  padding: 12rem 2rem;
+}
+
+.about__bg-texture {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--soil) 0%, var(--soil-mid) 30%, var(--soil-mid) 70%, var(--soil) 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+.about__inner {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.about__label,
+.sacred__label,
+.arrival__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--earth);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.about__heading,
+.sacred__heading,
+.arrival__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 3rem;
+  color: var(--cream);
+}
+
+.about__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.about__text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--sand);
+  font-weight: 400;
+}
+
+.about__notes {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border-left: 1px solid var(--earth-deep);
+}
+
+.about__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--stone-light);
+  letter-spacing: 0.03em;
+}
+
+.about__note-marker {
+  color: var(--earth);
+  font-size: 0.9rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.about__note-text {
+  font-style: italic;
+  color: var(--sand-dark);
+}
+
+.about__keeper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about__keeper-line {
+  width: 40px;
+  height: 1px;
+  background: var(--earth);
+  flex-shrink: 0;
+}
+
+.about__keeper-name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--cream);
+}
+
+.about__keeper-title {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--stone-light);
+  font-weight: 300;
+  margin-top: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+/* ---- SACRED ART ---- */
+.sacred {
+  position: relative;
+  z-index: 2;
+  padding: 10rem 2rem 12rem;
+  background: var(--soil);
+}
+
+.sacred__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sacred__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.sacred__card {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(180deg, var(--soil-mid) 0%, var(--soil) 100%);
+  border: 1px solid var(--earth-deep);
+  transition: border-color 0.4s var(--ease-precise);
+}
+
+.sacred__card:hover {
+  border-color: var(--earth);
+}
+
+.sacred__diagram {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 2.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sacred__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sacred__circle {
+  fill: none;
+  stroke: var(--earth);
+  stroke-width: 0.8;
+  opacity: 0.5;
+  animation: diagramPulse 4s ease-in-out infinite;
+}
+
+.sacred__circle--inner {
+  stroke: var(--sand-dark);
+  animation-delay: 0.5s;
+}
+
+.sacred__circle--core {
+  fill: var(--earth);
+  opacity: 0.6;
+  animation: corePulse 3s ease-in-out infinite;
+}
+
+.sacred__line {
+  stroke: var(--earth);
+  stroke-width: 0.4;
+  opacity: 0.3;
+}
+
+.sacred__line--diag {
+  stroke-dasharray: 4 4;
+  animation: lineFlow 8s linear infinite;
+}
+
+.sacred__line--connect {
+  stroke: var(--sand-dark);
+  stroke-dasharray: 2 3;
+}
+
+.sacred__node {
+  fill: var(--earth-light);
+  opacity: 0.7;
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+.sacred__node--active {
+  fill: var(--sand);
+  animation-delay: 0.3s;
+}
+
+.sacred__polygon {
+  fill: none;
+  stroke: var(--earth);
+  stroke-width: 0.8;
+  opacity: 0.4;
+}
+
+.sacred__polygon--inner {
+  stroke: var(--sand-dark);
+  opacity: 0.3;
+  animation: diagramPulse 5s ease-in-out infinite;
+}
+
+.sacred__rect {
+  fill: none;
+  stroke: var(--earth);
+  stroke-width: 0.8;
+  opacity: 0.4;
+}
+
+.sacred__crystal {
+  fill: var(--sand);
+  opacity: 0.6;
+  animation: crystalPulse 3.5s ease-in-out infinite;
+}
+
+.sacred__crystal--center {
+  fill: var(--earth-light);
+  opacity: 0.8;
+  animation-delay: 0.5s;
+}
+
+@keyframes diagramPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes corePulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+@keyframes lineFlow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -40; }
+}
+
+@keyframes nodePulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes crystalPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.15); }
+}
+
+.sacred__diagram-label {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  color: var(--stone);
+  white-space: nowrap;
+}
+
+.sacred__card-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.8rem;
+  color: var(--cream);
+}
+
+.sacred__card-text {
+  font-size: 0.9rem;
+  color: var(--sand-dark);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* ---- QUOTE ---- */
+.quote {
+  position: relative;
+  z-index: 2;
+  padding: 10rem 2rem;
+  overflow: hidden;
+}
+
+.quote__bg-stone {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--soil) 0%, var(--soil-mid) 50%, var(--soil) 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.45' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+.quote__inner {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote__line {
+  width: 40px;
+  height: 1px;
+  background: var(--earth);
+  margin: 0 auto 3rem;
+}
+
+.quote__text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--cream);
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 20px var(--soil);
+}
+
+.quote__source {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.quote__source-name {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--cream);
+}
+
+.quote__source-divider {
+  color: var(--earth);
+}
+
+.quote__source-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--stone-light);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* ---- ARRIVAL ---- */
+.arrival {
+  position: relative;
+  z-index: 2;
+  padding: 12rem 2rem;
+  background: var(--soil);
+}
+
+.arrival__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.arrival__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+  color: var(--cream);
+}
+
+.arrival__coords {
+  text-align: left;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border: 1px solid var(--earth-deep);
+  background: var(--soil-mid);
+}
+
+.arrival__coord-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--earth-deep);
+}
+
+.arrival__coord-row:last-child {
+  border-bottom: none;
+}
+
+.arrival__coord-key {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--earth);
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.arrival__coord-val {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--sand);
+  letter-spacing: 0.03em;
+}
+
+.arrival__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.arrival__field {
+  text-align: left;
+}
+
+.arrival__field-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--stone);
+  margin-bottom: 0.5rem;
+}
+
+.arrival__input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--soil-mid);
+  border: 1px solid var(--earth-deep);
+  color: var(--cream);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  outline: none;
+  transition: border-color 0.4s var(--ease-precise), box-shadow 0.4s var(--ease-precise);
+}
+
+.arrival__input::placeholder {
+  color: var(--stone);
+}
+
+.arrival__input:focus {
+  border-color: var(--earth);
+  box-shadow: 0 0 20px rgba(141, 110, 99, 0.15);
+}
+
+.arrival__btn {
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  border: 1px solid var(--earth);
+  color: var(--earth-light);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 0.4s var(--ease-precise), color 0.4s var(--ease-precise);
+}
+
+.arrival__btn:hover {
+  background: var(--earth);
+  color: var(--soil);
+}
+
+/* ---- FOOTER ---- */
+.footer {
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem 3rem;
+  background: var(--soil);
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer__stone {
+  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.footer__stone-body {
+  width: 80px;
+  height: 50px;
+  background: linear-gradient(180deg, var(--stone) 0%, var(--stone-dark) 100%);
+  border-radius: 30% 40% 50% 45% / 60% 50% 50% 40%;
+  position: relative;
+  animation: stoneSink 8s ease-in-out infinite;
+}
+
+.footer__stone-body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+  border-radius: inherit;
+}
+
+.footer__stone-shadow {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 15px;
+  background: radial-gradient(ellipse, var(--soil-mid) 0%, transparent 70%);
+  animation: shadowPulse 8s ease-in-out infinite;
+}
+
+@keyframes stoneSink {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+
+@keyframes shadowPulse {
+  0%, 100% { transform: scaleX(1); opacity: 0.5; }
+  50% { transform: scaleX(0.8); opacity: 0.3; }
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer__healer {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--cream);
+}
+
+.footer__address {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--stone);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .about__columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sacred__grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .scroll-marker {
+    left: 1rem;
+  }
+
+  .nav {
+    right: 1rem;
+  }
+
+  .nav__coord {
+    display: none;
+  }
+
+  .about {
+    padding: 8rem 1.5rem;
+  }
+
+  .sacred {
+    padding: 8rem 1.5rem;
+  }
+
+  .quote {
+    padding: 8rem 1.5rem;
+  }
+
+  .arrival {
+    padding: 8rem 1.5rem;
+  }
+
+  .hero__coordinates {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .hero__coord-sep {
+    display: none;
+  }
+
+  .arrival__coord-row {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title-line {
+    font-size: 2.8rem;
+  }
+
+  .about__heading,
+  .sacred__heading,
+  .arrival__heading {
+    font-size: 2rem;
+  }
 }

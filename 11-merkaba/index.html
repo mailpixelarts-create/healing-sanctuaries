@@ -1,163 +1,1156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merkaba Light Body Activation — Ascended Teacher Seraphina Lightbody | Healing Sanctuary</title>
-  <meta name="description" content="Merkaba light body activation with Ascended Teacher Seraphina Lightbody in Mount Shasta, CA. Activating the vehicle of ascension.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merkaba Light Body — Activating the Vehicle of Ascension</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --amethyst: #9b59b6;
+            --amethyst-light: #c39bd3;
+            --amethyst-glow: rgba(155, 89, 182, 0.4);
+            --cosmic-black: #0a0a1a;
+            --cosmic-deep: #050510;
+            --white-light: #ffffff;
+            --white-soft: rgba(255, 255, 255, 0.85);
+            --white-dim: rgba(255, 255, 255, 0.4);
+            --gold-sacred: #d4af37;
+            --phi: 1.618033988749895;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: var(--amethyst) var(--cosmic-deep);
+        }
+
+        body {
+            font-family: 'Karla', sans-serif;
+            background: var(--cosmic-black);
+            color: var(--white-light);
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           COSMIC BACKGROUND — Star field
+        ═══════════════════════════════════════════════════ */
+        .cosmic-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--white-light);
+            animation: twinkle var(--dur) ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.1; transform: scale(0.8); }
+            100% { opacity: var(--max-op); transform: scale(1.2); }
+        }
+
+        /* ═══════════════════════════════════════════════════
+           SCROLL INDICATOR — Geometric
+        ═══════════════════════════════════════════════════ */
+        .scroll-indicator {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .scroll-dot {
+            width: 8px;
+            height: 8px;
+            border: 1px solid var(--amethyst);
+            transform: rotate(45deg);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+        }
+
+        .scroll-dot.active {
+            background: var(--amethyst);
+            box-shadow: 0 0 12px var(--amethyst-glow);
+            transform: rotate(45deg) scale(1.4);
+        }
+
+        .scroll-dot:hover {
+            border-color: var(--white-light);
+            box-shadow: 0 0 8px var(--amethyst-glow);
+        }
+
+        /* ═══════════════════════════════════════════════════
+           SECTION BASE
+        ═══════════════════════════════════════════════════ */
+        section {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           HERO — Star Tetrahedron (Merkaba)
+        ═══════════════════════════════════════════════════ */
+        #hero {
+            background: radial-gradient(ellipse at center, rgba(155, 89, 182, 0.08) 0%, var(--cosmic-deep) 70%);
+            overflow: hidden;
+        }
+
+        .merkaba-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .merkaba-svg {
+            width: 100%;
+            height: 100%;
+            animation: merkabaRotate 30s linear infinite, merkabaPulse 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 40px var(--amethyst-glow)) drop-shadow(0 0 80px rgba(155, 89, 182, 0.2));
+        }
+
+        @keyframes merkabaRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes merkabaPulse {
+            0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.9; }
+            50% { transform: rotate(180deg) scale(1.05); opacity: 1; }
+        }
+
+        .merkaba-glow-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(155, 89, 182, 0.15);
+            animation: ringPulse 2s ease-in-out infinite;
+        }
+
+        .merkaba-glow-ring:nth-child(2) { width: 600px; height: 600px; animation-delay: 0.3s; }
+        .merkaba-glow-ring:nth-child(3) { width: 700px; height: 700px; animation-delay: 0.6s; }
+        .merkaba-glow-ring:nth-child(4) { width: 800px; height: 800px; animation-delay: 0.9s; border-color: rgba(155, 89, 182, 0.08); }
+        .merkaba-glow-ring:nth-child(5) { width: 900px; height: 900px; animation-delay: 1.2s; border-color: rgba(155, 89, 182, 0.04); }
+
+        @keyframes ringPulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.03); opacity: 1; }
+        }
+
+        .hero-center-point {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--white-light);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--white-light), 0 0 40px var(--amethyst-glow);
+            animation: centerPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes centerPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px var(--white-light), 0 0 40px var(--amethyst-glow); }
+            50% { transform: scale(1.8); box-shadow: 0 0 40px var(--white-light), 0 0 80px var(--amethyst-glow); }
+        }
+
+        /* Sacred geometry grid lines */
+        .sacred-grid {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0.04;
+            pointer-events: none;
+        }
+
+        .sacred-grid line {
+            stroke: var(--amethyst);
+            stroke-width: 0.5;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           ABOUT — Text emerging from geometry
+        ═══════════════════════════════════════════════════ */
+        #about {
+            background: linear-gradient(180deg, var(--cosmic-deep) 0%, var(--cosmic-black) 50%, var(--cosmic-deep) 100%);
+            padding: 120px 60px;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .about-geometry-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            opacity: 0.06;
+            animation: geometrySpin 60s linear infinite;
+        }
+
+        @keyframes geometrySpin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .about-label {
+            font-family: 'Questrial', sans-serif;
+            font-size: 11px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--amethyst);
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: emergeFromGeometry 1.2s ease-out 0.3s forwards;
+        }
+
+        @keyframes emergeFromGeometry {
+            0% { opacity: 0; transform: translateY(30px) scale(0.95); filter: blur(4px); }
+            100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        }
+
+        .about-title {
+            font-family: 'Questrial', sans-serif;
+            font-size: clamp(32px, 5vw, 56px);
+            line-height: 1.15;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: emergeFromGeometry 1.2s ease-out 0.6s forwards;
+        }
+
+        .about-title .highlight {
+            color: var(--amethyst);
+            position: relative;
+        }
+
+        .about-title .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--amethyst), transparent);
+            animation: lineExpand 2s ease-out 1.5s forwards;
+            transform: scaleX(0);
+        }
+
+        @keyframes lineExpand {
+            0% { transform: scaleX(0); }
+            100% { transform: scaleX(1); }
+        }
+
+        .about-text {
+            font-size: 17px;
+            line-height: 1.9;
+            color: var(--white-soft);
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: emergeFromGeometry 1.2s ease-out 0.9s forwards;
+        }
+
+        .about-geometric-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 40px 0;
+            opacity: 0;
+            animation: emergeFromGeometry 1s ease-out 1.2s forwards;
+        }
+
+        .geo-line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--amethyst), transparent);
+        }
+
+        .geo-diamond {
+            width: 8px;
+            height: 8px;
+            border: 1px solid var(--amethyst);
+            transform: rotate(45deg);
+        }
+
+        .healer-name {
+            font-family: 'Questrial', sans-serif;
+            font-size: 13px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--amethyst-light);
+            margin-top: 40px;
+            opacity: 0;
+            animation: emergeFromGeometry 1s ease-out 1.5s forwards;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           SACRED ART — Geometric transformations
+        ═══════════════════════════════════════════════════ */
+        #sacred-art {
+            background: var(--cosmic-deep);
+            padding: 120px 60px;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .sacred-art-header {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sacred-art-label {
+            font-family: 'Questrial', sans-serif;
+            font-size: 11px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--amethyst);
+            margin-bottom: 20px;
+        }
+
+        .sacred-art-title {
+            font-family: 'Questrial', sans-serif;
+            font-size: clamp(28px, 4vw, 44px);
+        }
+
+        .practices-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .practice-card {
+            background: rgba(155, 89, 182, 0.03);
+            border: 1px solid rgba(155, 89, 182, 0.1);
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at center, var(--amethyst-glow) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .practice-card:hover::before {
+            opacity: 0.15;
+        }
+
+        .practice-card:hover {
+            border-color: rgba(155, 89, 182, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(155, 89, 182, 0.1);
+        }
+
+        .practice-geometry {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .practice-geometry svg {
+            width: 100%;
+            height: 100%;
+            transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .practice-card:hover .practice-geometry svg {
+            transform: rotate(60deg) scale(1.1);
+        }
+
+        .practice-number {
+            font-family: 'Questrial', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: var(--amethyst);
+            margin-bottom: 16px;
+        }
+
+        .practice-name {
+            font-family: 'Questrial', sans-serif;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .practice-desc {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--white-dim);
+            font-weight: 300;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           QUOTE — Mathematical authority
+        ═══════════════════════════════════════════════════ */
+        #quote {
+            background: linear-gradient(135deg, var(--cosmic-black) 0%, rgba(155, 89, 182, 0.05) 50%, var(--cosmic-black) 100%);
+            padding: 120px 60px;
+            flex-direction: column;
+        }
+
+        .quote-container {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-geometry-frame {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            opacity: 0.1;
+            animation: geometrySpin 40s linear infinite reverse;
+        }
+
+        .quote-symbol {
+            font-family: 'Questrial', sans-serif;
+            font-size: 11px;
+            letter-spacing: 6px;
+            color: var(--amethyst);
+            margin-bottom: 40px;
+        }
+
+        .quote-text {
+            font-family: 'Questrial', sans-serif;
+            font-size: clamp(24px, 3.5vw, 40px);
+            line-height: 1.5;
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+        }
+
+        .quote-text .q-amethyst {
+            color: var(--amethyst);
+        }
+
+        .quote-proof {
+            margin-top: 50px;
+            font-family: 'Questrial', sans-serif;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: var(--white-dim);
+            text-transform: uppercase;
+        }
+
+        .quote-proof-line {
+            width: 40px;
+            height: 1px;
+            background: var(--amethyst);
+            margin: 16px auto 0;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           ARRIVAL — Email signup
+        ═══════════════════════════════════════════════════ */
+        #arrival {
+            background: var(--cosmic-black);
+            padding: 120px 60px;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .arrival-content {
+            text-align: center;
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .arrival-title {
+            font-family: 'Questrial', sans-serif;
+            font-size: clamp(26px, 4vw, 42px);
+            margin-bottom: 20px;
+        }
+
+        .arrival-subtitle {
+            font-size: 16px;
+            color: var(--white-dim);
+            font-weight: 300;
+            margin-bottom: 50px;
+            line-height: 1.7;
+        }
+
+        .arrival-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 440px;
+        }
+
+        .arrival-input {
+            width: 100%;
+            padding: 18px 24px;
+            background: rgba(155, 89, 182, 0.06);
+            border: 1px solid rgba(155, 89, 182, 0.2);
+            color: var(--white-light);
+            font-family: 'Karla', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            outline: none;
+            transition: all 0.5s ease;
+            text-align: center;
+        }
+
+        .arrival-input::placeholder {
+            color: var(--white-dim);
+        }
+
+        .arrival-input:focus {
+            border-color: var(--amethyst);
+            box-shadow: 0 0 30px rgba(155, 89, 182, 0.15);
+            background: rgba(155, 89, 182, 0.1);
+        }
+
+        .arrival-btn {
+            font-family: 'Questrial', sans-serif;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            padding: 18px 50px;
+            background: transparent;
+            border: 1px solid var(--amethyst);
+            color: var(--white-light);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .arrival-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: var(--amethyst);
+            transition: left 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: -1;
+        }
+
+        .arrival-btn:hover::before {
+            left: 0;
+        }
+
+        .arrival-btn:hover {
+            box-shadow: 0 0 40px rgba(155, 89, 182, 0.3);
+        }
+
+        /* ═══════════════════════════════════════════════════
+           FOOTER — Spinning Merkaba
+        ═══════════════════════════════════════════════════ */
+        footer {
+            background: var(--cosmic-deep);
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-merkaba {
+            width: 120px;
+            height: 120px;
+            opacity: 0.4;
+            animation: footerSpin 20s linear infinite;
+            filter: drop-shadow(0 0 20px var(--amethyst-glow));
+        }
+
+        @keyframes footerSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .footer-info {
+            text-align: center;
+        }
+
+        .footer-healer {
+            font-family: 'Questrial', sans-serif;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--amethyst-light);
+            margin-bottom: 12px;
+        }
+
+        .footer-address {
+            font-size: 14px;
+            color: var(--white-dim);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .footer-divider {
+            width: 40px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--amethyst), transparent);
+            margin: 10px 0;
+        }
+
+        .footer-tagline {
+            font-family: 'Questrial', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--white-dim);
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: rgba(255,255,255,0.2);
+            margin-top: 20px;
+        }
+
+        /* ═══════════════════════════════════════════════════
+           SCROLL REVEAL
+        ═══════════════════════════════════════════════════ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+
+        /* ═══════════════════════════════════════════════════
+           FLOATING PARTICLES
+        ═══════════════════════════════════════════════════ */
+        .particle {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: var(--amethyst);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            animation: particleFloat var(--dur) ease-in-out infinite;
+            animation-delay: var(--delay);
+        }
+
+        @keyframes particleFloat {
+            0% { opacity: 0; transform: translateY(0) scale(0); }
+            20% { opacity: 0.6; transform: translateY(-20px) scale(1); }
+            80% { opacity: 0.6; transform: translateY(-80px) scale(1); }
+            100% { opacity: 0; transform: translateY(-100px) scale(0); }
+        }
+
+        /* ═══════════════════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════════════════ */
+        @media (max-width: 900px) {
+            .practices-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+            .merkaba-container {
+                width: 320px;
+                height: 320px;
+            }
+            .scroll-indicator { right: 16px; }
+            #about, #sacred-art, #quote, #arrival, footer {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .merkaba-container {
+                width: 260px;
+                height: 260px;
+            }
+            .practice-card {
+                padding: 40px 24px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- PRELOADER -->
-  <div class="preloader">
-    <div class="preloader-count">0</div>
-    <div class="preloader-text">Entering the Sanctuary</div>
-  </div>
+    <!-- COSMIC STAR FIELD -->
+    <div class="cosmic-bg" id="cosmicBg"></div>
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <a href="#home" class="nav-logo">Teacher Seraphina Lightbody</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#sacred-art">Sacred Art</a></li>
-      <li><a href="#arrival">Arrival</a></li>
-    </ul>
-    <div class="nav-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+    <!-- FLOATING PARTICLES -->
+    <div id="particles"></div>
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-bg" style="background-image: url('images/hero-merkaba.jpg')"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-tagline">Activating the Vehicle of Ascension</p>
-      <h1 class="hero-title">Merkaba<br>Light Body</h1>
-      <p class="hero-subtitle">Activation of the star tetrahedron of light that surrounds every human body. Through sacred geometry and precise breathing, unlock the chariot of consciousness.</p>
-      <a href="#arrival" class="hero-cta">Begin Your Journey</a>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="hero-scroll-line"></div>
-    </div>
-  </section>
+    <!-- SCROLL INDICATOR -->
+    <nav class="scroll-indicator" id="scrollNav">
+        <div class="scroll-dot active" data-section="hero"></div>
+        <div class="scroll-dot" data-section="about"></div>
+        <div class="scroll-dot" data-section="sacred-art"></div>
+        <div class="scroll-dot" data-section="quote"></div>
+        <div class="scroll-dot" data-section="arrival"></div>
+    </nav>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">About the Healer</span>
-      <h2 class="section-title">Ascended Teacher Seraphina Lightbody</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-image reveal-left">
-        <div class="image-placeholder">Teacher Seraphina Lightbody Portrait</div>
-      </div>
-      <div class="about-content reveal-right">
-        <h3>Chariot of Light, Vehicle of the Soul</h3>
-        <p>Teacher Seraphina channels teachings from the Ascended Masters on Merkaba activation. The Merkaba — meaning "chariot" in Hebrew — is a star tetrahedron of light that surrounds every human body. It is the light body, the vehicle through which consciousness travels between dimensions of existence.</p>
-        <p>In most people, the Merkaba is dormant — a potential energy field that has never been activated. Through specific breathing patterns, sacred geometry meditation, and conscious intention, the Merkaba can be set into motion, spinning at rates that allow the practitioner to access higher states of consciousness, heal at the cellular level, and ultimately achieve spiritual ascension.</p>
-        <p>Teacher Seraphina's sanctuary sits at the foot of Mount Shasta, one of the most powerful spiritual vortexes on Earth. The mountain's crystalline energy amplifies Merkaba activation work exponentially. Her teachings draw from the Emerald Tablets of Thoth, the Merkaba literature of Drunvalo Melchizedek, and the direct transmissions she receives from the Ascended Masters.</p>
-      </div>
-    </div>
-  </section>
+    <!-- ═══════════════════════════════════════════════════
+         HERO — Star Tetrahedron
+    ═══════════════════════════════════════════════════ -->
+    <section id="hero">
+        <!-- Sacred geometry grid -->
+        <svg class="sacred-grid" viewBox="0 0 1000 1000">
+            <line x1="500" y1="0" x2="500" y2="1000" />
+            <line x1="0" y1="500" x2="1000" y2="500" />
+            <line x1="0" y1="0" x2="1000" y2="1000" />
+            <line x1="1000" y1="0" x2="0" y2="1000" />
+            <circle cx="500" cy="500" r="300" fill="none" stroke="#9b59b6" stroke-width="0.5" />
+            <circle cx="500" cy="500" r="450" fill="none" stroke="#9b59b6" stroke-width="0.3" />
+            <circle cx="500" cy="500" r="200" fill="none" stroke="#9b59b6" stroke-width="0.3" />
+        </svg>
 
-  <!-- SACRED ART SECTION -->
-  <section id="sacred-art" class="section section-darker">
-    <div class="section-header">
-      <span class="section-label">The Sacred Art</span>
-      <h2 class="section-title">Healing Modalities</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-number">01</div>
-        <h3>Merkaba Breathing</h3>
-        <p>The 18-breath activation sequence to spin the star tetrahedron. This precise breathing pattern, performed in three sets of six breaths, activates the counter-rotating fields of the Merkaba. Each breath corresponds to a specific geometric rotation, gradually building the energy field until it reaches the speed of light and becomes a vehicle for consciousness.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">02</div>
-        <h3>Sacred Geometry Meditation</h3>
-        <p>Visualizing the complex geometry of the Merkaba field. The practitioner guides the client through the intricate forms of the star tetrahedron — two interlocking pyramids, one pointing up and one down, creating a three-dimensional Star of David. This meditation strengthens the client's ability to hold and manipulate sacred geometric forms in consciousness.</p>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-number">03</div>
-        <h3>Light Body Integration</h3>
-        <p>Grounding expanded consciousness into physical reality. After Merkaba activation, the body must adjust to the higher frequencies of the light body. This integration session helps the client embody their expanded awareness, ensuring that spiritual insights become lived reality rather than fleeting experiences.</p>
-      </div>
-    </div>
-  </section>
+        <div class="merkaba-container">
+            <!-- Pulsing rings -->
+            <div class="merkaba-glow-ring"></div>
+            <div class="merkaba-glow-ring"></div>
+            <div class="merkaba-glow-ring"></div>
+            <div class="merkaba-glow-ring"></div>
+            <div class="merkaba-glow-ring"></div>
 
-  <!-- QUOTE SECTION -->
-  <section class="quote-block">
-    <blockquote class="quote-text">The wound is the place where the Light enters you.</blockquote>
-    <cite class="quote-author">— Rumi</cite>
-  </section>
+            <!-- Star Tetrahedron SVG -->
+            <svg class="merkaba-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="merkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#9b59b6" stop-opacity="0.9"/>
+                        <stop offset="50%" stop-color="#ffffff" stop-opacity="0.6"/>
+                        <stop offset="100%" stop-color="#9b59b6" stop-opacity="0.9"/>
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="blur"/>
+                        <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
 
-  <!-- ARRIVAL SECTION -->
-  <section id="arrival" class="section section-dark">
-    <div class="section-header">
-      <span class="section-label">Arrival</span>
-      <h2 class="section-title">Begin Your Healing</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="arrival-grid">
-      <div class="arrival-info reveal-left">
-        <h3>Visit the Sanctuary</h3>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Address</span>
-          <span class="arrival-detail-value">144 Crystal Way<br>Mount Shasta, CA 96067</span>
+                <!-- Upward tetrahedron (white) -->
+                <polygon
+                    points="200,60 320,280 80,280"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.7)"
+                    stroke-width="1.5"
+                    filter="url(#glow)"
+                />
+                <polygon
+                    points="200,60 200,280 320,280"
+                    fill="rgba(255,255,255,0.03)"
+                    stroke="rgba(255,255,255,0.3)"
+                    stroke-width="0.5"
+                />
+                <polygon
+                    points="200,60 200,280 80,280"
+                    fill="rgba(255,255,255,0.02)"
+                    stroke="rgba(255,255,255,0.2)"
+                    stroke-width="0.5"
+                />
+
+                <!-- Downward tetrahedron (purple) -->
+                <polygon
+                    points="200,340 320,120 80,120"
+                    fill="none"
+                    stroke="rgba(155,89,182,0.8)"
+                    stroke-width="1.5"
+                    filter="url(#glow)"
+                />
+                <polygon
+                    points="200,340 200,120 320,120"
+                    fill="rgba(155,89,182,0.03)"
+                    stroke="rgba(155,89,182,0.3)"
+                    stroke-width="0.5"
+                />
+                <polygon
+                    points="200,340 200,120 80,120"
+                    fill="rgba(155,89,182,0.02)"
+                    stroke="rgba(155,89,182,0.2)"
+                    stroke-width="0.5"
+                />
+
+                <!-- Inner star connections -->
+                <line x1="200" y1="60" x2="200" y2="340" stroke="url(#merkGrad)" stroke-width="0.5" opacity="0.5"/>
+                <line x1="80" y1="280" x2="320" y2="120" stroke="url(#merkGrad)" stroke-width="0.5" opacity="0.5"/>
+                <line x1="320" y1="280" x2="80" y2="120" stroke="url(#merkGrad)" stroke-width="0.5" opacity="0.5"/>
+
+                <!-- Center star of David intersection -->
+                <polygon
+                    points="200,100 290,230 110,230"
+                    fill="none"
+                    stroke="rgba(155,89,182,0.4)"
+                    stroke-width="0.8"
+                />
+                <polygon
+                    points="200,300 290,170 110,170"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.4)"
+                    stroke-width="0.8"
+                />
+
+                <!-- Central point -->
+                <circle cx="200" cy="200" r="3" fill="#ffffff" opacity="0.9">
+                    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+                </circle>
+
+                <!-- Orbital circles -->
+                <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(155,89,182,0.15)" stroke-width="0.5" stroke-dasharray="4 8"/>
+                <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" stroke-dasharray="2 12">
+                    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="40s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+
+            <!-- Center light point -->
+            <div class="hero-center-point"></div>
         </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Hours</span>
-          <span class="arrival-detail-value">Wednesday — Sunday<br>10:00 AM — 6:00 PM</span>
-        </div>
-        <div class="arrival-detail">
-          <span class="arrival-detail-label">Contact</span>
-          <span class="arrival-detail-value">sanctuary@merkabaactivation.com<br>+1 (530) 925-0144</span>
-        </div>
-      </div>
-      <div class="arrival-form reveal-right">
-        <form>
-          <div class="form-group">
-            <input type="text" placeholder=" " required>
-            <label>Your Name</label>
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder=" " required>
-            <label>Email Address</label>
-          </div>
-          <div class="form-group">
-            <textarea rows="4" placeholder=" " required></textarea>
-            <label>Share Your Intention</label>
-          </div>
-          <button type="submit" class="btn">Request a Session</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-quote">"The wound is the place where the Light enters you."</p>
-    <span class="footer-author">— Rumi</span>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#sacred-art">Sacred Art</a>
-      <a href="#arrival">Arrival</a>
-    </div>
-    <p class="footer-copy">&copy; 2026 Teacher Seraphina Lightbody — Merkaba Light Body Sanctuary. All rights reserved.</p>
-  </footer>
+    <!-- ═══════════════════════════════════════════════════
+         ABOUT — Text from geometry
+    ═══════════════════════════════════════════════════ -->
+    <section id="about">
+        <!-- Background sacred geometry -->
+        <svg class="about-geometry-bg" viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="180" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
+            <circle cx="200" cy="200" r="140" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
+            <circle cx="200" cy="200" r="100" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
+            <circle cx="200" cy="200" r="60" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
+            <polygon points="200,20 380,200 200,380 20,200" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
+            <polygon points="200,60 340,200 200,340 60,200" fill="none" stroke="#9b59b6" stroke-width="0.3"/>
+            <line x1="200" y1="20" x2="200" y2="380" stroke="#9b59b6" stroke-width="0.3"/>
+            <line x1="20" y1="200" x2="380" y2="200" stroke="#9b59b6" stroke-width="0.3"/>
+            <line x1="60" y1="60" x2="340" y2="340" stroke="#9b59b6" stroke-width="0.3"/>
+            <line x1="340" y1="60" x2="60" y2="340" stroke="#9b59b6" stroke-width="0.3"/>
+        </svg>
 
-  <script src="../script.js"></script>
+        <div class="about-content">
+            <div class="about-label">Understanding the Merkaba</div>
+            <h2 class="about-title">
+                The <span class="highlight">Star Tetrahedron</span><br>
+                of Light
+            </h2>
+            <div class="about-geometric-divider">
+                <span class="geo-line"></span>
+                <span class="geo-diamond"></span>
+                <span class="geo-line"></span>
+            </div>
+            <p class="about-text">
+                Teacher Seraphina channels teachings from the Ascended Masters on Merkaba activation.
+                The Merkaba — meaning "chariot" in Hebrew — is a star tetrahedron of light that surrounds
+                every human body. When activated through specific breathing patterns and sacred geometry
+                meditation, it becomes a vehicle for consciousness expansion, carrying the soul beyond
+                the limitations of physical form into realms of pure light.
+            </p>
+            <div class="healer-name">Ascended Teacher Seraphina Lightbody</div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SACRED ART — Three practices
+    ═══════════════════════════════════════════════════ -->
+    <section id="sacred-art">
+        <div class="sacred-art-header">
+            <div class="sacred-art-label">The Sacred Arts</div>
+            <h2 class="sacred-art-title">Three Transformations</h2>
+        </div>
+
+        <div class="practices-grid">
+            <!-- Practice 1: Merkaba Breathing -->
+            <div class="practice-card reveal">
+                <div class="practice-geometry">
+                    <svg viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#9b59b6" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Breathing geometry — expanding circles -->
+                        <circle cx="60" cy="60" r="20" fill="none" stroke="url(#grad1)" stroke-width="1">
+                            <animate attributeName="r" values="15;25;15" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="60" cy="60" r="35" fill="none" stroke="#9b59b6" stroke-width="0.5" stroke-dasharray="3 5">
+                            <animate attributeName="r" values="30;40;30" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+                        </circle>
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" stroke-dasharray="2 8">
+                            <animate attributeName="r" values="45;55;45" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+                        </circle>
+                        <!-- 18 breath markers -->
+                        <circle cx="60" cy="60" r="28" fill="none" stroke="rgba(155,89,182,0.3)" stroke-width="0.5" stroke-dasharray="1.5 8.2"/>
+                    </svg>
+                </div>
+                <div class="practice-number">I</div>
+                <h3 class="practice-name">Merkaba Breathing</h3>
+                <p class="practice-desc">The 18-breath activation sequence that ignites the star tetrahedron, spinning the upper and lower pyramids in opposite directions at the speed of light.</p>
+            </div>
+
+            <!-- Practice 2: Sacred Geometry Meditation -->
+            <div class="practice-card reveal reveal-delay-1">
+                <div class="practice-geometry">
+                    <svg viewBox="0 0 120 120">
+                        <!-- Nested sacred geometry -->
+                        <polygon points="60,15 95,42.5 95,87.5 60,115 25,87.5 25,42.5" fill="none" stroke="#9b59b6" stroke-width="0.8" opacity="0.6">
+                            <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="20s" repeatCount="indefinite"/>
+                        </polygon>
+                        <polygon points="60,25 85,45 85,80 60,100 35,80 35,45" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.6">
+                            <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="15s" repeatCount="indefinite"/>
+                        </polygon>
+                        <circle cx="60" cy="60" r="30" fill="none" stroke="rgba(155,89,182,0.4)" stroke-width="0.5"/>
+                        <circle cx="60" cy="60" r="45" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+                        <!-- Flower of life hint -->
+                        <circle cx="60" cy="40" r="20" fill="none" stroke="rgba(155,89,182,0.15)" stroke-width="0.4"/>
+                        <circle cx="42" cy="50" r="20" fill="none" stroke="rgba(155,89,182,0.15)" stroke-width="0.4"/>
+                        <circle cx="78" cy="50" r="20" fill="none" stroke="rgba(155,89,182,0.15)" stroke-width="0.4"/>
+                    </svg>
+                </div>
+                <div class="practice-number">II</div>
+                <h3 class="practice-name">Sacred Geometry Meditation</h3>
+                <p class="practice-desc">Visualizing the complex geometry of the Merkaba — two interlocking tetrahedra creating the Star of David in three dimensions, the blueprint of creation itself.</p>
+            </div>
+
+            <!-- Practice 3: Light Body Integration -->
+            <div class="practice-card reveal reveal-delay-2">
+                <div class="practice-geometry">
+                    <svg viewBox="0 0 120 120">
+                        <!-- Integration — merging geometry with body -->
+                        <ellipse cx="60" cy="60" rx="35" ry="50" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/>
+                        <polygon points="60,10 85,45 75,80 45,80 35,45" fill="none" stroke="#9b59b6" stroke-width="0.8">
+                            <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
+                        </polygon>
+                        <!-- Grounding lines -->
+                        <line x1="60" y1="80" x2="60" y2="110" stroke="rgba(155,89,182,0.4)" stroke-width="0.8"/>
+                        <line x1="50" y1="85" x2="45" y2="110" stroke="rgba(155,89,182,0.3)" stroke-width="0.5"/>
+                        <line x1="70" y1="85" x2="75" y2="110" stroke="rgba(155,89,182,0.3)" stroke-width="0.5"/>
+                        <!-- Crown light -->
+                        <circle cx="60" cy="12" r="4" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5">
+                            <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+                <div class="practice-number">III</div>
+                <h3 class="practice-name">Light Body Integration</h3>
+                <p class="practice-desc">Grounding expanded consciousness back into the physical body, integrating the activated Merkaba with your daily experience and relationships.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         QUOTE — Mathematical authority
+    ═══════════════════════════════════════════════════ -->
+    <section id="quote">
+        <div class="quote-container">
+            <svg class="quote-geometry-frame" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
+                <polygon points="100,10 190,100 100,190 10,100" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
+                <polygon points="100,30 170,100 100,170 30,100" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+            </svg>
+
+            <div class="quote-symbol">∴ THEOREM</div>
+            <blockquote class="quote-text">
+                "The Merkaba is not something you create.<br>
+                It is something you <span class="q-amethyst">remember</span>.<br>
+                The geometry was always there —<br>
+                encoded in the <span class="q-amethyst">mathematics of your being</span>."
+            </blockquote>
+            <div class="quote-proof">
+                — Teacher Seraphina Lightbody
+            </div>
+            <div class="quote-proof-line"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         ARRIVAL — Email signup
+    ═══════════════════════════════════════════════════ -->
+    <section id="arrival">
+        <div class="arrival-content">
+            <h2 class="arrival-title">Activate Your Light Body</h2>
+            <p class="arrival-subtitle">Enter your sacred geometry. Receive transmissions on Merkaba activation, breathing sequences, and ascension teachings.</p>
+
+            <form class="arrival-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='LIGHT BODY ACTIVATED'; this.querySelector('button').style.borderColor='#d4af37'; this.querySelector('button').style.color='#d4af37';">
+                <input type="email" class="arrival-input" placeholder="Your cosmic address" required>
+                <button type="submit" class="arrival-btn">Activate Your Light Body</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════════ -->
+    <footer>
+        <svg class="footer-merkaba" viewBox="0 0 200 200">
+            <polygon points="100,20 160,80 160,140 100,180 40,140 40,80" fill="none" stroke="rgba(155,89,182,0.6)" stroke-width="1"/>
+            <polygon points="100,40 140,80 140,130 100,160 60,130 60,80" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+            <polygon points="100,20 160,140 40,140" fill="none" stroke="rgba(155,89,182,0.4)" stroke-width="0.8"/>
+            <polygon points="100,180 160,60 40,60" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+            <circle cx="100" cy="100" r="60" fill="none" stroke="rgba(155,89,182,0.2)" stroke-width="0.5" stroke-dasharray="3 6"/>
+        </svg>
+
+        <div class="footer-info">
+            <div class="footer-healer">Ascended Teacher Seraphina Lightbody</div>
+            <div class="footer-address">
+                144 Crystal Way<br>
+                Mount Shasta, CA 96067
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-tagline">Activating the Vehicle of Ascension</div>
+        </div>
+
+        <div class="footer-copy">MMXXVI · Sacred Geometry · The Merkaba</div>
+    </footer>
+
+    <script>
+        // ═══════════════════════════════════════════════════
+        // COSMIC STAR FIELD
+        // ═══════════════════════════════════════════════════
+        (function createStars() {
+            const bg = document.getElementById('cosmicBg');
+            const count = 150;
+            for (let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const size = Math.random() * 2 + 0.5;
+                star.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    --dur: ${2 + Math.random() * 4}s;
+                    --max-op: ${0.3 + Math.random() * 0.7};
+                    animation-delay: ${Math.random() * 3}s;
+                `;
+                bg.appendChild(star);
+            }
+        })();
+
+        // ═══════════════════════════════════════════════════
+        // FLOATING PARTICLES
+        // ═══════════════════════════════════════════════════
+        (function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.cssText = `
+                    left: ${Math.random() * 100}%;
+                    top: ${40 + Math.random() * 60}%;
+                    --dur: ${4 + Math.random() * 6}s;
+                    --delay: ${Math.random() * 5}s;
+                `;
+                container.appendChild(p);
+            }
+        })();
+
+        // ═══════════════════════════════════════════════════
+        // SCROLL INDICATOR
+        // ═══════════════════════════════════════════════════
+        const sections = ['hero', 'about', 'sacred-art', 'quote', 'arrival'];
+        const dots = document.querySelectorAll('.scroll-dot');
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                document.getElementById(dot.dataset.section).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        const observerOptions = { threshold: 0.4 };
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    dots.forEach(d => d.classList.toggle('active', d.dataset.section === id));
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) sectionObserver.observe(el);
+        });
+
+        // ═══════════════════════════════════════════════════
+        // SCROLL REVEAL
+        // ═══════════════════════════════════════════════════
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ═══════════════════════════════════════════════════
+        // MERKABA PARALLAX ON MOUSE
+        // ═══════════════════════════════════════════════════
+        const merkabaContainer = document.querySelector('.merkaba-container');
+        document.addEventListener('mousemove', (e) => {
+            if (!merkabaContainer) return;
+            const cx = window.innerWidth / 2;
+            const cy = window.innerHeight / 2;
+            const dx = (e.clientX - cx) / cx;
+            const dy = (e.clientY - cy) / cy;
+            merkabaContainer.style.transform = `translate(${dx * 15}px, ${dy * 15}px)`;
+        });
+    </script>
 </body>
 </html>
