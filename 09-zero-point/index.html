@@ -1,426 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zero-Point Field Healing — Dr. Nova Celestine</title>
-  <meta name="description" content="Returning to the Source of All Creation. Quantum energy therapy by Dr. Nova Celestine in Taos, NM.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZERO POINT | Dr. Wei Mingzhou — Acupuncture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrix-rain"></canvas>
 
-  <!-- Scroll Progress Dot -->
-  <div class="scroll-dot" id="scrollDot">
-    <span class="scroll-dot__core"></span>
-    <span class="scroll-dot__ring"></span>
-  </div>
-
-  <!-- Particle Canvas -->
-  <canvas id="particleCanvas"></canvas>
-
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="hero">
-    <div class="hero__gradient"></div>
-    <div class="hero__content">
-      <p class="hero__pre fade-from-void">Quantum Energy Therapy</p>
-      <h1 class="hero__title fade-from-void">
-        <span class="hero__title-line">Zero-Point</span>
-        <span class="hero__title-line hero__title-line--accent">Field Healing</span>
-      </h1>
-      <p class="hero__tagline fade-from-void">Returning to the Source of All Creation</p>
-      <p class="hero__sub fade-from-void">Where quantum science meets ancient wisdom.<br>Where the void becomes the vessel for total restoration.</p>
+    <!-- Meridian Map SVG (resolves from rain) -->
+    <div id="meridian-overlay">
+        <svg viewBox="0 0 400 600" id="meridian-map">
+            <!-- Meridian Lines -->
+            <path class="meridian-line" d="M200,50 Q180,150 200,250 Q220,350 200,450" />
+            <path class="meridian-line" d="M150,80 Q130,180 150,280 Q170,380 150,480" />
+            <path class="meridian-line" d="M250,80 Q270,180 250,280 Q230,380 250,480" />
+            <path class="meridian-line" d="M100,120 Q80,220 100,320 Q120,420 100,520" />
+            <path class="meridian-line" d="M300,120 Q320,220 300,320 Q280,420 300,520" />
+            <!-- Node points -->
+            <circle class="meridian-node" cx="200" cy="120" r="4" />
+            <circle class="meridian-node" cx="150" cy="180" r="4" />
+            <circle class="meridian-node" cx="250" cy="180" r="4" />
+            <circle class="meridian-node" cx="200" cy="250" r="4" />
+            <circle class="meridian-node" cx="120" cy="300" r="4" />
+            <circle class="meridian-node" cx="280" cy="300" r="4" />
+            <circle class="meridian-node" cx="200" cy="380" r="4" />
+        </svg>
     </div>
-    <div class="hero__scroll-hint">
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- ===================== ABOUT ===================== -->
-  <section class="about" id="about">
-    <div class="about__inner">
-      <div class="about__label surface-from-void">Origin</div>
-      <h2 class="about__heading surface-from-void">The Quantum<br>Vacuum Within</h2>
-      <div class="about__columns">
-        <p class="about__text surface-from-void">
-          Dr. Nova Celestine holds dual PhDs in quantum physics and integrative medicine. 
-          She discovered that the zero-point field — the quantum vacuum that underlies all 
-          physical reality — contains the blueprint for perfect health.
-        </p>
-        <p class="about__text surface-from-void">
-          At the deepest level of matter, below atoms, below quarks, there is a field of 
-          infinite potential. This is the zero-point field: the source from which all 
-          particles emerge and to which all healing returns.
-        </p>
-      </div>
-      <div class="about__expand surface-from-void">
-        <p class="about__text">
-          Her research, published across 47 peer-reviewed journals, demonstrates that cellular 
-          dysfunction is fundamentally a disruption in quantum coherence. When the body loses its 
-          connection to the zero-point field, disease emerges — not as an invader, but as a 
-          dissonance in the body's natural frequency.
-        </p>
-        <p class="about__text">
-          After a near-death experience in 2011 during a mountaineering expedition in the Himalayas, 
-          Dr. Celestine spent three years in silent meditation studying the relationship between 
-          consciousness and the quantum vacuum. She emerged with a protocol that bridges rigorous 
-          science and direct experiential knowing.
-        </p>
-      </div>
-      <div class="about__stats surface-from-void">
-        <div class="about__stat">
-          <span class="about__stat-number">12,000+</span>
-          <span class="about__stat-label">Sessions Conducted</span>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-tagline">[SYSTEM.INITIALIZE]</div>
+            <h1 class="hero-title">ZERO POINT</h1>
+            <p class="hero-subtitle">Ancient Needles, Modern Healing</p>
+            <div class="hero-doctor">Dr. Wei Mingzhou</div>
+            <div class="hero-location">888 Meridian Way, Beijing, China 100000</div>
         </div>
-        <div class="about__stat">
-          <span class="about__stat-number">97%</span>
-          <span class="about__stat-label">Report Lasting Shift</span>
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
         </div>
-        <div class="about__stat">
-          <span class="about__stat-number">14</span>
-          <span class="about__stat-label">Years of Practice</span>
-        </div>
-      </div>
-      <div class="about__dr surface-from-void">
-        <div class="about__dr-line"></div>
-        <div>
-          <span class="about__dr-name">Dr. Nova Celestine</span>
-          <span class="about__dr-title">Quantum Physics & Integrative Medicine</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================== SACRED ART ===================== -->
-  <section class="sacred" id="sacred">
-    <div class="sacred__inner">
-      <div class="sacred__label surface-from-void">Sacred Art</div>
-      <h2 class="sacred__heading surface-from-void">Three Fields<br>of Resonance</h2>
-      <p class="sacred__intro surface-from-void">Each modality works at a different depth of the quantum body — from the electromagnetic surface to the vacuum core where matter and void meet.</p>
-
-      <div class="sacred__grid">
-        <!-- Practice 1 -->
-        <div class="sacred__card surface-from-void">
-          <div class="sacred__field">
-            <div class="sacred__orb sacred__orb--1">
-              <div class="sacred__orb-core"></div>
-              <div class="sacred__orb-ring sacred__orb-ring--1"></div>
-              <div class="sacred__orb-ring sacred__orb-ring--2"></div>
-              <div class="sacred__orb-ring sacred__orb-ring--3"></div>
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-marker">[01] // ABOUT</div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>5th Generation<br>Acupuncturist</h2>
+                <p>Dr. Wei Mingzhou carries the lineage of five generations of master acupuncturists, each passing down the sacred art of needle and meridian. His practice bridges millennia of Eastern wisdom with the precision of modern medical science.</p>
+                <p>Trained in the classical traditions of the Beijing Imperial College, Dr. Wei has treated over 50,000 patients, restoring balance to bodies that modern medicine deemed beyond repair.</p>
             </div>
-          </div>
-          <h3 class="sacred__card-title">Zero-Point Resonance</h3>
-          <p class="sacred__card-text">Tuning the body's frequency to match the quantum vacuum state.</p>
-          <p class="sacred__card-detail">Through precise biofeedback and guided attunement, we locate the exact frequency your body has drifted from — and gently guide it back to the silence of zero. Sessions typically span 90 minutes, with most clients experiencing a profound stillness by the 40-minute mark.</p>
-          <span class="sacred__card-tag">90 min · In-Person</span>
-        </div>
-
-        <!-- Practice 2 -->
-        <div class="sacred__card surface-from-void">
-          <div class="sacred__field">
-            <div class="sacred__orb sacred__orb--2">
-              <div class="sacred__orb-core"></div>
-              <div class="sacred__orb-ring sacred__orb-ring--1"></div>
-              <div class="sacred__orb-ring sacred__orb-ring--2"></div>
-              <div class="sacred__orb-ring sacred__orb-ring--3"></div>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">GENERATIONS</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">PATIENTS</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">361</span>
+                    <span class="stat-label">ACUPOINTS</span>
+                </div>
             </div>
-          </div>
-          <h3 class="sacred__card-title">Quantum Field Meditation</h3>
-          <p class="sacred__card-text">Guided visualization to access the zero-point field.</p>
-          <p class="sacred__card-detail">A deep meditative journey led by Dr. Celestine's voice, using binaural entrainment and proprietary sound frequencies that dissolve the boundaries between意识 and the quantum vacuum. Available as private sessions or small group ceremonies of no more than eight.</p>
-          <span class="sacred__card-tag">60 min · Private or Group</span>
         </div>
+    </section>
 
-        <!-- Practice 3 -->
-        <div class="sacred__card surface-from-void">
-          <div class="sacred__field">
-            <div class="sacred__orb sacred__orb--3">
-              <div class="sacred__orb-core"></div>
-              <div class="sacred__orb-ring sacred__orb-ring--1"></div>
-              <div class="sacred__orb-ring sacred__orb-ring--2"></div>
-              <div class="sacred__orb-ring sacred__orb-ring--3"></div>
+    <!-- Sacred Arts Section -->
+    <section id="sacred-arts">
+        <div class="section-marker">[02] // SACRED ARTS</div>
+        <div class="arts-grid">
+            <article class="art-card">
+                <div class="art-number">01</div>
+                <h3>Classical Needling</h3>
+                <p>Ultra-fine sterile needles (0.16mm) inserted with precision into acupuncture points, modulating neural pathways and restoring the body's electromagnetic field. Each needle placement is calculated to nanometer accuracy.</p>
+                <div class="art-visual">
+                    <svg viewBox="0 0 100 100" class="art-icon">
+                        <line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="1"/>
+                        <circle cx="50" cy="90" r="3" fill="currentColor"/>
+                    </svg>
+                </div>
+            </article>
+            <article class="art-card">
+                <div class="art-number">02</div>
+                <h3>Moxibustion</h3>
+                <p>Dried mugwort (Artemisia vulgaris) burned near the skin to warm and invigorate specific meridian points. The thermal energy penetrates deeply, dissolving blockages and amplifying qi flow through stagnant channels.</p>
+                <div class="art-visual">
+                    <svg viewBox="0 0 100 100" class="art-icon">
+                        <path d="M50,10 Q60,30 50,50 Q40,70 50,90" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <path d="M45,20 Q50,10 55,20" fill="none" stroke="currentColor" stroke-width="1"/>
+                    </svg>
+                </div>
+            </article>
+            <article class="art-card">
+                <div class="art-number">03</div>
+                <h3>Cupping Therapy</h3>
+                <p>Glass or bamboo cups create localized vacuum pressure, drawing stagnant blood and toxins to the surface. The resulting circular marks are evidence of deep tissue mobilization and immune system activation.</p>
+                <div class="art-visual">
+                    <svg viewBox="0 0 100 100" class="art-icon">
+                        <ellipse cx="50" cy="50" rx="30" ry="20" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <path d="M20,50 Q20,70 50,70 Q80,70 80,50" fill="none" stroke="currentColor" stroke-width="1"/>
+                    </svg>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Pressure Point Explorer -->
+    <section id="explorer">
+        <div class="section-marker">[03] // PRESSURE POINT EXPLORER</div>
+        <div class="explorer-container">
+            <div class="body-wireframe">
+                <svg viewBox="0 0 400 600" id="body-svg">
+                    <!-- Body wireframe -->
+                    <ellipse cx="200" cy="60" rx="35" ry="45" fill="none" stroke="var(--paper)" stroke-width="1" opacity="0.3"/>
+                    <line x1="200" y1="105" x2="200" y2="320" stroke="var(--paper)" stroke-width="1" opacity="0.3"/>
+                    <line x1="200" y1="140" x2="130" y2="240" stroke="var(--paper)" stroke-width="1" opacity="0.3"/>
+                    <line x1="200" y1="140" x2="270" y2="240" stroke="var(--paper)" stroke-width="1" opacity="0.3"/>
+                    <line x1="200" y1="320" x2="150" y2="480" stroke="var(--paper)" stroke-width="1" opacity="0.3"/>
+                    <line x1="200" y1="320" x2="250" y2="480" stroke="var(--paper)" stroke-width="1" opacity="0.3"/>
+                    <line x1="150" y1="480" x2="140" y2="540" stroke="var(--paper)" stroke-width="1" opacity="0.3"/>
+                    <line x1="250" y1="480" x2="260" y2="540" stroke="var(--paper)" stroke-width="1" opacity="0.3"/>
+
+                    <!-- Pressure points with hitboxes -->
+                    <!-- LI4 - Large Intestine 4 (Hegu) -->
+                    <g class="pressure-point" data-point="LI4">
+                        <circle cx="110" cy="230" r="20" fill="transparent" class="hitbox"/>
+                        <circle cx="110" cy="230" r="5" class="point-dot"/>
+                        <circle cx="110" cy="230" r="12" class="point-pulse"/>
+                    </g>
+
+                    <!-- PC6 - Pericardium 6 (Neiguan) -->
+                    <g class="pressure-point" data-point="PC6">
+                        <circle cx="145" cy="210" r="20" fill="transparent" class="hitbox"/>
+                        <circle cx="145" cy="210" r="5" class="point-dot"/>
+                        <circle cx="145" cy="210" r="12" class="point-pulse"/>
+                    </g>
+
+                    <!-- ST36 - Stomach 36 (Zusanli) -->
+                    <g class="pressure-point" data-point="ST36">
+                        <circle cx="160" cy="420" r="20" fill="transparent" class="hitbox"/>
+                        <circle cx="160" cy="420" r="5" class="point-dot"/>
+                        <circle cx="160" cy="420" r="12" class="point-pulse"/>
+                    </g>
+
+                    <!-- LV3 - Liver 3 (Taichong) -->
+                    <g class="pressure-point" data-point="LV3">
+                        <circle cx="135" cy="510" r="20" fill="transparent" class="hitbox"/>
+                        <circle cx="135" cy="510" r="5" class="point-dot"/>
+                        <circle cx="135" cy="510" r="12" class="point-pulse"/>
+                    </g>
+
+                    <!-- KI3 - Kidney 3 (Taixi) -->
+                    <g class="pressure-point" data-point="KI3">
+                        <circle cx="145" cy="490" r="20" fill="transparent" class="hitbox"/>
+                        <circle cx="145" cy="490" r="5" class="point-dot"/>
+                        <circle cx="145" cy="490" r="12" class="point-pulse"/>
+                    </g>
+                </svg>
             </div>
-          </div>
-          <h3 class="sacred__card-title">Biofield Recalibration</h3>
-          <p class="sacred__card-text">Energy work that resets the body's electromagnetic signature.</p>
-          <p class="sacred__card-detail">Using a combination of scalar wave technology and hands-on energy transmission, this modality restructures the biofield that surrounds and permeates every cell. Ideal for chronic conditions where the body's energy blueprint has been fundamentally disrupted.</p>
-          <span class="sacred__card-tag">120 min · In-Person Only</span>
+            <div class="point-info" id="point-info">
+                <div class="info-header">SELECT A PRESSURE POINT</div>
+                <div class="info-content">
+                    <div class="info-name-cn">—</div>
+                    <div class="info-name-en">—</div>
+                    <div class="info-anatomy">—</div>
+                    <div class="info-description">Hover over a point on the wireframe to explore its properties.</div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================== PHILOSOPHY ===================== -->
-  <section class="philosophy" id="philosophy">
-    <div class="philosophy__inner">
-      <div class="philosophy__label surface-from-void">Philosophy</div>
-      <h2 class="philosophy__heading surface-from-void">The Quantum<br>Field</h2>
-      <p class="philosophy__intro surface-from-void">Five principles guide every session, every teaching, every moment of silence in this sanctuary.</p>
-
-      <div class="philosophy__pillars">
-        <!-- Pillar 1 -->
-        <div class="philosophy__pillar surface-from-void">
-          <div class="philosophy__pillar-number">01</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title">The Void Is Full</h3>
-          <p class="philosophy__pillar-text">
-            What quantum physics calls "empty space" is the most dense medium in the universe. 
-            Every cubic centimeter of vacuum contains more energy than all the matter in the 
-            observable cosmos. Healing begins when we stop trying to fill the emptiness and 
-            learn to receive from it.
-          </p>
+    <!-- Philosophy Section -->
+    <section id="philosophy">
+        <div class="section-marker">[04] // PHILOSOPHY</div>
+        <div class="philosophy-grid">
+            <div class="pillar">
+                <div class="pillar-number">I</div>
+                <h3>Qi Flow</h3>
+                <p>Life force energy circulates through 12 primary meridians and 8 extraordinary vessels. Disease arises when this flow stagnates or deviates. Our needle restores the current.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">II</div>
+                <h3>Yin-Yang Balance</h3>
+                <p>Every disharmony is an imbalance between opposing forces. We do not fight symptoms — we recalibrate the fundamental polarity of the body's ecosystem.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">III</div>
+                <h3>Five Elements</h3>
+                <p>Wood, Fire, Earth, Metal, Water — the five phases govern organ relationships and emotional states. True healing addresses the root element, not the branch symptom.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">IV</div>
+                <h3>Holistic Unity</h3>
+                <p>The body is not a collection of parts but a unified field. Every point affects the whole. We treat the person, not the disease.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-number">V</div>
+                <h3>Nature's Blueprint</h3>
+                <p>The body mirrors nature's patterns. Rivers flow like blood vessels, roots branch like nerves. We align the body with its original natural design.</p>
+            </div>
         </div>
+    </section>
 
-        <!-- Pillar 2 -->
-        <div class="philosophy__pillar surface-from-void">
-          <div class="philosophy__pillar-number">02</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title">Disease Is Dissonance</h3>
-          <p class="philosophy__pillar-text">
-            Illness is not an enemy to fight. It is a frequency to understand. Every 
-            condition carries information — a message from the field about where coherence 
-            has been lost. We do not suppress symptoms. We listen to them, then retune 
-            the instrument.
-          </p>
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="section-marker">[05] // TRANSMISSIONS</div>
+        <div class="testimonials-grid">
+            <article class="testimonial">
+                <div class="testimonial-content">
+                    <p>"After 12 years of chronic migraines, three sessions with Dr. Wei and the pain vanished. Not reduced — vanished. As if it never existed."</p>
+                </div>
+                <div class="testimonial-author">
+                    <span class="author-name">Sarah Chen</span>
+                    <span class="author-detail">Migraine patient — 3 sessions</span>
+                </div>
+            </article>
+            <article class="testimonial">
+                <div class="testimonial-content">
+                    <p>"My insomnia was destroying my career. Dr. Wei's moxibustion protocol gave me sleep I hadn't experienced since childhood. My mind finally quiets."</p>
+                </div>
+                <div class="testimonial-author">
+                    <span class="author-name">James Liu</span>
+                    <span class="author-detail">Insomnia patient — 6 sessions</span>
+                </div>
+            </article>
+            <article class="testimonial">
+                <div class="testimonial-content">
+                    <p>"Western medicine told me to manage expectations. Dr. Wei told me to trust my body. The needles found what scans couldn't see."</p>
+                </div>
+                <div class="testimonial-author">
+                    <span class="author-name">Maria Santos</span>
+                    <span class="author-detail">Fertility patient — 12 sessions</span>
+                </div>
+            </article>
         </div>
+    </section>
 
-        <!-- Pillar 3 -->
-        <div class="philosophy__pillar surface-from-void">
-          <div class="philosophy__pillar-number">03</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title">Consciousness Creates</h3>
-          <p class="philosophy__pillar-text">
-            The observer shapes the observed. Decades of quantum experiments confirm what 
-            contemplatives have known for millennia: consciousness is not a byproduct of 
-            matter — it is the ground from which matter arises. Your awareness is not 
-            trapped in your body. Your body is an expression of your awareness.
-          </p>
+    <!-- Journey Section -->
+    <section id="journey">
+        <div class="section-marker">[06] // YOUR JOURNEY</div>
+        <div class="journey-timeline">
+            <div class="timeline-line"></div>
+            <div class="journey-step">
+                <div class="step-marker">01</div>
+                <div class="step-content">
+                    <h3>Consultation</h3>
+                    <p>90-minute comprehensive assessment. Pulse diagnosis, tongue analysis, and detailed health history review. We map your body's energy landscape.</p>
+                </div>
+            </div>
+            <div class="journey-step">
+                <div class="step-marker">02</div>
+                <div class="step-content">
+                    <h3>Diagnosis</h3>
+                    <p>Traditional Chinese Medicine pattern differentiation. We identify your specific disharmony pattern and create a targeted treatment protocol.</p>
+                </div>
+            </div>
+            <div class="journey-step">
+                <div class="step-marker">03</div>
+                <div class="step-content">
+                    <h3>Treatment</h3>
+                    <p>Individualized needle placement along meridian pathways. Sessions last 30-45 minutes in a state of deep rest. Most patients fall asleep.</p>
+                </div>
+            </div>
+            <div class="journey-step">
+                <div class="step-marker">04</div>
+                <div class="step-content">
+                    <h3>Restoration</h3>
+                    <p>Follow-up sessions and lifestyle guidance. We don't just treat — we teach you to maintain your own balance between visits.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Pillar 4 -->
-        <div class="philosophy__pillar surface-from-void">
-          <div class="philosophy__pillar-number">04</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title">Non-Locality Heals</h3>
-          <p class="philosophy__pillar-text">
-            Quantum entanglement proves that separated particles remain connected across 
-            any distance. This principle extends to healing: transformation does not require 
-            proximity. The field responds to intention, not to location. Distance sessions 
-            carry the same potency as those held in this room.
-          </p>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-grid">
+            <div class="footer-contact">
+                <h4>CONTACT</h4>
+                <p>888 Meridian Way<br>Beijing, China 100000</p>
+                <p class="footer-link">appointment@zeropoint.cn</p>
+            </div>
+            <div class="footer-hours">
+                <h4>HOURS</h4>
+                <p>Monday — Friday: 9:00 — 18:00<br>Saturday: 10:00 — 15:00<br>Sunday: Closed</p>
+            </div>
+            <div class="footer-system">
+                <h4>SYSTEM</h4>
+                <p>ZERO POINT v2.1<br>All meridians active<br>Qi flow: OPTIMAL</p>
+            </div>
         </div>
-
-        <!-- Pillar 5 -->
-        <div class="philosophy__pillar surface-from-void">
-          <div class="philosophy__pillar-number">05</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title">Return Is Natural</h3>
-          <p class="philosophy__pillar-text">
-            Health is not something you must build or achieve. It is your original state — 
-            the frequency you were born into before life's accumulations shifted you from 
-            center. Every healing is a remembering. Every session is a homecoming to the 
-            zero-point of who you are.
-          </p>
+        <div class="footer-bottom">
+            <span>&copy; 2026 ZERO POINT — Dr. Wei Mingzhou</span>
+            <span class="system-status">[SYSTEM.STATUS: ONLINE]</span>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="testimonials" id="testimonials">
-    <div class="testimonials__inner">
-      <div class="testimonials__label surface-from-void">Voices</div>
-      <h2 class="testimonials__heading surface-from-void">From the<br>Field</h2>
-      <p class="testimonials__intro surface-from-void">Those who have journeyed to the zero-point carry back words that barely contain the experience.</p>
-
-      <div class="testimonials__grid">
-        <!-- Testimonial 1 -->
-        <div class="testimonials__card surface-from-void">
-          <div class="testimonials__quote-mark">"</div>
-          <p class="testimonials__text">
-            I came to Dr. Celestine after seven years of chronic fatigue that no specialist 
-            could explain. In my third session, I felt something shift at a level I cannot 
-            name — not in my body, not in my mind, but somewhere deeper. It was as if a 
-            switch was thrown in the basement of my being. The fatigue didn't just lessen. 
-            It became irrelevant.
-          </p>
-          <div class="testimonials__author">
-            <span class="testimonials__name">Marina V.</span>
-            <span class="testimonials__detail">Chronic Fatigue · 3 sessions</span>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="testimonials__card surface-from-void">
-          <div class="testimonials__quote-mark">"</div>
-          <p class="testimonials__text">
-            I am a physician myself, trained to distrust anything that cannot be measured. 
-            But my autoimmune condition was destroying me, and conventional medicine had 
-            exhausted its options. Dr. Celestine's work didn't ask me to believe anything. 
-            It asked me to stop believing — and in that silence, something healed that no 
-            drug had reached.
-          </p>
-          <div class="testimonials__author">
-            <span class="testimonials__name">Dr. James K.</span>
-            <span class="testimonials__detail">Autoimmune Disorder · 5 sessions</span>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="testimonials__card surface-from-void">
-          <div class="testimonials__quote-mark">"</div>
-          <p class="testimonials__text">
-            The Quantum Field Meditation changed my relationship with grief. After losing 
-            my daughter, I felt I would never be whole again. Dr. Celestine didn't try to 
-            fix my sorrow. She helped me find the place beneath it — the zero-point where 
-            loss and love are the same thing. I still grieve. But I grieve from a place 
-            that holds everything.
-          </p>
-          <div class="testimonials__author">
-            <span class="testimonials__name">Elena R.</span>
-            <span class="testimonials__detail">Grief & Loss · Ongoing</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== JOURNEY ===================== -->
-  <section class="journey" id="journey">
-    <div class="journey__inner">
-      <div class="journey__label surface-from-void">Journey</div>
-      <h2 class="journey__heading surface-from-void">Your First<br>Visit</h2>
-      <p class="journey__intro surface-from-void">There is nothing you need to prepare. Nothing you need to believe. Simply arrive.</p>
-
-      <div class="journey__steps">
-        <div class="journey__step surface-from-void">
-          <div class="journey__step-marker">
-            <div class="journey__step-dot"></div>
-            <div class="journey__step-line"></div>
-          </div>
-          <div class="journey__step-content">
-            <span class="journey__step-label">Before</span>
-            <h3 class="journey__step-title">The Conversation</h3>
-            <p class="journey__step-text">
-              We begin with a 30-minute intake — by phone or in person. Not a medical history, 
-              but a mapping of your field. Where have you felt stuck? What frequencies run 
-              through your life on repeat? This conversation itself begins the tuning process.
-            </p>
-          </div>
-        </div>
-
-        <div class="journey__step surface-from-void">
-          <div class="journey__step-marker">
-            <div class="journey__step-dot"></div>
-            <div class="journey__step-line"></div>
-          </div>
-          <div class="journey__step-content">
-            <span class="journey__step-label">Arrival</span>
-            <h3 class="journey__step-title">The Sanctuary</h3>
-            <p class="journey__step-text">
-              Our space in Taos sits at 7,200 feet, surrounded by the Sangre de Cristo 
-              mountains. The treatment room is designed with precise geometric proportions 
-              and scalar wave generators that prepare the field before you enter. Most 
-              clients report feeling a shift the moment they walk through the door.
-            </p>
-          </div>
-        </div>
-
-        <div class="journey__step surface-from-void">
-          <div class="journey__step-marker">
-            <div class="journey__step-dot"></div>
-            <div class="journey__step-line"></div>
-          </div>
-          <div class="journey__step-content">
-            <span class="journey__step-label">Session</span>
-            <h3 class="journey__step-title">The Field Opens</h3>
-            <p class="journey__step-text">
-              You'll lie comfortably on a zero-gravity chair. Dr. Celestine will guide you 
-              through a series of breath patterns and visualizations while working with the 
-              biofield. Many clients enter a state between waking and dreaming — what 
-              Dr. Celestine calls "the threshold." Some see colors. Some feel vibration. 
-              Some feel nothing at all, and those are often the deepest healings.
-            </p>
-          </div>
-        </div>
-
-        <div class="journey__step surface-from-void">
-          <div class="journey__step-marker">
-            <div class="journey__step-dot"></div>
-          </div>
-          <div class="journey__step-content">
-            <span class="journey__step-label">After</span>
-            <h3 class="journey__step-title">Integration</h3>
-            <p class="journey__step-text">
-              The field continues to reorganize for days after a session. We schedule a 
-              15-minute check-in call 48 hours later. Most clients report that the 
-              deepest shifts arrive not during the session, but in the quiet hours 
-              that follow — in dreams, in sudden clarity, in the strange peace of 
-              waking up whole.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== QUOTE ===================== -->
-  <section class="quote" id="quote">
-    <div class="quote__inner">
-      <div class="quote__line surface-from-void"></div>
-      <blockquote class="quote__text surface-from-void">
-        "The vacuum is not empty — it is the most dense medium in the universe. 
-        Every point in space contains the potential of all creation."
-      </blockquote>
-      <div class="quote__source surface-from-void">
-        <span class="quote__source-name">Dr. Nova Celestine</span>
-        <span class="quote__source-divider">—</span>
-        <span class="quote__source-title">Quantum Vacuum Theory of Health</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== ARRIVAL ===================== -->
-  <section class="arrival" id="arrival">
-    <div class="arrival__inner">
-      <h2 class="arrival__heading surface-from-void">Return<br>to Source</h2>
-      <p class="arrival__text surface-from-void">Begin your journey back to the origin of all healing. Enter your email to receive Dr. Celestine's introductory guide, <em>The Architecture of the Void</em>, and to be notified when sessions open.</p>
-      <form class="arrival__form surface-from-void" onsubmit="event.preventDefault();">
-        <input type="email" class="arrival__input" placeholder="Your email address" required aria-label="Email address">
-        <button type="submit" class="arrival__btn">Enter the Field</button>
-      </form>
-      <p class="arrival__note surface-from-void">Your information is held in the same reverence as every session. No sharing. No noise.</p>
-    </div>
-  </section>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="footer__drift">
-      <div class="footer__particle"></div>
-    </div>
-    <div class="footer__links surface-from-void">
-      <a href="#about" class="footer__link">About</a>
-      <a href="#sacred" class="footer__link">Sacred Art</a>
-      <a href="#philosophy" class="footer__link">Philosophy</a>
-      <a href="#testimonials" class="footer__link">Voices</a>
-      <a href="#journey" class="footer__link">First Visit</a>
-      <a href="#arrival" class="footer__link">Connect</a>
-    </div>
-    <div class="footer__info">
-      <span class="footer__healer">Dr. Nova Celestine</span>
-      <span class="footer__address">777 Quantum Drive, Taos, NM 87571</span>
-      <span class="footer__phone">(575) 555-0199</span>
-      <span class="footer__hours">Sessions by appointment · Tuesday through Saturday</span>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-
-<footer class="site-footer">
-  <p>&copy; Norman James</p>
-  <p>made with love ❤️ by Empathy Studio</p>
-</footer>
+    <script src="script.js"></script>
 </body>
 </html>

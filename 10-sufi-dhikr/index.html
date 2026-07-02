@@ -3,421 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sufi Dhikr Healing — In the Remembrance of God, the Heart Finds Peace</title>
+    <title>Chakra Balancing — Align the Centers, Align the Life</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Preloader -->
     <div class="preloader" id="preloader">
-        <div class="preloader-whirl">
-            <svg viewBox="0 0 120 160" class="preloader-dervish">
-                <ellipse cx="60" cy="40" rx="10" ry="12" fill="#8b0000"/>
-                <path d="M60,52 Q30,80 25,130 Q30,140 60,145 Q90,140 95,130 Q90,80 60,52Z" fill="#8b0000" opacity="0.9"/>
-                <ellipse cx="60" cy="145" rx="35" ry="8" fill="#8b0000" opacity="0.6"/>
+        <div class="preloader-wheel">
+            <svg viewBox="0 0 120 120" class="preloader-svg">
+                <circle cx="60" cy="60" r="50" fill="none" stroke="var(--signal)" stroke-width="0.5" stroke-dasharray="4 4" class="preloader-ring"/>
+                <circle cx="60" cy="60" r="35" fill="none" stroke="var(--signal)" stroke-width="0.3" stroke-dasharray="2 6"/>
+                <circle cx="60" cy="60" r="4" fill="var(--signal)" class="preloader-core"/>
             </svg>
         </div>
-        <p class="preloader-text">In the Remembrance of God...</p>
+        <p class="preloader-text">Aligning energy centers...</p>
     </div>
 
-    <!-- Circular Mandala Navigation -->
-    <nav class="mandala-nav" id="mandalaNav">
-        <div class="mandala-container">
-            <svg viewBox="0 0 400 400" class="mandala-svg">
-                <!-- Outer ring -->
-                <circle cx="200" cy="200" r="180" fill="none" stroke="#8b0000" stroke-width="1" opacity="0.4"/>
-                <circle cx="200" cy="200" r="160" fill="none" stroke="#8b0000" stroke-width="0.5" opacity="0.3"/>
-                <circle cx="200" cy="200" r="140" fill="none" stroke="#d4c4a8" stroke-width="0.5" opacity="0.3"/>
-                <!-- Geometric patterns -->
-                <g class="mandala-pattern" transform-origin="200 200">
-                    <line x1="200" y1="20" x2="200" y2="80" stroke="#8b0000" stroke-width="0.5" opacity="0.3"/>
-                    <line x1="380" y1="200" x2="320" y2="200" stroke="#8b0000" stroke-width="0.5" opacity="0.3"/>
-                    <line x1="200" y1="380" x2="200" y2="320" stroke="#8b0000" stroke-width="0.5" opacity="0.3"/>
-                    <line x1="20" y1="200" x2="80" y2="200" stroke="#8b0000" stroke-width="0.5" opacity="0.3"/>
-                    <!-- Diagonal lines -->
-                    <line x1="73" y1="73" x2="117" y2="117" stroke="#d4c4a8" stroke-width="0.3" opacity="0.2"/>
-                    <line x1="327" y1="73" x2="283" y2="117" stroke="#d4c4a8" stroke-width="0.3" opacity="0.2"/>
-                    <line x1="327" y1="327" x2="283" y2="283" stroke="#d4c4a8" stroke-width="0.3" opacity="0.2"/>
-                    <line x1="73" y1="327" x2="117" y2="283" stroke="#d4c4a8" stroke-width="0.3" opacity="0.2"/>
-                </g>
-                <!-- Navigation points -->
-                <circle cx="200" cy="30" r="4" class="nav-dot" data-section="hero"/>
-                <circle cx="345" cy="90" r="4" class="nav-dot" data-section="about"/>
-                <circle cx="370" cy="200" r="4" class="nav-dot" data-section="sacred-art"/>
-                <circle cx="345" cy="310" r="4" class="nav-dot" data-section="philosophy"/>
-                <circle cx="200" cy="370" r="4" class="nav-dot" data-section="testimonials"/>
-                <circle cx="55" cy="310" r="4" class="nav-dot" data-section="journey"/>
-                <circle cx="30" cy="200" r="4" class="nav-dot" data-section="quote"/>
-                <!-- Center -->
-                <circle cx="200" cy="200" r="8" fill="#8b0000" class="mandala-center"/>
-            </svg>
-            <div class="nav-labels">
-                <span class="nav-label" data-section="hero" style="top: 2%; left: 50%; transform: translateX(-50%);">Sanctuary</span>
-                <span class="nav-label" data-section="about" style="top: 15%; right: 5%; transform: translateY(-50%);">About</span>
-                <span class="nav-label" data-section="sacred-art" style="top: 50%; right: 2%; transform: translateY(-50%);">Sacred Art</span>
-                <span class="nav-label" data-section="philosophy" style="bottom: 15%; right: 5%; transform: translateY(50%);">Philosophy</span>
-                <span class="nav-label" data-section="testimonials" style="bottom: 2%; left: 50%; transform: translateX(-50%);">Voices</span>
-                <span class="nav-label" data-section="journey" style="bottom: 15%; left: 5%; transform: translateY(50%);">Journey</span>
-                <span class="nav-label" data-section="quote" style="top: 50%; left: 2%; transform: translateY(-50%);">Words</span>
-            </div>
-        </div>
+    <!-- Chakra Wheel Navigation -->
+    <nav class="chakra-nav" id="chakraNav">
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="toggle-dot"></span>
         </button>
+        <div class="chakra-nav-inner" id="chakraNavInner">
+            <svg viewBox="0 0 300 300" class="chakra-nav-svg" id="chakraNavSvg">
+                <!-- Navigation wheel rendered by JS -->
+            </svg>
+        </div>
     </nav>
 
-    <!-- Hero Section — Audio Waveform Experience -->
+    <!-- Hero Section — Split-Screen Tension -->
     <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-vignette"></div>
-        </div>
-
-        <!-- Audio Waveform Visualization -->
-        <div class="waveform-container">
-            <svg viewBox="0 0 1200 300" class="waveform" preserveAspectRatio="none">
-                <defs>
-                    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:#8b0000;stop-opacity:0.8"/>
-                        <stop offset="100%" style="stop-color:#d4c4a8;stop-opacity:0.3"/>
-                    </linearGradient>
-                </defs>
-                <g class="wave-bars">
-                    <!-- Generated by JS -->
-                </g>
-            </svg>
-        </div>
-
-        <!-- Whirling Dervish Silhouette -->
-        <div class="hero-dervish">
-            <svg viewBox="0 0 200 300" class="dervish-svg">
-                <defs>
-                    <linearGradient id="dervishGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:#8b0000;stop-opacity:1"/>
-                        <stop offset="100%" style="stop-color:#8b0000;stop-opacity:0.6"/>
-                    </linearGradient>
-                </defs>
-                <!-- Head -->
-                <ellipse cx="100" cy="55" rx="14" ry="17" fill="url(#dervishGrad)"/>
-                <!-- Sikke (tall hat) -->
-                <rect x="92" y="30" width="16" height="28" rx="3" fill="#8b0000"/>
-                <!-- Body/Torso -->
-                <path d="M100,72 Q70,100 60,160 Q70,180 100,185 Q130,180 140,160 Q130,100 100,72Z" fill="url(#dervishGrad)" opacity="0.9"/>
-                <!-- Whirling skirt -->
-                <ellipse cx="100" cy="220" rx="75" ry="50" fill="#8b0000" opacity="0.85"/>
-                <ellipse cx="100" cy="230" rx="80" ry="45" fill="#8b0000" opacity="0.6"/>
-                <ellipse cx="100" cy="240" rx="85" ry="40" fill="#8b0000" opacity="0.4"/>
-                <!-- Arms -->
-                <path d="M70,100 Q40,90 25,70" stroke="#8b0000" stroke-width="4" fill="none" stroke-linecap="round"/>
-                <path d="M130,100 Q160,90 175,70" stroke="#8b0000" stroke-width="4" fill="none" stroke-linecap="round"/>
-                <!-- Hands -->
-                <circle cx="25" cy="70" r="5" fill="#8b0000"/>
-                <circle cx="175" cy="70" r="5" fill="#8b0000"/>
-            </svg>
+        <div class="hero-split">
+            <div class="hero-left" id="heroLeft">
+                <div class="hero-heat"></div>
+            </div>
+            <div class="hero-right" id="heroRight">
+                <div class="hero-cool"></div>
+            </div>
+            <div class="hero-bleed" id="heroBleed"></div>
         </div>
 
         <div class="hero-content">
-            <p class="hero-overline">The Mevlevi Path</p>
+            <p class="hero-overline">Sacred Geometry × Afrofuturism</p>
             <h1 class="hero-title">
-                <span class="title-line">Sufi Dhikr</span>
-                <span class="title-line title-accent">Healing</span>
+                <span class="title-line">Chakra</span>
+                <span class="title-line title-accent">Balancing</span>
             </h1>
-            <p class="hero-tagline">In the Remembrance of God, the Heart Finds Peace</p>
+            <p class="hero-tagline">Align the Centers, Align the Life</p>
             <div class="hero-divider">
                 <svg viewBox="0 0 200 20" class="divider-svg">
-                    <line x1="0" y1="10" x2="80" y2="10" stroke="#d4c4a8" stroke-width="1"/>
-                    <circle cx="100" cy="10" r="4" fill="#8b0000"/>
-                    <line x1="120" y1="10" x2="200" y2="10" stroke="#d4c4a8" stroke-width="1"/>
+                    <line x1="0" y1="10" x2="80" y2="10" stroke="var(--signal)" stroke-width="1" opacity="0.4"/>
+                    <polygon points="95,5 105,10 95,15" fill="var(--signal)" opacity="0.6"/>
+                    <line x1="120" y1="10" x2="200" y2="10" stroke="var(--signal)" stroke-width="1" opacity="0.4"/>
                 </svg>
             </div>
-            <p class="hero-subtitle">Sheikh Rashid al-Qadiri</p>
+            <p class="hero-subtitle">Nakia chakra-Wellness · Accra, Ghana</p>
+        </div>
+
+        <!-- Sacred Geometry Background -->
+        <div class="hero-geometry">
+            <svg viewBox="0 0 600 600" class="geometry-svg" id="heroGeometry">
+                <defs>
+                    <linearGradient id="geoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:var(--signal);stop-opacity:0.15"/>
+                        <stop offset="100%" style="stop-color:var(--signal);stop-opacity:0"/>
+                    </linearGradient>
+                </defs>
+                <!-- Flower of Life pattern -->
+                <g class="flower-of-life" opacity="0.08">
+                    <circle cx="300" cy="300" r="80" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                    <circle cx="300" cy="220" r="80" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                    <circle cx="300" cy="380" r="80" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                    <circle cx="230" cy="260" r="80" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                    <circle cx="370" cy="260" r="80" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                    <circle cx="230" cy="340" r="80" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                    <circle cx="370" cy="340" r="80" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                </g>
+                <!-- Metatron's Cube -->
+                <g class="metatrons-cube" opacity="0.05">
+                    <line x1="300" y1="150" x2="300" y2="450" stroke="var(--signal)" stroke-width="0.3"/>
+                    <line x1="150" y1="225" x2="450" y2="375" stroke="var(--signal)" stroke-width="0.3"/>
+                    <line x1="150" y1="375" x2="450" y2="225" stroke="var(--signal)" stroke-width="0.3"/>
+                    <circle cx="300" cy="150" r="30" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                    <circle cx="300" cy="450" r="30" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                    <circle cx="150" cy="225" r="30" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                    <circle cx="450" cy="225" r="30" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                    <circle cx="150" cy="375" r="30" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                    <circle cx="450" cy="375" r="30" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                </g>
+            </svg>
         </div>
 
         <div class="scroll-indicator">
-            <div class="scroll-whirl">
-                <svg viewBox="0 0 40 40">
-                    <circle cx="20" cy="20" r="15" fill="none" stroke="#d4c4a8" stroke-width="1" stroke-dasharray="4 4"/>
-                </svg>
-            </div>
+            <div class="scroll-pulse"></div>
             <span>Descend</span>
         </div>
     </section>
 
-    <!-- About Section — Manuscript Style -->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="about-bg"></div>
         <div class="about-container">
-            <div class="about-manuscript">
-                <div class="manuscript-border">
-                    <div class="corner-ornament top-left"></div>
-                    <div class="corner-ornament top-right"></div>
-                    <div class="corner-ornament bottom-left"></div>
-                    <div class="corner-ornament bottom-right"></div>
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-mandala">
+                        <svg viewBox="0 0 400 400" class="mandala-svg">
+                            <defs>
+                                <radialGradient id="mandalaGrad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" style="stop-color:var(--signal);stop-opacity:0.2"/>
+                                    <stop offset="100%" style="stop-color:var(--signal);stop-opacity:0"/>
+                                </radialGradient>
+                            </defs>
+                            <circle cx="200" cy="200" r="180" fill="none" stroke="var(--signal)" stroke-width="0.3" stroke-dasharray="8 4"/>
+                            <circle cx="200" cy="200" r="140" fill="none" stroke="var(--signal)" stroke-width="0.3" stroke-dasharray="4 8"/>
+                            <circle cx="200" cy="200" r="100" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                            <circle cx="200" cy="200" r="60" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                            <circle cx="200" cy="200" r="20" fill="url(#mandalaGrad)"/>
+                            <!-- Sacred geometry lines -->
+                            <g opacity="0.3">
+                                <line x1="200" y1="20" x2="200" y2="380" stroke="var(--signal)" stroke-width="0.2"/>
+                                <line x1="20" y1="200" x2="380" y2="200" stroke="var(--signal)" stroke-width="0.2"/>
+                                <line x1="73" y1="73" x2="327" y2="327" stroke="var(--signal)" stroke-width="0.2"/>
+                                <line x1="327" y1="73" x2="73" y2="327" stroke="var(--signal)" stroke-width="0.2"/>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
-                <div class="manuscript-content">
-                    <div class="manuscript-header">
-                        <svg viewBox="0 0 60 60" class="manuscript-icon">
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="#8b0000" stroke-width="1"/>
-                            <path d="M30,10 Q20,25 30,40 Q40,25 30,10Z" fill="#8b0000" opacity="0.6"/>
-                        </svg>
-                        <h2 class="section-title">The Path of Remembrance</h2>
-                        <p class="section-overline">About the Healing Practice</p>
+                <div class="about-content">
+                    <p class="section-overline">The Practice</p>
+                    <h2 class="section-title">About Chakra Balancing</h2>
+                    <div class="about-text">
+                        <p class="drop-cap">Nakia chakra-Wellness is a renowned energy healer who bridges West African spiritual traditions with the ancient Indian chakra system. Her unique approach combines ancestral wisdom with sacred geometry to restore balance to the body's seven energy centers.</p>
+                        <p>Based in Accra, Ghana, Nakia has spent over fifteen years studying the intersection of African spiritual practices and Vedic energy work. She believes that true healing occurs when we align our energy centers — not just physically, but spiritually and culturally.</p>
+                        <p>Her sanctuary at 777 Energy Circle is a space where ancient wisdom meets modern understanding, where the geometry of the universe meets the geometry of the soul. Each session is a journey through the seven gates of transformation.</p>
                     </div>
-                    <div class="manuscript-body">
-                        <p class="manuscript-text drop-cap">
-                            Sheikh Rashid al-Qadiri is an initiate of the Mevlevi Order, carrying the sacred lineage 
-                            of Jalal ad-Din Rumi himself. For over three decades, he has devoted his life to the 
-                            practice and teaching of Dhikr — the remembrance of God through breath, movement, 
-                            and devotional song.
-                        </p>
-                        <p class="manuscript-text">
-                            In the Sufi tradition, all illness arises from <em>forgetfulness of the Divine</em>. 
-                            When the heart remembers its Creator, healing flows naturally — not as a cure imposed 
-                            from without, but as a remembering of the wholeness that was never truly lost.
-                        </p>
-                        <p class="manuscript-text">
-                            Dhikr is the repetition of God's names and attributes — <em>Ya Shafi</em> (The Healer), 
-                            <em>Ya Rahman</em> (The Merciful), <em>Ya Wadud</em> (The Loving) — through synchronized 
-                            breathing, gentle movement, and sacred melody. Each breath becomes a prayer. 
-                            Each heartbeat, a repetition of the Divine Name.
-                        </p>
-                        <p class="manuscript-text">
-                            The healing sanctuary was founded in the ancient city of Konya, where Rumi himself lived 
-                            and taught. Here, in the shadow of the Green Dome, the Mevlevi tradition continues to 
-                            breathe and whirl, carrying the flame of divine love from generation to generation.
-                        </p>
-                        <p class="manuscript-text">
-                            Sheikh Rashid's approach is not one of dogma or rigid ritual, but of <em>heart-to-heart 
-                            transmission</em>. The practice is alive, responding to the needs of each individual and 
-                            each gathering. What remains constant is the foundation: sincere intention, synchronized 
-                            breath, and the unwavering belief that God's mercy is greater than any pain.
-                        </p>
-                    </div>
-                    <div class="manuscript-seal">
-                        <svg viewBox="0 0 80 80">
-                            <circle cx="40" cy="40" r="35" fill="none" stroke="#8b0000" stroke-width="1.5"/>
-                            <circle cx="40" cy="40" r="28" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <text x="40" y="38" text-anchor="middle" fill="#8b0000" font-size="8" font-family="Playfair Display">MEVLEVI</text>
-                            <text x="40" y="48" text-anchor="middle" fill="#8b0000" font-size="6" font-family="Lora">Order</text>
+                    <div class="about-signature">
+                        <svg viewBox="0 0 60 60" class="signature-svg">
+                            <circle cx="30" cy="30" r="25" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                            <circle cx="30" cy="30" r="15" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                            <circle cx="30" cy="30" r="3" fill="var(--signal)" opacity="0.6"/>
                         </svg>
+                        <span>Nakia chakra-Wellness</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sacred Art Section — Whirling Circles -->
+    <!-- Interactive Chakra Wheel Section -->
+    <section class="chakra-wheel-section" id="wheel">
+        <div class="wheel-bg"></div>
+        <div class="wheel-container">
+            <div class="wheel-header">
+                <p class="section-overline">Interactive Experience</p>
+                <h2 class="section-title">The Spinning Wheel</h2>
+                <p class="section-subtitle">Click a chakra to spin the wheel and receive its affirmation</p>
+            </div>
+
+            <div class="wheel-layout">
+                <div class="wheel-visual">
+                    <div class="chakra-wheel-wrapper" id="chakraWheel">
+                        <svg viewBox="0 0 500 500" class="chakra-wheel-svg" id="chakraWheelSvg">
+                            <!-- Outer rings -->
+                            <circle cx="250" cy="250" r="240" fill="none" stroke="var(--signal)" stroke-width="0.3" stroke-dasharray="4 4"/>
+                            <circle cx="250" cy="250" r="220" fill="none" stroke="var(--ghost)" stroke-width="0.5"/>
+                            <circle cx="250" cy="250" r="200" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                            <!-- Chakra segments rendered by JS -->
+                            <g id="chakraSegments"></g>
+                            <!-- Center -->
+                            <circle cx="250" cy="250" r="40" fill="var(--ink)" stroke="var(--signal)" stroke-width="1"/>
+                            <circle cx="250" cy="250" r="25" fill="none" stroke="var(--signal)" stroke-width="0.5" opacity="0.5"/>
+                            <text x="250" y="255" text-anchor="middle" fill="var(--signal)" font-size="8" font-family="'Space Grotesk', sans-serif" letter-spacing="0.1em">BALANCE</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="wheel-info">
+                    <div class="affirmation-display" id="affirmationDisplay">
+                        <div class="affirmation-icon">
+                            <svg viewBox="0 0 60 60">
+                                <circle cx="30" cy="30" r="25" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                                <polygon points="30,10 35,25 50,25 38,33 42,48 30,40 18,48 22,33 10,25 25,25" fill="var(--signal)" opacity="0.15"/>
+                            </svg>
+                        </div>
+                        <p class="affirmation-text" id="affirmationText">Click a chakra to begin your journey</p>
+                        <p class="affirmation-frequency" id="affirmationFrequency"></p>
+                    </div>
+                    <div class="chakra-list" id="chakraList">
+                        <!-- Chakra items rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sacred Art Section -->
     <section class="sacred-art" id="sacred-art">
         <div class="sacred-bg"></div>
         <div class="sacred-container">
             <div class="sacred-header">
-                <p class="section-overline">The Three Movements</p>
-                <h2 class="section-title">Sacred Art of Dhikr</h2>
-                <p class="section-subtitle">Each practice is a doorway to the Divine, a path worn smooth by centuries of seekers</p>
+                <p class="section-overline">Healing Modalities</p>
+                <h2 class="section-title">Sacred Art</h2>
+                <p class="section-subtitle">Three pathways to energetic harmony</p>
             </div>
 
             <div class="practices-grid">
-                <!-- Practice 1: Heart-centered Dhikr -->
+                <!-- Practice 1: Chakra Meditation -->
                 <div class="practice-card">
-                    <div class="practice-circle spinning">
-                        <svg viewBox="0 0 200 200" class="practice-svg">
-                            <defs>
-                                <linearGradient id="practiceGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#8b0000;stop-opacity:0.8"/>
-                                    <stop offset="100%" style="stop-color:#d4c4a8;stop-opacity:0.4"/>
-                                </linearGradient>
-                            </defs>
-                            <!-- Outer rotating ring -->
-                            <circle cx="100" cy="100" r="90" fill="none" stroke="#8b0000" stroke-width="0.5" stroke-dasharray="8 4" class="ring-outer"/>
-                            <circle cx="100" cy="100" r="80" fill="none" stroke="#d4c4a8" stroke-width="0.5" stroke-dasharray="4 8"/>
-                            <!-- Center meditation figure -->
-                            <circle cx="100" cy="100" r="30" fill="#8b0000" opacity="0.15"/>
-                            <circle cx="100" cy="100" r="20" fill="#8b0000" opacity="0.25"/>
-                            <!-- Seated figure silhouette -->
-                            <path d="M100,75 Q92,85 88,95 Q90,105 100,108 Q110,105 112,95 Q108,85 100,75Z" fill="#8b0000" opacity="0.7"/>
-                            <circle cx="100" cy="73" r="6" fill="#8b0000" opacity="0.8"/>
-                            <!-- Heart pulses -->
-                            <circle cx="100" cy="95" r="4" fill="#8b0000" class="heart-pulse"/>
-                        </svg>
+                    <div class="practice-visual">
+                        <div class="practice-circle pulse-2s">
+                            <svg viewBox="0 0 200 200" class="practice-svg">
+                                <defs>
+                                    <linearGradient id="pracGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#FF0000;stop-opacity:0.6"/>
+                                        <stop offset="50%" style="stop-color:var(--signal);stop-opacity:0.4"/>
+                                        <stop offset="100%" style="stop-color:#8B00FF;stop-opacity:0.6"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="90" fill="none" stroke="var(--signal)" stroke-width="0.3" stroke-dasharray="6 3"/>
+                                <circle cx="100" cy="100" r="70" fill="none" stroke="var(--signal)" stroke-width="0.5"/>
+                                <!-- Chakra dots -->
+                                <circle cx="100" cy="30" r="6" fill="#FF0000" opacity="0.7"/>
+                                <circle cx="130" cy="50" r="6" fill="#FF7F00" opacity="0.7"/>
+                                <circle cx="140" cy="85" r="6" fill="#FFFF00" opacity="0.7"/>
+                                <circle cx="100" cy="100" r="8" fill="#00FF00" opacity="0.8"/>
+                                <circle cx="60" cy="85" r="6" fill="#00BFFF" opacity="0.7"/>
+                                <circle cx="50" cy="50" r="6" fill="#4B0082" opacity="0.7"/>
+                                <circle cx="100" cy="20" r="5" fill="#9400D3" opacity="0.7"/>
+                                <!-- Connecting lines -->
+                                <line x1="100" y1="30" x2="100" y2="100" stroke="var(--signal)" stroke-width="0.3" opacity="0.3"/>
+                                <line x1="130" y1="50" x2="100" y2="100" stroke="var(--signal)" stroke-width="0.3" opacity="0.3"/>
+                                <line x1="140" y1="85" x2="100" y2="100" stroke="var(--signal)" stroke-width="0.3" opacity="0.3"/>
+                                <line x1="60" y1="85" x2="100" y2="100" stroke="var(--signal)" stroke-width="0.3" opacity="0.3"/>
+                                <line x1="50" y1="50" x2="100" y2="100" stroke="var(--signal)" stroke-width="0.3" opacity="0.3"/>
+                                <line x1="100" y1="20" x2="100" y2="100" stroke="var(--signal)" stroke-width="0.3" opacity="0.3"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="practice-info">
-                        <h3 class="practice-name">Heart-centered Dhikr</h3>
-                        <p class="practice-desc">Seated meditation repeating Divine names. The heart becomes the tongue of the spirit, whispering God's names into the silence of being. Through rhythmic breathing and focused intention, practitioners enter states of profound stillness where the boundaries between self and Divine begin to dissolve.</p>
-                        <span class="practice-duration">45 minutes</span>
-                    </div>
-                </div>
-
-                <!-- Practice 2: Whirling Ceremony -->
-                <div class="practice-card">
-                    <div class="practice-circle spinning reverse">
-                        <svg viewBox="0 0 200 200" class="practice-svg">
-                            <defs>
-                                <linearGradient id="practiceGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#8b0000;stop-opacity:0.7"/>
-                                    <stop offset="100%" style="stop-color:#8b0000;stop-opacity:0.3"/>
-                                </linearGradient>
-                            </defs>
-                            <!-- Outer rotating ring -->
-                            <circle cx="100" cy="100" r="90" fill="none" stroke="#d4c4a8" stroke-width="0.5" stroke-dasharray="6 6" class="ring-outer"/>
-                            <circle cx="100" cy="100" r="80" fill="none" stroke="#8b0000" stroke-width="0.5" stroke-dasharray="3 9"/>
-                            <!-- Whirling figure -->
-                            <g transform-origin="100 100">
-                                <ellipse cx="100" cy="65" rx="8" ry="10" fill="#8b0000" opacity="0.8"/>
-                                <rect x="96" y="52" width="8" height="16" rx="2" fill="#8b0000"/>
-                                <path d="M100,75 Q75,100 70,140 Q80,150 100,155 Q120,150 130,140 Q125,100 100,75Z" fill="url(#practiceGrad2)"/>
-                                <ellipse cx="100" cy="160" rx="40" ry="25" fill="#8b0000" opacity="0.5"/>
-                            </g>
-                            <!-- Motion trails -->
-                            <path d="M60,100 A40,40 0 0,1 100,60" fill="none" stroke="#d4c4a8" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 4"/>
-                            <path d="M140,100 A40,40 0 0,1 100,140" fill="none" stroke="#d4c4a8" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 4"/>
-                        </svg>
-                    </div>
-                    <div class="practice-info">
-                        <h3 class="practice-name">Whirling Ceremony</h3>
-                        <p class="practice-desc">Sufi whirling as moving meditation. The body becomes a compass needle, turning toward the Beloved. Each revolution strips away a layer of the self. The right hand receives grace from heaven; the left hand channels it to earth. In this sacred rotation, the dervish becomes a bridge between worlds.</p>
+                        <h3 class="practice-name">Chakra Meditation</h3>
+                        <p class="practice-desc">Journey through all seven energy centers with guided visualization. Each meditation focuses on awakening dormant energy, clearing blockages, and restoring the natural flow of prana through the central channel.</p>
                         <span class="practice-duration">60 minutes</span>
                     </div>
                 </div>
 
-                <!-- Practice 3: Sama Healing Circle -->
+                <!-- Practice 2: Color Therapy -->
                 <div class="practice-card">
-                    <div class="practice-circle spinning">
-                        <svg viewBox="0 0 200 200" class="practice-svg">
-                            <defs>
-                                <radialGradient id="practiceGrad3" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" style="stop-color:#8b0000;stop-opacity:0.3"/>
-                                    <stop offset="100%" style="stop-color:#d4c4a8;stop-opacity:0.1"/>
-                                </radialGradient>
-                            </defs>
-                            <!-- Outer rotating ring -->
-                            <circle cx="100" cy="100" r="90" fill="none" stroke="#8b0000" stroke-width="0.5" stroke-dasharray="10 5" class="ring-outer"/>
-                            <circle cx="100" cy="100" r="80" fill="none" stroke="#d4c4a8" stroke-width="0.5" stroke-dasharray="5 10"/>
-                            <!-- Sound waves -->
-                            <circle cx="100" cy="100" r="60" fill="none" stroke="#8b0000" stroke-width="0.5" opacity="0.3" class="sound-wave"/>
-                            <circle cx="100" cy="100" r="45" fill="none" stroke="#8b0000" stroke-width="0.5" opacity="0.4" class="sound-wave"/>
-                            <circle cx="100" cy="100" r="30" fill="none" stroke="#8b0000" stroke-width="0.5" opacity="0.5" class="sound-wave"/>
-                            <!-- Circle of figures -->
-                            <circle cx="100" cy="50" r="6" fill="#8b0000" opacity="0.6"/>
-                            <circle cx="143" cy="75" r="6" fill="#8b0000" opacity="0.6"/>
-                            <circle cx="143" cy="125" r="6" fill="#8b0000" opacity="0.6"/>
-                            <circle cx="100" cy="150" r="6" fill="#8b0000" opacity="0.6"/>
-                            <circle cx="57" cy="125" r="6" fill="#8b0000" opacity="0.6"/>
-                            <circle cx="57" cy="75" r="6" fill="#8b0000" opacity="0.6"/>
-                            <!-- Center -->
-                            <circle cx="100" cy="100" r="15" fill="url(#practiceGrad3)"/>
-                        </svg>
+                    <div class="practice-visual">
+                        <div class="practice-circle pulse-2s" style="animation-delay: 0.5s">
+                            <svg viewBox="0 0 200 200" class="practice-svg">
+                                <defs>
+                                    <linearGradient id="colorSpectrum" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#9400D3"/>
+                                        <stop offset="16%" style="stop-color:#4B0082"/>
+                                        <stop offset="33%" style="stop-color:#00BFFF"/>
+                                        <stop offset="50%" style="stop-color:#00FF00"/>
+                                        <stop offset="66%" style="stop-color:#FFFF00"/>
+                                        <stop offset="83%" style="stop-color:#FF7F00"/>
+                                        <stop offset="100%" style="stop-color:#FF0000"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="90" fill="none" stroke="var(--signal)" stroke-width="0.3" stroke-dasharray="4 8"/>
+                                <!-- Color spectrum circles -->
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#9400D3" stroke-width="2" opacity="0.5"/>
+                                <circle cx="100" cy="100" r="68" fill="none" stroke="#4B0082" stroke-width="2" opacity="0.5"/>
+                                <circle cx="100" cy="100" r="56" fill="none" stroke="#00BFFF" stroke-width="2" opacity="0.5"/>
+                                <circle cx="100" cy="100" r="44" fill="none" stroke="#00FF00" stroke-width="2" opacity="0.5"/>
+                                <circle cx="100" cy="100" r="32" fill="none" stroke="#FFFF00" stroke-width="2" opacity="0.5"/>
+                                <circle cx="100" cy="100" r="20" fill="none" stroke="#FF7F00" stroke-width="2" opacity="0.5"/>
+                                <circle cx="100" cy="100" r="8" fill="#FF0000" opacity="0.6"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="practice-info">
-                        <h3 class="practice-name">Sama Healing Circle</h3>
-                        <p class="practice-desc">Sound healing through devotional singing. The ney flute and sacred songs create a sonic bridge between the earthly and the divine, opening hearts to healing light. The vibrations of ancient melodies bypass the mind, speaking directly to the soul's memory of wholeness.</p>
-                        <span class="practice-duration">90 minutes</span>
+                        <h3 class="practice-name">Color Therapy</h3>
+                        <p class="practice-desc">Harness the vibrational frequency of each chakra's corresponding color. Through light exposure, colored crystals, and visualization, we recalibrate the energetic signature of each center back to its natural resonance.</p>
+                        <span class="practice-duration">45 minutes</span>
                     </div>
                 </div>
-            </div>
 
-            <div class="sacred-footer">
-                <p class="sacred-note">All practices begin with the invocation of the Divine Names and conclude with shared tea and silence.</p>
+                <!-- Practice 3: Sound Bath -->
+                <div class="practice-card">
+                    <div class="practice-visual">
+                        <div class="practice-circle pulse-2s" style="animation-delay: 1s">
+                            <svg viewBox="0 0 200 200" class="practice-svg">
+                                <defs>
+                                    <radialGradient id="soundGrad" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" style="stop-color:var(--signal);stop-opacity:0.2"/>
+                                        <stop offset="100%" style="stop-color:var(--signal);stop-opacity:0"/>
+                                    </radialGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="90" fill="none" stroke="var(--signal)" stroke-width="0.3" stroke-dasharray="8 4"/>
+                                <!-- Sound waves -->
+                                <circle cx="100" cy="100" r="75" fill="none" stroke="var(--signal)" stroke-width="0.5" opacity="0.3" class="sound-wave"/>
+                                <circle cx="100" cy="100" r="60" fill="none" stroke="var(--signal)" stroke-width="0.5" opacity="0.4" class="sound-wave"/>
+                                <circle cx="100" cy="100" r="45" fill="none" stroke="var(--signal)" stroke-width="0.5" opacity="0.5" class="sound-wave"/>
+                                <circle cx="100" cy="100" r="30" fill="none" stroke="var(--signal)" stroke-width="0.5" opacity="0.6" class="sound-wave"/>
+                                <!-- Sound bars -->
+                                <g class="sound-bars">
+                                    <rect x="85" y="70" width="3" height="60" rx="1.5" fill="var(--signal)" opacity="0.4"/>
+                                    <rect x="92" y="55" width="3" height="90" rx="1.5" fill="var(--signal)" opacity="0.5"/>
+                                    <rect x="99" y="45" width="3" height="110" rx="1.5" fill="var(--signal)" opacity="0.6"/>
+                                    <rect x="106" y="60" width="3" height="80" rx="1.5" fill="var(--signal)" opacity="0.5"/>
+                                    <rect x="113" y="65" width="3" height="70" rx="1.5" fill="var(--signal)" opacity="0.4"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="practice-info">
+                        <h3 class="practice-name">Sound Bath</h3>
+                        <p class="practice-desc">Immerse in the healing frequencies of singing bowls, tuning forks, and vocal toning. Each instrument is calibrated to specific solfeggio frequencies that resonate with individual chakras, dissolving energetic stagnation.</p>
+                        <span class="practice-duration">75 minutes</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Philosophy Section — The Heart's Remembrance -->
+    <!-- Philosophy Section -->
     <section class="philosophy" id="philosophy">
         <div class="philosophy-bg"></div>
         <div class="philosophy-container">
             <div class="philosophy-header">
-                <div class="philosophy-ornament">
-                    <svg viewBox="0 0 120 40" class="philosophy-ornament-svg">
-                        <path d="M0,20 Q30,5 60,20 Q90,35 120,20" fill="none" stroke="#8b0000" stroke-width="1" opacity="0.4"/>
-                        <circle cx="60" cy="20" r="3" fill="#8b0000" opacity="0.6"/>
-                    </svg>
-                </div>
-                <p class="section-overline">The Heart's Remembrance</p>
+                <p class="section-overline">Energy Centers</p>
                 <h2 class="section-title">Our Philosophy</h2>
-                <p class="section-subtitle">Five pillars guide our path to healing through Divine remembrance</p>
+                <p class="section-subtitle">Four pillars of chakra wisdom</p>
             </div>
 
             <div class="philosophy-pillars">
-                <!-- Pillar 1 -->
                 <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 80 80">
-                            <circle cx="40" cy="40" r="35" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <circle cx="40" cy="40" r="25" fill="none" stroke="#8b0000" stroke-width="0.5" stroke-dasharray="4 2"/>
-                            <path d="M40,20 Q30,30 30,40 Q30,50 40,55 Q50,50 50,40 Q50,30 40,20Z" fill="#8b0000" opacity="0.3"/>
-                            <circle cx="40" cy="38" r="4" fill="#8b0000" opacity="0.6"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-name">Remembrance as Medicine</h3>
-                    <p class="pillar-text">In the Sufi tradition, the root of all dis-ease is forgetfulness of the Divine. When we remember God, we remember our true nature — wholeness, peace, and infinite love. Dhikr is not merely prayer; it is the medicine that restores the heart to its original purity.</p>
+                    <div class="pillar-number">01</div>
+                    <h3 class="pillar-name">The Body Remembers</h3>
+                    <p class="pillar-text">Every chakra stores not just energy, but memory. The root holds ancestral fear, the sacral carries creative joy, the solar plexus guards personal power. Healing means listening to what the body has been holding, and gently releasing what no longer serves.</p>
                 </div>
 
-                <!-- Pillar 2 -->
                 <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 80 80">
-                            <circle cx="40" cy="40" r="35" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <circle cx="40" cy="40" r="25" fill="none" stroke="#8b0000" stroke-width="0.5" stroke-dasharray="4 2"/>
-                            <path d="M25,40 Q40,20 55,40 Q40,60 25,40Z" fill="#8b0000" opacity="0.3"/>
-                            <circle cx="40" cy="40" r="4" fill="#8b0000" opacity="0.6"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-name">The Breath of Life</h3>
-                    <p class="pillar-text">Every breath is a gift from the Divine. In synchronized breathing during Dhikr, we align our personal rhythm with the cosmic pulse. The breath becomes a bridge between the conscious and unconscious, the finite and the infinite, the body and the soul.</p>
+                    <div class="pillar-number">02</div>
+                    <h3 class="pillar-name">Geometry is Language</h3>
+                    <p class="pillar-text">Sacred geometry — the flower of life, Metatron's cube, the Sri Yantra — is the blueprint of creation. Each chakra corresponds to specific geometric patterns. When we align with these patterns, we align with the fundamental structure of the universe itself.</p>
                 </div>
 
-                <!-- Pillar 3 -->
                 <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 80 80">
-                            <circle cx="40" cy="40" r="35" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <circle cx="40" cy="40" r="25" fill="none" stroke="#8b0000" stroke-width="0.5" stroke-dasharray="4 2"/>
-                            <path d="M40,15 L45,35 L65,40 L45,45 L40,65 L35,45 L15,40 L35,35Z" fill="#8b0000" opacity="0.3"/>
-                            <circle cx="40" cy="40" r="4" fill="#8b0000" opacity="0.6"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-name">Movement as Prayer</h3>
-                    <p class="pillar-text">The body is not separate from the spirit. In Sufi whirling, physical motion becomes spiritual practice. Each turn is a prayer, each revolution a shedding of ego. The dervish does not whirl to escape the world, but to become more fully present within it.</p>
+                    <div class="pillar-number">03</div>
+                    <h3 class="pillar-name">Color is Frequency</h3>
+                    <p class="pillar-text">Each energy center vibrates at a specific frequency, visible as color. Red at the base, violet at the crown. When a chakra is blocked, its color dims. Through color therapy and intention, we restore the full spectrum of light within the body.</p>
                 </div>
 
-                <!-- Pillar 4 -->
                 <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 80 80">
-                            <circle cx="40" cy="40" r="35" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <circle cx="40" cy="40" r="25" fill="none" stroke="#8b0000" stroke-width="0.5" stroke-dasharray="4 2"/>
-                            <path d="M20,40 Q30,25 40,25 Q50,25 60,40 Q50,55 40,55 Q30,55 20,40Z" fill="#8b0000" opacity="0.3"/>
-                            <circle cx="40" cy="40" r="4" fill="#8b0000" opacity="0.6"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-name">The Sound Current</h3>
-                    <p class="pillar-text">Sacred sound — whether the ney flute, devotional singing, or the whispered names of God — carries healing vibration. Sound bypasses the thinking mind and speaks directly to the heart. In the Sama ceremony, music becomes a vehicle for divine encounter.</p>
+                    <div class="pillar-number">04</div>
+                    <h3 class="pillar-name">Balance is Dynamic</h3>
+                    <p class="pillar-text">True balance is not static — it is a continuous dance. Like the spinning wheel, the chakras must remain in motion. Our practice teaches not to fixate on any single center, but to cultivate the fluid movement of energy through all seven gates simultaneously.</p>
                 </div>
-
-                <!-- Pillar 5 -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 80 80">
-                            <circle cx="40" cy="40" r="35" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <circle cx="40" cy="40" r="25" fill="none" stroke="#8b0000" stroke-width="0.5" stroke-dasharray="4 2"/>
-                            <path d="M40,20 Q25,35 25,40 Q25,55 40,60 Q55,55 55,40 Q55,35 40,20Z" fill="#8b0000" opacity="0.3"/>
-                            <circle cx="40" cy="40" r="4" fill="#8b0000" opacity="0.6"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-name">Community as Sanctuary</h3>
-                    <p class="pillar-text">Healing does not happen in isolation. The gathering of seekers creates a field of shared intention that amplifies individual practice. In the circle of Dhikr, each person's healing becomes everyone's healing. We remember together what we cannot remember alone.</p>
-                </div>
-            </div>
-
-            <div class="philosophy-closing">
-                <blockquote class="philosophy-quote">
-                    <p>"When you let go of who you are, you become who you might be."</p>
-                    <span>— Rumi</span>
-                </blockquote>
             </div>
         </div>
     </section>
@@ -427,135 +367,98 @@
         <div class="testimonials-bg"></div>
         <div class="testimonials-container">
             <div class="testimonials-header">
-                <p class="section-overline">Voices of the Heart</p>
+                <p class="section-overline">Voices of Transformation</p>
                 <h2 class="section-title">Testimonials</h2>
             </div>
 
             <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-ornament">
-                        <svg viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="28" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <path d="M30,15 Q20,25 20,30 Q20,40 30,45 Q40,40 40,30 Q40,25 30,15Z" fill="#8b0000" opacity="0.15"/>
-                        </svg>
-                    </div>
+                    <div class="testimonial-glow"></div>
                     <blockquote class="testimonial-quote">
-                        <p>"I came to Sheikh Rashid carrying twenty years of grief that no therapist could touch. After three months of Dhikr practice, the heaviness that had settled in my chest began to lift. I didn't just heal — I remembered what it felt like to be whole."</p>
+                        <p>"After years of chronic back pain that no doctor could explain, Nakia's chakra work revealed it was stored grief from my childhood. Three sessions later, the pain dissolved. I finally understood that my body was speaking a language I had forgotten how to hear."</p>
                     </blockquote>
                     <div class="testimonial-author">
-                        <span class="author-name">Sarah M.</span>
-                        <span class="author-detail">Healer, Istanbul</span>
+                        <span class="author-name">Ama Osei</span>
+                        <span class="author-detail">Teacher, Kumasi</span>
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-ornament">
-                        <svg viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="28" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <path d="M30,15 Q20,25 20,30 Q20,40 30,45 Q40,40 40,30 Q40,25 30,15Z" fill="#8b0000" opacity="0.15"/>
-                        </svg>
-                    </div>
+                    <div class="testimonial-glow"></div>
                     <blockquote class="testimonial-quote">
-                        <p>"The whirling ceremony changed everything. I entered the circle as a skeptical physician, trained in evidence and logic. I left with a direct experience of something beyond words. Now I understand that the heart has its own science."</p>
+                        <p>"I came as a skeptic — I'm an engineer, I deal in facts and measurements. But the sound bath session moved something in me that I cannot quantify. My anxiety, which I'd carried for a decade, began to loosen its grip. Nakia doesn't ask you to believe; she asks you to experience."</p>
                     </blockquote>
                     <div class="testimonial-author">
-                        <span class="author-name">Dr. Ahmed K.</span>
-                        <span class="author-detail">Physician, Konya</span>
+                        <span class="author-name">Kwame Mensah</span>
+                        <span class="author-detail">Engineer, Accra</span>
                     </div>
                 </div>
 
-                <!-- Testimonial 3 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-ornament">
-                        <svg viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="28" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <path d="M30,15 Q20,25 20,30 Q20,40 30,45 Q40,40 40,30 Q40,25 30,15Z" fill="#8b0000" opacity="0.15"/>
-                        </svg>
-                    </div>
+                    <div class="testimonial-glow"></div>
                     <blockquote class="testimonial-quote">
-                        <p>"After my husband passed, I couldn't find meaning in anything. A friend brought me to the Sama circle. The music, the whirling, the community — they held me when I couldn't hold myself. Grief became a doorway, not a wall."</p>
+                        <p>"The color therapy session was unlike anything I've experienced. Nakia placed crystals on each chakra point, and I could feel the energy shifting — like doors opening one by one. I left feeling lighter, clearer, and more connected to myself than I have in years."</p>
                     </blockquote>
                     <div class="testimonial-author">
-                        <span class="author-name">Fatima R.</span>
-                        <span class="author-detail">Teacher, Ankara</span>
+                        <span class="author-name">Nana Yaa Asantewaa</span>
+                        <span class="author-detail">Artist, Cape Coast</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Journey Section — Your First Visit -->
+    <!-- Journey Section -->
     <section class="journey" id="journey">
         <div class="journey-bg"></div>
         <div class="journey-container">
             <div class="journey-header">
-                <div class="journey-ornament">
-                    <svg viewBox="0 0 200 30" class="journey-ornament-svg">
-                        <path d="M0,15 Q50,5 100,15 Q150,25 200,15" fill="none" stroke="#8b0000" stroke-width="1" opacity="0.4"/>
-                        <circle cx="100" cy="15" r="3" fill="#8b0000" opacity="0.6"/>
-                    </svg>
-                </div>
                 <p class="section-overline">Your First Visit</p>
-                <h2 class="section-title">The Journey Begins</h2>
-                <p class="section-subtitle">A gentle guide for those called to the path</p>
+                <h2 class="section-title">The Journey</h2>
+                <p class="section-subtitle">What to expect when you arrive</p>
             </div>
 
             <div class="journey-steps">
-                <!-- Step 1 -->
                 <div class="journey-step">
-                    <div class="step-number">
-                        <svg viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="28" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <text x="30" y="35" text-anchor="middle" fill="#8b0000" font-family="Playfair Display" font-size="16">1</text>
-                        </svg>
+                    <div class="step-marker">
+                        <div class="step-dot"></div>
+                        <div class="step-line"></div>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Arrival & Welcome</h3>
-                        <p class="step-text">Arrive 15 minutes before the session begins. You will be greeted at the door of the tekke with warm tea and a moment of silence. There is no need to explain yourself or your reasons for coming. Simply being here is enough.</p>
+                        <h3 class="step-title">Arrival & Grounding</h3>
+                        <p class="step-text">Arrive 15 minutes early. You'll be welcomed into a space of warm light and sacred geometry. Take a moment to breathe, to ground yourself, to leave the outside world at the door. Tea is offered. Silence is honored.</p>
                     </div>
                 </div>
 
-                <!-- Step 2 -->
                 <div class="journey-step">
-                    <div class="step-number">
-                        <svg viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="28" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <text x="30" y="35" text-anchor="middle" fill="#8b0000" font-family="Playfair Display" font-size="16">2</text>
-                        </svg>
+                    <div class="step-marker">
+                        <div class="step-dot"></div>
+                        <div class="step-line"></div>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Setting Your Intention</h3>
-                        <p class="step-text">Before the practice begins, take a moment to sit quietly. You may wish to hold a question in your heart, or simply open yourself to whatever healing wishes to come. The Sheikh will guide you through a brief centering practice.</p>
+                        <h3 class="step-title">Energy Assessment</h3>
+                        <p class="step-text">Nakia will guide you through a gentle assessment of your seven energy centers. Through conversation, intuition, and proximity reading, she identifies which chakras are overactive, underactive, or blocked. This forms the map for your session.</p>
                     </div>
                 </div>
 
-                <!-- Step 3 -->
                 <div class="journey-step">
-                    <div class="step-number">
-                        <svg viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="28" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <text x="30" y="35" text-anchor="middle" fill="#8b0000" font-family="Playfair Display" font-size="16">3</text>
-                        </svg>
+                    <div class="step-marker">
+                        <div class="step-dot"></div>
+                        <div class="step-line"></div>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">The Practice</h3>
-                        <p class="step-text">Whether you are joining a seated Dhikr, a whirling ceremony, or a Sama healing circle, you will be guided at every step. No prior experience is necessary. The practice will meet you exactly where you are.</p>
+                        <h3 class="step-title">The Balancing</h3>
+                        <p class="step-text">Using a combination of meditation, color therapy, sound healing, and sacred geometry, Nakia works with each energy center. You may feel warmth, tingling, emotional release, or profound stillness. Every experience is valid. Every sensation is information.</p>
                     </div>
                 </div>
 
-                <!-- Step 4 -->
                 <div class="journey-step">
-                    <div class="step-number">
-                        <svg viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="28" fill="none" stroke="#8b0000" stroke-width="0.5"/>
-                            <text x="30" y="35" text-anchor="middle" fill="#8b0000" font-family="Playfair Display" font-size="16">4</text>
-                        </svg>
+                    <div class="step-marker">
+                        <div class="step-dot"></div>
                     </div>
                     <div class="step-content">
-                        <h3 class="step-title">Integration & Tea</h3>
-                        <p class="step-text">After the practice, we gather for tea and quiet conversation. This is a time to integrate what has been experienced, to ask questions if you wish, or simply to sit in the company of fellow seekers. There is no rush to leave.</p>
+                        <h3 class="step-title">Integration & Guidance</h3>
+                        <p class="step-text">After the session, you'll receive personalized guidance for maintaining your energetic balance — including specific affirmations, color practices, and sound frequencies to work with at home. The healing continues long after you leave.</p>
                     </div>
                 </div>
             </div>
@@ -563,21 +466,21 @@
             <div class="journey-details">
                 <div class="journey-detail">
                     <span class="detail-label">What to Wear</span>
-                    <span class="detail-value">Comfortable, modest clothing that allows free movement. White is traditional but not required.</span>
+                    <span class="detail-value">Comfortable, loose clothing in white or light colors. The body needs to be free to receive energy.</span>
                 </div>
                 <div class="journey-detail">
                     <span class="detail-label">What to Bring</span>
-                    <span class="detail-value">An open heart. Everything else — blankets, cushions, prayer beads — is provided.</span>
+                    <span class="detail-value">An open heart and willingness to experience. All crystals, bowls, and sacred tools are provided.</span>
                 </div>
                 <div class="journey-detail">
                     <span class="detail-label">Who is Welcome</span>
-                    <span class="detail-value">All people, regardless of faith, background, or experience. The path of the heart knows no boundaries.</span>
+                    <span class="detail-value">All people, regardless of background or belief. Energy knows no boundaries. Neither do we.</span>
                 </div>
             </div>
 
             <div class="journey-cta">
-                <a href="mailto:sheikh.rashid@sufidhikr.com" class="arrival-cta">
-                    <span>Begin Your Journey</span>
+                <a href="mailto:nakia@chakrabalancing.com" class="arrival-cta">
+                    <span>Begin Your Alignment</span>
                     <svg viewBox="0 0 24 24" width="18" height="18">
                         <path d="M5,12 L19,12 M13,6 L19,12 L13,18" fill="none" stroke="currentColor" stroke-width="1.5"/>
                     </svg>
@@ -586,80 +489,37 @@
         </div>
     </section>
 
-    <!-- Quote Section — Rumi Calligraphy -->
+    <!-- Quote Section -->
     <section class="quote-section" id="quote">
         <div class="quote-bg"></div>
         <div class="quote-container">
-            <div class="quote-ornament top">
-                <svg viewBox="0 0 300 30">
-                    <path d="M0,15 Q75,0 150,15 Q225,30 300,15" fill="none" stroke="#8b0000" stroke-width="1" opacity="0.4"/>
-                    <path d="M0,15 Q75,30 150,15 Q225,0 300,15" fill="none" stroke="#d4c4a8" stroke-width="0.5" opacity="0.3"/>
-                </svg>
-            </div>
-
-            <blockquote class="rumi-quote">
+            <blockquote class="wisdom-quote">
                 <span class="quote-mark">"</span>
-                <p class="quote-text">Let yourself be silently drawn<br>
-                by the strange pull<br>
-                of what you really love.<br>
-                It will not lead you astray.</p>
+                <p class="quote-text">When the root is grounded,<br>the sacral flows,<br>the solar blazes,<br>the heart opens,<br>the throat speaks,<br>the third eye sees,<br>the crown connects —<br>you are whole.</p>
                 <span class="quote-mark close">"</span>
             </blockquote>
-
-            <p class="quote-attribution">— Jalal ad-Din Rumi</p>
-
-            <div class="quote-ornament bottom">
-                <svg viewBox="0 0 300 30">
-                    <path d="M0,15 Q75,0 150,15 Q225,30 300,15" fill="none" stroke="#8b0000" stroke-width="1" opacity="0.4"/>
-                    <path d="M0,15 Q75,30 150,15 Q225,0 300,15" fill="none" stroke="#d4c4a8" stroke-width="0.5" opacity="0.3"/>
-                </svg>
-            </div>
-
-            <div class="quote-secondary">
-                <p>"The wound is the place where the Light enters you."</p>
-                <span>— Rumi</span>
-            </div>
+            <p class="quote-attribution">— Nakia chakra-Wellness</p>
         </div>
     </section>
 
-    <!-- Arrival / Contact Section -->
-    <section class="arrival" id="arrival">
-        <div class="arrival-bg"></div>
-        <div class="arrival-container">
-            <div class="arrival-content">
-                <p class="section-overline">Begin Your Journey</p>
-                <h2 class="arrival-title">Come to the Heart</h2>
-                <div class="arrival-divider">
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-bg"></div>
+        <div class="contact-container">
+            <div class="contact-content">
+                <p class="section-overline">Find Us</p>
+                <h2 class="contact-title">777 Energy Circle</h2>
+                <p class="contact-address">Accra, Ghana</p>
+                <div class="contact-divider">
                     <svg viewBox="0 0 120 20">
-                        <line x1="0" y1="10" x2="45" y2="10" stroke="#d4c4a8" stroke-width="1"/>
-                        <circle cx="60" cy="10" r="4" fill="#8b0000"/>
-                        <line x1="75" y1="10" x2="120" y2="10" stroke="#d4c4a8" stroke-width="1"/>
+                        <line x1="0" y1="10" x2="45" y2="10" stroke="var(--signal)" stroke-width="1" opacity="0.4"/>
+                        <circle cx="60" cy="10" r="3" fill="var(--signal)" opacity="0.6"/>
+                        <line x1="75" y1="10" x2="120" y2="10" stroke="var(--signal)" stroke-width="1" opacity="0.4"/>
                     </svg>
                 </div>
-                <p class="arrival-text">
-                    The door of the tekke is always open for those who seek. 
-                    You are welcome here, regardless of your path, your past, 
-                    or your understanding. Come as you are. The Divine Remembrance 
-                    will meet you where you stand.
-                </p>
-
-                <div class="arrival-details">
-                    <div class="detail-item">
-                        <span class="detail-label">Healer</span>
-                        <span class="detail-value">Sheikh Rashid al-Qadiri</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Address</span>
-                        <span class="detail-value">108 Heart Road<br>Konya, Turkey 42000</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Dhikr Sessions</span>
-                        <span class="detail-value">Dawn & Dusk Gatherings<br>Weekly Sama Ceremony</span>
-                    </div>
-                </div>
-
-                <a href="mailto:sheikh.rashid@sufidhikr.com" class="arrival-cta">
-                    <span>Request an Audience</span>
+                <p class="contact-text">The door is open for those who seek alignment. Come as you are. The energy will meet you where you stand.</p>
+                <a href="mailto:nakia@chakrabalancing.com" class="arrival-cta">
+                    <span>Request a Session</span>
                     <svg viewBox="0 0 24 24" width="18" height="18">
                         <path d="M5,12 L19,12 M13,6 L19,12 L13,18" fill="none" stroke="currentColor" stroke-width="1.5"/>
                     </svg>
@@ -668,34 +528,25 @@
         </div>
     </section>
 
-    <!-- Footer — Whirling Dervish -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-dervish">
-            <svg viewBox="0 0 100 140" class="footer-dervish-svg">
-                <ellipse cx="50" cy="25" rx="8" ry="10" fill="#8b0000" opacity="0.6"/>
-                <rect x="46" y="14" width="8" height="14" rx="2" fill="#8b0000" opacity="0.6"/>
-                <path d="M50,35 Q30,55 25,90 Q35,100 50,105 Q65,100 75,90 Q70,55 50,35Z" fill="#8b0000" opacity="0.5"/>
-                <ellipse cx="50" cy="110" rx="30" ry="20" fill="#8b0000" opacity="0.35"/>
-            </svg>
-        </div>
         <div class="footer-content">
-            <p class="footer-text">In the Remembrance of God, the Heart Finds Peace</p>
-            <p class="footer-credit">Sheikh Rashid al-Qadiri · Mevlevi Order · Konya</p>
+            <div class="footer-wheel">
+                <svg viewBox="0 0 60 60" class="footer-wheel-svg">
+                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--signal)" stroke-width="0.3" stroke-dasharray="3 3"/>
+                    <circle cx="30" cy="30" r="15" fill="none" stroke="var(--signal)" stroke-width="0.3"/>
+                    <circle cx="30" cy="30" r="3" fill="var(--signal)" opacity="0.5"/>
+                </svg>
+            </div>
+            <p class="footer-text">Align the Centers, Align the Life</p>
+            <p class="footer-credit">Nakia chakra-Wellness · 777 Energy Circle · Accra, Ghana</p>
         </div>
-        <div class="footer-ornament">
-            <svg viewBox="0 0 100 10">
-                <line x1="0" y1="5" x2="40" y2="5" stroke="#8b0000" stroke-width="0.5" opacity="0.3"/>
-                <circle cx="50" cy="5" r="2" fill="#8b0000" opacity="0.4"/>
-                <line x1="60" y1="5" x2="100" y2="5" stroke="#8b0000" stroke-width="0.5" opacity="0.3"/>
-            </svg>
+        <div class="footer-bottom">
+            <p>&copy; Norman James</p>
+            <p>made with love by Empathy Studio</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-
-<footer class="site-footer">
-  <p>&copy; Norman James</p>
-  <p>made with love ❤️ by Empathy Studio</p>
-</footer>
 </body>
 </html>

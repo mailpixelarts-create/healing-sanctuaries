@@ -3,598 +3,246 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Necromantic Healing — Honoring the Dead, Healing the Living</title>
+<title>Shamanic Journeying — Journey Between Worlds</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
---shadow-grey:#2c3e50;--warm-amber:#d4a76a;--deep-black:#0a0a0a;
---amber-bright:#e8c49a;--text-cream:#f5e6d3;--text-muted:#8a7d6b;
-}
-html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--warm-amber) var(--deep-black)}
-body{font-family:'Space Grotesk',sans-serif;background:var(--deep-black);color:var(--text-cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-
-.venetian-overlay{position:fixed;inset:0;pointer-events:none;z-index:1000;background:repeating-linear-gradient(0deg,transparent 0px,transparent 40px,rgba(212,167,106,0.015) 40px,rgba(212,167,106,0.015) 42px)}
-.venetian-overlay::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0px,transparent 80px,rgba(0,0,0,0.15) 80px,rgba(0,0,0,0.15) 82px);animation:venetianShift 8s ease-in-out infinite}
-@keyframes venetianShift{0%,100%{transform:translateY(0)}50%{transform:translateY(20px)}}
-
-.grain{position:fixed;inset:0;pointer-events:none;z-index:999;opacity:0.4;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E")}
-
-.chiaroscuro{position:fixed;top:-30%;right:-10%;width:70vw;height:70vh;background:radial-gradient(ellipse at center,rgba(212,167,106,0.06) 0%,transparent 70%);pointer-events:none;z-index:1}
-
-.hero{position:relative;height:100vh;min-height:700px;display:flex;overflow:hidden}
-.hero-split{display:flex;width:100%;height:100%}
-.hero-left,.hero-right{flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-left{background:var(--deep-black);border-right:1px solid rgba(212,167,106,0.1)}
-.hero-right{background:var(--shadow-grey)}
-
-.old-photo{position:relative;width:85%;height:75%;background:linear-gradient(145deg,#1a1510,#2a2015,#1a1510);border:8px solid #1a1510;box-shadow:inset 0 0 60px rgba(0,0,0,0.8),0 0 40px rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;overflow:hidden}
-.old-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,rgba(212,167,106,0.1) 0%,transparent 50%),radial-gradient(ellipse at 70% 60%,rgba(212,167,106,0.05) 0%,transparent 40%);z-index:2}
-.old-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(212,167,106,0.08) 0%,transparent 30%,transparent 70%,rgba(0,0,0,0.3) 100%);z-index:3}
-
-.old-photo-content{position:relative;z-index:1;text-align:center;padding:2rem}
-.old-photo-content .era-text{font-family:'EB Garamond',serif;font-size:clamp(1.5rem,3vw,2.5rem);color:var(--warm-amber);opacity:0.6;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:0.5rem}
-.old-photo-content .era-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(0.9rem,1.5vw,1.1rem);color:var(--text-muted);opacity:0.5}
-
-.frame-line{position:absolute;background:rgba(212,167,106,0.08)}
-.frame-line.top{top:20px;left:20px;right:20px;height:1px}
-.frame-line.bottom{bottom:20px;left:20px;right:20px;height:1px}
-.frame-line.left{top:20px;left:20px;bottom:20px;width:1px}
-.frame-line.right{top:20px;right:20px;bottom:20px;width:1px}
-
-.modern-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:500px}
-.modern-content h1{font-family:'EB Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:400;color:var(--text-cream);line-height:1.1;margin-bottom:1.5rem;letter-spacing:0.02em}
-.modern-content h1 span{display:block;color:var(--warm-amber);font-style:italic;font-size:0.6em;margin-top:0.3em}
-.modern-content .tagline{font-family:'Space Grotesk',sans-serif;font-size:clamp(0.75rem,1.2vw,0.9rem);color:var(--text-muted);letter-spacing:0.25em;text-transform:uppercase;margin-bottom:2rem}
-.modern-content .cta-line{width:60px;height:1px;background:var(--warm-amber);margin:0 auto 2rem;opacity:0.4}
-
-.hero-scroll{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:0.5rem;cursor:pointer}
-.hero-scroll span{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-muted)}
-.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--warm-amber),transparent);animation:scrollPulse 2s ease-in-out infinite}
-@keyframes scrollPulse{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:0.3;transform:scaleY(0.6)}}
-
-.hero-divider{position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:100%;background:linear-gradient(to bottom,transparent 0%,var(--warm-amber) 20%,var(--warm-amber) 80%,transparent 100%);opacity:0.2;z-index:5}
-</style>
-<style>
-.about{position:relative;padding:8rem 2rem;overflow:hidden}
-.about-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--deep-black) 0%,rgba(44,62,80,0.3) 50%,var(--deep-black) 100%)}
-.about-texture{position:absolute;inset:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a76a'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
-.candle-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(212,167,106,0.08) 0%,transparent 60%);pointer-events:none;animation:candleFlicker 4s ease-in-out infinite}
-@keyframes candleFlicker{0%,100%{opacity:1;transform:translate(-50%,-50%) scale(1)}25%{opacity:0.8;transform:translate(-50%,-50%) scale(0.98)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.02)}75%{opacity:0.9;transform:translate(-50%,-50%) scale(0.99)}}
-
-.about-inner{position:relative;z-index:2;max-width:800px;margin:0 auto;text-align:center}
-.section-label{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--warm-amber);margin-bottom:2rem;opacity:0.7}
-.about-inner h2{font-family:'EB Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:400;color:var(--text-cream);line-height:1.2;margin-bottom:2rem}
-.about-inner h2 em{color:var(--warm-amber);font-style:italic}
-.about-text{font-family:'EB Garamond',serif;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.9;color:var(--text-muted);max-width:600px;margin:0 auto 2rem}
-.about-divider{width:40px;height:1px;background:var(--warm-amber);margin:3rem auto;opacity:0.3}
-.healer-name{font-family:'EB Garamond',serif;font-size:clamp(1.2rem,2vw,1.6rem);color:var(--warm-amber);font-style:italic}
-
-.about-details{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;max-width:900px;margin:4rem auto 0}
-.about-detail{text-align:center}
-.about-detail-num{font-family:'EB Garamond',serif;font-size:2.5rem;color:var(--warm-amber);opacity:0.3;margin-bottom:0.5rem}
-.about-detail-label{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted)}
-
-.sacred-art{position:relative;padding:8rem 2rem;overflow:hidden}
-.sacred-art-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--deep-black),#0d0d0d,var(--deep-black))}
-.sacred-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto}
-.sacred-header{text-align:center;margin-bottom:5rem}
-.sacred-header h2{font-family:'EB Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--text-cream);margin-bottom:1rem}
-
-.ancestral-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.ancestral-card{position:relative;background:linear-gradient(160deg,rgba(44,62,80,0.3),rgba(10,10,10,0.8));border:1px solid rgba(212,167,106,0.1);padding:3rem 2rem;text-align:center;transition:all 1.0s cubic-bezier(0.16,1,0.3,1);overflow:hidden;cursor:pointer}
-.ancestral-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(212,167,106,0.05) 0%,transparent 60%);opacity:0;transition:opacity 1.0s ease}
-.ancestral-card:hover::before{opacity:1}
-.ancestral-card:hover{border-color:rgba(212,167,106,0.3);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.4)}
-.card-number{font-family:'EB Garamond',serif;font-size:3rem;color:var(--warm-amber);opacity:0.2;margin-bottom:1.5rem;line-height:1}
-.card-icon{width:50px;height:50px;margin:0 auto 1.5rem}
-.card-icon svg{width:100%;height:100%;stroke:var(--warm-amber);stroke-width:1;fill:none;opacity:0.7}
-.ancestral-card h3{font-family:'EB Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--text-cream);margin-bottom:1rem;letter-spacing:0.02em}
-.ancestral-card p{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;line-height:1.7;color:var(--text-muted)}
-.card-corner{position:absolute;width:20px;height:20px;border-color:rgba(212,167,106,0.15);border-style:solid;transition:border-color 1.0s ease}
-.card-corner.tl{top:12px;left:12px;border-width:1px 0 0 1px}
-.card-corner.tr{top:12px;right:12px;border-width:1px 1px 0 0}
-.card-corner.bl{bottom:12px;left:12px;border-width:0 0 1px 1px}
-.card-corner.br{bottom:12px;right:12px;border-width:0 1px 1px 0}
-.ancestral-card:hover .card-corner{border-color:rgba(212,167,106,0.4)}
-
-/* ---------- PHILOSOPHY SECTION ---------- */
-.philosophy{position:relative;padding:8rem 2rem;overflow:hidden}
-.philosophy-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--deep-black),rgba(44,62,80,0.08),var(--deep-black))}
-.philosophy-inner{position:relative;z-index:2;max-width:900px;margin:0 auto}
-.philosophy-header{text-align:center;margin-bottom:5rem}
-.philosophy-header h2{font-family:'EB Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--text-cream);margin-bottom:1rem}
-.philosophy-header h2 em{color:var(--warm-amber);font-style:italic}
-.philosophy-intro{font-family:'EB Garamond',serif;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.9;color:var(--text-muted);text-align:center;max-width:650px;margin:0 auto 4rem}
-
-.pillar{display:grid;grid-template-columns:80px 1fr;gap:2.5rem;align-items:start;margin-bottom:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(212,167,106,0.06)}
-.pillar:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.pillar-num{font-family:'EB Garamond',serif;font-size:3rem;color:var(--warm-amber);opacity:0.2;line-height:1}
-.pillar-content h3{font-family:'EB Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--text-cream);margin-bottom:1rem;letter-spacing:0.02em}
-.pillar-content p{font-family:'EB Garamond',serif;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.9;color:var(--text-muted)}
-.pillar-content .pillar-quote{font-family:'EB Garamond',serif;font-style:italic;font-size:0.95rem;color:var(--warm-amber);opacity:0.6;margin-top:1rem;padding-left:1.5rem;border-left:1px solid rgba(212,167,106,0.2)}
-
-/* ---------- TESTIMONIALS SECTION ---------- */
-.testimonials{position:relative;padding:8rem 2rem;overflow:hidden}
-.testimonials-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--deep-black),#0f0a05,var(--deep-black))}
-.testimonials-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto}
-.testimonials-header{text-align:center;margin-bottom:5rem}
-.testimonials-header h2{font-family:'EB Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--text-cream);margin-bottom:1rem}
-
-.testimonial-grid{display:grid;grid-template-columns:1fr;gap:3rem}
-.testimonial-card{position:relative;background:linear-gradient(160deg,rgba(44,62,80,0.15),rgba(10,10,10,0.6));border:1px solid rgba(212,167,106,0.08);padding:3rem;overflow:hidden}
-.testimonial-card::before{content:'';position:absolute;top:0;left:0;width:40px;height:2px;background:var(--warm-amber);opacity:0.3}
-.testimonial-mark{font-family:'EB Garamond',serif;font-size:4rem;color:var(--warm-amber);opacity:0.1;line-height:0.5;margin-bottom:1rem}
-.testimonial-text{font-family:'EB Garamond',serif;font-size:clamp(1.05rem,1.5vw,1.2rem);font-style:italic;line-height:1.8;color:var(--text-cream);margin-bottom:2rem}
-.testimonial-author{display:flex;align-items:center;gap:1rem}
-.testimonial-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,rgba(44,62,80,0.5),rgba(212,167,106,0.2));border:1px solid rgba(212,167,106,0.15);display:flex;align-items:center;justify-content:center;font-family:'EB Garamond',serif;font-size:1.1rem;color:var(--warm-amber);opacity:0.6}
-.testimonial-info .name{font-family:'EB Garamond',serif;font-size:1rem;color:var(--text-cream);margin-bottom:0.2rem}
-.testimonial-info .detail{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted)}
-.testimonial-corner{position:absolute;width:20px;height:20px;border-color:rgba(212,167,106,0.1);border-style:solid}
-.testimonial-corner.tl{top:12px;right:12px;border-width:1px 1px 0 0}
-.testimonial-corner.br{bottom:12px;left:12px;border-width:0 0 1px 1px}
-
-/* ---------- JOURNEY SECTION ---------- */
-.journey{position:relative;padding:8rem 2rem;overflow:hidden}
-.journey-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--deep-black),rgba(44,62,80,0.1),var(--deep-black))}
-.journey-candle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(212,167,106,0.04) 0%,transparent 60%);pointer-events:none}
-.journey-inner{position:relative;z-index:2;max-width:800px;margin:0 auto}
-.journey-header{text-align:center;margin-bottom:5rem}
-.journey-header h2{font-family:'EB Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--text-cream);margin-bottom:1rem}
-.journey-header h2 em{color:var(--warm-amber);font-style:italic}
-.journey-intro{font-family:'EB Garamond',serif;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.9;color:var(--text-muted);text-align:center;max-width:600px;margin:0 auto 4rem}
-
-.journey-steps{position:relative;padding-left:3rem}
-.journey-steps::before{content:'';position:absolute;top:0;left:15px;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(212,167,106,0.2) 10%,rgba(212,167,106,0.2) 90%,transparent)}
-.journey-step{position:relative;margin-bottom:4rem}
-.journey-step:last-child{margin-bottom:0}
-.step-marker{position:absolute;left:-3rem;top:0;width:30px;height:30px;display:flex;align-items:center;justify-content:center}
-.step-dot{width:8px;height:8px;border-radius:50%;background:var(--warm-amber);opacity:0.4;position:relative}
-.step-dot::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(212,167,106,0.15)}
-.step-num{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--warm-amber);opacity:0.5;margin-bottom:0.5rem}
-.journey-step h3{font-family:'EB Garamond',serif;font-size:1.4rem;font-weight:500;color:var(--text-cream);margin-bottom:1rem}
-.journey-step p{font-family:'EB Garamond',serif;font-size:clamp(0.95rem,1.3vw,1.1rem);line-height:1.8;color:var(--text-muted)}
-
-.quote-section{position:relative;padding:8rem 2rem;overflow:hidden}
-.quote-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--deep-black),rgba(44,62,80,0.15),var(--deep-black))}
-.quote-inner{position:relative;z-index:2;max-width:700px;margin:0 auto;text-align:center}
-.quote-mark{font-family:'EB Garamond',serif;font-size:6rem;color:var(--warm-amber);opacity:0.15;line-height:0.5;margin-bottom:1rem}
-.quote-text{font-family:'EB Garamond',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-style:italic;color:var(--text-cream);line-height:1.6;margin-bottom:2rem}
-.quote-attribution{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-muted)}
-
-.arrival{position:relative;padding:8rem 2rem;overflow:hidden}
-.arrival-bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--deep-black),#0f0a05,var(--deep-black))}
-.arrival-glow{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse at center bottom,rgba(212,167,106,0.06) 0%,transparent 70%);pointer-events:none}
-.arrival-inner{position:relative;z-index:2;max-width:600px;margin:0 auto;text-align:center}
-.arrival-inner h2{font-family:'EB Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--text-cream);margin-bottom:1.5rem}
-.arrival-inner h2 em{color:var(--warm-amber);font-style:italic}
-.arrival-text{font-family:'EB Garamond',serif;font-size:clamp(1rem,1.5vw,1.15rem);line-height:1.8;color:var(--text-muted);margin-bottom:3rem}
-.arrival-address{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;color:var(--warm-amber);letter-spacing:0.15em;margin-bottom:0.5rem;opacity:0.8}
-.arrival-postcode{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;color:var(--text-muted);letter-spacing:0.2em;margin-bottom:3rem}
-.arrival-cta{display:inline-block;font-family:'EB Garamond',serif;font-size:1rem;color:var(--warm-amber);text-decoration:none;letter-spacing:0.2em;text-transform:uppercase;padding:1rem 3rem;border:1px solid rgba(212,167,106,0.3);transition:all 1.0s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
-.arrival-cta::before{content:'';position:absolute;inset:0;background:rgba(212,167,106,0.05);transform:translateX(-100%);transition:transform 1.0s cubic-bezier(0.16,1,0.3,1)}
-.arrival-cta:hover::before{transform:translateX(0)}
-.arrival-cta:hover{border-color:rgba(212,167,106,0.6);box-shadow:0 0 40px rgba(212,167,106,0.1)}
-</style>
-<style>
-.footer{position:relative;padding:4rem 2rem 8rem;overflow:hidden;border-top:1px solid rgba(212,167,106,0.05)}
-.footer-inner{max-width:800px;margin:0 auto;text-align:center}
-.candle-container{position:relative;width:60px;height:80px;margin:0 auto 2rem}
-.candle-body{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:8px;height:35px;background:linear-gradient(to top,#f5e6d3,var(--warm-amber));border-radius:2px 2px 0 0}
-.candle-wick{position:absolute;bottom:35px;left:50%;transform:translateX(-50%);width:1px;height:8px;background:#333}
-.candle-flame{position:absolute;bottom:42px;left:50%;transform:translateX(-50%);width:12px;height:20px;background:radial-gradient(ellipse at center bottom,#fff 0%,var(--warm-amber) 40%,rgba(212,167,106,0) 80%);border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;animation:flameFlicker 0.8s ease-in-out infinite alternate}
-@keyframes flameFlicker{0%{transform:translateX(-50%) scale(1) rotate(-1deg);opacity:1}25%{transform:translateX(-50%) scale(1.02,0.96) rotate(1deg);opacity:0.95}50%{transform:translateX(-50%) scale(0.98,1.04) rotate(-0.5deg);opacity:1}75%{transform:translateX(-50%) scale(1.01,0.97) rotate(0.5deg);opacity:0.97}100%{transform:translateX(-50%) scale(0.99,1.02) rotate(-1deg);opacity:1}}
-.candle-glow-ring{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);width:80px;height:80px;background:radial-gradient(circle,rgba(212,167,106,0.15) 0%,transparent 70%);animation:glowPulse 2s ease-in-out infinite}
-@keyframes glowPulse{0%,100%{opacity:1;transform:translateX(-50%) scale(1)}50%{opacity:0.6;transform:translateX(-50%) scale(0.9)}}
-.footer-name{font-family:'EB Garamond',serif;font-size:1.3rem;color:var(--text-cream);margin-bottom:0.5rem}
-.footer-tagline{font-family:'EB Garamond',serif;font-style:italic;font-size:0.95rem;color:var(--warm-amber);opacity:0.6;margin-bottom:2rem}
-.footer-line{width:30px;height:1px;background:var(--warm-amber);margin:0 auto 2rem;opacity:0.2}
-.footer-legal{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;color:var(--text-muted);letter-spacing:0.15em;opacity:0.4}
-
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:900;background:linear-gradient(to top,rgba(10,10,10,0.98) 0%,rgba(10,10,10,0.9) 70%,rgba(10,10,10,0) 100%);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(212,167,106,0.08);padding:0.8rem 0 1.2rem}
-.nav-items{display:flex;justify-content:center;gap:2.5rem;max-width:500px;margin:0 auto}
-.nav-item{display:flex;flex-direction:column;align-items:center;gap:0.3rem;cursor:pointer;transition:all 0.3s ease;text-decoration:none}
-.nav-item svg{width:20px;height:20px;stroke:var(--text-muted);stroke-width:1.2;fill:none;transition:all 0.3s ease}
-.nav-item span{font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);transition:color 0.3s ease}
-.nav-item:hover svg,.nav-item.active svg{stroke:var(--warm-amber)}
-.nav-item:hover span,.nav-item.active span{color:var(--warm-amber)}
-
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 1.0s cubic-bezier(0.16,1,0.3,1),transform 1.0s cubic-bezier(0.16,1,0.3,1)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-@media(max-width:768px){
-.hero-split{flex-direction:column}
-.hero-left,.hero-right{flex:none;height:50%}
-.hero-divider{display:none}
-.ancestral-cards{grid-template-columns:1fr;max-width:400px;margin:0 auto}
-.old-photo{height:70%}
-.nav-items{gap:1.5rem}
-.about-details{grid-template-columns:1fr;gap:1.5rem}
-.pillar{grid-template-columns:1fr;gap:1rem}
-.pillar-num{text-align:center}
-.journey-steps{padding-left:2.5rem}
-}
-
-.site-footer{text-align:center;padding:3rem 2rem;background:#0a0a0a;border-top:1px solid rgba(255,255,255,0.05)}
-.site-footer p{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;margin:0.3rem 0}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="venetian-overlay"></div>
-<div class="grain"></div>
-<div class="chiaroscuro"></div>
 
-<!-- ==================== HERO ==================== -->
-<section class="hero" id="home">
-<div class="hero-split">
-<div class="hero-left">
-<div class="old-photo">
-<div class="frame-line top"></div>
-<div class="frame-line bottom"></div>
-<div class="frame-line left"></div>
-<div class="frame-line right"></div>
-<div class="old-photo-content">
-<div class="era-text">Est. Antiquity</div>
-<div class="era-sub">The practice endures</div>
-</div>
-</div>
-</div>
-<div class="hero-right">
-<div class="modern-content">
-<h1>Necromantic<span>Healing</span></h1>
-<div class="tagline">Honoring the Dead, Healing the Living</div>
-<div class="cta-line"></div>
-<p style="font-family:'EB Garamond',serif;font-size:1rem;color:var(--text-muted);line-height:1.8;font-style:italic">Where ancestral wisdom meets modern healing,<br>bridging the veil between worlds</p>
-</div>
-</div>
-</div>
-<div class="hero-divider"></div>
-<div class="hero-scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-<span>Descend</span>
-<div class="scroll-line"></div>
-</div>
-</section>
+<canvas id="noise-canvas" aria-hidden="true"></canvas>
+<div class="grain-overlay" aria-hidden="true"></div>
 
-<!-- ==================== ABOUT ==================== -->
-<section class="about" id="about">
-<div class="about-bg"></div>
-<div class="about-texture"></div>
-<div class="candle-glow"></div>
-<div class="about-inner reveal">
-<div class="section-label">The Practice</div>
-<h2>Not Dark Magic, But <em>Ancient Reverence</em></h2>
-<p class="about-text">Oracle Thorne practices a form of healing that communicates with ancestral spirits for guidance and healing. This is not dark magic &mdash; it is the ancient art of ancestor reverence practiced by cultures worldwide. Through sacred ritual and deep listening, the veil between worlds becomes thin, and the wisdom of those who came before us illuminates the path forward.</p>
-<p class="about-text">Every family carries stories. Every bloodline holds both wounds and wisdom. Through necromantic healing, these hidden threads are drawn into the light, where they can finally be seen, honored, and transformed. What the living cannot resolve alone, the ancestors help to mend &mdash; for the patterns that bind us in life are woven by those who lived before us.</p>
-<p class="about-text">This is not conjuration. This is communion. The practice draws from traditions as diverse as Mexican D&iacute;a de los Muertos, West African ancestor veneration, Korean Gut rituals, and the European grimoire traditions that sought not to command the dead, but to learn from them. Oracle Thorne synthesizes these lineages into a healing modality that speaks to the modern soul still haunted by ancient grief.</p>
-<div class="about-divider"></div>
-<div class="healer-name">Oracle Thorne Ashwood</div>
-<div class="about-details">
-<div class="about-detail">
-<div class="about-detail-num">XII</div>
-<div class="about-detail-label">Generations Studied</div>
-</div>
-<div class="about-detail">
-<div class="about-detail-num">C</div>
-<div class="about-detail-label">Ancestral Traditions</div>
-</div>
-<div class="about-detail">
-<div class="about-detail-num">&infin;</div>
-<div class="about-detail-label">Lives Touched</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ==================== SACRED ART ==================== -->
-<section class="sacred-art" id="practices">
-<div class="sacred-art-bg"></div>
-<div class="sacred-inner">
-<div class="sacred-header reveal">
-<div class="section-label">Sacred Art</div>
-<h2>Three Pillars of Ancestral Work</h2>
-</div>
-<div class="ancestral-cards">
-<div class="ancestral-card reveal">
-<div class="card-corner tl"></div>
-<div class="card-corner tr"></div>
-<div class="card-corner bl"></div>
-<div class="card-corner br"></div>
-<div class="card-number">I</div>
-<div class="card-icon">
-<svg viewBox="0 0 50 50"><path d="M25 5 L25 45 M15 15 L25 5 L35 15 M10 45 L40 45 M10 45 L10 35 M40 45 L40 35 M20 25 L30 25 M25 20 L25 30"/></svg>
-</div>
-<h3>Ancestral Altar Creation</h3>
-<p>Building a sacred space to honor ancestors. Each element placed with intention &mdash; photographs, offerings, mementos &mdash; creating a bridge between the living and the departed. The altar becomes a living document of your lineage, a place where the dead are invited to speak and the living come to listen.</p>
-</div>
-<div class="ancestral-card reveal" style="transition-delay:0.2s">
-<div class="card-corner tl"></div>
-<div class="card-corner tr"></div>
-<div class="card-corner bl"></div>
-<div class="card-corner br"></div>
-<div class="card-number">II</div>
-<div class="card-icon">
-<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="15"/><path d="M25 10 L25 40 M10 25 L40 25 M15 15 L35 35 M35 15 L15 35"/></svg>
-</div>
-<h3>Generational Trauma Release</h3>
-<p>Healing patterns inherited through the bloodline. The wounds of ancestors echo through generations &mdash; through ceremony, these patterns are recognized, witnessed, and finally released. What your grandmother could not name, what your great-grandfather buried alive, surfaces here for healing.</p>
-</div>
-<div class="ancestral-card reveal" style="transition-delay:0.4s">
-<div class="card-corner tl"></div>
-<div class="card-corner tr"></div>
-<div class="card-corner bl"></div>
-<div class="card-corner br"></div>
-<div class="card-number">III</div>
-<div class="card-icon">
-<svg viewBox="0 0 50 50"><path d="M25 5 Q35 15 35 25 Q35 35 25 45 Q15 35 15 25 Q15 15 25 5Z"/><circle cx="25" cy="25" r="5"/><path d="M25 5 L25 20 M25 30 L25 45 M15 25 L20 25 M30 25 L35 25"/></svg>
-</div>
-<h3>Spirit Communication Ceremony</h3>
-<p>Receiving messages from departed loved ones. In sacred space, with candlelight and intention, the voices of ancestors come through &mdash; offering guidance, closure, and unconditional love. These sessions are conducted with deep reverence and ethical care, always honoring the free will of both the living and the dead.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ==================== PHILOSOPHY ==================== -->
-<section class="philosophy" id="philosophy">
-<div class="philosophy-bg"></div>
-<div class="philosophy-inner">
-<div class="philosophy-header reveal">
-<div class="section-label">The Ancestral Path</div>
-<h2>Philosophy of <em>Necromantic Healing</em></h2>
-</div>
-<p class="philosophy-intro reveal">The practice rests upon five foundational truths &mdash; principles distilled from centuries of ancestor reverence across cultures, refined through decades of clinical work, and illuminated by the ancestors themselves.</p>
-
-<div class="pillar reveal">
-<div class="pillar-num">I</div>
-<div class="pillar-content">
-<h3>The Dead Are Not Gone</h3>
-<p>Death is a threshold, not a terminus. The ancestors who have crossed over remain present in the fabric of family, in the resonance of blood memory, in the dreams that visit us unbidden. They are not haunting us &mdash; they are holding us. Necromantic healing begins with the recognition that the relationship between the living and the dead does not end at the grave; it transforms.</p>
-<div class="pillar-quote">&ldquo;The dead speak constantly. We have simply forgotten how to listen.&rdquo;</div>
-</div>
-</div>
-
-<div class="pillar reveal">
-<div class="pillar-num">II</div>
-<div class="pillar-content">
-<h3>Grief Is a Doorway</h3>
-<p>Modern culture treats grief as a problem to solve, a phase to move through as quickly as possible. The ancestral path recognizes grief as sacred &mdash; a doorway between worlds that, when walked through with intention, becomes a通道 for healing, wisdom, and reconnection. Unresolved grief does not dissolve; it calcifies, passing through generations as anxiety, addiction, depression, and inexplicable sorrow.</p>
-<div class="pillar-quote">&ldquo;What we refuse to mourn, our children will carry.&rdquo;</div>
-</div>
-</div>
-
-<div class="pillar reveal">
-<div class="pillar-num">III</div>
-<div class="pillar-content">
-<h3>The Blood Remembers</h3>
-<p>Epigenetics confirms what intuition has long known: trauma imprints upon the body and is transmitted across generations. The pogroms, famines, enslavements, and displacements of our ancestors live in our nervous systems, our fears, our reflexive patterns. Necromantic healing addresses these inherited imprints not through cognitive analysis alone, but through direct communion with the ancestral line &mdash; speaking to the ones who first carried the wound.</p>
-<div class="pillar-quote">&ldquo;Your anxiety may not be yours. It may belong to someone who never had the chance to put it down.&rdquo;</div>
-</div>
-</div>
-
-<div class="pillar reveal">
-<div class="pillar-num">IV</div>
-<div class="pillar-content">
-<h3>Ritual Is Technology</h3>
-<p>Before there were therapists, there were healers who understood that transformation requires ceremony. Candlelight, sacred words, intentional movement, the creation of sacred space &mdash; these are not迷信. They are sophisticated technologies of consciousness that alter brain states, activate deep memory, and open channels of communication between the conscious and unconscious mind, between the living and the dead.</p>
-<div class="pillar-quote">&ldquo;The candle does not contact the dead. You do. The candle helps you remember how.&rdquo;</div>
-</div>
-</div>
-
-<div class="pillar reveal">
-<div class="pillar-num">V</div>
-<div class="pillar-content">
-<h3>Healing Is Inheritance</h3>
-<p>When one person heals a generational wound, the entire lineage shifts. Your healing ripples backward and forward in time. The ancestor who first suffered the wound is witnessed and released. The descendants who would have inherited it are freed. You become the turning point in your family's story &mdash; the one who chose to stop the cycle, who turned toward the pain and transformed it into medicine.</p>
-<div class="pillar-quote">&ldquo;You are not just healing yourself. You are healing everyone who came before and everyone who will come after.&rdquo;</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ==================== TESTIMONIALS ==================== -->
-<section class="testimonials" id="testimonials">
-<div class="testimonials-bg"></div>
-<div class="testimonials-inner">
-<div class="testimonials-header reveal">
-<div class="section-label">Voices From the Threshold</div>
-<h2>Those Who Have Walked This Path</h2>
-</div>
-<div class="testimonial-grid">
-
-<div class="testimonial-card reveal">
-<div class="testimonial-corner tl"></div>
-<div class="testimonial-corner br"></div>
-<div class="testimonial-mark">&ldquo;</div>
-<p class="testimonial-text">I came to Oracle Thorne carrying three generations of silence. My grandmother never spoke of the war. My mother never spoke of the abandonment. I never spoke of anything at all. In one ceremony, the silence cracked open. I heard my grandmother's voice &mdash; not with my ears, but in my body. She said: &lsquo;It was not your fault. It was never your fault.&rsquo; I wept for an hour. Then I slept through the night for the first time in twenty years.</p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">E</div>
-<div class="testimonial-info">
-<div class="name">Eleanor M.</div>
-<div class="detail">Ancestral Grief Ceremony &middot; Edinburgh</div>
-</div>
-</div>
-</div>
-
-<div class="testimonial-card reveal" style="transition-delay:0.2s">
-<div class="testimonial-corner tl"></div>
-<div class="testimonial-corner br"></div>
-<div class="testimonial-mark">&ldquo;</div>
-<p class="testimonial-text">My family has a pattern &mdash; every other generation, a man disappears. Leave, vanish, gone. It happened to my great-grandfather, to my grandfather, to my father. I was terrified I would do the same to my children. Oracle Thorne helped me understand: I wasn't disappearing. I was repeating a wound that began in the famine, when my great-great-grandfather had to leave his family to find food and never returned. Naming it broke the spell. I am still here. I am not going anywhere.</p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">J</div>
-<div class="testimonial-info">
-<div class="name">James K.</div>
-<div class="detail">Generational Pattern Release &middot; Glasgow</div>
-</div>
-</div>
-</div>
-
-<div class="testimonial-card reveal" style="transition-delay:0.4s">
-<div class="testimonial-corner tl"></div>
-<div class="testimonial-corner br"></div>
-<div class="testimonial-mark">&ldquo;</div>
-<p class="testimonial-text">I was skeptical. I am still somewhat skeptical. But I sat in that candlelit room and something shifted that I cannot explain rationally. Oracle Thorne did not perform tricks or theatrics. She simply held space &mdash; vast, patient, unwavering space &mdash; and in that space, I felt my father's presence for the first time since he died. He was not angry. He was not disappointed. He was simply there, and he was proud. That was enough. That was everything.</p>
-<div class="testimonial-author">
-<div class="testimonial-avatar">S</div>
-<div class="testimonial-info">
-<div class="name">Sophia R.</div>
-<div class="detail">Spirit Communication &middot; Inverness</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ==================== JOURNEY ==================== -->
-<section class="journey" id="journey">
-<div class="journey-bg"></div>
-<div class="journey-candle"></div>
-<div class="journey-inner">
-<div class="journey-header reveal">
-<div class="section-label">Your First Visit</div>
-<h2>The <em>Journey</em> Begins</h2>
-</div>
-<p class="journey-intro reveal">Walking through the door of the sanctuary for the first time can feel like standing at the edge of something vast. Here is what to expect &mdash; and what the ancestors ask of you before you arrive.</p>
-
-<div class="journey-steps">
-<div class="journey-step reveal">
-<div class="step-marker"><div class="step-dot"></div></div>
-<div class="step-num">Before You Arrive</div>
-<h3>Preparation &amp; Intention</h3>
-<p>In the days before your visit, begin to pay attention to your dreams. Write down any images, names, or feelings that surface. If you have photographs of ancestors &mdash; particularly those whose stories are unfinished or whose deaths were painful &mdash; bring them with you. There is no need to prepare a narrative or understand your grief. The ancestors do not require your analysis. They require your presence.</p>
-</div>
-
-<div class="journey-step reveal">
-<div class="step-marker"><div class="step-dot"></div></div>
-<div class="step-num">Entering the Space</div>
-<h3>The Threshold</h3>
-<p>The sanctuary is a liminal space &mdash; a threshold between worlds. Upon entering, you will be invited to remove your shoes and wash your hands in rosewater. This is not ritual for ritual's sake; it is the body's way of signaling to the mind that you are crossing from the ordinary into the sacred. The room is dim, lit by beeswax candles. Photographs of ancestors &mdash; yours and others' &mdash; line the walls. The air smells of copal incense and dried herbs.</p>
-</div>
-
-<div class="journey-step reveal">
-<div class="step-marker"><div class="step-dot"></div></div>
-<div class="step-num">The Opening</div>
-<h3>Creating Sacred Space</h3>
-<p>Oracle Thorne will begin by lighting a central candle and speaking words of invocation &mdash; a calling-in of benevolent ancestral spirits. You will be invited to light your own candle and speak the names of those you wish to honor. There is no right or wrong way to do this. Some speak at length. Some weep. Some sit in silence. All responses are honored. The ancestors understand your language, even when words fail.</p>
-</div>
-
-<div class="journey-step reveal">
-<div class="step-marker"><div class="step-dot"></div></div>
-<div class="step-num">The Work</div>
-<h3>Communion &amp; Healing</h3>
-<p>The ceremony unfolds organically. Oracle Thorne may guide you through ancestral breathing, spoken word prayer, or gentle touch upon the hands and shoulders. Messages may come through &mdash; images, words, feelings, sudden knowing. You may feel the presence of a specific ancestor. You may feel nothing at all. Both are valid. The healing happens not only in the moment of perceived contact, but in the days and weeks that follow, as the body integrates what the soul has received.</p>
-</div>
-
-<div class="journey-step reveal">
-<div class="step-marker"><div class="step-dot"></div></div>
-<div class="step-num">The Closing</div>
-<h3>Returning to the World</h3>
-<p>Every ceremony ends with gratitude. You will be invited to speak a word of thanks to the ancestors who attended. The candles are extinguished one by one. Oracle Thorne will offer you a small bundle of dried rosemary &mdash; a traditional herb of remembrance &mdash; to burn at home in the days following your visit. You are encouraged to journal, to rest, and to allow whatever surfaced during the ceremony to settle at its own pace. The ancestors are patient. They will continue their work in you long after you leave the sanctuary.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ==================== QUOTE ==================== -->
-<section class="quote-section">
-<div class="quote-bg"></div>
-<div class="quote-inner reveal">
-<div class="quote-mark">&ldquo;</div>
-<p class="quote-text">We do not mourn the dead alone. We carry them with us, in our bones, in our blood, in the stories we tell without knowing why. To heal the living, we must first honor those who came before.</p>
-<div class="quote-mark" style="margin-top:-1rem">&rdquo;</div>
-<div class="quote-attribution">&mdash; Family Wisdom</div>
-</div>
-</section>
-
-<!-- ==================== ARRIVAL ==================== -->
-<section class="arrival" id="arrival">
-<div class="arrival-bg"></div>
-<div class="arrival-glow"></div>
-<div class="arrival-inner reveal">
-<div class="section-label">Find Us</div>
-<h2>Come to the <em>Ancestors</em></h2>
-<p class="arrival-text">The sanctuary sits at the threshold between worlds. A place of quiet reverence, where candlelight flickers and the veil grows thin. You are welcome here &mdash; your ancestors have been waiting. Sessions are held by appointment only, in a space consecrated to the well-being of both the living and the dead.</p>
-<div class="arrival-address">9 Elder Grove, Edinburgh</div>
-<div class="arrival-postcode">Scotland &middot; EH1 1RE</div>
-<a href="#" class="arrival-cta">Begin Your Journey</a>
-</div>
-</section>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-<div class="footer-inner">
-<div class="candle-container">
-<div class="candle-body"></div>
-<div class="candle-wick"></div>
-<div class="candle-flame"></div>
-<div class="candle-glow-ring"></div>
-</div>
-<div class="footer-name">Oracle Thorne Ashwood</div>
-<div class="footer-tagline">Honoring the Dead, Healing the Living</div>
-<div class="footer-line"></div>
-<div class="footer-legal">&copy; 2026 Necromantic Healing &middot; All Rights Reserved</div>
-</div>
-</footer>
-
-<nav class="bottom-nav">
-<div class="nav-items">
-<a class="nav-item active" href="#home" onclick="scrollToSection(event,'home')">
-<svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-<span>Home</span>
-</a>
-<a class="nav-item" href="#about" onclick="scrollToSection(event,'about')">
-<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-<span>About</span>
-</a>
-<a class="nav-item" href="#practices" onclick="scrollToSection(event,'practices')">
-<svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-<span>Practices</span>
-</a>
-<a class="nav-item" href="#philosophy" onclick="scrollToSection(event,'philosophy')">
-<svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-<span>Path</span>
-</a>
-<a class="nav-item" href="#arrival" onclick="scrollToSection(event,'arrival')">
-<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-<span>Visit</span>
-</a>
-</div>
+<nav class="edge-nav" id="edgeNav">
+  <div class="nav-track">
+    <a href="#home" class="nav-dot active" data-section="home"><span>Home</span></a>
+    <a href="#about" class="nav-dot" data-section="about"><span>About</span></a>
+    <a href="#practices" class="nav-dot" data-section="practices"><span>Practices</span></a>
+    <a href="#philosophy" class="nav-dot" data-section="philosophy"><span>Path</span></a>
+    <a href="#testimonials" class="nav-dot" data-section="testimonials"><span>Voices</span></a>
+    <a href="#journey" class="nav-dot" data-section="journey"><span>Journey</span></a>
+    <a href="#contact" class="nav-dot" data-section="contact"><span>Visit</span></a>
+  </div>
 </nav>
 
-<script>
-function scrollToSection(e,id){
-e.preventDefault();
-document.getElementById(id).scrollIntoView({behavior:'smooth'});
-document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-e.currentTarget.classList.add('active');
-}
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{
-if(e.isIntersecting){e.target.classList.add('visible');
-const section=e.target.closest('section');
-if(section){
-document.querySelectorAll('.nav-item').forEach(n=>{
-n.classList.remove('active');
-if(n.getAttribute('href')==='#'+section.id)n.classList.add('active');
-});
-}
-}
-});
-},{threshold:0.15});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-window.addEventListener('scroll',()=>{
-const scrolled=window.pageYOffset;
-document.querySelector('.chiaroscuro').style.transform='translateY('+scrolled*0.1+'px)';
-});
-</script>
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-tag">Shamanic Healing</div>
+    <h1 class="hero-title">Journey<br><em>Between Worlds</em></h1>
+    <div class="hero-line"></div>
+    <p class="hero-sub">Raven Blackwood &middot; Sedona, Arizona</p>
+    <div class="hero-scroll" id="heroScroll">
+      <span>Descend</span>
+      <div class="scroll-line"></div>
+    </div>
+  </div>
+</header>
 
-<footer class="site-footer">
-  <p>&copy; Norman James</p>
-  <p>made with love by Empathy Studio</p>
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="section-label">The Shaman</div>
+    <h2>A Life Between <em>Worlds</em></h2>
+    <p class="about-text">Raven Blackwood trained with Peruvian shamans for fifteen years, learning the ancient art of soul retrieval and spirit journeying deep within the Amazon rainforest. Her practice weaves traditional shamanic wisdom with deep reverence for the spirit world.</p>
+    <p class="about-text">Through sacred drum ceremony, trance states, and direct communion with spirit allies, Raven guides seekers on journeys beyond the ordinary — where healing begins at the level of the soul, and the wisdom of ancestors illuminates the path forward.</p>
+    <div class="about-divider"></div>
+    <div class="healer-name">Shaman Raven Blackwood</div>
+    <div class="about-stats">
+      <div class="stat"><span class="stat-num">XV</span><span class="stat-label">Years of Training</span></div>
+      <div class="stat"><span class="stat-num">III</span><span class="stat-label">Sacred Arts</span></div>
+      <div class="stat"><span class="stat-num">&infin;</span><span class="stat-label">Journeys Taken</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sacred-art" id="practices">
+  <div class="section-inner">
+    <div class="section-label">Sacred Art</div>
+    <h2>Three Pillars of <em>Shamanic Practice</em></h2>
+    <div class="art-cards">
+      <div class="art-card">
+        <div class="card-corner tl"></div>
+        <div class="card-corner tr"></div>
+        <div class="card-corner bl"></div>
+        <div class="card-corner br"></div>
+        <div class="card-num">I</div>
+        <h3>Drum Journey</h3>
+        <p>The heartbeat of the earth guides your spirit into the Lower, Middle, or Upper Worlds. Through sacred rhythm, the veil thins and spirit allies appear — offering guidance, healing, and forgotten wisdom from beyond the ordinary.</p>
+      </div>
+      <div class="art-card">
+        <div class="card-corner tl"></div>
+        <div class="card-corner tr"></div>
+        <div class="card-corner bl"></div>
+        <div class="card-corner br"></div>
+        <div class="card-num">II</div>
+        <h3>Soul Retrieval</h3>
+        <p>When trauma fragments the soul, parts of us become lost in other worlds. Through deep trance journeying, Raven travels to retrieve these lost soul fragments, restoring wholeness and vitality to the wounded spirit.</p>
+      </div>
+      <div class="art-card">
+        <div class="card-corner tl"></div>
+        <div class="card-corner tr"></div>
+        <div class="card-corner bl"></div>
+        <div class="card-corner br"></div>
+        <div class="card-num">III</div>
+        <h3>Extraction Healing</h3>
+        <p>Energy that does not belong — ancestral patterns, spiritual intrusions, inherited wounds — is extracted through ceremony. Raven works with spirit allies to remove dense energies and restore the body's natural luminous field.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy" id="philosophy">
+  <div class="section-inner">
+    <div class="section-label">The Path</div>
+    <h2>Philosophy of <em>Spirit Worlds</em></h2>
+    <p class="philosophy-intro">Four sacred pillars guide Raven's practice — principles refined through decades of journeying, communion with ancestors, and the timeless wisdom of shamanic tradition.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">I</div>
+        <div class="pillar-content">
+          <h3>The Veil Is Thin</h3>
+          <p>The spirit world is not distant — it pulses beneath the surface of every moment. Through drumming, breath, and intention, the veil between worlds parts, revealing allies, ancestors, and the luminous beings who guide our journey home.</p>
+          <div class="pillar-quote">&ldquo;The spirits are always speaking. We have simply forgotten how to listen.&rdquo;</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">II</div>
+        <div class="pillar-content">
+          <h3>The Drum Is the Key</h3>
+          <p>Four beats per cycle — the sacred rhythm that shifts consciousness from waking into trance. The drum is not music; it is technology. It opens doorways that words cannot reach, carrying the soul into territories where healing begins.</p>
+          <div class="pillar-quote">&ldquo;Each beat is a footstep on the path between worlds.&rdquo;</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">III</div>
+        <div class="pillar-content">
+          <h3>Ancestors Hold the Medicine</h3>
+          <p>Our ancestors are not gone — they are present in blood memory, in dreams, in the patterns that shape our lives. They hold the medicine for wounds we cannot heal alone. When we journey to meet them, we receive gifts that transform generations.</p>
+          <div class="pillar-quote">&ldquo;What your ancestors survived lives in your bones. What they healed frees your spirit.&rdquo;</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">IV</div>
+        <div class="pillar-content">
+          <h3>Vision Is Survival</h3>
+          <p>Without vision, the people perish. Shamanic journeying restores lost vision — the ability to see beyond appearances, to perceive the spiritual forces that shape reality, and to walk through life with eyes open to both worlds.</p>
+          <div class="pillar-quote">&ldquo;The journey does not end when you return. You carry the vision home.&rdquo;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <div class="section-label">Voices From the Journey</div>
+    <h2>Those Who Have <em>Traveled</em></h2>
+    <div class="testimonial-list">
+      <div class="testimonial-card">
+        <div class="testimonial-quote">&ldquo;</div>
+        <p class="testimonial-text">During my first drum journey, I found myself standing in a field of light. My grandmother — who passed when I was seven — was there. She placed her hand on my chest and I felt thirty years of grief dissolve like mist. I came home different. The anxiety that had lived in my body since childhood simply... left.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div class="author-info">
+            <span class="author-name">Maya R.</span>
+            <span class="author-detail">Soul Retrieval &middot; Sedona</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">&ldquo;</div>
+        <p class="testimonial-text">I was skeptical — a corporate lawyer who didn't believe in spirits. But something in me was broken and nothing else had worked. Raven's extraction healing removed a heaviness I'd carried since childhood. My colleagues noticed before I told them. Something had shifted in my eyes.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">D</div>
+          <div class="author-info">
+            <span class="author-name">David K.</span>
+            <span class="author-detail">Extraction Healing &middot; Phoenix</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">&ldquo;</div>
+        <p class="testimonial-text">The journey changed how I see everything. Raven guided me to meet my spirit allies — beings of light who have walked with me ever since. I no longer feel alone in the world. The drumming takes you somewhere real, somewhere your soul recognizes even if your mind resists.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div class="author-info">
+            <span class="author-name">Sarah L.</span>
+            <span class="author-detail">Drum Journey &middot; Flagstaff</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="journey" id="journey">
+  <div class="section-inner">
+    <div class="section-label">Your First Visit</div>
+    <h2>The <em>Journey</em> Begins</h2>
+    <p class="journey-intro">Walking into the sanctuary for the first time can feel like standing at the threshold of something vast. Here is what to expect.</p>
+    <div class="journey-steps">
+      <div class="journey-step">
+        <div class="step-marker"><div class="step-dot"></div></div>
+        <div class="step-num">Before You Arrive</div>
+        <h3>Preparation</h3>
+        <p>In the days before your visit, pay attention to your dreams. Write down any images, names, or feelings that surface. There is no need to prepare a narrative. The spirits do not require your analysis — they require your presence.</p>
+      </div>
+      <div class="journey-step">
+        <div class="step-marker"><div class="step-dot"></div></div>
+        <div class="step-num">Entering the Space</div>
+        <h3>The Threshold</h3>
+        <p>The sanctuary sits among the red rocks of Sedona. Upon entering, you remove your shoes and wash your hands in sage water. The room is lit by candles. The scent of copal and desert herbs fills the air. A sacred drum rests at the center.</p>
+      </div>
+      <div class="journey-step">
+        <div class="step-marker"><div class="step-dot"></div></div>
+        <div class="step-num">The Opening</div>
+        <h3>Sacred Space</h3>
+        <p>Raven lights the central fire and invokes the spirits of the four directions. You are invited to speak your intention aloud — a single word or phrase. Some weep. Some laugh. Some sit in silence. All responses are honored.</p>
+      </div>
+      <div class="journey-step">
+        <div class="step-marker"><div class="step-dot"></div></div>
+        <div class="step-num">The Work</div>
+        <h3>Journey &amp; Healing</h3>
+        <p>The drum begins. The steady four-beat rhythm carries you into trance. You may see visions, feel presence, or enter landscapes beyond this world. Raven guides the journey, working with spirit allies to address what you need most.</p>
+      </div>
+      <div class="journey-step">
+        <div class="step-marker"><div class="step-dot"></div></div>
+        <div class="step-num">The Closing</div>
+        <h3>Return &amp; Integration</h3>
+        <p>The drum slows. You return. Raven offers integration guidance and a bundle of sacred herbs to burn at home. The journey continues in dreams and synchronicities for days and weeks to come. The spirits are patient — they will continue their work long after you leave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="drum-beat" id="drumBeat">
+  <div class="drum-ring" id="drumRing"></div>
+  <div class="drum-center" id="drumCenter">
+    <div class="drum-pulse"></div>
+  </div>
+  <div class="drum-label">Click to Play</div>
+  <div class="drum-bpm" id="drumBpm">120 BPM</div>
+</div>
+
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="section-label">Find Us</div>
+    <h2>Come to the <em>Spirits</em></h2>
+    <p class="contact-text">The sanctuary sits among the ancient red rocks of Sedona, where the earth's energy field is strongest. Sessions are held by appointment only, in a space consecrated to the well-being of both the living and the spirit world.</p>
+    <div class="contact-address">12 Spirit Trail, Sedona, AZ 86336</div>
+    <a href="#" class="contact-cta">Begin Your Journey</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-name">Shaman Raven Blackwood</div>
+    <div class="footer-tagline">Journey Between Worlds</div>
+    <div class="footer-divider"></div>
+    <div class="footer-legal">&copy; 2026 Shamanic Journeying &middot; All Rights Reserved</div>
+  </div>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,99 +1,102 @@
-Prompt 1: Whirling dervish in crimson robe spinning, motion blur creating circular patterns
-Style: Motion photography, spiritual
-Mood: Devotional, ecstatic, transcendent
-Lighting: Warm golden light
+CHAKRA BALANCING — Image Prompts
+Afrofuturist × Sacred Geometry Aesthetic
 
-Prompt 2: Intricate Islamic geometric patterns in crimson and gold on dark background
-Style: Pattern photography, architectural
-Mood: Infinite, orderly, beautiful
-Lighting: Even illumination
+Prompt 1: Afrofuturist woman in meditation pose, seven glowing chakra points along spine, golden sacred geometry background
+Style: Digital art, Afrofuturism
+Mood: Empowered, spiritual, cosmic
+Lighting: Bioluminescent glow, deep purple ambient
 
-Prompt 3: Hands playing traditional Middle Eastern instruments, close-up detail
+Prompt 2: Flower of life sacred geometry pattern in gold on deep indigo background, chakra symbols integrated
+Style: Geometric art, spiritual
+Mood: Infinite, orderly, transcendent
+Lighting: Soft golden emanation
+
+Prompt 3: Close-up of hands holding glowing crystal at heart center, green light radiating outward
+Style: Macro photography, healing
+Mood: Nurturing, powerful, intimate
+Lighting: Soft green bioluminescence
+
+Prompt 4: Split-screen composition — left side burning red/orange root energy, right side icy violet crown energy
+Style: Conceptual photography, duality
+Mood: Tension, balance, transformation
+Lighting: Contrasting warm and cool
+
+Prompt 5: West African woman performing color therapy, seven colored lights projected on body
 Style: Documentary photography, cultural
-Mood: Sacred music, devotional, focused
-Lighting: Warm ambient light
+Mood: Healing, ancestral, modern
+Lighting: Spectrum of chakra colors
 
-Prompt 4: Multiple dervishes whirling in formation, crimson skirts creating visual rhythm
-Style: Wide shot photography, ceremonial
-Mood: Collective devotion, beautiful, powerful
-Lighting: Temple interior lighting
+Prompt 6: Sacred geometry mandala with chakra lotus petals, gold on black, Afrofuturist design elements
+Style: Digital illustration, geometric
+Mood: Cosmic, ordered, beautiful
+Lighting: Inner golden glow
 
-Prompt 5: Calligraphy of sacred Sufi text in gold on crimson background
-Style: Art photography, calligraphy
-Mood: Sacred, beautiful, profound
-Lighting: Careful gallery lighting
+Prompt 7: Sound bath scene with singing bowls arranged in chakra pattern, practitioner in meditation
+Style: Environmental photography, healing space
+Mood: Resonant, peaceful, powerful
+Lighting: Warm amber candlelight
 
-Prompt 6: Single dervish mid-whirl, face upward in ecstasy, dramatic lighting
-Style: Portrait photography, spiritual
-Mood: Transcendent, devoted, ecstatic
-Lighting: Dramatic overhead light
+Prompt 8: Seven singing bowls in rainbow sequence, close-up detail, brass and copper textures
+Style: Still life photography, instruments
+Mood: Harmonic, precise, sacred
+Lighting: Warm metallic reflections
 
-Prompt 7: Geometric star patterns in tilework, deep reds and golds
-Style: Architectural photography, Islamic art
-Mood: Cosmic, orderly, beautiful
-Lighting: Natural light on tiles
+Prompt 9: Afrofuturist healer's hands hovering over client's spine, visible energy threads connecting chakras
+Style: Artistic photography, energy work
+Mood: Transmitted, healing, intimate
+Lighting: Ethereal golden threads
 
-Prompt 8: Musician playing oud in dimly lit Sufi gathering, warm tones
-Style: Environmental photography, intimate
-Mood: Devotional, musical, sacred
-Lighting: Candlelight warm glow
-
-Prompt 9: Dervish robe fabric in extreme close-up, crimson texture and movement
-Style: Macro photography, textile
-Mood: Tactile, rich, flowing
-Lighting: Side lighting on fabric
-
-Prompt 10: Whirling motion captured as circular light trails, night photography
+Prompt 10: Chakra wheel spinning, motion blur creating rainbow spiral, sacred geometry overlay
 Style: Long exposure photography, abstract
-Mood: Energy, movement, spiritual
-Lighting: Mixed light sources
+Mood: Dynamic, balanced, cosmic
+Lighting: Prismatic light trails
 
-Prompt 11: Traditional Sufi meeting space with geometric windows, warm light streaming in
-Style: Architectural photography, sacred space
-Mood: Welcoming, sacred, historical
-Lighting: Natural light through patterns
-
-Prompt 12: Close-up of dervish's face in meditation before whirling, serene
-Style: Portrait photography, contemplative
-Mood: Peaceful, focused, preparing
-Lighting: Soft warm light
-
-Prompt 13: Rose petals scattered on geometric tiled floor, crimson and marble
-Style: Still life photography, symbolic
-Mood: Beauty, devotion, offering
-Lighting: Soft natural light
-
-Prompt 14: Multiple dervishes in synchronized whirling, formation from above
-Style: Aerial photography, pattern
-Mood: Orderly, collective, beautiful
-Lighting: Even overhead lighting
-
-Prompt 15: Sacred Sufi shrine with crimson fabrics and golden details
-Style: Interior photography, sacred
-Mood: Reverent, ancient, beautiful
-Lighting: Candlelight and natural
-
-Prompt 16: Hands in prayer position with prayer beads, crimson fabric background
-Style: Detail photography, devotional
-Mood: Counting, meditative, focused
-Lighting: Soft front lighting
-
-Prompt 17: Geometric pattern dissolving into whirling motion, transition shot
+Prompt 11: Geometric pattern dissolving into energy flow, transition from order to movement
 Style: Experimental photography, conceptual
-Mood: From order to ecstasy, movement
-Lighting: Dynamic lighting
+Mood: Transformation, fluidity, awakening
+Lighting: Gradient spectrum
 
-Prompt 18: Sufi gathering at night with candles, shadows on geometric walls
-Style: Atmospheric photography, intimate
-Mood: Communal, sacred, warm
-Lighting: Candlelight shadows
+Prompt 12: Close-up of third eye area with indigo light, geometric patterns projected on face
+Style: Portrait photography, mystical
+Mood: Intuitive, powerful, seeing
+Lighting: Deep indigo spotlight
 
-Prompt 19: Single crimson dervish hat against neutral background, symbolic
-Style: Still life photography, minimal
-Mood: Identity, devotion, simple
-Lighting: Even studio lighting
+Prompt 13: Root chakra visualization — red earth tones, grounding roots extending downward
+Style: Nature photography, symbolic
+Mood: Grounded, stable, foundational
+Lighting: Warm earth tones, sunrise
 
-Prompt 20: Final image of dervish stopped mid-whirl, stillness after motion
-Style: Cinematic photography, moment
-Mood: Completion, peace, centered
-Lighting: Soft golden resolution
+Prompt 14: Heart chakra scene — green garden with sacred geometry overlay, healer in center
+Style: Landscape photography, spiritual
+Mood: Open, loving, healing
+Lush green ambient light
+
+Prompt 15: Crown chakra — violet light descending from above, geometric halo pattern
+Style: Conceptual photography, divine
+Mood: Connected, enlightened, cosmic
+Lighting: Violet celestial light
+
+Prompt 16: Seven colored crystals arranged in chakra formation on dark surface, each glowing
+Style: Macro photography, crystals
+Mood: Precise, powerful, aligned
+Lighting: Individual crystal illumination
+
+Prompt 17: Afrofuturist temple interior with geometric windows casting colored light patterns
+Style: Architectural photography, sacred space
+Mood: Welcoming, geometric, spiritual
+Lighting: Colored light through patterns
+
+Prompt 18: practitioner performing sound healing with tuning forks at different chakra points
+Style: Documentary photography, healing practice
+Mood: Precise, resonant, focused
+Lighting: Clean, clinical yet warm
+
+Prompt 19: Energy assessment scene — healer's hands reading client's aura, visible color field
+Style: Artistic photography, energy reading
+Mood: Perceptive, intuitive, diagnostic
+Lighting: Soft auric field glow
+
+Prompt 20: Final image of balanced chakra system, all seven centers glowing equally, person in perfect alignment
+Style: Cinematic photography, completion
+Mood: Balanced, whole, aligned
+Lighting: Full spectrum harmonious glow

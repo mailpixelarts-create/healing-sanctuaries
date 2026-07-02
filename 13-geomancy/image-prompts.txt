@@ -1,149 +1,20 @@
-Prompt 1: Standing stones at dawn, mist rising, ancient landscape in earthen tones
-Style: Landscape photography, archaeological
-Mood: Ancient, powerful, timeless
-Lighting: Dawn mist light
-
-Prompt 2: Close-up of earth textures: cracked soil, stone patterns, natural geometry
-Style: Macro photography, earth
-Mood: Grounded, natural, ancient
-Lighting: Natural daylight
-
-Prompt 3: Person kneeling to read earth signs, hands touching soil, earthen tones
-Style: Documentary photography, ritual
-Mood: Connected, reading, grounded
-Lighting: Soft natural light
-
-Prompt 4: Ley line represented as glowing path across ancient landscape
-Style: Conceptual photography, landscape
-Mood: Connected, powerful, hidden
-Lighting: Supernatural glow on earth
-
-Prompt 5: Standing stones in circle, dramatic sky, stone textures
-Style: Landscape photography, megalithic
-Mood: Powerful, ancient, aligned
-Lighting: Dramatic sky light
-
-Prompt 6: Hands divining with rods over earth, close-up detail
-Style: Documentary photography, ritual
-Mood: Focused, intuitive, connected
-Lighting: Natural outdoor light
-
-Prompt 7: Ancient stone carved with geomantic symbols, weathered texture
-Style: Archaeological photography, artifact
-Mood: Ancient wisdom, preserved, powerful
-Lighting: Side lighting on stone
-
-Prompt 8: Aerial view of ley lines crossing landscape, geometric overlay
-Style: Aerial photography, conceptual
-Mood: Connected, powerful, hidden
-Lighting: Golden hour landscape
-
-Prompt 9: Person standing among standing stones, feeling energy, earth tones
-Style: Environmental portrait, mystical
-Mood: Connected, empowered, ancient
-Lighting: Natural atmospheric light
-
-Prompt 10: Close-up of stone textures: lichen, weathering, natural patterns
-Style: Macro photography, geological
-Mood: Ancient, beautiful, natural
-Lighting: Even natural light
-
-Prompt 11: Geomantic figures drawn in sand on earth, temporary sacred geometry
-Style: Overhead photography, ritual
-Mood: Intentional, earthy, connected
-Lighting: Natural overhead light
-
-Prompt 12: Ancient landscape with standing stones in distance, earthen foreground
-Style: Landscape photography, vast
-Mood: Timeless, powerful, connected
-Lighting: Atmospheric daylight
-
-Prompt 13: Person's hands holding earth, stones and soil, connection
-Style: Detail photography, tactile
-Mood: Grounded, connected, humble
-Lighting: Natural light on hands
-
-Prompt 14: Ley line intersection marked by standing stones, energy visible
-Style: Conceptual photography, mystical
-Mood: Powerful, aligned, ancient
-Lighting: Supernatural glow
-
-Prompt 15: Weathered stone face with natural erosion patterns, earthen tones
-Style: Portrait photography, geological
-Mood: Ancient, wise, enduring
-Lighting: Side lighting on texture
-
-Prompt 16: Ancient stone circle at sunset, long shadows, warm earth tones
-Style: Landscape photography, atmospheric
-Mood: Powerful, aligned, timeless
-Lighting: Sunset golden light
-
-Prompt 17: Hands arranging stones in geomantic pattern on earth surface
-Style: Process photography, ritual
-Mood: Intentional, focused, connected
-Lighting: Natural overhead light
-
-Prompt 18: Soil cross-section showing layers, geological time
-Style: Scientific photography, educational
-Mood: Ancient, layered, deep
-Lighting: Even laboratory light
-
-Prompt 19: Standing stones reflected in still water, symmetry, earthen tones
-Style: Reflection photography, peaceful
-Mood: Balanced, deep, connected
-Lighting: Still water reflection
-
-Prompt 20: Final image of person standing in alignment with standing stones and earth
-Style: Cinematic landscape, spiritual
-Mood: Connected, empowered, whole
-Lighting: Atmospheric golden light
-
-Prompt 21: Cracked earth with new growth emerging, resilience, renewal
-Style: Macro photography, nature
-Mood: Hopeful, grounded, alive
-Lighting: Soft morning light on soil
-
-Prompt 22: Underground crystal formation, quartz veins in rock, hidden geometry
-Style: Geological photography, detail
-Mood: Ancient, powerful, hidden
-Lighting: Internal glow on crystals
-
-Prompt 23: Person walking barefoot on ancient stone path, connection to earth
-Style: Documentary photography, movement
-Mood: Grounded, present, intentional
-Lighting: Warm afternoon light
-
-Prompt 24: Stone circle at dawn with morning mist, energy lines visible
-Style: Landscape photography, mystical
-Mood: Powerful, aligned, timeless
-Lighting: First light of dawn
-
-Prompt 25: Hands cupping soil with worms and roots, living earth
-Style: Macro photography, biological
-Mood: Alive, connected, fertile
-Lighting: Natural earth tones
-
-Prompt 26: Aerial view of ancient landscape with ley line overlay
-Style: Aerial photography, conceptual
-Mood: Connected, vast, hidden
-Lighting: Golden hour from above
-
-Prompt 27: Dowsing rods crossing over earth, moment of detection
-Style: Documentary photography, ritual
-Mood: Focused, intuitive, precise
-Lighting: Natural outdoor light
-
-Prompt 28: Quartz crystal cluster on dark earth, energy point
-Style: Detail photography, mineral
-Mood: Powerful, ancient, precise
-Lighting: Focused light on crystal
-
-Prompt 29: Person sitting among standing stones, meditative, earthen tones
-Style: Environmental portrait, peaceful
-Mood: Connected, still, ancient
-Lighting: Soft diffused light
-
-Prompt 30: Final wide shot of sanctuary landscape at dusk, earth energy visible
-Style: Cinematic landscape, closing
-Mood: Whole, connected, timeless
-Lighting: Dusk golden hour
+1. "Minimalist hero shot of hands in cloud hands position, golden hour light, cinematic depth of field, muted earth tones, 16:9"
+2. "Aerial view of ancient Chinese tea plantation with morning mist, qi energy visualized as subtle golden streams, photorealistic"
+3. "Silhouette of person performing Zhan Zhuang standing meditation at sunrise, mountain backdrop, ethereal glow, fine art photography"
+4. "Close-up of weathered hands performing silk reeling exercise, soft natural light, shallow depth of field, documentary style"
+5. "Five animal frolics: tiger pose, dynamic movement, dust particles in light beams, cinematic motion blur"
+6. "Master Li portrait, serene expression, traditional clothing, natural bamboo background, warm lighting, editorial photography"
+7. "Minimalist interior of qi gong studio, bamboo floors, natural light streaming through rice paper screens, architectural photography"
+8. "Abstract visualization of qi flow through meridian lines, soft golden particles on dark background, digital art"
+9. "Dragon and tiger qigong movement, double exposure with mountains, artistic interpretation, muted palette"
+10. "Group qi gong class in park setting, morning light filtering through trees, candid documentary photography"
+11. "Textural close-up of ancient Chinese calligraphy scroll, ink on rice paper, macro photography, warm tones"
+12. "Person meditating by lotus pond, reflection in water, serene atmosphere, fine art landscape photography"
+13. "Traditional Chinese medicine herbs and tools arranged on wooden surface, overhead shot, natural lighting"
+14. "Bamboo forest path with sunlight streaming through, leading lines, minimalist composition, zen aesthetic"
+15. "Hands forming energy ball between palms, visible light distortion effect, dark background, conceptual photography"
+16. "Mountain landscape at dawn with single figure practicing qigong, vast scale, atmospheric perspective, cinematic wide shot"
+17. "Ink wash painting style illustration of qi gong movement, traditional Chinese art aesthetic, flowing lines"
+18. "Modern qi gong studio interior, clean lines, natural materials, warm minimalist design, architectural visualization"
+19. "Close-up of flowing water over smooth stones, representing qi flow, long exposure, serene nature photography"
+20. "Person performing crane stance, balance and grace, golden hour backlight, silhouette against sky, fine art photography"

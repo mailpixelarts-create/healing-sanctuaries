@@ -1,186 +1,239 @@
 /* ============================================
-   ZERO-POINT FIELD HEALING
-   Particle System + Scroll Animations
+   ZERO POINT — Interactive Engine
    ============================================ */
 
-(() => {
-  'use strict';
+// Pressure Point Data
+const pressurePoints = {
+    LI4: {
+        nameCn: '合谷',
+        nameEn: 'Hegu — Large Intestine 4',
+        anatomy: 'First dorsal interosseous muscle',
+        description: 'The "Command Point of the Face." Master point for all conditions affecting the head, face, and jaw. Strongly analgesic, regulates immune response, and clears external pathogens. Often used for headaches, toothaches, and sinus issues.'
+    },
+    PC6: {
+        nameCn: '内关',
+        nameEn: 'Neiguan — Pericardium 6',
+        anatomy: 'Between palmaris longus and flexor carpi radialis tendons',
+        description: 'The "Inner Pass." Key point for calming the mind and regulating the heart. Treats anxiety, insomnia, chest tightness, and nausea. Used extensively for motion sickness and morning sickness during pregnancy.'
+    },
+    ST36: {
+        nameCn: '足三里',
+        nameEn: 'Zusanli — Stomach 36',
+        anatomy: 'Tibialis anterior, 3 cun below the knee',
+        description: 'The "Leg Three Miles." Supreme point for strengthening the body. Boosts immunity, improves digestion, and increases vitality. The most studied acupuncture point in clinical research. Used for fatigue, digestive disorders, and general weakness.'
+    },
+    LV3: {
+        nameCn: '太冲',
+        nameEn: 'Taichong — Liver 3',
+        anatomy: 'Between first and second metatarsal bones',
+        description: 'The "Great Surge." Primary point for moving stuck Liver qi. Treats emotional stagnation, irritability, and anger. Regulates menstrual cycle and alleviates headaches caused by Liver yang rising.'
+    },
+    KI3: {
+        nameCn: '太溪',
+        nameEn: 'Taixi — Kidney 3',
+        anatomy: 'Between medial malleolus and Achilles tendon',
+        description: 'The "Great Ravine." Source point of the Kidney channel. Nourishes Kidney yin and yang, strengthens bones and hearing. Used for chronic fatigue, low back pain, and reproductive issues.'
+    }
+};
 
-  // ---- PARTICLE CANVAS ----
-  const canvas = document.getElementById('particleCanvas');
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let animFrame;
-
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  class Particle {
-    constructor() {
-      this.reset();
+// Matrix Rain Effect
+class MatrixRain {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.characters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF{}[]<>/\\|';
+        this.fontSize = 14;
+        this.columns = 0;
+        this.drops = [];
+        this.init();
     }
 
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2 + 0.3;
-      this.speedX = (Math.random() - 0.5) * 0.15;
-      this.speedY = (Math.random() - 0.5) * 0.12;
-      this.opacity = Math.random() * 0.4 + 0.05;
-      this.pulseSpeed = Math.random() * 0.01 + 0.005;
-      this.pulsePhase = Math.random() * Math.PI * 2;
-      this.drift = Math.random() * 0.3 + 0.1;
-      this.waveAmplitude = Math.random() * 0.5 + 0.2;
-      this.waveFrequency = Math.random() * 0.003 + 0.001;
-      this.time = Math.random() * 1000;
-    }
-
-    update() {
-      this.time += 1;
-      this.pulsePhase += this.pulseSpeed;
-
-      // Gentle wave motion
-      this.x += this.speedX + Math.sin(this.time * this.waveFrequency) * this.waveAmplitude * 0.1;
-      this.y += this.speedY - this.drift * 0.05;
-
-      // Pulse opacity
-      const pulse = Math.sin(this.pulsePhase) * 0.15;
-      this.currentOpacity = Math.max(0.02, this.opacity + pulse);
-
-      // Wrap around
-      if (this.x < -10) this.x = canvas.width + 10;
-      if (this.x > canvas.width + 10) this.x = -10;
-      if (this.y < -10) this.y = canvas.height + 10;
-      if (this.y > canvas.height + 10) this.y = -10;
+    init() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+        this.columns = Math.floor(this.canvas.width / this.fontSize);
+        this.drops = Array(this.columns).fill(1);
     }
 
     draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0, 212, 255, ${this.currentOpacity})`;
-      ctx.fill();
+        this.ctx.fillStyle = 'rgba(0, 26, 0, 0.05)';
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+        this.ctx.fillStyle = '#00FF41';
+        this.ctx.font = `${this.fontSize}px "IBM Plex Mono", monospace`;
 
-      // Glow effect
-      if (this.size > 1) {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 212, 255, ${this.currentOpacity * 0.15})`;
-        ctx.fill();
-      }
+        for (let i = 0; i < this.drops.length; i++) {
+            const char = this.characters[Math.floor(Math.random() * this.characters.length)];
+            const x = i * this.fontSize;
+            const y = this.drops[i] * this.fontSize;
+
+            // Varying brightness
+            const brightness = Math.random();
+            if (brightness > 0.95) {
+                this.ctx.fillStyle = '#FFFFFF';
+            } else if (brightness > 0.8) {
+                this.ctx.fillStyle = '#00FF41';
+            } else {
+                this.ctx.fillStyle = 'rgba(0, 255, 65, 0.7)';
+            }
+
+            this.ctx.fillText(char, x, y);
+
+            if (y > this.canvas.height && Math.random() > 0.975) {
+                this.drops[i] = 0;
+            }
+            this.drops[i]++;
+        }
     }
-  }
 
-  function initParticles() {
-    resizeCanvas();
-    particles = [];
-    const count = Math.min(Math.floor((canvas.width * canvas.height) / 12000), 120);
-    for (let i = 0; i < count; i++) {
-      particles.push(new Particle());
+    animate() {
+        this.draw();
+        requestAnimationFrame(() => this.animate());
     }
-  }
 
-  function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
-    animFrame = requestAnimationFrame(animateParticles);
-  }
+    resize() {
+        this.init();
+    }
+}
 
-  window.addEventListener('resize', () => {
-    cancelAnimationFrame(animFrame);
-    initParticles();
-    animateParticles();
-  });
+// Pressure Point Explorer
+class PressurePointExplorer {
+    constructor() {
+        this.points = document.querySelectorAll('.pressure-point');
+        this.infoContent = document.querySelector('.info-content');
+        this.infoHeader = document.querySelector('.info-header');
+        this.init();
+    }
 
-  initParticles();
-  animateParticles();
+    init() {
+        this.points.forEach(point => {
+            point.addEventListener('mouseenter', (e) => this.showInfo(e));
+            point.addEventListener('mouseleave', () => this.hideInfo());
+        });
+    }
 
-  // ---- SCROLL DOT ----
-  const scrollDot = document.getElementById('scrollDot');
-  const dotCore = scrollDot.querySelector('.scroll-dot__core');
+    showInfo(e) {
+        const pointId = e.currentTarget.dataset.point;
+        const data = pressurePoints[pointId];
 
-  function updateScrollDot() {
-    const scrollTop = window.pageYOffset;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+        if (!data) return;
 
-    // Move dot vertically
-    const maxTravel = window.innerHeight * 0.6;
-    const dotY = -maxTravel / 2 + progress * maxTravel;
-    scrollDot.style.transform = `translateY(calc(-50% + ${dotY}px))`;
+        this.infoHeader.textContent = `[POINT.ACTIVE]`;
+        document.querySelector('.info-name-cn').textContent = data.nameCn;
+        document.querySelector('.info-name-en').textContent = data.nameEn;
+        document.querySelector('.info-anatomy').textContent = data.anatomy;
+        document.querySelector('.info-description').textContent = data.description;
 
-    // Pulse intensity based on progress
-    const intensity = 0.4 + progress * 0.6;
-    dotCore.style.opacity = intensity;
-  }
+        this.infoContent.classList.add('active');
+    }
 
-  window.addEventListener('scroll', updateScrollDot, { passive: true });
-
-  // ---- INTERSECTION OBSERVER ----
-  const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -60px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, observerOptions);
-
-  // Observe hero items immediately
-  document.querySelectorAll('.hero__content .fade-from-void').forEach(el => {
-    observer.observe(el);
-  });
-
-  // Observe surface items
-  document.querySelectorAll('.surface-from-void').forEach(el => {
-    observer.observe(el);
-  });
-
-  // ---- HERO ENTRANCE ----
-  setTimeout(() => {
-    document.querySelectorAll('.hero__content .fade-from-void').forEach(el => {
-      el.classList.add('is-visible');
-    });
-  }, 300);
-
-  // ---- SMOOTH SCROLL ----
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // ---- FORM ----
-  const form = document.querySelector('.arrival__form');
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const input = form.querySelector('.arrival__input');
-      if (input.value) {
-        const btn = form.querySelector('.arrival__btn');
-        btn.textContent = 'Connected';
-        btn.style.background = 'var(--cyan)';
-        btn.style.color = 'var(--ocean)';
-        input.value = '';
+    hideInfo() {
+        this.infoContent.classList.remove('active');
         setTimeout(() => {
-          btn.textContent = 'Enter the Field';
-          btn.style.background = '';
-          btn.style.color = '';
-        }, 3000);
-      }
-    });
-  }
+            this.infoHeader.textContent = 'SELECT A PRESSURE POINT';
+            document.querySelector('.info-name-cn').textContent = '—';
+            document.querySelector('.info-name-en').textContent = '—';
+            document.querySelector('.info-anatomy').textContent = '—';
+            document.querySelector('.info-description').textContent = 'Hover over a point on the wireframe to explore its properties.';
+        }, 300);
+    }
+}
 
-})();
+// Scroll Reveal Animation
+class ScrollReveal {
+    constructor() {
+        this.elements = [];
+        this.init();
+    }
+
+    init() {
+        // Add reveal class to elements
+        const selectors = [
+            '.about-text h2', '.about-text p', '.about-stats',
+            '.art-card', '.pillar', '.testimonial',
+            '.journey-step', '.footer-grid > div'
+        ];
+
+        selectors.forEach(selector => {
+            document.querySelectorAll(selector).forEach(el => {
+                el.classList.add('reveal');
+                this.elements.push(el);
+            });
+        });
+
+        this.check();
+        window.addEventListener('scroll', () => this.check());
+    }
+
+    check() {
+        const windowHeight = window.innerHeight;
+
+        this.elements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add('visible');
+            }
+        });
+    }
+}
+
+// Initialize Everything
+document.addEventListener('DOMContentLoaded', () => {
+    // Matrix Rain
+    const canvas = document.getElementById('matrix-rain');
+    const matrix = new MatrixRain(canvas);
+    matrix.animate();
+
+    // After 2 seconds, fade matrix and show meridian map
+    setTimeout(() => {
+        canvas.classList.add('fade');
+        document.getElementById('meridian-overlay').classList.add('visible');
+    }, 2000);
+
+    // Pressure Point Explorer
+    new PressurePointExplorer();
+
+    // Scroll Reveal
+    new ScrollReveal();
+
+    // Resize handler
+    window.addEventListener('resize', () => matrix.resize());
+
+    // Smooth scroll for any internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Add cursor trail effect
+    let trail = [];
+    document.addEventListener('mousemove', (e) => {
+        const dot = document.createElement('div');
+        dot.style.cssText = `
+            position: fixed;
+            left: ${e.clientX}px;
+            top: ${e.clientY}px;
+            width: 4px;
+            height: 4px;
+            background: var(--paper);
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.5s ease;
+            opacity: 0.5;
+        `;
+        document.body.appendChild(dot);
+
+        setTimeout(() => {
+            dot.style.opacity = '0';
+            dot.style.transform = 'scale(0)';
+        }, 10);
+
+        setTimeout(() => dot.remove(), 500);
+    });
+});

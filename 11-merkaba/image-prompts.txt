@@ -1,99 +1,102 @@
-Prompt 1: Glowing star tetrahedron (Merkaba) floating in cosmic space, amethyst and gold colors
-Style: Digital art photography, sacred geometry
-Mood: Cosmic, spiritual, powerful
-Lighting: Internal geometric glow
+HERBALISM — Image Prompts (20)
+Outsider Art Digital × Botanical Dark
 
-Prompt 2: Person meditating with visible Merkaba energy field around them, light body activation
-Style: Conceptual photography, spiritual
-Mood: Transcendent, activated, luminous
-Lighting: Energetic glow
+Prompt 1: Dandelion seed-head in extreme close-up, individual seeds catching golden hour light against a dark forest floor background, shallow depth of field, botanical photography style, moody and atmospheric, --ar 16:9
+Style: Macro botanical photography, dark editorial
+Mood: Transient, beautiful, fragile
+Lighting: Golden hour side-light
 
-Prompt 3: Crystal cave with amethyst formations creating natural sacred geometry
-Style: Nature photography, crystal
-Mood: Ancient, powerful, beautiful
-Lighting: Bioluminescent crystal glow
+Prompt 2: Time-lapse sequence frame of a dandelion seed-head slowly decaying, seeds dispersing into wind, dark moody background, cinematic color grading with deep greens and amber tones
+Style: Cinematic nature photography
+Mood: Impermanent, poetic, earthy
+Lighting: Diffused natural light
 
-Prompt 4: Intricate Merkaba geometry drawn in light on dark background, mathematical precision
-Style: Graphic photography, geometric
-Mood: Precise, cosmic, ordered
-Lighting: Luminous lines
+Prompt 3: Wild medicinal herbs arranged in a dark apothecary setting, glass bottles, dried flowers, mortar and pestle, Outsider Art aesthetic with slightly distorted perspectives
+Style: Still life photography, dark editorial
+Mood: Ancient, mysterious, handcrafted
+Lighting: Candlelight and window light
 
-Prompt 5: Person standing in crystal cave surrounded by amethyst geodes, light emanating
-Style: Environmental portrait, mystical
-Mood: Empowered, connected, crystalline
-Lighting: Crystal-refracted light
+Prompt 4: Sage Wildroot foraging in a misty Pacific Northwest forest, silhouette among towering ferns and moss-covered trees, golden light filtering through canopy
+Style: Environmental portrait, documentary
+Mood: Solitary, reverent, connected
+Lighting: Dappled forest light
 
-Prompt 6: Star tetrahedron rotating, creating light trails in cosmic space
-Style: Motion photography, digital
-Mood: Dynamic, powerful, celestial
-Lighting: Rotating light patterns
+Prompt 5: Close-up of hands pressing a wildflower specimen between pages of an old book, dried petals and leaves, dark wooden table surface, warm amber tones
+Style: Detail photography, editorial
+Mood: Deliberate, intimate, archival
+Lighting: Soft directional light
 
-Prompt 7: Merkaba symbol carved in ancient stone, covered in crystal dust
-Style: Archaeological photography, sacred
-Mood: Ancient wisdom, preserved, powerful
-Lighting: Candlelight on stone
+Prompt 6: Glass tincture bottles filled with amber liquid arranged on a rustic wooden shelf, botanical labels handwritten, dark background with warm highlights
+Style: Product photography, apothecary aesthetic
+Mood: Medicinal, artisanal, precise
+Lighting: Backlit glass, warm glow
 
-Prompt 8: Close-up of amethyst cluster with light refracting through crystals
-Style: Macro photography, mineral
-Mood: Beautiful, powerful, natural geometry
-Lighting: Backlit crystal
+Prompt 7: A single pressed Echinacea specimen on aged paper, handwritten botanical notes around it, dark ink on cream paper, scientific illustration meets Outsider Art
+Style: Mixed media photography, botanical illustration
+Mood: Studied, organic, personal
+Lighting: Even, flat document lighting
 
-Prompt 9: Person's light body visible as geometric pattern, Merkaba activation
-Style: Conceptual photography, spiritual
-Mood: Transcendent, luminous, awakened
-Lighting: Internal glow
+Prompt 8: Dandelion roots being harvested from dark rich soil, hands covered in earth, morning mist in background, close-up detail shot
+Style: Documentary photography, earthy
+Mood: Grounded, essential, raw
+Lighting: Overcast morning light
 
-Prompt 10: Sacred geometry pattern merging with cosmic starfield, infinite
-Style: Digital photography, cosmic
-Mood: Infinite, connected, mathematical
-Lighting: Stellar points of light
+Prompt 9: Infused herbal oil in a glass jar, golden liquid with suspended plant material, backlit to show translucency, dark kitchen background
+Style: Still life photography, warm editorial
+Mood: Patient, transformative, alive
+Lighting: Backlit, golden tones
 
-Prompt 11: Merkaba meditation space with crystal arrangements, purple light
-Style: Interior photography, sacred space
-Mood: Powerful, focused, crystalline
-Lighting: Amethyst colored light
+Prompt 10: Medicinal tea being poured from a ceramic pot into a handmade cup, steam rising, dark wood surface, herbs scattered nearby, intimate domestic scene
+Style: Lifestyle photography, warm dark tones
+Mood: Comforting, ritualistic, slow
+Lighting: Warm interior light
 
-Prompt 12: Two interlocking tetrahedrons forming Merkaba, glowing edges
-Style: 3D photography, geometric
-Mood: Balanced, powerful, sacred
-Lighting: Edge-lit geometry
+Prompt 11: Calendula flowers growing in terra cotta pots on a kitchen windowsill, morning light streaming through glass, dark interior frame
+Style: Interior photography, botanical
+Mood: Nurturing, bright within darkness, alive
+Lighting: Window light, high contrast
 
-Prompt 13: Person surrounded by floating crystal shards, light refracting
-Style: Fantasy photography, surreal
-Mood: Magical, powerful, crystalline
-Lighting: Refracted crystal light
+Prompt 12: St. John's Wort flowers in full bloom on a sunlit hillside, Pacific Northwest landscape in background, vivid yellow against deep green
+Style: Landscape photography, botanical
+Mood: Wild, radiant, abundant
+Lighting: Full summer sunlight
 
-Prompt 14: Merkaba geometry projected onto person during meditation, light body
-Style: Projection photography, spiritual
-Mood: Activated, transformed, geometric
-Lighting: Projected light
+Prompt 13: Valerian root being dug from garden soil with a hand trowel, dark earth, morning dew on surrounding plants, close-up detail
+Style: Garden photography, earthy
+Mood: Subterranean, potent, honest
+Lighting: Soft morning diffused light
 
-Prompt 15: Deep cave with natural geometric formations, amethyst walls
-Style: Cave photography, natural
-Mood: Hidden, powerful, ancient
-Lighting: Minimal natural light
+Prompt 14: A herbalist's workspace overhead view, mortar and pestle, dried herbs in bowls, glass vials, handwritten notes, dark wooden surface
+Style: Flat lay photography, editorial
+Mood: Methodical, creative, artisanal
+Lighting: Even overhead soft light
 
-Prompt 16: Star tetrahedron made of pure light floating above meditation altar
-Style: Conceptual photography, divine
-Mood: Sacred, powerful, ethereal
-Lighting: Divine light source
+Prompt 15: German chamomile flowers floating in a bowl of water, sunlight creating patterns on the surface, macro detail of petals
+Style: Macro photography, ethereal
+Mood: Gentle, luminous, delicate
+Lighting: Natural light, water reflections
 
-Prompt 17: Crystal grid arranged in Merkaba pattern on sacred cloth
-Style: Still life photography, ritual
-Mood: Intentional, powerful, geometric
-Lighting: Even illumination
+Prompt 16: Dandelion root roasting slowly in a cast iron pan, dark kitchen, steam rising, close-up of the transformation from pale root to dark amber
+Style: Process photography, culinary
+Mood: Transformative, patient, alchemical
+Lighting: Low warm kitchen light
 
-Prompt 18: Person's silhouette with Merkaba energy spinning around them
-Style: Silhouette photography, energetic
-Mood: Protected, activated, powerful
-Lighting: Backlit energy field
+Prompt 17: A flower essence preparation in progress, fresh blossoms floating in a glass bowl of spring water on a sunlit stone ledge, dark garden background
+Style: Documentary photography, ritual
+Mood: Sacred, simple, intentional
+Lighting: Natural sunlight through water
 
-Prompt 19: Cosmic scene with multiple Merkaba forms creating universal geometry
-Style: Digital photography, cosmic
-Mood: Infinite, connected, mathematical
-Lighting: Multiple light sources
+Prompt 18: Pressed specimen collection spread across a dark wooden desk, multiple herbarium sheets, botanical drawings, old field guides, overhead perspective
+Style: Flat lay photography, archival
+Mood: Collected, scholarly, personal
+Lighting: Even, slightly warm
 
-Prompt 20: Final image of complete Merkaba activation, person merged with light body
-Style: Cinematic photography, transcendence
-Mood: Complete, divine, unlimited
-Lighting: Full spectrum light
+Prompt 19: Misty Portland forest trail in autumn, golden and amber leaves, path disappearing into fog, the wild pharmacy of nature
+Style: Landscape photography, atmospheric
+Mood: Mysterious, inviting, ancient
+Lighting: Diffused foggy light
+
+Prompt 20: Final hero frame — a dandelion seed-head silhouetted against a dark twilight sky, a single seed catching the last light as it drifts away, extreme shallow depth of field
+Style: Cinematic nature photography, poetic
+Mood: Release, beauty in ending, transient
+Lighting: Twilight, single highlight

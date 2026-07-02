@@ -1,300 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Johrei — Channeling the Light of the Universe</title>
-  <meta name="description" content="Master Aiko Takahashi — Johrei, the Japanese art of channeling divine light to purify the spirit and body.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Healing | Gemma Crystalwell</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Canela:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="vertical-nav">
+        <div class="nav-brand">GC</div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#services" class="nav-link" data-section="services">Services</a>
+            <a href="#compass" class="nav-link" data-section="compass">Compass</a>
+            <a href="#philosophy" class="nav-link" data-section="philosophy">Philosophy</a>
+            <a href="#testimonials" class="nav-link" data-section="testimonials">Stories</a>
+            <a href="#journey" class="nav-link" data-section="journey">Journey</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </div>
+        <div class="nav-footer">
+            <span class="nav-tagline">Ancient Stones,<br>Living Energy</span>
+        </div>
+    </nav>
 
-  <!-- THE SILENCE — Hero: LIGHT glows -->
-  <section class="hero" id="top">
-    <div class="hero-glow"></div>
-    <div class="hero-word" aria-hidden="true">LIGHT</div>
-    <div class="scroll-whisper">
-      <span class="scroll-line"></span>
-    </div>
-  </section>
+    <section id="hero" class="hero-section">
+        <div class="hero-canvas-container">
+            <canvas id="heroCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-overline">Crystal Healing</div>
+            <h1 class="hero-title">
+                <span class="title-line">Ancient</span>
+                <span class="title-line">Stones,</span>
+                <span class="title-line">Living</span>
+                <span class="title-line">Energy</span>
+            </h1>
+            <p class="hero-subtitle">Where mineral wisdom meets transformative healing</p>
+            <div class="hero-cta">
+                <a href="#compass" class="btn-primary">Explore the Compass</a>
+                <a href="#about" class="btn-secondary">Meet Gemma</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
 
-  <!-- ABOUT — Whitespace IS the Design -->
-  <section class="about" id="about">
-    <div class="about-inner">
-      <span class="about-label">The Healer</span>
-      <h2 class="about-name">Master Aiko Takahashi</h2>
-      <div class="about-divider"></div>
-      <p class="about-body">
-        Direct student of the teachings of Mokichi Okada, founder of Johrei.
-        A practice of channeling divine light through the palms to purify
-        the receiver's spirit and physical body.
-      </p>
-      <p class="about-body about-body--secondary">
-        For over thirty years, Master Takahashi has devoted her life to the
-        study and transmission of Johrei. She trained under Master Masahiro
-        Tanaka in Kyoto, where she spent twelve years in silent practice
-        before beginning her own teaching lineage.
-      </p>
-      <p class="about-body about-body--secondary">
-        Her approach is rooted in the belief that the human spirit is
-        inherently luminous — that illness and suffering are not punishments
-        but accumulations of spiritual impurity that can be gently dissolved
-        through the channeling of divine light.
-      </p>
-      <p class="about-body about-body--secondary">
-        She has offered Johrei to thousands of individuals across Japan,
-        Southeast Asia, and North America. Her sanctuary in Kyoto remains
-        open to all who seek purification without condition.
-      </p>
-    </div>
-  </section>
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-overline">The Healer</div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">Gemma Crystalwell</h2>
+                    <div class="about-text">
+                        <p class="lead-text">With 20 years of studying crystallography and metaphysical properties, Gemma bridges the gap between scientific understanding and spiritual practice.</p>
+                        <p>Her journey began in the mineral-rich deserts of Arizona, where she first felt the pulse of ancient stones beneath her hands. What started as curiosity became a calling&mdash;a deep resonance with the crystalline structures that hold the Earth's memory.</p>
+                        <p>Gemma's approach combines the precision of a mineralogist with the intuition of a healer, creating transformative experiences that honor both the physical and metaphysical nature of crystals.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Healings</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Crystal Types</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder gemma-portrait"></div>
+                    </div>
+                    <div class="image-caption">Tucson, Arizona</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- SACRED ART — Gold Circles Pulsing -->
-  <section class="sacred" id="sacred">
-    <span class="sacred-label">Sacred Art</span>
-    <div class="sacred-circles">
-      <div class="sacred-circle">
-        <div class="sacred-circle-ring"></div>
-        <div class="sacred-circle-content">
-          <h3 class="sacred-title">Palm Channeling</h3>
-          <p class="sacred-text">Directing Johrei light through the healer's palms. A transmission of divine energy that dissolves impurities in the spiritual body. The receiver may feel warmth, tingling, or a deep sense of peace — as though a long-held weight has been gently lifted.</p>
-          <p class="sacred-text sacred-text--detail">The healer raises one hand toward the crown of the head, the other toward the chest. Light flows between the palms in a continuous current. Sessions typically last twenty to forty minutes, though time becomes irrelevant in the presence of the light.</p>
+    <section id="services" class="services-section">
+        <div class="section-container">
+            <div class="section-overline">Sacred Art</div>
+            <h2 class="section-title">Healing Modalities</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">Crystal Grid Layouts</h3>
+                    <p class="service-description">Sacred geometric patterns formed with crystals to amplify energy, create protection fields, or manifest intentions. Each grid is custom-designed for your specific needs.</p>
+                    <div class="service-details">
+                        <span class="detail">60-90 minutes</span>
+                        <span class="detail">Custom stone selection</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">Stone Meditation</h3>
+                    <p class="service-description">Guided meditation sessions using specific crystals to open energy channels, release blockages, and connect with the mineral kingdom's ancient wisdom.</p>
+                    <div class="service-details">
+                        <span class="detail">45 minutes</span>
+                        <span class="detail">Individual or group</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Grid Activation</h3>
+                    <p class="service-description">The powerful process of activating dormant crystal grids with sound, intention, and light. Unlocks the full healing potential of your crystal collection.</p>
+                    <div class="service-details">
+                        <span class="detail">30-45 minutes</span>
+                        <span class="detail">Distance available</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="sacred-circle">
-        <div class="sacred-circle-ring"></div>
-        <div class="sacred-circle-content">
-          <h3 class="sacred-title">Spirit Purification Meditation</h3>
-          <p class="sacred-text">Seated practice to increase light channeling capacity. Stillness becomes the vessel. The practitioner opens, the light enters. This is the foundation of all Johrei work — the daily discipline that keeps the channel clear.</p>
-          <p class="sacred-text sacred-text--detail">Performed at dawn and dusk, the meditation involves specific breathing patterns and visualization of light entering through the crown chakra. Over months and years, the practitioner's capacity to channel light increases exponentially. The body becomes a living conduit.</p>
-        </div>
-      </div>
-      <div class="sacred-circle">
-        <div class="sacred-circle-ring"></div>
-        <div class="sacred-circle-content">
-          <h3 class="sacred-title">Group Johrei Circle</h3>
-          <p class="sacred-text">Multiple practitioners creating a healing field. Shared intention amplifies the light. A circle of purity without words. The field generated by five or more practitioners can be felt across an entire room.</p>
-          <p class="sacred-text sacred-text--detail">Held on the full moon of each month, the circle gathers in silence. Practitioners stand in a ring, palms raised, channeling light inward toward a central point. The accumulated energy creates a vortex of purification that benefits all participants and extends outward to the community.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PHILOSOPHY — The Light of Johrei -->
-  <section class="philosophy" id="philosophy">
-    <div class="philosophy-inner">
-      <span class="philosophy-label">Philosophy</span>
-      <h2 class="philosophy-heading">The Light of Johrei</h2>
-      <div class="philosophy-divider"></div>
-      <div class="philosophy-pillars">
-        <div class="philosophy-pillar">
-          <div class="philosophy-pillar-line"></div>
-          <h3 class="philosophy-pillar-title">The Spirit Is Primary</h3>
-          <p class="philosophy-pillar-text">
-            All illness begins in the spiritual body before manifesting in the
-            physical. Johrei addresses the root, not the symptom. When the spirit
-            is purified, the body follows its natural design — wholeness.
-          </p>
+    <section id="compass" class="compass-section">
+        <div class="section-container">
+            <div class="section-overline">Interactive</div>
+            <h2 class="section-title">Birthstone Compass</h2>
+            <p class="compass-intro">Hover over your birth month to discover your stone's properties and receive your activation mantra.</p>
+            <div class="compass-wrapper">
+                <div class="compass-container">
+                    <div class="compass-wheel" id="compassWheel">
+                        <div class="compass-center">
+                            <div class="center-gem"></div>
+                            <span class="center-text">Your Stone</span>
+                        </div>
+                        <div class="compass-months" id="compassMonths"></div>
+                    </div>
+                </div>
+                <div class="compass-info" id="compassInfo">
+                    <div class="info-month" id="infoMonth">January</div>
+                    <div class="info-stone" id="infoStone">Garnet</div>
+                    <div class="info-formula" id="infoFormula">Fe&#8323;Al&#8322;(SiO&#8324;)&#8323;</div>
+                    <div class="info-properties" id="infoProperties">
+                        <span>Protection</span>
+                        <span>Vitality</span>
+                        <span>Passion</span>
+                    </div>
+                    <div class="info-mantra">
+                        <span class="mantra-label">Activation Mantra</span>
+                        <div class="mantra-text" id="mantraText"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="philosophy-pillar">
-          <div class="philosophy-pillar-line"></div>
-          <h3 class="philosophy-pillar-title">Light Is Not Earned</h3>
-          <p class="philosophy-pillar-text">
-            Divine light flows to all beings equally. It does not choose the
-            worthy. Johrei is not a reward — it is a birthright. The healer
-            does not decide who receives; the healer simply channels.
-          </p>
-        </div>
-        <div class="philosophy-pillar">
-          <div class="philosophy-pillar-line"></div>
-          <h3 class="philosophy-pillar-title">Purification, Not Cure</h3>
-          <p class="philosophy-pillar-text">
-            Johrei does not "fix" the body. It dissolves the impurities that
-            prevent the body from healing itself. The distinction is everything.
-            We do not impose health — we remove the obstacles to it.
-          </p>
-        </div>
-        <div class="philosophy-pillar">
-          <div class="philosophy-pillar-line"></div>
-          <h3 class="philosophy-pillar-title">The Healer Is a Vessel</h3>
-          <p class="philosophy-pillar-text">
-            The practitioner is not the source of the light. They are the
-            channel through which it flows. Humility is the foundation of
-            Johrei — the moment the ego enters, the light dims.
-          </p>
-        </div>
-        <div class="philosophy-pillar">
-          <div class="philosophy-pillar-line"></div>
-          <h3 class="philosophy-pillar-title">Gratitude Heals</h3>
-          <p class="philosophy-pillar-text">
-            Mokichi Okada taught that gratitude is the highest vibration of the
-            human spirit. A grateful heart is an open channel. In the presence
-            of gratitude, impurities dissolve naturally — even without
-            formal Johrei.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials" id="testimonials">
-    <div class="testimonials-inner">
-      <span class="testimonials-label">Testimonials</span>
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <div class="testimonial-mark">"</div>
-          <blockquote class="testimonial-body">
-            I came to Master Takahashi with years of chronic pain that no
-            physician could explain. After three sessions, the pain did not
-            simply lessen — it became irrelevant. Something deeper shifted.
-            I stopped asking my body to be quiet and started listening to what
-            it was trying to say.
-          </blockquote>
-          <cite class="testimonial-author">
-            <span class="testimonial-author-name">Yuki Sato</span>
-            <span class="testimonial-author-detail">Teacher, Osaka</span>
-          </cite>
+    <section id="philosophy" class="philosophy-section">
+        <div class="section-container">
+            <div class="section-overline">Philosophy</div>
+            <h2 class="section-title">The Crystalline Path</h2>
+            <div class="philosophy-grid">
+                <div class="philosophy-pillar">
+                    <div class="pillar-icon">&#9671;</div>
+                    <h3 class="pillar-title">Mineral Memory</h3>
+                    <p class="pillar-text">Crystals are ancient libraries, holding millions of years of geological and energetic information within their molecular structures.</p>
+                </div>
+                <div class="philosophy-pillar">
+                    <div class="pillar-icon">&#9671;</div>
+                    <h3 class="pillar-title">Resonant Healing</h3>
+                    <p class="pillar-text">Every crystal vibrates at a specific frequency. When matched with human energy fields, they create harmonious resonance for deep healing.</p>
+                </div>
+                <div class="philosophy-pillar">
+                    <div class="pillar-icon">&#9671;</div>
+                    <h3 class="pillar-title">Sacred Geometry</h3>
+                    <p class="pillar-text">The geometric patterns within crystals mirror the fundamental structures of the universe, connecting microcosm to macrocosm.</p>
+                </div>
+                <div class="philosophy-pillar">
+                    <div class="pillar-icon">&#9671;</div>
+                    <h3 class="pillar-title">Living Partnership</h3>
+                    <p class="pillar-text">Crystals are not tools but partners in healing. They respond to intention, grow with you, and choose their human keepers.</p>
+                </div>
+            </div>
         </div>
-        <div class="testimonial">
-          <div class="testimonial-mark">"</div>
-          <blockquote class="testimonial-body">
-            I did not believe in energy work. I came out of curiosity, nothing
-            more. But during the first session I felt something I can only
-            describe as light — warm, precise, and completely without force.
-            It moved through me the way water moves through open ground. I
-            wept for an hour afterward.
-          </blockquote>
-          <cite class="testimonial-author">
-            <span class="testimonial-author-name">James Caldwell</span>
-            <span class="testimonial-author-detail">Architect, Vancouver</span>
-          </cite>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial-mark">"</div>
-          <blockquote class="testimonial-body">
-            My mother was in her final weeks. Master Takahashi came to our
-            home and offered Johrei at her bedside. The room changed. My
-            mother smiled — the first smile in months. She passed three days
-            later, peacefully, without fear. I am forever grateful for that
-            light.
-          </blockquote>
-          <cite class="testimonial-author">
-            <span class="testimonial-author-name">Mei Lin Chen</span>
-            <span class="testimonial-author-detail">Physician, Taipei</span>
-          </cite>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- JOURNEY — Your First Visit -->
-  <section class="journey" id="journey">
-    <div class="journey-inner">
-      <span class="journey-label">Journey</span>
-      <h2 class="journey-heading">Your First Visit</h2>
-      <div class="journey-divider"></div>
-      <div class="journey-steps">
-        <div class="journey-step">
-          <span class="journey-step-number">01</span>
-          <div class="journey-step-content">
-            <h3 class="journey-step-title">Arrival & Silence</h3>
-            <p class="journey-step-text">
-              Enter the sanctuary and remove your shoes at the threshold. A
-              simple tea will be offered. There is no need to speak. Allow the
-              silence to settle around you like a garment.
-            </p>
-          </div>
+    <section id="testimonials" class="testimonials-section">
+        <div class="section-container">
+            <div class="section-overline">Stories</div>
+            <h2 class="section-title">Voices from the Grid</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">&ldquo;</div>
+                    <p class="testimonial-text">After my first crystal grid session with Gemma, I felt a shift I cannot explain. Chronic pain that plagued me for years began to dissolve. The Amethyst grid she created became my anchor through chemotherapy.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah M.</span>
+                            <span class="author-detail">Phoenix, AZ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">&ldquo;</div>
+                    <p class="testimonial-text">Gemma's stone meditation class opened something inside me. I connected with emotions I'd buried for decades. The Rose Quartz she placed on my heart chakra&mdash;I wept for the first time in years.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <span class="author-name">David K.</span>
+                            <span class="author-detail">Sedona, AZ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">&ldquo;</div>
+                    <p class="testimonial-text">The grid activation session transformed my home. My family noticed the energy shift immediately. My daughter, who struggled with anxiety, began sleeping through the night for the first time in months.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <span class="author-name">Linda R.</span>
+                            <span class="author-detail">Tucson, AZ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="journey-step">
-          <span class="journey-step-number">02</span>
-          <div class="journey-step-content">
-            <h3 class="journey-step-title">Intention Setting</h3>
-            <p class="journey-step-text">
-              Master Takahashi will ask a single question: "What have you come
-              to release?" Answer honestly, or do not answer at all. The light
-              knows what the mouth cannot say.
-            </p>
-          </div>
+    </section>
+
+    <section id="journey" class="journey-section">
+        <div class="section-container">
+            <div class="section-overline">The Journey</div>
+            <h2 class="section-title">What to Expect</h2>
+            <div class="journey-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>01 &mdash; Consultation</h3>
+                        <p>We begin with a deep conversation about your intentions, health history, and energetic sensitivities. This helps me understand which crystals will serve you best.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>02 &mdash; Stone Selection</h3>
+                        <p>Together, we select from over 50 crystal varieties. I'll guide you to feel each stone's energy and identify which ones resonate with your current needs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>03 &mdash; The Session</h3>
+                        <p>Lying comfortably, you'll experience the subtle warmth and vibration of crystals placed on and around your body. Many report seeing colors or feeling waves of peace.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>04 &mdash; Integration</h3>
+                        <p>After the session, we discuss your experience. I provide guidance on crystal care, home practices, and recommend stones for continued healing between sessions.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="journey-step">
-          <span class="journey-step-number">03</span>
-          <div class="journey-step-content">
-            <h3 class="journey-step-title">The Channeling</h3>
-            <p class="journey-step-text">
-              You will be seated or lying down. The healer stands before you,
-              palms raised. Light is transmitted. You may feel warmth,
-              tingling, emotional release, or nothing at all. All responses
-              are valid. All responses are the light working.
-            </p>
-          </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-overline">Connect</div>
+            <h2 class="section-title">Begin Your Journey</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-block">
+                        <h3>Location</h3>
+                        <p>456 Mineral Lane<br>Tucson, AZ 85701</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Hours</h3>
+                        <p>Tuesday &ndash; Saturday<br>10:00 AM &ndash; 6:00 PM</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Contact</h3>
+                        <p>hello@gemmacrystalwell.com<br>(520) 555-0147</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="intent">Your Intention</label>
+                        <select id="intent" name="intent">
+                            <option value="">Select a focus</option>
+                            <option value="grid">Crystal Grid Layout</option>
+                            <option value="meditation">Stone Meditation</option>
+                            <option value="activation">Grid Activation</option>
+                            <option value="consultation">General Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
         </div>
-        <div class="journey-step">
-          <span class="journey-step-number">04</span>
-          <div class="journey-step-content">
-            <h3 class="journey-step-title">Integration</h3>
-            <p class="journey-step-text">
-              After the channeling, remain still for as long as you need.
-              Water is available. The healer will not rush you. Some find
-              clarity immediately; others carry the light with them for days
-              before its meaning becomes clear.
-            </p>
-          </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">Gemma Crystalwell</div>
+            <div class="footer-tagline">Ancient Stones, Living Energy</div>
+            <div class="footer-address">456 Mineral Lane, Tucson, AZ 85701</div>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- QUOTE — Japanese Calligraphy Style, Vertical -->
-  <section class="quote" id="quote">
-    <div class="quote-vertical">
-      <span class="quote-jp">浄霊</span>
-      <span class="quote-en">"The light does not heal.<br>The light purifies.<br>And what is pure<br>heals itself."</span>
-    </div>
-    <span class="quote-source">— Mokichi Okada</span>
-  </section>
-
-  <!-- ARRIVAL — Minimal -->
-  <section class="arrival" id="arrival">
-    <div class="arrival-inner">
-      <span class="arrival-label">Arrival</span>
-      <a href="mailto:aiko@johrei.jp" class="arrival-link">aiko@johrei.jp</a>
-      <address class="arrival-address">
-        555 Zen Garden Way<br>
-        Kyoto, Japan 604-8006
-      </address>
-      <div class="arrival-hours">
-        <span class="arrival-hours-label">Office Hours</span>
-        <p class="arrival-hours-text">
-          Tuesday — Saturday<br>
-          9:00 am — 5:00 pm<br>
-          <span class="arrival-hours-note">By appointment only</span>
-        </p>
-      </div>
-      <div class="arrival-bring">
-        <span class="arrival-bring-label">What to Bring</span>
-        <p class="arrival-bring-text">
-          Comfortable, loose-fitting clothing<br>
-          A small blanket or shawl for warmth<br>
-          An open heart — nothing more is required
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER — Breathing Gold Dot -->
-  <footer class="footer-breath">
-    <span class="footer-dot"></span>
-  </footer>
-
-  <script src="script.js"></script>
-
-<footer class="site-footer">
-  <p>&copy; Norman James</p>
-  <p>made with love ❤️ by Empathy Studio</p>
-</footer>
+    <script src="script.js"></script>
 </body>
 </html>

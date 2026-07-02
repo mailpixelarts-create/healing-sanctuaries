@@ -1,99 +1,50 @@
-Prompt 1: A sacred altar covered in traditional Mexican healing herbs, copal incense rising in swirling patterns, surrounded by black and white candles and fresh marigolds
-Style: Maximalist collage, Mexican folk art
-Mood: Sacred, ancestral, reverent
-Lighting: Warm candlelight with golden shadows
+# Image Prompts for Meditation Website
+# 20 prompts for generating images
 
-Prompt 2: Curandera hands preparing a remedies table with mortar and pestle, dried herbs, and ritual objects scattered across weathered wooden surface
-Style: Documentary photography, warm earth tones
-Mood: Intimate, healing, traditional
-Lighting: Soft natural light filtering through curtains
+1. Minimalist meditation portrait, elderly Asian monk in simple robes, soft natural light, wabi-sabi aesthetic, film grain texture, shallow depth of field, serene expression
 
-Prompt 3: A healing ceremony in progress with participants seated in a circle, candles forming a protective ring, copal smoke filling the room
-Style: Cinematic wide shot, Mexican muralism influence
-Mood: Communal, sacred, transformative
-Lighting: Flickering firelight with warm amber glow
+2. Ancient Japanese temple garden, morning mist, stone lanterns, raked gravel, bamboo grove, zen atmosphere, muted earth tones
 
-Prompt 4: Close-up of traditional Mexican healing crystals and sacred objects arranged on embroidered cloth with intricate patterns
-Style: Still life photography, maximalist composition
-Mood: Mystical, grounded, ancient
-Lighting: Soft diffused light with earthy warmth
+3. Close-up of hands in meditation mudra, weathered skin, soft lighting, minimal composition, warm tones, intimate portrait detail
 
-Prompt 5: A dimly lit room with walls covered in religious icons, old photographs, and healing talismans, creating a layered altar space
-Style: Environmental portrait, vintage aesthetic
-Mood: Devotional, layered, intimate
-Lighting: Candlelight creating deep shadows
+4. Zen garden with single stone, perfectly raked concentric circles, morning dew, minimalist composition, black and white photography
 
-Prompt 6: Hands weaving a traditional Mexican healing bundle with herbs, feathers, and colorful threads on a rustic wooden table
-Style: Macro photography, textile focus
-Mood: Meditative, purposeful, tactile
-Lighting: Natural daylight with warm undertones
+5. Meditation hall interior, tatami mats, shoji screens, natural wood, soft diffused light, empty space, peaceful atmosphere
 
-Prompt 7: A curanderismo ceremony taking place in a garden filled with medicinal plants, participants gathered around a central fire
-Style: Environmental photography, lush greens and earth tones
-Mood: Natural, connected, healing
-Lighting: Golden hour sunlight filtering through foliage
+6. Mountain landscape at dawn, misty peaks, solitary figure in distance, vast emptiness, wabi-sabi imperfection, film photography aesthetic
 
-Prompt 8: Traditional Mexican healing pottery and vessels filled with herbal preparations, arranged on adobe shelf
-Style: Still life, folk art documentation
-Mood: Authentic, earthy, timeless
-Lighting: Warm afternoon light through window
+7. Tea ceremony setup, rustic ceramic bowl, simple arrangement, natural materials, soft focus, warm earth tones, intimate still life
 
-Prompt 9: A healing space with walls painted in warm terracotta, hung with embroidered textiles and sacred imagery
-Style: Interior photography, warm color palette
-Mood: Welcoming, protective, warm
-Lighting: Soft ambient light with candle accents
+8. Walking path through bamboo forest, dappled sunlight, single figure in meditation, sense of movement and stillness combined
 
-Prompt 10: Copal incense burning in a ceramic censer, smoke rising through shafts of light in a healing room
-Style: Atmospheric photography, smoke trails
-Mood: Purifying, sacred, ceremonial
-Lighting: Dramatic light beams through smoke
+9. Breathing exercise visualization, abstract mist patterns, soft gradients, minimal design, zen color palette
 
-Prompt 11: A traditional Mexican medicine wheel laid out with herbs, stones, and candles in cardinal directions
-Style: Overhead shot, ceremonial composition
-Mood: Balanced, intentional, cosmic
-Lighting: Balanced natural light
+10. Body scan meditation concept, human silhouette with energy points, soft glow, minimalist illustration style
 
-Prompt 12: Close-up of hands blessing healing water in traditional Mexican ceramic vessel with flowers floating on surface
-Style: Detail photography, soft focus
-Mood: Gentle, purifying, sacred
-Lighting: Soft reflected light
+11. Temple bell detail, weathered bronze, patina texture, simple composition, dramatic lighting, symbol of mindfulness
 
-Prompt 13: A healing room filled with hanging dried herbs, bundles of lavender, and traditional remedies
-Style: Environmental photography, abundant composition
-Mood: Abundant, natural, grounded
-Lighting: Warm filtered daylight
+12. Meditation cushion (zafu) on wooden floor, natural light, minimal interior, wabi-sabi aesthetic, imperfect beauty
 
-Prompt 14: A curandera performing a limpia cleansing with eggs and herbs over a client, traditional imagery in background
-Style: Documentary photography, intimate moment
-Mood: Transformative, protective, traditional
-Lighting: Soft natural light
+13. Lotus flower emerging from water, morning dew, soft focus, symbol of enlightenment, natural imperfection
 
-Prompt 15: Traditional Mexican Day of the Dead altar adapted for healing, with photographs, candles, and offerings
-Style: Cultural photography, colorful maximalism
-Mood: Ancestral, honoring, celebratory
-Lighting: Warm candlelight glow
+14. Stone pathway through garden, stepping stones, moss growing between, passage of time, wabi-sabi philosophy
 
-Prompt 16: A collection of traditional healing tools: obsidian mirrors, ceramic figures, herbal bundles on embroidered textile
-Style: Still life, museum quality
-Mood: Precious, ancient, powerful
-Lighting: Controlled studio lighting
+15. Incense smoke rising, soft curves against dark background, ephemeral beauty, mindfulness symbol
 
-Prompt 17: A healing ceremony at twilight with participants holding candles, traditional Mexican architecture in background
-Style: Atmospheric photography, evening mood
-Mood: Reverent, communal, mystical
-Lighting: Twilight blue with warm candlelight
+16. Calligraphy brush strokes, zen circle (ensō), ink on paper, imperfect perfection, meditation in motion
 
-Prompt 18: Hands preparing traditional Mexican healing food remedies with fresh ingredients and herbs
-Style: Food photography, documentary
-Mood: Nourishing, wholesome, traditional
-Lighting: Natural kitchen light
+17. Sunrise over Japanese garden, golden hour light, long shadows, new day, presence and awareness
 
-Prompt 19: A sacred healing space with woven tapestries depicting traditional Mexican healing symbols and imagery
-Style: Textile photography, cultural documentation
-Mood: Storytelling, protective, ancestral
-Lighting: Warm directional light
+18. Water droplet on leaf, macro photography, moment of stillness, reflection, mindfulness in nature
 
-Prompt 20: Final healing blessing with copal smoke enveloping participants, traditional Mexican healing imagery throughout
-Style: Cinematic wide shot, atmospheric
-Mood: Transcendent, complete, sacred
-Lighting: Dramatic smoke-filled light
+19. Empty meditation space, minimalist room, single cushion, natural light, void as potential, zen aesthetics
+
+20. Hands holding prayer beads, weathered wood texture, simple rings, meditation tool, intimate detail shot
+
+# Style Notes:
+- All images should have film grain texture overlay
+- Muted color palette: earth tones, soft whites, deep blacks
+- Shallow depth of field where appropriate
+- Wabi-sabi aesthetic: imperfect, incomplete, transient beauty
+- Natural lighting preferred
+- Minimal composition with negative space

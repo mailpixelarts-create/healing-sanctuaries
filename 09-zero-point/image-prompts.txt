@@ -1,99 +1,62 @@
-Prompt 1: Deep ocean abyss with single bioluminescent creature glowing in vast darkness
-Style: Underwater photography, deep sea
-Mood: Isolated, profound, mysterious
-Lighting: Single bioluminescent glow
+ZERO POINT — Image Prompts
+================================
 
-Prompt 2: Person floating in zero gravity underwater, blue void surrounding them
-Style: Conceptual photography, aquatic
-Mood: Weightless, suspended, peaceful
-Lighting: Diffused deep blue
+1. Hero Background
+   "Dark green matrix code rain falling on black background, digital typography, cyberpunk aesthetic, glowing green characters, high contrast, cinematic, 4K"
 
-Prompt 3: Cosmic underwater scene merging ocean depths with starfield
-Style: Digital art photography, cosmic
-Mood: Infinite, connected, vast
-Lighting: Stellar points in blue void
+2. Dr. Wei Portrait
+   "Portrait of an elderly Chinese acupuncturist, serene expression, traditional robes, soft green lighting, professional studio shot, cinematic color grading, 8K"
 
-Prompt 4: Bioluminescent jellyfish pulsing light in deep blue darkness
-Style: Nature photography, deep sea
-Mood: Ethereal, living light, beautiful
-Lighting: Internal bioluminescence
+3. Acupuncture Needles Close-up
+   "Extreme close-up of fine acupuncture needles on sterile surface, metallic gleam, shallow depth of field, medical precision, dark moody lighting, macro photography"
 
-Prompt 5: Vast empty underwater canyon, deep blue fading to black
-Style: Landscape photography, aquatic
-Mood: Emptiness, scale, profound
-Lighting: Dim blue ambient
+4. Moxibustion Steam
+   "Smoldering moxa stick releasing aromatic smoke, warm orange glow against dark background, atmospheric, ritualistic, cinematic lighting, 4K"
 
-Prompt 6: Person in deep meditation sinking into blue void, peaceful expression
-Style: Portrait photography, conceptual
-Mood: Surrendered, peaceful, deep
-Lighting: Soft blue glow
+5. Cupping Therapy
+   "Glass cups on patient's back, circular marks visible, therapeutic atmosphere, soft lighting, clinical yet ancient aesthetic, professional photography"
 
-Prompt 7: Deep ocean trench with minimal life, absolute darkness beyond
-Style: Documentary photography, extreme
-Mood: Frontier, mysterious, hostile yet beautiful
-Lighting: Submersible lights only
+6. Meridian Diagram
+   "Anatomical meridian map overlay on human body, glowing green lines on dark skin, futuristic medical visualization, data visualization aesthetic, 8K"
 
-Prompt 8: Bioluminescent plankton creating galaxy-like patterns in dark water
-Style: Long exposure photography, magical
-Mood: Cosmic, beautiful, alive
-Lighting: Scattered bioluminescence
+7. Beijing Clinic Exterior
+   "Traditional Chinese medicine clinic facade at night, neon signage in green, rain-slicked streets, cyberpunk meets ancient, cinematic wide shot"
 
-Prompt 9: Person floating face down in dark water, peaceful surrender
-Style: Artistic photography, vulnerable
-Mood: Release, trust, deep peace
-Lighting: Minimal surface light
+8. Treatment Room
+   "Minimalist acupuncture treatment room, clean lines, green accent lighting, single treatment table, professional medical space, architectural photography"
 
-Prompt 10: Deep blue gradient from surface to abyss, vertical composition
-Style: Abstract photography, minimal
-Mood: Depth, descent, infinite
-Lighting: Graduated blue light
+9. Needle Insertion Detail
+   "Precision needle insertion between fingers, human hand, delicate technique, soft focus background, medical expertise, warm lighting, 4K"
 
-Prompt 11: Single point of light in vast underwater darkness, distant creature
-Style: Minimalist photography, scale
-Mood: Lonely yet beautiful, vast
-Lighting: Distant bioluminescence
+10. Qi Flow Visualization
+    "Abstract visualization of qi energy flowing through body, green luminous streams, dark background, digital art, data visualization style"
 
-Prompt 12: Underwater cave entrance opening to deeper blue void
-Style: Architectural photography, natural
-Mood: Threshold, mystery, invitation
-Lighting: Light from behind
+11. Herbal Medicine Cabinet
+    "Traditional Chinese medicine herbal cabinet, hundreds of small drawers, ancient wood, warm lighting, cultural heritage, museum quality photography"
 
-Prompt 13: Person's hand reaching toward bioluminescent light in darkness
-Style: Conceptual photography, reaching
-Mood: Yearning, connection, gentle
-Lighting: Soft bioluminescent glow
+12. Pulse Diagnosis
+    "Doctor's fingers on patient's wrist, pulse diagnosis technique, intimate moment, soft lighting, professional medical photography, 8K"
 
-Prompt 14: Cosmic underwater scene with nebula colors in deep water
-Style: Digital photography, cosmic aquatic
-Mood: Otherworldly, beautiful, vast
-Lighting: Nebula-like illumination
+13. Patient Journey Diagram
+    "Infographic showing patient journey from consultation to treatment, minimal green lines on black, data visualization, Swiss design aesthetic"
 
-Prompt 15: Deep sea vent with life emerging from darkness, warm contrast
-Style: Nature photography, discovery
-Mood: Life from void, resilient, beautiful
-Lighting: Warm vent light
+14. Acupuncture Point Map
+    "Detailed acupuncture point illustration, hundreds of numbered points, medical diagram, clean lines, educational, green on black, 4K"
 
-Prompt 16: Person floating suspended in water column, blue all around
-Style: Underwater portrait, weightless
-Mood: Free, suspended, peaceful
-Lighting: Diffused blue ambient
+15. Healing Hands
+    "Elderly practitioner's hands, weathered but precise, holding acupuncture needles, soft green backlighting, portrait of expertise, cinematic"
 
-Prompt 17: Bioluminescent deep sea creature in extreme close-up, alien beauty
-Style: Macro photography, alien
-Mood: Fascinating, otherworldly, precious
-Lighting: Internal glow
+16. Modern Clinic Interior
+    "Contemporary acupuncture clinic reception, minimalist design, green accent wall, waiting area, professional medical interior, architectural photography"
 
-Prompt 18: Vast empty ocean space with single distant light, scale emphasis
-Style: Minimalist photography, oceanic
-Mood: Insignificance yet connection, vast
-Lighting: Distant single point
+17. Treatment Preparation
+    "Sterile needles arranged in precise pattern on white tray, medical preparation, clean, organized, professional healthcare, macro photography"
 
-Prompt 19: Person meditating in underwater environment, bubbles rising
-Style: Conceptual photography, surreal
-Mood: Inner peace, depth, connection
-Lighting: Soft blue with bubble reflections
+18. Night Practice
+    "Acupuncture clinic at night, single green neon light, rain on windows, atmospheric, cyberpunk interior, cinematic mood lighting"
 
-Prompt 20: Final image of surfacing from deep blue into light, transformation
-Style: Cinematic photography, ascending
-Mood: Emergence, rebirth, light
-Lighting: Gradual brightening from blue
+19. Patient Testimonial Scene
+    "Serene patient lying on treatment table, needles in place, peaceful expression, soft green ambient light, healing atmosphere, 8K"
+
+20. Brand Identity
+    "ZERO POINT logo, minimalist typography, green on black, Swiss precision design, medical authority, corporate identity, vector clean lines"

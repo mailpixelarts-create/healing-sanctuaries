@@ -1,586 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geomancy — Listening to the Wisdom of the Land</title>
-  <meta name="description" content="Earth energy healing through ley lines, sacred sites, and power places. Earth Keeper Rowan Stonecaller in Glastonbury, Somerset.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qi Gong — Move the Qi, Move the Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Scroll Marker -->
-  <div class="scroll-marker" id="scrollMarker">
-    <span class="scroll-marker__coord" id="scrollCoord">LAT 51.1485° N</span>
-    <span class="scroll-marker__line"></span>
-    <span class="scroll-marker__depth" id="scrollDepth">0m</span>
-  </div>
-
-  <!-- Earth Texture Canvas -->
-  <canvas id="earthCanvas"></canvas>
-
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="hero">
-    <div class="hero__texture"></div>
-    <div class="hero__overlay"></div>
-    <div class="hero__coordinates">
-      <span class="hero__coord-item">51.1485° N</span>
-      <span class="hero__coord-sep">/</span>
-      <span class="hero__coord-item">2.5953° W</span>
-      <span class="hero__coord-sep">/</span>
-      <span class="hero__coord-item">LEY-072</span>
+    <div class="preloader" id="preloader">
+        <div class="preloader-text">气</div>
     </div>
-    <div class="hero__content">
-      <p class="hero__pre fade-from-earth">Earth Energy Healing</p>
-      <h1 class="hero__title fade-from-earth">
-        <span class="hero__title-line">Geomancy</span>
-      </h1>
-      <p class="hero__tagline fade-from-earth">Listening to the Wisdom of the Land</p>
-    </div>
-    <div class="hero__ley-lines">
-      <svg class="hero__ley-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <line x1="0" y1="30" x2="100" y2="70" class="hero__ley-line"/>
-        <line x1="20" y1="0" x2="80" y2="100" class="hero__ley-line hero__ley-line--secondary"/>
-        <line x1="100" y1="20" x2="0" y2="80" class="hero__ley-line hero__ley-line--tertiary"/>
-      </svg>
-    </div>
-    <div class="hero__scroll-hint">
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- ===================== NAVIGATION ===================== -->
-  <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#about" class="nav__label">
-        <span class="nav__num">01</span>
-        <span class="nav__text">Origin</span>
-        <span class="nav__coord">51.14°N</span>
-      </a>
-      <a href="#sacred" class="nav__label">
-        <span class="nav__num">02</span>
-        <span class="nav__text">Sacred Art</span>
-        <span class="nav__coord">LEY-072</span>
-      </a>
-      <a href="#philosophy" class="nav__label">
-        <span class="nav__num">03</span>
-        <span class="nav__text">Philosophy</span>
-        <span class="nav__coord">EARTH</span>
-      </a>
-      <a href="#testimonials" class="nav__label">
-        <span class="nav__num">04</span>
-        <span class="nav__text">Voices</span>
-        <span class="nav__coord">3.2KYa</span>
-      </a>
-      <a href="#journey" class="nav__label">
-        <span class="nav__num">05</span>
-        <span class="nav__text">Journey</span>
-        <span class="nav__coord">FIRST</span>
-      </a>
-      <a href="#arrival" class="nav__label">
-        <span class="nav__num">06</span>
-        <span class="nav__text">Arrival</span>
-        <span class="nav__coord">BA6 9AA</span>
-      </a>
-    </div>
-  </nav>
+    <nav class="nav-circle" id="nav">
+        <div class="nav-ring">
+            <a href="#about" class="nav-item" style="--i:0">About</a>
+            <a href="#brocades" class="nav-item" style="--i:1">8 Brocades</a>
+            <a href="#sacred" class="nav-item" style="--i:2">Sacred Art</a>
+            <a href="#philosophy" class="nav-item" style="--i:3">Philosophy</a>
+            <a href="#testimonials" class="nav-item" style="--i:4">Stories</a>
+            <a href="#journey" class="nav-item" style="--i:5">Journey</a>
+            <a href="#contact" class="nav-item" style="--i:6">Contact</a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
-  <!-- ===================== ABOUT ===================== -->
-  <section class="about" id="about">
-    <div class="about__bg-texture"></div>
-    <div class="about__inner">
-      <div class="about__label surface-from-earth">01 / Origin</div>
-      <h2 class="about__heading surface-from-earth">The Land<br>Remembers</h2>
-      <div class="about__columns">
-        <p class="about__text surface-from-earth">
-          Earth Keeper Rowan has spent 30 years mapping and working with the earth's energy lines, 
-          sacred sites, and power places. Geomancy is the art of reading and harmonizing the 
-          energy of the land itself — a practice as old as the stones.
-        </p>
-        <p class="about__text surface-from-earth">
-          Every stone holds memory. Every ley line carries ancient wisdom. The earth speaks to those 
-          who know how to listen — through the subtle vibrations beneath our feet, the alignment of 
-          standing stones, the resonance of sacred geometry written into the landscape over millennia.
-        </p>
-      </div>
-      <div class="about__details surface-from-earth">
-        <div class="about__detail">
-          <span class="about__detail-num">30</span>
-          <span class="about__detail-label">Years studying earth<br>energy patterns</span>
+    <section class="hero" id="hero">
+        <canvas id="physicsCanvas"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="qi-word" data-physics="true">QI</span>
+            </h1>
+            <p class="hero-tagline">Move the Qi, Move the Life</p>
+            <p class="hero-sub">Ancient wisdom for modern being</p>
         </div>
-        <div class="about__detail">
-          <span class="about__detail-num">142</span>
-          <span class="about__detail-label">Sacred sites mapped<br>across Britain</span>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
         </div>
-        <div class="about__detail">
-          <span class="about__detail-num">3,200</span>
-          <span class="about__detail-label">Years of earth memory<br>in the stones</span>
-        </div>
-      </div>
-      <div class="about__notes surface-from-earth">
-        <div class="about__note">
-          <span class="about__note-marker">+</span>
-          <span class="about__note-text">ley line crossing detected — primary node</span>
-        </div>
-        <div class="about__note">
-          <span class="about__note-marker">+</span>
-          <span class="about__note-text">earth acupuncture point — quartz cluster beneath</span>
-        </div>
-        <div class="about__note">
-          <span class="about__note-marker">+</span>
-          <span class="about__note-text">site clearing completed — stagnant energy released</span>
-        </div>
-        <div class="about__note">
-          <span class="about__note-marker">+</span>
-          <span class="about__note-text">ley line realigned — energy flow restored to 94%</span>
-        </div>
-      </div>
-      <div class="about__keeper surface-from-earth">
-        <div class="about__keeper-line"></div>
-        <div>
-          <span class="about__keeper-name">Earth Keeper Rowan Stonecaller</span>
-          <span class="about__keeper-title">Geomancer & Sacred Site Guardian</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================== SACRED ART ===================== -->
-  <section class="sacred" id="sacred">
-    <div class="sacred__inner">
-      <div class="sacred__label surface-from-earth">02 / Sacred Art</div>
-      <h2 class="sacred__heading surface-from-earth">Three Earth<br>Practices</h2>
-      <p class="sacred__intro surface-from-earth">
-        Each practice is a conversation with the land — a way of listening to what the earth has 
-        carried in its body for thousands of years. These are not abstractions. They are felt in 
-        the body, measured in the soil, visible in the alignment of stone.
-      </p>
-
-      <div class="sacred__grid">
-        <!-- Practice 1 -->
-        <div class="sacred__card surface-from-earth">
-          <div class="sacred__diagram">
-            <svg class="sacred__svg" viewBox="0 0 200 200">
-              <circle cx="100" cy="100" r="80" class="sacred__circle"/>
-              <circle cx="100" cy="100" r="50" class="sacred__circle sacred__circle--inner"/>
-              <circle cx="100" cy="100" r="20" class="sacred__circle sacred__circle--core"/>
-              <line x1="100" y1="20" x2="100" y2="180" class="sacred__line"/>
-              <line x1="20" y1="100" x2="180" y2="100" class="sacred__line"/>
-              <line x1="43" y1="43" x2="157" y2="157" class="sacred__line sacred__line--diag"/>
-              <line x1="157" y1="43" x2="43" y2="157" class="sacred__line sacred__line--diag"/>
-              <circle cx="100" cy="20" r="4" class="sacred__node"/>
-              <circle cx="100" cy="180" r="4" class="sacred__node"/>
-              <circle cx="20" cy="100" r="4" class="sacred__node"/>
-              <circle cx="180" cy="100" r="4" class="sacred__node"/>
-            </svg>
-            <span class="sacred__diagram-label">LEY-072 / PRIMARY</span>
-          </div>
-          <h3 class="sacred__card-title">Ley Line Alignment</h3>
-          <p class="sacred__card-text">Tuning personal energy to the earth's sacred geometry.</p>
-          <p class="sacred__card-desc">Using dowsing, body sensing, and ancient mapping techniques, we locate the invisible rivers of energy that flow beneath the surface. Once found, your body's energy field is tuned to these natural frequencies — like an instrument brought into harmony with the earth's own song.</p>
+    <section class="section about" id="about">
+        <div class="section-inner">
+            <div class="section-label">01 — About</div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">The Master<br>Within</h2>
+                    <p class="body-text">Master Li Junfeng has devoted four decades to the cultivation of Qi. His practice bridges ancient Daoist traditions with contemporary understanding of energy and movement.</p>
+                    <p class="body-text">Through precise, flowing movements and deep meditative states, Master Li guides practitioners to rediscover the innate wisdom of their bodies. Each session is a journey inward — a return to the source of vitality.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Years of Practice</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Sacred Arts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Qi Flow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-frame">
+                        <div class="frame-corner frame-tl"></div>
+                        <div class="frame-corner frame-tr"></div>
+                        <div class="frame-corner frame-bl"></div>
+                        <div class="frame-corner frame-br"></div>
+                        <div class="visual-placeholder">
+                            <span class="visual-char">气</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Practice 2 -->
-        <div class="sacred__card surface-from-earth">
-          <div class="sacred__diagram">
-            <svg class="sacred__svg" viewBox="0 0 200 200">
-              <polygon points="100,20 180,80 150,170 50,170 20,80" class="sacred__polygon"/>
-              <polygon points="100,50 155,85 140,145 60,145 45,85" class="sacred__polygon sacred__polygon--inner"/>
-              <circle cx="100" cy="100" r="15" class="sacred__circle sacred__circle--core"/>
-              <circle cx="100" cy="20" r="5" class="sacred__node sacred__node--active"/>
-              <circle cx="180" cy="80" r="5" class="sacred__node sacred__node--active"/>
-              <circle cx="150" cy="170" r="5" class="sacred__node sacred__node--active"/>
-              <circle cx="50" cy="170" r="5" class="sacred__node sacred__node--active"/>
-              <circle cx="20" cy="80" r="5" class="sacred__node sacred__node--active"/>
-            </svg>
-            <span class="sacred__diagram-label">CLEAR / CEREMONY</span>
-          </div>
-          <h3 class="sacred__card-title">Site Clearing Ceremony</h3>
-          <p class="sacred__card-text">Releasing stagnant energy from land and sacred spaces.</p>
-          <p class="sacred__card-desc">Buildings, land, and waterways accumulate energetic residue — grief, conflict, neglect. Through ceremony involving sound, intention, and specific mineral placements, we invite the land to release what it has been holding. The clearing is not forced. It is an invitation the earth accepts on its own terms.</p>
+    <section class="section brocades" id="brocades">
+        <div class="section-inner">
+            <div class="section-label">02 — The 8 Brocades</div>
+            <h2 class="section-title">Eight Movements,<br>One Flow</h2>
+            <p class="body-text max-w">Click each movement to see it performed. Follow along with the silhouette.</p>
+            
+            <div class="brocades-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="brocade-item" data-movement="1">
+                    <div class="brocade-number">01</div>
+                    <div class="brocade-content">
+                        <h3>Two Hands Hold<br>Up the Heavens</h3>
+                        <p>Stretches the triple burner, regulates qi flow throughout the entire body.</p>
+                    </div>
+                    <div class="brocade-silhouette" data-move="hands-up">
+                        <svg viewBox="0 0 120 200" class="silhouette-svg">
+                            <g class="silhouette-group">
+                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
+                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="30" y2="100" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="90" y2="100" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="brocade-item" data-movement="2">
+                    <div class="brocade-number">02</div>
+                    <div class="brocade-content">
+                        <h3>Drawing the Bow<br>to Shoot the Hawk</h3>
+                        <p>Opens the chest, strengthens the kidneys, and improves concentration.</p>
+                    </div>
+                    <div class="brocade-silhouette" data-move="bow-draw">
+                        <svg viewBox="0 0 120 200" class="silhouette-svg">
+                            <g class="silhouette-group">
+                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
+                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="20" y2="70" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="100" y2="60" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="35" y2="180" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="85" y2="180" stroke="currentColor" stroke-width="3"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="brocade-item" data-movement="3">
+                    <div class="brocade-number">03</div>
+                    <div class="brocade-content">
+                        <h3>Separate Heaven<br>and Earth</h3>
+                        <p>Regulates the spleen and stomach, improves digestion and metabolism.</p>
+                    </div>
+                    <div class="brocade-silhouette" data-move="heaven-earth">
+                        <svg viewBox="0 0 120 200" class="silhouette-svg">
+                            <g class="silhouette-group">
+                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
+                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="30" y2="30" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="90" y2="140" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="brocade-item" data-movement="4">
+                    <div class="brocade-number">04</div>
+                    <div class="brocade-content">
+                        <h3>Wise Owl Gazes<br>Backward</h3>
+                        <p>Releases neck tension, stimulates the nervous system, and calms the mind.</p>
+                    </div>
+                    <div class="brocade-silhouette" data-move="owl-gaze">
+                        <svg viewBox="0 0 120 200" class="silhouette-svg">
+                            <g class="silhouette-group">
+                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
+                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="35" y2="90" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="85" y2="90" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="brocade-item" data-movement="5">
+                    <div class="brocade-number">05</div>
+                    <div class="brocade-content">
+                        <h3>Swing the Head<br>and Shake the Tail</h3>
+                        <p>Releases heart fire, calms the spirit, and improves spinal flexibility.</p>
+                    </div>
+                    <div class="brocade-silhouette" data-move="swing-head">
+                        <svg viewBox="0 0 120 200" class="silhouette-svg">
+                            <g class="silhouette-group">
+                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
+                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="30" y2="80" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="90" y2="80" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="30" y2="180" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="90" y2="180" stroke="currentColor" stroke-width="3"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="brocade-item" data-movement="6">
+                    <div class="brocade-number">06</div>
+                    <div class="brocade-content">
+                        <h3>Two Hands Hold<br>the Feet</h3>
+                        <p>Strengthens the kidneys, tones the lower back, and improves flexibility.</p>
+                    </div>
+                    <div class="brocade-silhouette" data-move="hold-feet">
+                        <svg viewBox="0 0 120 200" class="silhouette-svg">
+                            <g class="silhouette-group">
+                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
+                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="40" y2="150" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="80" y2="150" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="45" y2="180" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="75" y2="180" stroke="currentColor" stroke-width="3"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="brocade-item" data-movement="7">
+                    <div class="brocade-number">07</div>
+                    <div class="brocade-content">
+                        <h3>Clench the Fists<br>and Glare Fiercely</h3>
+                        <p>Releases liver qi, strengthens muscles, and improves overall vitality.</p>
+                    </div>
+                    <div class="brocade-silhouette" data-move="clench-fists">
+                        <svg viewBox="0 0 120 200" class="silhouette-svg">
+                            <g class="silhouette-group">
+                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
+                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="30" y2="75" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="60" x2="90" y2="75" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="brocade-item" data-movement="8">
+                    <div class="brocade-number">08</div>
+                    <div class="brocade-content">
+                        <h3>Bouncing on<br>the Toes</h3>
+                        <p>Stimulates the spine, releases tension, and integrates all previous movements.</p>
+                    </div>
+                    <div class="brocade-silhouette" data-move="bounce-toes">
+                        <svg viewBox="0 0 120 200" class="silhouette-svg">
+                            <g class="silhouette-group">
+                                <circle cx="60" cy="25" r="12" fill="currentColor"/>
+                                <line x1="60" y1="37" x2="60" y2="105" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="55" x2="35" y2="85" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="55" x2="85" y2="85" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="105" x2="45" y2="175" stroke="currentColor" stroke-width="3"/>
+                                <line x1="60" y1="105" x2="75" y2="175" stroke="currentColor" stroke-width="3"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Practice 3 -->
-        <div class="sacred__card surface-from-earth">
-          <div class="sacred__diagram">
-            <svg class="sacred__svg" viewBox="0 0 200 200">
-              <rect x="40" y="40" width="120" height="120" class="sacred__rect"/>
-              <line x1="40" y1="100" x2="160" y2="100" class="sacred__line"/>
-              <line x1="100" y1="40" x2="100" y2="160" class="sacred__line"/>
-              <circle cx="70" cy="70" r="8" class="sacred__crystal"/>
-              <circle cx="130" cy="70" r="8" class="sacred__crystal"/>
-              <circle cx="70" cy="130" r="8" class="sacred__crystal"/>
-              <circle cx="130" cy="130" r="8" class="sacred__crystal"/>
-              <circle cx="100" cy="100" r="12" class="sacred__crystal sacred__crystal--center"/>
-              <line x1="70" y1="70" x2="100" y2="100" class="sacred__line sacred__line--connect"/>
-              <line x1="130" y1="70" x2="100" y2="100" class="sacred__line sacred__line--connect"/>
-              <line x1="70" y1="130" x2="100" y2="100" class="sacred__line sacred__line--connect"/>
-              <line x1="130" y1="130" x2="100" y2="100" class="sacred__line sacred__line--connect"/>
-            </svg>
-            <span class="sacred__diagram-label">ACU / POINTS-05</span>
-          </div>
-          <h3 class="sacred__card-title">Earth Acupuncture</h3>
-          <p class="sacred__card-text">Placing crystals at key points to rebalance earth energy.</p>
-          <p class="sacred__card-desc">Just as acupuncture needles activate points on the human body, crystals placed at precise earth nodes can redirect and restore energy flow across entire landscapes. Each placement is calibrated to the specific geology, water table, and ley line configuration of the site.</p>
+    <section class="section sacred" id="sacred">
+        <div class="section-inner">
+            <div class="section-label">03 — Sacred Art</div>
+            <h2 class="section-title">Three Paths<br>of Cultivation</h2>
+            
+            <div class="sacred-grid">
+                <div class="sacred-card">
+                    <div class="card-number">I</div>
+                    <h3>Standing<br>Meditation</h3>
+                    <p>Zhan Zhuang — the foundation of all Qi Gong practice. Standing like a tree, rooted yet growing. This practice builds internal awareness and cultivates the dantian.</p>
+                    <div class="card-accent"></div>
+                </div>
+                <div class="sacred-card">
+                    <div class="card-number">II</div>
+                    <h3>Silk<br>Reeling</h3>
+                    <p>Chan Si Gong — spiral movements that connect the entire body. Like unwinding silk from a cocoon, this practice reveals the hidden connections within.</p>
+                    <div class="card-accent"></div>
+                </div>
+                <div class="sacred-card">
+                    <div class="card-number">III</div>
+                    <h3>Five Animal<br>Frolics</h3>
+                    <p>Wu Qin Xi — embodying the movements of tiger, deer, monkey, bear, and crane. Each animal teaches a different quality of qi and movement.</p>
+                    <div class="card-accent"></div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="sacred__note surface-from-earth">
-        <span class="sacred__note-marker">~</span>
-        <span class="sacred__note-text">All practices begin with a site survey and are tailored to the specific energy signature of the land.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PHILOSOPHY ===================== -->
-  <section class="philosophy" id="philosophy">
-    <div class="philosophy__bg-texture"></div>
-    <div class="philosophy__inner">
-      <div class="philosophy__label surface-from-earth">03 / Philosophy</div>
-      <h2 class="philosophy__heading surface-from-earth">The Earth<br>Speaks</h2>
-      <p class="philosophy__intro surface-from-earth">
-        Geomancy is not a belief system. It is a practice rooted in direct observation — 
-        of stone, of water, of the invisible currents that shape the living landscape. 
-        These principles guide every session, every site visit, every conversation with the land.
-      </p>
-
-      <div class="philosophy__pillars">
-        <!-- Pillar 1 -->
-        <div class="philosophy__pillar surface-from-earth">
-          <div class="philosophy__pillar-num">01</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title">The Land Holds Memory</h3>
-          <p class="philosophy__pillar-text">
-            Every landscape carries an energetic record of what has happened upon it — 
-            centuries of human activity, geological shifts, water movements. This memory 
-            is not metaphorical. It is stored in the mineral composition of the soil, 
-            the crystalline structure of stone, the path of underground rivers. Reading 
-            this memory is the first act of geomancy.
-          </p>
+    <section class="section philosophy" id="philosophy">
+        <div class="section-inner">
+            <div class="section-label">04 — Philosophy</div>
+            <h2 class="section-title">The Way<br>of Qi</h2>
+            
+            <div class="philosophy-pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">道</div>
+                    <h3>The Dao</h3>
+                    <p>The natural way of the universe flows through all things. We do not create qi — we learn to move with it, to remove the obstacles that block its natural expression.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">气</div>
+                    <h3>Qi Flow</h3>
+                    <p>Qi is the fundamental life force that animates all living things. When qi flows freely, health is maintained. When qi stagnates, disease arises. Our practice cultivates flow.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">修</div>
+                    <h3>Cultivation</h3>
+                    <p>Like tending a garden, qi cultivation requires patience, consistency, and presence. Each session deepens the relationship between mind, body, and spirit.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">和</div>
+                    <h3>Harmony</h3>
+                    <p>The goal is not mastery over nature, but harmony with it. We seek balance between yin and yang, effort and surrender, movement and stillness.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">生</div>
+                    <h3>Vitality</h3>
+                    <p>True vitality comes not from external stimulation but from internal cultivation. The qi gong practitioner radiates health from within, naturally and effortlessly.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Pillar 2 -->
-        <div class="philosophy__pillar surface-from-earth">
-          <div class="philosophy__pillar-num">02</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title">Energy Follows Geometry</h3>
-          <p class="philosophy__pillar-text">
-            The earth organizes its energy along precise geometric patterns — ley lines, 
-            sacred crossings, grid points that mirror the crystalline structure of quartz 
-            and the hexagonal patterns of basalt columns. When we understand this geometry, 
-            we can work with the earth's natural flow rather than against it. Alignment 
-            is not control. It is cooperation.
-          </p>
+    <section class="section testimonials" id="testimonials">
+        <div class="section-inner">
+            <div class="section-label">05 — Stories</div>
+            <h2 class="section-title">Voices from<br>the Practice</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">After years of chronic pain, Master Li's Qi Gong sessions gave me back my life. The movements are gentle yet powerful. I feel younger than I have in decades.</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Sarah Chen</span>
+                        <span class="author-detail">Practicing for 5 years</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">I came skeptical and left transformed. The standing meditation alone changed how I understand my body. Qi is not mystical — it is profoundly practical.</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Michael Torres</span>
+                        <span class="author-detail">Practicing for 3 years</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">The Five Animal Frolics brought playfulness back into my spiritual practice. Master Li teaches with such grace and humor. Every session is a gift.</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Lin Wei</span>
+                        <span class="author-detail">Practicing for 8 years</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Pillar 3 -->
-        <div class="philosophy__pillar surface-from-earth">
-          <div class="philosophy__pillar-num">03</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title">Healing Is Reciprocity</h3>
-          <p class="philosophy__pillar-text">
-            When we heal the land, the land heals us. This is not sentiment — it is physics. 
-            The human body resonates with the earth's electromagnetic field. When that field 
-            is clear and flowing, the body settles. When it is disrupted, the body 
-            responds with tension, insomnia, unease. Geomantic work restores this 
-            reciprocal relationship between body and earth.
-          </p>
+    <section class="section journey" id="journey">
+        <div class="section-inner">
+            <div class="section-label">06 — Journey</div>
+            <h2 class="section-title">What to<br>Expect</h2>
+            
+            <div class="journey-steps">
+                <div class="journey-step">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>Arrival</h3>
+                        <p>Enter the studio space. Remove your shoes. Take a moment to transition from the outside world. Feel the bamboo beneath your feet.</p>
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>Breathing</h3>
+                        <p>Begin with standing meditation. Close your eyes. Feel the breath entering and leaving the body. Let the mind settle like sediment in water.</p>
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>Movement</h3>
+                        <p>Master Li guides you through flowing movements. There is no competition, no judgment. Simply follow the breath, follow the qi.</p>
+                    </div>
+                </div>
+                <div class="journey-step">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>Integration</h3>
+                        <p>Close with standing meditation. Feel the qi circulating. Notice the subtle shifts in awareness. Carry this peace into your day.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Pillar 4 -->
-        <div class="philosophy__pillar surface-from-earth">
-          <div class="philosophy__pillar-num">04</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title"> Stones Are Witnesses</h3>
-          <p class="philosophy__pillar-text">
-            Standing stones, boundary markers, ancient cairns — these are not dead objects. 
-            They are intentional placements made by people who understood earth energy. 
-            A standing stone is a antenna. A stone circle is a instrument. Working with 
-            these ancient technologies requires reverence and precision, always asking 
-            the stone what it needs before placing anything new.
-          </p>
+    <section class="section contact" id="contact">
+        <div class="section-inner">
+            <div class="section-label">07 — Contact</div>
+            <h2 class="section-title">Begin Your<br>Journey</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-block">
+                        <h3>Location</h3>
+                        <p>200 Qi Road<br>Hangzhou, China 310000</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Hours</h3>
+                        <p>Dawn Sessions: 5:30 AM<br>Evening Sessions: 6:00 PM<br>Private by appointment</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3>Inquiries</h3>
+                        <p>qi@healersanctuary.com<br>+86 571 8888 0000</p>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <p class="cta-text">The journey of a thousand miles begins with a single step.</p>
+                    <a href="mailto:qi@healersanctuary.com" class="cta-button">Begin Practice</a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Pillar 5 -->
-        <div class="philosophy__pillar surface-from-earth">
-          <div class="philosophy__pillar-num">05</div>
-          <div class="philosophy__pillar-line"></div>
-          <h3 class="philosophy__pillar-title">Patience Is the Method</h3>
-          <p class="philosophy__pillar-text">
-            The earth does not rush. A ley line that took millennia to form cannot be 
-            realigned in an afternoon. Site clearings unfold over weeks and months as 
-            the land releases what it has held for generations. The geomancer's role 
-            is to plant the seed of change and then listen — returning, observing, 
-            adjusting with the rhythm of the earth rather than the urgency of the human.
-          </p>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">气 QI GONG</div>
+            <div class="footer-tagline">Move the Qi, Move the Life</div>
+            <div class="footer-copy">© 2026 Healing Sanctuary. All rights reserved.</div>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="testimonials" id="testimonials">
-    <div class="testimonials__inner">
-      <div class="testimonials__label surface-from-earth">04 / Voices</div>
-      <h2 class="testimonials__heading surface-from-earth">What the<br>Land Revealed</h2>
-
-      <div class="testimonials__grid">
-        <!-- Testimonial 1 -->
-        <div class="testimonials__card surface-from-earth">
-          <div class="testimonials__card-line"></div>
-          <blockquote class="testimonials__quote">
-            "After Rowan cleared our property, the change was immediate. My daughter, who had 
-            not slept through the night in two years, slept seven hours that first evening. 
-            The house felt lighter — as though something heavy had been lifted from the walls 
-            themselves. I don't fully understand how it works. I only know that it does."
-          </blockquote>
-          <div class="testimonials__author">
-            <span class="testimonials__author-name">C. Hartwell</span>
-            <span class="testimonials__author-detail">Somerset — Site Clearing</span>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="testimonials__card surface-from-earth">
-          <div class="testimonials__card-line"></div>
-          <blockquote class="testimonials__quote">
-            "I came to Rowan with chronic fatigue that no doctor could explain. During the 
-            ley line alignment session, I felt something shift in my legs — a warmth, a 
-            grounding, as if my body remembered what it felt like to stand on living earth. 
-            Over the following month, my energy returned. Not all at once, but steadily, 
-            the way daylight returns after winter."
-          </blockquote>
-          <div class="testimonials__author">
-            <span class="testimonials__author-name">M. Ashworth</span>
-            <span class="testimonials__author-detail">Glastonbury — Ley Line Alignment</span>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="testimonials__card surface-from-earth">
-          <div class="testimonials__card-line"></div>
-          <blockquote class="testimonials__quote">
-            "Our farm had been struggling for three seasons. Crops failed, animals were restless, 
-            and the water tasted wrong. Rowan walked the land with copper rods and found two 
-            severed ley lines beneath the south field. After earth acupuncture was placed, 
-            the water cleared within a week. The following harvest was the best we'd had 
-            in a decade. The land was waiting to be heard."
-          </blockquote>
-          <div class="testimonials__author">
-            <span class="testimonials__author-name">T. & L. Brennan</span>
-            <span class="testimonials__author-detail">Devon — Earth Acupuncture</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== JOURNEY ===================== -->
-  <section class="journey" id="journey">
-    <div class="journey__bg-texture"></div>
-    <div class="journey__inner">
-      <div class="journey__label surface-from-earth">05 / Journey</div>
-      <h2 class="journey__heading surface-from-earth">Your First<br>Visit</h2>
-      <p class="journey__intro surface-from-earth">
-        A geomancy session is not a treatment you receive. It is a process you enter into 
-        — with the land, with the stones, with the invisible currents that run beneath 
-        everything. Here is what to expect.
-      </p>
-
-      <div class="journey__steps">
-        <!-- Step 1 -->
-        <div class="journey__step surface-from-earth">
-          <div class="journey__step-num">
-            <span class="journey__step-num-text">I</span>
-            <div class="journey__step-line"></div>
-          </div>
-          <div class="journey__step-content">
-            <h3 class="journey__step-title">The Conversation</h3>
-            <p class="journey__step-text">
-              Before any physical work begins, we sit together and speak. I ask about your 
-              relationship to the land — where you live, what you feel when you walk outside, 
-              what the house feels like at night. You tell me about sleep, about energy, about 
-              the subtle things that don't show up on tests but live in the body. This conversation 
-              is the first act of listening.
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="journey__step surface-from-earth">
-          <div class="journey__step-num">
-            <span class="journey__step-num-text">II</span>
-            <div class="journey__step-line"></div>
-          </div>
-          <div class="journey__step-content">
-            <h3 class="journey__step-title">The Walk</h3>
-            <p class="journey__step-text">
-              We walk the land together — your garden, your home, the surrounding area. I carry 
-              dowsing rods and a compass, but the real instrument is the body. We move slowly. 
-              I ask you to notice what you notice — temperature changes, pressure shifts, places 
-              where the feet want to stop. The body knows the earth's energy before the mind 
-              does. Our job is to get the mind out of the way.
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="journey__step surface-from-earth">
-          <div class="journey__step-num">
-            <span class="journey__step-num-text">III</span>
-            <div class="journey__step-line"></div>
-          </div>
-          <div class="journey__step-content">
-            <h3 class="journey__step-title">The Reading</h3>
-            <p class="journey__step-text">
-              Using traditional geomantic methods — dowsing, body sensing, stone reading — I map 
-              the energy signature of your land. I identify ley lines, power nodes, areas of 
-              stagnation, and places where the earth's energy is distorted or blocked. This reading 
-              is documented with coordinates and notes, creating a map of the invisible landscape 
-              beneath your feet.
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="journey__step surface-from-earth">
-          <div class="journey__step-num">
-            <span class="journey__step-num-text">IV</span>
-            <div class="journey__step-line"></div>
-          </div>
-          <div class="journey__step-content">
-            <h3 class="journey__step-title">The Work</h3>
-            <p class="journey__step-text">
-              Depending on what the reading reveals, we may begin site clearing, earth acupuncture 
-              placement, or ley line tuning in this first session. Some work requires specific 
-              materials — quartz points, copper rods, mineral samples — that are selected for 
-              your site's unique geology. The work is quiet, deliberate, and always done in 
-              partnership with the land. Nothing is forced. The earth decides the pace.
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="journey__step surface-from-earth">
-          <div class="journey__step-num">
-            <span class="journey__step-num-text">V</span>
-          </div>
-          <div class="journey__step-content">
-            <h3 class="journey__step-title">The Return</h3>
-            <p class="journey__step-text">
-              After the initial session, I return in two weeks to observe how the land has responded. 
-              Earth energy work is not instant — it unfolds in its own time, like a seed 
-              germinating underground. You may notice changes in sleep, mood, or energy within days. 
-              Or the shifts may be so gradual that one morning you simply realize you feel 
-              different. Both are signs the earth is working.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="journey__note surface-from-earth">
-        <span class="journey__note-marker">+</span>
-        <span class="journey__note-text">Sessions typically last 2–3 hours. Follow-up visits are scheduled based on the land's response. No prior experience with energy work is needed — only a willingness to listen.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== QUOTE ===================== -->
-  <section class="quote" id="quote">
-    <div class="quote__bg-stone"></div>
-    <div class="quote__inner">
-      <div class="quote__line surface-from-earth"></div>
-      <blockquote class="quote__text surface-from-earth">
-        "The earth does not forget. Every footstep, every prayer, every stone placed with intention — 
-        the land remembers. To read geomancy is to remember with the earth."
-      </blockquote>
-      <div class="quote__source surface-from-earth">
-        <span class="quote__source-name">Earth Keeper Rowan Stonecaller</span>
-        <span class="quote__source-divider">—</span>
-        <span class="quote__source-title">3,200 Years of Earth Memory</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== ARRIVAL ===================== -->
-  <section class="arrival" id="arrival">
-    <div class="arrival__inner">
-      <div class="arrival__label surface-from-earth">06 / Arrival</div>
-      <h2 class="arrival__heading surface-from-earth">Find the<br>Power Place</h2>
-      <p class="arrival__intro surface-from-earth">
-        The sanctuary sits at the crossing of the St. Michael Ley Line and an ancient 
-        water vein. The land here has been held in care for three decades. Come as you are. 
-        The earth will meet you where you stand.
-      </p>
-      <div class="arrival__coords surface-from-earth">
-        <div class="arrival__coord-row">
-          <span class="arrival__coord-key">LAT</span>
-          <span class="arrival__coord-val">51.1485° N</span>
-        </div>
-        <div class="arrival__coord-row">
-          <span class="arrival__coord-key">LON</span>
-          <span class="arrival__coord-val">2.5953° W</span>
-        </div>
-        <div class="arrival__coord-row">
-          <span class="arrival__coord-key">LEY</span>
-          <span class="arrival__coord-val">St. Michael Line — Node 072</span>
-        </div>
-        <div class="arrival__coord-row">
-          <span class="arrival__coord-key">WATER</span>
-          <span class="arrival__coord-val">Underground spring — 4m depth</span>
-        </div>
-        <div class="arrival__coord-row">
-          <span class="arrival__coord-key">ADDR</span>
-          <span class="arrival__coord-val">555 Ley Line Road, Glastonbury, Somerset BA6 9AA, UK</span>
-        </div>
-      </div>
-
-      <div class="arrival__details surface-from-earth">
-        <div class="arrival__detail">
-          <span class="arrival__detail-key">SESSIONS</span>
-          <span class="arrival__detail-val">By appointment — Tuesday through Saturday</span>
-        </div>
-        <div class="arrival__detail">
-          <span class="arrival__detail-key">DURATION</span>
-          <span class="arrival__detail-val">2–3 hours for initial consultation and site work</span>
-        </div>
-        <div class="arrival__detail">
-          <span class="arrival__detail-key">WHAT TO BRING</span>
-          <span class="arrival__detail-val">Outdoor clothing, water, an open mind</span>
-        </div>
-      </div>
-
-      <form class="arrival__form surface-from-earth" onsubmit="event.preventDefault();">
-        <div class="arrival__field">
-          <label class="arrival__field-label">YOUR COORDINATES</label>
-          <input type="text" class="arrival__input" placeholder="Enter your location or postcode" required aria-label="Your location">
-        </div>
-        <button type="submit" class="arrival__btn">Align to Earth</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="footer__stone" id="footerStone">
-      <div class="footer__stone-body"></div>
-      <div class="footer__stone-shadow"></div>
-    </div>
-    <div class="footer__info">
-      <span class="footer__healer">Earth Keeper Rowan Stonecaller</span>
-      <span class="footer__address">555 Ley Line Road, Glastonbury, Somerset BA6 9AA, UK</span>
-      <span class="footer__coords">51.1485° N — 2.5953° W — LEY-072</span>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-
-<footer class="site-footer">
-  <p>&copy; Norman James</p>
-  <p>made with love ❤️ by Empathy Studio</p>
-</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,352 +1,357 @@
-document.addEventListener('DOMContentLoaded', () => {
-    initPreloader();
-    initCosmicCanvas();
-    initCounter();
-    initClock();
-    initFooterClock();
-    initFooterTime();
-    initNavigation();
-    initScrollAnimations();
-});
+/* ============================================
+   CHRONOKINESIS — Ayurveda Website Scripts
+   ============================================ */
 
-function initPreloader() {
-    const preloader = document.getElementById('preloader');
-    const counter = document.getElementById('preloaderCounter');
-    let count = 0;
+(function() {
+  'use strict';
 
-    const interval = setInterval(() => {
-        count += Math.floor(Math.random() * 5) + 1;
-        if (count >= 100) {
-            count = 100;
-            clearInterval(interval);
-            setTimeout(() => {
-                preloader.classList.add('hidden');
-            }, 500);
+  // ============================================
+  // PRAKRITI COMPASS QUIZ DATA
+  // ============================================
+
+  const quizData = [
+    {
+      question: 'When you wake in the morning, your body feels:',
+      options: [
+        { text: 'Light, restless — I rarely sleep deeply. My mind is already racing before my feet touch the floor.', dosha: 'vata' },
+        { text: 'Warm, energized — I wake with purpose and a clear agenda for the day ahead.', dosha: 'pitta' },
+        { text: 'Heavy, slow — I need time to emerge. The bed holds me and I resist the transition to waking.', dosha: 'kapha' }
+      ]
+    },
+    {
+      question: 'In moments of stress, your instinct is to:',
+      options: [
+        { text: 'Withdraw into anxious thought. I overthink, loop on possibilities, and my body tenses — especially my jaw and shoulders.', dosha: 'vata' },
+        { text: 'Take decisive action. I become sharp, focused, even confrontational. Heat rises in my chest and face.', dosha: 'pitta' },
+        { text: 'Become still. I shut down, avoid conflict, and seek comfort — food, sleep, familiar routines.', dosha: 'kapha' }
+      ]
+    },
+    {
+      question: 'Your relationship with food is best described as:',
+      options: [
+        { text: 'Irregular. I forget to eat, then eat quickly. My digestion is sensitive — bloating, gas, inconsistency.', dosha: 'vata' },
+        { text: 'Strong. I eat with appetite, digest efficiently, and become irritable when meals are delayed.', dosha: 'pitta' },
+        { text: 'Steady. I eat slowly, enjoy rich flavors, and feel heavy if I eat too much or too quickly.', dosha: 'kapha' }
+      ]
+    },
+    {
+      question: 'Your mental landscape is dominated by:',
+      options: [
+        { text: 'Movement and imagination. Ideas arrive in flashes, but follow-through requires effort. I am creative but scattered.', dosha: 'vata' },
+        { text: 'Focus and discernment. I analyze, categorize, and pursue goals with intensity. Perfectionism is my shadow.', dosha: 'pitta' },
+        { text: 'Patience and memory. I absorb information slowly but retain it deeply. Loyalty and routine anchor my mind.', dosha: 'kapha' }
+      ]
+    },
+    {
+      question: 'Your body's natural state is:',
+      options: [
+        { text: 'Lean, light, prone to dryness. My skin is cool, my appetite variable, my energy bursts then fades.', dosha: 'vata' },
+        { text: 'Medium build, warm. I radiate heat, have sharp features, and my skin flushes easily.', dosha: 'pitta' },
+        { text: 'Solid, grounded, prone to weight gain. My skin is thick and soft, my movements smooth and steady.', dosha: 'kapha' }
+      ]
+    }
+  ];
+
+  const prakritiResults = {
+    vata: {
+      type: 'Vata Constitution',
+      desc: 'Your dosha profile is predominantly Vata — the force of air and ether. You are quick-thinking, creative, and sensitive to your environment. Your healing requires grounding warmth, routine, and nourishing oils.',
+      blend: 'Vata Balancing Tea',
+      ingredients: 'Ginger · Cinnamon · Cardamom · Licorice root · Warm almond milk'
+    },
+    pitta: {
+      type: 'Pitta Constitution',
+      desc: 'Your dosha profile is predominantly Pitta — the force of fire and water. You are driven, intelligent, and passionate. Your healing requires cooling herbs, moderate activity, and emotional spaciousness.',
+      blend: 'Pitta Cooling Tea',
+      ingredients: 'Rose petals · Fennel · Coriander · Mint · A touch of raw honey'
+    },
+    kapha: {
+      type: 'Kapha Constitution',
+      desc: 'Your dosha profile is predominantly Kapha — the force of earth and water. You are steady, loyal, and deeply grounded. Your healing requires stimulating spices, movement, and light, warm foods.',
+      blend: 'Kapha Awakening Tea',
+      ingredients: 'Tulsi · Black pepper · Ginger · Clove · Lemon peel'
+    },
+    vata_pitta: {
+      type: 'Vata-Pitta Constitution',
+      desc: 'You carry a dual constitution of Vata and Pitta — a dynamic interplay of air and fire. You are both creative and driven, sensitive and passionate. Your healing requires balancing stimulation with grounding.',
+      blend: 'Dual Balance Tea',
+      ingredients: 'Chamomile · Cinnamon · Fennel · Cardamom · Raw honey'
+    },
+    pitta_kapha: {
+      type: 'Pitta-Kapha Constitution',
+      desc: 'You carry a dual constitution of Pitta and Kapha — fire tempered by earth. You are steady and determined, with deep reserves of strength. Your healing requires lightness, movement, and cooling practices.',
+      blend: 'Fire & Earth Tea',
+      ingredients: 'Rose · Coriander · Tulsi · Ginger · Lemon'
+    },
+    vata_kapha: {
+      type: 'Vata-Kapha Constitution',
+      desc: 'You carry a dual constitution of Vata and Kapha — air grounded by earth. You are thoughtful and steady, with a rich inner world. Your healing requires warmth, gentle movement, and nourishing routine.',
+      blend: 'Grounding Air Tea',
+      ingredients: 'Ginger · Cinnamon · Licorice root · Ashwagandha · Warm milk'
+    }
+  };
+
+  // ============================================
+  // PRAKRITI COMPASS — Quiz Logic
+  // ============================================
+
+  const compassQuiz = document.getElementById('compassQuiz');
+  const compassResult = document.getElementById('compassResult');
+  const restartBtn = document.getElementById('restartQuiz');
+  let currentQuestion = 0;
+  let answers = [];
+
+  function loadProgress() {
+    const saved = localStorage.getItem('chronokinesis_quiz');
+    if (saved) {
+      const data = JSON.parse(saved);
+      if (data.answers) {
+        answers = data.answers;
+        currentQuestion = data.currentQuestion || 0;
+        if (data.completed) {
+          showResult(data.dominantDosha);
+          return;
         }
-        const minutes = String(Math.floor(count / 60)).padStart(2, '0');
-        const seconds = String(count % 60).padStart(2, '0');
-        const ms = String(Math.floor(Math.random() * 99)).padStart(2, '0');
-        counter.textContent = `${minutes}:${seconds}:${ms}`;
-    }, 50);
-}
-
-function initCosmicCanvas() {
-    const canvas = document.getElementById('cosmicCanvas');
-    const ctx = canvas.getContext('2d');
-    let stars = [];
-    let shootingStars = [];
-    let animationId;
-
-    function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        initStars();
+      }
     }
+    renderQuiz();
+  }
 
-    function initStars() {
-        stars = [];
-        const numStars = Math.floor((canvas.width * canvas.height) / 3000);
-        for (let i = 0; i < numStars; i++) {
-            stars.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                size: Math.random() * 1.5 + 0.5,
-                opacity: Math.random() * 0.8 + 0.2,
-                speed: Math.random() * 0.02 + 0.01,
-                phase: Math.random() * Math.PI * 2
-            });
-        }
-    }
+  function saveProgress() {
+    localStorage.setItem('chronokinesis_quiz', JSON.stringify({
+      answers: answers,
+      currentQuestion: currentQuestion,
+      completed: false
+    }));
+  }
 
-    function drawStar(star, time) {
-        const twinkle = Math.sin(time * star.speed + star.phase) * 0.3 + 0.7;
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(245, 240, 232, ${star.opacity * twinkle})`;
-        ctx.fill();
-    }
+  function renderQuiz() {
+    compassQuiz.innerHTML = '';
+    compassResult.style.display = 'none';
+    compassQuiz.style.display = 'block';
 
-    function addShootingStar() {
-        if (Math.random() < 0.005) {
-            shootingStars.push({
-                x: Math.random() * canvas.width,
-                y: 0,
-                length: Math.random() * 100 + 50,
-                speed: Math.random() * 8 + 4,
-                angle: Math.PI / 4 + (Math.random() - 0.5) * 0.3,
-                opacity: 1
-            });
-        }
-    }
+    quizData.forEach(function(q, qIndex) {
+      const questionEl = document.createElement('div');
+      questionEl.className = 'compass__question';
+      questionEl.innerHTML = '<div class="compass__question-label">Question ' + (qIndex + 1) + ' of 5</div>' +
+        '<div class="compass__options">' +
+        q.options.map(function(opt, oIndex) {
+          var isSelected = answers[qIndex] === oIndex;
+          return '<button class="compass__option' + (isSelected ? ' selected' : '') + '" data-question="' + qIndex + '" data-option="' + oIndex + '">' + opt.text + '</button>';
+        }).join('') +
+        '</div>';
+      compassQuiz.appendChild(questionEl);
 
-    function drawShootingStar(star) {
-        const endX = star.x + Math.cos(star.angle) * star.length;
-        const endY = star.y + Math.sin(star.angle) * star.length;
-
-        const gradient = ctx.createLinearGradient(star.x, star.y, endX, endY);
-        gradient.addColorStop(0, `rgba(255, 107, 53, ${star.opacity})`);
-        gradient.addColorStop(1, `rgba(255, 107, 53, 0)`);
-
-        ctx.beginPath();
-        ctx.moveTo(star.x, star.y);
-        ctx.lineTo(endX, endY);
-        ctx.strokeStyle = gradient;
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-    }
-
-    function drawOrbitRings(time) {
-        const centerX = canvas.width * 0.7;
-        const centerY = canvas.height * 0.3;
-
-        for (let i = 1; i <= 3; i++) {
-            const radius = 100 + i * 60;
-            ctx.beginPath();
-            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-            ctx.strokeStyle = `rgba(255, 107, 53, ${0.1 - i * 0.02})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-
-            const orbitX = centerX + Math.cos(time * 0.001 * (4 - i)) * radius;
-            const orbitY = centerY + Math.sin(time * 0.001 * (4 - i)) * radius;
-
-            ctx.beginPath();
-            ctx.arc(orbitX, orbitY, 3, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255, 107, 53, ${0.5 - i * 0.1})`;
-            ctx.fill();
-        }
-    }
-
-    function animate(time) {
-        ctx.fillStyle = 'rgba(42, 42, 42, 0.1)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        stars.forEach(star => drawStar(star, time));
-        drawOrbitRings(time);
-
-        addShootingStar();
-        shootingStars = shootingStars.filter(star => {
-            star.x += Math.cos(star.angle) * star.speed;
-            star.y += Math.sin(star.angle) * star.speed;
-            star.opacity -= 0.015;
-
-            if (star.opacity > 0) {
-                drawShootingStar(star);
-                return true;
-            }
-            return false;
-        });
-
-        animationId = requestAnimationFrame(animate);
-    }
-
-    resize();
-    window.addEventListener('resize', resize);
-    animate(0);
-}
-
-function initCounter() {
-    const targetYears = 15;
-    const targetMonths = 7;
-    const targetDays = 23;
-
-    const yearsEl = document.getElementById('counterYears');
-    const monthsEl = document.getElementById('counterMonths');
-    const daysEl = document.getElementById('counterDays');
-
-    let currentYears = 0;
-    let currentMonths = 0;
-    let currentDays = 0;
-
-    const totalDuration = 3000;
-    const frameInterval = 30;
-    const totalFrames = totalDuration / frameInterval;
-
-    const yearsPerFrame = targetYears / totalFrames;
-    const monthsPerFrame = targetMonths / totalFrames;
-    const daysPerFrame = targetDays / totalFrames;
-
-    const interval = setInterval(() => {
-        currentYears += yearsPerFrame;
-        currentMonths += monthsPerFrame;
-        currentDays += daysPerFrame;
-
-        if (currentYears >= targetYears && currentMonths >= targetMonths && currentDays >= targetDays) {
-            currentYears = targetYears;
-            currentMonths = targetMonths;
-            currentDays = targetDays;
-            clearInterval(interval);
-        }
-
-        yearsEl.textContent = String(Math.floor(currentYears)).padStart(2, '0');
-        monthsEl.textContent = String(Math.floor(currentMonths)).padStart(2, '0');
-        daysEl.textContent = String(Math.floor(currentDays)).padStart(2, '0');
-    }, frameInterval);
-}
-
-function initClock() {
-    function updateClock() {
-        const now = new Date();
-
-        const hourHand = document.querySelector('.hand-hour');
-        const minuteHand = document.querySelector('.hand-minute');
-        const secondHand = document.querySelector('.hand-second');
-
-        const hours = now.getHours() % 12;
-        const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
-        const milliseconds = now.getMilliseconds();
-
-        const hourDegrees = (hours * 30) + (minutes * 0.5);
-        const minuteDegrees = (minutes * 6) + (seconds * 0.1);
-        const secondDegrees = (seconds * 6) + (milliseconds * 0.006);
-
-        if (hourHand) hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-        if (minuteHand) minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
-        if (secondHand) secondHand.style.transform = `rotate(${secondDegrees}deg)`;
-
-        requestAnimationFrame(updateClock);
-    }
-
-    updateClock();
-}
-
-function initFooterClock() {
-    function updateFooterClock() {
-        const now = new Date();
-
-        const hourHand = document.querySelector('.footer-hand-hour');
-        const minuteHand = document.querySelector('.footer-hand-minute');
-        const secondHand = document.querySelector('.footer-hand-second');
-
-        const hours = now.getHours() % 12;
-        const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
-        const milliseconds = now.getMilliseconds();
-
-        const hourDegrees = (hours * 30) + (minutes * 0.5);
-        const minuteDegrees = (minutes * 6) + (seconds * 0.1);
-        const secondDegrees = (seconds * 6) + (milliseconds * 0.006);
-
-        if (hourHand) hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-        if (minuteHand) minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
-        if (secondHand) secondHand.style.transform = `rotate(${secondDegrees}deg)`;
-
-        requestAnimationFrame(updateFooterClock);
-    }
-
-    updateFooterClock();
-}
-
-function initFooterTime() {
-    const timeEl = document.getElementById('footerTime');
-
-    function updateTime() {
-        const now = new Date();
-        const hours = String(now.getHours()).padStart(2, '0');
-        const minutes = String(now.getMinutes()).padStart(2, '0');
-        const seconds = String(now.getSeconds()).padStart(2, '0');
-        timeEl.textContent = `${hours}:${minutes}:${seconds} GMT`;
-    }
-
-    updateTime();
-    setInterval(updateTime, 1000);
-}
-
-function initNavigation() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    }
-
-    const nav = document.querySelector('.data-nav');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-            nav.style.background = 'rgba(42, 42, 42, 0.98)';
-        } else {
-            nav.style.background = 'rgba(42, 42, 42, 0.95)';
-        }
-
-        lastScroll = currentScroll;
-    });
-}
-
-function initScrollAnimations() {
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    const animateElements = document.querySelectorAll(
-        '.section-label, .section-title, .temporal-intro, .temporal-text, ' +
-        '.temporal-stats, .timeline-item, .quote-container, .coord-card, ' +
-        '.address-card, .cta-container, ' +
-        '.philosophy-intro, .pillar-card, ' +
-        '.testimonials-intro, .testimonial-card, ' +
-        '.journey-intro, .journey-step, .journey-note'
-    );
-
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        observer.observe(el);
+      if (qIndex <= currentQuestion) {
+        setTimeout(function() {
+          questionEl.classList.add('visible');
+        }, qIndex * 150);
+      }
     });
 
-    const style = document.createElement('style');
-    style.textContent = `
-        .visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
+    document.querySelectorAll('.compass__option').forEach(function(btn) {
+      btn.addEventListener('click', handleAnswer);
+    });
+  }
+
+  function handleAnswer(e) {
+    var qIndex = parseInt(e.target.getAttribute('data-question'));
+    var oIndex = parseInt(e.target.getAttribute('data-option'));
+    
+    answers[qIndex] = oIndex;
+    currentQuestion = qIndex + 1;
+
+    // Update visual
+    var siblings = e.target.parentElement.querySelectorAll('.compass__option');
+    siblings.forEach(function(s) { s.classList.remove('selected'); });
+    e.target.classList.add('selected');
+
+    saveProgress();
+
+    // Reveal next question
+    if (currentQuestion < quizData.length) {
+      var questions = compassQuiz.querySelectorAll('.compass__question');
+      setTimeout(function() {
+        if (questions[currentQuestion]) {
+          questions[currentQuestion].classList.add('visible');
+          questions[currentQuestion].scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-    `;
-    document.head.appendChild(style);
+      }, 400);
+    }
 
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach((item, index) => {
-        item.style.transitionDelay = `${index * 0.2}s`;
+    // Check if all answered
+    var answeredCount = answers.filter(function(a) { return a !== undefined; }).length;
+    if (answeredCount === quizData.length) {
+      setTimeout(function() {
+        calculateResult();
+      }, 600);
+    }
+  }
+
+  function calculateResult() {
+    var scores = { vata: 0, pitta: 0, kapha: 0 };
+
+    answers.forEach(function(optIndex, qIndex) {
+      if (optIndex !== undefined) {
+        var dosha = quizData[qIndex].options[optIndex].dosha;
+        scores[dosha] += 1;
+      }
     });
 
-    const pillarCards = document.querySelectorAll('.pillar-card');
-    pillarCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.12}s`;
+    var sorted = Object.keys(scores).sort(function(a, b) { return scores[b] - scores[a]; });
+    var dominant = sorted[0];
+    var secondary = sorted[1];
+
+    // Check for dual constitution (within 1 point)
+    var resultKey = dominant;
+    if (scores[secondary] >= scores[dominant] - 1 && scores[secondary] > 1) {
+      var pair = [dominant, secondary].sort().join('_');
+      if (prakritiResults[pair]) {
+        resultKey = pair;
+      }
+    }
+
+    localStorage.setItem('chronokinesis_quiz', JSON.stringify({
+      answers: answers,
+      currentQuestion: currentQuestion,
+      completed: true,
+      dominantDosha: resultKey
+    }));
+
+    showResult(resultKey);
+  }
+
+  function showResult(dosha) {
+    var result = prakritiResults[dosha] || prakritiResults.vata;
+    
+    document.getElementById('resultType').textContent = result.type;
+    document.getElementById('resultDesc').textContent = result.desc;
+    document.getElementById('resultBlend').textContent = result.blend;
+    document.getElementById('resultIngredients').textContent = result.ingredients;
+
+    compassQuiz.style.display = 'none';
+    compassResult.style.display = 'block';
+    compassResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  if (restartBtn) {
+    restartBtn.addEventListener('click', function() {
+      localStorage.removeItem('chronokinesis_quiz');
+      answers = [];
+      currentQuestion = 0;
+      renderQuiz();
+    });
+  }
+
+  loadProgress();
+
+  // ============================================
+  // HERO — Parallax & Celestial
+  // ============================================
+
+  var layerBack = document.getElementById('layerBack');
+  var layerMid = document.getElementById('layerMid');
+  var layerFront = document.getElementById('layerFront');
+  var celestial = document.getElementById('celestial');
+  var hero = document.getElementById('hero');
+  var mouseX = 0;
+  var mouseY = 0;
+  var targetX = 0;
+  var targetY = 0;
+
+  document.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX / window.innerWidth;
+    mouseY = e.clientY / window.innerHeight;
+  });
+
+  function animateParallax() {
+    targetX += (mouseX - targetX) * 0.05;
+    targetY += (mouseY - targetY) * 0.05;
+
+    var scrollY = window.scrollY;
+    var heroHeight = hero.offsetHeight;
+
+    if (scrollY < heroHeight) {
+      var scrollFactor = scrollY / heroHeight;
+
+      // Layers scroll at different speeds
+      if (layerBack) layerBack.style.transform = 'translateY(' + (scrollY * 0.1) + 'px)';
+      if (layerMid) layerMid.style.transform = 'translateY(' + (scrollY * 0.25) + 'px)';
+      if (layerFront) layerFront.style.transform = 'translateY(' + (scrollY * 0.45) + 'px)';
+
+      // Celestial follows cursor X
+      if (celestial) {
+        var celestX = 20 + targetX * 60;
+        var celestY = 10 + targetY * 20 - scrollFactor * 30;
+        celestial.style.left = celestX + '%';
+        celestial.style.top = celestY + '%';
+      }
+    }
+
+    requestAnimationFrame(animateParallax);
+  }
+
+  requestAnimationFrame(animateParallax);
+
+  // ============================================
+  // NAVIGATION — Scroll State
+  // ============================================
+
+  var nav = document.getElementById('nav');
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      nav.classList.add('nav--scrolled');
+    } else {
+      nav.classList.remove('nav--scrolled');
+    }
+  });
+
+  // ============================================
+  // SCROLL REVEAL ANIMATIONS
+  // ============================================
+
+  function setupReveal() {
+    var elements = document.querySelectorAll('.section__heading, .section__body, .art__card, .philosophy__pillar, .journey__step, .testimonials__card, .about__detail, .about__image-frame');
+    
+    elements.forEach(function(el) {
+      el.classList.add('reveal');
     });
 
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-    testimonialCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.15}s`;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     });
 
-    const journeySteps = document.querySelectorAll('.journey-step');
-    journeySteps.forEach((step, index) => {
-        step.style.transitionDelay = `${index * 0.15}s`;
+    elements.forEach(function(el) {
+      observer.observe(el);
     });
+  }
 
-    const coordCards = document.querySelectorAll('.coord-card');
-    coordCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.1}s`;
+  setupReveal();
+
+  // ============================================
+  // SMOOTH SCROLL FOR NAV LINKS
+  // ============================================
+
+  document.querySelectorAll('.nav__links a, .hero__cta').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     });
-}
+  });
+
+})();

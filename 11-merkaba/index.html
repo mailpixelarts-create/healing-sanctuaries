@@ -1,2260 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merkaba Light Body — Activating the Vehicle of Ascension</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --amethyst: #9b59b6;
-            --amethyst-light: #c39bd3;
-            --amethyst-glow: rgba(155, 89, 182, 0.4);
-            --cosmic-black: #0a0a1a;
-            --cosmic-deep: #050510;
-            --white-light: #ffffff;
-            --white-soft: rgba(255, 255, 255, 0.85);
-            --white-dim: rgba(255, 255, 255, 0.4);
-            --gold-sacred: #d4af37;
-            --phi: 1.618033988749895;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-            scrollbar-width: thin;
-            scrollbar-color: var(--amethyst) var(--cosmic-deep);
-        }
-
-        body {
-            font-family: 'Karla', sans-serif;
-            background: var(--cosmic-black);
-            color: var(--white-light);
-            overflow-x: hidden;
-            cursor: default;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           COSMIC BACKGROUND — Star field
-        ═══════════════════════════════════════════════════ */
-        .cosmic-bg {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .star {
-            position: absolute;
-            border-radius: 50%;
-            background: var(--white-light);
-            animation: twinkle var(--dur) ease-in-out infinite alternate;
-        }
-
-        @keyframes twinkle {
-            0% { opacity: 0.1; transform: scale(0.8); }
-            100% { opacity: var(--max-op); transform: scale(1.2); }
-        }
-
-        /* ═══════════════════════════════════════════════════
-           SCROLL INDICATOR — Geometric
-        ═══════════════════════════════════════════════════ */
-        .scroll-indicator {
-            position: fixed;
-            right: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
-        }
-
-        .scroll-dot {
-            width: 8px;
-            height: 8px;
-            border: 1px solid var(--amethyst);
-            transform: rotate(45deg);
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            cursor: pointer;
-        }
-
-        .scroll-dot.active {
-            background: var(--amethyst);
-            box-shadow: 0 0 12px var(--amethyst-glow);
-            transform: rotate(45deg) scale(1.4);
-        }
-
-        .scroll-dot:hover {
-            border-color: var(--white-light);
-            box-shadow: 0 0 8px var(--amethyst-glow);
-        }
-
-        /* ═══════════════════════════════════════════════════
-           SECTION BASE
-        ═══════════════════════════════════════════════════ */
-        section {
-            position: relative;
-            z-index: 1;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           HERO — Star Tetrahedron (Merkaba)
-        ═══════════════════════════════════════════════════ */
-        #hero {
-            background: radial-gradient(ellipse at center, rgba(155, 89, 182, 0.08) 0%, var(--cosmic-deep) 70%);
-            overflow: hidden;
-            flex-direction: column;
-            gap: 60px;
-        }
-
-        .merkaba-container {
-            position: relative;
-            width: 500px;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .merkaba-svg {
-            width: 100%;
-            height: 100%;
-            animation: merkabaRotate 30s linear infinite, merkabaPulse 2s ease-in-out infinite;
-            filter: drop-shadow(0 0 40px var(--amethyst-glow)) drop-shadow(0 0 80px rgba(155, 89, 182, 0.2));
-        }
-
-        @keyframes merkabaRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        @keyframes merkabaPulse {
-            0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.9; }
-            50% { transform: rotate(180deg) scale(1.05); opacity: 1; }
-        }
-
-        .merkaba-glow-ring {
-            position: absolute;
-            border-radius: 50%;
-            border: 1px solid rgba(155, 89, 182, 0.15);
-            animation: ringPulse 2s ease-in-out infinite;
-        }
-
-        .merkaba-glow-ring:nth-child(2) { width: 600px; height: 600px; animation-delay: 0.3s; }
-        .merkaba-glow-ring:nth-child(3) { width: 700px; height: 700px; animation-delay: 0.6s; }
-        .merkaba-glow-ring:nth-child(4) { width: 800px; height: 800px; animation-delay: 0.9s; border-color: rgba(155, 89, 182, 0.08); }
-        .merkaba-glow-ring:nth-child(5) { width: 900px; height: 900px; animation-delay: 1.2s; border-color: rgba(155, 89, 182, 0.04); }
-
-        @keyframes ringPulse {
-            0%, 100% { transform: scale(1); opacity: 0.6; }
-            50% { transform: scale(1.03); opacity: 1; }
-        }
-
-        .hero-center-point {
-            position: absolute;
-            width: 4px; height: 4px;
-            background: var(--white-light);
-            border-radius: 50%;
-            box-shadow: 0 0 20px var(--white-light), 0 0 40px var(--amethyst-glow);
-            animation: centerPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes centerPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 20px var(--white-light), 0 0 40px var(--amethyst-glow); }
-            50% { transform: scale(1.8); box-shadow: 0 0 40px var(--white-light), 0 0 80px var(--amethyst-glow); }
-        }
-
-        .hero-tagline {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-tagline-label {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-            color: var(--amethyst);
-            margin-bottom: 16px;
-            opacity: 0;
-            animation: emergeFromGeometry 1.2s ease-out 0.3s forwards;
-        }
-
-        .hero-tagline-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: clamp(22px, 3vw, 34px);
-            font-weight: 400;
-            color: var(--white-soft);
-            line-height: 1.6;
-            opacity: 0;
-            animation: emergeFromGeometry 1.2s ease-out 0.6s forwards;
-        }
-
-        .hero-tagline-title em {
-            font-style: italic;
-            color: var(--amethyst-light);
-        }
-
-        .hero-scroll-cue {
-            opacity: 0;
-            animation: emergeFromGeometry 1s ease-out 1.8s forwards;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .hero-scroll-cue span {
-            font-family: 'Questrial', sans-serif;
-            font-size: 10px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--white-dim);
-        }
-
-        .scroll-line {
-            width: 1px;
-            height: 40px;
-            background: linear-gradient(to bottom, var(--amethyst), transparent);
-            animation: scrollPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes scrollPulse {
-            0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-            50% { opacity: 0.8; transform: scaleY(1); }
-        }
-
-        /* Sacred geometry grid lines */
-        .sacred-grid {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            opacity: 0.04;
-            pointer-events: none;
-        }
-
-        .sacred-grid line {
-            stroke: var(--amethyst);
-            stroke-width: 0.5;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           ABOUT — Text emerging from geometry
-        ═══════════════════════════════════════════════════ */
-        #about {
-            background: linear-gradient(180deg, var(--cosmic-deep) 0%, var(--cosmic-black) 50%, var(--cosmic-deep) 100%);
-            padding: 120px 60px;
-            flex-direction: column;
-            gap: 80px;
-        }
-
-        .about-geometry-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-            height: 800px;
-            opacity: 0.06;
-            animation: geometrySpin 60s linear infinite;
-        }
-
-        @keyframes geometrySpin {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        .about-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .about-label {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: var(--amethyst);
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: emergeFromGeometry 1.2s ease-out 0.3s forwards;
-        }
-
-        @keyframes emergeFromGeometry {
-            0% { opacity: 0; transform: translateY(30px) scale(0.95); filter: blur(4px); }
-            100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-        }
-
-        .about-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: clamp(32px, 5vw, 56px);
-            line-height: 1.15;
-            margin-bottom: 30px;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: emergeFromGeometry 1.2s ease-out 0.6s forwards;
-        }
-
-        .about-title .highlight {
-            color: var(--amethyst);
-            position: relative;
-        }
-
-        .about-title .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--amethyst), transparent);
-            animation: lineExpand 2s ease-out 1.5s forwards;
-            transform: scaleX(0);
-        }
-
-        @keyframes lineExpand {
-            0% { transform: scaleX(0); }
-            100% { transform: scaleX(1); }
-        }
-
-        .about-text {
-            font-size: 17px;
-            line-height: 1.9;
-            color: var(--white-soft);
-            font-weight: 300;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: emergeFromGeometry 1.2s ease-out 0.9s forwards;
-        }
-
-        .about-extended {
-            margin-top: 40px;
-            font-size: 17px;
-            line-height: 1.9;
-            color: var(--white-dim);
-            font-weight: 300;
-            opacity: 0;
-            transform: translateY(40px);
-            animation: emergeFromGeometry 1.2s ease-out 1.1s forwards;
-        }
-
-        .about-geometric-divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin: 40px 0;
-            opacity: 0;
-            animation: emergeFromGeometry 1s ease-out 1.2s forwards;
-        }
-
-        .geo-line {
-            width: 60px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--amethyst), transparent);
-        }
-
-        .geo-diamond {
-            width: 8px;
-            height: 8px;
-            border: 1px solid var(--amethyst);
-            transform: rotate(45deg);
-        }
-
-        .healer-name {
-            font-family: 'Questrial', sans-serif;
-            font-size: 13px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--amethyst-light);
-            margin-top: 40px;
-            opacity: 0;
-            animation: emergeFromGeometry 1s ease-out 1.5s forwards;
-        }
-
-        .about-details {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 60px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .about-detail-item {
-            text-align: center;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: emergeFromGeometry 1s ease-out 1.8s forwards;
-        }
-
-        .about-detail-item:nth-child(2) { animation-delay: 2.0s; }
-        .about-detail-item:nth-child(3) { animation-delay: 2.2s; }
-
-        .about-detail-number {
-            font-family: 'Questrial', sans-serif;
-            font-size: 36px;
-            color: var(--amethyst);
-            margin-bottom: 8px;
-        }
-
-        .about-detail-label {
-            font-family: 'Questrial', sans-serif;
-            font-size: 10px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--white-dim);
-        }
-
-        /* ═══════════════════════════════════════════════════
-           SACRED ART — Geometric transformations
-        ═══════════════════════════════════════════════════ */
-        #sacred-art {
-            background: var(--cosmic-deep);
-            padding: 120px 60px;
-            flex-direction: column;
-            gap: 80px;
-        }
-
-        .sacred-art-header {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .sacred-art-label {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: var(--amethyst);
-            margin-bottom: 20px;
-        }
-
-        .sacred-art-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: clamp(28px, 4vw, 44px);
-        }
-
-        .sacred-art-subtitle {
-            font-size: 16px;
-            color: var(--white-dim);
-            font-weight: 300;
-            margin-top: 16px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-
-        .practices-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            max-width: 1200px;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .practice-card {
-            background: rgba(155, 89, 182, 0.03);
-            border: 1px solid rgba(155, 89, 182, 0.1);
-            padding: 60px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .practice-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: radial-gradient(circle at center, var(--amethyst-glow) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.8s ease;
-        }
-
-        .practice-card:hover::before {
-            opacity: 0.15;
-        }
-
-        .practice-card:hover {
-            border-color: rgba(155, 89, 182, 0.3);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(155, 89, 182, 0.1);
-        }
-
-        .practice-geometry {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 30px;
-            position: relative;
-        }
-
-        .practice-geometry svg {
-            width: 100%;
-            height: 100%;
-            transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .practice-card:hover .practice-geometry svg {
-            transform: rotate(60deg) scale(1.1);
-        }
-
-        .practice-number {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 4px;
-            color: var(--amethyst);
-            margin-bottom: 16px;
-        }
-
-        .practice-name {
-            font-family: 'Questrial', sans-serif;
-            font-size: 20px;
-            margin-bottom: 16px;
-        }
-
-        .practice-desc {
-            font-size: 14px;
-            line-height: 1.8;
-            color: var(--white-dim);
-            font-weight: 300;
-        }
-
-        .practice-extended {
-            margin-top: 20px;
-            font-size: 13px;
-            line-height: 1.7;
-            color: rgba(255,255,255,0.25);
-            font-weight: 300;
-            border-top: 1px solid rgba(155,89,182,0.1);
-            padding-top: 16px;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           PHILOSOPHY — The Light Body
-        ═══════════════════════════════════════════════════ */
-        #philosophy {
-            background: linear-gradient(180deg, var(--cosmic-deep) 0%, var(--cosmic-black) 30%, rgba(155,89,182,0.04) 50%, var(--cosmic-black) 70%, var(--cosmic-deep) 100%);
-            padding: 140px 60px;
-            flex-direction: column;
-            gap: 80px;
-        }
-
-        .philosophy-header {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-        }
-
-        .philosophy-label {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: var(--amethyst);
-            margin-bottom: 20px;
-        }
-
-        .philosophy-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: clamp(28px, 4vw, 48px);
-            line-height: 1.2;
-            margin-bottom: 24px;
-        }
-
-        .philosophy-title .hl {
-            color: var(--amethyst);
-        }
-
-        .philosophy-intro {
-            font-size: 17px;
-            line-height: 1.9;
-            color: var(--white-soft);
-            font-weight: 300;
-        }
-
-        .philosophy-pillars {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 50px;
-            max-width: 1100px;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .pillar-card {
-            position: relative;
-            padding: 50px 40px;
-            border: 1px solid rgba(155, 89, 182, 0.08);
-            background: rgba(155, 89, 182, 0.02);
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .pillar-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: radial-gradient(ellipse at center, rgba(155,89,182,0.06) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.8s ease;
-        }
-
-        .pillar-card:hover::before {
-            opacity: 1;
-        }
-
-        .pillar-card:hover {
-            border-color: rgba(155, 89, 182, 0.2);
-            transform: translateY(-4px);
-        }
-
-        .pillar-card:last-child {
-            grid-column: 1 / -1;
-            max-width: 550px;
-            margin: 0 auto;
-        }
-
-        .pillar-geometry {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 24px;
-            opacity: 0.7;
-        }
-
-        .pillar-geometry svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .pillar-number {
-            font-family: 'Questrial', sans-serif;
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: var(--amethyst);
-            margin-bottom: 16px;
-        }
-
-        .pillar-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: 20px;
-            margin-bottom: 16px;
-            line-height: 1.3;
-        }
-
-        .pillar-text {
-            font-size: 15px;
-            line-height: 1.8;
-            color: var(--white-dim);
-            font-weight: 300;
-        }
-
-        .philosophy-quote {
-            text-align: center;
-            max-width: 700px;
-            position: relative;
-            z-index: 2;
-            padding: 60px 40px;
-            border-top: 1px solid rgba(155,89,182,0.1);
-            border-bottom: 1px solid rgba(155,89,182,0.1);
-        }
-
-        .philosophy-quote blockquote {
-            font-family: 'Questrial', sans-serif;
-            font-size: clamp(18px, 2.5vw, 26px);
-            line-height: 1.6;
-            color: var(--white-soft);
-            font-style: italic;
-        }
-
-        .philosophy-quote blockquote .hl {
-            color: var(--amethyst);
-        }
-
-        .philosophy-quote cite {
-            display: block;
-            margin-top: 20px;
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--white-dim);
-            font-style: normal;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           TESTIMONIALS
-        ═══════════════════════════════════════════════════ */
-        #testimonials {
-            background: var(--cosmic-black);
-            padding: 140px 60px;
-            flex-direction: column;
-            gap: 80px;
-        }
-
-        .testimonials-header {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .testimonials-label {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: var(--amethyst);
-            margin-bottom: 20px;
-        }
-
-        .testimonials-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: clamp(28px, 4vw, 44px);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            max-width: 1200px;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .testimonial-card {
-            position: relative;
-            padding: 50px 40px 40px;
-            border: 1px solid rgba(155, 89, 182, 0.08);
-            background: linear-gradient(180deg, rgba(155,89,182,0.04) 0%, rgba(155,89,182,0.01) 100%);
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .testimonial-card:hover {
-            border-color: rgba(155, 89, 182, 0.2);
-            transform: translateY(-6px);
-            box-shadow: 0 20px 60px rgba(155, 89, 182, 0.08);
-        }
-
-        .testimonial-geometry {
-            position: absolute;
-            top: -1px;
-            left: 50%;
-            transform: translateX(-50%) rotate(45deg);
-            width: 12px;
-            height: 12px;
-            border: 1px solid var(--amethyst);
-            background: var(--cosmic-black);
-        }
-
-        .testimonial-stars {
-            display: flex;
-            gap: 6px;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-stars span {
-            width: 8px;
-            height: 8px;
-            background: var(--amethyst);
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        }
-
-        .testimonial-text {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--white-soft);
-            font-weight: 300;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-
-        .testimonial-text::before {
-            content: '"';
-            font-family: 'Questrial', sans-serif;
-            font-size: 48px;
-            color: var(--amethyst);
-            opacity: 0.4;
-            line-height: 0;
-            position: relative;
-            top: 12px;
-            margin-right: 4px;
-        }
-
-        .testimonial-divider {
-            width: 30px;
-            height: 1px;
-            background: var(--amethyst);
-            margin-bottom: 20px;
-            opacity: 0.5;
-        }
-
-        .testimonial-author {
-            font-family: 'Questrial', sans-serif;
-            font-size: 13px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--amethyst-light);
-            margin-bottom: 4px;
-        }
-
-        .testimonial-location {
-            font-size: 12px;
-            color: var(--white-dim);
-            font-weight: 300;
-        }
-
-        .testimonial-experience {
-            font-size: 12px;
-            color: rgba(255,255,255,0.25);
-            margin-top: 12px;
-            font-style: italic;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           JOURNEY — Your First Visit
-        ═══════════════════════════════════════════════════ */
-        #journey {
-            background: linear-gradient(180deg, var(--cosmic-deep) 0%, var(--cosmic-black) 50%, var(--cosmic-deep) 100%);
-            padding: 140px 60px;
-            flex-direction: column;
-            gap: 80px;
-        }
-
-        .journey-header {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-        }
-
-        .journey-label {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: var(--amethyst);
-            margin-bottom: 20px;
-        }
-
-        .journey-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: clamp(28px, 4vw, 48px);
-            line-height: 1.2;
-            margin-bottom: 24px;
-        }
-
-        .journey-title .hl {
-            color: var(--amethyst);
-        }
-
-        .journey-intro {
-            font-size: 17px;
-            line-height: 1.9;
-            color: var(--white-soft);
-            font-weight: 300;
-        }
-
-        .journey-steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-        }
-
-        .journey-step {
-            position: relative;
-            padding: 50px 30px 40px;
-            border: 1px solid rgba(155, 89, 182, 0.08);
-            background: rgba(155, 89, 182, 0.02);
-            text-align: center;
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .journey-step:hover {
-            border-color: rgba(155, 89, 182, 0.2);
-            transform: translateY(-6px);
-            box-shadow: 0 15px 50px rgba(155, 89, 182, 0.08);
-        }
-
-        .journey-step::after {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 1px;
-            background: var(--amethyst);
-            opacity: 0;
-            transition: opacity 0.6s ease;
-        }
-
-        .journey-step:hover::after {
-            opacity: 1;
-        }
-
-        .step-geometry {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 24px;
-            opacity: 0.7;
-        }
-
-        .step-geometry svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .step-number {
-            font-family: 'Questrial', sans-serif;
-            font-size: 10px;
-            letter-spacing: 4px;
-            color: var(--amethyst);
-            margin-bottom: 14px;
-        }
-
-        .step-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: 18px;
-            margin-bottom: 14px;
-            line-height: 1.3;
-        }
-
-        .step-text {
-            font-size: 14px;
-            line-height: 1.7;
-            color: var(--white-dim);
-            font-weight: 300;
-        }
-
-        .journey-details {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            max-width: 1000px;
-            width: 100%;
-            position: relative;
-            z-index: 2;
-            margin-top: 20px;
-        }
-
-        .journey-detail {
-            text-align: center;
-        }
-
-        .journey-detail-icon {
-            width: 40px;
-            height: 40px;
-            margin: 0 auto 16px;
-            opacity: 0.6;
-        }
-
-        .journey-detail-icon svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .journey-detail-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: 14px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--amethyst-light);
-            margin-bottom: 8px;
-        }
-
-        .journey-detail-text {
-            font-size: 14px;
-            line-height: 1.7;
-            color: var(--white-dim);
-            font-weight: 300;
-        }
-
-        .journey-note {
-            text-align: center;
-            max-width: 600px;
-            position: relative;
-            z-index: 2;
-            padding: 40px;
-            border: 1px solid rgba(155,89,182,0.1);
-            background: rgba(155,89,182,0.03);
-        }
-
-        .journey-note p {
-            font-size: 15px;
-            line-height: 1.8;
-            color: var(--white-soft);
-            font-weight: 300;
-        }
-
-        .journey-note .hl {
-            color: var(--amethyst);
-        }
-
-        .journey-note-label {
-            font-family: 'Questrial', sans-serif;
-            font-size: 10px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--amethyst);
-            margin-bottom: 16px;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           QUOTE — Mathematical authority
-        ═══════════════════════════════════════════════════ */
-        #quote {
-            background: linear-gradient(135deg, var(--cosmic-black) 0%, rgba(155, 89, 182, 0.05) 50%, var(--cosmic-black) 100%);
-            padding: 120px 60px;
-            flex-direction: column;
-        }
-
-        .quote-container {
-            max-width: 900px;
-            text-align: center;
-            position: relative;
-        }
-
-        .quote-geometry-frame {
-            position: absolute;
-            top: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 200px;
-            opacity: 0.1;
-            animation: geometrySpin 40s linear infinite reverse;
-        }
-
-        .quote-symbol {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 6px;
-            color: var(--amethyst);
-            margin-bottom: 40px;
-        }
-
-        .quote-text {
-            font-family: 'Questrial', sans-serif;
-            font-size: clamp(24px, 3.5vw, 40px);
-            line-height: 1.5;
-            font-weight: 400;
-            position: relative;
-            z-index: 2;
-        }
-
-        .quote-text .q-amethyst {
-            color: var(--amethyst);
-        }
-
-        .quote-proof {
-            margin-top: 50px;
-            font-family: 'Questrial', sans-serif;
-            font-size: 12px;
-            letter-spacing: 3px;
-            color: var(--white-dim);
-            text-transform: uppercase;
-        }
-
-        .quote-proof-line {
-            width: 40px;
-            height: 1px;
-            background: var(--amethyst);
-            margin: 16px auto 0;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           ARRIVAL — Email signup
-        ═══════════════════════════════════════════════════ */
-        #arrival {
-            background: var(--cosmic-black);
-            padding: 120px 60px;
-            flex-direction: column;
-            gap: 50px;
-        }
-
-        .arrival-content {
-            text-align: center;
-            max-width: 600px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .arrival-title {
-            font-family: 'Questrial', sans-serif;
-            font-size: clamp(26px, 4vw, 42px);
-            margin-bottom: 20px;
-        }
-
-        .arrival-subtitle {
-            font-size: 16px;
-            color: var(--white-dim);
-            font-weight: 300;
-            margin-bottom: 50px;
-            line-height: 1.7;
-        }
-
-        .arrival-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            width: 100%;
-            max-width: 440px;
-        }
-
-        .arrival-input {
-            width: 100%;
-            padding: 18px 24px;
-            background: rgba(155, 89, 182, 0.06);
-            border: 1px solid rgba(155, 89, 182, 0.2);
-            color: var(--white-light);
-            font-family: 'Karla', sans-serif;
-            font-size: 15px;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            outline: none;
-            transition: all 0.5s ease;
-            text-align: center;
-        }
-
-        .arrival-input::placeholder {
-            color: var(--white-dim);
-        }
-
-        .arrival-input:focus {
-            border-color: var(--amethyst);
-            box-shadow: 0 0 30px rgba(155, 89, 182, 0.15);
-            background: rgba(155, 89, 182, 0.1);
-        }
-
-        .arrival-btn {
-            font-family: 'Questrial', sans-serif;
-            font-size: 12px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            padding: 18px 50px;
-            background: transparent;
-            border: 1px solid var(--amethyst);
-            color: var(--white-light);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .arrival-btn::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: var(--amethyst);
-            transition: left 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            z-index: -1;
-        }
-
-        .arrival-btn:hover::before {
-            left: 0;
-        }
-
-        .arrival-btn:hover {
-            box-shadow: 0 0 40px rgba(155, 89, 182, 0.3);
-        }
-
-        .arrival-extras {
-            display: flex;
-            gap: 40px;
-            margin-top: 40px;
-            justify-content: center;
-        }
-
-        .arrival-extra {
-            text-align: center;
-        }
-
-        .arrival-extra-icon {
-            width: 32px;
-            height: 32px;
-            margin: 0 auto 10px;
-            opacity: 0.5;
-        }
-
-        .arrival-extra-icon svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .arrival-extra-text {
-            font-family: 'Questrial', sans-serif;
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--white-dim);
-        }
-
-        /* ═══════════════════════════════════════════════════
-           FOOTER — Spinning Merkaba
-        ═══════════════════════════════════════════════════ */
-        footer {
-            background: var(--cosmic-deep);
-            padding: 80px 60px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .footer-merkaba {
-            width: 120px;
-            height: 120px;
-            opacity: 0.4;
-            animation: footerSpin 20s linear infinite;
-            filter: drop-shadow(0 0 20px var(--amethyst-glow));
-        }
-
-        @keyframes footerSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .footer-info {
-            text-align: center;
-        }
-
-        .footer-healer {
-            font-family: 'Questrial', sans-serif;
-            font-size: 13px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--amethyst-light);
-            margin-bottom: 12px;
-        }
-
-        .footer-address {
-            font-size: 14px;
-            color: var(--white-dim);
-            font-weight: 300;
-            line-height: 1.7;
-        }
-
-        .footer-divider {
-            width: 40px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--amethyst), transparent);
-            margin: 10px 0;
-        }
-
-        .footer-tagline {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--white-dim);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 30px;
-            margin-top: 10px;
-        }
-
-        .footer-link {
-            font-family: 'Questrial', sans-serif;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--white-dim);
-            text-decoration: none;
-            transition: color 0.4s ease;
-        }
-
-        .footer-link:hover {
-            color: var(--amethyst);
-        }
-
-        .footer-copy {
-            font-size: 12px;
-            color: rgba(255,255,255,0.2);
-            margin-top: 20px;
-        }
-
-        /* ═══════════════════════════════════════════════════
-           SCROLL REVEAL
-        ═══════════════════════════════════════════════════ */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .reveal-delay-1 { transition-delay: 0.15s; }
-        .reveal-delay-2 { transition-delay: 0.3s; }
-        .reveal-delay-3 { transition-delay: 0.45s; }
-
-        /* ═══════════════════════════════════════════════════
-           FLOATING PARTICLES
-        ═══════════════════════════════════════════════════ */
-        .particle {
-            position: fixed;
-            width: 2px;
-            height: 2px;
-            background: var(--amethyst);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0;
-            animation: particleFloat var(--dur) ease-in-out infinite;
-            animation-delay: var(--delay);
-        }
-
-        @keyframes particleFloat {
-            0% { opacity: 0; transform: translateY(0) scale(0); }
-            20% { opacity: 0.6; transform: translateY(-20px) scale(1); }
-            80% { opacity: 0.6; transform: translateY(-80px) scale(1); }
-            100% { opacity: 0; transform: translateY(-100px) scale(0); }
-        }
-
-        /* ═══════════════════════════════════════════════════
-           RESPONSIVE
-        ═══════════════════════════════════════════════════ */
-        @media (max-width: 1024px) {
-            .journey-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 900px) {
-            .practices-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-            }
-            .philosophy-pillars {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-            }
-            .journey-steps {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-            }
-            .journey-details {
-                grid-template-columns: 1fr;
-                max-width: 300px;
-            }
-            .about-details {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            .merkaba-container {
-                width: 320px;
-                height: 320px;
-            }
-            .scroll-indicator { right: 16px; }
-            #about, #sacred-art, #philosophy, #testimonials, #journey, #quote, #arrival, footer {
-                padding-left: 30px;
-                padding-right: 30px;
-            }
-            .arrival-extras {
-                flex-direction: column;
-                gap: 24px;
-            }
-            .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 16px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .merkaba-container {
-                width: 260px;
-                height: 260px;
-            }
-            .practice-card,
-            .testimonial-card,
-            .pillar-card,
-            .journey-step {
-                padding: 40px 24px;
-            }
-        }
-
-        .site-footer {
-          text-align: center;
-          padding: 3rem 2rem;
-          background: #0a0a0a;
-          border-top: 1px solid rgba(255,255,255,0.05);
-        }
-        .site-footer p {
-          font-family: 'Space Grotesk', sans-serif;
-          font-size: 0.85rem;
-          color: rgba(255,255,255,0.4);
-          letter-spacing: 0.1em;
-          margin: 0.3rem 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sage Wildroot — Herbalism &amp; Plant Medicine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- COSMIC STAR FIELD -->
-    <div class="cosmic-bg" id="cosmicBg"></div>
+  <!-- HERO: Image Sequence Scrub -->
+  <section id="hero">
+    <div class="hero-sequence" id="heroSequence">
+      <div class="hero-frame active" data-frame="0"></div>
+      <div class="hero-frame" data-frame="1"></div>
+      <div class="hero-frame" data-frame="2"></div>
+      <div class="hero-frame" data-frame="3"></div>
+      <div class="hero-frame" data-frame="4"></div>
+      <div class="hero-frame" data-frame="5"></div>
+      <div class="hero-frame" data-frame="6"></div>
+      <div class="hero-frame" data-frame="7"></div>
+      <div class="hero-frame" data-frame="8"></div>
+      <div class="hero-frame" data-frame="9"></div>
+    </div>
+    <div class="hero-overlay">
+      <p class="hero-label">Herbalism</p>
+      <h1 class="hero-title">The Earth Provides<br>the Medicine</h1>
+      <p class="hero-sub">Scroll to explore the life cycle</p>
+    </div>
+    <div class="hero-progress">
+      <div class="hero-progress-bar" id="heroProgress"></div>
+    </div>
+  </section>
 
-    <!-- FLOATING PARTICLES -->
-    <div id="particles"></div>
-
-    <!-- SCROLL INDICATOR -->
-    <nav class="scroll-indicator" id="scrollNav">
-        <div class="scroll-dot active" data-section="hero"></div>
-        <div class="scroll-dot" data-section="about"></div>
-        <div class="scroll-dot" data-section="sacred-art"></div>
-        <div class="scroll-dot" data-section="philosophy"></div>
-        <div class="scroll-dot" data-section="testimonials"></div>
-        <div class="scroll-dot" data-section="journey"></div>
-        <div class="scroll-dot" data-section="quote"></div>
-        <div class="scroll-dot" data-section="arrival"></div>
-    </nav>
-
-    <!-- ═══════════════════════════════════════════════════
-         HERO — Star Tetrahedron
-    ═══════════════════════════════════════════════════ -->
-    <section id="hero">
-        <!-- Sacred geometry grid -->
-        <svg class="sacred-grid" viewBox="0 0 1000 1000">
-            <line x1="500" y1="0" x2="500" y2="1000" />
-            <line x1="0" y1="500" x2="1000" y2="500" />
-            <line x1="0" y1="0" x2="1000" y2="1000" />
-            <line x1="1000" y1="0" x2="0" y2="1000" />
-            <circle cx="500" cy="500" r="300" fill="none" stroke="#9b59b6" stroke-width="0.5" />
-            <circle cx="500" cy="500" r="450" fill="none" stroke="#9b59b6" stroke-width="0.3" />
-            <circle cx="500" cy="500" r="200" fill="none" stroke="#9b59b6" stroke-width="0.3" />
-        </svg>
-
-        <div class="merkaba-container">
-            <!-- Pulsing rings -->
-            <div class="merkaba-glow-ring"></div>
-            <div class="merkaba-glow-ring"></div>
-            <div class="merkaba-glow-ring"></div>
-            <div class="merkaba-glow-ring"></div>
-            <div class="merkaba-glow-ring"></div>
-
-            <!-- Star Tetrahedron SVG -->
-            <svg class="merkaba-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="merkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#9b59b6" stop-opacity="0.9"/>
-                        <stop offset="50%" stop-color="#ffffff" stop-opacity="0.6"/>
-                        <stop offset="100%" stop-color="#9b59b6" stop-opacity="0.9"/>
-                    </linearGradient>
-                    <filter id="glow">
-                        <feGaussianBlur stdDeviation="3" result="blur"/>
-                        <feMerge>
-                            <feMergeNode in="blur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                    </filter>
-                </defs>
-
-                <!-- Upward tetrahedron (white) -->
-                <polygon
-                    points="200,60 320,280 80,280"
-                    fill="none"
-                    stroke="rgba(255,255,255,0.7)"
-                    stroke-width="1.5"
-                    filter="url(#glow)"
-                />
-                <polygon
-                    points="200,60 200,280 320,280"
-                    fill="rgba(255,255,255,0.03)"
-                    stroke="rgba(255,255,255,0.3)"
-                    stroke-width="0.5"
-                />
-                <polygon
-                    points="200,60 200,280 80,280"
-                    fill="rgba(255,255,255,0.02)"
-                    stroke="rgba(255,255,255,0.2)"
-                    stroke-width="0.5"
-                />
-
-                <!-- Downward tetrahedron (purple) -->
-                <polygon
-                    points="200,340 320,120 80,120"
-                    fill="none"
-                    stroke="rgba(155,89,182,0.8)"
-                    stroke-width="1.5"
-                    filter="url(#glow)"
-                />
-                <polygon
-                    points="200,340 200,120 320,120"
-                    fill="rgba(155,89,182,0.03)"
-                    stroke="rgba(155,89,182,0.3)"
-                    stroke-width="0.5"
-                />
-                <polygon
-                    points="200,340 200,120 80,120"
-                    fill="rgba(155,89,182,0.02)"
-                    stroke="rgba(155,89,182,0.2)"
-                    stroke-width="0.5"
-                />
-
-                <!-- Inner star connections -->
-                <line x1="200" y1="60" x2="200" y2="340" stroke="url(#merkGrad)" stroke-width="0.5" opacity="0.5"/>
-                <line x1="80" y1="280" x2="320" y2="120" stroke="url(#merkGrad)" stroke-width="0.5" opacity="0.5"/>
-                <line x1="320" y1="280" x2="80" y2="120" stroke="url(#merkGrad)" stroke-width="0.5" opacity="0.5"/>
-
-                <!-- Center star of David intersection -->
-                <polygon
-                    points="200,100 290,230 110,230"
-                    fill="none"
-                    stroke="rgba(155,89,182,0.4)"
-                    stroke-width="0.8"
-                />
-                <polygon
-                    points="200,300 290,170 110,170"
-                    fill="none"
-                    stroke="rgba(255,255,255,0.4)"
-                    stroke-width="0.8"
-                />
-
-                <!-- Central point -->
-                <circle cx="200" cy="200" r="3" fill="#ffffff" opacity="0.9">
-                    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
-                </circle>
-
-                <!-- Orbital circles -->
-                <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(155,89,182,0.15)" stroke-width="0.5" stroke-dasharray="4 8"/>
-                <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" stroke-dasharray="2 12">
-                    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="40s" repeatCount="indefinite"/>
-                </circle>
-            </svg>
-
-            <!-- Center light point -->
-            <div class="hero-center-point"></div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <span class="section-label">About the Healer</span>
+      <h2 class="section-title">Sage Wildroot</h2>
+      <p class="section-body">
+        For twenty-five years Sage has walked the forests, meadows, and riverbanks of the Pacific Northwest,
+        learning the quiet language of plants. What began as a childhood spent pressing wildflowers between
+        the pages of her grandmother's dictionaries has become a lifelong devotion to the art and science
+        of herbal medicine. She forages each specimen by hand, guided by seasons and intuition, crafting
+        tinctures, essences, and teas that honor the intelligence of every root, leaf, and petal. Her
+        practice is not a clinic — it is a conversation between human and botanical worlds, a space where
+        healing unfolds at the pace of growth.
+      </p>
+      <div class="about-details">
+        <div class="detail">
+          <span class="detail-number">25</span>
+          <span class="detail-label">Years of Practice</span>
         </div>
-
-        <div class="hero-tagline">
-            <div class="hero-tagline-label">Sacred Geometry · Light Body · Ascension</div>
-            <h1 class="hero-tagline-title">
-                Activating the <em>Vehicle of Ascension</em><br>
-                Through the Merkaba Light Body
-            </h1>
+        <div class="detail">
+          <span class="detail-number">200+</span>
+          <span class="detail-label">Plant Species Studied</span>
         </div>
-
-        <div class="hero-scroll-cue">
-            <span>Descend</span>
-            <div class="scroll-line"></div>
+        <div class="detail">
+          <span class="detail-number">1:1</span>
+          <span class="detail-label">Personal Consultations</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ═══════════════════════════════════════════════════
-         ABOUT — Text from geometry
-    ═══════════════════════════════════════════════════ -->
-    <section id="about">
-        <!-- Background sacred geometry -->
-        <svg class="about-geometry-bg" viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="180" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
-            <circle cx="200" cy="200" r="140" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
-            <circle cx="200" cy="200" r="100" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
-            <circle cx="200" cy="200" r="60" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
-            <polygon points="200,20 380,200 200,380 20,200" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
-            <polygon points="200,60 340,200 200,340 60,200" fill="none" stroke="#9b59b6" stroke-width="0.3"/>
-            <line x1="200" y1="20" x2="200" y2="380" stroke="#9b59b6" stroke-width="0.3"/>
-            <line x1="20" y1="200" x2="380" y2="200" stroke="#9b59b6" stroke-width="0.3"/>
-            <line x1="60" y1="60" x2="340" y2="340" stroke="#9b59b6" stroke-width="0.3"/>
-            <line x1="340" y1="60" x2="60" y2="340" stroke="#9b59b6" stroke-width="0.3"/>
-        </svg>
-
-        <div class="about-content">
-            <div class="about-label">Understanding the Merkaba</div>
-            <h2 class="about-title">
-                The <span class="highlight">Star Tetrahedron</span><br>
-                of Light
-            </h2>
-            <div class="about-geometric-divider">
-                <span class="geo-line"></span>
-                <span class="geo-diamond"></span>
-                <span class="geo-line"></span>
-            </div>
-            <p class="about-text">
-                Teacher Seraphina channels teachings from the Ascended Masters on Merkaba activation.
-                The Merkaba — meaning "chariot" in Hebrew — is a star tetrahedron of light that surrounds
-                every human body. When activated through specific breathing patterns and sacred geometry
-                meditation, it becomes a vehicle for consciousness expansion, carrying the soul beyond
-                the limitations of physical form into realms of pure light.
+  <!-- DIGITAL HERBARIUM (Interactive Feature) -->
+  <section id="herbarium">
+    <div class="section-inner">
+      <span class="section-label">Digital Herbarium</span>
+      <h2 class="section-title">Pressed Specimens</h2>
+      <p class="section-body">
+        Each specimen below arrives as you scroll — a fragment of the living archive Sage has built over decades of fieldwork and study.
+      </p>
+    </div>
+    <div class="herbarium-track">
+      <div class="specimen" data-specimen="0">
+        <div class="specimen-plate">
+          <div class="specimen-image" style="background-image: url('images/specimen-01.jpg')"></div>
+          <div class="specimen-info">
+            <h3 class="specimen-name">Echinacea purpurea</h3>
+            <p class="specimen-common">Purple Coneflower</p>
+            <p class="specimen-note">
+              Gathered at dawn along the Willamette trail in late July, when the purple petals are at their most
+              vivid and the central cone glistens with morning dew. This specimen was pressed between pages of
+              an old botany field guide and left to dry for three weeks. Echinacea has been Sage's most trusted
+              ally for bolstering the immune system during the damp Portland winters — she steepes the dried
+              root in warm water and honey, creating a remedy that tastes of earth and quiet strength. The
+              plant teaches patience; its healing is slow but certain, building resilience one cup at a time.
             </p>
-            <p class="about-extended">
-                Within the sanctuary, we work with the ancient codes of Metatron's Cube, the Flower of Life,
-                and the Star Tetrahedron to unlock the dormant potential within your energy field. Each session
-                is a journey inward — a return to the geometric blueprint that precedes all physical manifestation.
-                The Merkaba is not merely a symbol; it is the living architecture of your divine Self,
-                waiting to be remembered, activated, and flown.
+          </div>
+        </div>
+      </div>
+      <div class="specimen" data-specimen="1">
+        <div class="specimen-plate">
+          <div class="specimen-image" style="background-image: url('images/specimen-02.jpg')"></div>
+          <div class="specimen-info">
+            <h3 class="specimen-name">Hypericum perforatum</h3>
+            <p class="specimen-common">St. John's Wort</p>
+            <p class="specimen-note">
+              Found growing wild on the sunlit banks of the Columbia River Gorge, where the summer light
+              falls in long golden sheets across the hillside. Sage harvests the flowering tops in late
+              June, hanging them upside down in her drying room until the petals crumble at a touch. The
+              resulting oil glows a deep, almost translucent red — a color she calls "captured sunlight."
+              This remedy is her go-to for emotional shadows, for the grey days when the spirit dims.
+              A few drops beneath the tongue, and the world seems to find its color again. It is not a
+              cure, she says, but a reminder that light always returns.
             </p>
-            <div class="healer-name">Ascended Teacher Seraphina Lightbody</div>
+          </div>
         </div>
-
-        <div class="about-details">
-            <div class="about-detail-item">
-                <div class="about-detail-number">18</div>
-                <div class="about-detail-label">Breath Sequence</div>
-            </div>
-            <div class="about-detail-item">
-                <div class="about-detail-number">∞</div>
-                <div class="about-detail-label">Dimensions Accessed</div>
-            </div>
-            <div class="about-detail-item">
-                <div class="about-detail-number">φ</div>
-                <div class="about-detail-label">Sacred Proportion</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         SACRED ART — Three practices
-    ═══════════════════════════════════════════════════ -->
-    <section id="sacred-art">
-        <div class="sacred-art-header">
-            <div class="sacred-art-label">The Sacred Arts</div>
-            <h2 class="sacred-art-title">Three Transformations</h2>
-            <p class="sacred-art-subtitle">Three sacred modalities converge to activate your Merkaba — each building upon the last, creating a complete activation of the light body vehicle.</p>
-        </div>
-
-        <div class="practices-grid">
-            <!-- Practice 1: Merkaba Breathing -->
-            <div class="practice-card reveal">
-                <div class="practice-geometry">
-                    <svg viewBox="0 0 120 120">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#9b59b6" stop-opacity="0.8"/>
-                                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
-                            </linearGradient>
-                        </defs>
-                        <!-- Breathing geometry — expanding circles -->
-                        <circle cx="60" cy="60" r="20" fill="none" stroke="url(#grad1)" stroke-width="1">
-                            <animate attributeName="r" values="15;25;15" dur="2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="60" cy="60" r="35" fill="none" stroke="#9b59b6" stroke-width="0.5" stroke-dasharray="3 5">
-                            <animate attributeName="r" values="30;40;30" dur="2s" repeatCount="indefinite" begin="0.3s"/>
-                        </circle>
-                        <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" stroke-dasharray="2 8">
-                            <animate attributeName="r" values="45;55;45" dur="2s" repeatCount="indefinite" begin="0.6s"/>
-                        </circle>
-                        <!-- 18 breath markers -->
-                        <circle cx="60" cy="60" r="28" fill="none" stroke="rgba(155,89,182,0.3)" stroke-width="0.5" stroke-dasharray="1.5 8.2"/>
-                    </svg>
-                </div>
-                <div class="practice-number">I</div>
-                <h3 class="practice-name">Merkaba Breathing</h3>
-                <p class="practice-desc">The 18-breath activation sequence that ignites the star tetrahedron, spinning the upper and lower pyramids in opposite directions at the speed of light.</p>
-                <p class="practice-extended">Each breath corresponds to a specific geometric alignment. The first 6 breaths activate the lower tetrahedron, the next 6 ignite the upper, and the final 6 synchronize both into unified rotation — the Merkaba field fully alive.</p>
-            </div>
-
-            <!-- Practice 2: Sacred Geometry Meditation -->
-            <div class="practice-card reveal reveal-delay-1">
-                <div class="practice-geometry">
-                    <svg viewBox="0 0 120 120">
-                        <!-- Nested sacred geometry -->
-                        <polygon points="60,15 95,42.5 95,87.5 60,115 25,87.5 25,42.5" fill="none" stroke="#9b59b6" stroke-width="0.8" opacity="0.6">
-                            <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="20s" repeatCount="indefinite"/>
-                        </polygon>
-                        <polygon points="60,25 85,45 85,80 60,100 35,80 35,45" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.6">
-                            <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="15s" repeatCount="indefinite"/>
-                        </polygon>
-                        <circle cx="60" cy="60" r="30" fill="none" stroke="rgba(155,89,182,0.4)" stroke-width="0.5"/>
-                        <circle cx="60" cy="60" r="45" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
-                        <!-- Flower of life hint -->
-                        <circle cx="60" cy="40" r="20" fill="none" stroke="rgba(155,89,182,0.15)" stroke-width="0.4"/>
-                        <circle cx="42" cy="50" r="20" fill="none" stroke="rgba(155,89,182,0.15)" stroke-width="0.4"/>
-                        <circle cx="78" cy="50" r="20" fill="none" stroke="rgba(155,89,182,0.15)" stroke-width="0.4"/>
-                    </svg>
-                </div>
-                <div class="practice-number">II</div>
-                <h3 class="practice-name">Sacred Geometry Meditation</h3>
-                <p class="practice-desc">Visualizing the complex geometry of the Merkaba — two interlocking tetrahedra creating the Star of David in three dimensions, the blueprint of creation itself.</p>
-                <p class="practice-extended">Through guided visualization, you will hold the star tetrahedron in your mind's eye, feeling its edges, its planes, its center. As the geometry stabilizes, your consciousness begins to resonate with the universal pattern — the same pattern found in atoms, galaxies, and the spiral of your DNA.</p>
-            </div>
-
-            <!-- Practice 3: Light Body Integration -->
-            <div class="practice-card reveal reveal-delay-2">
-                <div class="practice-geometry">
-                    <svg viewBox="0 0 120 120">
-                        <!-- Integration — merging geometry with body -->
-                        <ellipse cx="60" cy="60" rx="35" ry="50" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/>
-                        <polygon points="60,10 85,45 75,80 45,80 35,45" fill="none" stroke="#9b59b6" stroke-width="0.8">
-                            <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
-                        </polygon>
-                        <!-- Grounding lines -->
-                        <line x1="60" y1="80" x2="60" y2="110" stroke="rgba(155,89,182,0.4)" stroke-width="0.8"/>
-                        <line x1="50" y1="85" x2="45" y2="110" stroke="rgba(155,89,182,0.3)" stroke-width="0.5"/>
-                        <line x1="70" y1="85" x2="75" y2="110" stroke="rgba(155,89,182,0.3)" stroke-width="0.5"/>
-                        <!-- Crown light -->
-                        <circle cx="60" cy="12" r="4" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5">
-                            <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                    </svg>
-                </div>
-                <div class="practice-number">III</div>
-                <h3 class="practice-name">Light Body Integration</h3>
-                <p class="practice-desc">Grounding expanded consciousness back into the physical body, integrating the activated Merkaba with your daily experience and relationships.</p>
-                <p class="practice-extended">Activation without integration remains ephemeral. This final practice anchors the Merkaba's geometry into your cellular memory, allowing the light body to remain active even in waking consciousness — transforming how you perceive, create, and move through the world.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         PHILOSOPHY — The Light Body
-    ═══════════════════════════════════════════════════ -->
-    <section id="philosophy">
-        <div class="philosophy-header">
-            <div class="philosophy-label">The Light Body</div>
-            <h2 class="philosophy-title">Five Pillars of <span class="hl">Merkaba Philosophy</span></h2>
-            <p class="philosophy-intro">
-                The Merkaba teaching is not a singular technique but a complete philosophy of being — 
-                a way of understanding your relationship to light, geometry, consciousness, and the divine 
-                architecture that underlies all of creation.
+      </div>
+      <div class="specimen" data-specimen="2">
+        <div class="specimen-plate">
+          <div class="specimen-image" style="background-image: url('images/specimen-03.jpg')"></div>
+          <div class="specimen-info">
+            <h3 class="specimen-name">Valeriana officinalis</h3>
+            <p class="specimen-common">Valerian Root</p>
+            <p class="specimen-note">
+              Dug from the rich, dark soil of Sage's own garden bed after the first autumn rains, when the
+              root system has stored its deepest potency. The smell is pungent — earthy, musky, almost
+              animal — and not everyone appreciates it, but Sage considers it the scent of deep rest
+              made manifest. She tinctures the fresh root in grain alcohol for six weeks, shaking the jar
+              each morning as a small ritual of intention. The resulting extract is reserved for those nights
+              when sleep will not come, when the mind races through corridors of worry. A dropperful in warm
+              water, and the body remembers how to surrender. It is, she says, the plant's way of saying
+              "you have done enough for today."
             </p>
+          </div>
         </div>
-
-        <div class="philosophy-pillars">
-            <!-- Pillar 1 -->
-            <div class="pillar-card reveal">
-                <div class="pillar-geometry">
-                    <svg viewBox="0 0 60 60">
-                        <polygon points="30,5 55,20 55,50 30,60 5,50 5,20" fill="none" stroke="#9b59b6" stroke-width="0.8"/>
-                        <circle cx="30" cy="32" r="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                    </svg>
-                </div>
-                <div class="pillar-number">PILLAR I</div>
-                <h3 class="pillar-title">You Are Already Light</h3>
-                <p class="pillar-text">
-                    The Merkaba is not something you acquire from outside yourself. It exists within every 
-                    cell, every atom of your being — a dormant vehicle of light encoded in your original 
-                    blueprint. Activation is remembrance, not creation. You are returning to what you 
-                    have always been.
-                </p>
-            </div>
-
-            <!-- Pillar 2 -->
-            <div class="pillar-card reveal reveal-delay-1">
-                <div class="pillar-geometry">
-                    <svg viewBox="0 0 60 60">
-                        <polygon points="30,5 55,30 30,55 5,30" fill="none" stroke="#9b59b6" stroke-width="0.8"/>
-                        <polygon points="30,15 45,30 30,45 15,30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                        <line x1="30" y1="5" x2="30" y2="55" stroke="rgba(155,89,182,0.4)" stroke-width="0.5"/>
-                        <line x1="5" y1="30" x2="55" y2="30" stroke="rgba(155,89,182,0.4)" stroke-width="0.5"/>
-                    </svg>
-                </div>
-                <div class="pillar-number">PILLAR II</div>
-                <h3 class="pillar-title">Geometry Is the Language of God</h3>
-                <p class="pillar-text">
-                    Before words, before sound, before light itself — there was geometry. The sacred 
-                    shapes that form the Merkaba are the fundamental syntax of creation. To meditate 
-                    upon them is to speak the language in which the universe was written, and to align 
-                    your consciousness with the mind of the divine.
-                </p>
-            </div>
-
-            <!-- Pillar 3 -->
-            <div class="pillar-card reveal reveal-delay-2">
-                <div class="pillar-geometry">
-                    <svg viewBox="0 0 60 60">
-                        <circle cx="30" cy="30" r="25" fill="none" stroke="#9b59b6" stroke-width="0.6"/>
-                        <circle cx="30" cy="30" r="18" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                        <circle cx="30" cy="30" r="10" fill="none" stroke="rgba(155,89,182,0.5)" stroke-width="0.5"/>
-                        <circle cx="30" cy="30" r="3" fill="rgba(255,255,255,0.6)"/>
-                    </svg>
-                </div>
-                <div class="pillar-number">PILLAR III</div>
-                <h3 class="pillar-title">Breath Is the Engine</h3>
-                <p class="pillar-text">
-                    The 18-breath sequence is not metaphor — it is mechanics. Specific breathing 
-                    patterns generate specific electromagnetic frequencies within the body. These 
-                    frequencies interact with the dormant Merkaba field, providing the energetic 
-                    torque needed to initiate rotation. The breath is the key that turns the ignition.
-                </p>
-            </div>
-
-            <!-- Pillar 4 -->
-            <div class="pillar-card reveal reveal-delay-3">
-                <div class="pillar-geometry">
-                    <svg viewBox="0 0 60 60">
-                        <polygon points="30,5 55,20 55,50 30,60 5,50 5,20" fill="none" stroke="#9b59b6" stroke-width="0.6"/>
-                        <polygon points="30,5 55,50 5,50" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                        <polygon points="30,60 55,20 5,20" fill="none" stroke="rgba(155,89,182,0.4)" stroke-width="0.5"/>
-                        <circle cx="30" cy="32" r="2" fill="rgba(255,255,255,0.5)"/>
-                    </svg>
-                </div>
-                <div class="pillar-number">PILLAR IV</div>
-                <h3 class="pillar-title">Ascension Is Embodiment</h3>
-                <p class="pillar-text">
-                    True ascension is not escape from the body but the fullest embodiment of light 
-                    within it. The Merkaba does not carry you away from Earth — it anchors you more 
-                    deeply into your divine purpose here. The light body and the physical body become 
-                    one integrated vehicle of conscious creation.
-                </p>
-            </div>
-
-            <!-- Pillar 5 -->
-            <div class="pillar-card reveal">
-                <div class="pillar-geometry">
-                    <svg viewBox="0 0 60 60">
-                        <polygon points="30,5 55,30 30,55 5,30" fill="none" stroke="#9b59b6" stroke-width="0.8"/>
-                        <circle cx="30" cy="30" r="20" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" stroke-dasharray="3 4"/>
-                        <line x1="30" y1="5" x2="30" y2="55" stroke="rgba(155,89,182,0.3)" stroke-width="0.5"/>
-                        <line x1="5" y1="30" x2="55" y2="30" stroke="rgba(155,89,182,0.3)" stroke-width="0.5"/>
-                        <line x1="12" y1="12" x2="48" y2="48" stroke="rgba(155,89,182,0.2)" stroke-width="0.5"/>
-                        <line x1="48" y1="12" x2="12" y2="48" stroke="rgba(155,89,182,0.2)" stroke-width="0.5"/>
-                    </svg>
-                </div>
-                <div class="pillar-number">PILLAR V</div>
-                <h3 class="pillar-title">The Collective Activation</h3>
-                <p class="pillar-text">
-                    When one being activates their Merkaba, it ripples through the collective field. 
-                    Your light body is not separate from the whole — it is a node in a vast geometric 
-                    network of consciousness. Your activation contributes to the awakening of the entire 
-                    human family. You heal yourself, you heal the world.
-                </p>
-            </div>
-        </div>
-
-        <div class="philosophy-quote reveal">
-            <blockquote>
-                "The Merkaba is the <span class="hl">bridge between worlds</span> — not a bridge you cross, 
-                but a bridge you <span class="hl">become</span>."
-            </blockquote>
-            <cite>— Teacher Seraphina Lightbody</cite>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         TESTIMONIALS
-    ═══════════════════════════════════════════════════ -->
-    <section id="testimonials">
-        <div class="testimonials-header">
-            <div class="testimonials-label">Voices from the Light</div>
-            <h2 class="testimonials-title">Sacred Experiences</h2>
-        </div>
-
-        <div class="testimonials-grid">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card reveal">
-                <div class="testimonial-geometry"></div>
-                <div class="testimonial-stars">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <p class="testimonial-text">
-                    During the 18-breath activation, I felt the geometry literally take form around me. 
-                    It was not visualization — it was sensation. I could feel the upper pyramid spinning 
-                    clockwise and the lower counter-clockwise, and for the first time in my life, 
-                    I understood what it means to be a light body.
-                </p>
-                <div class="testimonial-divider"></div>
-                <div class="testimonial-author">Luminara V.</div>
-                <div class="testimonial-location">Sedona, Arizona</div>
-                <div class="testimonial-experience">3rd Merkaba Activation Session</div>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="testimonial-card reveal reveal-delay-1">
-                <div class="testimonial-geometry"></div>
-                <div class="testimonial-stars">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <p class="testimonial-text">
-                    I came to the sanctuary carrying twenty years of spiritual seeking. Teacher Seraphina's 
-                    guidance was unlike anything I had experienced — not belief-based, but experiential. 
-                    The Merkaba activated on the third session, and I left knowing that everything I had 
-                    been searching for was already within me.
-                </p>
-                <div class="testimonial-divider"></div>
-                <div class="testimonial-author">Cassian D.</div>
-                <div class="testimonial-location">Mount Shasta, California</div>
-                <div class="testimonial-experience">Full Merkaba Integration Program</div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="testimonial-card reveal reveal-delay-2">
-                <div class="testimonial-geometry"></div>
-                <div class="testimonial-stars">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <p class="testimonial-text">
-                    The sacred geometry meditation opened something I cannot explain in words. Colors 
-                    appeared that I have no names for. Geometric patterns unfolded behind my closed 
-                    eyelids with mathematical precision. I left the session seeing the world differently 
-                    — everything is geometry now. Everything is light.
-                </p>
-                <div class="testimonial-divider"></div>
-                <div class="testimonial-author">Aeliana M.</div>
-                <div class="testimonial-location">Glastonbury, England</div>
-                <div class="testimonial-experience">Sacred Geometry Immersion</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         JOURNEY — Your First Visit
-    ═══════════════════════════════════════════════════ -->
-    <section id="journey">
-        <div class="journey-header">
-            <div class="journey-label">Your First Visit</div>
-            <h2 class="journey-title">The Path to <span class="hl">Activation</span></h2>
-            <p class="journey-intro">
-                Your journey into the Merkaba begins before you arrive. Each step is designed to prepare 
-                your energy field for the profound geometric activation that awaits within the sanctuary.
+      </div>
+      <div class="specimen" data-specimen="3">
+        <div class="specimen-plate">
+          <div class="specimen-image" style="background-image: url('images/specimen-04.jpg')"></div>
+          <div class="specimen-info">
+            <h3 class="specimen-name">Calendula officinalis</h3>
+            <p class="specimen-common">Pot Marigold</p>
+            <p class="specimen-note">
+              Grown in terra cotta pots on the windowsill of Sage's kitchen, where they catch the morning
+              light and turn their faces toward the sun with an almost devotional faithfulness. The petals
+              are harvested individually, a meditative task she performs while listening to old radio programs.
+              Infused into olive oil for several weeks, they produce a golden salve that heals cuts, burns,
+              and dry skin with a gentleness that pharmaceutical creams cannot match. Sage calls calendula
+              "the plant that teaches us to be soft without being weak" — its resilience lies in flexibility,
+              in the willingness to bend with wind and weather without breaking.
             </p>
+          </div>
         </div>
-
-        <div class="journey-steps">
-            <!-- Step 1 -->
-            <div class="journey-step reveal">
-                <div class="step-geometry">
-                    <svg viewBox="0 0 60 60">
-                        <circle cx="30" cy="30" r="25" fill="none" stroke="#9b59b6" stroke-width="0.8"/>
-                        <circle cx="30" cy="30" r="15" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                        <circle cx="30" cy="30" r="4" fill="rgba(155,89,182,0.4)"/>
-                    </svg>
-                </div>
-                <div class="step-number">STEP I</div>
-                <h3 class="step-title">Sacred Intention</h3>
-                <p class="step-text">
-                    Begin with 7 days of silent meditation. Set your intention for Merkaba activation. 
-                    Journal any dreams, visions, or geometric imagery that arises.
-                </p>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="journey-step reveal reveal-delay-1">
-                <div class="step-geometry">
-                    <svg viewBox="0 0 60 60">
-                        <polygon points="30,5 55,30 30,55 5,30" fill="none" stroke="#9b59b6" stroke-width="0.8"/>
-                        <polygon points="30,15 45,30 30,45 15,30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                    </svg>
-                </div>
-                <div class="step-number">STEP II</div>
-                <h3 class="step-title">Initial Consultation</h3>
-                <p class="step-text">
-                    A private session with Teacher Seraphina to assess your energy field, 
-                    review your intention, and determine which transformation best serves your path.
-                </p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="journey-step reveal reveal-delay-2">
-                <div class="step-geometry">
-                    <svg viewBox="0 0 60 60">
-                        <polygon points="30,5 55,20 55,50 30,60 5,50 5,20" fill="none" stroke="#9b59b6" stroke-width="0.8"/>
-                        <polygon points="30,15 45,25 45,45 30,52 15,45 15,25" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                        <circle cx="30" cy="32" r="3" fill="rgba(155,89,182,0.5)"/>
-                    </svg>
-                </div>
-                <div class="step-number">STEP III</div>
-                <h3 class="step-title">The Activation</h3>
-                <p class="step-text">
-                    In the crystal sanctuary, guided through the 18-breath sequence, sacred geometry 
-                    meditation, and light body integration — the full Merkaba activation experience.
-                </p>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="journey-step reveal reveal-delay-3">
-                <div class="step-geometry">
-                    <svg viewBox="0 0 60 60">
-                        <polygon points="30,5 55,30 30,55 5,30" fill="none" stroke="#9b59b6" stroke-width="0.8"/>
-                        <line x1="30" y1="5" x2="30" y2="55" stroke="rgba(155,89,182,0.4)" stroke-width="0.5"/>
-                        <line x1="5" y1="30" x2="55" y2="30" stroke="rgba(155,89,182,0.4)" stroke-width="0.5"/>
-                        <circle cx="30" cy="30" r="2" fill="rgba(255,255,255,0.6)"/>
-                    </svg>
-                </div>
-                <div class="step-number">STEP IV</div>
-                <h3 class="step-title">Integration & Return</h3>
-                <p class="step-text">
-                    Post-session guidance for maintaining your Merkaba activation in daily life, 
-                    including breathing practices, meditation protocols, and integration support.
-                </p>
-            </div>
-        </div>
-
-        <div class="journey-details">
-            <div class="journey-detail">
-                <div class="journey-detail-icon">
-                    <svg viewBox="0 0 40 40">
-                        <circle cx="20" cy="20" r="18" fill="none" stroke="#9b59b6" stroke-width="0.6"/>
-                        <text x="20" y="24" text-anchor="middle" font-family="Questrial" font-size="12" fill="#9b59b6">φ</text>
-                    </svg>
-                </div>
-                <div class="journey-detail-title">Duration</div>
-                <div class="journey-detail-text">2.5 hours per session<br>3-session minimum recommended</div>
-            </div>
-            <div class="journey-detail">
-                <div class="journey-detail-icon">
-                    <svg viewBox="0 0 40 40">
-                        <polygon points="20,2 38,20 20,38 2,20" fill="none" stroke="#9b59b6" stroke-width="0.6"/>
-                        <circle cx="20" cy="20" r="8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                    </svg>
-                </div>
-                <div class="journey-detail-title">Setting</div>
-                <div class="journey-detail-text">Private crystal sanctuary<br>Amethyst-lined meditation chamber</div>
-            </div>
-            <div class="journey-detail">
-                <div class="journey-detail-icon">
-                    <svg viewBox="0 0 40 40">
-                        <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" fill="none" stroke="#9b59b6" stroke-width="0.6"/>
-                        <circle cx="20" cy="20" r="6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                    </svg>
-                </div>
-                <div class="journey-detail-title">Preparation</div>
-                <div class="journey-detail-text">Fasting 4 hours before<br>Cotton clothing, no jewelry</div>
-            </div>
-        </div>
-
-        <div class="journey-note reveal">
-            <div class="journey-note-label">A Note from Teacher Seraphina</div>
-            <p>
-                There is no prerequisite for Merkaba activation. Whether you have practiced meditation 
-                for decades or have never sat in silence, the <span class="hl">geometry meets you where you are</span>. 
-                Your light body does not require perfection — it requires only your 
-                <span class="hl">willingness to remember</span>.
+      </div>
+      <div class="specimen" data-specimen="4">
+        <div class="specimen-plate">
+          <div class="specimen-image" style="background-image: url('images/specimen-05.jpg')"></div>
+          <div class="specimen-info">
+            <h3 class="specimen-name">Matricaria chamomilla</h3>
+            <p class="specimen-common">German Chamomile</p>
+            <p class="specimen-note">
+              A handful of dried chamomile flowers, their golden hearts still fragrant after months in a
+              glass jar with a cork stopper. Sage sources these from a small organic farm in the
+              Yamhill Valley, where the grower lets the plants go to seed each year so they return
+              unbidden, wilder and more abundant than before. She brews them into a tea so delicate it
+              tastes like sunlight filtered through honey — a remedy for anxious hearts and churning
+              stomachs. She often gives it to children, watching their eyes grow heavy and peaceful as
+              the warmth spreads through them. Chamomile is her reminder that medicine need not be
+              bitter to be powerful, that healing can arrive disguised as a kindness.
             </p>
+          </div>
         </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         QUOTE — Mathematical authority
-    ═══════════════════════════════════════════════════ -->
-    <section id="quote">
-        <div class="quote-container">
-            <svg class="quote-geometry-frame" viewBox="0 0 200 200">
-                <circle cx="100" cy="100" r="90" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
-                <polygon points="100,10 190,100 100,190 10,100" fill="none" stroke="#9b59b6" stroke-width="0.5"/>
-                <polygon points="100,30 170,100 100,170 30,100" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
-            </svg>
-
-            <div class="quote-symbol">∴ THEOREM</div>
-            <blockquote class="quote-text">
-                "The Merkaba is not something you create.<br>
-                It is something you <span class="q-amethyst">remember</span>.<br>
-                The geometry was always there —<br>
-                encoded in the <span class="q-amethyst">mathematics of your being</span>."
-            </blockquote>
-            <div class="quote-proof">
-                — Teacher Seraphina Lightbody
-            </div>
-            <div class="quote-proof-line"></div>
+      </div>
+      <div class="specimen" data-specimen="5">
+        <div class="specimen-plate">
+          <div class="specimen-image" style="background-image: url('images/specimen-06.jpg')"></div>
+          <div class="specimen-info">
+            <h3 class="specimen-name">Taraxacum officinale</h3>
+            <p class="specimen-common">Dandelion</p>
+            <p class="specimen-note">
+              The most misunderstood of all plants, Sage says — dismissed as a weed by those who do not
+              know its gifts. She digs the roots from her own lawn each spring, when the bitter green
+              leaves are still young and tender. The root, roasted slowly until it turns the color of
+              dark coffee, makes a decoction that supports the liver and kidneys with quiet, persistent
+              efficiency. It is the first remedy she reaches for when clients arrive with the heaviness
+              of accumulated toxins, the sluggishness that comes from living too long indoors. Dandelion
+              teaches that nothing is truly unwanted — that every plant, every creature, every moment
+              has a purpose waiting to be recognized.
+            </p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ═══════════════════════════════════════════════════
-         ARRIVAL — Email signup
-    ═══════════════════════════════════════════════════ -->
-    <section id="arrival">
-        <div class="arrival-content">
-            <h2 class="arrival-title">Activate Your Light Body</h2>
-            <p class="arrival-subtitle">Enter your sacred geometry. Receive transmissions on Merkaba activation, breathing sequences, and ascension teachings.</p>
+  <!-- SACRED ART -->
+  <section id="sacred-art">
+    <div class="section-inner">
+      <span class="section-label">Sacred Art</span>
+      <h2 class="section-title">The Practice</h2>
+      <p class="section-body">
+        Three disciplines form the heart of Sage's work with plant medicine, each one a bridge between
+        the wild intelligence of the botanical world and the human body's innate capacity for renewal.
+      </p>
+    </div>
+    <div class="practices-grid">
+      <article class="practice-card">
+        <div class="practice-number">01</div>
+        <h3 class="practice-name">Herbal Tinctures</h3>
+        <p class="practice-desc">
+          Each tincture begins with a single plant, harvested at the precise moment of its peak vitality.
+          Sage submerges the fresh material in grain alcohol and allows time — weeks, sometimes months —
+          to draw out the plant's essence. The result is a concentrated liquid that carries the intelligence
+          of the root or leaf in a form the body can readily absorb. She works with dozens of species,
+          crafting bespoke formulations that address each client's particular needs with the specificity
+          of a conversation rather than a prescription.
+        </p>
+      </article>
+      <article class="practice-card">
+        <div class="practice-number">02</div>
+        <h3 class="practice-name">Flower Essences</h3>
+        <p class="practice-desc">
+          Flower essences operate on the emotional and energetic body rather than the physical. Sage
+          collects blossoms at sunrise, floating them in spring water exposed to sunlight until the
+          water absorbs the flower's vibrational signature. This is then preserved in brandy and
+          administered in drops beneath the tongue. She uses them to address anxiety, grief, fear,
+          and the countless subtle disharmonies that undermine well-being before they manifest as
+          physical symptoms. The essences are subtle but persistent, working like a tuning fork for
+          the soul.
+        </p>
+      </article>
+      <article class="practice-card">
+        <div class="practice-number">03</div>
+        <h3 class="practice-name">Medicinal Teas</h3>
+        <p class="practice-desc">
+          The simplest and most ancient form of plant medicine, the tea is also the most intimate.
+          Sage blends each blend by hand, combining dried herbs in proportions calibrated to the
+          individual's constitution and the season's demands. She teaches her clients the art of
+          slow preparation — measuring, steeping, waiting — as a practice of mindfulness. The act of
+          making tea becomes a daily ritual of self-care, a small ceremony that anchors the body
+          and calms the mind. Every blend tells a story of place, of the specific meadow or forest
+          floor where each ingredient was gathered.
+        </p>
+      </article>
+    </div>
+  </section>
 
-            <form class="arrival-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='LIGHT BODY ACTIVATED'; this.querySelector('button').style.borderColor='#d4af37'; this.querySelector('button').style.color='#d4af37';">
-                <input type="email" class="arrival-input" placeholder="Your cosmic address" required>
-                <button type="submit" class="arrival-btn">Activate Your Light Body</button>
-            </form>
-
-            <div class="arrival-extras">
-                <div class="arrival-extra">
-                    <div class="arrival-extra-icon">
-                        <svg viewBox="0 0 32 32">
-                            <polygon points="16,2 30,16 16,30 2,16" fill="none" stroke="#9b59b6" stroke-width="0.6"/>
-                        </svg>
-                    </div>
-                    <div class="arrival-extra-text">Weekly Teachings</div>
-                </div>
-                <div class="arrival-extra">
-                    <div class="arrival-extra-icon">
-                        <svg viewBox="0 0 32 32">
-                            <circle cx="16" cy="16" r="14" fill="none" stroke="#9b59b6" stroke-width="0.6"/>
-                            <circle cx="16" cy="16" r="6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                        </svg>
-                    </div>
-                    <div class="arrival-extra-text">Breathing Guides</div>
-                </div>
-                <div class="arrival-extra">
-                    <div class="arrival-extra-icon">
-                        <svg viewBox="0 0 32 32">
-                            <polygon points="16,2 30,10 30,22 16,30 2,22 2,10" fill="none" stroke="#9b59b6" stroke-width="0.6"/>
-                        </svg>
-                    </div>
-                    <div class="arrival-extra-text">Session Invitations</div>
-                </div>
-            </div>
+  <!-- PHILOSOPHY -->
+  <section id="philosophy">
+    <div class="section-inner">
+      <span class="section-label">Philosophy</span>
+      <h2 class="section-title">Plant Wisdom</h2>
+      <div class="philosophy-pillars">
+        <div class="pillar">
+          <span class="pillar-number">I</span>
+          <h3 class="pillar-title">The Living Pharmacy</h3>
+          <p class="pillar-text">
+            Every forest, meadow, and roadside ditch is a dispensary waiting to be read. The plants
+            that grow most abundantly around us are often the ones we need most — nature does not
+            place medicine by accident. Learning to see the pharmacy that surrounds us is the first
+            act of herbal mastery, and it requires nothing more than attention and willingness to
+            kneel in the dirt.
+          </p>
         </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         FOOTER
-    ═══════════════════════════════════════════════════ -->
-    <footer>
-        <svg class="footer-merkaba" viewBox="0 0 200 200">
-            <polygon points="100,20 160,80 160,140 100,180 40,140 40,80" fill="none" stroke="rgba(155,89,182,0.6)" stroke-width="1"/>
-            <polygon points="100,40 140,80 140,130 100,160 60,130 60,80" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-            <polygon points="100,20 160,140 40,140" fill="none" stroke="rgba(155,89,182,0.4)" stroke-width="0.8"/>
-            <polygon points="100,180 160,60 40,60" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
-            <circle cx="100" cy="100" r="60" fill="none" stroke="rgba(155,89,182,0.2)" stroke-width="0.5" stroke-dasharray="3 6"/>
-        </svg>
-
-        <div class="footer-info">
-            <div class="footer-healer">Ascended Teacher Seraphina Lightbody</div>
-            <div class="footer-address">
-                144 Crystal Way<br>
-                Mount Shasta, CA 96067
-            </div>
-            <div class="footer-divider"></div>
-            <div class="footer-tagline">Activating the Vehicle of Ascension</div>
-            <div class="footer-links">
-                <a href="#" class="footer-link">Philosophy</a>
-                <a href="#" class="footer-link">Sacred Arts</a>
-                <a href="#" class="footer-link">First Visit</a>
-                <a href="#" class="footer-link">Contact</a>
-            </div>
+        <div class="pillar">
+          <span class="pillar-number">II</span>
+          <h3 class="pillar-title">Seasonal Attunement</h3>
+          <p class="pillar-text">
+            The body, like the landscape, moves through cycles of growth, rest, and renewal. Sage
+            teaches her clients to align their remedies and routines with the turning of the year —
+            cleansing in spring, nourishing in summer, preserving in autumn, and resting in winter.
+            This is not merely practical advice but a deeper invitation to remember that we are part
+            of the same intelligence that moves the sap and calls the birds.
+          </p>
         </div>
+        <div class="pillar">
+          <span class="pillar-number">III</span>
+          <h3 class="pillar-title">Root and Rhythm</h3>
+          <p class="pillar-text">
+            Healing is not a destination but a rhythm — a pulse of effort and surrender, action
+            and stillness. The plant world embodies this truth in every season. A seed does not
+            rush to become a tree, and a wound does not heal by force of will alone. Sage guides
+            her clients toward patience with the process, trust in the body's intelligence, and
+            the understanding that the deepest healing often arrives in the quietest moments.
+          </p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-number">IV</span>
+          <h3 class="pillar-title">Reciprocity with the Earth</h3>
+          <p class="pillar-text">
+            To take from the earth is to enter into a covenant. Sage never harvests more than a
+            tenth of any wild population, always leaves an offering of gratitude, and cultivates
+            medicinal gardens to supplement what she gathers from the wild. This ethic of
+            reciprocity is not sentiment but survival — the land that sustains us must itself
+            be sustained, or the medicine dries up and the conversation ends.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="footer-copy">MMXXVI · Sacred Geometry · The Merkaba</div>
-    </footer>
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-inner">
+      <span class="section-label">Testimonials</span>
+      <h2 class="section-title">Voices from the Garden</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial">
+          <p class="testimonial-text">
+            After years of insomnia that no pill could touch, a single tincture of valerian root and
+            passionflower — blended by Sage after a long conversation about my life and my worries —
+            gave me back the gift of sleep. Not forced sleep, not drugged oblivion, but the natural,
+            gentle closing of the day. She did not merely prescribe; she listened, and the remedy
+            she created carried that listening in every drop.
+          </p>
+          <footer class="testimonial-author">— Miriam Cole, Portland</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="testimonial-text">
+            I came to Sage carrying a grief so heavy it had settled in my shoulders and my jaw.
+            She made me a flower essence from yarrow and wild rose, and she told me that grief is
+            not something to be cured but something to be carried with grace. Over the following
+            weeks, the essence did not remove my sorrow, but it softened its edges. I learned to
+            hold it differently, the way you hold a cup of tea — carefully, warmly, without spilling.
+          </p>
+          <footer class="testimonial-author">— David Tanaka, Lake Oswego</footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="testimonial-text">
+            My daughter was seven and terrified of thunderstorms. Sage gave us a small brown bottle
+            of chamomile and starflower essence, and we placed three drops under her tongue each
+            evening before bed. Within a month, she was sleeping through storms with her window
+            open, listening to the rain with something close to delight. I do not understand the
+            science of it, but I understand the result: my child is no longer afraid, and that
+            is medicine enough for me.
+          </p>
+          <footer class="testimonial-author">— Elena Vasquez, Beaverton</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // ═══════════════════════════════════════════════════
-        // COSMIC STAR FIELD
-        // ═══════════════════════════════════════════════════
-        (function createStars() {
-            const bg = document.getElementById('cosmicBg');
-            const count = 150;
-            for (let i = 0; i < count; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                const size = Math.random() * 2 + 0.5;
-                star.style.cssText = `
-                    width: ${size}px;
-                    height: ${size}px;
-                    left: ${Math.random() * 100}%;
-                    top: ${Math.random() * 100}%;
-                    --dur: ${2 + Math.random() * 4}s;
-                    --max-op: ${0.3 + Math.random() * 0.7};
-                    animation-delay: ${Math.random() * 3}s;
-                `;
-                bg.appendChild(star);
-            }
-        })();
+  <!-- JOURNEY -->
+  <section id="journey">
+    <div class="section-inner">
+      <span class="section-label">Your Journey</span>
+      <h2 class="section-title">What to Expect</h2>
+      <p class="section-body">
+        Your first visit is not a consultation but a conversation — unhurried, exploratory, rooted in
+        genuine curiosity about your body's story and the life you are living. Sage will ask questions
+        that no doctor has asked, and together you will map the terrain of your well-being.
+      </p>
+      <div class="journey-steps">
+        <div class="journey-step">
+          <span class="step-number">01</span>
+          <h3 class="step-title">The Gathering</h3>
+          <p class="step-text">
+            Before your visit, Sage will ask you to keep a journal — noting your sleep, your energy,
+            your moods, and any symptoms that trouble you. She reads these notes the way a naturalist
+            reads a trail: each entry a clue, each pattern a signal.
+          </p>
+        </div>
+        <div class="journey-step">
+          <span class="step-number">02</span>
+          <h3 class="step-title">The Listening</h3>
+          <p class="step-text">
+            Your first session lasts ninety minutes. Sage will take your history, ask about your
+            relationship with food, with nature, with rest. She observes your pulse, your complexion,
+            the quality of your voice. This is the heart of the practice — the moment where plant
+            and person begin to find each other.
+          </p>
+        </div>
+        <div class="journey-step">
+          <span class="step-number">03</span>
+          <h3 class="step-title">The Crafting</h3>
+          <p class="step-text">
+            Within a week, Sage will have prepared your personalized tincture or tea blend. Each
+            formula is made by hand in small batches, using plants she has gathered or grown herself.
+            She includes detailed instructions and a letter explaining the reasoning behind each
+            ingredient.
+          </p>
+        </div>
+        <div class="journey-step">
+          <span class="step-number">04</span>
+          <h3 class="step-title">The Tending</h3>
+          <p class="step-text">
+            Follow-up sessions occur monthly, where Sage adjusts your formula as the seasons change
+            and your body responds. She teaches you to notice small shifts — a deeper breath, a
+            calmer morning, a clearer mind — that indicate the medicine is finding its way.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // ═══════════════════════════════════════════════════
-        // FLOATING PARTICLES
-        // ═══════════════════════════════════════════════════
-        (function createParticles() {
-            const container = document.getElementById('particles');
-            for (let i = 0; i < 20; i++) {
-                const p = document.createElement('div');
-                p.className = 'particle';
-                p.style.cssText = `
-                    left: ${Math.random() * 100}%;
-                    top: ${40 + Math.random() * 60}%;
-                    --dur: ${4 + Math.random() * 6}s;
-                    --delay: ${Math.random() * 5}s;
-                `;
-                container.appendChild(p);
-            }
-        })();
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <span class="section-label">Find the Garden</span>
+      <h2 class="section-title">Visit Sage Wildroot</h2>
+      <div class="contact-details">
+        <p class="contact-address">
+          999 Herb Garden<br>
+          Portland, OR 97201
+        </p>
+        <p class="contact-hours">
+          By appointment only<br>
+          Tuesday through Saturday
+        </p>
+      </div>
+      <div class="contact-cta">
+        <a href="mailto:sage@herbalism.garden" class="btn-primary">Begin Your Journey</a>
+      </div>
+    </div>
+  </section>
 
-        // ═══════════════════════════════════════════════════
-        // SCROLL INDICATOR
-        // ═══════════════════════════════════════════════════
-        const sections = ['hero', 'about', 'sacred-art', 'philosophy', 'testimonials', 'journey', 'quote', 'arrival'];
-        const dots = document.querySelectorAll('.scroll-dot');
+  <!-- BOTTOM NAVIGATION -->
+  <nav id="bottomNav">
+    <a href="#hero" class="nav-item active" data-section="hero">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v4m0 12v4m10-10h-4M6 12H2m15.07-7.07l-2.83 2.83M9.76 14.24l-2.83 2.83m11.14 0l-2.83-2.83M9.76 9.76L6.93 6.93"/></svg>
+      </span>
+      <span class="nav-label">Home</span>
+    </a>
+    <a href="#herbarium" class="nav-item" data-section="herbarium">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12 6v6l4 2"/></svg>
+      </span>
+      <span class="nav-label">Herbarium</span>
+    </a>
+    <a href="#sacred-art" class="nav-item" data-section="sacred-art">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </span>
+      <span class="nav-label">Sacred Art</span>
+    </a>
+    <a href="#philosophy" class="nav-item" data-section="philosophy">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      <span class="nav-label">Philosophy</span>
+    </a>
+    <a href="#testimonials" class="nav-item" data-section="testimonials">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </span>
+      <span class="nav-label">Voices</span>
+    </a>
+    <a href="#contact" class="nav-item" data-section="contact">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </span>
+      <span class="nav-label">Visit</span>
+    </a>
+  </nav>
 
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                document.getElementById(dot.dataset.section).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        const observerOptions = { threshold: 0.4 };
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    dots.forEach(d => d.classList.toggle('active', d.dataset.section === id));
-                }
-            });
-        }, observerOptions);
-
-        sections.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) sectionObserver.observe(el);
-        });
-
-        // ═══════════════════════════════════════════════════
-        // SCROLL REVEAL
-        // ═══════════════════════════════════════════════════
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.15 });
-
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-        // ═══════════════════════════════════════════════════
-        // MERKABA PARALLAX ON MOUSE
-        // ═══════════════════════════════════════════════════
-        const merkabaContainer = document.querySelector('.merkaba-container');
-        document.addEventListener('mousemove', (e) => {
-            if (!merkabaContainer) return;
-            const cx = window.innerWidth / 2;
-            const cy = window.innerHeight / 2;
-            const dx = (e.clientX - cx) / cx;
-            const dy = (e.clientY - cy) / cy;
-            merkabaContainer.style.transform = `translate(${dx * 15}px, ${dy * 15}px)`;
-        });
-    </script>
-
-<footer class="site-footer">
-  <p>&copy; Norman James</p>
-  <p>made with love ❤️ by Empathy Studio</p>
-</footer>
+  <script src="script.js"></script>
 </body>
 </html>

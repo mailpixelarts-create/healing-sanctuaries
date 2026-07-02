@@ -1,99 +1,99 @@
-Prompt 1: Family altar with old photographs in ornate frames, candles burning, flowers offered
+Prompt 1: Sacred drum resting on animal hide in candlelit ceremonial space, smoke wisps
 Style: Documentary photography, intimate
-Mood: Ancestral, honoring, warm
-Lighting: Candlelight warm amber
+Mood: Ancient, sacred, powerful
+Lighting: Candlelight with smoke haze
 
-Prompt 2: Weathered hands holding antique photograph, tears visible, warm tones
-Style: Portrait photography, emotional
-Mood: Grief, love, connection
-Lighting: Soft warm light
+Prompt 2: Shamanic practitioner in trance state, eyes closed, drum beating, desert landscape behind
+Style: Portrait photography, ethereal
+Mood: Deep, connected, transcendent
+Lighting: Golden hour desert light
 
-Prompt 3: Cemetery at dusk with candles on graves, warm amber glow
-Style: Landscape photography, atmospheric
-Mood: Peaceful, honoring, timeless
-Lighting: Twilight with candlelight
+Prompt 3: Red rock formations of Sedona at dawn, mystical atmosphere, spirit energy visible
+Style: Landscape photography, mystical
+Mood: Powerful, ancient, alive
+Lighting: Dawn light with atmospheric haze
 
-Prompt 4: Collection of vintage photographs arranged in collage, sepia tones
-Style: Still life photography, nostalgic
-Mood: Memory, preserved, beloved
-Lighting: Soft natural light
-
-Prompt 5: Person speaking to photograph of ancestor, candlelight between them
-Style: Environmental portrait, ritual
-Mood: Communication, honoring, intimate
+Prompt 4: Close-up of drumming hands, motion blur, rhythmic energy captured
+Style: Action photography, dynamic
+Mood: Rhythmic, primal, focused
 Lighting: Warm candlelight
 
-Prompt 6: Old family Bible with pressed flowers and photographs, warm wood table
-Style: Still life photography, heirloom
-Mood: Precious, historical, loved
-Lighting: Warm side lighting
+Prompt 5: Soul retrieval ceremony, practitioner journeying, ethereal spirit forms surrounding
+Style: Conceptual photography, spiritual
+Mood: Otherworldly, healing, profound
+Lighting: Blue and amber spirit light
 
-Prompt 7: Cemetery with fresh flowers on old grave, warm afternoon light
-Style: Landscape photography, peaceful
-Mood: Remembered, loved, peaceful
-Lighting: Golden hour light
+Prompt 6: Desert altar with sacred objects, feathers, crystals, dried herbs, candles burning
+Style: Still life photography, ceremonial
+Mood: Sacred, grounded, powerful
+Lighting: Warm firelight
 
-Prompt 8: Close-up of hands lighting candle at family altar, warm glow
-Style: Detail photography, ritual
-Mood: Devotional, focused, warm
-Lighting: Candle flame
+Prompt 7: Smoke rising through candlelight, forming spirit shapes, ethereal
+Style: Abstract photography, mystical
+Mood: Transcendent, mysterious, beautiful
+Lighting: Single candle flame
 
-Prompt 9: Vintage photograph in ornate frame surrounded by dried flowers
-Style: Still life photography, memorial
-Mood: Preserved, beautiful, remembered
+Prompt 8: Eyes of shaman in deep trance, pupils dilated, ancient wisdom visible
+Style: Macro portrait, intense
+Mood: Profound, connected, seeing
+Lighting: Low warm light
+
+Prompt 9: Extraction healing ceremony, dark energy being pulled from body into crystal
+Style: Conceptual photography, healing
+Mood: Transformative, powerful, releasing
+Lighting: Contrast of dark and healing light
+
+Prompt 10: Sacred geometry drum pattern, painted on hide, symbolic
+Style: Still life photography, ceremonial
+Mood: Ancient, symbolic, meaningful
 Lighting: Soft directional light
 
-Prompt 10: Person kneeling at ancestor altar, head bowed in respect
-Style: Environmental portrait, devotional
-Mood: Humble, connected, reverent
-Lighting: Candlelight ambiance
+Prompt 11: Spirit journey landscape, lower world forest with glowing paths, otherworldly
+Style: Conceptual photography, visionary
+Mood: Mysterious, inviting, ancient
+Lighting: Bioluminescent forest glow
 
-Prompt 11: Collection of ancestral objects: pocket watch, letters, photographs
-Style: Still life photography, heirloom
-Mood: Precious, historical, connected
-Lighting: Warm museum lighting
+Prompt 12: Four directional candles in ceremonial arrangement, smoke spiraling upward
+Style: Still life photography, ritual
+Mood: Sacred, balanced, powerful
+Lighting: Multiple candle flames
 
-Prompt 12: Cemetery gate at golden hour, warm light filtering through
-Style: Architectural photography, atmospheric
-Mood: Threshold, peaceful, timeless
-Lighting: Golden hour backlight
+Prompt 13: Desert night sky with stars, Sedona red rocks silhouette, spirit world above
+Style: Landscape photography, cosmic
+Mood: Vast, connected, infinite
+Lighting: Starlight with horizon glow
 
-Prompt 13: Person holding hands with photograph of ancestor, conceptual connection
-Style: Conceptual photography, spiritual
-Mood: Connected, loving, transcendent
-Lighting: Soft warm glow
-
-Prompt 14: Old wooden chest opened to reveal family photographs and mementos
-Style: Still life photography, discovery
-Mood: Hidden treasures, memory, precious
-Lighting: Warm interior light
-
-Prompt 15: Candlelit room with photographs on every surface, warm amber
-Style: Interior photography, intimate
-Mood: Surrounded by ancestors, warm, safe
-Lighting: Multiple candles
-
-Prompt 16: Fresh flowers placed on grave, hands arranging carefully
-Style: Detail photography, ritual
-Mood: Loving, careful, honoring
-Lighting: Natural soft light
-
-Prompt 17: Vintage photograph developing in darkroom, image emerging
-Style: Process photography, mysterious
-Mood: Emergence, memory, creation
-Lighting: Red safelight
-
-Prompt 18: Person speaking stories to empty chair with photograph nearby
-Style: Environmental portrait, absence
-Mood: Remembering, storytelling, connection
-Lighting: Warm lamp light
-
-Prompt 19: Ancestral altar with incense smoke rising through photograph
-Style: Atmospheric photography, spiritual
-Mood: Connecting, prayer, honoring
+Prompt 14: Ancestor spirits visible in smoke, translucent forms watching over ceremony
+Style: Conceptual photography, ancestral
+Mood: Protective, loving, present
 Lighting: Smoke-filtered candlelight
 
-Prompt 20: Final image of photograph surrounded by blooming flowers, life continuing
-Style: Still life photography, hopeful
-Mood: Life, memory, continuation
-Lighting: Warm natural light
+Prompt 15: Hands holding sacred herbs, offering to fire, smoke rising
+Style: Detail photography, devotional
+Mood: Reverent, offering, connected
+Lighting: Fire glow
+
+Prompt 16: Shamanic mask resting on altar, surrounded by crystals and feathers
+Style: Still life photography, ceremonial
+Mood: Ancient, powerful, protective
+Lighting: Dramatic side lighting
+
+Prompt 17: Lower world entrance, cave mouth with ethereal light within, beckoning
+Style: Conceptual photography, mysterious
+Mood: Inviting, transformative, deep
+Lighting: Otherworldly interior glow
+
+Prompt 18: Upper world sky realm, clouds with spirit beings, luminous
+Style: Conceptual photography, celestial
+Mood: Elevated, peaceful, wise
+Lighting: Celestial golden light
+
+Prompt 19: Integration moment, person returning from journey, eyes opening with new sight
+Style: Portrait photography, awakening
+Mood: Transformed, present, seeing
+Lighting: Soft morning light
+
+Prompt 20: Complete ceremonial circle, fire at center, practitioners around, smoke forming vortex
+Style: Documentary photography, communal
+Mood: United, powerful, sacred
+Lighting: Fire at center with surrounding darkness

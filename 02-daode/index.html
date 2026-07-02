@@ -1,370 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daode Xin Xi — The Way That Cannot Be Named</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;600;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DaoDe Sound Healing — Every Cell Has a Frequency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">DaoDe</div>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#origin" data-text="Origin">Origin</a></li>
+      <li><a href="#sacred-art" data-text="Sacred Art">Sacred Art</a></li>
+      <li><a href="#philosophy" data-text="Philosophy">Philosophy</a></li>
+      <li><a href="#journey" data-text="Journey">Journey</a></li>
+      <li><a href="#resonance" data-text="Resonance">Resonance</a></li>
+    </ul>
+    <a href="#contact" class="nav__cta">Book a Session</a>
+  </nav>
 
-    <!-- Mandala Navigation Container -->
-    <div id="mandala-nav" class="mandala-nav">
-        <svg id="mandala-svg" viewBox="0 0 600 600" class="mandala-svg">
-            <!-- Outer rings -->
-            <circle cx="300" cy="300" r="280" class="mandala-ring ring-outer" />
-            <circle cx="300" cy="300" r="240" class="mandala-ring ring-mid" />
-            <circle cx="300" cy="300" r="180" class="mandala-ring ring-inner" />
-            <circle cx="300" cy="300" r="120" class="mandala-ring ring-core" />
-            <circle cx="300" cy="300" r="60" class="mandala-ring ring-center" />
-
-            <!-- Sacred geometry petals -->
-            <g id="mandala-petals" class="mandala-petals">
-                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-1" />
-                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-2" />
-                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-3" />
-                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-4" />
-                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-5" />
-                <path d="M300,20 Q380,300 300,580 Q220,300 300,20" class="mandala-petal petal-6" />
-            </g>
-
-            <!-- Inner sacred triangles -->
-            <g id="mandala-triangles" class="mandala-triangles">
-                <polygon points="300,100 450,400 150,400" class="mandala-triangle tri-1" />
-                <polygon points="300,500 150,200 450,200" class="mandala-triangle tri-2" />
-            </g>
-
-            <!-- Navigation points -->
-            <g id="nav-points" class="nav-points">
-                <circle cx="300" cy="30" r="12" class="nav-point" data-section="about" />
-                <circle cx="540" cy="300" r="12" class="nav-point" data-section="practices" />
-                <circle cx="300" cy="570" r="12" class="nav-point" data-section="philosophy" />
-                <circle cx="60" cy="300" r="12" class="nav-point" data-section="journey" />
-            </g>
-
-            <!-- Section labels around mandala -->
-            <text x="300" y="55" class="mandala-label label-about" data-section="about">About</text>
-            <text x="555" y="305" class="mandala-label label-practices" data-section="practices">Practices</text>
-            <text x="300" y="595" class="mandala-label label-philosophy" data-section="philosophy">Philosophy</text>
-            <text x="45" y="305" class="mandala-label label-journey" data-section="journey">Journey</text>
-
-            <!-- Center emblem -->
-            <g class="center-emblem">
-                <text x="300" y="300" class="center-yin-yang">&#9784;</text>
-            </g>
-        </svg>
+  <!-- HERO — PARTICLE STORM -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero__content">
+      <p class="hero__label">DaoDe Sound Healing</p>
+      <h1 class="hero__title">Every Cell Has<br>a Frequency</h1>
+      <p class="hero__sub">Vibrational medicine rooted in ancient wisdom.<br>Your body remembers how to heal — we simply remind it.</p>
+      <a href="#contact" class="hero__cta">Begin Your Journey</a>
     </div>
+    <div class="hero__scroll">
+      <span>Scroll to Discover</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
 
-    <!-- Sections -->
-    <section id="home" class="section section-home active">
-        <div class="section-content">
-            <div class="home-content">
-                <div class="home-mist"></div>
-                <h1 class="hero-title">
-                    <span class="title-line title-chinese">道德心息</span>
-                    <span class="title-line title-english">Daode Xin Xi</span>
-                    <span class="title-line title-sub">The Way That Cannot Be Named</span>
-                </h1>
-                <p class="hero-tagline">The Tao That Can Be Spoken Is Not the Eternal Tao</p>
-                <div class="hero-scroll-hint">
-                    <span class="scroll-text">Enter the sanctuary</span>
-                    <div class="scroll-line"></div>
-                </div>
-            </div>
+  <!-- ORIGIN STORY -->
+  <section class="origin" id="origin">
+    <div class="origin__grid">
+      <div class="origin__media">
+        <div class="origin__image-wrap">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" alt="Sound healer with singing bowl" class="origin__img" loading="lazy">
+          <div class="origin__image-overlay"></div>
         </div>
-    </section>
-
-    <section id="about" class="section section-about">
-        <div class="section-content">
-            <div class="about-layout">
-                <div class="about-vertical-text">
-                    <p class="vertical-chinese">道德心息</p>
-                </div>
-                <div class="about-main">
-                    <h2 class="section-title">Way-Virtue Heart-Matter</h2>
-                    <div class="about-body">
-                        <p>Master Wei Linzhao trained at Wudang Mountain under Taoist masters for 22 years. Daode Xin Xi translates as "Way-Virtue Heart-Matter" — a system of energetic cultivation that works with the three dantians, the microcosmic orbit, and the five element cycle to restore harmony between heaven, earth, and human.</p>
-                        <p>This ancient lineage carries the essence of Taoist internal alchemy, refined through centuries of practice at the sacred peaks of Wudang, where mist-wrapped temples have witnessed the silent cultivation of countless masters.</p>
-                        <p>The practice transcends mere technique. It is a return to the natural state — the uncarved block, the empty vessel, the water that nourishes all things without striving.</p>
-                        <p>Each session is a conversation between practitioner and the deep currents of qi that flow beneath the surface of ordinary awareness. Through precise touch and breath guidance, Master Wei helps you rediscover the body's innate intelligence — the same intelligence that beats your heart, digests your food, and heals your wounds.</p>
-                        <p>The lineage of Daode Xin Xi traces back through the Wudang tradition, where martial arts, medicine, and meditation are understood as three expressions of a single truth: the cultivation of vital force in alignment with the Tao.</p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="origin__text">
+        <span class="section-label">01 — Origin</span>
+        <h2 class="section-title">Elias Harmon</h2>
+        <p class="origin__lead">Sound Weaver</p>
+        <div class="origin__bio">
+          <p>Elias Harmon spent seven years studying under Tibetan monks in the Himalayan highlands, where he learned the ancient art of using vibrational frequencies to restore harmony to the body's energy systems.</p>
+          <p>Combining these time-honored techniques with modern sound therapy research, Elias has developed a unique practice that bridges millennia of wisdom with contemporary healing science.</p>
+          <p>His sanctuary, DaoDe — meaning "The Way" — is a space where sound becomes medicine and every frequency carries intention.</p>
         </div>
-    </section>
-
-    <section id="practices" class="section section-practices">
-        <div class="section-content">
-            <h2 class="section-title">Sacred Arts</h2>
-            <div class="practices-container">
-                <div class="practice-orbit">
-                    <div class="practice-circle" data-practice="1">
-                        <div class="practice-ring"></div>
-                        <div class="practice-inner">
-                            <h3 class="practice-name">Microcosmic Orbit</h3>
-                            <p class="practice-desc">Circulation of qi through the governing and conception vessels — the foundational circuit of internal alchemy</p>
-                            <span class="practice-detail">45 min · Seated & Supine</span>
-                        </div>
-                    </div>
-                    <div class="practice-circle" data-practice="2">
-                        <div class="practice-ring"></div>
-                        <div class="practice-inner">
-                            <h3 class="practice-name">Five Element Balancing</h3>
-                            <p class="practice-desc">Seasonal and organ-based harmonization aligned with the cycles of wood, fire, earth, metal, and water</p>
-                            <span class="practice-detail">60 min · Full Body</span>
-                        </div>
-                    </div>
-                    <div class="practice-circle" data-practice="3">
-                        <div class="practice-ring"></div>
-                        <div class="practice-inner">
-                            <h3 class="practice-name">Inner Smile</h3>
-                            <p class="practice-desc">Seated meditation directing healing energy to each organ, awakening the body's innate intelligence</p>
-                            <span class="practice-detail">30 min · Seated Meditation</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="practices-note">
-                    <p>Each practice is tailored to your constitutional type and current state of balance. Master Wei assesses your energy field before every session to determine which arts will serve you most deeply.</p>
-                </div>
-            </div>
+        <div class="origin__detail">
+          <p>777 Resonance Lane<br>Portland, OR 97201</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- PHILOSOPHY SECTION — NEW -->
-    <section id="philosophy" class="section section-philosophy">
-        <div class="section-content">
-            <h2 class="section-title">The Five Virtues</h2>
-            <p class="philosophy-intro">In the Taoist tradition, the Five Virtues arise naturally when the five elements within us are in harmony. Each virtue is not something to acquire, but something to uncover — like clearing muddy water until the mirror surface shows through.</p>
-            <div class="virtues-grid">
-                <div class="virtue-card" data-virtue="ren">
-                    <div class="virtue-symbol">仁</div>
-                    <h3 class="virtue-name">Ren · Benevolence</h3>
-                    <p class="virtue-element">Wood Element · Liver · Spring</p>
-                    <p class="virtue-desc">The virtue of the liver and the wood element. Ren is the natural compassion that arises when the liver's qi flows freely — unblocked anger becomes kindness, rigid judgment becomes gentle understanding. It is the quality of a willow that bends without breaking.</p>
-                </div>
-                <div class="virtue-card" data-virtue="li">
-                    <div class="virtue-symbol">礼</div>
-                    <h3 class="virtue-name">Li · Reverence</h3>
-                    <p class="virtue-element">Fire Element · Heart · Summer</p>
-                    <p class="virtue-desc">The virtue of the heart and the fire element. Li is the natural joy and reverence that pulses through a balanced heart — scattered excitement becomes focused devotion, blind passion becomes illuminated presence. It is the quality of a candle that lights others without diminishing itself.</p>
-                </div>
-                <div class="virtue-card" data-virtue="xin">
-                    <div class="virtue-symbol">信</div>
-                    <h3 class="virtue-name">Xin · Trust</h3>
-                    <p class="virtue-element">Earth Element · Spleen · Late Summer</p>
-                    <p class="virtue-desc">The virtue of the spleen and the earth element. Xin is the grounded confidence that arises when the spleen digests both food and experience with ease — anxious worry becomes steady faith, obsessive overthinking becomes clear discernment. It is the quality of mountain soil that nourishes all roots.</p>
-                </div>
-                <div class="virtue-card" data-virtue="yi">
-                    <div class="virtue-symbol">义</div>
-                    <h3 class="virtue-name">Yi · Integrity</h3>
-                    <p class="virtue-element">Metal Element · Lungs · Autumn</p>
-                    <p class="virtue-desc">The virtue of the lungs and the metal element. Yi is the natural sense of right relationship and boundary that arises when the lungs breathe clearly — grief that stagnates becomes wisdom of letting go, harsh self-criticism becomes refined self-knowledge. It is the quality of autumn air that clarifies the world.</p>
-                </div>
-                <div class="virtue-card" data-virtue="zhi">
-                    <div class="virtue-symbol">智</div>
-                    <h3 class="virtue-name">Zhi · Wisdom</h3>
-                    <p class="virtue-element">Water Element · Kidneys · Winter</p>
-                    <p class="virtue-desc">The virtue of the kidneys and the water element. Zhi is the deep knowing that arises when kidney qi is abundant — fearful paralysis becomes courageous action, scattered willpower becomes focused determination. It is the quality of still water that reflects the stars.</p>
-                </div>
-            </div>
-            <div class="philosophy-footer">
-                <p>These five virtues are not moral prescriptions. They are descriptions of what naturally emerges when the body's energy is balanced. The work of Daode Xin Xi is not to force virtue, but to remove the obstacles that prevent it from arising on its own.</p>
-            </div>
+  <!-- SACRED ART -->
+  <section class="sacred-art" id="sacred-art">
+    <div class="sacred-art__header">
+      <span class="section-label">02 — Sacred Art</span>
+      <h2 class="section-title">Three Modalities<br>of Healing</h2>
+    </div>
+    <div class="sacred-art__grid">
+      <article class="art-card" data-index="01">
+        <div class="art-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=600&q=80" alt="Singing bowl therapy" class="art-card__img" loading="lazy">
         </div>
-    </section>
-
-    <!-- TESTIMONIALS SECTION — NEW -->
-    <section id="testimonials" class="section section-testimonials">
-        <div class="section-content">
-            <h2 class="section-title">Voices from the Path</h2>
-            <div class="testimonials-container">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote-mark">"</div>
-                    <p class="testimonial-text">I came to Master Wei with chronic insomnia and a racing mind that wouldn't quiet. After three sessions of the microcosmic orbit, I began sleeping through the night for the first time in years. But the deeper change was subtle — I stopped fighting my thoughts and started watching them like clouds passing over a mountain. The Tao Te Ching says "the spirit of the valley is inexhaustible" — now I understand what that means from the inside.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-sigil">李</div>
-                        <div>
-                            <p class="testimonial-name">Li Ming</p>
-                            <p class="testimonial-role">Software Engineer, San Francisco</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote-mark">"</div>
-                    <p class="testimonial-text">After my divorce, I felt hollowed out — like the center of my being had been scooped away. A friend recommended the inner smile meditation. I was skeptical. But Master Wei's presence itself was healing. He didn't tell me what to feel. He simply held space until I could feel again. The hollow place slowly filled with something warm and quiet. I don't have a word for it. Maybe the Taoists would call it de — virtue, or power. The power to simply be.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-sigil">陈</div>
-                        <div>
-                            <p class="testimonial-name">Sarah Chen</p>
-                            <p class="testimonial-role">Acupuncturist, Oakland</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote-mark">"</div>
-                    <p class="testimonial-text">I'm a martial artist and I thought I understood qi. I didn't. Master Wei showed me that true power isn't about directing force — it's about getting out of the way. The five element balancing work revealed patterns I'd been carrying since childhood: excess fire in my heart, deficiency in my kidneys. After a full seasonal cycle of sessions, my practice transformed. I move differently. I breathe differently. I am different.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-sigil">赵</div>
-                        <div>
-                            <p class="testimonial-name">David Zhao</p>
-                            <p class="testimonial-role">Tai Chi Instructor, Berkeley</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="art-card__content">
+          <h3 class="art-card__title">Singing Bowl Therapy</h3>
+          <p class="art-card__desc">Hand-selected Himalayan and crystal singing bowls placed on and around the body. Each bowl is tuned to specific chakra frequencies, creating a sonic architecture that dissolves energetic blockages and restores flow.</p>
+          <span class="art-card__duration">90 minutes · $185</span>
         </div>
-    </section>
-
-    <!-- JOURNEY SECTION — NEW -->
-    <section id="journey" class="section section-journey">
-        <div class="section-content">
-            <h2 class="section-title">Your First Visit</h2>
-            <div class="journey-layout">
-                <div class="journey-timeline">
-                    <div class="journey-step" data-step="1">
-                        <div class="step-marker">
-                            <span class="step-number">壹</span>
-                            <div class="step-line"></div>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">Arrival & Settling</h3>
-                            <p class="step-desc">Arrive 10 minutes early. Remove your shoes at the door. Sit in the waiting area and allow the noise of the city to settle. A cup of warming pu-erh tea will be offered. There is nothing you need to prepare or explain. Simply arrive.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step" data-step="2">
-                        <div class="step-marker">
-                            <span class="step-number">贰</span>
-                            <div class="step-line"></div>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">Initial Consultation</h3>
-                            <p class="step-desc">Master Wei will sit with you and listen — not just to your words, but to the energy beneath them. He will ask about your sleep, digestion, emotional patterns, and dreams. This is not a medical intake. It is a conversation between two aspects of the Tao seeking alignment.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step" data-step="3">
-                        <div class="step-marker">
-                            <span class="step-number">叁</span>
-                            <div class="step-line"></div>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">Energetic Assessment</h3>
-                            <p class="step-desc">Through light touch at the wrists, abdomen, and back, Master Wei reads the quality of your qi — its depth, its flow, its areas of stagnation or excess. This reading determines which of the sacred arts will be most beneficial for your first session.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step" data-step="4">
-                        <div class="step-marker">
-                            <span class="step-number">肆</span>
-                            <div class="step-line"></div>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">The Session</h3>
-                            <p class="step-desc">You will lie comfortably on a heated table, fully clothed in loose garments. Master Wei works through precise touch, breath guidance, and energetic transmission. You may feel warmth, tingling, pulsation, or deep relaxation. Some people fall asleep. All responses are welcome.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step" data-step="5">
-                        <div class="step-marker">
-                            <span class="step-number">伍</span>
-                            <div class="step-line"></div>
-                        </div>
-                        <div class="step-content">
-                            <h3 class="step-title">Integration & Departure</h3>
-                            <p class="step-desc">After the session, you will sit quietly with a cup of tea while Master Wei shares what he observed. You will receive simple practices to continue at home — a breathing pattern, a standing posture, or an inner smile meditation. The real healing happens in the days that follow, as your body integrates the work.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="journey-sidebar">
-                    <div class="journey-details">
-                        <h3 class="detail-heading">Practical Details</h3>
-                        <div class="detail-item">
-                            <span class="detail-label">Duration</span>
-                            <span class="detail-value">First visit: 90 minutes</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Follow-up</span>
-                            <span class="detail-value">60–75 minutes</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Attire</span>
-                            <span class="detail-value">Loose, comfortable clothing</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Before your visit</span>
-                            <span class="detail-value">Eat lightly, avoid alcohol for 24 hours</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">After your visit</span>
-                            <span class="detail-value">Rest, drink warm water, journal if called</span>
-                        </div>
-                    </div>
-                    <div class="journey-note">
-                        <p>The Tao does not force. Neither do we. Your first visit is an invitation, not a prescription. Come as you are.</p>
-                    </div>
-                </div>
-            </div>
+      </article>
+      <article class="art-card" data-index="02">
+        <div class="art-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=600&q=80" alt="Gong meditation" class="art-card__img" loading="lazy">
         </div>
-    </section>
-
-    <section id="quote" class="section section-quote">
-        <div class="section-content">
-            <div class="quote-container">
-                <div class="quote-text" id="flowing-quote">
-                    <span class="quote-line" data-delay="0">The Tao that can be spoken</span>
-                    <span class="quote-line" data-delay="1">is not the eternal Tao.</span>
-                    <span class="quote-line" data-delay="2">The name that can be named</span>
-                    <span class="quote-line" data-delay="3">is not the eternal name.</span>
-                    <span class="quote-line quote-source" data-delay="4">— Tao Te Ching, Chapter One</span>
-                </div>
-                <div class="water-flow"></div>
-                <div class="quote-secondary">
-                    <p class="secondary-line">A journey of a thousand miles</p>
-                    <p class="secondary-line">begins with a single step.</p>
-                    <p class="secondary-source">— Tao Te Ching, Chapter Sixty-Four</p>
-                </div>
-            </div>
+        <div class="art-card__content">
+          <h3 class="art-card__title">Gong Meditation</h3>
+          <p class="art-card__desc">A powerful immersive experience using planetary gongs that produce deep, complex overtones. The gong's vibrations penetrate every cell, inducing profound states of meditation and cellular regeneration.</p>
+          <span class="art-card__duration">75 minutes · $165</span>
         </div>
-    </section>
-
-    <section id="arrival" class="section section-arrival">
-        <div class="section-content">
-            <h2 class="section-title">Arrival</h2>
-            <div class="arrival-layout">
-                <div class="arrival-contact">
-                    <div class="contact-qr">
-                        <div class="qr-placeholder">
-                            <span class="qr-text">WeChat</span>
-                        </div>
-                    </div>
-                    <p class="arrival-address">1600 University Avenue<br>Berkeley, CA 94703</p>
-                    <p class="arrival-hours">By appointment · Tuesday through Saturday</p>
-                </div>
-                <div class="arrival-email">
-                    <a href="mailto:practice@daodexinxi.com" class="email-link">practice@daodexinxi.com</a>
-                    <p class="arrival-phone">+1 (510) 842-0168</p>
-                </div>
-            </div>
+      </article>
+      <article class="art-card" data-index="03">
+        <div class="art-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80" alt="Voice toning" class="art-card__img" loading="lazy">
         </div>
-    </section>
+        <div class="art-card__content">
+          <h3 class="art-card__title">Voice Toning</h3>
+          <p class="art-card__desc">Discover the healing instrument you already possess. Through guided vocal exercises and toning techniques, learn to harness your own voice as a tool for self-healing, emotional release, and energetic alignment.</p>
+          <span class="art-card__duration">60 minutes · $145</span>
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <!-- Footer Symbol -->
-    <footer class="site-footer">
-        <div class="footer-symbol">
-            <svg viewBox="0 0 100 100" class="tao-symbol">
-                <circle cx="50" cy="50" r="48" class="tao-outer" />
-                <path d="M50,2 A48,48 0 0,1 50,98 A24,24 0 0,1 50,50 A24,24 0 0,0 50,2" class="tao-light" />
-                <circle cx="50" cy="26" r="6" class="tao-dot-dark" />
-                <circle cx="50" cy="74" r="6" class="tao-dot-light" />
+  <!-- PHILOSOPHY -->
+  <section class="philosophy" id="philosophy">
+    <div class="philosophy__inner">
+      <span class="section-label">03 — Philosophy</span>
+      <h2 class="section-title">Five Truths of<br>Vibrational Medicine</h2>
+      <div class="philosophy__pillars">
+        <div class="pillar" data-index="I">
+          <h3 class="pillar__title">Everything Vibrates</h3>
+          <p class="pillar__text">From the smallest atom to the largest star, all matter is in a state of vibration. The human body is no exception — every organ, tissue, and cell resonates at its own frequency. Disease is simply disharmony in this natural symphony.</p>
+        </div>
+        <div class="pillar" data-index="II">
+          <h3 class="pillar__title">Frequency Follows Thought</h3>
+          <p class="pillar__text">Our thoughts and emotions generate measurable electromagnetic frequencies. Chronic stress creates discordant patterns in the body's energy field. Sound therapy works by introducing coherent frequencies that entrain the body back to its natural state of balance.</p>
+        </div>
+        <div class="pillar" data-index="III">
+          <h3 class="pillar__title">Resonance is Remembering</h3>
+          <p class="pillar__text">When a frequency finds its match within the body, resonance occurs — a deep recognition at the cellular level. This is the body remembering its original blueprint of health. The healing was always within; the sound simply unlocks the door.</p>
+        </div>
+        <div class="pillar" data-index="IV">
+          <h3 class="pillar__title">Silence is the Foundation</h3>
+          <p class="pillar__text">Between every note lies silence — the space where transformation happens. True healing requires intervals of stillness where the body can integrate the frequencies it has received. We honor the pauses as much as the tones.</p>
+        </div>
+        <div class="pillar" data-index="V">
+          <h3 class="pillar__title">Healing is Not Linear</h3>
+          <p class="pillar__text">Sound healing works in spirals, not straight lines. Each session builds upon the last, and the body's wisdom determines the pace. Trust the process. Your frequency knows the way home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVEFORM VISUALIZER (Mic Input) -->
+  <section class="visualizer-section" id="visualizer">
+    <div class="visualizer__inner">
+      <span class="section-label section-label--light">Interactive</span>
+      <h2 class="section-title section-title--light">Your Voice,<br>Our Art</h2>
+      <p class="visualizer__desc">Speak, hum, or sing into your device. Watch as your own voice transforms into flowing waveforms — the same energy that heals within our sessions.</p>
+      <div class="visualizer__wrap">
+        <svg id="waveformSVG" viewBox="0 0 1024 300" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00F0FF" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#00F0FF" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <path id="waveformPath1" d="" fill="none" stroke="url(#waveGrad)" stroke-width="2" filter="url(#glow)" opacity="0.9"/>
+          <path id="waveformPath2" d="" fill="none" stroke="url(#waveGrad)" stroke-width="1.5" filter="url(#glow)" opacity="0.5"/>
+          <path id="waveformPath3" d="" fill="none" stroke="url(#waveGrad)" stroke-width="1" filter="url(#glow)" opacity="0.3"/>
+        </svg>
+        <div class="visualizer__idle" id="visualizerIdle">
+          <button class="visualizer__btn" id="micBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" y1="19" x2="12" y2="23"/>
+              <line x1="8" y1="23" x2="16" y2="23"/>
             </svg>
+            <span>Tap to Begin</span>
+          </button>
         </div>
-    </footer>
+      </div>
+      <p class="visualizer__note">Your audio is processed locally and never recorded or stored.</p>
+    </div>
+  </section>
 
-    <!-- Background particles -->
-    <canvas id="particles-canvas" class="particles-canvas"></canvas>
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials__inner">
+      <span class="section-label">04 — Resonance</span>
+      <h2 class="section-title">Voices from<br>the Sanctuary</h2>
+      <div class="testimonials__grid">
+        <blockquote class="testimonial">
+          <p class="testimonial__text">"After years of chronic pain and failed treatments, I was skeptical. But during my first singing bowl session, I felt something shift deep in my bones — a warmth I hadn't felt in decades. By the third session, my pain had reduced by half. Elias doesn't just play instruments; he plays the body's own forgotten song."</p>
+          <footer class="testimonial__author">
+            <span class="testimonial__name">Sarah M.</span>
+            <span class="testimonial__role">Chronic Pain Recovery</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="testimonial__text">"I came to DaoDe carrying the weight of grief that no therapy could touch. The gong meditation broke something open in me — not painfully, but like a dam releasing water that had been held back for years. I left feeling lighter than I had since my mother passed. Sound reached places words never could."</p>
+          <footer class="testimonial__author">
+            <span class="testimonial__name">David R.</span>
+            <span class="testimonial__role">Grief & Emotional Release</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p class="testimonial__text">"As a musician, I thought I understood sound. I was wrong. Elias showed me that sound isn't just something you hear — it's something you become. The voice toning sessions transformed not only my relationship with music but with my own body. I sing differently now because I listen differently."</p>
+          <footer class="testimonial__author">
+            <span class="testimonial__name">Maya L.</span>
+            <span class="testimonial__role">Vocalist & Sound Healer in Training</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- JOURNEY -->
+  <section class="journey" id="journey">
+    <div class="journey__inner">
+      <span class="section-label">05 — The Journey</span>
+      <h2 class="section-title">What Awaits You</h2>
+      <div class="journey__steps">
+        <div class="step">
+          <div class="step__number">01</div>
+          <div class="step__content">
+            <h3 class="step__title">Arrival & Intention</h3>
+            <p class="step__text">Enter the sanctuary and leave the outside world behind. Share your intentions with Elias — what you seek to heal, release, or explore. There is no wrong answer.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <div class="step__content">
+            <h3 class="step__title">Guided Settling</h3>
+            <p class="step__text">Lie comfortably on a heated mat. A brief breathing exercise grounds you in the present moment, signaling to your nervous system that it is safe to let go.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <div class="step__content">
+            <h3 class="step__title">The Sound Journey</h3>
+            <p class="step__text">Elias begins playing. Instruments are chosen intuitively based on your energy. Vibrations move through your body — you may feel warmth, tingling, emotional release, or profound peace.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__number">04</div>
+          <div class="step__content">
+            <h3 class="step__title">Integration</h3>
+            <p class="step__text">A gentle return. Time is given to integrate the experience. Elias shares observations and guidance for continuing your frequency alignment at home.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- CONTACT / BOOKING -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__info">
+        <span class="section-label">06 — Connect</span>
+        <h2 class="section-title">Begin Your<br>Frequency Journey</h2>
+        <div class="contact__details">
+          <div class="contact__item">
+            <span class="contact__item-label">Location</span>
+            <span>777 Resonance Lane<br>Portland, OR 97201</span>
+          </div>
+          <div class="contact__item">
+            <span class="contact__item-label">Hours</span>
+            <span>Tuesday – Saturday<br>10:00 AM – 7:00 PM</span>
+          </div>
+          <div class="contact__item">
+            <span class="contact__item-label">Contact</span>
+            <span>hello@daodehealing.com<br>(503) 555-0777</span>
+          </div>
+        </div>
+      </div>
+      <form class="contact__form" id="contactForm">
+        <div class="form-group">
+          <input type="text" id="formName" placeholder=" " required>
+          <label for="formName">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="formEmail" placeholder=" " required>
+          <label for="formEmail">Email Address</label>
+        </div>
+        <div class="form-group">
+          <select id="formService" required>
+            <option value="" disabled selected>Select a Modality</option>
+            <option value="singing-bowl">Singing Bowl Therapy</option>
+            <option value="gong">Gong Meditation</option>
+            <option value="voice">Voice Toning</option>
+            <option value="unsure">I'm Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea id="formMessage" rows="4" placeholder=" "></textarea>
+          <label for="formMessage">Share Your Intentions</label>
+        </div>
+        <button type="submit" class="form-submit">Request Session</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">DaoDe</span>
+        <p class="footer__tagline">Every Cell Has a Frequency</p>
+      </div>
+      <div class="footer__links">
+        <a href="#origin">Origin</a>
+        <a href="#sacred-art">Sacred Art</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer__copy">
+        <p>&copy; 2026 DaoDe Sound Healing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

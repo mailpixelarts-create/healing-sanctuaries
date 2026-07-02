@@ -1,1014 +1,658 @@
-/* ================================
-   KABIRAJI HEALING — STYLE
-   ================================ */
+/* ═══════════════════════════════════════════
+   YOGA — Devi Sunflowerr
+   Organic Morphic × Editorial
+   ═══════════════════════════════════════════ */
 
 :root {
-  --earth: #8b4513;
-  --cream: #faf3e8;
-  --rose: #c9a0a0;
-  --earth-light: #a0622e;
-  --earth-dark: #5c2e0a;
-  --cream-dark: #e8dfd2;
-  --grain-opacity: 0.04;
+  --ink: #2B1810;
+  --paper: #F2EDE4;
+  --signal: #E85D04;
+  --ghost: rgba(232, 93, 4, 0.08);
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --flow: 1.6s;
 }
 
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-  overflow-x: hidden;
-}
-
+/* Reset */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
-  color: var(--earth-dark);
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; font-family: inherit; }
 
-/* Grain overlay mixin */
-.hero-grain,
-.about-grain,
-.sacred-grain,
-.philosophy-grain,
-.testimonials-grain,
-.journey-grain {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: var(--grain-opacity);
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px;
-  z-index: 2;
-}
-
-/* ================================
-   NAVIGATION
-   ================================ */
-.nav-orb {
+/* ─── Chakra Navigation ─── */
+.chakra-nav {
   position: fixed;
   top: 2rem;
   right: 2rem;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--rose);
-  border: none;
-  cursor: pointer;
   z-index: 1000;
-  transition: transform 1.6s cubic-bezier(0.23, 1, 0.32, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-.nav-orb span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--cream);
-  transition: transform 1.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.nav-orb:hover {
-  transform: scale(1.2);
-}
-
-.nav-orb.active span {
-  transform: scale(0);
-}
-
-.hidden-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(139, 69, 19, 0.95);
-  backdrop-filter: blur(20px);
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 1.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.hidden-nav.open {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.nav-link {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.8rem, 5vw, 3rem);
-  color: var(--cream);
-  text-decoration: none;
-  letter-spacing: 0.05em;
-  transition: color 0.6s ease;
+.chakra-toggle {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  padding: 0;
   position: relative;
+  z-index: 10;
+  transition: transform 0.5s var(--ease);
 }
+.chakra-toggle:hover { transform: rotate(90deg); }
+.chakra-toggle svg { display: block; }
 
-.nav-link::after {
-  content: '';
+.chakra-wheel {
   position: absolute;
-  bottom: -4px;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 0;
-  height: 1px;
-  background: var(--rose);
-  transition: width 1.6s cubic-bezier(0.23, 1, 0.32, 1);
+  height: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease), width 0s 0.4s, height 0s 0.4s;
+}
+.chakra-wheel.open {
+  pointer-events: auto;
+  opacity: 1;
+  width: 280px;
+  height: 280px;
+  margin-left: -140px;
+  margin-top: -140px;
+  transition: opacity 0.4s var(--ease);
 }
 
-.nav-link:hover {
-  color: var(--rose);
+.chakra-petal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  margin: -22px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  transform: translate(
+    calc(cos(var(--angle)) * 100px),
+    calc(sin(var(--angle)) * 100px)
+  );
+  opacity: 0;
+  transition: transform 0.6s var(--ease), opacity 0.4s var(--ease), background 0.3s;
 }
-
-.nav-link:hover::after {
-  width: 100%;
+.chakra-wheel.open .chakra-petal {
+  opacity: 1;
 }
+.chakra-wheel.open .chakra-petal:nth-child(1) { transition-delay: 0.05s; }
+.chakra-wheel.open .chakra-petal:nth-child(2) { transition-delay: 0.1s; }
+.chakra-wheel.open .chakra-petal:nth-child(3) { transition-delay: 0.15s; }
+.chakra-wheel.open .chakra-petal:nth-child(4) { transition-delay: 0.2s; }
+.chakra-wheel.open .chakra-petal:nth-child(5) { transition-delay: 0.25s; }
+.chakra-wheel.open .chakra-petal:nth-child(6) { transition-delay: 0.3s; }
+.chakra-wheel.open .chakra-petal:nth-child(7) { transition-delay: 0.35s; }
+.chakra-wheel.open .chakra-petal:nth-child(8) { transition-delay: 0.4s; }
+.chakra-petal:hover {
+  background: var(--signal);
+  transform: translate(
+    calc(cos(var(--angle)) * 100px),
+    calc(sin(var(--angle)) * 100px)
+  ) scale(1.15);
+}
+.chakra-petal::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.chakra-petal:hover::after { opacity: 1; }
 
-/* ================================
-   HERO — BLOB REVEAL
-   ================================ */
+/* ─── Hero ─── */
 .hero {
   position: relative;
-  width: 100%;
   height: 100vh;
-  min-height: 600px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--cream);
   overflow: hidden;
 }
-
-.hero-blobs {
+.hero-canvas-wrap {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 0;
 }
-
-.blob {
-  position: absolute;
-  width: 55vmin;
-  height: 55vmin;
-  opacity: 0;
-  animation: blobFadeIn 3s ease forwards;
-}
-
-.blob-1 {
-  animation-delay: 0.2s;
-}
-
-.blob-2 {
-  animation-delay: 0.8s;
-  width: 45vmin;
-  height: 45vmin;
-}
-
-.blob-3 {
-  animation-delay: 1.4s;
-  width: 35vmin;
-  height: 35vmin;
-}
-
-.blob-1 .blob-path {
-  fill: rgba(201, 160, 160, 0.15);
-  animation: morph1 12s ease-in-out infinite;
-}
-
-.blob-2 .blob-path {
-  fill: rgba(139, 69, 19, 0.08);
-  animation: morph2 14s ease-in-out infinite;
-}
-
-.blob-3 .blob-path {
-  fill: rgba(139, 69, 19, 0.12);
-  animation: morph3 10s ease-in-out infinite;
-}
-
-@keyframes blobFadeIn {
-  to { opacity: 1; }
-}
-
-@keyframes morph1 {
-  0%, 100% {
-    d: path("M300,520C180,520,80,420,80,300S180,80,300,80S520,180,520,300S420,520,300,520Z");
-  }
-  33% {
-    d: path("M320,540C160,540,40,400,40,280S160,20,320,20S540,140,540,280S480,540,320,540Z");
-  }
-  66% {
-    d: path("M280,500C200,500,100,440,100,320S200,100,300,100S500,200,500,320S400,500,280,500Z");
-  }
-}
-
-@keyframes morph2 {
-  0%, 100% {
-    d: path("M280,540C140,540,40,420,40,280S140,20,280,20S540,140,540,280S420,540,280,540Z");
-  }
-  50% {
-    d: path("M320,520C180,520,60,380,60,260S180,40,320,40S520,160,520,260S460,520,320,520Z");
-  }
-}
-
-@keyframes morph3 {
-  0%, 100% {
-    d: path("M320,560C160,560,40,400,40,280S160,0,320,0S560,120,560,280S480,560,320,560Z");
-  }
-  50% {
-    d: path("M280,540C120,540,60,420,60,300S120,60,280,60S540,180,540,300S440,540,280,540Z");
-  }
-}
-
-.hero-tagline {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  opacity: 0;
-  animation: taglineReveal 2s ease 2.5s forwards;
-}
-
-.tagline-jp {
-  display: block;
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 700;
-  color: var(--earth);
-  letter-spacing: 0.15em;
-  margin-bottom: 0.3em;
-}
-
-.tagline-en {
-  display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: clamp(0.85rem, 2vw, 1.1rem);
-  font-weight: 300;
-  color: var(--earth-light);
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-}
-
-@keyframes taglineReveal {
-  to { opacity: 1; }
-}
-
-/* ================================
-   ABOUT
-   ================================ */
-.about {
-  position: relative;
-  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
-  background: var(--cream);
-  overflow: hidden;
-}
-
-.about-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: clamp(2rem, 6vw, 5rem);
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.about-image-wrap {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.about-image-circle {
-  width: clamp(220px, 30vw, 340px);
-  height: clamp(220px, 30vw, 340px);
-  border-radius: 50%;
-  overflow: hidden;
-  animation: slowSpin 40s linear infinite;
-}
-
-.about-image-circle img {
+#heroCanvas {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-
-.about-image-ring {
-  position: absolute;
-  inset: -12px;
-  border-radius: 50%;
-  border: 1px solid var(--rose);
-  opacity: 0.4;
-  animation: slowSpin 30s linear infinite reverse;
-}
-
-@keyframes slowSpin {
-  to { transform: rotate(360deg); }
-}
-
-.section-label {
   display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--rose);
-  margin-bottom: 1.2rem;
 }
-
-.section-label.center {
-  text-align: center;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.about-heading {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 600;
-  color: var(--earth);
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
-}
-
-.about-body {
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  color: var(--earth-dark);
-  margin-bottom: 1rem;
-  font-weight: 300;
-  max-width: 480px;
-}
-
-/* ================================
-   SACRED ART
-   ================================ */
-.sacred-art {
-  position: relative;
-  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
-  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
-  overflow: hidden;
-}
-
-.sacred-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.sacred-heading {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 600;
-  color: var(--earth);
-  margin-bottom: clamp(3rem, 6vw, 5rem);
-  text-align: center;
-  line-height: 1.3;
-}
-
-.practices {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(3rem, 6vw, 5rem);
-}
-
-.practice {
-  position: relative;
-  padding: 2.5rem 2rem;
-  background: rgba(250, 243, 232, 0.7);
-  border-radius: 24px;
-  overflow: hidden;
-  transition: transform 1.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.practice:hover {
-  transform: translateY(-4px);
-}
-
-.energy-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-}
-
-.energy-path {
-  fill: none;
-  stroke: var(--rose);
-  stroke-width: 2;
-  stroke-dasharray: 800;
-  stroke-dashoffset: 800;
-  transition: stroke-dashoffset 2.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.practice.visible .energy-path {
-  stroke-dashoffset: 0;
-}
-
-.practice-content {
+.hero-content {
   position: relative;
   z-index: 1;
-}
-
-.practice-number {
-  font-family: 'Shippori Mincho', serif;
-  font-size: 2.5rem;
-  color: var(--rose);
-  opacity: 0.4;
-  display: block;
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.practice-title {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
-  font-weight: 600;
-  color: var(--earth);
-  margin-bottom: 0.8rem;
-  line-height: 1.3;
-}
-
-.practice-desc {
-  font-size: clamp(0.9rem, 1.4vw, 1rem);
-  color: var(--earth-dark);
-  font-weight: 300;
-  max-width: 560px;
-}
-
-/* ================================
-   PHILOSOPHY — THE WAY OF KABIRAJI
-   ================================ */
-.philosophy {
-  position: relative;
-  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
-  background: var(--cream);
-  overflow: hidden;
-}
-
-.philosophy-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.philosophy-heading {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 600;
-  color: var(--earth);
-  margin-bottom: 1.5rem;
   text-align: center;
-  line-height: 1.3;
-}
-
-.philosophy-intro {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto clamp(3rem, 6vw, 5rem);
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  color: var(--earth-dark);
-  font-weight: 300;
-  line-height: 1.8;
-}
-
-.pillars {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(2.5rem, 5vw, 4rem);
-}
-
-.pillar {
-  display: flex;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  align-items: flex-start;
   padding: 2rem;
-  background: rgba(201, 160, 160, 0.06);
-  border-radius: 20px;
-  transition: background 0.8s ease, transform 1.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-.pillar:hover {
-  background: rgba(201, 160, 160, 0.12);
-  transform: translateX(4px);
-}
-
-.pillar-kanji {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: var(--rose);
-  opacity: 0.35;
-  line-height: 1;
-  flex-shrink: 0;
-  width: clamp(50px, 8vw, 70px);
-  text-align: center;
-}
-
-.pillar-title {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
-  font-weight: 600;
-  color: var(--earth);
-  margin-bottom: 0.6rem;
-  line-height: 1.3;
-}
-
-.pillar-desc {
-  font-size: clamp(0.9rem, 1.4vw, 1rem);
-  color: var(--earth-dark);
-  font-weight: 300;
-  line-height: 1.7;
-}
-
-.pillar-desc em {
-  font-style: italic;
-  color: var(--earth);
-}
-
-/* ================================
-   TESTIMONIALS
-   ================================ */
-.testimonials {
-  position: relative;
-  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
-  background: linear-gradient(180deg, var(--cream-dark) 0%, var(--cream) 100%);
-  overflow: hidden;
-}
-
-.testimonials-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.testimonials-heading {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 600;
-  color: var(--earth);
-  margin-bottom: clamp(3rem, 6vw, 5rem);
-  text-align: center;
-  line-height: 1.3;
-}
-
-.testimonial-grid {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(2rem, 4vw, 3rem);
-}
-
-.testimonial-card {
-  position: relative;
-  padding: 2.5rem 2.5rem 2rem;
-  background: rgba(250, 243, 232, 0.8);
-  border-radius: 20px;
-  border: 1px solid rgba(201, 160, 160, 0.15);
-  transition: transform 1.6s cubic-bezier(0.23, 1, 0.32, 1),
-              border-color 0.8s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(201, 160, 160, 0.3);
-}
-
-.testimonial-quote {
-  font-family: 'Shippori Mincho', serif;
-  font-size: 4rem;
-  color: var(--rose);
-  opacity: 0.25;
-  line-height: 1;
-  position: absolute;
-  top: 1rem;
-  left: 1.5rem;
-}
-
-.testimonial-text {
-  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-  color: var(--earth-dark);
-  font-weight: 300;
-  line-height: 1.8;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 1.5rem;
-}
-
-.testimonial-author {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.testimonial-name {
-  font-family: 'Shippori Mincho', serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--earth);
-  letter-spacing: 0.05em;
-}
-
-.testimonial-detail {
+.hero-label {
+  font-family: var(--font-body);
   font-size: 0.8rem;
-  color: var(--earth-light);
-  font-weight: 300;
-  letter-spacing: 0.08em;
-}
-
-/* ================================
-   JOURNEY — YOUR FIRST VISIT
-   ================================ */
-.journey {
-  position: relative;
-  padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
-  background: var(--cream);
-  overflow: hidden;
-}
-
-.journey-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.journey-heading {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 600;
-  color: var(--earth);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   margin-bottom: 1.5rem;
-  text-align: center;
-  line-height: 1.3;
+  opacity: 0.7;
 }
-
-.journey-intro {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto clamp(3rem, 6vw, 5rem);
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  color: var(--earth-dark);
+.hero-title {
+  font-family: var(--font-display);
   font-weight: 300;
-  line-height: 1.8;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--signal);
+}
+.hero-sub {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 2.5rem;
+  opacity: 0.7;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 0.9rem 2.4rem;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background var(--flow) var(--ease), color var(--flow) var(--ease), transform 0.3s var(--ease);
+}
+.cta-btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+.cta-btn.secondary {
+  border-color: var(--signal);
+  color: var(--signal);
+}
+.cta-btn.secondary:hover {
+  background: var(--signal);
+  color: var(--paper);
+}
+.cta-btn:disabled {
+  opacity: 0.35;
+  pointer-events: none;
 }
 
-.journey-steps {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: clamp(3rem, 6vw, 5rem);
-}
-
-.journey-step {
-  display: flex;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  align-items: flex-start;
-}
-
-.step-number {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  color: var(--rose);
-  opacity: 0.4;
-  line-height: 1;
-  flex-shrink: 0;
-  width: clamp(45px, 7vw, 60px);
-  text-align: center;
-  padding-top: 0.2rem;
-}
-
-.step-content {
-  flex: 1;
-}
-
-.step-title {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
-  font-weight: 600;
-  color: var(--earth);
-  margin-bottom: 0.6rem;
-  line-height: 1.3;
-}
-
-.step-desc {
-  font-size: clamp(0.9rem, 1.4vw, 1rem);
-  color: var(--earth-dark);
-  font-weight: 300;
-  line-height: 1.7;
-}
-
-.journey-note {
-  text-align: center;
-  padding: 2rem 2.5rem;
-  background: rgba(201, 160, 160, 0.08);
-  border-radius: 16px;
-  border: 1px solid rgba(201, 160, 160, 0.15);
-}
-
-.journey-note p {
-  font-size: clamp(0.85rem, 1.3vw, 0.95rem);
-  color: var(--earth-dark);
-  font-weight: 300;
-  line-height: 1.7;
-  max-width: 560px;
-  margin: 0 auto;
-}
-
-.journey-note strong {
-  font-weight: 500;
-  color: var(--earth);
-}
-
-/* ================================
-   QUOTE — VERTICAL JAPANESE
-   ================================ */
-.quote-section {
-  position: relative;
-  padding: clamp(5rem, 12vw, 10rem) clamp(1.5rem, 5vw, 4rem);
-  background: var(--earth);
-  overflow: hidden;
-}
-
-.quote-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(2rem, 6vw, 5rem);
-  flex-wrap: wrap;
-}
-
-.vertical-text {
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  animation: scrollBounce 2s var(--ease) infinite;
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
 }
 
-.vt-char {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  color: var(--cream);
+/* ─── Sections ─── */
+.section {
+  padding: 8rem 2rem;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.6s ease, transform 1.6s ease;
-  line-height: 1.2;
+  transform: translateY(40px);
+  transition: opacity var(--flow) var(--ease), transform var(--flow) var(--ease);
 }
-
-.vt-char.visible {
+.section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
-.quote-translation {
-  max-width: 320px;
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--signal);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1.5rem;
+}
+.section-intro {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  margin-bottom: 3rem;
+  max-width: 600px;
 }
 
-.quote-translation p {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: var(--cream);
-  font-weight: 400;
+/* ─── About ─── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+}
+.about-image-placeholder {
+  aspect-ratio: 3/4;
+  background: var(--ghost);
+  border: 1px solid rgba(43,24,16,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--signal);
+  position: relative;
+  overflow: hidden;
+}
+.about-image-placeholder::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--signal) 0%, transparent 70%);
+  opacity: 0.06;
+  animation: morphBlob 8s ease-in-out infinite;
+}
+@keyframes morphBlob {
+  0%, 100% { border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%; }
+  25% { border-radius: 60% 40% 30% 70% / 40% 60% 40% 60%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  75% { border-radius: 50% 40% 50% 60% / 35% 55% 65% 45%; }
+}
+.about-lead {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.35rem;
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.about-text p {
+  margin-bottom: 1.2rem;
   opacity: 0.85;
 }
 
-.quote-attr {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem !important;
-  font-weight: 300 !important;
-  letter-spacing: 0.15em;
-  margin-top: 1.2rem;
-  opacity: 0.5 !important;
+/* ─── Sacred Art Cards ─── */
+.art-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.art-card {
+  padding: 2.5rem 2rem;
+  background: var(--ghost);
+  border: 1px solid rgba(43,24,16,0.06);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.art-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(43,24,16,0.08);
+}
+.art-card-icon {
+  margin-bottom: 1.5rem;
+}
+.art-card-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.art-card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.7;
 }
 
-/* ================================
-   ARRIVAL
-   ================================ */
-.arrival {
+/* ─── Philosophy Pillars ─── */
+.philosophy-pillars {
+  display: grid;
+  gap: 3rem;
+}
+.pillar {
+  padding-left: 3rem;
+  border-left: 1px solid var(--ghost);
   position: relative;
-  padding: clamp(5rem, 12vw, 10rem) clamp(1.5rem, 5vw, 4rem);
-  background: var(--cream);
-  text-align: center;
+  transition: border-color 0.5s var(--ease);
+}
+.pillar:hover {
+  border-left-color: var(--signal);
+}
+.pillar-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--signal);
+  position: absolute;
+  left: -1.2rem;
+  background: var(--paper);
+  padding: 0.3rem 0;
+}
+.pillar h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+.pillar p {
+  opacity: 0.8;
+  max-width: 700px;
 }
 
-.arrival-inner {
-  max-width: 600px;
-  margin: 0 auto;
+/* ─── Flow Builder ─── */
+.flow-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.flow-subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.pose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.pose-card {
+  padding: 1.2rem;
+  background: var(--ghost);
+  border: 1px solid rgba(43,24,16,0.08);
+  cursor: grab;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), opacity 0.3s;
+  user-select: none;
+}
+.pose-card:active { cursor: grabbing; }
+.pose-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(43,24,16,0.06);
+}
+.pose-card.dragging {
+  opacity: 0.4;
+  transform: scale(0.95);
+}
+.pose-visual {
+  aspect-ratio: 1;
+  background: rgba(232,93,4,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--signal);
+}
+.pose-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.pose-dur {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin-top: 0.2rem;
 }
 
-.arrival-details {
+.timeline-slots {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.timeline-slot {
+  flex: 1;
+  aspect-ratio: 1;
+  border: 2px dashed rgba(43,24,16,0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-}
-
-.arrival-phone {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  color: var(--earth);
-  text-decoration: none;
-  letter-spacing: 0.05em;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: border-color 0.3s, background 0.3s;
   position: relative;
-  transition: color 0.6s ease;
+  min-height: 120px;
 }
+.timeline-slot.drag-over {
+  border-color: var(--signal);
+  background: var(--ghost);
+}
+.timeline-slot.filled {
+  border-style: solid;
+  border-color: var(--signal);
+  background: var(--ghost);
+}
+.slot-label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.8rem;
+  color: var(--signal);
+  opacity: 0.3;
+}
+.slot-hint {
+  font-size: 0.7rem;
+  opacity: 0.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.timeline-slot.filled .slot-hint { display: none; }
+.slot-pose-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+}
+.slot-remove {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--signal);
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.slot-remove:hover { opacity: 1; }
 
-.arrival-phone::after {
+.flow-timer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--ghost);
+  margin-bottom: 1.5rem;
+}
+.timer-display {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-style: italic;
+  color: var(--signal);
+}
+.timer-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  margin-top: 0.3rem;
+}
+.flow-actions {
+  display: flex;
+  gap: 1rem;
+}
+.flow-actions .cta-btn { flex: 1; text-align: center; }
+
+/* ─── Journey ─── */
+.journey-steps {
+  position: relative;
+  padding-left: 3rem;
+}
+.journey-steps::before {
   content: '';
   position: absolute;
-  bottom: -4px;
   left: 0;
-  width: 100%;
-  height: 1px;
-  background: var(--rose);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 1.6s cubic-bezier(0.23, 1, 0.32, 1);
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--signal), rgba(232,93,4,0.1));
 }
-
-.arrival-phone:hover {
-  color: var(--earth-light);
+.journey-step {
+  position: relative;
+  padding-bottom: 3rem;
 }
-
-.arrival-phone:hover::after {
-  transform: scaleX(1);
+.journey-step:last-child { padding-bottom: 0; }
+.step-marker {
+  position: absolute;
+  left: -3rem;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--signal);
+  transform: translateX(-50%);
+  margin-left: 0.5px;
 }
-
-.arrival-address {
-  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
-  color: var(--earth-dark);
-  font-weight: 300;
-  line-height: 1.8;
-}
-
-.arrival-hours {
-  margin-top: 0.5rem;
-}
-
-.hours-title {
-  font-family: 'Shippori Mincho', serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--earth);
-  margin-bottom: 0.8rem;
-}
-
-.arrival-hours p {
-  font-size: clamp(0.85rem, 1.3vw, 0.95rem);
-  color: var(--earth-dark);
-  font-weight: 300;
-  line-height: 1.8;
+.journey-step h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
-
-.arrival-note {
-  font-size: 0.8rem;
-  color: var(--earth-light);
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  margin-top: 0.5rem;
+.journey-step p {
+  opacity: 0.8;
+  max-width: 650px;
 }
 
-/* ================================
-   FOOTER — FALLING BLOSSOM
-   ================================ */
-.footer {
+/* ─── Testimonials ─── */
+.testimonial-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+.testimonial {
+  padding: 2.5rem;
+  background: var(--ghost);
+  border-left: 3px solid var(--signal);
   position: relative;
-  padding: 4rem clamp(1.5rem, 5vw, 4rem) 2rem;
-  background: var(--cream);
-  text-align: center;
+}
+.testimonial::before {
+  content: '\201C';
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--signal);
+  opacity: 0.1;
+}
+.testimonial p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.testimonial cite {
+  font-style: normal;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* ─── Contact ─── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: start;
+}
+.contact-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.contact-info p {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+.map-placeholder {
+  aspect-ratio: 16/9;
+  background: var(--ghost);
+  border: 1px solid rgba(43,24,16,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--signal);
+  font-size: 1.1rem;
+  position: relative;
   overflow: hidden;
 }
-
-.footer-inner {
-  position: relative;
+.map-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 40%, var(--signal) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, var(--signal) 0%, transparent 50%);
+  opacity: 0.04;
 }
 
-.cherry-blossom {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto 1.5rem;
-  animation: blossomFall 8s ease-in-out infinite;
-}
-
-.petal {
-  fill: var(--rose);
-  opacity: 0.6;
-  transform-origin: center;
-}
-
-.petal.p1 { animation: petalDrift 8s ease-in-out infinite; }
-.petal.p2 { animation: petalDrift 8s ease-in-out 0.5s infinite; }
-.petal.p3 { animation: petalDrift 8s ease-in-out 1s infinite; }
-.petal.p4 { animation: petalDrift 8s ease-in-out 1.5s infinite; }
-.petal.p5 { animation: petalDrift 8s ease-in-out 2s infinite; }
-
-@keyframes blossomFall {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(8px) rotate(5deg); }
-  50% { transform: translateY(4px) rotate(-3deg); }
-  75% { transform: translateY(12px) rotate(8deg); }
-}
-
-@keyframes petalDrift {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 0.3; }
-}
-
-.footer-text {
-  font-size: 0.8rem;
-  color: var(--earth-light);
-  letter-spacing: 0.15em;
-}
-
-/* ================================
-   SCROLL REVEAL (JS driven)
-   ================================ */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1.6s cubic-bezier(0.23, 1, 0.32, 1),
-              transform 1.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================================
-   RESPONSIVE
-   ================================ */
+/* ─── Footer ─── */
 .site-footer {
   text-align: center;
   padding: 3rem 2rem;
-  background: #0a0a0a;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-.site-footer p {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.1em;
-  margin: 0.3rem 0;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  border-top: 1px solid rgba(43,24,16,0.06);
 }
 
-@media (max-width: 768px) {
-  .about-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text {
-    min-width: auto;
-  }
-
-  .about-body {
-    max-width: 100%;
-  }
-
-  .quote-inner {
-    flex-direction: column;
-  }
-
-  .nav-orb {
-    top: 1.2rem;
-    right: 1.2rem;
-  }
-
-  .pillar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .journey-step {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .testimonial-card {
-    padding: 2rem 1.5rem 1.5rem;
-  }
-
-  .testimonial-quote {
-    font-size: 3rem;
-    top: 0.5rem;
-    left: 1rem;
-  }
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .art-cards { grid-template-columns: 1fr; }
+  .flow-layout { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .section { padding: 5rem 1.5rem; }
+}
+@media (max-width: 600px) {
+  .pose-grid { grid-template-columns: 1fr; }
+  .timeline-slots { flex-direction: column; }
+  .chakra-nav { top: 1rem; right: 1rem; }
 }

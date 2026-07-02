@@ -1,600 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chronokinesis — Healing Across the Stream of Time</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chronokinesis — Ayurveda by Dr. Ananda Sharma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Tiempos+Text:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="preloader">
-        <div class="preloader-content">
-            <div class="preloader-ring"></div>
-            <div class="preloader-text">INITIALIZING TEMPORAL FIELD</div>
-            <div class="preloader-counter" id="preloaderCounter">00:00:00</div>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <div class="nav__coords">29.8543° N, 78.3325° E</div>
+  <div class="nav__links">
+    <a href="#about" data-label="01">About</a>
+    <a href="#art" data-label="02">Sacred Art</a>
+    <a href="#philosophy" data-label="03">Philosophy</a>
+    <a href="#compass" data-label="04">Prakriti Compass</a>
+    <a href="#journey" data-label="05">Journey</a>
+    <a href="#testimonials" data-label="06">Stories</a>
+  </div>
+  <div class="nav__tagline">Balance Is the Nature of Health</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__parallax">
+    <div class="hero__layer hero__layer--back" id="layerBack"></div>
+    <div class="hero__layer hero__layer--mid" id="layerMid"></div>
+    <div class="hero__layer hero__layer--front" id="layerFront"></div>
+    <div class="hero__celestial" id="celestial"></div>
+  </div>
+  <div class="hero__content">
+    <p class="hero__pre">Rishikesh, India — 249137</p>
+    <h1 class="hero__title">CHRONOKINESIS</h1>
+    <p class="hero__sub">Ayurveda · Ancient Science · Living Balance</p>
+    <p class="hero__healer">Dr. Ananda Sharma</p>
+    <a href="#compass" class="hero__cta">Begin Your Assessment</a>
+  </div>
+  <div class="hero__scroll-indicator">
+    <span>Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="section__label">01 — About</div>
+  <div class="section__grid">
+    <div class="section__text">
+      <h2 class="section__heading">Dr. Ananda Sharma</h2>
+      <p class="section__body">Trained at Gujarat Ayurveda University, Dr. Sharma has spent over two decades translating ancient Ayurvedic texts into modern clinical practice. Her approach bridges the empirical rigor of classical Charaka Samhita with contemporary diagnostic methods.</p>
+      <p class="section__body">Every consultation begins with a fundamental premise: your body already knows how to heal. The practitioner's role is to remove the obstacles that prevent that innate intelligence from expressing itself.</p>
+      <div class="about__details">
+        <div class="about__detail">
+          <span class="about__detail-label">Specialization</span>
+          <span class="about__detail-value">Panchakarma & Herbal Medicine</span>
         </div>
+        <div class="about__detail">
+          <span class="about__detail-label">Education</span>
+          <span class="about__detail-value">Gujarat Ayurveda University</span>
+        </div>
+        <div class="about__detail">
+          <span class="about__detail-label">Practice</span>
+          <span class="about__detail-value">Rishikesh, India — 22+ Years</span>
+        </div>
+      </div>
     </div>
-
-    <nav class="data-nav">
-        <div class="nav-brand">
-            <span class="nav-label">SYS://</span>
-            <span class="nav-value">CHRONOKINESIS</span>
+    <div class="section__visual">
+      <div class="about__image-frame">
+        <div class="about__image-placeholder">
+          <span>Portrait of Dr. Ananda Sharma</span>
         </div>
-        <div class="nav-links">
-            <a href="#temporal" class="nav-data">
-                <span class="nav-label">LAT:</span>
-                <span class="nav-value">51.4769°N</span>
-            </a>
-            <a href="#sacred" class="nav-data">
-                <span class="nav-label">LNG:</span>
-                <span class="nav-value">0.0005°W</span>
-            </a>
-            <a href="#arrival" class="nav-data">
-                <span class="nav-label">TZ:</span>
-                <span class="nav-value">UTC+0</span>
-            </a>
-            <a href="#arrival" class="nav-data nav-cta">
-                <span class="nav-label">SESSION:</span>
-                <span class="nav-value">BOOK NOW</span>
-            </a>
-        </div>
-        <button class="nav-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <main>
-        <section id="hero" class="hero">
-            <canvas id="cosmicCanvas"></canvas>
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span class="badge-text">TEMPORAL HEALING INSTITUTE</span>
-                </div>
-                <h1 class="hero-title">
-                    <span class="title-line">HEALING ACROSS</span>
-                    <span class="title-line title-accent">THE STREAM OF TIME</span>
-                </h1>
-                <p class="hero-subtitle">Where quantum physics meets consciousness. Where past, present, and future converge in a single point of healing.</p>
-                <div class="hero-counter">
-                    <div class="counter-label">YEARS OF TEMPORAL RESEARCH</div>
-                    <div class="counter-value">
-                        <span class="counter-digit" id="counterYears">00</span>
-                        <span class="counter-separator">:</span>
-                        <span class="counter-digit" id="counterMonths">00</span>
-                        <span class="counter-separator">:</span>
-                        <span class="counter-digit" id="counterDays">00</span>
-                    </div>
-                    <div class="counter-sublabels">
-                        <span>YEARS</span>
-                        <span>MONTHS</span>
-                        <span>DAYS</span>
-                    </div>
-                </div>
-                <div class="hero-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">COORDINATES</span>
-                        <span class="meta-value">51.4769°N, 0.0005°W</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">ESTABLISHED</span>
-                        <span class="meta-value">GREENWICH, LONDON</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-scroll">
-                <span>SCROLL TO EXPLORE</span>
-                <div class="scroll-line"></div>
-            </div>
-        </section>
+<!-- SACRED ART -->
+<section class="section art" id="art">
+  <div class="section__label">02 — Sacred Art</div>
+  <h2 class="section__heading section__heading--center">Three Pillars of Practice</h2>
+  <div class="art__grid">
+    <div class="art__card">
+      <div class="art__number">01</div>
+      <h3 class="art__title">Dosha Assessment</h3>
+      <p class="art__desc">A comprehensive constitutional analysis mapping your unique Prakriti — the ratio of Vata, Pitta, and Kapha that determines your physical, mental, and emotional tendencies.</p>
+      <div class="art__visual">
+        <div class="art__symbol">◈</div>
+      </div>
+    </div>
+    <div class="art__card">
+      <div class="art__number">02</div>
+      <h3 class="art__title">Herbal Prescriptions</h3>
+      <p class="art__desc">Custom-formulated botanical protocols drawn from classical Ayurvedic pharmacopeia. Each prescription is calibrated to your dosha profile and current Vikriti (state of imbalance).</p>
+      <div class="art__visual">
+        <div class="art__symbol">❋</div>
+      </div>
+    </div>
+    <div class="art__card">
+      <div class="art__number">03</div>
+      <h3 class="art__title">Panchakarma</h3>
+      <p class="art__desc">Five-fold purification therapy — the cornerstone of Ayurvedic rejuvenation. A systematic process of eliminating deep-rooted toxins and restoring constitutional harmony.</p>
+      <div class="art__visual">
+        <div class="art__symbol">◯</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section id="temporal" class="temporal-split">
-            <div class="temporal-left">
-                <div class="clock-visual">
-                    <div class="clock-face">
-                        <div class="clock-ring ring-1"></div>
-                        <div class="clock-ring ring-2"></div>
-                        <div class="clock-ring ring-3"></div>
-                        <div class="clock-center"></div>
-                        <div class="clock-hand hand-hour"></div>
-                        <div class="clock-hand hand-minute"></div>
-                        <div class="clock-hand hand-second"></div>
-                        <div class="clock-markers">
-                            <span>XII</span><span>I</span><span>II</span><span>III</span>
-                            <span>IV</span><span>V</span><span>VI</span><span>VII</span>
-                            <span>VIII</span><span>IX</span><span>X</span><span>XI</span>
-                        </div>
-                    </div>
-                    <div class="clock-data">
-                        <div class="data-row">
-                            <span class="data-label">UTC OFFSET</span>
-                            <span class="data-value">+00:00</span>
-                        </div>
-                        <div class="data-row">
-                            <span class="data-label">MERIDIAN</span>
-                            <span class="data-value">GREENWICH</span>
-                        </div>
-                        <div class="data-row">
-                            <span class="data-label">STATUS</span>
-                            <span class="data-value data-active">ACTIVE</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="temporal-right">
-                <div class="section-label">
-                    <span class="label-number">01</span>
-                    <span class="label-line"></span>
-                    <span class="label-text">ABOUT THE PRACTICE</span>
-                </div>
-                <h2 class="section-title">DR. ELIJAH TEMPORIS</h2>
-                <p class="temporal-intro">Quantum physicist turned healer who discovered that emotional trauma exists outside of linear time.</p>
-                <p class="temporal-text">After two decades at CERN studying temporal anomalies in particle behavior, Dr. Temporis experienced a profound realization: the human body stores emotional imprints not just in tissue and memory, but in its own temporal field — a dimension of consciousness that exists beyond the tick of a clock.</p>
-                <p class="temporal-text">Chronokinesis Healing works with the premise that past traumas and future anxieties exist as energetic imprints in the body's temporal field. Through precise scientific methodology and intuitive healing, we access these imprints to facilitate profound healing that conventional therapies cannot reach.</p>
-                <p class="temporal-text">The practice bridges quantum physics and consciousness studies, offering a unique approach to wellness that transcends conventional temporal boundaries. Our institute sits precisely on the Greenwich Meridian — the zero point of global time — amplifying the efficacy of every session conducted within its walls.</p>
-                <div class="temporal-stats">
-                    <div class="stat">
-                        <span class="stat-value">2,847</span>
-                        <span class="stat-label">SESSIONS CONDUCTED</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-value">98.3%</span>
-                        <span class="stat-label">CLIENT SATISFACTION</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-value">15+</span>
-                        <span class="stat-label">YEARS RESEARCH</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- PHILOSOPHY -->
+<section class="section philosophy" id="philosophy">
+  <div class="section__label">03 — Philosophy</div>
+  <h2 class="section__heading section__heading--center">Foundations of Balance</h2>
+  <div class="philosophy__pillars">
+    <div class="philosophy__pillar">
+      <div class="philosophy__pillar-num">I</div>
+      <h3 class="philosophy__pillar-title">The Three Doshas</h3>
+      <p class="philosophy__pillar-text">Vata (air + ether), Pitta (fire + water), and Kapha (earth + water) are not merely body types — they are the fundamental forces governing all biological processes. Every person carries all three; health is their equilibrium.</p>
+    </div>
+    <div class="philosophy__pillar">
+      <div class="philosophy__pillar-num">II</div>
+      <h3 class="philosophy__pillar-title">Prakriti Is Intelligence</h3>
+      <p class="philosophy__pillar-text">Your birth constitution (Prakriti) is your blueprint for optimal living. Ayurveda does not treat disease — it restores alignment with your original nature.</p>
+    </div>
+    <div class="philosophy__pillar">
+      <div class="philosophy__pillar-num">III</div>
+      <h3 class="philosophy__pillar-title">Nature as Pharmacy</h3>
+      <p class="philosophy__pillar-text">Every healing substance exists within the natural world. Ayurveda's materia medica encompasses thousands of plants, minerals, and formulations — each carrying specific energetic signatures.</p>
+    </div>
+    <div class="philosophy__pillar">
+      <div class="philosophy__pillar-num">IV</div>
+      <h3 class="philosophy__pillar-title">Rhythm Is Medicine</h3>
+      <p class="philosophy__pillar-text">Circadian cycles, seasonal rhythms, and daily routines (Dinacharya) form the temporal framework of Ayurvedic health. Healing happens when we live in time with nature's patterns.</p>
+    </div>
+  </div>
+</section>
 
-        <section id="sacred" class="sacred-art">
-            <div class="section-label">
-                <span class="label-number">02</span>
-                <span class="label-line"></span>
-                <span class="label-text">SACRED PRACTICES</span>
-            </div>
-            <h2 class="section-title">TEMPORAL HEALING ARTS</h2>
-            <p class="sacred-intro">Three foundational practices for navigating the stream of time. Each modality is calibrated to the unique temporal signature of the individual, ensuring a personalized journey through the layers of past, present, and future consciousness.</p>
+<!-- PRAKRITI COMPASS -->
+<section class="section compass" id="compass">
+  <div class="section__label">04 — Prakriti Compass</div>
+  <h2 class="section__heading section__heading--center">Discover Your Constitution</h2>
+  <p class="compass__intro">Answer five questions honestly. Click the statement that resonates most deeply. Your Prakriti profile and herbal tea blend will be revealed.</p>
+  
+  <div class="compass__quiz" id="compassQuiz">
+    <!-- Questions will be populated by JavaScript -->
+  </div>
 
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
+  <div class="compass__result" id="compassResult" style="display:none;">
+    <div class="compass__result-inner">
+      <div class="compass__result-label">Your Prakriti Profile</div>
+      <h3 class="compass__result-type" id="resultType"></h3>
+      <p class="compass__result-desc" id="resultDesc"></p>
+      <div class="compass__result-blend">
+        <span class="compass__result-blend-label">Your Herbal Tea Blend</span>
+        <p class="compass__result-blend-name" id="resultBlend"></p>
+        <p class="compass__result-blend-ingredients" id="resultIngredients"></p>
+      </div>
+      <button class="compass__restart" id="restartQuiz">Retake Assessment</button>
+    </div>
+  </div>
+</section>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-pulse"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">PHASE 01</div>
-                        <h3 class="timeline-title">TEMPORAL FIELD SCAN</h3>
-                        <p class="timeline-text">Identifying energetic imprints from past and future. Using quantum sensing techniques developed at CERN, we map the temporal landscape of your being — locating the precise coordinates of every unresolved emotional imprint that echoes through your timeline.</p>
-                        <p class="timeline-text">This diagnostic phase reveals patterns invisible to conventional assessment: ancestral trauma carried across generations, future anxieties already imprinted in the nervous system, and the subtle temporal distortions that create chronic pain, emotional stagnation, and recurring life patterns.</p>
-                        <div class="timeline-data">
-                            <span class="data-tag">DIAGNOSTIC</span>
-                            <span class="data-tag">90 MINUTES</span>
-                            <span class="data-tag">INITIAL</span>
-                        </div>
-                    </div>
-                </div>
+<!-- JOURNEY -->
+<section class="section journey" id="journey">
+  <div class="section__label">05 — Your Journey</div>
+  <h2 class="section__heading section__heading--center">What to Expect</h2>
+  <div class="journey__timeline">
+    <div class="journey__step">
+      <div class="journey__step-num">01</div>
+      <div class="journey__step-content">
+        <h3>Initial Consultation</h3>
+        <p>A 90-minute deep dive into your health history, lifestyle, dietary patterns, and constitutional assessment. Pulse diagnosis (Nadi Pariksha) reveals your dosha balance.</p>
+      </div>
+    </div>
+    <div class="journey__step">
+      <div class="journey__step-num">02</div>
+      <div class="journey__step-content">
+        <h3>Personalized Protocol</h3>
+        <p>Receive your custom treatment plan: herbal formulations, dietary guidelines, daily routines, and recommended therapies — all calibrated to your unique constitution.</p>
+      </div>
+    </div>
+    <div class="journey__step">
+      <div class="journey__step-num">03</div>
+      <div class="journey__step-content">
+        <h3>Healing Process</h3>
+        <p>Follow your protocol with regular check-ins. Ayurvedic healing is gradual and sustainable — working with your body's natural rhythms rather than against them.</p>
+      </div>
+    </div>
+    <div class="journey__step">
+      <div class="journey__step-num">04</div>
+      <div class="journey__step-content">
+        <h3>Integration & Maintenance</h3>
+        <p>As balance is restored, transition to a maintenance plan. Learn to read your body's signals and adjust your practices seasonally for lasting vitality.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-pulse"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">PHASE 02</div>
-                        <h3 class="timeline-title">TIMELINE INTEGRATION</h3>
-                        <p class="timeline-text">Harmonizing fragmented time-imprints through guided meditation and quantum entanglement protocols. This phase works directly with the body's bio-electromagnetic field to reintegrate scattered temporal fragments back into coherent alignment.</p>
-                        <p class="timeline-text">Clients frequently report experiencing simultaneous memories, emotional releases spanning multiple decades, and moments of profound clarity as their timeline reorganizes into a state of wholeness. The effects are measurable in brain wave patterns within a single session.</p>
-                        <div class="timeline-data">
-                            <span class="data-tag">INTEGRATION</span>
-                            <span class="data-tag">120 MINUTES</span>
-                            <span class="data-tag">ADVANCED</span>
-                        </div>
-                    </div>
-                </div>
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="testimonials">
+  <div class="section__label">06 — Stories</div>
+  <h2 class="section__heading section__heading--center">Voices of Healing</h2>
+  <div class="testimonials__grid">
+    <div class="testimonials__card">
+      <div class="testimonials__quote">"After years of chronic fatigue, Dr. Sharma's approach changed everything. The herbal protocol she designed didn't just address symptoms — it rebuilt my energy from the foundation. I sleep deeply now. I wake with intention."</div>
+      <div class="testimonials__author">
+        <span class="testimonials__name">Meera K.</span>
+        <span class="testimonials__detail">Vata-Pitta Constitution · Mumbai</span>
+      </div>
+    </div>
+    <div class="testimonials__card">
+      <div class="testimonials__quote">"The Panchakarma treatment was transformative. I came in carrying twenty years of accumulated stress in my shoulders. Dr. Sharma's hands and her knowledge of herbal oils released what no modern therapy could reach."</div>
+      <div class="testimonials__author">
+        <span class="testimonials__name">James R.</span>
+        <span class="testimonials__detail">Kapha Constitution · London</span>
+      </div>
+    </div>
+    <div class="testimonials__card">
+      <div class="testimonials__quote">"I was skeptical. Then she explained my dosha profile with more precision than any blood test. The tea blend she prescribed for my digestion — ginger, cumin, fennel — three weeks and my IBS symptoms vanished."</div>
+      <div class="testimonials__author">
+        <span class="testimonials__name">Anika T.</span>
+        <span class="testimonials__detail">Pitta Constitution · Berlin</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-pulse"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">PHASE 03</div>
-                        <h3 class="timeline-title">CHRONO-BREATHWORK</h3>
-                        <p class="timeline-text">Breathing techniques that expand present-moment awareness and synchronize your temporal field with universal time. Derived from ancient pranayama traditions and refined through quantum research, this practice creates a bridge between your personal timeline and the field of infinite possibility.</p>
-                        <p class="timeline-text">Practiced daily, Chrono-Breathwork maintains the temporal coherence achieved in sessions, preventing re-fragmentation and building resilience against future time-based stressors. It is the cornerstone of long-term temporal wellness.</p>
-                        <div class="timeline-data">
-                            <span class="data-tag">BREATHWORK</span>
-                            <span class="data-tag">60 MINUTES</span>
-                            <span class="data-tag">DAILY</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="philosophy-section">
-            <div class="section-label">
-                <span class="label-number">02.5</span>
-                <span class="label-line"></span>
-                <span class="label-text">THE NATURE OF TIME</span>
-            </div>
-            <h2 class="section-title">PHILOSOPHY</h2>
-            <p class="philosophy-intro">Our work rests on five foundational principles that redefine the relationship between consciousness and temporal experience. These are not beliefs — they are observable phenomena documented across thousands of sessions and peer-reviewed research.</p>
-
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-number">01</div>
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="32" cy="32" r="28"/>
-                            <circle cx="32" cy="32" r="16"/>
-                            <circle cx="32" cy="32" r="4"/>
-                            <line x1="32" y1="4" x2="32" y2="16"/>
-                            <line x1="32" y1="48" x2="32" y2="60"/>
-                            <line x1="4" y1="32" x2="16" y2="32"/>
-                            <line x1="48" y1="32" x2="60" y2="32"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-title">TIME IS A FIELD, NOT A LINE</h3>
-                    <p class="pillar-text">Conventional physics treats time as a linear progression — a river flowing in one direction. Quantum consciousness research reveals something far more radical: time is a multidimensional field that can be accessed, navigated, and healed at any point. Your past is not gone. Your future is not yet written. Both exist as accessible dimensions within the temporal field.</p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-number">02</div>
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M8 56 C8 56 20 8 32 8 C44 8 56 56 56 56"/>
-                            <path d="M16 56 C16 56 24 20 32 20 C40 20 48 56 48 56"/>
-                            <circle cx="32" cy="32" r="3" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-title">THE BODY REMEMBERS EVERYTHING</h3>
-                    <p class="pillar-text">Every experience you have ever had — every joy, every wound, every moment of silence — is stored not only in neural pathways but in the body's temporal signature. This signature can be read like a map, revealing the precise coordinates of imprints that no amount of talking therapy can reach. The body does not lie about time.</p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-number">03</div>
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 32 Q32 8 52 32 Q32 56 12 32 Z"/>
-                            <path d="M24 32 Q32 20 40 32 Q32 44 24 32 Z"/>
-                            <circle cx="32" cy="32" r="2" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-title">ENTANGLEMENT ACROSS TIME</h3>
-                    <p class="pillar-text">Quantum entanglement is not confined to spatial distance — it operates across temporal distance as well. A trauma experienced by your grandmother can create a resonant imprint in your own temporal field. Healing is not just personal; it is ancestral, collective, and extends forward into futures not yet lived.</p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-number">04</div>
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="8" y="8" width="48" height="48" rx="4"/>
-                            <line x1="32" y1="8" x2="32" y2="56" stroke-dasharray="4 4"/>
-                            <line x1="8" y1="32" x2="56" y2="32" stroke-dasharray="4 4"/>
-                            <circle cx="20" cy="20" r="4"/>
-                            <circle cx="44" cy="44" r="4"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-title">THE PRESENT IS A CHOICE POINT</h3>
-                    <p class="pillar-text">The present moment is not merely where past meets future — it is the only point of true agency. Every temporal imprint exists in the past or future, but healing can only occur now. This paradox is the engine of Chronokinesis: we travel through time to arrive more fully in the present, where transformation becomes possible.</p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-number">05</div>
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M8 48 C16 32 24 16 32 16 C40 16 48 32 56 48"/>
-                            <path d="M8 48 C16 56 24 48 32 40 C40 48 48 56 56 48"/>
-                            <circle cx="32" cy="32" r="6"/>
-                            <circle cx="32" cy="32" r="2" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <h3 class="pillar-title">LOCATION AMPLIFIES HEALING</h3>
-                    <p class="pillar-text">Our institute sits at the precise coordinates where global time begins — the Greenwich Meridian. This is not coincidence. The zero point of the temporal field has measurably different electromagnetic properties, creating an environment where temporal healing sessions achieve greater depth and lasting effect than identical sessions conducted elsewhere.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials-section">
-            <div class="section-label">
-                <span class="label-number">03</span>
-                <span class="label-line"></span>
-                <span class="label-text">CLIENT EXPERIENCES</span>
-            </div>
-            <h2 class="section-title">TESTIMONIALS</h2>
-            <p class="testimonials-intro">Voices from across the temporal field — individuals who have walked through our doors and emerged with their timelines realigned.</p>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">I came to Chronokinesis after twenty years of unexplained anxiety that no therapist could trace to a source. Within a single Temporal Field Scan, Dr. Temporis identified an imprint from my birth — a moment of extreme stress my mother experienced that had been echoing through my nervous system for two decades. After three sessions, the anxiety didn't just decrease. It dissolved. I am not the same person who walked through that door. I am the person I was always meant to be.</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <span class="author-name">MARGARET CHEN</span>
-                            <span class="author-detail">ARCHITECT, LONDON — 3 SESSIONS</span>
-                        </div>
-                        <div class="testimonial-session">
-                            <span class="session-label">COMPLETED</span>
-                            <span class="session-value">MAR 2024</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">As a surgeon, I was deeply skeptical. The quantum language felt like pseudoscience. But the results speak across every discipline. Chronic insomnia I'd carried for fifteen years vanished after my second Timeline Integration session. My sleep data — which I tracked obsessively — showed a measurable shift in my deep sleep architecture within seventy-two hours. The science is real, even if the mechanism challenges our current models.</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <span class="author-name">DR. JAMES WHITFIELD</span>
-                            <span class="author-detail">CARDIOTHORACIC SURGEON, BATH — 5 SESSIONS</span>
-                        </div>
-                        <div class="testimonial-session">
-                            <span class="session-label">COMPLETED</span>
-                            <span class="session-value">JAN 2024</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">My daughter was born with a fear of water that baffled pediatricians. At age four, she would scream at the sight of a bath. Dr. Temporis discovered a temporal imprint connected to a near-drowning experience in my own childhood — something I had never told anyone, something I had consciously forgotten. After treating that imprint, my daughter's fear didn't just ease. She asked to go swimming the next day. Time heals nothing on its own. But healing across time heals everything.</p>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <span class="author-name">SARAH OKONKWO</span>
-                            <span class="author-detail">WRITER, BRISTOL — 2 SESSIONS</span>
-                        </div>
-                        <div class="testimonial-session">
-                            <span class="session-label">COMPLETED</span>
-                            <span class="session-value">NOV 2023</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="journey-section">
-            <div class="section-label">
-                <span class="label-number">04</span>
-                <span class="label-line"></span>
-                <span class="label-text">YOUR FIRST VISIT</span>
-            </div>
-            <h2 class="section-title">THE JOURNEY</h2>
-            <p class="journey-intro">What happens when you arrive at the Chronokinesis Institute. A step-by-step guide to your first temporal healing session.</p>
-
-            <div class="journey-steps">
-                <div class="journey-step">
-                    <div class="step-connector"></div>
-                    <div class="step-marker">
-                        <div class="step-dot"></div>
-                        <div class="step-number">01</div>
-                    </div>
-                    <div class="step-content">
-                        <div class="step-phase">ARRIVAL</div>
-                        <h3 class="step-title">ENTERING THE ZERO POINT</h3>
-                        <p class="step-text">You arrive at 42 Kronos Lane, a converted Victorian observatory on the Greenwich Meridian line. The building itself straddles the zero point — you will feel the shift as you cross the threshold. Remove your shoes. Step onto the meridian marker in the entrance hall. Take three slow breaths. You have arrived at the place where time begins.</p>
-                        <div class="step-data">
-                            <span class="data-tag">15 MINUTES BEFORE SESSION</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="journey-step">
-                    <div class="step-connector"></div>
-                    <div class="step-marker">
-                        <div class="step-dot"></div>
-                        <div class="step-number">02</div>
-                    </div>
-                    <div class="step-content">
-                        <div class="step-phase">CONSULTATION</div>
-                        <h3 class="step-title">MAPPING YOUR TIMELINE</h3>
-                        <p class="step-text">In the consultation room — a circular chamber lined with precision timepieces from twelve time zones — Dr. Temporis conducts the initial interview. This is not conventional therapy. You will be asked about physical symptoms, emotional patterns, recurring dreams, and inexplicable preferences or aversions. Every detail is data. Every answer maps a coordinate in your temporal field.</p>
-                        <div class="step-data">
-                            <span class="data-tag">30 MINUTES</span>
-                            <span class="data-tag">DIALOGUE</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="journey-step">
-                    <div class="step-connector"></div>
-                    <div class="step-marker">
-                        <div class="step-dot"></div>
-                        <div class="step-number">03</div>
-                    </div>
-                    <div class="step-content">
-                        <div class="step-phase">SCANNING</div>
-                        <h3 class="step-title">THE TEMPORAL FIELD SCAN</h3>
-                        <p class="step-text">You recline in the Temporal Cradle — a precision-engineered treatment bed with integrated bio-electromagnetic sensors. The lights dim. The room fills with a low-frequency hum calibrated to your personal temporal resonance. Dr. Temporis guides you through a series of consciousness exercises while the scanning technology maps the electromagnetic signature of your body across all accessible time dimensions. You remain conscious throughout. Many clients describe this phase as profoundly peaceful.</p>
-                        <div class="step-data">
-                            <span class="data-tag">45 MINUTES</span>
-                            <span class="data-tag">NON-INVASIVE</span>
-                            <span class="data-tag">DIAGNOSTIC</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="journey-step">
-                    <div class="step-connector"></div>
-                    <div class="step-marker">
-                        <div class="step-dot"></div>
-                        <div class="step-number">04</div>
-                    </div>
-                    <div class="step-content">
-                        <div class="step-phase">HEALING</div>
-                        <h3 class="step-title">TEMPORAL REINTEGRATION</h3>
-                        <p class="step-text">Using the coordinates identified in the scan, Dr. Temporis works directly with the imprints. This may involve guided visualization, quantum breathwork, bio-electromagnetic field adjustment, or a combination of all three. The specific protocol is unique to each session and each client. There is no script. There is only the field, the imprint, and the precise intervention required to restore temporal coherence.</p>
-                        <div class="step-data">
-                            <span class="data-tag">60 MINUTES</span>
-                            <span class="data-tag">PERSONALIZED</span>
-                            <span class="data-tag">ACTIVE HEALING</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="journey-step">
-                    <div class="step-connector"></div>
-                    <div class="step-marker">
-                        <div class="step-dot"></div>
-                        <div class="step-number">05</div>
-                    </div>
-                    <div class="step-content">
-                        <div class="step-phase">INTEGRATION</div>
-                        <h3 class="step-title">RETURNING TO YOUR TIMELINE</h3>
-                        <p class="step-text">The final phase is the most critical. You sit in the Integration Chamber — a warm, sound-dampened room where the changes from your session settle into your body and consciousness. Dr. Temporis provides a detailed written report of findings, a personalized Chrono-Breathwork protocol, and a timeline for follow-up sessions. You leave with tools, not just treatment. Your healing continues long after you cross back over the meridian line.</p>
-                        <div class="step-data">
-                            <span class="data-tag">30 MINUTES</span>
-                            <span class="data-tag">REPORT PROVIDED</span>
-                            <span class="data-tag">ONGOING PROTOCOL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="journey-note">
-                <div class="note-label">IMPORTANT NOTE</div>
-                <p class="note-text">All sessions are conducted by Dr. Elijah Temporis personally. We maintain a strict limit of four sessions per week to ensure the quality and integrity of each temporal intervention. Advance booking of 4–6 weeks is typically required. Emergency temporal sessions are available for acute situations by arrangement.</p>
-            </div>
-        </section>
-
-        <section class="quote-section">
-            <div class="quote-container">
-                <div class="quote-mark">"</div>
-                <blockquote class="quote-text">
-                    Time is not a line, but a field of infinite possibility. When we heal across time, we heal the totality of our being.
-                </blockquote>
-                <div class="quote-attribution">
-                    <span class="quote-author">DR. ELIJAH TEMPORIS</span>
-                    <span class="quote-role">FOUNDER, CHRONOKINESIS INSTITUTE</span>
-                    <span class="quote-citation">Published in Journal of Quantum Consciousness, Vol. 42, 2024</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="arrival" class="arrival">
-            <div class="section-label">
-                <span class="label-number">05</span>
-                <span class="label-line"></span>
-                <span class="label-text">COORDINATES</span>
-            </div>
-            <h2 class="section-title">FIND THE INSTITUTE</h2>
-
-            <div class="coordinates-grid">
-                <div class="coord-card">
-                    <div class="coord-label">LATITUDE</div>
-                    <div class="coord-value">51.4769°N</div>
-                    <div class="coord-detail">GREENWICH MERIDIAN</div>
-                </div>
-                <div class="coord-card">
-                    <div class="coord-label">LONGITUDE</div>
-                    <div class="coord-value">0.0005°W</div>
-                    <div class="coord-detail">PRIME MERIDIAN LINE</div>
-                </div>
-                <div class="coord-card">
-                    <div class="coord-label">TIMEZONE</div>
-                    <div class="coord-value">UTC+0</div>
-                    <div class="coord-detail">GREENWICH MEAN TIME</div>
-                </div>
-                <div class="coord-card">
-                    <div class="coord-label">ELEVATION</div>
-                    <div class="coord-value">45m</div>
-                    <div class="coord-detail">ABOVE SEA LEVEL</div>
-                </div>
-            </div>
-
-            <div class="address-container">
-                <div class="address-card">
-                    <div class="address-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                    </div>
-                    <div class="address-content">
-                        <h3>CHRONOKINESIS INSTITUTE</h3>
-                        <p>42 Kronos Lane</p>
-                        <p>Greenwich, London</p>
-                        <p>SE10 8QY, UK</p>
-                    </div>
-                    <div class="address-hours">
-                        <div class="hours-label">OPERATING HOURS</div>
-                        <div class="hours-row">
-                            <span>MON — FRI</span>
-                            <span>09:00 — 18:00 GMT</span>
-                        </div>
-                        <div class="hours-row">
-                            <span>SATURDAY</span>
-                            <span>10:00 — 14:00 GMT</span>
-                        </div>
-                        <div class="hours-row">
-                            <span>SUNDAY</span>
-                            <span>BY APPOINTMENT</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cta-container">
-                <a href="mailto:temporis@chronokinesis.heal" class="cta-button">
-                    <span class="cta-label">INITIATE CONTACT</span>
-                    <span class="cta-arrow">→</span>
-                </a>
-                <a href="tel:+44207946000" class="cta-button cta-secondary">
-                    <span class="cta-label">+44 (0) 20 7946 0000</span>
-                    <span class="cta-arrow">→</span>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-clock">
-            <div class="footer-clock-face">
-                <div class="footer-hand footer-hand-hour"></div>
-                <div class="footer-hand footer-hand-minute"></div>
-                <div class="footer-hand footer-hand-second"></div>
-            </div>
-        </div>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">CHRONOKINESIS</span>
-                <span class="footer-tagline">HEALING ACROSS THE STREAM OF TIME</span>
-            </div>
-            <div class="footer-data">
-                <div class="footer-col">
-                    <div class="footer-label">SYSTEM TIME</div>
-                    <div class="footer-value" id="footerTime">00:00:00 GMT</div>
-                </div>
-                <div class="footer-col">
-                    <div class="footer-label">TEMPORAL STATUS</div>
-                    <div class="footer-value footer-active">● ONLINE</div>
-                </div>
-                <div class="footer-col">
-                    <div class="footer-label">MERIDIAN</div>
-                    <div class="footer-value">GREENWICH</div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2024 CHRONOKINESIS INSTITUTE — ALL TEMPORAL RIGHTS RESERVED</span>
-            <span class="footer-coords">51.4769°N, 0.0005°W</span>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-
-<footer class="site-footer">
-  <p>&copy; Norman James</p>
-  <p>made with love ❤️ by Empathy Studio</p>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__col">
+      <h4 class="footer__heading">Chronokinesis</h4>
+      <p class="footer__text">Ayurveda by Dr. Ananda Sharma</p>
+      <p class="footer__text">"Balance Is the Nature of Health"</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Location</h4>
+      <p class="footer__text">555 Ayur Veda Road</p>
+      <p class="footer__text">Rishikesh, India 249137</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Hours</h4>
+      <p class="footer__text">Mon — Sat: 7:00 AM — 6:00 PM</p>
+      <p class="footer__text">Sunday: Closed for rest</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 Chronokinesis Ayurveda. All rights reserved.</span>
+  </div>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

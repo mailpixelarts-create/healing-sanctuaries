@@ -1,0 +1,628 @@
+:root {
+    --ink: #1C1A17;
+    --paper: #FCF9F2;
+    --signal: #D62828;
+    --ghost: rgba(214,40,40,0.15);
+    --transition: 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --font-display: 'Tiempos Text', Georgia, serif;
+    --font-body: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Grain Overlay */
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Base */
+.section {
+    padding: 8rem 0;
+    position: relative;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    gap: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-word {
+    font-size: 15vw;
+    font-weight: 700;
+    line-height: 0.9;
+    color: var(--ink);
+    cursor: default;
+    transition: transform var(--transition), opacity var(--transition);
+    transform-origin: center;
+    user-select: none;
+}
+
+.hero-subtitle {
+    position: absolute;
+    bottom: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+}
+
+.hero-subtitle p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--paper);
+    border-top: 1px solid rgba(28, 26, 23, 0.1);
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity var(--transition), color var(--transition);
+    position: relative;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    color: var(--signal);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--signal);
+    transition: width var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* About Section */
+.about-section {
+    background: var(--paper);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.image-container {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--ink);
+    position: relative;
+}
+
+.image-grain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Bell Section */
+.bell-section {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 10rem 0;
+}
+
+.bell-description {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 4rem;
+    opacity: 0.8;
+}
+
+.bell-interface {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.bell-button {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid var(--paper);
+    background: transparent;
+    color: var(--paper);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    position: relative;
+    z-index: 2;
+}
+
+.bell-button:hover {
+    background: var(--ghost);
+    border-color: var(--signal);
+    transform: scale(1.05);
+}
+
+.bell-button:active {
+    transform: scale(0.98);
+}
+
+.timer-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.timer-display.active {
+    opacity: 1;
+}
+
+.timer-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--signal);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 60s linear, opacity var(--transition);
+}
+
+.timer-circle.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.timer-text {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    color: var(--signal);
+    z-index: 1;
+}
+
+.bell-instruction {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+}
+
+/* Sacred Art Section */
+.sacred-art-section {
+    background: var(--paper);
+}
+
+.sacred-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.sacred-card {
+    padding: 3rem 2rem;
+    border: 1px solid rgba(28, 26, 23, 0.1);
+    position: relative;
+    transition: all var(--transition);
+}
+
+.sacred-card:hover {
+    border-color: var(--signal);
+    transform: translateY(-5px);
+}
+
+.sacred-number {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--signal);
+    margin-bottom: 2rem;
+}
+
+.sacred-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.sacred-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+.sacred-symbol {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    opacity: 0.3;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.philosophy-pillar h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--signal);
+}
+
+.philosophy-pillar p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background: var(--paper);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial-card {
+    padding: 2rem;
+    border-left: 2px solid var(--signal);
+}
+
+.testimonial-card blockquote p {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card cite {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+}
+
+/* Journey Section */
+.journey-section {
+    background: var(--paper);
+}
+
+.journey-steps {
+    max-width: 800px;
+}
+
+.journey-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(28, 26, 23, 0.1);
+}
+
+.journey-step:last-child {
+    border-bottom: none;
+}
+
+.step-number {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--signal);
+}
+
+.journey-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.journey-step p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+/* Contact Section */
+.contact-section {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 8rem 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.healer-name {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.address, .schedule {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid rgba(252, 249, 242, 0.3);
+    color: var(--paper);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--signal);
+}
+
+.submit-button {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 1px solid var(--paper);
+    color: var(--paper);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.submit-button:hover {
+    background: var(--signal);
+    border-color: var(--signal);
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 0;
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    border-top: 1px solid rgba(252, 249, 242, 0.1);
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sacred-grid,
+    .philosophy-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-word {
+        font-size: 20vw;
+    }
+    
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .journey-step {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Scroll Animations */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Bell Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+@keyframes ring {
+    0% { transform: scale(1) rotate(0deg); }
+    10% { transform: scale(1.1) rotate(-5deg); }
+    20% { transform: scale(1) rotate(5deg); }
+    30% { transform: scale(1.1) rotate(-5deg); }
+    40% { transform: scale(1) rotate(5deg); }
+    50% { transform: scale(1.1) rotate(-5deg); }
+    60% { transform: scale(1) rotate(5deg); }
+    70% { transform: scale(1.1) rotate(-5deg); }
+    80% { transform: scale(1) rotate(5deg); }
+    90% { transform: scale(1.1) rotate(-5deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+.bell-button.ringing {
+    animation: ring 0.5s ease;
+}
+
+/* Timer Animation */
+@keyframes timerPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.timer-text.active {
+    animation: timerPulse 2s ease-in-out infinite;
+}

@@ -1,129 +1,68 @@
-Prompt 1: Multiple vintage clocks melting and distorting in warm amber light, Dalí-inspired composition
-Style: Surrealist photography, retrofuturism
-Mood: Timeless, surreal, contemplative
-Lighting: Warm amber glow
+CHRONOKINESIS — Image Generation Prompts
+=========================================
+Aesthetic: Raw Earth × Academic Monograph
+Style Reference: Hand-drawn textures, muted earth tones, paper-like grain
+Color Palette: #3A2C24 (ink), #F5EAD8 (paper), #B56133 (signal)
 
-Prompt 2: Person's hand reaching toward floating clock hands in time-distorted space
-Style: Conceptual photography, vintage sci-fi
-Mood: Reaching, controlling, powerful
-Lighting: Warm directional light
+---
 
-Prompt 3: Spiral of pocket watches creating vortex in warm sepia tones
-Style: Long exposure photography, motion
-Mood: Hypnotic, flowing, temporal
-Lighting: Warm central light
 
-Prompt 4: Antique clock mechanism in extreme close-up, gears turning, warm metallic tones
-Style: Macro photography, steampunk
-Mood: Intricate, mechanical, timeless
-Lighting: Warm spot lighting
+1. HERO LAYER — BACK (Mountains)
+"A hand-drawn mountain range in muted brown ink on aged cream paper. Loose crosshatching technique. Three distinct mountain ridges receding into distance. Texture of old book illustration. Minimal color: raw umber and sepia tones. No sky detail — just the peaks against warm paper."
 
-Prompt 5: Person standing among floating frozen clock parts, time suspended
-Style: Cinematic photography, surreal
-Mood: Powerful, suspended, controlled
-Lighting: Warm ambient with cool accents
+2. HERO LAYER — MID (River Valley)
+"A flowing river valley illustrated in loose ink strokes. Meandering water paths cutting through rolling hills. Style of antique botanical cartography. Warm browns and faded ochre. Paper texture visible. Top-down perspective suggesting a map illustration."
 
-Prompt 6: Time distortion visualized as concentric circles of clock faces, warm palette
-Style: Graphic photography, conceptual
-Mood: Expanding, rhythmic, hypnotic
-Lighting: Even warm illumination
+3. HERO LAYER — FRONT (Fields)
+"Foreground terrain of agricultural fields rendered in heavy dark ink. Dense crosshatching suggesting fertile earth. Low horizon line. Style of vintage agricultural survey illustration. Dark brown and near-black tones against aged paper."
 
-Prompt 7: Vintage scientist's workshop filled with time-measuring devices, amber lighting
-Style: Environmental photography, retrofuturism
-Mood: Studious, obsessive, curious
-Lighting: Warm desk lamp light
+4. CELESTIAL BODY (Sun/Moon)
+"A hand-drawn sun rendered as a circular form with radiating lines. Style of astronomical diagram from 18th century. Warm amber and sepia. Minimal — just the orb with suggested light rays. On cream paper background."
 
-Prompt 8: Hourglass with sand flowing upward, defying gravity, warm tones
-Style: Still life, surreal
-Mood: Defiant, powerful, magical
-Lighting: Backlit warm glow
+5. DR. ANANDA SHARMA PORTRAIT
+"Portrait of an Indian woman in her 50s, serene expression, wearing simple cotton clothing. Hand-drawn illustration style. Muted earth tones. Warm brown ink on cream paper. Suggests wisdom and calm authority. Academic monograph illustration style."
 
-Prompt 9: Multiple exposure of person moving through time, ghostly trails, vintage aesthetic
-Style: Experimental photography, motion blur
-Mood: Dynamic, flowing, temporal
-Lighting: Mixed warm light sources
+6. DOSHA ASSESSMENT — SYMBOL
+"Abstract symbol representing dosha assessment: three overlapping circles in hand-drawn ink style. Minimal, clean. Raw umber and sepia. On aged paper texture. Style of medical illustration diagram."
 
-Prompt 10: Clock face melting over edge of table, warm shadows, surreal composition
-Style: Surrealist photography, still life
-Mood: Dreamlike, impossible, fascinating
-Lighting: Warm side lighting
+7. HERBAL PRESCRIPTIONS — BOTANICAL
+"Hand-drawn botanical illustration of medicinal herbs: ginger root, turmeric, ashwagandha. Style of Ayurvedic pharmacy reference plate. Detailed line work in brown ink on cream paper. Label lines suggesting a pharmacopoeia plate."
 
-Prompt 11: Person controlling floating clock hands like puppet strings, warm tones
-Style: Conceptual photography, power
-Mood: Mastery, control, focused
-Lighting: Dramatic warm spotlight
+8. PANCHAKARMA — THERAPY SCENE
+"Abstract illustration of hands performing Ayurvedic oil massage. Loose ink strokes suggesting movement and flow. Warm brown tones on cream paper. Style of vintage medical illustration. Minimal background, focus on gesture."
 
-Prompt 12: Time-lapse of flowers blooming and wilting in seconds, warm vintage filter
-Style: Time-lapse photography, botanical
-Mood: Cycling, eternal, beautiful
-Lighting: Natural warm light
+9. VATA DOSHA — ILLUSTRATION
+"Hand-drawn illustration representing Vata dosha: swirling air patterns, bare tree branches, feathers. Style of esoteric symbol plate. Light, airy composition. Sepia and raw umber on aged paper."
 
-Prompt 13: Vintage pocket watch opened to reveal cosmic scene inside, warm metal
-Style: Macro photography, conceptual
-Mood: Infinite, precious, wondrous
-Lighting: Internal glow
+10. PITTA DOSHA — ILLUSTRATION
+"Hand-drawn illustration representing Pitta dosha: flame-like forms, water ripples, intense geometric patterns. Style of alchemical diagram. Warm amber and deep brown ink on cream paper. Suggests controlled fire."
 
-Prompt 14: Person's silhouette with clock hands radiating from head, warm backlight
-Style: Silhouette photography, conceptual
-Mood: Illuminated, powerful, temporal
-Lighting: Strong warm backlight
+11. KAPHA DOSHA — ILLUSTRATION
+"Hand-drawn illustration representing Kapha dosha: dense earth formations, still water, lush botanical growth. Style of geological survey illustration. Heavy ink lines, dark brown on aged paper. Suggests stability and weight."
 
-Prompt 15: Collection of antique timepieces arranged in spiral pattern, warm wood background
-Style: Still life, organized chaos
-Mood: Accumulated time, ordered, beautiful
-Lighting: Warm gallery lighting
+12. HERBAL TEA BLEND — VATA
+"Hand-drawn illustration of loose tea herbs: ginger, cinnamon sticks, cardamom pods, licorice root. Arranged on aged paper. Style of apothecary reference plate. Warm brown ink, sepia tones. Suggests warmth and grounding."
 
-Prompt 16: Clock gears forming human heart shape, warm metallic tones
-Style: Conceptual photography, surreal anatomy
-Mood: Beating, alive, mechanical
-Lighting: Warm side lighting
+13. HERBAL TEA BLEND — PITTA
+"Hand-drawn illustration of cooling herbs: rose petals, fennel seeds, coriander, mint leaves. Delicate line work in brown ink on cream paper. Style of botanical pharmacopoeia. Light, airy composition."
 
-Prompt 17: Person writing in journal as clock hands spin around them, warm study
-Style: Environmental portrait, studious
-Mood: Focused despite chaos, calm center
-Lighting: Warm desk lighting
+14. HERBAL TEA BLEND — KAPHA
+"Hand-drawn illustration of stimulating herbs: tulsi leaves, black peppercorns, ginger, cloves, lemon peel. Bold ink strokes in dark brown on aged paper. Style of Ayurvedic materia medica plate."
 
-Prompt 18: Time as visible waves distorting room, warm vintage color palette
-Style: Surreal photography, physics
-Mood: Invisible made visible, powerful
-Lighting: Warm distorted light
+15. RISHIKESH LANDSCAPE
+"Landscape view of Rishikesh, India. Hand-drawn illustration style: Ganges river, temple spires, Himalayan foothills. Muted earth tones, brown ink on cream paper. Style of vintage travel illustration. Atmospheric perspective."
 
-Prompt 19: Close-up of eye reflecting spinning clock face, warm tones
-Style: Macro portrait, surreal
-Mood: Intense, focused, seeing time
-Lighting: Warm catchlight
+16. RIVER QUOTE DIVIDER
+"Decorative divider element: flowing water rendered in simple ink lines. Horizontal orientation. Brown ink on cream paper. Style of antique book ornament. Minimal, elegant."
 
-Prompt 20: Final image of person standing still as time flows around them like river
-Style: Cinematic wide shot, surreal
-Mood: Master of time, peaceful, powerful
-Lighting: Warm flowing light trails
+17. PILLAR OF PHILOSOPHY — ICON
+"Small icon for philosophy section: lotus flower rendered in simple ink strokes. Style of medical reference illustration. Brown ink on aged paper. Minimal, symbolic."
 
-Prompt 21: Five concentric geometric shapes representing philosophical concepts of time — circles, spirals, waves — warm amber against deep cream
-Style: Graphic design, abstract
-Mood: Intellectual, foundational, eternal
-Lighting: Even warm studio light
+18. JOURNEY STEP — CONSULTATION ICON
+"Icon representing Ayurvedic consultation: two facing profiles suggesting dialogue. Hand-drawn in brown ink. Style of vintage medical diagram. Simple, symbolic on cream paper."
 
-Prompt 22: Hands holding a luminous orb containing swirling clock faces, representing the temporal field
-Style: Conceptual photography, warm tones
-Mood: Containing, powerful, healing
-Lighting: Central warm glow with soft shadows
+19. JOURNEY STEP — HERBAL ICON
+"Icon representing herbal medicine: mortar and pestle with botanical elements. Hand-drawn ink illustration. Style of apothecary reference plate. Brown ink on aged paper."
 
-Prompt 23: Victorian observatory interior with meridian line on floor, warm gaslight ambiance
-Style: Environmental photography, period
-Mood: Historical, precise, sacred
-Lighting: Warm gaslight with cool window accents
-
-Prompt 24: Person lying in a circular treatment room, rings of soft light emanating from their body
-Style: Cinematic photography, sci-fi
-Mood: Healing, vulnerable, transformational
-Lighting: Warm bioluminescent glow
-
-Prompt 25: Three testimonials visualized as parallel timelines converging into a single point, warm sepia
-Style: Graphic photography, conceptual
-Mood: Convergent, hopeful, unified
-Lighting: Warm convergent light
-
-Prompt 26: Step-by-step journey through a healing sanctuary, five distinct rooms connected by illuminated corridors
-Style: Architectural photography, warm palette
-Mood: Guided, sequential, welcoming
-Lighting: Progressive warm lighting from dim to bright
+20. FOOTER TEXTURE
+"Seamless paper texture in warm cream (#F5EAD8) with subtle fiber grain visible. Suggests handmade paper or old book page. Uniform, no distinct marks — just material texture."
