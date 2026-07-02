@@ -1,0 +1,82 @@
+/* ============================================================
+   SANCTUARY META-LAYER STYLES v1.0
+   Shared across all 14 healing modalities
+   ============================================================ */
+
+:root {
+  --ink: #120F0E;
+  --paper: #F7F5F0;
+  --signal: #C9A96E;
+}
+
+/* FIRST-TIME VISITOR MODAL */
+.sv-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 100000; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.5s; }
+.sv-modal.active { opacity: 1; }
+.sv-modal-content { max-width: 500px; text-align: center; padding: 3rem; }
+.sv-modal-content h2 { font-family: var(--font-display, serif); font-size: 2rem; margin-bottom: 0.5rem; color: var(--paper); }
+.sv-modal-sub { font-size: 0.9rem; opacity: 0.6; margin-bottom: 2rem; color: var(--paper); }
+.sv-modal-options { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+.sv-modal-btn { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--paper); padding: 1rem 2rem; font-size: 1rem; cursor: pointer; transition: all 0.3s; font-family: var(--font-body, sans-serif); }
+.sv-modal-btn:hover { border-color: var(--signal); color: var(--signal); background: rgba(201,169,110,0.05); }
+.sv-modal-close { background: none; border: none; color: rgba(255,255,255,0.4); cursor: pointer; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* OUTCOME TRACKER */
+.sv-tracker { position: fixed; bottom: 80px; right: 20px; width: 300px; background: rgba(18,15,14,0.95); border: 1px solid rgba(201,169,110,0.2); padding: 1.5rem; z-index: 9998; display: none; backdrop-filter: blur(10px); }
+.sv-tracker.active { display: block; }
+.sv-tracker h4 { font-family: var(--font-display, serif); font-size: 0.9rem; margin-bottom: 1rem; color: var(--paper); }
+.sv-tracker-scale { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.sv-tracker-num { width: 30px; height: 30px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: var(--paper); cursor: pointer; font-size: 0.75rem; transition: all 0.3s; }
+.sv-tracker-num:hover, .sv-tracker-num.selected { border-color: var(--signal); color: var(--signal); background: rgba(201,169,110,0.1); }
+.sv-tracker-input { width: 100%; background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--paper); padding: 0.5rem; font-size: 0.8rem; resize: none; margin-bottom: 0.5rem; font-family: var(--font-body, sans-serif); }
+.sv-tracker-save { width: 100%; padding: 0.5rem; background: var(--signal); color: var(--ink); border: none; cursor: pointer; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.sv-tracker-history { margin-top: 1rem; max-height: 150px; overflow-y: auto; }
+.sv-tracker-entry { font-size: 0.7rem; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.5); }
+.sv-tracker-toggle { position: fixed; bottom: 80px; right: 20px; width: 40px; height: 40px; background: rgba(18,15,14,0.9); border: 1px solid rgba(201,169,110,0.3); color: var(--signal); cursor: pointer; z-index: 9997; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; }
+
+/* SKEPTIC'S CORNER */
+.sv-skeptic { position: fixed; bottom: 50px; left: 0; right: 0; z-index: 9996; }
+.sv-skeptic-details { background: rgba(18,15,14,0.95); border-top: 1px solid rgba(201,169,110,0.1); }
+.sv-skeptic-toggle { padding: 0.75rem 2rem; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; color: rgba(255,255,255,0.4); list-style: none; display: block; }
+.sv-skeptic-toggle::-webkit-details-marker { display: none; }
+.sv-skeptic-content { padding: 2rem; max-width: 800px; margin: 0 auto; }
+.sv-skeptic-qa { margin-bottom: 1.5rem; }
+.sv-skeptic-qa h4 { font-family: var(--font-display, serif); font-size: 0.95rem; color: var(--paper); margin-bottom: 0.5rem; }
+.sv-skeptic-qa p { font-size: 0.85rem; line-height: 1.7; opacity: 0.6; }
+
+/* EMERGENCY RESET */
+.sv-emergency { position: fixed; top: 20px; right: 20px; padding: 0.5rem 1rem; background: #00FF55; color: #000; border: none; font-size: 0.75rem; font-weight: 600; cursor: pointer; z-index: 100001; letter-spacing: 0.05em; transition: all 0.3s; }
+.sv-emergency:hover { background: #00CC44; transform: scale(1.05); }
+.sv-emergency-overlay { position: fixed; inset: 0; background: #000; z-index: 100002; display: flex; align-items: center; justify-content: center; flex-direction: column; opacity: 0; pointer-events: none; transition: opacity 0.5s; }
+.sv-emergency-overlay.active { opacity: 1; pointer-events: all; }
+.sv-emergency-circle { width: 200px; height: 200px; border-radius: 50%; background: white; animation: emergencyPulse 4s ease-in-out infinite; margin-bottom: 3rem; }
+@keyframes emergencyPulse { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 1; } }
+.sv-emergency-text { color: white; font-family: var(--font-display, serif); font-size: 1.5rem; text-align: center; line-height: 1.8; }
+
+/* DETOX MODE */
+.sv-detox-btn { position: fixed; top: 20px; right: 120px; padding: 0.5rem 1rem; background: transparent; border: 1px solid rgba(201,169,110,0.3); color: var(--paper); font-size: 0.65rem; letter-spacing: 0.2em; cursor: pointer; z-index: 9999; transition: all 0.3s; }
+.sv-detox-btn:hover, .sv-detox-btn.active { border-color: var(--signal); color: var(--signal); }
+body.detox-mode * { opacity: 0 !important; transition: opacity 0.5s !important; }
+body.detox-mode .sv-detox-btn, body.detox-mode .sv-modal, body.detox-mode .sv-emergency, body.detox-mode .sv-audio-bar { opacity: 1 !important; }
+body.detox-mode { background: #1A1A1A !important; }
+body.detox-mode section { min-height: auto !important; padding: 4rem 2rem !important; }
+body.detox-mode h1, body.detox-mode h2, body.detox-mode h3, body.detox-mode p, body.detox-mode span { opacity: 1 !important; font-size: 1.1rem !important; line-height: 2 !important; max-width: 600px !important; margin-left: auto !important; margin-right: auto !important; }
+
+/* TRANSLATION */
+.sv-translate-btn { position: fixed; top: 20px; right: 200px; padding: 0.5rem 0.75rem; background: transparent; border: 1px solid rgba(201,169,110,0.3); color: var(--paper); font-size: 0.65rem; letter-spacing: 0.1em; cursor: pointer; z-index: 9999; transition: all 0.3s; }
+.sv-translate-btn:hover { border-color: var(--signal); color: var(--signal); }
+
+/* AUDIO BAR */
+.sv-audio-bar { position: fixed; bottom: 0; left: 0; right: 0; height: 50px; background: rgba(18,15,14,0.95); border-top: 1px solid rgba(201,169,110,0.1); display: flex; align-items: center; padding: 0 1.5rem; z-index: 9995; gap: 1rem; }
+.sv-audio-toggle { width: 36px; height: 36px; border: 1px solid rgba(201,169,110,0.3); background: transparent; color: var(--signal); cursor: pointer; font-size: 0.8rem; transition: all 0.3s; }
+.sv-audio-toggle:hover { background: rgba(201,169,110,0.1); }
+.sv-audio-toggle.playing { background: var(--signal); color: var(--ink); }
+.sv-audio-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5; }
+.sv-audio-progress { flex: 1; height: 2px; background: rgba(255,255,255,0.1); position: relative; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sv-tracker { width: calc(100% - 40px); right: 20px; }
+  .sv-detox-btn, .sv-translate-btn { right: auto; left: 20px; top: auto; bottom: 60px; }
+  .sv-translate-btn { bottom: 100px; }
+  .sv-emergency { top: auto; bottom: 60px; }
+}

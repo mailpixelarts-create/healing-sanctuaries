@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healing Sanctuaries — 14 Unique Modalities</title>
+  <meta name="description" content="14 unique cinematic healing modality websites with dark aesthetic. Each site has its own aesthetic, hero system, navigation, and interactive features.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>Healing Sanctuaries</h1>
+      <p>14 unique modalities. Each with its own universe.</p>
+    </section>
+    
+    <section class="sanctuaries-grid">
+      <a href="/01-craniosacral/" class="sanctuary-card">
+        <span class="sanctuary-num">01</span>
+        <h2>Reiki</h2>
+        <p>Quiet Luxury × Sacred Geometry</p>
+      </a>
+      
+      <a href="/02-daode/" class="sanctuary-card">
+        <span class="sanctuary-num">02</span>
+        <h2>Sound Healing</h2>
+        <p>Haute Couture Kinetic × Deep Ocean</p>
+      </a>
+      
+      <a href="/03-kabiraji/" class="sanctuary-card">
+        <span class="sanctuary-num">03</span>
+        <h2>Yoga</h2>
+        <p>Organic Morphic × Editorial</p>
+      </a>
+      
+      <a href="/04-curanderismo/" class="sanctuary-card">
+        <span class="sanctuary-num">04</span>
+        <h2>Meditation</h2>
+        <p>Wabi-Sabi Digital × Swiss Precision</p>
+      </a>
+      
+      <a href="/05-labyrinth/" class="sanctuary-card">
+        <span class="sanctuary-num">05</span>
+        <h2>Breathwork</h2>
+        <p>Medical Precision × Rave Archive</p>
+      </a>
+      
+      <a href="/06-johrei/" class="sanctuary-card">
+        <span class="sanctuary-num">06</span>
+        <h2>Crystal Healing</h2>
+        <p>Maison Editorial × Dark Luxury</p>
+      </a>
+      
+      <a href="/07-enochian/" class="sanctuary-card">
+        <span class="sanctuary-num">07</span>
+        <h2>Aromatherapy</h2>
+        <p>Botanical Dark × Quiet Luxury</p>
+      </a>
+      
+      <a href="/08-chronokinesis/" class="sanctuary-card">
+        <span class="sanctuary-num">08</span>
+        <h2>Ayurveda</h2>
+        <p>Raw Earth × Academic Monograph</p>
+      </a>
+      
+      <a href="/09-zero-point/" class="sanctuary-card">
+        <span class="sanctuary-num">09</span>
+        <h2>Acupuncture</h2>
+        <p>Cyberpunk Terminal × Swiss Precision</p>
+      </a>
+      
+      <a href="/10-sufi-dhikr/" class="sanctuary-card">
+        <span class="sanctuary-num">10</span>
+        <h2>Chakra Balancing</h2>
+        <p>Afrofuturist × Sacred Geometry</p>
+      </a>
+      
+      <a href="/11-merkaba/" class="sanctuary-card">
+        <span class="sanctuary-num">11</span>
+        <h2>Herbalism</h2>
+        <p>Outsider Art Digital × Botanical Dark</p>
+      </a>
+      
+      <a href="/12-necromantic/" class="sanctuary-card">
+        <span class="sanctuary-num">12</span>
+        <h2>Shamanic Journeying</h2>
+        <p>Mythological Archive × Film Noir</p>
+      </a>
+      
+      <a href="/13-geomancy/" class="sanctuary-card">
+        <span class="sanctuary-num">13</span>
+        <h2>Qi Gong</h2>
+        <p>Surrealist Interface × Raw Earth</p>
+      </a>
+      
+      <a href="/14-tulpa/" class="sanctuary-card">
+        <span class="sanctuary-num">14</span>
+        <h2>Art Therapy</h2>
+        <p>Maximalist Collage × Outsider Art</p>
+      </a>
+    </section>
+  </main>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #120F0E; color: #F7F5F0; font-family: 'Inter', sans-serif; }
+    .hero { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(3rem, 8vw, 6rem); margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; opacity: 0.6; letter-spacing: 0.1em; }
+    .sanctuaries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: rgba(201,169,110,0.1); padding: 4rem; max-width: 1400px; margin: 0 auto; }
+    .sanctuary-card { background: #120F0E; padding: 3rem 2rem; text-decoration: none; color: inherit; transition: all 0.4s; position: relative; overflow: hidden; }
+    .sanctuary-card:hover { background: rgba(201,169,110,0.05); }
+    .sanctuary-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, #C9A96E, transparent); transform: scaleX(0); transition: transform 0.4s; }
+    .sanctuary-card:hover::before { transform: scaleX(1); }
+    .sanctuary-num { font-family: 'DM Serif Display', serif; font-size: 3rem; color: rgba(201,169,110,0.15); display: block; margin-bottom: 1rem; }
+    .sanctuary-card h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .sanctuary-card p { font-size: 0.8rem; opacity: 0.5; letter-spacing: 0.05em; }
+  </style>
+</body>
+</html>

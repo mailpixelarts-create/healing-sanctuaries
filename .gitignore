@@ -1,22 +1,5 @@
-# OS files
-.DS_Store
-Thumbs.db
-Desktop.ini
-
-# Editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Node
-node_modules/
-package-lock.json
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.temp
+node_modules
+dist
+.env
+.env.local
+*.local

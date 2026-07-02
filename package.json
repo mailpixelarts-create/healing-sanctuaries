@@ -1,0 +1,21 @@
+{
+  "name": "healing-sanctuaries",
+  "version": "1.0.0",
+  "description": "14 unique cinematic healing modality websites with dark aesthetic",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mailpixelarts-create/healing-sanctuaries.git"
+  },
+  "keywords": ["healing", "sanctuaries", "cinematic", "wellness"],
+  "author": "Norman James",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^8.1.3"
+  }
+}
