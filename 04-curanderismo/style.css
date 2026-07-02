@@ -532,6 +532,255 @@ h1, h2, h3 {
     border-color: var(--signal);
 }
 
+/* Mechanism Section */
+.mechanism-section {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.mechanism-statement {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+.mechanism-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.mechanism-item {
+    border-left: 2px solid var(--signal);
+    padding-left: 1.5rem;
+}
+
+.mechanism-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--signal);
+    margin-bottom: 0.5rem;
+}
+
+.mechanism-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+/* Process Section */
+.process-section {
+    background: var(--paper);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.process-step {
+    padding: 2rem;
+    border: 1px solid rgba(28, 26, 23, 0.1);
+    position: relative;
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--signal);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+}
+
+.process-step:hover::before {
+    transform: scaleX(1);
+}
+
+.process-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--signal);
+    margin-bottom: 1rem;
+}
+
+.process-step p {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Vow Section */
+.vow-section {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 10rem 0;
+}
+
+.vow-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.vow-mark {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    opacity: 0.4;
+}
+
+.vow-text {
+    border: none;
+    padding: 0;
+}
+
+.vow-text p {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* FAQs Section */
+.faqs-section {
+    background: var(--paper);
+}
+
+.faqs-grid {
+    max-width: 700px;
+}
+
+.faq-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(28, 26, 23, 0.1);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--signal);
+}
+
+.faq-answer {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+/* Lexicon Section */
+.lexicon-section {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.lexicon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.lexicon-item {
+    padding: 2rem;
+    border: 1px solid rgba(252, 249, 242, 0.1);
+    transition: border-color var(--transition);
+}
+
+.lexicon-item:hover {
+    border-color: var(--signal);
+}
+
+.lexicon-term {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--signal);
+}
+
+.lexicon-def {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+/* Try This Now Section */
+.try-now-section {
+    background: var(--paper);
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.try-now-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.try-now-instruction {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 10rem 0;
+}
+
+.cta-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-subtitle {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+}
+
+.cta-button {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 1.2rem 3rem;
+    background: transparent;
+    border: 1px solid var(--paper);
+    color: var(--paper);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.cta-button:hover {
+    background: var(--signal);
+    border-color: var(--signal);
+}
+
 /* Footer */
 .footer {
     padding: 3rem 0;
@@ -539,6 +788,16 @@ h1, h2, h3 {
     color: var(--paper);
     text-align: center;
     border-top: 1px solid rgba(252, 249, 242, 0.1);
+}
+
+.footer-contraindications {
+    font-size: 0.75rem;
+    opacity: 0.4;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 .footer-text {
@@ -549,13 +808,16 @@ h1, h2, h3 {
 /* Responsive */
 @media (max-width: 992px) {
     .about-grid,
-    .contact-grid {
+    .contact-grid,
+    .mechanism-details {
         grid-template-columns: 1fr;
     }
     
     .sacred-grid,
     .philosophy-grid,
-    .testimonials-grid {
+    .testimonials-grid,
+    .process-grid,
+    .lexicon-grid {
         grid-template-columns: 1fr;
     }
 }

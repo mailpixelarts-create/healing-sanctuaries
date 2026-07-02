@@ -534,4 +534,237 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
+
+    .process-steps {
+        flex-direction: column;
+    }
+
+    .try-sequence {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .faq-grid {
+        flex-direction: column;
+    }
+
+    .lexicon-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mechanism-content {
+    max-width: 800px;
+}
+
+.mechanism-lead {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    color: var(--signal);
+    margin-bottom: 2rem;
+}
+
+.mechanism-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.mechanism-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--ink);
+    background: var(--ghost);
+}
+
+.stat-number {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 4rem;
+    color: var(--signal);
+    line-height: 1;
+}
+
+.stat-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: rgba(10, 10, 10, 0.6);
+}
+
+.process-steps {
+    display: flex;
+    gap: 3rem;
+}
+
+.process-step {
+    flex: 1;
+    padding: 2rem;
+    border: 1px solid var(--ink);
+    position: relative;
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--signal);
+}
+
+.step-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--signal);
+    margin-bottom: 1rem;
+}
+
+.step-detail {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.vow-content {
+    max-width: 900px;
+}
+
+.vow-quote {
+    font-family: 'Courier Prime', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.9;
+    color: var(--ink);
+    padding: 3rem;
+    border-left: 3px solid var(--signal);
+    background: var(--ghost);
+}
+
+.try-content {
+    max-width: 800px;
+}
+
+.try-instruction {
+    padding: 3rem;
+    border: 1px solid var(--ink);
+    background: var(--ghost);
+}
+
+.try-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--signal);
+    margin-bottom: 2rem;
+}
+
+.try-sequence {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.try-step {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.try-count {
+    font-size: 2rem;
+    color: var(--signal);
+}
+
+.try-text {
+    font-size: 0.875rem;
+    color: rgba(10, 10, 10, 0.7);
+}
+
+.faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faq-item {
+    padding: 2rem;
+    border: 1px solid var(--ink);
+}
+
+.faq-question {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    color: var(--signal);
+}
+
+.faq-answer {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.lexicon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.lexicon-item {
+    padding: 2rem;
+    border: 1px solid var(--ink);
+}
+
+.lexicon-term {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+.lexicon-definition {
+    font-size: 0.875rem;
+    color: rgba(10, 10, 10, 0.7);
+}
+
+.footer-contraindications {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--ghost);
+}
+
+.contraindications-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.625rem;
+    letter-spacing: 0.3em;
+    color: var(--signal);
+    margin-bottom: 0.75rem;
+}
+
+.footer-contraindications p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--ghost);
+}
+
+.cta-dynamic {
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+    display: inline-block;
+    border-bottom: 2px solid var(--signal);
+    transition: all 0.3s;
+}
+
+.cta-dynamic:hover {
+    background: var(--signal);
+    color: var(--ink);
+    text-decoration: none;
 }

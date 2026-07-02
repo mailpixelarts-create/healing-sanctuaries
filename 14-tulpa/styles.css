@@ -368,6 +368,176 @@ body {
 }
 
 /* ========================================
+   MECHANISM
+   ======================================== */
+
+.mechanism-text {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  line-height: 1.7;
+  max-width: 800px;
+  padding: 2rem;
+  border-left: 6px solid var(--signal-3);
+  background: rgba(51, 102, 255, 0.05);
+}
+
+/* ========================================
+   PROCESS
+   ======================================== */
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.process-step {
+  border: 3px solid var(--ink);
+  padding: 2.5rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:nth-child(1) { border-color: var(--signal-1); }
+.process-step:nth-child(2) { border-color: var(--signal-2); }
+.process-step:nth-child(3) { border-color: var(--signal-3); }
+
+.process-step:hover {
+  transform: rotate(-1deg) scale(1.02);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.process-step h3 {
+  font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: colorCycle 8s infinite;
+}
+
+.process-step p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ========================================
+   VOW
+   ======================================== */
+
+.vow-quote {
+  font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.4;
+  padding: 3rem;
+  border: 4px solid var(--signal-1);
+  background: rgba(255, 51, 102, 0.05);
+  transform: rotate(-1deg);
+}
+
+/* ========================================
+   FAQS
+   ======================================== */
+
+.faq-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.faq-item {
+  border-bottom: 3px solid var(--ink);
+  padding-bottom: 2rem;
+}
+
+.faq-q {
+  font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: colorCycle 8s infinite;
+}
+
+.faq-a {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--ink);
+}
+
+/* ========================================
+   LEXICON
+   ======================================== */
+
+.lexicon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.lexicon-entry {
+  border: 3px solid var(--ink);
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lexicon-entry:nth-child(1) { border-color: var(--signal-1); }
+.lexicon-entry:nth-child(2) { border-color: var(--signal-2); }
+.lexicon-entry:nth-child(3) { border-color: var(--signal-3); }
+
+.lexicon-entry:hover {
+  transform: rotate(-1deg) scale(1.02);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.lexicon-entry h3 {
+  font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.lexicon-entry p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ========================================
+   TRY THIS NOW
+   ======================================== */
+
+.try-now-content {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 4rem;
+  text-align: center;
+  transform: rotate(-1deg);
+  position: relative;
+}
+
+.try-now-content::before {
+  content: '\2738';
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: var(--signal-1);
+}
+
+.try-now-content p {
+  font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========================================
    FOOTER
    ======================================== */
 
@@ -431,6 +601,17 @@ body {
   transform: rotate(-2deg) scale(1.05);
 }
 
+.footer-disclaimer {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  opacity: 0.5;
+}
+
 /* ========================================
    GLITCH ANIMATION
    ======================================== */
@@ -463,4 +644,7 @@ body {
   .journey-step { grid-template-columns: 3rem 1fr; gap: 1rem; }
   .pillar { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
   .sacred-card { padding: 2rem 1.5rem; }
+  .process-steps { grid-template-columns: 1fr; }
+  .vow-quote { padding: 2rem; }
+  .try-now-content { padding: 3rem 2rem; }
 }

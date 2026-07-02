@@ -799,6 +799,344 @@ section {
     font-weight: 300;
 }
 
+/* ========== MECHANISM ========== */
+.mechanism-section {
+    background: rgba(123, 63, 74, 0.05);
+}
+
+.mechanism-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.mechanism-lead {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.mechanism-main p {
+    opacity: 0.85;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.mechanism-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 3rem;
+    border: 1px solid rgba(234, 230, 221, 0.08);
+}
+
+.mechanism-stat {
+    text-align: center;
+}
+
+.mechanism-stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--signal);
+    line-height: 1;
+}
+
+.mechanism-stat-unit {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-bottom: 0.5rem;
+}
+
+.mechanism-stat-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+/* ========== PROCESS ========== */
+.process-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.process-step {
+    flex: 1;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    border: 1px solid rgba(234, 230, 221, 0.08);
+    transition: border-color 0.3s ease;
+}
+
+.process-step:hover {
+    border-color: var(--ghost);
+}
+
+.process-step-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--signal);
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+.process-step-icon {
+    font-size: 2rem;
+    color: var(--signal);
+    margin-bottom: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.process-step-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--signal);
+}
+
+.process-step-text {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.process-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    padding-top: 4rem;
+}
+
+.connector-line {
+    width: 1px;
+    height: 40px;
+    background: var(--signal);
+    opacity: 0.3;
+}
+
+.connector-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--signal);
+    opacity: 0.5;
+}
+
+/* ========== VOW ========== */
+.vow-section {
+    padding: 160px 0;
+    text-align: center;
+}
+
+.vow-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.vow-icon {
+    font-size: 3rem;
+    color: var(--signal);
+    margin-bottom: 2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.vow-overline {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.vow-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 300;
+    line-height: 1.8;
+    font-style: italic;
+    border: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.vow-attribution {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--signal);
+    opacity: 0.7;
+}
+
+/* ========== FAQs ========== */
+.faqs-section {
+    background: rgba(123, 63, 74, 0.05);
+}
+
+.faqs-grid {
+    max-width: 800px;
+}
+
+.faq-item {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(234, 230, 221, 0.08);
+}
+
+.faq-item:first-child {
+    border-top: 1px solid rgba(234, 230, 221, 0.08);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.faq-q-label {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--signal);
+    flex-shrink: 0;
+    width: 30px;
+}
+
+.faq-question h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.faq-answer {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-left: 4.5rem;
+}
+
+.faq-a-label {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--signal);
+    flex-shrink: 0;
+    width: 30px;
+}
+
+.faq-answer p {
+    font-size: 0.95rem;
+    opacity: 0.75;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* ========== TRY THIS NOW ========== */
+.try-now-section {
+    background: linear-gradient(180deg, var(--ink), rgba(123, 63, 74, 0.08));
+}
+
+.try-now-content {
+    max-width: 600px;
+}
+
+.try-now-card {
+    padding: 4rem;
+    border: 1px solid rgba(234, 230, 221, 0.15);
+    text-align: center;
+}
+
+.try-now-gem {
+    font-size: 4rem;
+    color: var(--signal);
+    margin-bottom: 2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.try-now-instruction {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.try-now-result {
+    font-size: 1rem;
+    opacity: 0.7;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.try-now-data {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(234, 230, 221, 0.08);
+}
+
+.try-stat-label {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 0.5rem;
+}
+
+.try-stat-value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--signal);
+}
+
+/* ========== DYNAMIC CTA ========== */
+.cta-section {
+    padding: 100px 0;
+    text-align: center;
+    background: rgba(123, 63, 74, 0.1);
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: var(--signal);
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    opacity: 0.75;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+.cta-button {
+    font-size: 0.85rem;
+    padding: 18px 48px;
+}
+
 /* ========== CONTACT ========== */
 .contact-section {
     background: rgba(123, 63, 74, 0.03);
@@ -876,8 +1214,16 @@ section {
 .site-footer {
     margin-left: 80px;
     padding: 60px 0;
-    text-align: center;
     border-top: 1px solid rgba(234, 230, 221, 0.08);
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 4rem;
 }
 
 .footer-brand {
@@ -898,6 +1244,35 @@ section {
 .footer-address {
     font-size: 0.75rem;
     opacity: 0.4;
+}
+
+.footer-heading {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin-bottom: 1rem;
+}
+
+.footer-contraindications p {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.lexicon-list dt {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    color: var(--paper);
+}
+
+.lexicon-list dd {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -921,6 +1296,26 @@ section {
     }
     .philosophy-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .mechanism-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .mechanism-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .process-grid {
+        flex-direction: column;
+    }
+    .process-connector {
+        width: auto;
+        height: 40px;
+        padding: 0;
+        flex-direction: row;
+    }
+    .connector-line {
+        width: 40px;
+        height: 1px;
     }
     .compass-wrapper {
         grid-template-columns: 1fr;
@@ -971,12 +1366,33 @@ section {
     .about-grid,
     .services-grid,
     .compass-wrapper,
-    .contact-grid {
+    .contact-grid,
+    .mechanism-grid {
         grid-template-columns: 1fr;
     }
     .testimonials-grid,
-    .philosophy-grid {
+    .philosophy-grid,
+    .faqs-grid {
         grid-template-columns: 1fr;
+    }
+    .process-grid {
+        flex-direction: column;
+    }
+    .mechanism-stats {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem 1rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+        gap: 2rem;
+        text-align: center;
+    }
+    .try-now-card {
+        padding: 2.5rem;
+    }
+    .try-now-data {
+        gap: 2rem;
     }
     .hero-title {
         font-size: 2.5rem;

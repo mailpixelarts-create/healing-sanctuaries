@@ -286,8 +286,61 @@ section {
 }
 
 /* ============================================
-   SACRED ARTS SECTION
-   ============================================ */
+    THE MECHANISM SECTION
+    ============================================ */
+
+#mechanism {
+    padding: 8rem 4rem;
+}
+
+.mechanism-content {
+    max-width: 900px;
+}
+
+.mechanism-diagram {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border: 1px solid rgba(0, 255, 65, 0.1);
+    background: var(--ghost);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mechanism-step {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.mechanism-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    text-shadow: var(--glow);
+}
+
+.mechanism-arrow {
+    font-size: 1.25rem;
+    color: var(--signal);
+    opacity: 0.6;
+}
+
+.mechanism-text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.8;
+    line-height: 1.8;
+    max-width: 60ch;
+}
+
+/* ============================================
+    SACRED ARTS SECTION
+    ============================================ */
 
 #sacred-arts .arts-grid {
     display: grid;
@@ -369,8 +422,59 @@ section {
 }
 
 /* ============================================
-   PRESSURE POINT EXPLORER
-   ============================================ */
+    3-STEP PROCESS SECTION
+    ============================================ */
+
+#process {
+    padding: 8rem 4rem;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.process-step {
+    padding: 3rem 2rem;
+    border: 1px solid rgba(0, 255, 65, 0.1);
+    background: var(--ghost);
+    transition: var(--transition);
+    position: relative;
+}
+
+.process-step:hover {
+    border-color: var(--paper);
+    box-shadow: var(--glow);
+}
+
+.process-number {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    opacity: 0.1;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.process-step h3 {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.process-step p {
+    font-size: 0.85rem;
+    font-weight: 300;
+    opacity: 0.7;
+    line-height: 1.8;
+}
+
+/* ============================================
+    PRESSURE POINT EXPLORER
+    ============================================ */
 
 #explorer {
     padding: 8rem 4rem;
@@ -655,8 +759,205 @@ section {
 }
 
 /* ============================================
-   FOOTER
-   ============================================ */
+    FAQs SECTION
+    ============================================ */
+
+#faqs {
+    padding: 8rem 4rem;
+}
+
+.faqs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.faq-item {
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(0, 255, 65, 0.1);
+    background: var(--ghost);
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    border-color: var(--paper);
+    box-shadow: var(--glow);
+}
+
+.faq-question {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--signal);
+    letter-spacing: 0.02em;
+}
+
+.faq-answer {
+    font-size: 0.85rem;
+    font-weight: 300;
+    opacity: 0.7;
+    line-height: 1.8;
+}
+
+/* ============================================
+    PRACTITIONER'S VOW SECTION
+    ============================================ */
+
+#vow {
+    padding: 10rem 4rem;
+    text-align: center;
+}
+
+.vow-text {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 70ch;
+    margin: 0 auto;
+    opacity: 0.9;
+    border: none;
+    padding: 3rem;
+    border-left: 2px solid var(--signal);
+    text-align: left;
+}
+
+/* ============================================
+    LEXICON SECTION
+    ============================================ */
+
+#lexicon {
+    padding: 8rem 4rem;
+}
+
+.lexicon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.lexicon-item {
+    padding: 2rem;
+    border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.lexicon-term {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 0.75rem;
+    text-shadow: var(--glow);
+}
+
+.lexicon-def {
+    font-size: 0.85rem;
+    font-weight: 300;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+/* ============================================
+    TRY THIS NOW SECTION
+    ============================================ */
+
+#try-now {
+    padding: 8rem 4rem;
+}
+
+.try-now-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 3rem;
+    border: 1px solid rgba(0, 255, 65, 0.1);
+    background: var(--ghost);
+}
+
+.try-now-icon {
+    flex-shrink: 0;
+}
+
+.hand-icon {
+    width: 150px;
+    height: 150px;
+    color: var(--paper);
+}
+
+.try-now-text h3 {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.try-now-text p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.8;
+    line-height: 1.8;
+    max-width: 50ch;
+}
+
+/* ============================================
+    DYNAMIC CTA SECTION
+    ============================================ */
+
+#cta {
+    padding: 10rem 4rem;
+    text-align: center;
+    border-top: 1px solid rgba(0, 255, 65, 0.1);
+}
+
+.cta-title {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+    text-shadow: var(--glow-strong);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.25rem 3rem;
+    border: 2px solid var(--paper);
+    color: var(--paper);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--paper);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.cta-button:hover::before {
+    left: 0;
+}
+
+.cta-button:hover {
+    color: var(--ink);
+    box-shadow: var(--glow-strong);
+}
+
+/* ============================================
+    FOOTER
+    ============================================ */
 
 #footer {
     position: relative;
@@ -668,7 +969,7 @@ section {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
     margin-bottom: 4rem;
 }
@@ -753,12 +1054,29 @@ section {
         gap: 3rem;
     }
 
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
     #philosophy .philosophy-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     #testimonials .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+
+    .faqs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lexicon-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .try-now-content {
+        flex-direction: column;
+        text-align: center;
     }
 
     .footer-grid {
@@ -779,6 +1097,26 @@ section {
 
     #philosophy .philosophy-grid {
         grid-template-columns: 1fr;
+    }
+
+    .mechanism-diagram {
+        flex-direction: column;
+    }
+
+    .mechanism-step {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .mechanism-arrow {
+        transform: rotate(90deg);
+    }
+
+    .vow-text {
+        padding: 2rem;
+        border-left: none;
+        border-top: 2px solid var(--signal);
+        text-align: center;
     }
 
     .footer-bottom {

@@ -78,7 +78,9 @@ a {
 
 .nav__links {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav__links a {
@@ -820,6 +822,348 @@ a {
 }
 
 /* ============================================
+   PRACTITIONER'S VOW
+   ============================================ */
+
+.vow {
+  padding: 6rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vow__inner {
+  text-align: center;
+  padding: 4rem 3rem;
+  border: 1px solid var(--ghost);
+  background: var(--ghost);
+  position: relative;
+}
+
+.vow__label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin-bottom: 2rem;
+}
+
+.vow__quote {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-style: italic;
+  color: rgba(58, 44, 36, 0.85);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  border: none;
+  padding: 0;
+}
+
+.vow__attribution {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--signal);
+}
+
+/* ============================================
+   THE MECHANISM
+   ============================================ */
+
+.mechanism__diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.mechanism__node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1.5rem 2.5rem;
+  border: 1px solid var(--ghost);
+  background: var(--ghost);
+  text-align: center;
+  transition: border-color var(--transition);
+}
+
+.mechanism__node:hover {
+  border-color: var(--signal);
+}
+
+.mechanism__node-label {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.mechanism__node-sub {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--signal);
+  text-transform: uppercase;
+}
+
+.mechanism__node-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.mechanism__line {
+  width: 1px;
+  height: 30px;
+  background: var(--signal);
+  opacity: 0.4;
+}
+
+/* ============================================
+   THE 3-STEP PROCESS
+   ============================================ */
+
+.process__grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 0;
+  margin-top: 4rem;
+  align-items: start;
+}
+
+.process__step {
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--ghost);
+  text-align: center;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.process__step:hover {
+  border-color: var(--signal);
+  background: var(--ghost);
+}
+
+.process__icon {
+  font-size: 2rem;
+  color: var(--signal);
+  opacity: 0.5;
+  margin-bottom: 1.5rem;
+}
+
+.process__phase {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin-bottom: 1rem;
+}
+
+.process__title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.process__desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(58, 44, 36, 0.8);
+}
+
+.process__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--signal);
+  opacity: 0.3;
+  padding: 0 0.5rem;
+}
+
+/* ============================================
+   LEXICON
+   ============================================ */
+
+.lexicon__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.lexicon__term {
+  padding: 2.5rem;
+  border: 1px solid var(--ghost);
+  transition: border-color var(--transition);
+}
+
+.lexicon__term:hover {
+  border-color: var(--signal);
+}
+
+.lexicon__word {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  color: var(--signal);
+  margin-bottom: 1rem;
+}
+
+.lexicon__def {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(58, 44, 36, 0.8);
+}
+
+/* ============================================
+   TRY THIS NOW
+   ============================================ */
+
+.try-now__inner {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.try-now__label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin-bottom: 1.5rem;
+}
+
+.try-now__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.try-now__text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(58, 44, 36, 0.85);
+  margin-bottom: 2.5rem;
+}
+
+.try-now__recipe {
+  display: inline-block;
+  padding: 2rem 3rem;
+  border: 1px solid var(--signal);
+  background: var(--ghost);
+  text-align: left;
+}
+
+.try-now__recipe-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin-bottom: 1rem;
+}
+
+.try-now__recipe-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.try-now__recipe-items span {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-left: 1rem;
+  border-left: 1px solid var(--ghost);
+}
+
+.try-now__recipe-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--signal);
+  opacity: 0.8;
+}
+
+/* ============================================
+   DYNAMIC CTA
+   ============================================ */
+
+.dynamic-cta__inner {
+  text-align: center;
+  padding: 5rem 3rem;
+  background: var(--ink);
+  color: var(--paper);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dynamic-cta__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+  color: var(--paper);
+}
+
+.dynamic-cta__text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(245, 234, 216, 0.7);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+}
+
+.dynamic-cta__btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--signal);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--paper);
+  transition: background var(--transition), color var(--transition);
+}
+
+.dynamic-cta__btn:hover {
+  background: var(--signal);
+  color: var(--paper);
+}
+
+/* ============================================
+   FAQ
+   ============================================ */
+
+.faq__list {
+  max-width: 800px;
+  margin: 4rem auto 0;
+}
+
+.faq__item {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--ghost);
+}
+
+.faq__item:last-child {
+  border-bottom: none;
+}
+
+.faq__q {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.faq__a {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(58, 44, 36, 0.8);
+  padding-left: 1rem;
+  border-left: 2px solid var(--signal);
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 
@@ -851,6 +1195,20 @@ a {
   font-size: 0.85rem;
   line-height: 1.7;
   opacity: 0.7;
+}
+
+.footer__disclaimer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(245, 234, 216, 0.1);
+}
+
+.footer__disclaimer-text {
+  font-size: 0.75rem;
+  line-height: 1.7;
+  opacity: 0.5;
+  font-style: italic;
 }
 
 .footer__bottom {
@@ -916,6 +1274,24 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .process__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .process__divider {
+    padding: 1rem 0;
+    transform: rotate(90deg);
+  }
+
+  .lexicon__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mechanism__node-row {
+    flex-direction: column;
+  }
+
   .footer__grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -929,6 +1305,8 @@ a {
 
   .nav__links {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .nav__links a {
@@ -942,5 +1320,18 @@ a {
   .journey__step {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .vow__quote {
+    font-size: 1.05rem;
+  }
+
+  .try-now__recipe {
+    padding: 1.5rem 2rem;
+    width: 100%;
+  }
+
+  .dynamic-cta__inner {
+    padding: 3rem 1.5rem;
   }
 }

@@ -1240,6 +1240,534 @@ body {
     color: var(--ink);
 }
 
+/* --- Mechanism Section --- */
+.mechanism {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--ink);
+    overflow: hidden;
+}
+
+.mechanism-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(232,197,71,0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(232,197,71,0.03) 0%, transparent 50%);
+}
+
+.mechanism-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mechanism-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.mechanism-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.mechanism-text p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--paper);
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.mechanism-diagram {
+    display: flex;
+    justify-content: center;
+}
+
+.mechanism-svg {
+    width: 100%;
+    max-width: 300px;
+}
+
+.mech-pulse {
+    animation: mechPulse 2s ease-in-out infinite;
+}
+
+@keyframes mechPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.15); }
+}
+
+/* --- Three-Step Process --- */
+.three-step {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--ink);
+    overflow: hidden;
+}
+
+.three-step-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 30%, rgba(232,197,71,0.04) 0%, transparent 50%);
+}
+
+.three-step-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.three-step-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.three-step-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.step-block {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid var(--ghost);
+    background: rgba(232,197,71,0.02);
+    transition: all 0.5s ease;
+}
+
+.step-block:hover {
+    border-color: var(--signal);
+    background: rgba(232,197,71,0.05);
+    transform: translateY(-5px);
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+}
+
+.step-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--signal);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.step-instruction {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--paper);
+    opacity: 0.7;
+}
+
+/* --- Practitioner's Vow --- */
+.vow-section {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--ink);
+    overflow: hidden;
+}
+
+.vow-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(232,197,71,0.08) 0%, transparent 50%);
+}
+
+.vow-container {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.vow-content {
+    text-align: center;
+}
+
+.vow-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    animation: vowPulse 3s ease-in-out infinite;
+}
+
+@keyframes vowPulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.05); opacity: 1; }
+}
+
+.vow-quote {
+    margin: 0 0 25px;
+}
+
+.vow-quote p {
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    line-height: 1.8;
+    color: var(--paper);
+    opacity: 0.85;
+}
+
+.vow-attr {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--signal);
+    opacity: 0.6;
+}
+
+/* --- Try This Now --- */
+.try-now {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--ink);
+    overflow: hidden;
+}
+
+.try-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(232,197,71,0.06) 0%, transparent 50%);
+}
+
+.try-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.try-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.try-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.try-instruction {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid var(--ghost);
+    background: rgba(232,197,71,0.02);
+}
+
+.try-step-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--signal);
+    opacity: 0.3;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.try-instruction p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--paper);
+    opacity: 0.8;
+}
+
+.color-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.color-tag.orange {
+    background: rgba(255,127,0,0.2);
+    color: #FF7F00;
+}
+
+.color-tag.green {
+    background: rgba(0,255,0,0.15);
+    color: #00FF00;
+}
+
+.try-visual {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+}
+
+.try-svg {
+    width: 100%;
+    max-width: 250px;
+}
+
+.try-pulse {
+    animation: tryPulse 2s ease-in-out infinite;
+}
+
+@keyframes tryPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* --- Lexicon Section --- */
+.lexicon {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--ink);
+    overflow: hidden;
+}
+
+.lexicon-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(232,197,71,0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(232,197,71,0.04) 0%, transparent 50%);
+}
+
+.lexicon-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.lexicon-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.lexicon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.lexicon-card {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid var(--ghost);
+    background: rgba(232,197,71,0.02);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.lexicon-card:hover {
+    border-color: var(--signal);
+    transform: translateY(-3px);
+}
+
+.lexicon-sanskrit {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--signal);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+.lexicon-meaning {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--paper);
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.lexicon-color {
+    width: 30px;
+    height: 3px;
+    margin: 0 auto;
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+/* --- FAQs Section --- */
+.faqs {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--ink);
+    overflow: hidden;
+}
+
+.faqs-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(232,197,71,0.05) 0%, transparent 50%);
+}
+
+.faqs-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.faqs-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faqs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faq-item {
+    border: 1px solid var(--ghost);
+    background: rgba(232,197,71,0.02);
+    padding: 30px;
+    transition: all 0.5s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--signal);
+}
+
+.faq-q, .faq-a {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.faq-q {
+    margin-bottom: 15px;
+}
+
+.faq-mark {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--signal);
+    background: rgba(232,197,71,0.1);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.faq-mark.ans {
+    background: rgba(232,197,71,0.15);
+}
+
+.faq-q p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--paper);
+}
+
+.faq-a p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--paper);
+    opacity: 0.7;
+}
+
+/* --- Dynamic CTA Section --- */
+.dynamic-cta {
+    position: relative;
+    padding: 120px 20px;
+    background: var(--ink);
+    overflow: hidden;
+}
+
+.cta-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(232,197,71,0.1) 0%, transparent 50%);
+}
+
+.cta-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-wheel {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 40px;
+    animation: ctaSpin 15s linear infinite;
+}
+
+@keyframes ctaSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.cta-wheel-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.cta-core-pulse {
+    animation: corePulse 2s ease-in-out infinite;
+}
+
+.cta-rays {
+    animation: ctaSpin 15s linear infinite reverse;
+}
+
+.cta-spin {
+    font-size: 1rem;
+    padding: 20px 50px;
+}
+
+/* --- Footer Additions --- */
+.footer-contraindications {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 20px 25px;
+    border: 1px solid rgba(232,197,71,0.15);
+    background: rgba(232,197,71,0.02);
+    text-align: center;
+}
+
+.contra-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--signal);
+    margin-bottom: 8px;
+}
+
+.contra-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--paper);
+    opacity: 0.5;
+}
+
 /* --- Footer --- */
 .footer {
     position: relative;
@@ -1329,6 +1857,22 @@ body {
         height: 200px;
     }
 
+    .mechanism-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .three-step-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .try-content {
+        grid-template-columns: 1fr;
+    }
+
+    .lexicon-grid {
+        grid-template-columns: 1fr;
+    }
+
     .wheel-layout {
         grid-template-columns: 1fr;
     }
@@ -1361,7 +1905,7 @@ body {
         padding: 0 15px;
     }
 
-    .about, .sacred-art, .philosophy, .testimonials, .journey, .quote-section, .contact, .chakra-wheel-section {
+    .about, .sacred-art, .philosophy, .testimonials, .journey, .quote-section, .contact, .chakra-wheel-section, .mechanism, .three-step, .vow-section, .try-now, .lexicon, .faqs, .dynamic-cta {
         padding: 80px 15px;
     }
 

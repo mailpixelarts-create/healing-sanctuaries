@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tiempos+Text:wght@400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Meditation - Thich Minh Hanh","description":"The Present Moment Is the Only Moment","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
+    </script>
 </head>
 <body>
     <!-- Grain Overlay -->
@@ -29,10 +32,11 @@
     <nav class="bottom-nav">
         <div class="nav-container">
             <a href="#about" class="nav-link">About</a>
+            <a href="#mechanism" class="nav-link">Mechanism</a>
+            <a href="#process" class="nav-link">Process</a>
             <a href="#sacred-art" class="nav-link">Sacred Art</a>
-            <a href="#philosophy" class="nav-link">Philosophy</a>
-            <a href="#testimonials" class="nav-link">Testimonials</a>
-            <a href="#journey" class="nav-link">Journey</a>
+            <a href="#vow" class="nav-link">Vow</a>
+            <a href="#faqs" class="nav-link">FAQs</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
@@ -46,13 +50,39 @@
                     <div class="about-text">
                         <p>Thich Minh Hanh studied under the revered Thich Nhat Hanh at Plum Village, the global center of mindfulness practice in the south of France. For over twenty years, he has devoted his life to teaching the art of conscious living.</p>
                         <p>His approach integrates ancient Zen traditions with modern mindfulness techniques, creating a practice that is both profound and accessible to contemporary seekers.</p>
-                        <p>Thich teaches that meditation is not an escape from life but a deep engagement with it — a way to touch the miracle of being alive in each breath.</p>
+                        <p>Thich teaches that meditation is not an escape from life but a deep engagement with it â€" a way to touch the miracle of being alive in each breath.</p>
+                        <div class="origin-story">
+                            <p class="origin-story-text">"Thich Minh Hanh spent 8 years as a Buddhist monk in Plum Village before returning to teach secular meditation. He strips away the religion and leaves only the neuroscience."</p>
+                        </div>
                     </div>
+                </div>
                 </div>
                 <div class="about-image">
                     <div class="image-container">
                         <div class="image-placeholder" aria-label="Thich Minh Hanh meditation portrait">
                             <div class="image-grain"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Mechanism -->
+    <section id="mechanism" class="section mechanism-section">
+        <div class="container">
+            <h2 class="section-title">The Mechanism</h2>
+            <div class="mechanism-content">
+                <div class="mechanism-text">
+                    <p class="mechanism-statement">Meditation thickens the insular cortex (interoceptive awareness) and shrinks the amygdala (fear response). It is structural neuroplasticity, not relaxation.</p>
+                    <div class="mechanism-details">
+                        <div class="mechanism-item">
+                            <span class="mechanism-label">Insular Cortex</span>
+                            <span class="mechanism-desc">Thickens with practice â€” improves interoceptive awareness, the ability to sense your own body's signals.</span>
+                        </div>
+                        <div class="mechanism-item">
+                            <span class="mechanism-label">Amygdala</span>
+                            <span class="mechanism-desc">Shrinks with practice â€” reduces fear response, anxiety reactivity, and emotional volatility.</span>
                         </div>
                     </div>
                 </div>
@@ -69,7 +99,7 @@
                 
                 <div class="bell-interface">
                     <button id="bellButton" class="bell-button" aria-label="Start 60-second meditation timer">
-                        <span class="bell-icon">◯</span>
+                        <span class="bell-icon">â—¯</span>
                     </button>
                     <div id="timerDisplay" class="timer-display">
                         <div id="timerCircle" class="timer-circle"></div>
@@ -91,19 +121,40 @@
                     <div class="sacred-number">01</div>
                     <h3>Mindful Breathing</h3>
                     <p>The foundation of all practice. Following the breath as it moves through the body, anchoring awareness in the present. Each inhale is a homecoming, each exhale a letting go.</p>
-                    <div class="sacred-symbol">◎</div>
+                    <div class="sacred-symbol">â—Ž</div>
                 </div>
                 <div class="sacred-card">
                     <div class="sacred-number">02</div>
                     <h3>Body Scan</h3>
                     <p>A systematic journey through the physical form, releasing tension held in muscle and bone. The body becomes a landscape of sensation, each area a territory of awareness.</p>
-                    <div class="sacred-symbol">◉</div>
+                    <div class="sacred-symbol">â—‰</div>
                 </div>
                 <div class="sacred-card">
                     <div class="sacred-number">03</div>
                     <h3>Walking Meditation</h3>
                     <p>Movement as meditation. Each step becomes a deliberate act of presence, transforming ordinary motion into a sacred ritual. The path is the practice.</p>
-                    <div class="sacred-symbol">◎</div>
+                    <div class="sacred-symbol">â—Ž</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 3-Step Process -->
+    <section id="process" class="section process-section">
+        <div class="container">
+            <h2 class="section-title">The 3-Step Process</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-label">Before</div>
+                    <p>Sit upright.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-label">During</div>
+                    <p>10-min silent observation of the breath. No mantras.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-label">After</div>
+                    <p>Thoughts will attack. That is the 'monkey mind' dying.</p>
                 </div>
             </div>
         </div>
@@ -138,6 +189,18 @@
         </div>
     </section>
 
+    <!-- Practitioner's Vow -->
+    <section id="vow" class="section vow-section">
+        <div class="container">
+            <div class="vow-content">
+                <div class="vow-mark">â—¯</div>
+                <blockquote class="vow-text">
+                    <p>"I do not quiet your mind. I show you the door. You are the one who must choose to walk through it. The silence is not emptyâ€”it is full of everything you've been avoiding."</p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="section testimonials-section">
         <div class="container">
@@ -145,21 +208,42 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <blockquote>
-                        <p>"After twenty years of anxiety, I found peace in the spaces between breaths. Thich taught me that I am not my thoughts — I am the awareness behind them."</p>
+                        <p>"After twenty years of anxiety, I found peace in the spaces between breaths. Thich taught me that I am not my thoughts â€” I am the awareness behind them."</p>
                     </blockquote>
-                    <cite>— Sarah M., Tokyo</cite>
+                    <cite>â€” Sarah M., Tokyo</cite>
                 </div>
                 <div class="testimonial-card">
                     <blockquote>
-                        <p>"The walking meditation changed everything. I walk differently now — each step is a prayer, each footfall a meditation. My whole day became the practice."</p>
+                        <p>"The walking meditation changed everything. I walk differently now â€” each step is a prayer, each footfall a meditation. My whole day became the practice."</p>
                     </blockquote>
-                    <cite>— David K., New York</cite>
+                    <cite>â€” David K., New York</cite>
                 </div>
                 <div class="testimonial-card">
                     <blockquote>
-                        <p>"I came seeking calm and found something deeper — a radical acceptance of life as it is. The bell practice taught me to return, again and again, to what matters."</p>
+                        <p>"I came seeking calm and found something deeper â€” a radical acceptance of life as it is. The bell practice taught me to return, again and again, to what matters."</p>
                     </blockquote>
-                    <cite>— Maya L., London</cite>
+                    <cite>â€” Maya L., London</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="section faqs-section">
+        <div class="container">
+            <h2 class="section-title">FAQs</h2>
+            <div class="faqs-grid">
+                <div class="faq-item">
+                    <div class="faq-question">Q: "I can't stop thinking."</div>
+                    <div class="faq-answer">A: That is the point â€” to watch the thoughts, not stop them.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: "Is 10 minutes enough?"</div>
+                    <div class="faq-answer">A: Yes. Consistency beats duration.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: "Why do I feel angry after?"</div>
+                    <div class="faq-answer">A: Suppressed emotion rises first.</div>
                 </div>
             </div>
         </div>
@@ -201,6 +285,77 @@
         </div>
     </section>
 
+    <!-- Lexicon -->
+    <section id="lexicon" class="section lexicon-section">
+        <div class="container">
+            <h2 class="section-title">Lexicon</h2>
+            <div class="lexicon-grid">
+                <div class="lexicon-item">
+                    <div class="lexicon-term">Samatha</div>
+                    <div class="lexicon-def">Calm-abiding concentration.</div>
+                </div>
+                <div class="lexicon-item">
+                    <div class="lexicon-term">Vipassana</div>
+                    <div class="lexicon-def">Insight into impermanence.</div>
+                </div>
+                <div class="lexicon-item">
+                    <div class="lexicon-term">Sankhara</div>
+                    <div class="lexicon-def">Mental formations (thoughts).</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Try This Now -->
+    <section id="try-now" class="section try-now-section">
+        <div class="container">
+            <div class="try-now-content">
+                <h2 class="section-title">Try This Now</h2>
+                <p class="try-now-instruction">Set a 3-min timer. Count every exhale from 1 to 10. Repeat. The moment you lose count, start over.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic CTA -->
+    <section id="cta" class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">The 10-Minute Reset</h2>
+                <p class="cta-subtitle">Your mind will resist. That is how you know it is working.</p>
+                <button class="cta-button" id="ctaButton">Begin Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Events -->
+    <section id="events" class="section events-section">
+        <div class="container">
+            <h2 class="section-title">Live Events</h2>
+            <div class="events-grid">
+                <div class="event-item">
+                    <span class="event-name">Silent Retreat</span>
+                    <span class="event-detail">Quarterly</span>
+                </div>
+                <div class="event-item">
+                    <span class="event-name">10-Minute Challenge</span>
+                    <span class="event-detail">Ongoing</span>
+                </div>
+                <div class="event-item">
+                    <span class="event-name">Mindfulness Workshop</span>
+                    <span class="event-detail">Monthly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift a Session -->
+    <section id="gift" class="section gift-section">
+        <div class="container">
+            <h2 class="section-title">Gift a Sanctuary</h2>
+            <p class="gift-text">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
@@ -210,7 +365,7 @@
                     <div class="contact-details">
                         <p class="healer-name">Thich Minh Hanh</p>
                         <p class="address">1 Temple Road<br>Kyoto, Japan 604-8006</p>
-                        <p class="schedule">Sittings: Tuesday, Thursday, Saturday<br>7:00 AM — 8:30 AM JST</p>
+                        <p class="schedule">Sittings: Tuesday, Thursday, Saturday<br>7:00 AM â€” 8:30 AM JST</p>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -238,10 +393,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">© 2026 Meditation with Thich Minh Hanh. All moments reserved.</p>
+            <p class="footer-contraindications">Not recommended during active psychosis. If you experience severe anxiety or dissociation, stop and consult a mental health professional.</p>
+            <p class="footer-text">Â© 2026 Meditation with Thich Minh Hanh. All moments reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+<script src="meta-layer.js"></script></body>
 </html>

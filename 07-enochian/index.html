@@ -1,13 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aromatherapy — Flora Botanica</title>
+    <title>Aromatherapy â€” Flora Botanica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Aromatherapy - Flora Botanica","description":"The Nose Knows the Soul","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
+    </script>
 </head>
 <body>
     <canvas id="hero-canvas"></canvas>
@@ -42,11 +45,21 @@
                 <div class="about-grid">
                     <div class="about-image" id="about-image"></div>
                     <div class="about-text">
-                        <p>Trained in the hills of Grasse, France — the undisputed perfume capital of the world — Flora Botanica learned to listen before she learned to blend.</p>
+                        <p>Trained in the hills of Grasse, France â€” the undisputed perfume capital of the world â€” Flora Botanica learned to listen before she learned to blend.</p>
                         <p>In the ancient distilleries where jasmine is still harvested by hand at dawn, she discovered that scent is not decoration. It is memory. It is emotion. It is the invisible thread connecting body to soul.</p>
                         <p>Each of her blends is an alchemical conversation between plant and person, a sacred dialogue written in molecules and meaning.</p>
+                        <div class="origin-story">
+                            <p class="origin-story-text">"Flora Botanica trained as a perfumer in Grasse, France, before discovering that the same volatile compounds that created beautiful scents also triggered profound emotional releases in her clients."</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="mechanism" class="section">
+            <div class="section-inner">
+                <h2 class="section-title">The Mechanism</h2>
+                <p class="mechanism-text">Odorants bind to olfactory receptors in the nasal epithelium, which directly project to the amygdala (emotion) and hippocampus (memory). Lavender's linalool increases GABA by 40%.</p>
             </div>
         </section>
 
@@ -57,7 +70,7 @@
                     <div class="sacred-card" data-reveal>
                         <div class="sacred-number">I</div>
                         <h3>Essential Oil Blending</h3>
-                        <p>Custom formulations created through deep listening. Each blend is a unique prescription — intuitive, precise, alive. Over 200 botanical essences sourced from ethical wildcrafters across five continents.</p>
+                        <p>Custom formulations created through deep listening. Each blend is a unique prescription â€” intuitive, precise, alive. Over 200 botanical essences sourced from ethical wildcrafters across five continents.</p>
                     </div>
                     <div class="sacred-card" data-reveal>
                         <div class="sacred-number">II</div>
@@ -73,33 +86,53 @@
             </div>
         </section>
 
+        <section id="process" class="section">
+            <div class="section-inner">
+                <h2 class="section-title">The 3-Step Process</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <h3>Before</h3>
+                        <p>Unscented environment.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>During</h3>
+                        <p>Diffuser with 3 drops.</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>After</h3>
+                        <p>The scent will linger on your clothes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="olfactory" class="section">
             <div class="section-inner">
                 <h2 class="section-title">Olfactory Memory Test</h2>
                 <p class="olfactory-intro">Choose a scent note. Let memory find you.</p>
                 <div class="scent-grid">
                     <button class="scent-btn" data-scent="bergamot">
-                        <span class="scent-icon">🌿</span>
+                        <span class="scent-icon">ðŸŒ¿</span>
                         <span class="scent-name">Bergamot</span>
                     </button>
                     <button class="scent-btn" data-scent="lavender">
-                        <span class="scent-icon">💜</span>
+                        <span class="scent-icon">ðŸ’œ</span>
                         <span class="scent-name">Lavender</span>
                     </button>
                     <button class="scent-btn" data-scent="cedar">
-                        <span class="scent-icon">🌲</span>
+                        <span class="scent-icon">ðŸŒ²</span>
                         <span class="scent-name">Cedar</span>
                     </button>
                     <button class="scent-btn" data-scent="orange">
-                        <span class="scent-icon">🍊</span>
+                        <span class="scent-icon">ðŸŠ</span>
                         <span class="scent-name">Sweet Orange</span>
                     </button>
                     <button class="scent-btn" data-scent="sandalwood">
-                        <span class="scent-icon">🪵</span>
+                        <span class="scent-icon">ðŸªµ</span>
                         <span class="scent-name">Sandalwood</span>
                     </button>
                     <button class="scent-btn" data-scent="peppermint">
-                        <span class="scent-icon">🍃</span>
+                        <span class="scent-icon">ðŸƒ</span>
                         <span class="scent-name">Peppermint</span>
                     </button>
                 </div>
@@ -116,7 +149,7 @@
                     <div class="philosophy-pillar" data-reveal>
                         <div class="pillar-line"></div>
                         <h3>The Plant Remembers</h3>
-                        <p>Every essential oil carries the full memory of the plant — its sun, its soil, its seasons. When we inhale, we receive not just fragrance, but a living archive of the natural world.</p>
+                        <p>Every essential oil carries the full memory of the plant â€” its sun, its soil, its seasons. When we inhale, we receive not just fragrance, but a living archive of the natural world.</p>
                     </div>
                     <div class="philosophy-pillar" data-reveal>
                         <div class="pillar-line"></div>
@@ -126,14 +159,21 @@
                     <div class="philosophy-pillar" data-reveal>
                         <div class="pillar-line"></div>
                         <h3>Healing is Invisible</h3>
-                        <p>The deepest transformations leave no visible trace. Aromatherapy works in the spaces between — in the quiet, in the breath, in the pause before exhale.</p>
+                        <p>The deepest transformations leave no visible trace. Aromatherapy works in the spaces between â€” in the quiet, in the breath, in the pause before exhale.</p>
                     </div>
                     <div class="philosophy-pillar" data-reveal>
                         <div class="pillar-line"></div>
                         <h3>Ritual Over Remedy</h3>
-                        <p>We do not prescribe. We create ceremonies. Each application becomes a sacred pause — a moment where the ordinary act of anointing becomes medicine for the nervous system.</p>
+                        <p>We do not prescribe. We create ceremonies. Each application becomes a sacred pause â€” a moment where the ordinary act of anointing becomes medicine for the nervous system.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="vow" class="section">
+            <div class="section-inner">
+                <h2 class="section-title">Practitioner's Vow</h2>
+                <blockquote class="vow-text">"I do not heal with scent. I heal with memory. Every fragrance is a key that unlocks a door you forgot existed. I am the locksmith of your olfactory library."</blockquote>
             </div>
         </section>
 
@@ -143,15 +183,35 @@
                 <div class="testimonials-grid">
                     <div class="testimonial-card" data-reveal>
                         <blockquote>"I inhaled bergamot and suddenly I was seven years old, standing in my grandmother's kitchen in Tuscany. I hadn't thought of her in twenty years. I wept for an hour. Then I felt lighter than I had in decades."</blockquote>
-                        <cite>— Margaret V., London</cite>
+                        <cite>â€” Margaret V., London</cite>
                     </div>
                     <div class="testimonial-card" data-reveal>
-                        <blockquote>"Flora created a custom blend for my insomnia. The first night I used it, I slept nine hours. No dreams — just deep, silent, restoration. It's been three months. I am a different person."</blockquote>
-                        <cite>— James O., New York</cite>
+                        <blockquote>"Flora created a custom blend for my insomnia. The first night I used it, I slept nine hours. No dreams â€” just deep, silent, restoration. It's been three months. I am a different person."</blockquote>
+                        <cite>â€” James O., New York</cite>
                     </div>
                     <div class="testimonial-card" data-reveal>
                         <blockquote>"The Scent Journey changed how I understand grief. Walking through those seven stations, I realized I had been holding my sorrow in my breath. Flora helped me release it, one inhale at a time."</blockquote>
-                        <cite>— Lina K., Berlin</cite>
+                        <cite>â€” Lina K., Berlin</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faqs" class="section">
+            <div class="section-inner">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">Q: "Do I need a diffuser?"</div>
+                        <div class="faq-answer">A: Yes. Heat destroys terpenes. Cold diffusion only.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q: "How long until it works?"</div>
+                        <div class="faq-answer">A: 3 seconds. The nose-brain pathway is that fast.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q: "Can I ingest it?"</div>
+                        <div class="faq-answer">A: Never. Only topical or inhalation.</div>
                     </div>
                 </div>
             </div>
@@ -186,7 +246,7 @@
                         <div class="step-marker"></div>
                         <div class="step-content">
                             <h3>Application</h3>
-                            <p>The blend is pressed into pulse points — wrists, temples, heart. Warm hands. Slow pressure. You are anointed, not treated.</p>
+                            <p>The blend is pressed into pulse points â€” wrists, temples, heart. Warm hands. Slow pressure. You are anointed, not treated.</p>
                         </div>
                     </div>
                     <div class="journey-step" data-reveal>
@@ -197,6 +257,55 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="lexicon" class="section">
+            <div class="section-inner">
+                <h2 class="section-title">Lexicon</h2>
+                <div class="lexicon-list">
+                    <div class="lexicon-item">
+                        <span class="lexicon-term">Terpenes</span>
+                        <span class="lexicon-def">Volatile aromatic compounds.</span>
+                    </div>
+                    <div class="lexicon-item">
+                        <span class="lexicon-term">Top Note</span>
+                        <span class="lexicon-def">Evaporates quickly (citrus).</span>
+                    </div>
+                    <div class="lexicon-item">
+                        <span class="lexicon-term">Base Note</span>
+                        <span class="lexicon-def">Evaporates slowly (sandalwood).</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Events -->
+        <section id="events" class="section">
+            <div class="section-inner">
+                <h2 class="section-title">Live Events</h2>
+                <div class="events-grid">
+                    <div class="event-item">
+                        <span class="event-name">Blending Workshop</span>
+                        <span class="event-detail">Monthly</span>
+                    </div>
+                    <div class="event-item">
+                        <span class="event-name">Scent Journey Night</span>
+                        <span class="event-detail">Quarterly</span>
+                    </div>
+                    <div class="event-item">
+                        <span class="event-name">Botanical Garden Walk</span>
+                        <span class="event-detail">Seasonally</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift a Session -->
+        <section id="gift" class="section">
+            <div class="section-inner">
+                <h2 class="section-title">Gift a Sanctuary</h2>
+                <p class="gift-text">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
             </div>
         </section>
 
@@ -216,16 +325,45 @@
                 </div>
             </div>
         </section>
+
+        <section id="try-this" class="section section-dark">
+            <div class="section-inner">
+                <h2 class="section-title">Try This Now</h2>
+                <div class="try-this-content">
+                    <p class="try-instruction">Rub your hands together, place over your nose, inhale deeply for 5 counts. Exhale for 5. This activates the trigeminal nerve.</p>
+                    <div class="breath-timer" id="breathTimer">
+                        <div class="timer-circle">
+                            <span class="timer-text" id="timerText">Begin</span>
+                        </div>
+                        <button class="timer-btn" id="timerBtn">Start Breathing</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="section">
+            <div class="section-inner">
+                <div class="cta-block">
+                    <h2 class="cta-heading">Inhale Your Calm</h2>
+                    <p class="cta-subtext">Begin your aromatic journey today</p>
+                    <a href="#contact" class="cta-button">Book a Session</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div class="footer-inner">
             <p class="footer-name">Aromatherapy by Flora Botanica</p>
             <p class="footer-tagline">"The Nose Knows the Soul"</p>
+            <div class="contraindications">
+                <p class="contra-title">Important Safety Information</p>
+                <p>Never ingest essential oils. Not recommended during first trimester of pregnancy. Some oils (eucalyptus, rosemary) are contraindicated for epilepsy. Always dilute before skin application.</p>
+            </div>
             <p class="footer-copy">&copy; 2026 All rights reserved</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+<script src="meta-layer.js"></script></body>
 </html>

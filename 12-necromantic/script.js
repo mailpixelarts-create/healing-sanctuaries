@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll('.reveal, .art-card, .pillar, .testimonial-card, .journey-step, .about-stats, .section-label, .healer-name, .about-text, .about-divider, .contact-address, .contact-cta').forEach(el => {
+  document.querySelectorAll('.reveal, .art-card, .pillar, .testimonial-card, .journey-step, .about-stats, .section-label, .healer-name, .about-text, .about-divider, .contact-address, .contact-cta, .mechanism-content, .process-step, .vow-content, .faq-item, .lexicon-item, .try-now-content').forEach(el => {
     el.classList.add('reveal');
     observer.observe(el);
   });
@@ -357,4 +357,46 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('heroScroll')?.addEventListener('click', () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   });
+
+  // Try This Now Timer
+  const timerBtn = document.getElementById('timerBtn');
+  const timerDisplay = document.getElementById('timerDisplay');
+  let timerInterval = null;
+  let timerRunning = false;
+
+  if (timerBtn && timerDisplay) {
+    timerBtn.addEventListener('click', () => {
+      if (timerRunning) {
+        clearInterval(timerInterval);
+        timerBtn.textContent = 'Begin 3-Minute Drift';
+        timerBtn.classList.remove('active');
+        timerDisplay.textContent = '3:00';
+        timerRunning = false;
+        return;
+      }
+
+      timerRunning = true;
+      timerBtn.textContent = 'End Session';
+      timerBtn.classList.add('active');
+      let seconds = 180;
+
+      timerInterval = setInterval(() => {
+        seconds--;
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        timerDisplay.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+
+        if (seconds <= 0) {
+          clearInterval(timerInterval);
+          timerBtn.textContent = 'Session Complete';
+          timerBtn.classList.remove('active');
+          timerRunning = false;
+          setTimeout(() => {
+            timerBtn.textContent = 'Begin 3-Minute Drift';
+            timerDisplay.textContent = '3:00';
+          }, 2000);
+        }
+      }, 1000);
+    });
+  }
 });

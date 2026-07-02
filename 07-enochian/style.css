@@ -629,6 +629,279 @@ body {
     letter-spacing: 0.1em;
 }
 
+/* ===== CONTRAINDICATIONS ===== */
+.contraindications {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--ghost);
+    background: rgba(253, 251, 247, 0.03);
+    text-align: left;
+}
+
+.contra-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--signal);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.contraindications p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: rgba(253, 251, 247, 0.7);
+    margin: 0;
+}
+
+/* ===== MECHANISM ===== */
+.mechanism-text {
+    font-size: 1.05rem;
+    line-height: 2;
+    color: rgba(253, 251, 247, 0.85);
+    max-width: 800px;
+}
+
+/* ===== 3-STEP PROCESS ===== */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.process-step {
+    padding: 2rem;
+    border: 1px solid var(--ghost);
+    background: rgba(253, 251, 247, 0.02);
+    text-align: center;
+    transition: var(--flow);
+}
+
+.process-step:hover {
+    background: rgba(253, 251, 247, 0.05);
+    border-color: var(--signal);
+}
+
+.process-step h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--signal);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.process-step p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(253, 251, 247, 0.8);
+}
+
+/* ===== PRACTITIONER'S VOW ===== */
+.vow-text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2;
+    color: rgba(253, 251, 247, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    border-left: none;
+    padding: 0;
+}
+
+/* ===== FAQS ===== */
+.faq-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    padding: 1.5rem;
+    border: 1px solid var(--ghost);
+    background: rgba(253, 251, 247, 0.02);
+    transition: var(--flow);
+}
+
+.faq-item:hover {
+    border-color: var(--signal);
+}
+
+.faq-question {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--paper);
+    margin-bottom: 0.8rem;
+}
+
+.faq-answer {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(253, 251, 247, 0.75);
+}
+
+/* ===== LEXICON ===== */
+.lexicon-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.lexicon-item {
+    padding: 1.5rem;
+    border-top: 2px solid var(--signal);
+    background: rgba(253, 251, 247, 0.02);
+}
+
+.lexicon-term {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--signal);
+    margin-bottom: 0.8rem;
+}
+
+.lexicon-def {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: rgba(253, 251, 247, 0.7);
+}
+
+/* ===== TRY THIS NOW ===== */
+.try-this-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.try-instruction {
+    font-size: 1.05rem;
+    line-height: 2;
+    color: rgba(253, 251, 247, 0.85);
+}
+
+.breath-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.timer-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--signal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.timer-circle.breathing-in::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    background: var(--ghost);
+    animation: breatheIn 5s ease-in-out;
+}
+
+.timer-circle.breathing-out::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    background: var(--ghost);
+    animation: breatheOut 5s ease-in-out;
+}
+
+@keyframes breatheIn {
+    from { transform: scale(0.3); opacity: 0.3; }
+    to { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes breatheOut {
+    from { transform: scale(1); opacity: 0.8; }
+    to { transform: scale(0.3); opacity: 0.3; }
+}
+
+.timer-text {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: var(--paper);
+    z-index: 1;
+}
+
+.timer-btn {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 1px solid var(--signal);
+    color: var(--signal);
+    cursor: pointer;
+    transition: var(--flow);
+}
+
+.timer-btn:hover {
+    background: var(--signal);
+    color: var(--ink);
+}
+
+/* ===== DYNAMIC CTA ===== */
+.cta-block {
+    text-align: center;
+    padding: 4rem 2rem;
+    border: 1px solid var(--ghost);
+    background: linear-gradient(135deg, rgba(212, 163, 115, 0.08), transparent);
+}
+
+.cta-heading {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--paper);
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+}
+
+.cta-subtext {
+    font-size: 1rem;
+    color: rgba(253, 251, 247, 0.7);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    background: var(--signal);
+    color: var(--ink);
+    text-decoration: none;
+    transition: var(--flow);
+}
+
+.cta-button:hover {
+    background: var(--paper);
+    color: var(--ink);
+    transform: translateY(-2px);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
     .sacred-grid,
@@ -644,6 +917,16 @@ body {
 
     .scent-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-steps,
+    .lexicon-list {
+        grid-template-columns: 1fr;
+    }
+
+    .try-this-content {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 }
 

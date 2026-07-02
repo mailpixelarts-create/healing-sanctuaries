@@ -62,10 +62,10 @@ button { cursor: pointer; font-family: inherit; }
 .chakra-wheel.open {
   pointer-events: auto;
   opacity: 1;
-  width: 280px;
-  height: 280px;
-  margin-left: -140px;
-  margin-top: -140px;
+  width: 320px;
+  height: 320px;
+  margin-left: -160px;
+  margin-top: -160px;
   transition: opacity 0.4s var(--ease);
 }
 
@@ -86,8 +86,8 @@ button { cursor: pointer; font-family: inherit; }
   font-style: italic;
   font-size: 0.85rem;
   transform: translate(
-    calc(cos(var(--angle)) * 100px),
-    calc(sin(var(--angle)) * 100px)
+    calc(cos(var(--angle)) * 120px),
+    calc(sin(var(--angle)) * 120px)
   );
   opacity: 0;
   transition: transform 0.6s var(--ease), opacity 0.4s var(--ease), background 0.3s;
@@ -96,18 +96,20 @@ button { cursor: pointer; font-family: inherit; }
   opacity: 1;
 }
 .chakra-wheel.open .chakra-petal:nth-child(1) { transition-delay: 0.05s; }
-.chakra-wheel.open .chakra-petal:nth-child(2) { transition-delay: 0.1s; }
-.chakra-wheel.open .chakra-petal:nth-child(3) { transition-delay: 0.15s; }
-.chakra-wheel.open .chakra-petal:nth-child(4) { transition-delay: 0.2s; }
-.chakra-wheel.open .chakra-petal:nth-child(5) { transition-delay: 0.25s; }
-.chakra-wheel.open .chakra-petal:nth-child(6) { transition-delay: 0.3s; }
-.chakra-wheel.open .chakra-petal:nth-child(7) { transition-delay: 0.35s; }
-.chakra-wheel.open .chakra-petal:nth-child(8) { transition-delay: 0.4s; }
+.chakra-wheel.open .chakra-petal:nth-child(2) { transition-delay: 0.08s; }
+.chakra-wheel.open .chakra-petal:nth-child(3) { transition-delay: 0.11s; }
+.chakra-wheel.open .chakra-petal:nth-child(4) { transition-delay: 0.14s; }
+.chakra-wheel.open .chakra-petal:nth-child(5) { transition-delay: 0.17s; }
+.chakra-wheel.open .chakra-petal:nth-child(6) { transition-delay: 0.2s; }
+.chakra-wheel.open .chakra-petal:nth-child(7) { transition-delay: 0.23s; }
+.chakra-wheel.open .chakra-petal:nth-child(8) { transition-delay: 0.26s; }
+.chakra-wheel.open .chakra-petal:nth-child(9) { transition-delay: 0.29s; }
+.chakra-wheel.open .chakra-petal:nth-child(10) { transition-delay: 0.32s; }
 .chakra-petal:hover {
   background: var(--signal);
   transform: translate(
-    calc(cos(var(--angle)) * 100px),
-    calc(sin(var(--angle)) * 100px)
+    calc(cos(var(--angle)) * 120px),
+    calc(sin(var(--angle)) * 120px)
   ) scale(1.15);
 }
 .chakra-petal::after {
@@ -634,7 +636,137 @@ button { cursor: pointer; font-family: inherit; }
   opacity: 0.04;
 }
 
+/* ─── Mechanism ─── */
+.mechanism-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  max-width: 800px;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+/* ─── 3-Step Process ─── */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.process-step {
+  padding: 2rem;
+  background: var(--ghost);
+  border: 1px solid rgba(43,24,16,0.06);
+  position: relative;
+}
+.process-label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--signal);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.process-step p {
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* ─── Practitioner's Vow ─── */
+.vow {
+  padding: 10rem 2rem;
+  text-align: center;
+}
+.vow-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--ink);
+  opacity: 0.9;
+  border: none;
+  padding: 0;
+}
+
+/* ─── FAQs ─── */
+.faq-list {
+  display: grid;
+  gap: 2rem;
+  max-width: 700px;
+}
+.faq-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(43,24,16,0.08);
+}
+.faq-q {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+.faq-a {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+/* ─── Lexicon ─── */
+.lexicon-grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 600px;
+}
+.lexicon-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(43,24,16,0.06);
+}
+.lexicon-term {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--signal);
+  white-space: nowrap;
+}
+.lexicon-dash {
+  opacity: 0.3;
+}
+.lexicon-def {
+  opacity: 0.8;
+}
+
+/* ─── Try This Now ─── */
+.try-now-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.7;
+  max-width: 700px;
+  opacity: 0.85;
+}
+
+/* ─── Dynamic CTA ─── */
+.cta-centered {
+  text-align: center;
+}
+.cta-large {
+  font-size: 1rem;
+  padding: 1.2rem 3.5rem;
+}
+
 /* ─── Footer ─── */
+.footer-contraindication {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
 .site-footer {
   text-align: center;
   padding: 3rem 2rem;
@@ -649,7 +781,9 @@ button { cursor: pointer; font-family: inherit; }
   .art-cards { grid-template-columns: 1fr; }
   .flow-layout { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
   .section { padding: 5rem 1.5rem; }
+  .vow { padding: 6rem 1.5rem; }
 }
 @media (max-width: 600px) {
   .pose-grid { grid-template-columns: 1fr; }
