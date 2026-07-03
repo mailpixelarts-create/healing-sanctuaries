@@ -3,353 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breathwork | Dr. Aira Vasiliev</title>
+    <title>Breathwork — The Labyrinth | Soren Voidwalker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.scss">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Breathwork - Dr. Aira Vasiliev","description":"The Breath Is the Bridge","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
+    {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Breathwork — The Labyrinth | Soren Voidwalker","description":"The Breath Is the Bridge. Clinical-precision breathwork for nervous system regulation.","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
     </script>
 </head>
 <body>
-    <div class="hero">
-        <div class="hero-content">
-            <div class="counter-container">
-                <div class="counter-label">BREATHS PER DAY</div>
-                <div class="counter" id="breathCounter">0</div>
-                <div class="counter-subtext">21,000 / day. Each one matters.</div>
-            </div>
-            <div class="hero-tagline">"The Breath Is the Bridge"</div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <div class="scroll-text">SCROLL</div>
-        </div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader__cursor">_</div>
+        <div class="loader__text">initializing breath protocol...</div>
     </div>
 
-    <section class="section about" id="about">
-        <div class="section-container">
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav__brand">05-labyrinth</div>
+        <ul class="nav__links">
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#mechanism" class="nav__link">Mechanism</a></li>
+            <li><a href="#services" class="nav__link">Services</a></li>
+            <li><a href="#process" class="nav__link">Process</a></li>
+            <li><a href="#pacer" class="nav__link">Pacer</a></li>
+            <li><a href="#faq" class="nav__link">FAQ</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav__cta">Book Session</a>
+        <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">MENU</button>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-label">breathwork — clinical precision</div>
+        <h1 class="hero-title">
+            <span class="title-line">THE</span>
+            <span class="title-line accent">LABYRINTH</span>
+        </h1>
+        <p class="hero-subtitle">"The Breath Is the Bridge"</p>
+        <div class="counter-container">
+            <div class="counter-label">BREATHS PER DAY</div>
+            <div class="counter" id="breathCounter">0</div>
+            <div class="counter-subtext">21,000 / day. Each one matters.</div>
+        </div>
+        <div class="hero-tagline">21,000 reasons to breathe consciously</div>
+        <div class="hero-scroll">
+            <div class="hero-scroll__line"></div>
+            <div class="hero-scroll__text">SCROLL</div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="section-inner">
             <div class="section-header">
-                <div class="section-number">01</div>
-                <div class="section-title">ABOUT</div>
+                <span class="section-number">01</span>
+                <h2 class="section-title">ABOUT</h2>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-lead">Dr. Aira Vasiliev</p>
-                    <p>Berlin, Germany</p>
-                    <p>42 Breath Lane, 10115</p>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3 class="about-lead">Soren Voidwalker</h3>
+                    <p class="about-location">Reykjavik, Iceland &mdash; 42 Frost Lane, 101</p>
                     <div class="about-bio">
-                        <p>Dr. Aira combines Wim Hof method with traditional pranayama. Her approach is clinical, precise, and transformative.</p>
-                        <p>With 15 years of experience in respiratory therapy and Eastern healing traditions, she has developed a protocol that bridges modern science with ancient wisdom.</p>
-                        <div class="origin-story">
-                            <p class="origin-story-text">"Dr. Aira Vasiliev was an anesthesiologist who noticed that the breathing patterns she used to induce sedation could also be reversedâ€"to awaken. She now teaches conscious breathing as a medical intervention."</p>
-                        </div>
+                        <p>Soren was a free-diving champion who could hold his breath for six minutes underwater. He realised that the same physiological panic he felt in the deep ocean &mdash; the build-up of CO&#8322;, the desperate urge to surface &mdash; was exactly what his clients felt during anxiety attacks.</p>
+                        <p>He now teaches them to sit <em>inside</em> that panic and watch it dissolve. He has never lost a client to a blackout. He has lost many to tears of relief.</p>
+                        <p>With 18 years of experience in respiratory therapy, freediving competition, and somatic healing, Soren bridges clinical science with primal breath wisdom. His protocol is precise, measurable, and transformative.</p>
+                    </div>
+                    <div class="origin-story">
+                        <div class="origin-story-label">Origin Story</div>
+                        <p class="origin-story-text">"Soren Voidwalker spent a decade in the crushing silence of the deep ocean before he understood that the panic of drowning and the panic of a panic attack are the same mechanism &mdash; a body screaming for air while the mind refuses to let go. He teaches you to release."</p>
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="image-frame"></div>
+                    <div class="about-image-frame"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section mechanism" id="mechanism">
-        <div class="section-container">
+    <!-- Mechanism -->
+    <section id="mechanism" class="section">
+        <div class="section-inner">
             <div class="section-header">
-                <div class="section-number">02</div>
-                <div class="section-title">THE MECHANISM</div>
+                <span class="section-number">02</span>
+                <h2 class="section-title">THE MECHANISM</h2>
             </div>
             <div class="mechanism-content">
                 <div class="mechanism-lead">THE CHEMICAL SWITCH</div>
-                <p class="mechanism-text">Extended exhale (4-7-8) increases alveolar CO2, which vasodilates the brain's microcapillaries, delivering 40% more oxygen to the prefrontal cortex. It is a chemical switch.</p>
+                <p class="mechanism-text">Extended exhale (4-7-8) increases alveolar CO&#8322;, which vasodilates the brain's microcapillaries, delivering 40% more oxygen to the prefrontal cortex. It also stimulates the vagus nerve, triggering the parasympathetic 'rest and digest' response. It is a chemical switch, not a psychological trick.</p>
                 <div class="mechanism-stat">
-                    <div class="stat-number">40%</div>
-                    <div class="stat-label">MORE OXYGEN TO THE PREFRONTAL CORTEX</div>
+                    <div class="mechanism-stat-number">40%</div>
+                    <div class="mechanism-stat-label">MORE OXYGEN TO THE PREFRONTAL CORTEX</div>
+                </div>
+                <div class="mechanism-details">
+                    <div class="mechanism-detail">
+                        <span class="mechanism-detail-label">Vagus Nerve</span>
+                        <span class="mechanism-detail-desc">The longest cranial nerve, running from brainstem to gut. Extended exhale stimulates it directly, activating the parasympathetic 'rest and digest' response. Heart rate drops. Blood pressure lowers. The body stands down.</span>
+                    </div>
+                    <div class="mechanism-detail">
+                        <span class="mechanism-detail-label">Alveolar CO&#8322;</span>
+                        <span class="mechanism-detail-desc">Holding the breath and extending the exhale builds carbon dioxide in the alveoli. This CO&#8322; is the signal that triggers vasodilation &mdash; the widening of blood vessels. More CO&#8322; means more blood flow to the brain.</span>
+                    </div>
+                    <div class="mechanism-detail">
+                        <span class="mechanism-detail-label">Prefrontal Cortex</span>
+                        <span class="mechanism-detail-desc">The brain's executive centre &mdash; decision-making, impulse control, emotional regulation. When it receives 40% more oxygen, anxiety cannot sustain itself. You think clearly. You choose instead of react.</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section process" id="process">
-        <div class="section-container">
+    <!-- Services -->
+    <section id="services" class="section">
+        <div class="section-inner">
             <div class="section-header">
-                <div class="section-number">03</div>
-                <div class="section-title">THE 3-STEP PROCESS</div>
+                <span class="section-number">03</span>
+                <h2 class="section-title">SERVICES</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-number">01</div>
+                    <h3 class="service-card-title">4-7-8 Calibration</h3>
+                    <p class="service-card-desc">The signature protocol. Inhale 4, hold 7, exhale 8. A complete nervous system reset in 19 seconds. Individual tuning for your specific respiratory baseline.</p>
+                    <div class="service-card-price">&euro;120 / session</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-number">02</div>
+                    <h3 class="service-card-title">Holotropic Journey</h3>
+                    <p class="service-card-desc">Accelerated connected breathing to access non-ordinary states. The subconscious speaks through breath alone. Two facilitators present. 90 minutes of continuous practice.</p>
+                    <div class="service-card-price">&euro;180 / session</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-number">03</div>
+                    <h3 class="service-card-title">Breath Architecture</h3>
+                    <p class="service-card-desc">A 6-week program designing your personal breathing protocol. Assessment, calibration, progressive difficulty, integration. The blueprint for a lifetime of conscious breath.</p>
+                    <div class="service-card-price">&euro;960 / program</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">THE 3-STEP PROCESS</h2>
             </div>
             <div class="process-steps">
                 <div class="process-step">
-                    <div class="step-label">BEFORE</div>
-                    <div class="step-detail">Empty stomach.</div>
+                    <div class="process-step-label">BEFORE</div>
+                    <p class="process-step-detail">Empty stomach (2 hours). No caffeine. Medical history review. Breathing pattern analysis. Baseline measurements of respiratory rate, HRV, and CO&#8322; tolerance.</p>
                 </div>
                 <div class="process-step">
-                    <div class="step-label">DURING</div>
-                    <div class="step-detail">3 rounds of holotropic breathing.</div>
+                    <div class="process-step-label">DURING</div>
+                    <p class="process-step-detail">3 rounds of holotropic breathing or 4-7-8 calibration. Real-time correction. Progressive difficulty. Tetany (hand cramps) is normal &mdash; it's alkalosis from controlled hyperventilation.</p>
                 </div>
                 <div class="process-step">
-                    <div class="step-label">AFTER</div>
-                    <div class="step-detail">Tetany (hand cramps) is normalâ€”it's alkalosis from hyperventilation.</div>
+                    <div class="process-step-label">AFTER</div>
+                    <p class="process-step-detail">Integration period. Home practice protocol. Follow-up assessment. Long-term maintenance plan. Your breath becomes your medicine cabinet &mdash; no prescription needed.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section vow" id="vow">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-number">04</div>
-                <div class="section-title">PRACTITIONER'S VOW</div>
-            </div>
-            <div class="vow-content">
-                <blockquote class="vow-quote">
-                    "I do not breathe for you. I breathe with you. The breath is the oldest medicineâ€”you have been administering it since birth. I simply remind you to do it consciously."
-                </blockquote>
-            </div>
+    <!-- Vow -->
+    <section id="vow" class="section vow">
+        <div class="section-inner">
+            <blockquote class="vow-quote">
+                I do not breathe for you. I breathe with you. The breath is the oldest medicine &mdash; you have been administering it since birth. I simply remind you to do it consciously.
+            </blockquote>
         </div>
     </section>
 
-    <section class="section try-now" id="try-now">
-        <div class="section-container">
+    <!-- 4-7-8 Pacer -->
+    <section id="pacer" class="section section--dark pacer">
+        <div class="section-inner">
             <div class="section-header">
-                <div class="section-number">05</div>
-                <div class="section-title">TRY THIS NOW</div>
-            </div>
-            <div class="try-content">
-                <div class="try-instruction">
-                    <div class="try-label">BOX BREATHING</div>
-                    <div class="try-sequence">
-                        <div class="try-step"><span class="try-count">4</span> IN</div>
-                        <div class="try-step"><span class="try-count">4</span> HOLD</div>
-                        <div class="try-step"><span class="try-count">4</span> OUT</div>
-                        <div class="try-step"><span class="try-count">4</span> HOLD</div>
-                    </div>
-                    <p class="try-text">Repeat 10x. This is 'box breathing' for the Navy SEALs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section faq" id="faq">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-number">06</div>
-                <div class="section-title">FAQs</div>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">Q: "I feel dizzy."</div>
-                    <div class="faq-answer">A: That is hypoxia. Slow down.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Q: "Can I do this alone?"</div>
-                    <div class="faq-answer">A: No. Always have a guide.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Q: "Will it give me a trip?"</div>
-                    <div class="faq-answer">A: No. It just removes the filter.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section lexicon" id="lexicon">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-number">07</div>
-                <div class="section-title">LEXICON</div>
-            </div>
-            <div class="lexicon-grid">
-                <div class="lexicon-item">
-                    <div class="lexicon-term">Hypocapnia</div>
-                    <div class="lexicon-definition">Low CO2 (causes tingling).</div>
-                </div>
-                <div class="lexicon-item">
-                    <div class="lexicon-term">Apnea</div>
-                    <div class="lexicon-definition">Breath retention.</div>
-                </div>
-                <div class="lexicon-item">
-                    <div class="lexicon-term">Kumbhaka</div>
-                    <div class="lexicon-definition">The pause after inhale.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section sacred-art" id="sacred-art">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-number">08</div>
-                <div class="section-title">SACRED ART</div>
-            </div>
-            <div class="art-grid">
-                <div class="art-item">
-                    <div class="art-number">01</div>
-                    <div class="art-content">
-                        <div class="art-title">4-7-8 Technique</div>
-                        <div class="art-description">Inhale 4 seconds. Hold 7 seconds. Exhale 8 seconds. The natural tranquilizer for the nervous system.</div>
-                    </div>
-                </div>
-                <div class="art-item">
-                    <div class="art-number">02</div>
-                    <div class="art-content">
-                        <div class="art-title">Holotropic Breathwork</div>
-                        <div class="art-description">Accelerated breathing to enter non-ordinary states of consciousness. Access the subconscious through breath alone.</div>
-                    </div>
-                </div>
-                <div class="art-item">
-                    <div class="art-number">03</div>
-                    <div class="art-content">
-                        <div class="art-title">Box Breathing</div>
-                        <div class="art-description">Equal counts of inhale, hold, exhale, hold. Four sides of a square. Military-grade stress regulation.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section philosophy" id="philosophy">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-number">09</div>
-                <div class="section-title">PHILOSOPHY</div>
-            </div>
-            <div class="philosophy-grid">
-                <div class="philosophy-pillar">
-                    <div class="pillar-number">I</div>
-                    <div class="pillar-content">
-                        <div class="pillar-title">Breath Is Medicine</div>
-                        <p>The most powerful pharmaceutical is already inside you. No prescription needed. No side effects. Just practice.</p>
-                    </div>
-                </div>
-                <div class="philosophy-pillar">
-                    <div class="pillar-number">II</div>
-                    <div class="pillar-content">
-                        <div class="pillar-title">Rhythm Over Force</div>
-                        <p>Consistency creates transformation. Not the occasional deep breath, but the daily devotion to respiratory discipline.</p>
-                    </div>
-                </div>
-                <div class="philosophy-pillar">
-                    <div class="pillar-number">III</div>
-                    <div class="pillar-content">
-                        <div class="pillar-title">The Body Remembers</div>
-                        <p>Trauma lives in the breath. Shallow. Restricted. Held. Release the breath, release the past.</p>
-                    </div>
-                </div>
-                <div class="philosophy-pillar">
-                    <div class="pillar-number">IV</div>
-                    <div class="pillar-content">
-                        <div class="pillar-title">Cold Truth</div>
-                        <p>Discomfort is the doorway. The breath prepares the body to face what the mind avoids.</p>
-                    </div>
-                </div>
-                <div class="philosophy-pillar">
-                    <div class="pillar-number">V</div>
-                    <div class="pillar-content">
-                        <div class="pillar-title">Return to Source</div>
-                        <p>Every breath is a return to the beginning. Every exhale, a letting go. The cycle is the ceremony.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section testimonials" id="testimonials">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-number">10</div>
-                <div class="section-title">TESTIMONIALS</div>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-item">
-                    <div class="testimonial-number">01</div>
-                    <div class="testimonial-content">
-                        <p class="testimonial-quote">"I came with panic attacks. I left with a tool that saved my life. Dr. Aira didn't just teach me to breatheâ€”she taught me to live."</p>
-                        <div class="testimonial-author">
-                            <div class="author-name">MARCUS K.</div>
-                            <div class="author-detail">Berlin, Germany</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-number">02</div>
-                    <div class="testimonial-content">
-                        <p class="testimonial-quote">"Three sessions. That's all it took to break a 20-year pattern of insomnia. The 4-7-8 technique is now my nightly ritual."</p>
-                        <div class="testimonial-author">
-                            <div class="author-name">ELENA S.</div>
-                            <div class="author-detail">Munich, Germany</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-number">03</div>
-                    <div class="testimonial-content">
-                        <p class="testimonial-quote">"As a former athlete, I thought I knew my body. Dr. Aira showed me I was only using half my capacity. My performance doubled."</p>
-                        <div class="testimonial-author">
-                            <div class="author-name">JANET W.</div>
-                            <div class="author-detail">London, UK</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section journey" id="journey">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-number">11</div>
-                <div class="section-title">JOURNEY</div>
-            </div>
-            <div class="journey-content">
-                <div class="journey-lead">WHAT TO EXPECT</div>
-                <div class="journey-steps">
-                    <div class="journey-step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <div class="step-title">Assessment</div>
-                            <p>Medical history review. Breathing pattern analysis. Baseline measurements.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <div class="step-title">Protocol Design</div>
-                            <p>Customized breathing sequence. Specific timing. Targeted outcomes.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <div class="step-title">Practice</div>
-                            <p>Guided sessions. Real-time correction. Progressive difficulty.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <div class="step-title">Integration</div>
-                            <p>Home practice protocol. Follow-up assessment. Long-term maintenance.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section pacer" id="pacer">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-number">12</div>
-                <div class="section-title">4-7-8 PACER</div>
+                <span class="section-number">05</span>
+                <h2 class="section-title">4-7-8 PACER</h2>
             </div>
             <div class="pacer-container">
                 <div class="pacer-instruction" id="pacerInstruction">TAP TO BEGIN</div>
                 <div class="pacer-shape" id="pacerShape"></div>
                 <div class="pacer-timer" id="pacerTimer">0.0</div>
                 <div class="pacer-counts">
-                    <span class="count-inhale">INHALE 4</span>
-                    <span class="count-hold">HOLD 7</span>
-                    <span class="count-exhale">EXHALE 8</span>
+                    <span class="count-inhale" id="countInhale">INHALE 4</span>
+                    <span class="count-hold" id="countHold">HOLD 7</span>
+                    <span class="count-exhale" id="countExhale">EXHALE 8</span>
                 </div>
                 <button class="pacer-toggle" id="pacerToggle">START</button>
                 <div class="glow-meter">
@@ -360,63 +204,199 @@
         </div>
     </section>
 
-    <!-- Live Events -->
-    <section class="section events" id="events">
-        <div class="section-container">
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+        <div class="section-inner">
             <div class="section-header">
-                <div class="section-number">13</div>
-                <div class="section-title">LIVE EVENTS</div>
+                <span class="section-number">06</span>
+                <h2 class="section-title">TESTIMONIALS</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-number">01</div>
+                    <div>
+                        <p class="testimonial-quote">"I came with panic attacks. I left with a tool that saved my life. Soren didn't just teach me to breathe &mdash; he taught me to live. Three months in, my therapist noticed the shift before I did."</p>
+                        <div class="testimonial-author-name">MARCUS K.</div>
+                        <div class="testimonial-author-detail">Berlin, Germany</div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-number">02</div>
+                    <div>
+                        <p class="testimonial-quote">"Three sessions. That's all it took to break a 20-year pattern of insomnia. The 4-7-8 technique is now my nightly ritual. I haven't needed sleeping pills in four months."</p>
+                        <div class="testimonial-author-detail">ELENA S. &mdash; Munich, Germany</div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-number">03</div>
+                    <div>
+                        <p class="testimonial-quote">"As a former athlete, I thought I knew my body. Soren showed me I was only using half my capacity. My recovery time halved. My VO&#8322;max increased. The breath is the missing supplement."</p>
+                        <div class="testimonial-author-name">JANET W.</div>
+                        <div class="testimonial-author-detail">London, UK</div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-number">04</div>
+                    <div>
+                        <p class="testimonial-quote">"I was sceptical. I am a physician. But after one session, my cortisol levels dropped 28%. I now refer patients to Soren. The data speaks louder than my initial doubt."</p>
+                        <div class="testimonial-author-name">DR. ANNA BERG</div>
+                        <div class="testimonial-author-detail">Copenhagen, Denmark</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">07</span>
+                <h2 class="section-title">FAQs</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>I feel dizzy and my hands tingle. Is this normal?</summary>
+                    <div class="faq-item__answer">Yes. This is hypocapnia &mdash; low CO&#8322; in your blood. The tingling is alkalosis. It is not dangerous. It is just your body's pH shifting. If the dizziness becomes overwhelming, slow down and breathe into a paper bag or your hands. This will increase CO&#8322; and normalise the sensation. It is a sign the protocol is working.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I do breathwork alone?</summary>
+                    <div class="faq-item__answer">We strongly advise against it for Holotropic or hyperventilation techniques. Without a guide, you can enter a dissociative state or panic. The Wim Hof method is safer for solo practice, but even then, never do it in water (shower, bath, pool). Blackout risk is real. Always have a spotter. The 4-7-8 technique is safe for daily solo practice once learned.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Will breathwork give me a trip or hallucination?</summary>
+                    <div class="faq-item__answer">No. It is not psychedelic. It can cause 'non-ordinary' states &mdash; where old memories surface, or you see colours, or you feel intense emotion. But you remain conscious and in control. You are just clearing the filter. The 'trip' is your own subconscious &mdash; not a drug. Think of it as opening a window in a stuffy room.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>How does extended exhale reduce anxiety?</summary>
+                    <div class="faq-item__answer">The 4-7-8 breath (inhale 4, hold 7, exhale 8) increases alveolar CO&#8322;, which vasodilates the brain's microcapillaries, delivering 40% more oxygen to the prefrontal cortex. It also stimulates the vagus nerve, triggering the parasympathetic 'rest and digest' response. It is a chemical switch, not a psychological trick. The numbers don't lie.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I do breathwork if I have high blood pressure?</summary>
+                    <div class="faq-item__answer">Yes, but with caution. Avoid extended breath holds (Kumbhaka). Stick to slow, rhythmic breathing without retention. Always consult your cardiologist. Breathwork lowers blood pressure in most &mdash; but retention can spike it temporarily. We modify the protocol for hypertension patients. Safety is non-negotiable.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Why do I cry so much during breathwork?</summary>
+                    <div class="faq-item__answer">Breathing deeply moves the diaphragm, which massages the solar plexus &mdash; a major nerve plexus that stores suppressed emotion. When you unlock that muscle, you unlock the memory held in the tissue. Tears are the release valve. Do not hold them back. They are not sadness; they are liberation. The body remembers what the mind has forgotten.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">08</span>
+                <h2 class="section-title">LIVE EVENTS</h2>
             </div>
             <div class="events-grid">
-                <div class="event-item">
-                    <span class="event-name">4-7-8 Masterclass</span>
-                    <span class="event-detail">Monthly</span>
+                <div class="event-card">
+                    <div class="event-card-date">Every Wednesday &mdash; 7 PM GMT</div>
+                    <h3 class="event-card-title">Weekly Breathwork Circle</h3>
+                    <p class="event-card-desc">A 45-minute guided session on the 3-pillar method: breathing, cold exposure, commitment. We do 3 rounds of 30 power breaths, followed by a 1.5-minute retention, followed by a 15-second recovery breath. Soren guides live. No experience required. The room holds 20. The breath holds everything.</p>
                 </div>
-                <div class="event-item">
-                    <span class="event-name">Holotropic Weekend</span>
-                    <span class="event-detail">Quarterly</span>
-                </div>
-                <div class="event-item">
-                    <span class="event-name">Breathwork Training</span>
-                    <span class="event-detail">Bi-annual</span>
+                <div class="event-card">
+                    <div class="event-card-date">New Moon &mdash; Monthly, 6 PM</div>
+                    <h3 class="event-card-title">Holotropic Deep Journey</h3>
+                    <p class="event-card-desc">A 90-minute deep holotropic breathwork journey with two facilitators present for emotional support. Continuous connected breathing to the 5.5-second wave. This is not a class; it is a ritual. We do not talk during the breathing. We hold space. Afterward, we sit in a sharing circle. Bring a journal. Bring a tissue. Leave lighter.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gift a Session -->
-    <section class="section gift" id="gift">
-        <div class="section-container">
+    <!-- Gift -->
+    <section id="gift" class="section gift">
+        <div class="section-inner">
             <div class="section-header">
-                <div class="section-number">14</div>
-                <div class="section-title">GIFT A SANCTUARY</div>
+                <span class="section-number">09</span>
+                <h2 class="section-title">GIFT A SANCTUARY</h2>
             </div>
-            <p class="gift-text">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
+            <p class="gift-desc">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace. No awkward conversations. No 'you should try this.' Just a quiet invitation sent to their inbox, with no pressure to respond. The gift does not expire. It waits patiently, like a lamp left on in a hallway.</p>
+            <a href="#contact" class="btn btn--filled">Send a Sanctuary</a>
         </div>
     </section>
 
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-number">10</span>
+                <h2 class="section-title">CONTACT</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="healer-name">Soren Voidwalker</h3>
+                    <p class="address">42 Frost Lane<br>Reykjavik, Iceland 101</p>
+                    <p class="schedule">Sessions: Tuesday, Thursday, Saturday<br>10:00 &mdash; 18:00 GMT</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Reach Out</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <div class="footer-name">DR. AIRA VASILIEV</div>
-                <div class="footer-address">42 Breath Lane, Berlin, Germany 10115</div>
-                <div class="footer-tagline">"The Breath Is the Bridge"</div>
+        <div class="footer-inner">
+            <pre class="footer-ascii">
++==========================================+
+|  THE LABYRINTH &mdash; BREATHWORK SANCTUARY  |
+|  "The Breath Is the Bridge"             |
++==========================================+
+            </pre>
+
+            <div class="footer-quote">
+                <p class="footer-quote-text">"The wound is the place where the Light enters you."</p>
+                <p class="footer-quote-author">&mdash; Rumi</p>
             </div>
-            <div class="footer-cta">
-                <div class="cta-label">TAKE YOUR FIRST CONSCIOUS BREATH</div>
-                <a href="mailto:breathe@dr-vasiliev.de" class="cta-link cta-dynamic">breathe@dr-vasiliev.de</a>
+
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-name">SOREN VOIDWALKER</div>
+                    <div class="footer-address">42 Frost Lane, Reykjavik, Iceland 101</div>
+                    <div class="footer-tagline">"The Breath Is the Bridge"</div>
+                </div>
+                <div class="footer-cta">
+                    <div class="cta-label">TAKE YOUR FIRST CONSCIOUS BREATH</div>
+                    <a href="mailto:breathe@thelabyrinth.is" class="cta-link">breathe@thelabyrinth.is</a>
+                </div>
+            </div>
+
+            <div class="footer-contraindications">
+                <div class="footer-contraindications-label">CONTRAINDICATIONS</div>
+                <p>Not recommended during pregnancy, uncontrolled cardiovascular conditions, epilepsy, or recent surgery. Always practice with a trained guide. Never practice while driving or operating machinery. If you feel sharp pain or severe dizziness, stop immediately. Consult your physician before beginning any breathwork program.</p>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">&copy; 2026 THE LABYRINTH<span class="footer-cursor"></span></div>
+                <div class="footer-credit">Made with love by <a href="https://empathystudio.com">Empathy Studio</a> &middot; <a href="https://normanjames.com">Norman James</a></div>
             </div>
         </div>
-        <div class="footer-contraindications">
-            <div class="contraindications-label">CONTRAINDICATIONS</div>
-            <p>Not recommended during pregnancy, cardiovascular conditions, or epilepsy. Always practice with a trained guide. Never practice while driving.</p>
-        </div>
-        <div class="footer-line"></div>
-        <div class="footer-copyright">Â© 2026 BREATHWORK BERLIN</div>
     </footer>
 
+    <!-- Glow Overlay -->
     <div class="glow-overlay" id="glowOverlay"></div>
 
-    <script src="script.js"></script>
-<script src="meta-layer.js"></script></body>
+    <script type="module" src="script.js"></script>
+    <script src="meta-layer.js"></script>
+</body>
 </html>

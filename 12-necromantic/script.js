@@ -1,4 +1,13 @@
-// ==================== PERLIN NOISE ====================
+// ============================================
+// NECROMANTIC — Shamanic Journeying
+// GSAP-Powered Script with Drum Beat Interaction
+// ============================================
+
+import { gsap, ScrollTrigger } from '../src/utils/motion.js';
+
+gsap.registerPlugin(ScrollTrigger);
+
+// ==================== PERLIN NOISE CANVAS ====================
 class PerlinNoise {
   constructor(canvas) {
     this.canvas = canvas;
@@ -90,7 +99,10 @@ class PerlinNoise {
     });
     this.canvas.addEventListener('click', (e) => {
       for (let i = 0; i < 3; i++) {
-        this.addRipple(e.clientX + (Math.random() - 0.5) * 40, e.clientY + (Math.random() - 0.5) * 40);
+        this.addRipple(
+          e.clientX + (Math.random() - 0.5) * 40,
+          e.clientY + (Math.random() - 0.5) * 40
+        );
       }
     });
     this.animate();
@@ -134,7 +146,8 @@ class PerlinNoise {
       });
 
       const opacity = p.opacity * (0.5 + timeScale * 0.5);
-      const isNearMouse = this.mouse.active && Math.hypot(p.x - this.mouse.x, p.y - this.mouse.y) < 150;
+      const isNearMouse = this.mouse.active && 
+        Math.hypot(p.x - this.mouse.x, p.y - this.mouse.y) < 150;
 
       if (isNearMouse) {
         this.ctx.fillStyle = `rgba(156,56,66,${opacity * 1.5})`;
@@ -161,12 +174,13 @@ class PerlinNoise {
   }
 }
 
-// ==================== DRUM BEAT ====================
+// ==================== DRUM BEAT (Web Audio API) ====================
 class DrumBeat {
   constructor() {
     this.isPlaying = false;
     this.bpm = 120;
     this.audioCtx = null;
+    this.masterGain = null;
     this.beatCallback = null;
   }
 
@@ -182,6 +196,7 @@ class DrumBeat {
 
     const now = time || this.audioCtx.currentTime;
 
+    // Kick oscillator
     const osc = this.audioCtx.createOscillator();
     const gain = this.audioCtx.createGain();
     const filter = this.audioCtx.createBiquadFilter();
@@ -204,6 +219,7 @@ class DrumBeat {
     osc.start(now);
     osc.stop(now + 0.35);
 
+    // Noise burst for attack
     const noise = this.audioCtx.createBufferSource();
     const buffer = this.audioCtx.createBuffer(1, this.audioCtx.sampleRate * 0.1, this.audioCtx.sampleRate);
     const data = buffer.getChannelData(0);
@@ -282,8 +298,11 @@ class DrumBeat {
 
 // ==================== SITE CONTROLLER ====================
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize noise canvas
   const canvas = document.getElementById('noise-canvas');
   const perlin = new PerlinNoise(canvas);
+  
+  // Initialize drum beat
   const drumBeat = new DrumBeat();
   const drumCenter = document.getElementById('drumCenter');
   const drumBeatEl = document.getElementById('drumBeat');
@@ -292,6 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let beatPhase = 0;
 
+  // Drum beat click handler
   drumCenter.addEventListener('click', (e) => {
     e.stopPropagation();
     const newBpm = drumBeat.changeTempo();
@@ -317,7 +337,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Scroll reveal
+  // GSAP Scroll Reveal
+  const revealElements = document.querySelectorAll(
+    '.reveal, .art-card, .pillar, .testimonial-card, .faq-item, .event-card, ' +
+    '.about-stats, .section-label, .healer-name, .about-text, .about-divider, ' +
+    '.contact-address, .contact-cta, .mechanism-content, .process-step, ' +
+    '.vow-content, .gift-content'
+  );
+
+  revealElements.forEach(el => {
+    el.classList.add('reveal');
+  });
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -326,10 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll('.reveal, .art-card, .pillar, .testimonial-card, .journey-step, .about-stats, .section-label, .healer-name, .about-text, .about-divider, .contact-address, .contact-cta, .mechanism-content, .process-step, .vow-content, .faq-item, .lexicon-item, .try-now-content').forEach(el => {
-    el.classList.add('reveal');
-    observer.observe(el);
-  });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   // Active nav tracking
   const navObserver = new IntersectionObserver((entries) => {
@@ -358,45 +386,116 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   });
 
-  // Try This Now Timer
-  const timerBtn = document.getElementById('timerBtn');
-  const timerDisplay = document.getElementById('timerDisplay');
-  let timerInterval = null;
-  let timerRunning = false;
+  // GSAP Hero Animation
+  gsap.from('.hero-tag', {
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    delay: 0.3,
+    ease: 'expo.out'
+  });
 
-  if (timerBtn && timerDisplay) {
-    timerBtn.addEventListener('click', () => {
-      if (timerRunning) {
-        clearInterval(timerInterval);
-        timerBtn.textContent = 'Begin 3-Minute Drift';
-        timerBtn.classList.remove('active');
-        timerDisplay.textContent = '3:00';
-        timerRunning = false;
-        return;
-      }
+  gsap.from('.hero-title', {
+    opacity: 0,
+    y: 40,
+    duration: 1.2,
+    delay: 0.5,
+    ease: 'expo.out'
+  });
 
-      timerRunning = true;
-      timerBtn.textContent = 'End Session';
-      timerBtn.classList.add('active');
-      let seconds = 180;
+  gsap.from('.hero-line', {
+    scaleX: 0,
+    duration: 1,
+    delay: 0.8,
+    ease: 'expo.out'
+  });
 
-      timerInterval = setInterval(() => {
-        seconds--;
-        const mins = Math.floor(seconds / 60);
-        const secs = seconds % 60;
-        timerDisplay.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+  gsap.from('.hero-sub', {
+    opacity: 0,
+    duration: 1,
+    delay: 1,
+    ease: 'expo.out'
+  });
 
-        if (seconds <= 0) {
-          clearInterval(timerInterval);
-          timerBtn.textContent = 'Session Complete';
-          timerBtn.classList.remove('active');
-          timerRunning = false;
-          setTimeout(() => {
-            timerBtn.textContent = 'Begin 3-Minute Drift';
-            timerDisplay.textContent = '3:00';
-          }, 2000);
+  gsap.from('.hero-scroll', {
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    delay: 1.2,
+    ease: 'expo.out'
+  });
+
+  // GSAP Section Reveals
+  gsap.utils.toArray('.section-inner').forEach(section => {
+    const heading = section.querySelector('h2');
+    const label = section.querySelector('.section-label');
+    
+    if (label) {
+      gsap.from(label, {
+        opacity: 0,
+        y: 20,
+        duration: 0.8,
+        ease: 'expo.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%',
+          once: true
         }
-      }, 1000);
+      });
+    }
+    
+    if (heading) {
+      gsap.from(heading, {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        ease: 'expo.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 75%',
+          once: true
+        }
+      });
+    }
+  });
+
+  // GSAP Stagger for cards
+  gsap.utils.toArray('.art-card, .process-step, .faq-item, .event-card').forEach((card, i) => {
+    gsap.from(card, {
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      delay: i * 0.1,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 85%',
+        once: true
+      }
     });
-  }
+  });
+
+  // GSAP Parallax for candle flicker
+  gsap.to('.about::before', {
+    scrollTrigger: {
+      trigger: '.about',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 1
+    }
+  });
+
+  // Candle flicker animation
+  gsap.to('.about', {
+    '--candle-opacity': 0.7,
+    duration: 2,
+    yoyo: true,
+    repeat: -1,
+    ease: 'sine.inOut'
+  });
+
+  // Refresh ScrollTrigger after images load
+  window.addEventListener('load', () => {
+    ScrollTrigger.refresh();
+  });
 });

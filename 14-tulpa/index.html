@@ -1,244 +1,375 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Art Therapy â€” Luna Chromatic</title>
-<link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Art Therapy - Luna Chromatic","description":"Create Is to Heal","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Therapy — Zara Chromatic | Outsider Healing</title>
+  <meta name="description" content="Maximalist art therapy for the unfiltered soul. Create Is to Heal. Neon chaos meets raw expression with Zara Chromatic.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.scss">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Art Therapy - Zara Chromatic","description":"Create Is to Heal","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
+  </script>
 </head>
 <body>
-<!-- Grid Collapse Hero -->
-<section class="hero" id="hero">
-<div class="grid-overlay" id="gridOverlay"></div>
-<canvas class="hero-canvas" id="heroCanvas"></canvas>
-<div class="hero-content" id="heroContent">
-<h1 class="hero-title" id="heroTitle">Create Is to Heal</h1>
-<p class="hero-subtitle">Art Therapy with Luna Chromatic</p>
-</div>
-</section>
 
-<!-- Finger-paint Canvas (persists behind content) -->
-<canvas class="finger-paint" id="fingerPaint"></canvas>
+  <!-- Loading Screen (Glitch Text) -->
+  <div class="loader" id="loader">
+    <p class="loader__text">LOADING...</p>
+    <p class="loader__subtext">The canvas is waiting for your chaos</p>
+  </div>
 
-<!-- About -->
-<section class="section about" id="about">
-<h2 class="section-label">About</h2>
-<div class="section-body">
-<p class="section-intro">Luna combines art therapy with expressionistic techniques, transforming creative chaos into profound healing. Every brushstroke is a release. Every color, a confession.</p>
-<p class="section-intro">"Luna Chromatic was a gallery artist who burned out at 32. During her recovery, she discovered that making art without an audience healed something that making art for critics never could."</p>
-<blockquote class="philosophy-quote">"The canvas doesn't judge. It just holds everything you're afraid to say out loud."</blockquote>
-</div>
-</section>
+  <!-- SVG Filters for Hand-Drawn Effect -->
+  <svg class="filters">
+    <defs>
+      <filter id="hand-drawn">
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="3" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
 
-<!-- The Mechanism -->
-<section class="section mechanism" id="mechanism">
-<h2 class="section-label">The Mechanism</h2>
-<div class="section-body">
-<p class="mechanism-text">Art bypasses the Wernicke's area (language center). It directly accesses the anterior cingulate cortex (emotional regulation) via somatic markersâ€”emotions embedded in proprioceptive memory.</p>
-</div>
-</section>
+  <!-- Finger-paint Canvas (persists behind content) -->
+  <canvas class="finger-paint" id="fingerPaint" aria-hidden="true"></canvas>
 
-<!-- The 3-Step Process -->
-<section class="section process" id="process">
-<h2 class="section-label">The 3-Step Process</h2>
-<div class="process-steps">
-<div class="process-step">
-<h3>Before</h3>
-<p>No planning.</p>
-</div>
-<div class="process-step">
-<h3>During</h3>
-<p>20-minute spontaneous mark-making.</p>
-</div>
-<div class="process-step">
-<h3>After</h3>
-<p>Title the piece. Do not judge it.</p>
-</div>
-</div>
-</section>
+  <!-- Paint Splatter Decorations -->
+  <div class="paint-splatter paint-splatter--1" aria-hidden="true"></div>
+  <div class="paint-splatter paint-splatter--2" aria-hidden="true"></div>
+  <div class="paint-splatter paint-splatter--3" aria-hidden="true"></div>
 
-<!-- Practitioner's Vow -->
-<section class="section vow" id="vow">
-<h2 class="section-label">Practitioner's Vow</h2>
-<blockquote class="vow-quote">"I do not teach you to draw. I teach you to bleed onto the page in colors instead of words. The canvas is not a place to performâ€”it is a place to confess."</blockquote>
-</section>
+  <main class="content">
 
-<!-- Sacred Art -->
-<section class="section sacred-art" id="sacredArt">
-<h2 class="section-label">Sacred Art</h2>
-<div class="sacred-grid">
-<article class="sacred-card">
-<div class="sacred-number">01</div>
-<h3 class="sacred-title">Mandala Drawing</h3>
-<p class="sacred-desc">Circular patterns that ground the mind. Repeating forms become meditative ritualsâ€”each layer a prayer, each symmetry a return to center.</p>
-</article>
-<article class="sacred-card">
-<div class="sacred-number">02</div>
-<h3 class="sacred-title">Clay Work</h3>
-<p class="sacred-desc">Hands shaping earth. The tactile surrender of pressing, pulling, breaking, rebuilding. Clay remembers every fingerprint. So does the body.</p>
-</article>
-<article class="sacred-card">
-<div class="sacred-number">03</div>
-<h3 class="sacred-title">Music & Movement</h3>
-<p class="sacred-desc">Sound as pigment. Body as brush. When words fail, rhythm speaks. When stillness suffocates, dance exhales.</p>
-</article>
-</div>
-</section>
+    <!-- ==============================
+         HERO — Magazine Cover / Grid Collapse
+    ============================== -->
+    <section id="home" class="hero">
+      <div class="hero-grid" id="heroGrid"></div>
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
 
-<!-- Philosophy -->
-<section class="section philosophy" id="philosophy">
-<h2 class="section-label">Philosophy</h2>
-<div class="philosophy-pillars">
-<div class="pillar">
-<div class="pillar-num">I</div>
-<p class="pillar-text">Expression is survival. Every suppressed emotion leaves a mark on the body. Art externalizes what the mind tries to forget.</p>
-</div>
-<div class="pillar">
-<div class="pillar-num">II</div>
-<p class="pillar-text">Color has frequency. Red heals rage. Blue quiets grief. Yellow excavates buried joy. We paint with intention.</p>
-</div>
-<div class="pillar">
-<div class="pillar-num">III</div>
-<p class="pillar-text">Creation is not performance. There is no good or bad artâ€”only honest or dishonest. We make honest marks here.</p>
-</div>
-<div class="pillar">
-<div class="pillar-num">IV</div>
-<p class="pillar-text">The wound and the masterpiece share the same source. Vulnerability is the pigment of all authentic work.</p>
-</div>
-</div>
-</section>
+      <div class="hero-content" id="heroContent">
+        <div class="hero-magazine">
+          <p class="hero-issue">Issue No. 14 &mdash; The Outsider Edition</p>
+          <h1 class="hero-title">Create<br>Is to<br>Heal</h1>
+          <p class="hero-subtitle">Art Therapy with Zara Chromatic</p>
+          <p class="hero-tagline">"The canvas doesn't judge. It just holds everything you're afraid to say out loud."</p>
+          <div class="hero-scroll">
+            <span>Paint Your Way Down</span>
+            <div class="hero-scroll__line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Testimonials -->
-<section class="section testimonials" id="testimonials">
-<h2 class="section-label">Testimonials</h2>
-<div class="testimonial-stack">
-<blockquote class="testimonial">
-<p>"I walked in carrying fifteen years of silence. I left with a painting that said everything I couldn't. Luna didn't fix meâ€”she gave me colors to find myself."</p>
-<footer>â€” Mira, 34, Brooklyn</footer>
-</blockquote>
-<blockquote class="testimonial">
-<p>"Clay work broke me open. Literallyâ€”my hands were covered in red slip and I realized I was crying. That was the first time I let myself feel grief in twenty years."</p>
-<footer>â€” David, 52, Queens</footer>
-</blockquote>
-<blockquote class="testimonial">
-<p>"I came for my daughter. She was nonverbal after trauma. Six months of mandala drawing and she whispered her first word in a decade: 'blue.'" That color changed everything.</p>
-<footer>â€” Sandra, 41, Manhattan</footer>
-</blockquote>
-</div>
-</section>
+    <!-- ==============================
+         ABOUT — Zara Chromatic Bio
+    ============================== -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <h2 class="section-label">About</h2>
 
-<!-- Journey -->
-<section class="section journey" id="journey">
-<h2 class="section-label">Journey</h2>
-<div class="journey-steps">
-<div class="journey-step">
-<span class="step-num">01</span>
-<h3>Arrival</h3>
-<p>You enter the studio. No pressure to speak. Sit with the materials. Let the colors speak first.</p>
-</div>
-<div class="journey-step">
-<span class="step-num">02</span>
-<h3>Exploration</h3>
-<p>Luna guides you through tactile exercisesâ€”clay, paint, pastels. No instructions on what to make. Only invitations to feel.</p>
-</div>
-<div class="journey-step">
-<span class="step-num">03</span>
-<h3>Release</h3>
-<p>The art emerges from the body's truth. Tears, laughter, rageâ€”all valid. All held. The canvas becomes witness.</p>
-</div>
-<div class="journey-step">
-<span class="step-num">04</span>
-<h3>Integration</h3>
-<p>We sit with what was created. We name what arose. We carry the colors home as medicine.</p>
-</div>
-</div>
-</section>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="section-intro lead">Zara combines art therapy with expressionistic techniques, transforming creative chaos into profound healing. Every brushstroke is a release. Every color, a confession.</p>
 
-<!-- FAQs -->
-<section class="section faqs" id="faqs">
-<h2 class="section-label">FAQs</h2>
-<div class="faq-list">
-<div class="faq-item">
-<div class="faq-q">"I can't draw."</div>
-<div class="faq-a">Perfect. You will make marks, not pictures.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">"Will I cry?"</div>
-<div class="faq-a">Possibly. That is the release.</div>
-</div>
-<div class="faq-item">
-<div class="faq-q">"Can I do this with kids?"</div>
-<div class="faq-a">Absolutely. Children naturally bypass language.</div>
-</div>
-</div>
-</section>
+            <p class="section-intro">With fifteen years guiding people through the raw territory of mark-making, Zara has witnessed thousands of breakthroughs that words alone could never reach. Her studio is a no-judgment zone where paint-splattered hands become the language of truth.</p>
 
-<!-- Lexicon -->
-<section class="section lexicon" id="lexicon">
-<h2 class="section-label">Lexicon</h2>
-<div class="lexicon-grid">
-<div class="lexicon-entry">
-<h3>Catharsis</h3>
-<p>Emotional release.</p>
-</div>
-<div class="lexicon-entry">
-<h3>Scribble</h3>
-<p>Pre-conscious line.</p>
-</div>
-<div class="lexicon-entry">
-<h3>Projection</h3>
-<p>Externalizing internal state.</p>
-</div>
-</div>
-</section>
+            <div class="origin-story">
+              <p class="origin-story-text">"Zara was a street artist who painted murals for a decade before burnout silenced her. During recovery, she discovered that making art without an audience healed something that making art for critics never could. Now she teaches others to bleed onto the page in colors instead of words."</p>
+            </div>
+          </div>
 
-<!-- Try This Now -->
-<section class="section try-now" id="tryNow">
-<h2 class="section-label">Try This Now</h2>
-<div class="try-now-content">
-<p>Take a crayon. Close your eyes. Draw your current emotion as a shape. Open your eyes. You just gave anger/joy/sadness a form.</p>
-</div>
-</section>
+          <div class="about-visual">
+            <div class="about-portrait"></div>
+            <div class="about-credentials">
+              <div class="credential">
+                <span class="credential-num">15</span>
+                <span class="credential-label">Years</span>
+              </div>
+              <div class="credential">
+                <span class="credential-num">3K+</span>
+                <span class="credential-label">Lives Touched</span>
+              </div>
+              <div class="credential">
+                <span class="credential-num">MA</span>
+                <span class="credential-label">Art Therapy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Live Events -->
-<section class="section events" id="events">
-<h2 class="section-label">Live Events</h2>
-<div class="events-list">
-<p>Open Studio Night – Monthly</p>
-<p>Mandala Workshop – Quarterly</p>
-<p>Art & Wine – Weekly</p>
-</div>
-</section>
+    <!-- ==============================
+         MECHANISM — Neuroscience of Art
+    ============================== -->
+    <section id="mechanism" class="section">
+      <div class="section-inner">
+        <h2 class="section-label">The Mechanism</h2>
 
-<!-- Gift a Session -->
-<section class="section gift" id="gift">
-<h2 class="section-label">Gift a Sanctuary</h2>
-<div class="gift-content">
-<p>Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
-</div>
-</section>
+        <div class="mechanism-grid">
+          <div class="mechanism-text">
+            <p class="section-intro">Art bypasses the Wernicke's area (language center). It directly accesses the anterior cingulate cortex (emotional regulation) via somatic markers&mdash;emotions embedded in proprioceptive memory.</p>
+            <p class="section-intro">When you paint, draw, or sculpt, your brain shifts from beta to alpha and theta states. The prefrontal cortex quiets. The amygdala stops filtering. What emerges is not art&mdash;it is truth, externalized.</p>
+          </div>
 
-<!-- Contact / Footer -->
-<footer class="footer" id="contact">
-<div class="footer-inner">
-<div class="footer-info">
-<h2 class="footer-name">Luna Chromatic</h2>
-<p class="footer-tagline">"Create Is to Heal"</p>
-<p class="footer-address">444 Canvas Street<br>Brooklyn, NY 11201</p>
-</div>
-<div class="footer-cta">
-<a href="mailto:luna@lunachromatic.art" class="cta-link">Make Your Mark</a>
-</div>
-</div>
-<div class="footer-disclaimer">
-<p>Not a replacement for clinical therapy. If art-making triggers severe distress, stop and seek professional support. This is a complementary practice, not a treatment for acute mental illness.</p>
-</div>
-</footer>
+          <div class="mechanism-stats">
+            <div class="stat-block">
+              <span class="stat-block-num">67%</span>
+              <p class="stat-block-label">Reduction in cortisol after 20 minutes of mark-making</p>
+            </div>
+            <div class="stat-block">
+              <span class="stat-block-num">3x</span>
+              <p class="stat-block-label">More effective than talk therapy for trauma externalization</p>
+            </div>
+            <div class="stat-block">
+              <span class="stat-block-num">89%</span>
+              <p class="stat-block-label">Of participants report emotional release during first session</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script src="script.js"></script>
-<script src="meta-layer.js"></script></body>
+    <!-- ==============================
+         SERVICES — The Sacred Art
+    ============================== -->
+    <section id="services" class="section">
+      <div class="section-inner">
+        <h2 class="section-label">The Sacred Art</h2>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <span class="service-card-num">01</span>
+            <h3 class="service-card-title">Foundation Session</h3>
+            <p class="service-card-desc">A 60-minute deep immersion into spontaneous mark-making. No planning. No instructions on what to make. Only invitations to feel. Suitable for first-time visitors and those returning to their practice.</p>
+            <span class="service-card-price">&pound;85</span>
+          </div>
+
+          <div class="service-card">
+            <span class="service-card-num">02</span>
+            <h3 class="service-card-title">Extended Release</h3>
+            <p class="service-card-desc">A 90-minute session for those working through chronic conditions, deep emotional release, or spiritual emergence. Includes clay, paint, pastels, and guided somatic exercises. Pre-session consultation included.</p>
+            <span class="service-card-price">&pound;120</span>
+          </div>
+
+          <div class="service-card">
+            <span class="service-card-num">03</span>
+            <h3 class="service-card-title">Outsider Intensive</h3>
+            <p class="service-card-desc">A half-day immersion combining raw art-making with guided meditation, color theory for healing, and group sharing. For those called to deepen their understanding of creative therapy as a lifelong practice.</p>
+            <span class="service-card-price">&pound;280</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         PROCESS — Before / During / After
+    ============================== -->
+    <section id="process" class="section">
+      <div class="section-inner">
+        <h2 class="section-label">The Process</h2>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <h3>Before</h3>
+            <p>No planning. No Pinterest boards. No expectations. Arrive with whatever you're carrying&mdash;joy, rage, grief, numbness. All emotions are welcome at the canvas.</p>
+          </div>
+
+          <div class="process-step">
+            <h3>During</h3>
+            <p>20-minute spontaneous mark-making. Eyes closed for the first five minutes. Let the body choose the colors. Let the hand move without the mind's permission. The canvas receives everything.</p>
+          </div>
+
+          <div class="process-step">
+            <h3>After</h3>
+            <p>Title the piece. Do not judge it. Sit with what was created. Name what arose. We carry the colors home as medicine. The painting becomes a mirror you didn't know you needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         VOW — Practitioner's Oath
+    ============================== -->
+    <section id="vow" class="vow">
+      <div class="section-inner">
+        <h2 class="section-label">Practitioner's Vow</h2>
+
+        <blockquote class="vow-quote">
+          "I do not teach you to draw. I teach you to bleed onto the page in colors instead of words. The canvas is not a place to perform&mdash;it is a place to confess."
+        </blockquote>
+        <p class="vow-author">&mdash; Zara Chromatic, MA Art Therapy</p>
+      </div>
+    </section>
+
+    <!-- ==============================
+         TESTIMONIALS — Stories
+    ============================== -->
+    <section id="testimonials" class="section">
+      <div class="section-inner">
+        <h2 class="section-label">Stories</h2>
+
+        <div class="testimonial-stack">
+          <blockquote class="testimonial">
+            <p>"I walked in carrying fifteen years of silence. I left with a painting that said everything I couldn't. Zara didn't fix me&mdash;she gave me colors to find myself."</p>
+            <footer>&mdash; Mira, 34, Brooklyn</footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>"Clay work broke me open. Literally&mdash;my hands were covered in red slip and I realized I was crying. That was the first time I let myself feel grief in twenty years."</p>
+            <footer>&mdash; David, 52, Queens</footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>"I came for my daughter. She was nonverbal after trauma. Six months of mandala drawing and she whispered her first word in a decade: 'blue.' That color changed everything."</p>
+            <footer>&mdash; Sandra, 41, Manhattan</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         FAQ — 6 Questions
+    ============================== -->
+    <section id="faq" class="section">
+      <div class="section-inner">
+        <h2 class="section-label">Questions</h2>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-q">"I can't draw. Will this work for me?"</h3>
+            <p class="faq-a">Perfect. You will make marks, not pictures. Art therapy is not about skill&mdash;it's about expression. A two-year-old can paint. So can you. The canvas doesn't care about talent. It cares about truth.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">"Will I cry?"</h3>
+            <p class="faq-a">Possibly. That is the release. Tears are not weakness&mdash;they are the body's way of letting go of what words couldn't carry. Many people cry. Some laugh. Some sit in silence. All responses are valid.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">"Can I do this with my kids?"</h3>
+            <p class="faq-a">Absolutely. Children naturally bypass language. They paint before they speak. Art therapy meets them where they already live&mdash;in the land of color and feeling. Family sessions available.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">"Is this the same as an art class?"</h3>
+            <p class="faq-a">No. Art classes teach technique. Art therapy teaches release. There is no teacher here&mdash;only a witness. You won't learn to paint a landscape. You'll learn to externalize your inner world in color and form.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">"What if I don't feel anything?"</h3>
+            <p class="faq-a">Numbness is a valid response. Sometimes the body needs time to trust the process. The act of making marks&mdash;even when it feels empty&mdash;is still rewiring neural pathways. Come back. The feeling will arrive.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">"How is this different from therapy?"</h3>
+            <p class="faq-a">Traditional talk therapy works through language. Art therapy works through the body. When words fail, colors speak. When the mind blocks, the hand knows. We complement clinical therapy&mdash;we don't replace it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         EVENTS — 2 Gatherings
+    ============================== -->
+    <section id="events" class="section">
+      <div class="section-inner">
+        <h2 class="section-label">Gatherings</h2>
+
+        <div class="events-grid">
+          <div class="event-card">
+            <p class="event-card-date">Every first Saturday, 10 AM &mdash; 12 PM</p>
+            <h3 class="event-card-title">Scribble to Self Studio</h3>
+            <p class="event-card-desc">An open studio session where anyone can show up, grab a canvas, and scribble without rules. No instruction. No critique. No audience. Just raw marks and the freedom to make them. Materials provided. Free. Donations welcome.</p>
+          </div>
+
+          <div class="event-card">
+            <p class="event-card-date">Monthly, full moon evening, 7 PM &mdash; 9:30 PM</p>
+            <h3 class="event-card-title">Trauma &amp; Texture Workshop</h3>
+            <p class="event-card-desc">A guided group session combining clay work, paint, and somatic movement for those processing trauma. Small groups of eight. Safe container. Professional support on-site. This is not a class&mdash;it is a communion of color and release.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         GIFT — Gift a Session
+    ============================== -->
+    <section class="gift">
+      <div class="section-inner">
+        <h2 class="gift-title">Gift a Sanctuary</h2>
+        <p class="gift-desc">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
+        <a href="#contact" class="gift-btn">Gift a Session &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ==============================
+         CONTACT
+    ============================== -->
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <h2 class="section-label">Connect</h2>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="section-intro lead">To book a session or ask a question, reach out directly. We respond within 24 hours.</p>
+
+            <div style="margin-top: 2rem;">
+              <p class="contact-detail">Brooklyn, New York</p>
+              <p class="contact-detail">By appointment only</p>
+              <p class="contact-detail">zara@chromatic.art</p>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <div class="contact-map-node">Brooklyn, NY</div>
+            <div class="contact-map-node">By Appointment</div>
+            <div class="contact-map-node">24hr Response</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================
+       FOOTER — Hand-Drawn Border, Rumi + Empathy Studio
+  ============================== -->
+  <footer class="footer" id="footer">
+    <div class="footer-paint-splatter" aria-hidden="true"></div>
+
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Art Therapy</p>
+        <p class="footer-tagline">"The wound is the place where the Light enters you." &mdash; Rumi</p>
+        <p class="footer-address">Brooklyn, New York<br>By appointment only</p>
+      </div>
+
+      <div>
+        <p class="footer-heading">Lexicon</p>
+        <p class="footer-link">Catharsis &mdash; Emotional release</p>
+        <p class="footer-link">Scribble &mdash; Pre-conscious line</p>
+        <p class="footer-link">Projection &mdash; Externalizing internal state</p>
+      </div>
+
+      <div>
+        <p class="footer-heading">Navigate</p>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#services" class="footer-link">Services</a>
+        <a href="#faq" class="footer-link">FAQ</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-credits">
+      <p>&copy; 2026 Art Therapy. All healing is self-healing.</p>
+      <p>Made with love by <a href="#">Empathy Studio</a> &middot; Norman James</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
 </html>
-

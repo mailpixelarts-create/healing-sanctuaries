@@ -1,280 +1,566 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Preloader
-    const preloader = document.getElementById('preloader');
+// ============================================
+// 13 — GEOMANCY: Qi Gong Sanctuary
+// GSAP + Matter.js Physics + Interactive Systems
+// ============================================
+
+// --------------------------------------------
+// PRELOADER
+// --------------------------------------------
+function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  document.body.style.overflow = 'hidden';
+
+  window.addEventListener('load', () => {
     setTimeout(() => {
-        preloader.classList.add('hidden');
-        initPhysics();
-    }, 2000);
+      preloader.classList.add('hidden');
+      document.body.style.overflow = '';
+      initHeroEntrance();
+    }, 2200);
+  });
+}
 
-    // Navigation
-    const navToggle = document.getElementById('navToggle');
-    const navRing = document.querySelector('.nav-ring');
-    const navItems = document.querySelectorAll('.nav-item');
+// --------------------------------------------
+// HERO ENTRANCE
+// --------------------------------------------
+function initHeroEntrance() {
+  const title = document.querySelector('.hero-title');
+  const tagline = document.querySelector('.hero-tagline');
+  const sub = document.querySelector('.hero-sub');
 
-    navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navRing.classList.toggle('active');
+  if (title) {
+    gsap.from(title.querySelectorAll('span'), {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.15,
+      ease: 'expo.out',
     });
+  }
+  if (tagline) {
+    gsap.from(tagline, { y: 30, opacity: 0, duration: 0.8, delay: 0.6, ease: 'expo.out' });
+  }
+  if (sub) {
+    gsap.from(sub, { y: 20, opacity: 0, duration: 0.8, delay: 0.9, ease: 'expo.out' });
+  }
+}
 
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navRing.classList.remove('active');
-        });
+// --------------------------------------------
+// NAVIGATION — Circular Ring
+// --------------------------------------------
+function initNavRing() {
+  const toggle = document.getElementById('navToggle');
+  const items = document.getElementById('navItems');
+  if (!toggle || !items) return;
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    items.classList.toggle('active');
+  });
+
+  items.querySelectorAll('.nav-item').forEach((item) => {
+    item.addEventListener('click', () => {
+      toggle.classList.remove('active');
+      items.classList.remove('active');
     });
+  });
 
-    // Matter.js Physics
-    function initPhysics() {
-        const canvas = document.getElementById('physicsCanvas');
-        const ctx = canvas.getContext('2d');
-        
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        const Engine = Matter.Engine,
-              Render = Matter.Render,
-              Runner = Matter.Runner,
-              Composites = Matter.Composites,
-              MouseConstraint = Matter.MouseConstraint,
-              Mouse = Matter.Mouse,
-              World = Matter.World,
-              Bodies = Matter.Bodies,
-              Body = Matter.Body,
-              Events = Matter.Events;
-
-        const engine = Engine.create();
-        const world = engine.world;
-
-        const render = Render.create({
-            canvas: canvas,
-            engine: engine,
-            options: {
-                width: canvas.width,
-                height: canvas.height,
-                wireframes: false,
-                background: 'transparent',
-                pixelRatio: window.devicePixelRatio
-            }
-        });
-
-        Render.run(render);
-        const runner = Runner.create();
-        Runner.run(runner, engine);
-
-        // Create walls
-        const wallOptions = { 
-            isStatic: true, 
-            render: { visible: false },
-            friction: 0.8,
-            restitution: 0.5
-        };
-        
-        World.add(world, [
-            Bodies.rectangle(canvas.width / 2, canvas.height + 50, canvas.width, 100, wallOptions),
-            Bodies.rectangle(canvas.width / 2, -50, canvas.width, 100, wallOptions),
-            Bodies.rectangle(-50, canvas.height / 2, 100, canvas.height, wallOptions),
-            Bodies.rectangle(canvas.width + 50, canvas.height / 2, 100, canvas.height, wallOptions)
-        ]);
-
-        // Central sun
-        const sun = Bodies.circle(canvas.width / 2, canvas.height / 2, 60, {
-            isStatic: true,
-            render: {
-                fillStyle: '#4A7C59',
-                opacity: 0.3
-            }
-        });
-        World.add(world, sun);
-
-        // QI letters
-        const letters = [];
-        const qiChars = ['Q', 'I'];
-        
-        for (let i = 0; i < 15; i++) {
-            const char = qiChars[i % 2];
-            const x = Math.random() * canvas.width;
-            const y = Math.random() * canvas.height;
-            
-            const letter = Bodies.circle(x, y, 20 + Math.random() * 15, {
-                restitution: 0.7,
-                friction: 0.3,
-                density: 0.001,
-                render: {
-                    fillStyle: 'rgba(38, 34, 28, 0.6)',
-                    opacity: 0.6
-                }
-            });
-            
-            letter.char = char;
-            letter.render.text = {
-                content: char,
-                color: '#ECE3D5',
-                size: 16,
-                family: 'Archivo'
-            };
-            
-            letters.push(letter);
-            World.add(world, letter);
-        }
-
-        // Mouse interaction
-        const mouse = Mouse.create(render.canvas);
-        const mouseConstraint = MouseConstraint.create(engine, {
-            mouse: mouse,
-            constraint: {
-                stiffness: 0.2,
-                render: { visible: false }
-            }
-        });
-        World.add(world, mouseConstraint);
-        render.mouse = mouse;
-
-        // Attract letters to sun
-        Events.on(engine, 'beforeUpdate', () => {
-            letters.forEach(letter => {
-                const dx = sun.position.x - letter.position.x;
-                const dy = sun.position.y - letter.position.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance > 80) {
-                    const force = 0.00002;
-                    Body.applyForce(letter, letter.position, {
-                        x: (dx / distance) * force,
-                        y: (dy / distance) * force
-                    });
-                }
-            });
-        });
-
-        // Custom rendering for text
-        Events.on(render, 'afterRender', () => {
-            letters.forEach(letter => {
-                ctx.save();
-                ctx.translate(letter.position.x, letter.position.y);
-                ctx.rotate(letter.angle);
-                ctx.font = '600 20px Archivo';
-                ctx.fillStyle = '#ECE3D5';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                ctx.fillText(letter.char, 0, 0);
-                ctx.restore();
-            });
-
-            // Sun glow
-            const gradient = ctx.createRadialGradient(
-                sun.position.x, sun.position.y, 0,
-                sun.position.x, sun.position.y, 100
-            );
-            gradient.addColorStop(0, 'rgba(74, 124, 89, 0.3)');
-            gradient.addColorStop(1, 'rgba(74, 124, 89, 0)');
-            ctx.fillStyle = gradient;
-            ctx.beginPath();
-            ctx.arc(sun.position.x, sun.position.y, 100, 0, Math.PI * 2);
-            ctx.fill();
-        });
-
-        // Handle resize
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            render.options.width = canvas.width;
-            render.options.height = canvas.height;
-            Render.setSize(render, canvas.width, canvas.height);
-        });
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-ring')) {
+      toggle.classList.remove('active');
+      items.classList.remove('active');
     }
+  });
+}
 
-    // 8 Brocades interactive
-    const brocadeItems = document.querySelectorAll('.brocade-item');
-    let activeBrocade = null;
+// --------------------------------------------
+// MATTER.JS PHYSICS — Falling Q & I
+// --------------------------------------------
+function initPhysics() {
+  const canvas = document.getElementById('physicsCanvas');
+  if (!canvas) return;
 
-    brocadeItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const silhouette = item.querySelector('.brocade-silhouette');
-            
-            if (activeBrocade && activeBrocade !== item) {
-                activeBrocade.classList.remove('active');
-                const prevSilhouette = activeBrocade.querySelector('.brocade-silhouette');
-                prevSilhouette.classList.remove('animate');
-            }
-            
-            item.classList.toggle('active');
-            
-            if (item.classList.contains('active')) {
-                silhouette.classList.add('animate');
-                activeBrocade = item;
-            } else {
-                silhouette.classList.remove('animate');
-                activeBrocade = null;
-            }
+  const ctx = canvas.getContext('2d');
+  const { Engine, Render, Runner, Bodies, Body, World, Mouse, MouseConstraint, Events } = Matter;
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Engine
+  const engine = Engine.create({ gravity: { x: 0, y: 0.6 } });
+  const world = engine.world;
+
+  // Renderer
+  const render = Render.create({
+    canvas,
+    engine,
+    options: {
+      width: canvas.width,
+      height: canvas.height,
+      wireframes: false,
+      background: 'transparent',
+      pixelRatio: Math.min(window.devicePixelRatio, 2),
+    },
+  });
+
+  Render.run(render);
+  const runner = Runner.create();
+  Runner.run(runner, engine);
+
+  // Walls
+  const wallOpts = { isStatic: true, render: { visible: false }, friction: 0.8, restitution: 0.4 };
+  const walls = [
+    Bodies.rectangle(canvas.width / 2, canvas.height + 50, canvas.width + 200, 100, wallOpts),
+    Bodies.rectangle(-50, canvas.height / 2, 100, canvas.height, wallOpts),
+    Bodies.rectangle(canvas.width + 50, canvas.height / 2, 100, canvas.height, wallOpts),
+    Bodies.rectangle(canvas.width / 2, -80, canvas.width + 200, 100, wallOpts),
+  ];
+  World.add(world, walls);
+
+  // Central sun body
+  const sunRadius = Math.min(canvas.width, canvas.height) * 0.06;
+  const sun = Bodies.circle(canvas.width / 2, canvas.height / 2, sunRadius, {
+    isStatic: true,
+    render: {
+      fillStyle: 'rgba(74, 124, 89, 0.25)',
+      strokeStyle: 'rgba(74, 124, 89, 0.4)',
+      lineWidth: 2,
+    },
+  });
+  World.add(world, sun);
+
+  // Letter bodies — Q and I
+  const letters = [];
+  const chars = ['Q', 'I'];
+  const letterCount = Math.min(20, Math.floor(canvas.width / 80));
+
+  for (let i = 0; i < letterCount; i++) {
+    const char = chars[i % 2];
+    const x = Math.random() * (canvas.width - 200) + 100;
+    const y = -50 - Math.random() * 400;
+    const size = 18 + Math.random() * 12;
+
+    const body = Bodies.circle(x, y, size, {
+      restitution: 0.6,
+      friction: 0.2,
+      density: 0.002,
+      render: {
+        fillStyle: 'rgba(38, 34, 28, 0.5)',
+        strokeStyle: 'rgba(74, 124, 89, 0.3)',
+        lineWidth: 1,
+      },
+    });
+
+    body.char = char;
+    body.letterSize = size;
+    letters.push(body);
+    World.add(world, body);
+  }
+
+  // Mouse constraint for drag
+  const mouse = Mouse.create(render.canvas);
+  const mouseConstraint = MouseConstraint.create(engine, {
+    mouse,
+    constraint: {
+      stiffness: 0.2,
+      render: { visible: false },
+    },
+  });
+  World.add(world, mouseConstraint);
+  render.mouse = mouse;
+
+  // Attract letters to sun
+  Events.on(engine, 'beforeUpdate', () => {
+    letters.forEach((letter) => {
+      const dx = sun.position.x - letter.position.x;
+      const dy = sun.position.y - letter.position.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist > sunRadius + 30) {
+        const force = 0.000015;
+        Body.applyForce(letter, letter.position, {
+          x: (dx / dist) * force,
+          y: (dy / dist) * force,
         });
-    });
+      }
 
-    // Scroll animations
-    const observerOptions = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+      // Keep in bounds
+      if (letter.position.y > canvas.height + 100) {
+        Body.setPosition(letter, {
+          x: Math.random() * canvas.width,
+          y: -50,
         });
-    }, observerOptions);
+        Body.setVelocity(letter, { x: 0, y: 0 });
+      }
+    });
+  });
 
-    document.querySelectorAll('.section-label, .section-title, .body-text, .about-stats, .visual-frame, .sacred-card, .pillar, .testimonial-card, .journey-step, .contact-block, .cta-button').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        observer.observe(el);
+  // Custom text rendering
+  Events.on(render, 'afterRender', () => {
+    const dpr = Math.min(window.devicePixelRatio, 2);
+
+    // Sun glow
+    const glow = ctx.createRadialGradient(
+      sun.position.x, sun.position.y, 0,
+      sun.position.x, sun.position.y, sunRadius * 2.5
+    );
+    glow.addColorStop(0, 'rgba(74, 124, 89, 0.15)');
+    glow.addColorStop(1, 'rgba(74, 124, 89, 0)');
+    ctx.fillStyle = glow;
+    ctx.beginPath();
+    ctx.arc(sun.position.x, sun.position.y, sunRadius * 2.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Sun center pulse
+    const time = Date.now() * 0.001;
+    const pulse = 1 + Math.sin(time * 1.5) * 0.05;
+    ctx.fillStyle = 'rgba(74, 124, 89, 0.12)';
+    ctx.beginPath();
+    ctx.arc(sun.position.x, sun.position.y, sunRadius * pulse, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Letter text
+    letters.forEach((letter) => {
+      ctx.save();
+      ctx.translate(letter.position.x, letter.position.y);
+      ctx.rotate(letter.angle);
+      ctx.font = `700 ${letter.letterSize}px Archivo, sans-serif`;
+      ctx.fillStyle = 'rgba(236, 227, 213, 0.85)';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(letter.char, 0, 0);
+      ctx.restore();
+    });
+  });
+
+  // Resize handler
+  window.addEventListener('resize', () => {
+    resize();
+    render.options.width = canvas.width;
+    render.options.height = canvas.height;
+    Render.setSize(render, canvas.width, canvas.height);
+
+    // Reposition sun
+    Body.setPosition(sun, {
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+    });
+  });
+}
+
+// --------------------------------------------
+// GSAP SCROLL REVEALS
+// --------------------------------------------
+function initScrollReveals() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Reveal elements
+  document.querySelectorAll('.reveal').forEach((el) => {
+    gsap.from(el, {
+      y: 30,
+      opacity: 0,
+      duration: 0.9,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        once: true,
+      },
+    });
+  });
+
+  // Reveal scale
+  document.querySelectorAll('.reveal-scale').forEach((el) => {
+    gsap.from(el, {
+      scale: 0.92,
+      opacity: 0,
+      duration: 1,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+        once: true,
+      },
+    });
+  });
+
+  // Stagger service cards
+  const serviceCards = document.querySelectorAll('.service-card');
+  if (serviceCards.length) {
+    gsap.from(serviceCards, {
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: '.services-grid',
+        start: 'top 80%',
+        once: true,
+      },
+    });
+  }
+
+  // Stagger brocade items
+  const brocadeItems = document.querySelectorAll('.brocade-item');
+  if (brocadeItems.length) {
+    gsap.from(brocadeItems, {
+      x: -30,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.08,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: '.brocades-timeline',
+        start: 'top 80%',
+        once: true,
+      },
+    });
+  }
+
+  // Stagger process steps
+  const processSteps = document.querySelectorAll('.process-step');
+  if (processSteps.length) {
+    gsap.from(processSteps, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: '.process-steps',
+        start: 'top 80%',
+        once: true,
+      },
+    });
+  }
+
+  // Stagger testimonial cards
+  const testimonialCards = document.querySelectorAll('.testimonial-card');
+  if (testimonialCards.length) {
+    gsap.from(testimonialCards, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: '.testimonials-grid',
+        start: 'top 80%',
+        once: true,
+      },
+    });
+  }
+
+  // Stagger FAQ items
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (faqItems.length) {
+    gsap.from(faqItems, {
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.08,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: '.faq-grid',
+        start: 'top 80%',
+        once: true,
+      },
+    });
+  }
+
+  // Stagger event cards
+  const eventCards = document.querySelectorAll('.event-card');
+  if (eventCards.length) {
+    gsap.from(eventCards, {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: '.events-list',
+        start: 'top 80%',
+        once: true,
+      },
+    });
+  }
+
+  // Footer quote
+  const footerQuote = document.querySelector('.footer-quote');
+  if (footerQuote) {
+    gsap.from(footerQuote, {
+      y: 20,
+      opacity: 0,
+      duration: 1,
+      ease: 'expo.out',
+      scrollTrigger: {
+        trigger: footerQuote,
+        start: 'top 90%',
+        once: true,
+      },
+    });
+  }
+}
+
+// --------------------------------------------
+// 8 BROCADES — Interactive
+// --------------------------------------------
+function initBrocades() {
+  const items = document.querySelectorAll('.brocade-item');
+  let activeItem = null;
+
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      const silhouette = item.querySelector('.brocade-silhouette');
+
+      // Deactivate previous
+      if (activeItem && activeItem !== item) {
+        activeItem.classList.remove('active');
+        const prevSil = activeItem.querySelector('.brocade-silhouette');
+        if (prevSil) prevSil.classList.remove('animate');
+      }
+
+      // Toggle current
+      item.classList.toggle('active');
+
+      if (item.classList.contains('active')) {
+        if (silhouette) silhouette.classList.add('animate');
+        activeItem = item;
+      } else {
+        if (silhouette) silhouette.classList.remove('animate');
+        activeItem = null;
+      }
+    });
+  });
+}
+
+// --------------------------------------------
+// FAQ — Accordion
+// --------------------------------------------
+function initFAQ() {
+  document.querySelectorAll('.faq-item-question').forEach((question) => {
+    question.addEventListener('click', () => {
+      const item = question.closest('.faq-item');
+      const isActive = item.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach((i) => i.classList.remove('active'));
+
+      // Toggle clicked
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+}
+
+// --------------------------------------------
+// SMOOTH SCROLL
+// --------------------------------------------
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+}
+
+// --------------------------------------------
+// HERO PARALLAX
+// --------------------------------------------
+function initHeroParallax() {
+  const heroContent = document.querySelector('.hero-content');
+  if (!heroContent) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+    if (scrollY < window.innerHeight) {
+      heroContent.style.transform = `translateY(${scrollY * 0.3}px)`;
+      heroContent.style.opacity = 1 - scrollY / window.innerHeight;
+    }
+  });
+}
+
+// --------------------------------------------
+// MAGNETIC BUTTONS
+// --------------------------------------------
+function initMagneticButtons() {
+  document.querySelectorAll('.cta-button, .gift-btn').forEach((btn) => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      gsap.to(btn, {
+        x: x * 0.2,
+        y: y * 0.2,
+        duration: 0.4,
+        ease: 'power2.out',
+      });
     });
 
-    // Make elements visible when in view
-    const visibleObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.section-label, .section-title, .body-text, .about-stats, .visual-frame, .sacred-card, .pillar, .testimonial-card, .journey-step, .contact-block, .cta-button').forEach(el => {
-        visibleObserver.observe(el);
+    btn.addEventListener('mouseleave', () => {
+      gsap.to(btn, {
+        x: 0,
+        y: 0,
+        duration: 0.6,
+        ease: 'elastic.out(1, 0.3)',
+      });
     });
+  });
+}
 
-    // Smooth scroll for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+// --------------------------------------------
+// CURSOR GLOW (desktop only)
+// --------------------------------------------
+function initCursorGlow() {
+  if (window.matchMedia('(pointer: coarse)').matches) return;
 
-    // Parallax effect on scroll
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                const scrolled = window.pageYOffset;
-                const hero = document.querySelector('.hero-content');
-                if (hero && scrolled < window.innerHeight) {
-                    hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-                    hero.style.opacity = 1 - (scrolled / window.innerHeight);
-                }
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
+  const glow = document.createElement('div');
+  glow.style.cssText = `
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(74, 124, 89, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+  `;
+  document.body.appendChild(glow);
+
+  document.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+  });
+}
+
+// --------------------------------------------
+// INIT
+// --------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
+  initNavRing();
+  initPhysics();
+  initScrollReveals();
+  initBrocades();
+  initFAQ();
+  initSmoothScroll();
+  initHeroParallax();
+  initMagneticButtons();
+  initCursorGlow();
 });

@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sage Wildroot â€” Herbalism &amp; Plant Medicine</title>
+  <title>Rowan Earthwalker — Herbalism &amp; Botanical Dark Process</title>
+  <meta name="description" content="The Earth Provides the Medicine. Herbalism, phytotherapy, and plant chemistry with Rowan Earthwalker.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Herbalism - Sage Wildroot","description":"The Earth Provides the Medicine","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
-</script>
+  {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Herbalism — Rowan Earthwalker","description":"The Earth Provides the Medicine. Botanical dark process healing.","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
+  </script>
 </head>
 <body>
 
-  <!-- HERO: Image Sequence Scrub -->
+  <!-- LOADING -->
+  <div class="loader" id="loader">
+    <span class="loader__text">Herbalism</span>
+    <div class="loader__bar"></div>
+  </div>
+
+  <!-- HERO: 600vh Scroll-Driven Image Sequence -->
   <section id="hero">
     <div class="hero-sequence" id="heroSequence">
       <div class="hero-frame active" data-frame="0"></div>
@@ -25,13 +32,11 @@
       <div class="hero-frame" data-frame="5"></div>
       <div class="hero-frame" data-frame="6"></div>
       <div class="hero-frame" data-frame="7"></div>
-      <div class="hero-frame" data-frame="8"></div>
-      <div class="hero-frame" data-frame="9"></div>
     </div>
     <div class="hero-overlay">
       <p class="hero-label">Herbalism</p>
       <h1 class="hero-title">The Earth Provides<br>the Medicine</h1>
-      <p class="hero-sub">Scroll to explore the life cycle</p>
+      <p class="hero-sub">Scroll to explore the botanical journey</p>
     </div>
     <div class="hero-progress">
       <div class="hero-progress-bar" id="heroProgress"></div>
@@ -42,24 +47,17 @@
   <section id="about">
     <div class="section-inner">
       <span class="section-label">About the Healer</span>
-      <h2 class="section-title">Sage Wildroot</h2>
+      <h2 class="section-title">Rowan Earthwalker</h2>
       <p class="section-body">
-        For twenty-five years Sage has walked the forests, meadows, and riverbanks of the Pacific Northwest,
-        learning the quiet language of plants. What began as a childhood spent pressing wildflowers between
-        the pages of her grandmother's dictionaries has become a lifelong devotion to the art and science
-        of herbal medicine. She forages each specimen by hand, guided by seasons and intuition, crafting
-        tinctures, essences, and teas that honor the intelligence of every root, leaf, and petal. Her
-        practice is not a clinic â€” it is a conversation between human and botanical worlds, a space where
-        healing unfolds at the pace of growth.
+        Rowan Earthwalker was a pharmaceutical chemist who grew frustrated that synthetic drugs only treated symptoms. She returned to the forests of her childhood and realized the plants had been solving the body's problems for 400 million years. For two decades she has foraged, studied, and formulated — bridging the gap between molecular science and the slow intelligence of roots, leaves, and bark.
       </p>
-      <p class="section-body">"Sage Wildroot was a pharmaceutical chemist who got frustrated that synthetic drugs only treated symptoms. She went back to the forest where she grew up and realized the plants had been doing it right for 400 million years."</p>
       <div class="about-details">
         <div class="detail">
-          <span class="detail-number">25</span>
+          <span class="detail-number">20</span>
           <span class="detail-label">Years of Practice</span>
         </div>
         <div class="detail">
-          <span class="detail-number">200+</span>
+          <span class="detail-number">180+</span>
           <span class="detail-label">Plant Species Studied</span>
         </div>
         <div class="detail">
@@ -76,33 +74,68 @@
       <span class="section-label">The Science</span>
       <h2 class="section-title">The Mechanism</h2>
       <p class="section-body">
-        Phyto-chemicals â€” alkaloids, flavonoids â€” are secondary metabolites of plants. They are not
-        nutrients; they are <em>immune-signaling molecules</em> that trigger mild stress in our cells
-        (hormesis), making us stronger.
+        Phyto-chemicals — alkaloids, flavonoids, terpenes — are secondary metabolites of plants. They are not nutrients; they are <em>immune-signaling molecules</em> that trigger mild stress in our cells (hormesis), making us stronger.
       </p>
       <div class="mechanism-diagram">
         <div class="mechanism-step">
-          <span class="mechanism-icon">ðŸŒ¿</span>
+          <span class="mechanism-icon">&#127793;</span>
           <h3 class="mechanism-name">Plant Compound</h3>
           <p class="mechanism-desc">Alkaloid, flavonoid, or terpene released from the herb</p>
         </div>
-        <div class="mechanism-arrow">â†’</div>
+        <div class="mechanism-arrow">&rarr;</div>
         <div class="mechanism-step">
-          <span class="mechanism-icon">ðŸ”¬</span>
+          <span class="mechanism-icon">&#128300;</span>
           <h3 class="mechanism-name">Cellular Signal</h3>
           <p class="mechanism-desc">Triggers hormetic stress response in the cell</p>
         </div>
-        <div class="mechanism-arrow">â†’</div>
+        <div class="mechanism-arrow">&rarr;</div>
         <div class="mechanism-step">
-          <span class="mechanism-icon">ðŸ’ª</span>
+          <span class="mechanism-icon">&#128170;</span>
           <h3 class="mechanism-name">Adaptive Strength</h3>
-          <p class="mechanism-desc">Cell repairs stronger than before â€” resilience builds</p>
+          <p class="mechanism-desc">Cell repairs stronger than before — resilience builds</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- THE 3-STEP PROCESS -->
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <span class="section-label">Sacred Art</span>
+      <h2 class="section-title">The Practice</h2>
+      <p class="section-body">
+        Three disciplines form the heart of Rowan's work with plant medicine, each a bridge between the wild intelligence of the botanical world and the human body's capacity for renewal.
+      </p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-card-number">01</div>
+        <h3 class="service-card-title">Herbal Tinctures</h3>
+        <p class="service-card-desc">
+          Each tincture begins with a single plant, harvested at peak vitality. Fresh material is submerged in grain alcohol for weeks — sometimes months — drawing out the plant's essence. Bespoke formulations address each client's needs with the specificity of a conversation.
+        </p>
+        <span class="service-card-price">$85 — $140</span>
+      </article>
+      <article class="service-card">
+        <div class="service-card-number">02</div>
+        <h3 class="service-card-title">Flower Essences</h3>
+        <p class="service-card-desc">
+          Blossoms collected at sunrise, floating in spring water exposed to sunlight. The water absorbs the flower's vibrational signature, preserved in brandy. Subtle but persistent — a tuning fork for the emotional body.
+        </p>
+        <span class="service-card-price">$65 — $95</span>
+      </article>
+      <article class="service-card">
+        <div class="service-card-number">03</div>
+        <h3 class="service-card-title">Medicinal Teas</h3>
+        <p class="service-card-desc">
+          The simplest and most ancient form of plant medicine. Each blend is hand-mixed, combining dried herbs in proportions calibrated to constitution and season. A daily ritual of self-care.
+        </p>
+        <span class="service-card-price">$45 — $75</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
   <section id="process">
     <div class="section-inner">
       <span class="section-label">The Method</span>
@@ -112,339 +145,36 @@
           <span class="process-phase">Before</span>
           <h3 class="process-title">Study the Origin</h3>
           <p class="process-text">
-            Study the plant's geographic origin. Know the soil, the altitude, the season
-            of harvest. Context determines chemistry.
+            Study the plant's geographic origin. Know the soil, the altitude, the season of harvest. Context determines chemistry.
           </p>
         </div>
         <div class="process-card">
           <span class="process-phase">During</span>
-          <h3 class="process-title">Brew at 90Â°C</h3>
+          <h3 class="process-title">Brew at 90&deg;C</h3>
           <p class="process-text">
-            Brew at 90Â°C â€” never boiling. Excessive heat destroys volatile compounds
-            and degrades the very molecules that heal.
+            Brew at 90&deg;C — never boiling. Excessive heat destroys volatile compounds and degrades the very molecules that heal.
           </p>
         </div>
         <div class="process-card">
           <span class="process-phase">After</span>
           <h3 class="process-title">Observe for 4 Hours</h3>
           <p class="process-text">
-            Observe the body's subtle reaction over 4 hours. The body speaks in whispers â€”
-            learn its language.
+            Observe the body's subtle reaction over 4 hours. The body speaks in whispers — learn its language.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRACTITIONER'S VOW -->
+  <!-- VOW -->
   <section id="vow">
     <div class="section-inner">
       <div class="vow-block">
         <span class="section-label">The Commitment</span>
         <h2 class="vow-text">
-          "I do not heal with plants. I heal with the intelligence of the soil.
-          Every leaf carries 400 million years of evolutionary problem-solving.
-          I am merely the translator between root and body."
+          "I do not heal with plants. I heal with the intelligence of the soil. Every leaf carries 400 million years of evolutionary problem-solving. I am merely the translator between root and body."
         </h2>
-        <span class="vow-attribution">â€” The Practitioner's Vow</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRY THIS NOW -->
-  <section id="try-now">
-    <div class="section-inner">
-      <span class="section-label">Immediate Experience</span>
-      <h2 class="section-title">Try This Now</h2>
-      <div class="try-card">
-        <div class="try-instruction">
-          <p class="try-text">
-            Chew a single cardamom seed. Notice the immediate cooling in the throat.
-            That is a compound called <strong>terpineol</strong> at work.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQs -->
-  <section id="faqs">
-    <div class="section-inner">
-      <span class="section-label">Questions Answered</span>
-      <h2 class="section-title">Frequently Asked</h2>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary class="faq-question">"Is this just tea?"</summary>
-          <p class="faq-answer">
-            No. It's a targeted molecular intervention. Each formulation is designed
-            to deliver specific phyto-compounds to specific receptor sites.
-          </p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">"Can I mix herbs?"</summary>
-          <p class="faq-answer">
-            Only if you know synergies. Some herbs amplify each other; others cancel
-            or interfere. A trained herbalist understands these relationships.
-          </p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">"Can I use them with medication?"</summary>
-          <p class="faq-answer">
-            Always consult your doctor. Herbal compounds can alter pharmaceutical
-            metabolism. Safety requires transparency between practitioner and physician.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEXICON -->
-  <section id="lexicon">
-    <div class="section-inner">
-      <span class="section-label">The Vocabulary</span>
-      <h2 class="section-title">Lexicon</h2>
-      <div class="lexicon-grid">
-        <div class="lexicon-entry">
-          <h3 class="lexicon-term">Tincture</h3>
-          <p class="lexicon-def">Alcohol extract. A concentrated liquid drawn from plant material over weeks of maceration.</p>
-        </div>
-        <div class="lexicon-entry">
-          <h3 class="lexicon-term">Decoction</h3>
-          <p class="lexicon-def">Boiled root extract. Hard plant materials simmered slowly to release deeper compounds.</p>
-        </div>
-        <div class="lexicon-entry">
-          <h3 class="lexicon-term">Adjunct</h3>
-          <p class="lexicon-def">A complementary herb. Added to a formula to support, guide, or soften the primary plant's action.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DIGITAL HERBARIUM (Interactive Feature) -->
-  <section id="herbarium">
-    <div class="section-inner">
-      <span class="section-label">Digital Herbarium</span>
-      <h2 class="section-title">Pressed Specimens</h2>
-      <p class="section-body">
-        Each specimen below arrives as you scroll â€” a fragment of the living archive Sage has built over decades of fieldwork and study.
-      </p>
-    </div>
-    <div class="herbarium-track">
-      <div class="specimen" data-specimen="0">
-        <div class="specimen-plate">
-          <div class="specimen-image" style="background-image: url('images/specimen-01.jpg')"></div>
-          <div class="specimen-info">
-            <h3 class="specimen-name">Echinacea purpurea</h3>
-            <p class="specimen-common">Purple Coneflower</p>
-            <p class="specimen-note">
-              Gathered at dawn along the Willamette trail in late July, when the purple petals are at their most
-              vivid and the central cone glistens with morning dew. This specimen was pressed between pages of
-              an old botany field guide and left to dry for three weeks. Echinacea has been Sage's most trusted
-              ally for bolstering the immune system during the damp Portland winters â€” she steepes the dried
-              root in warm water and honey, creating a remedy that tastes of earth and quiet strength. The
-              plant teaches patience; its healing is slow but certain, building resilience one cup at a time.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="specimen" data-specimen="1">
-        <div class="specimen-plate">
-          <div class="specimen-image" style="background-image: url('images/specimen-02.jpg')"></div>
-          <div class="specimen-info">
-            <h3 class="specimen-name">Hypericum perforatum</h3>
-            <p class="specimen-common">St. John's Wort</p>
-            <p class="specimen-note">
-              Found growing wild on the sunlit banks of the Columbia River Gorge, where the summer light
-              falls in long golden sheets across the hillside. Sage harvests the flowering tops in late
-              June, hanging them upside down in her drying room until the petals crumble at a touch. The
-              resulting oil glows a deep, almost translucent red â€” a color she calls "captured sunlight."
-              This remedy is her go-to for emotional shadows, for the grey days when the spirit dims.
-              A few drops beneath the tongue, and the world seems to find its color again. It is not a
-              cure, she says, but a reminder that light always returns.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="specimen" data-specimen="2">
-        <div class="specimen-plate">
-          <div class="specimen-image" style="background-image: url('images/specimen-03.jpg')"></div>
-          <div class="specimen-info">
-            <h3 class="specimen-name">Valeriana officinalis</h3>
-            <p class="specimen-common">Valerian Root</p>
-            <p class="specimen-note">
-              Dug from the rich, dark soil of Sage's own garden bed after the first autumn rains, when the
-              root system has stored its deepest potency. The smell is pungent â€” earthy, musky, almost
-              animal â€” and not everyone appreciates it, but Sage considers it the scent of deep rest
-              made manifest. She tinctures the fresh root in grain alcohol for six weeks, shaking the jar
-              each morning as a small ritual of intention. The resulting extract is reserved for those nights
-              when sleep will not come, when the mind races through corridors of worry. A dropperful in warm
-              water, and the body remembers how to surrender. It is, she says, the plant's way of saying
-              "you have done enough for today."
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="specimen" data-specimen="3">
-        <div class="specimen-plate">
-          <div class="specimen-image" style="background-image: url('images/specimen-04.jpg')"></div>
-          <div class="specimen-info">
-            <h3 class="specimen-name">Calendula officinalis</h3>
-            <p class="specimen-common">Pot Marigold</p>
-            <p class="specimen-note">
-              Grown in terra cotta pots on the windowsill of Sage's kitchen, where they catch the morning
-              light and turn their faces toward the sun with an almost devotional faithfulness. The petals
-              are harvested individually, a meditative task she performs while listening to old radio programs.
-              Infused into olive oil for several weeks, they produce a golden salve that heals cuts, burns,
-              and dry skin with a gentleness that pharmaceutical creams cannot match. Sage calls calendula
-              "the plant that teaches us to be soft without being weak" â€” its resilience lies in flexibility,
-              in the willingness to bend with wind and weather without breaking.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="specimen" data-specimen="4">
-        <div class="specimen-plate">
-          <div class="specimen-image" style="background-image: url('images/specimen-05.jpg')"></div>
-          <div class="specimen-info">
-            <h3 class="specimen-name">Matricaria chamomilla</h3>
-            <p class="specimen-common">German Chamomile</p>
-            <p class="specimen-note">
-              A handful of dried chamomile flowers, their golden hearts still fragrant after months in a
-              glass jar with a cork stopper. Sage sources these from a small organic farm in the
-              Yamhill Valley, where the grower lets the plants go to seed each year so they return
-              unbidden, wilder and more abundant than before. She brews them into a tea so delicate it
-              tastes like sunlight filtered through honey â€” a remedy for anxious hearts and churning
-              stomachs. She often gives it to children, watching their eyes grow heavy and peaceful as
-              the warmth spreads through them. Chamomile is her reminder that medicine need not be
-              bitter to be powerful, that healing can arrive disguised as a kindness.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="specimen" data-specimen="5">
-        <div class="specimen-plate">
-          <div class="specimen-image" style="background-image: url('images/specimen-06.jpg')"></div>
-          <div class="specimen-info">
-            <h3 class="specimen-name">Taraxacum officinale</h3>
-            <p class="specimen-common">Dandelion</p>
-            <p class="specimen-note">
-              The most misunderstood of all plants, Sage says â€” dismissed as a weed by those who do not
-              know its gifts. She digs the roots from her own lawn each spring, when the bitter green
-              leaves are still young and tender. The root, roasted slowly until it turns the color of
-              dark coffee, makes a decoction that supports the liver and kidneys with quiet, persistent
-              efficiency. It is the first remedy she reaches for when clients arrive with the heaviness
-              of accumulated toxins, the sluggishness that comes from living too long indoors. Dandelion
-              teaches that nothing is truly unwanted â€” that every plant, every creature, every moment
-              has a purpose waiting to be recognized.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SACRED ART -->
-  <section id="sacred-art">
-    <div class="section-inner">
-      <span class="section-label">Sacred Art</span>
-      <h2 class="section-title">The Practice</h2>
-      <p class="section-body">
-        Three disciplines form the heart of Sage's work with plant medicine, each one a bridge between
-        the wild intelligence of the botanical world and the human body's innate capacity for renewal.
-      </p>
-    </div>
-    <div class="practices-grid">
-      <article class="practice-card">
-        <div class="practice-number">01</div>
-        <h3 class="practice-name">Herbal Tinctures</h3>
-        <p class="practice-desc">
-          Each tincture begins with a single plant, harvested at the precise moment of its peak vitality.
-          Sage submerges the fresh material in grain alcohol and allows time â€” weeks, sometimes months â€”
-          to draw out the plant's essence. The result is a concentrated liquid that carries the intelligence
-          of the root or leaf in a form the body can readily absorb. She works with dozens of species,
-          crafting bespoke formulations that address each client's particular needs with the specificity
-          of a conversation rather than a prescription.
-        </p>
-      </article>
-      <article class="practice-card">
-        <div class="practice-number">02</div>
-        <h3 class="practice-name">Flower Essences</h3>
-        <p class="practice-desc">
-          Flower essences operate on the emotional and energetic body rather than the physical. Sage
-          collects blossoms at sunrise, floating them in spring water exposed to sunlight until the
-          water absorbs the flower's vibrational signature. This is then preserved in brandy and
-          administered in drops beneath the tongue. She uses them to address anxiety, grief, fear,
-          and the countless subtle disharmonies that undermine well-being before they manifest as
-          physical symptoms. The essences are subtle but persistent, working like a tuning fork for
-          the soul.
-        </p>
-      </article>
-      <article class="practice-card">
-        <div class="practice-number">03</div>
-        <h3 class="practice-name">Medicinal Teas</h3>
-        <p class="practice-desc">
-          The simplest and most ancient form of plant medicine, the tea is also the most intimate.
-          Sage blends each blend by hand, combining dried herbs in proportions calibrated to the
-          individual's constitution and the season's demands. She teaches her clients the art of
-          slow preparation â€” measuring, steeping, waiting â€” as a practice of mindfulness. The act of
-          making tea becomes a daily ritual of self-care, a small ceremony that anchors the body
-          and calms the mind. Every blend tells a story of place, of the specific meadow or forest
-          floor where each ingredient was gathered.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <!-- PHILOSOPHY -->
-  <section id="philosophy">
-    <div class="section-inner">
-      <span class="section-label">Philosophy</span>
-      <h2 class="section-title">Plant Wisdom</h2>
-      <div class="philosophy-pillars">
-        <div class="pillar">
-          <span class="pillar-number">I</span>
-          <h3 class="pillar-title">The Living Pharmacy</h3>
-          <p class="pillar-text">
-            Every forest, meadow, and roadside ditch is a dispensary waiting to be read. The plants
-            that grow most abundantly around us are often the ones we need most â€” nature does not
-            place medicine by accident. Learning to see the pharmacy that surrounds us is the first
-            act of herbal mastery, and it requires nothing more than attention and willingness to
-            kneel in the dirt.
-          </p>
-        </div>
-        <div class="pillar">
-          <span class="pillar-number">II</span>
-          <h3 class="pillar-title">Seasonal Attunement</h3>
-          <p class="pillar-text">
-            The body, like the landscape, moves through cycles of growth, rest, and renewal. Sage
-            teaches her clients to align their remedies and routines with the turning of the year â€”
-            cleansing in spring, nourishing in summer, preserving in autumn, and resting in winter.
-            This is not merely practical advice but a deeper invitation to remember that we are part
-            of the same intelligence that moves the sap and calls the birds.
-          </p>
-        </div>
-        <div class="pillar">
-          <span class="pillar-number">III</span>
-          <h3 class="pillar-title">Root and Rhythm</h3>
-          <p class="pillar-text">
-            Healing is not a destination but a rhythm â€” a pulse of effort and surrender, action
-            and stillness. The plant world embodies this truth in every season. A seed does not
-            rush to become a tree, and a wound does not heal by force of will alone. Sage guides
-            her clients toward patience with the process, trust in the body's intelligence, and
-            the understanding that the deepest healing often arrives in the quietest moments.
-          </p>
-        </div>
-        <div class="pillar">
-          <span class="pillar-number">IV</span>
-          <h3 class="pillar-title">Reciprocity with the Earth</h3>
-          <p class="pillar-text">
-            To take from the earth is to enter into a covenant. Sage never harvests more than a
-            tenth of any wild population, always leaves an offering of gratitude, and cultivates
-            medicinal gardens to supplement what she gathers from the wild. This ethic of
-            reciprocity is not sentiment but survival â€” the land that sustains us must itself
-            be sustained, or the medicine dries up and the conversation ends.
-          </p>
-        </div>
+        <span class="vow-attribution">&mdash; The Practitioner's Vow</span>
       </div>
     </div>
   </section>
@@ -457,111 +187,109 @@
       <div class="testimonials-grid">
         <blockquote class="testimonial">
           <p class="testimonial-text">
-            After years of insomnia that no pill could touch, a single tincture of valerian root and
-            passionflower â€” blended by Sage after a long conversation about my life and my worries â€”
-            gave me back the gift of sleep. Not forced sleep, not drugged oblivion, but the natural,
-            gentle closing of the day. She did not merely prescribe; she listened, and the remedy
-            she created carried that listening in every drop.
+            After years of insomnia that no pill could touch, a single tincture of valerian root and passionflower — blended by Rowan after a long conversation about my life — gave me back the gift of sleep. Not forced sleep, not drugged oblivion, but the natural, gentle closing of the day.
           </p>
-          <footer class="testimonial-author">â€” Miriam Cole, Portland</footer>
+          <footer class="testimonial-author">&mdash; Miriam Cole, Portland</footer>
         </blockquote>
         <blockquote class="testimonial">
           <p class="testimonial-text">
-            I came to Sage carrying a grief so heavy it had settled in my shoulders and my jaw.
-            She made me a flower essence from yarrow and wild rose, and she told me that grief is
-            not something to be cured but something to be carried with grace. Over the following
-            weeks, the essence did not remove my sorrow, but it softened its edges. I learned to
-            hold it differently, the way you hold a cup of tea â€” carefully, warmly, without spilling.
+            I came carrying a grief so heavy it had settled in my shoulders and jaw. Rowan made me a flower essence from yarrow and wild rose and told me that grief is not something to be cured but something to be carried with grace. The essence did not remove my sorrow, but it softened its edges.
           </p>
-          <footer class="testimonial-author">â€” David Tanaka, Lake Oswego</footer>
+          <footer class="testimonial-author">&mdash; David Tanaka, Lake Oswego</footer>
         </blockquote>
         <blockquote class="testimonial">
           <p class="testimonial-text">
-            My daughter was seven and terrified of thunderstorms. Sage gave us a small brown bottle
-            of chamomile and starflower essence, and we placed three drops under her tongue each
-            evening before bed. Within a month, she was sleeping through storms with her window
-            open, listening to the rain with something close to delight. I do not understand the
-            science of it, but I understand the result: my child is no longer afraid, and that
-            is medicine enough for me.
+            My daughter was seven and terrified of thunderstorms. Rowan gave us a small brown bottle of chamomile and starflower essence. Within a month, she was sleeping through storms with her window open. I do not understand the science, but I understand the result: my child is no longer afraid.
           </p>
-          <footer class="testimonial-author">â€” Elena Vasquez, Beaverton</footer>
+          <footer class="testimonial-author">&mdash; Elena Vasquez, Beaverton</footer>
         </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- JOURNEY -->
-  <section id="journey">
+  <!-- FAQ -->
+  <section id="faqs">
     <div class="section-inner">
-      <span class="section-label">Your Journey</span>
-      <h2 class="section-title">What to Expect</h2>
-      <p class="section-body">
-        Your first visit is not a consultation but a conversation â€” unhurried, exploratory, rooted in
-        genuine curiosity about your body's story and the life you are living. Sage will ask questions
-        that no doctor has asked, and together you will map the terrain of your well-being.
-      </p>
-      <div class="journey-steps">
-        <div class="journey-step">
-          <span class="step-number">01</span>
-          <h3 class="step-title">The Gathering</h3>
-          <p class="step-text">
-            Before your visit, Sage will ask you to keep a journal â€” noting your sleep, your energy,
-            your moods, and any symptoms that trouble you. She reads these notes the way a naturalist
-            reads a trail: each entry a clue, each pattern a signal.
+      <span class="section-label">Questions Answered</span>
+      <h2 class="section-title">Frequently Asked</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">"Is this just tea?"</summary>
+          <p class="faq-answer">
+            No. It's a targeted molecular intervention. Each formulation delivers specific phyto-compounds to specific receptor sites. The dose, the timing, and the combination matter as much as the plant itself.
           </p>
-        </div>
-        <div class="journey-step">
-          <span class="step-number">02</span>
-          <h3 class="step-title">The Listening</h3>
-          <p class="step-text">
-            Your first session lasts ninety minutes. Sage will take your history, ask about your
-            relationship with food, with nature, with rest. She observes your pulse, your complexion,
-            the quality of your voice. This is the heart of the practice â€” the moment where plant
-            and person begin to find each other.
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">"Can I mix herbs?"</summary>
+          <p class="faq-answer">
+            Only if you know the synergies. Some herbs amplify each other; others cancel or interfere. A trained herbalist understands these molecular relationships — what pharmacologists call "drug-herb interactions" is simply the plant speaking its own language.
           </p>
-        </div>
-        <div class="journey-step">
-          <span class="step-number">03</span>
-          <h3 class="step-title">The Crafting</h3>
-          <p class="step-text">
-            Within a week, Sage will have prepared your personalized tincture or tea blend. Each
-            formula is made by hand in small batches, using plants she has gathered or grown herself.
-            She includes detailed instructions and a letter explaining the reasoning behind each
-            ingredient.
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">"Can I use them with medication?"</summary>
+          <p class="faq-answer">
+            Always inform your physician. Herbal compounds can alter pharmaceutical metabolism through cytochrome P450 pathways. Safety requires transparency between practitioner and doctor.
           </p>
-        </div>
-        <div class="journey-step">
-          <span class="step-number">04</span>
-          <h3 class="step-title">The Tending</h3>
-          <p class="step-text">
-            Follow-up sessions occur monthly, where Sage adjusts your formula as the seasons change
-            and your body responds. She teaches you to notice small shifts â€” a deeper breath, a
-            calmer morning, a clearer mind â€” that indicate the medicine is finding its way.
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">"How long until I feel results?"</summary>
+          <p class="faq-answer">
+            Acute conditions may respond within days. Chronic patterns often require 4 to 8 weeks of consistent use. The body heals in its own time — our role is to support the process, not force it.
           </p>
-        </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">"Are herbs safe for children?"</summary>
+          <p class="faq-answer">
+            Many herbs are gentle enough for children at appropriate doses. However, children are not small adults — their metabolisms differ. Always work with a qualified practitioner for pediatric formulations.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">"Where do you source your plants?"</summary>
+          <p class="faq-answer">
+            Wildcrafted from the Pacific Northwest when possible, from land Rowan knows intimately. Supplemental herbs come from organic farms she has visited personally. Every specimen is identified, harvested, and processed by hand.
+          </p>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- LIVE EVENTS -->
+  <!-- EVENTS -->
   <section id="events">
     <div class="section-inner">
       <span class="section-label">Gatherings</span>
-      <h2 class="section-title">Live Events</h2>
-      <div class="events-list">
-        <p>Herb Walk – Monthly</p>
-        <p>Tincture Making – Quarterly</p>
-        <p>Medicinal Tea Ceremony – Weekly</p>
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-card-date">Monthly &middot; First Saturday</div>
+          <h3 class="event-card-title">Wild Herb Walk</h3>
+          <p class="event-card-desc">
+            Join Rowan on a guided walk through Portland's forests and meadows. Learn to identify medicinal plants in their natural habitat, understand their growing conditions, and harvest with respect. Bring a journal and sturdy shoes.
+          </p>
+          <button class="event-card-btn">Join Waitlist</button>
+        </div>
+        <div class="event-card">
+          <div class="event-card-date">Quarterly &middot; Next: September 14</div>
+          <h3 class="event-card-title">Tincture Making Workshop</h3>
+          <p class="event-card-desc">
+            A hands-on afternoon in Rowan's apothecary. Learn the art of extraction — selecting solvents, timing maceration, pressing and bottling. Each participant leaves with two custom tinctures of their own making.
+          </p>
+          <button class="event-card-btn">Join Waitlist</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- GIFT A SESSION -->
+  <!-- GIFT -->
   <section id="gift">
     <div class="section-inner">
       <span class="section-label">Share the Medicine</span>
       <h2 class="section-title">Gift a Sanctuary</h2>
-      <p class="section-body">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
+      <div class="gift-card">
+        <p class="gift-card-text">
+          Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.
+        </p>
+        <a href="#contact" class="btn">Gift a Session &rarr;</a>
+      </div>
     </div>
   </section>
 
@@ -569,7 +297,7 @@
   <section id="contact">
     <div class="section-inner">
       <span class="section-label">Find the Garden</span>
-      <h2 class="section-title">Visit Sage Wildroot</h2>
+      <h2 class="section-title">Visit Rowan Earthwalker</h2>
       <div class="contact-details">
         <p class="contact-address">
           999 Herb Garden<br>
@@ -581,21 +309,38 @@
         </p>
       </div>
       <div class="contact-cta">
-        <a href="mailto:sage@herbalism.garden" class="btn-primary">Request Your Formulation</a>
+        <a href="mailto:rowan@herbalism.garden" class="btn">Request Your Formulation</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTRAINDICATIONS -->
-  <footer id="contraindications">
-    <div class="section-inner">
-      <span class="section-label">Important Notice</span>
-      <h2 class="section-title">Contraindications</h2>
-      <p class="section-body">
-        Herbal medicine can interact with pharmaceuticals. Always inform your doctor.
-        Some herbs are toxic in incorrect doses. Never harvest wild plants without
-        expert identification.
-      </p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <p class="footer__quote">
+          "Let the beauty we love be what we do. There are hundreds of ways to kneel and kiss the ground."
+        </p>
+        <span class="footer__attribution">&mdash; Rumi</span>
+      </div>
+      <div>
+        <h4 class="footer__heading">Navigate</h4>
+        <a href="#about" class="footer__link">About</a>
+        <a href="#services" class="footer__link">Services</a>
+        <a href="#process" class="footer__link">Process</a>
+        <a href="#faqs" class="footer__link">FAQ</a>
+        <a href="#events" class="footer__link">Events</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Connect</h4>
+        <a href="#contact" class="footer__link">Book a Session</a>
+        <a href="mailto:rowan@herbalism.garden" class="footer__link">Email</a>
+        <a href="#gift" class="footer__link">Gift a Session</a>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p class="footer__copy">&copy; 2026 Rowan Earthwalker Herbalism. All rights reserved.</p>
+      <p class="footer__credit">Designed by <a href="https://empathystudio.com" target="_blank" rel="noopener">Empathy Studio</a></p>
     </div>
   </footer>
 
@@ -607,29 +352,29 @@
       </span>
       <span class="nav-label">Home</span>
     </a>
-    <a href="#herbarium" class="nav-item" data-section="herbarium">
+    <a href="#about" class="nav-item" data-section="about">
       <span class="nav-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12 6v6l4 2"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       </span>
-      <span class="nav-label">Herbarium</span>
+      <span class="nav-label">About</span>
     </a>
-    <a href="#sacred-art" class="nav-item" data-section="sacred-art">
+    <a href="#services" class="nav-item" data-section="services">
       <span class="nav-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </span>
-      <span class="nav-label">Sacred Art</span>
+      <span class="nav-label">Services</span>
     </a>
-    <a href="#philosophy" class="nav-item" data-section="philosophy">
+    <a href="#faqs" class="nav-item" data-section="faqs">
       <span class="nav-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
       </span>
-      <span class="nav-label">Philosophy</span>
+      <span class="nav-label">FAQ</span>
     </a>
-    <a href="#testimonials" class="nav-item" data-section="testimonials">
+    <a href="#events" class="nav-item" data-section="events">
       <span class="nav-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       </span>
-      <span class="nav-label">Voices</span>
+      <span class="nav-label">Events</span>
     </a>
     <a href="#contact" class="nav-item" data-section="contact">
       <span class="nav-icon">
@@ -639,7 +384,7 @@
     </a>
   </nav>
 
-  <script src="script.js"></script>
-<script src="meta-layer.js"></script></body>
+  <script type="module" src="script.js"></script>
+  <script src="../meta-layer.js"></script>
+</body>
 </html>
-

@@ -1,49 +1,77 @@
 /* ═══════════════════════════════════════════════════
-   HERBALISM — Script
-   Outsider Art Digital × Botanical Dark
+   HERBALISM — Botanical Dark Process
+   GSAP-Powered Scroll-Driven Hero + Section Reveals
    ═══════════════════════════════════════════════════ */
 
-(function () {
-  'use strict';
+import { gsap, ScrollTrigger } from '../src/utils/motion.js';
 
-  /* ── Hero Image Sequence Scrub ─────────────────── */
+gsap.registerPlugin(ScrollTrigger);
+
+/* ── Loading Screen ───────────────────────────── */
+function initLoader() {
+  const loader = document.getElementById('loader');
+  if (!loader) return;
+
+  window.addEventListener('load', () => {
+    gsap.to(loader, {
+      opacity: 0,
+      duration: 0.6,
+      delay: 2.2,
+      ease: 'power2.out',
+      onComplete: () => {
+        loader.classList.add('is-hidden');
+        initHeroSequence();
+      },
+    });
+  });
+}
+
+/* ── Hero: 600vh Scroll-Driven Image Sequence ─── */
+function initHeroSequence() {
   const hero = document.getElementById('hero');
   const frames = document.querySelectorAll('.hero-frame');
   const progressBar = document.getElementById('heroProgress');
   const totalFrames = frames.length;
 
-  function updateHeroSequence() {
-    const rect = hero.getBoundingClientRect();
-    const scrolled = -rect.top;
-    const maxScroll = rect.height - window.innerHeight;
-    const progress = Math.max(0, Math.min(1, scrolled / maxScroll));
+  if (!hero || !frames.length) return;
 
-    const frameIndex = Math.min(
-      Math.floor(progress * totalFrames),
-      totalFrames - 1
-    );
+  ScrollTrigger.create({
+    trigger: hero,
+    start: 'top top',
+    end: 'bottom bottom',
+    scrub: true,
+    onUpdate: (self) => {
+      const progress = self.progress;
+      const frameIndex = Math.min(
+        Math.floor(progress * totalFrames),
+        totalFrames - 1
+      );
 
-    frames.forEach((frame, i) => {
-      frame.classList.toggle('active', i === frameIndex);
-    });
+      frames.forEach((frame, i) => {
+        frame.classList.toggle('active', i === frameIndex);
+      });
 
-    if (progressBar) {
-      progressBar.style.width = (progress * 100) + '%';
-    }
-  }
+      if (progressBar) {
+        progressBar.style.width = (progress * 100) + '%';
+      }
+    },
+  });
+}
 
-  /* ── Scroll Reveal (IntersectionObserver) ──────── */
+/* ── Scroll Reveal (IntersectionObserver) ──────── */
+function initScrollReveals() {
   const revealElements = document.querySelectorAll(
     '.section-label, .section-title, .section-body, ' +
-    '.detail, .practice-card, .pillar, .testimonial, ' +
-    '.journey-step, .contact-address, .contact-hours, .contact-cta'
+    '.detail, .service-card, .process-card, .testimonial, ' +
+    '.faq-item, .event-card, .gift-card, .contact-address, ' +
+    '.contact-hours, .contact-cta, .vow-block'
   );
 
-  revealElements.forEach(el => el.classList.add('reveal'));
+  revealElements.forEach((el) => el.classList.add('reveal'));
 
-  const revealObserver = new IntersectionObserver(
+  const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
@@ -52,34 +80,20 @@
     { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
   );
 
-  revealElements.forEach(el => revealObserver.observe(el));
+  revealElements.forEach((el) => observer.observe(el));
+}
 
-  /* ── Digital Herbarium — Specimen Slide-In ─────── */
-  const specimens = document.querySelectorAll('.specimen');
-
-  const specimenObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -80px 0px' }
-  );
-
-  specimens.forEach(s => specimenObserver.observe(s));
-
-  /* ── Bottom Nav Active State ───────────────────── */
+/* ── Bottom Nav Active State (IntersectionObserver) ── */
+function initBottomNav() {
   const navItems = document.querySelectorAll('.nav-item');
   const sections = document.querySelectorAll('section[id]');
 
-  const navObserver = new IntersectionObserver(
+  const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute('id');
-          navItems.forEach(item => {
+          navItems.forEach((item) => {
             item.classList.toggle(
               'active',
               item.getAttribute('data-section') === id
@@ -91,29 +105,14 @@
     { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' }
   );
 
-  sections.forEach(sec => navObserver.observe(sec));
+  sections.forEach((sec) => observer.observe(sec));
+}
 
-  /* ── Scroll Listeners (passive) ────────────────── */
-  let ticking = false;
+/* ── Smooth Scroll for Nav ─────────────────────── */
+function initSmoothScroll() {
+  const navItems = document.querySelectorAll('.nav-item');
 
-  function onScroll() {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        updateHeroSequence();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', () => updateHeroSequence(), { passive: true });
-
-  /* ── Initial State ─────────────────────────────── */
-  updateHeroSequence();
-
-  /* ── Smooth Scroll for Nav ─────────────────────── */
-  navItems.forEach(item => {
+  navItems.forEach((item) => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = item.getAttribute('href').substring(1);
@@ -123,5 +122,154 @@
       }
     });
   });
+}
 
-})();
+/* ── Section Stagger Reveals (GSAP) ────────────── */
+function initSectionStagger() {
+  // Stagger process cards
+  gsap.from('.process-card', {
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: 'expo.out',
+    scrollTrigger: {
+      trigger: '.process-steps',
+      start: 'top 80%',
+      once: true,
+    },
+  });
+
+  // Stagger service cards
+  gsap.from('.service-card', {
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: 'expo.out',
+    scrollTrigger: {
+      trigger: '.services-grid',
+      start: 'top 80%',
+      once: true,
+    },
+  });
+
+  // Stagger testimonials
+  gsap.from('.testimonial', {
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: 'expo.out',
+    scrollTrigger: {
+      trigger: '.testimonials-grid',
+      start: 'top 80%',
+      once: true,
+    },
+  });
+
+  // Stagger event cards
+  gsap.from('.event-card', {
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: 'expo.out',
+    scrollTrigger: {
+      trigger: '.events-grid',
+      start: 'top 80%',
+      once: true,
+    },
+  });
+
+  // Stagger FAQ items
+  gsap.from('.faq-item', {
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.08,
+    ease: 'expo.out',
+    scrollTrigger: {
+      trigger: '.faq-list',
+      start: 'top 80%',
+      once: true,
+    },
+  });
+
+  // Stagger about details
+  gsap.from('.detail', {
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.12,
+    ease: 'expo.out',
+    scrollTrigger: {
+      trigger: '.about-details',
+      start: 'top 85%',
+      once: true,
+    },
+  });
+}
+
+/* ── Vow Parallax ──────────────────────────────── */
+function initVowParallax() {
+  const vowText = document.querySelector('.vow-text');
+  if (!vowText) return;
+
+  gsap.from(vowText, {
+    x: -30,
+    opacity: 0,
+    duration: 1.2,
+    ease: 'expo.out',
+    scrollTrigger: {
+      trigger: '#vow',
+      start: 'top 75%',
+      once: true,
+    },
+  });
+}
+
+/* ── Mechanism Step Reveal ─────────────────────── */
+function initMechanismReveal() {
+  gsap.from('.mechanism-step', {
+    y: 40,
+    opacity: 0,
+    scale: 0.95,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: 'expo.out',
+    scrollTrigger: {
+      trigger: '.mechanism-diagram',
+      start: 'top 80%',
+      once: true,
+    },
+  });
+}
+
+/* ── Footer Reveal ─────────────────────────────── */
+function initFooterReveal() {
+  gsap.from('.footer__inner > *', {
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: 'expo.out',
+    scrollTrigger: {
+      trigger: '.footer',
+      start: 'top 85%',
+      once: true,
+    },
+  });
+}
+
+/* ── Initialize Everything ─────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  initLoader();
+  initScrollReveals();
+  initBottomNav();
+  initSmoothScroll();
+  initSectionStagger();
+  initVowParallax();
+  initMechanismReveal();
+  initFooterReveal();
+});

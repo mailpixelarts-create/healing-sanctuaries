@@ -1,27 +1,49 @@
-import './styles/meta-layer.css';
-import { initFirstTimeVisitor } from './components/Modal.js';
-import { initOutcomeTracker } from './components/Tracker.js';
-import { initSkepticsCorner } from './components/Skeptics.js';
-import { initEmergencyReset } from './components/Emergency.js';
-import { initDetoxMode } from './components/Detox.js';
-import { initTranslation } from './components/Translation.js';
-import { addStructuredData } from './components/StructuredData.js';
+// ============================================
+// HEALING SANCTUARIES — MAIN ENTRY POINT
+// Initializes shared systems per site
+// ============================================
 
-// Initialize all meta-layers
-document.addEventListener('DOMContentLoaded', () => {
-  initFirstTimeVisitor();
-  initSkepticsCorner();
-  initDetoxMode();
-  initEmergencyReset();
+import { initLenis } from './utils/scroll.js';
+import { initScrollReveals, initParallax, initSectionReveals, initMagneticButtons, initTextSplits, refreshScrollTrigger } from './utils/motion.js';
+import {
+  initVisitorModal,
+  initOutcomeTracker,
+  initEmergencyReset,
+  initDetoxMode,
+  initTranslation,
+  addStructuredData,
+} from './utils/meta-layers.js';
+
+// --- Initialize Core Systems ---
+function init() {
+  // Lenis smooth scroll
+  initLenis();
+
+  // GSAP motion systems
+  initScrollReveals();
+  initParallax();
+  initSectionReveals();
+  initMagneticButtons();
+  initTextSplits();
+
+  // Meta-layers
+  initVisitorModal();
   initOutcomeTracker();
-  initTranslation();
-  
-  // Add structured data for homepage
-  addStructuredData({
-    name: 'Healing Sanctuaries',
-    description: '14 unique cinematic healing modality websites with dark aesthetic'
-  });
-});
+  initEmergencyReset();
+  initDetoxMode();
 
-// Export for use in individual sanctuary pages
-export { initOutcomeTracker, addStructuredData };
+  // Refresh ScrollTrigger after images load
+  window.addEventListener('load', () => {
+    refreshScrollTrigger();
+  });
+}
+
+// Run on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+
+// Export for site-specific scripts
+export { initLenis, initScrollReveals, initParallax, initSectionReveals, initMagneticButtons, initTextSplits, refreshScrollTrigger, addStructuredData };

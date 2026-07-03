@@ -1,577 +1,471 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qi Gong â€” Move the Qi, Move the Life</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Qi Gong - Master Li Junfeng","description":"Move the Qi, Move the Life","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qi Gong — Move the Qi, Move the Life</title>
+  <meta name="description" content="Qi Gong healing sanctuary with Master Liang. Ancient wisdom for modern being. Interstitial fluid therapy through meditative movement.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.scss">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Qi Gong Healing Sanctuary — Master Liang",
+    "description": "Qi Gong healing through interstitial fluid manipulation and meditative movement. Move the Qi, Move the Life.",
+    "medicalAudience": {
+      "@type": "PatientAudience",
+      "audienceType": "Patient"
+    }
+  }
+  </script>
 </head>
 <body>
-    <div class="preloader" id="preloader">
-        <div class="preloader-text">æ°”</div>
+
+  <!-- ===== PRELOADER — Breathing Scale ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <span class="preloader-glyph">气</span>
+      <span class="preloader-text">Gathering Qi</span>
     </div>
+  </div>
 
-    <nav class="nav-circle" id="nav">
-        <div class="nav-ring">
-            <a href="#about" class="nav-item" style="--i:0">About</a>
-            <a href="#brocades" class="nav-item" style="--i:1">8 Brocades</a>
-            <a href="#sacred" class="nav-item" style="--i:2">Sacred Art</a>
-            <a href="#philosophy" class="nav-item" style="--i:3">Philosophy</a>
-            <a href="#testimonials" class="nav-item" style="--i:4">Stories</a>
-            <a href="#journey" class="nav-item" style="--i:5">Journey</a>
-            <a href="#contact" class="nav-item" style="--i:6">Contact</a>
-        </div>
-        <div class="nav-toggle" id="navToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+  <!-- ===== NAVIGATION — Circular Ring ===== -->
+  <nav class="nav-ring" id="navRing">
+    <div class="nav-items" id="navItems">
+      <a href="#about" class="nav-item nav-item--0">About</a>
+      <a href="#mechanism" class="nav-item nav-item--1">Mechanism</a>
+      <a href="#services" class="nav-item nav-item--2">Services</a>
+      <a href="#brocades" class="nav-item nav-item--3">8 Brocades</a>
+      <a href="#process" class="nav-item nav-item--4">Process</a>
+      <a href="#testimonials" class="nav-item nav-item--5">Stories</a>
+      <a href="#events" class="nav-item nav-item--6">Events</a>
+      <a href="#contact" class="nav-item nav-item--7">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 
-    <section class="hero" id="hero">
-        <canvas id="physicsCanvas"></canvas>
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="qi-word" data-physics="true">QI</span>
-            </h1>
-            <p class="hero-tagline">Move the Qi, Move the Life</p>
-            <p class="hero-sub">Ancient wisdom for modern being</p>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+  <!-- ===== HERO — Atelier Invitation + Physics ===== -->
+  <section class="hero" id="hero">
+    <canvas id="physicsCanvas"></canvas>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span data-physics="true">Q</span><span data-physics="true">I</span>
+      </h1>
+      <p class="hero-tagline">Move the Qi, Move the Life</p>
+      <p class="hero-sub">Ancient wisdom for modern being</p>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+      <label>Descend</label>
+    </div>
+  </section>
 
-    <section class="section about" id="about">
-        <div class="section-inner">
-            <div class="section-label">01 â€” About</div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2 class="section-title">The Master<br>Within</h2>
-                    <p class="body-text">Master Li Junfeng has devoted four decades to the cultivation of Qi. His practice bridges ancient Daoist traditions with contemporary understanding of energy and movement.</p>
-                    <p class="body-text">Through precise, flowing movements and deep meditative states, Master Li guides practitioners to rediscover the innate wisdom of their bodies. Each session is a journey inward â€” a return to the source of vitality.</p>
-                    <p class="body-text">"Master Li Junfeng was a martial arts champion who nearly died in a car accident at 35. While recovering, a Qi Gong master visited his hospital bed. Six months later, Master Li was teaching the same practice that saved him."</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">40+</span>
-                            <span class="stat-label">Years of Practice</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Sacred Arts</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">âˆž</span>
-                            <span class="stat-label">Qi Flow</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual">
-                    <div class="visual-frame">
-                        <div class="frame-corner frame-tl"></div>
-                        <div class="frame-corner frame-tr"></div>
-                        <div class="frame-corner frame-bl"></div>
-                        <div class="frame-corner frame-br"></div>
-                        <div class="visual-placeholder">
-                            <span class="visual-char">æ°”</span>
-                        </div>
-                    </div>
-                </div>
+  <!-- ===== ABOUT — Master Liang ===== -->
+  <section class="section about" id="about">
+    <div class="section-inner">
+      <div class="section-label reveal">01 — About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title reveal">The Master<br>Within</h2>
+          <p class="body-text reveal">Master Liang Wei-Chen has devoted sixty years to the cultivation of Qi. His practice bridges ancient Daoist traditions with contemporary understanding of energy and movement.</p>
+          <p class="body-text reveal">Through precise, flowing movements and deep meditative states, Master Liang guides practitioners to rediscover the innate wisdom of their bodies. Each session is a journey inward — a return to the source of vitality.</p>
+          <p class="body-text reveal">Born in Wudang Mountains, Master Liang began training at age twelve. At eighty-two, he still teaches dawn sessions daily, proving that the body's capacity for renewal knows no age when the Qi flows freely.</p>
+          <div class="about-stats reveal">
+            <div class="stat">
+              <span class="stat-number">60+</span>
+              <span class="stat-label">Years of Practice</span>
             </div>
-        </div>
-    </section>
-
-    <section class="section mechanism" id="mechanism">
-        <div class="section-inner">
-            <div class="section-label">02 â€” The Mechanism</div>
-            <h2 class="section-title">How Qi Gong<br>Actually Works</h2>
-            <div class="mechanism-grid">
-                <div class="mechanism-text">
-                    <p class="body-text">Qi Gong manipulates the <strong>interstitial fluid</strong> â€” the 20% of water not in blood cells. Specific slow movements create mechanical shear stress, which increases ATP (energy) production in the mitochondria.</p>
-                    <p class="body-text">This is not metaphor. This is cellular biology. The "energy" you feel is real â€” it is the hum of your cells waking up.</p>
-                </div>
-                <div class="mechanism-visual">
-                    <div class="mechanism-diagram">
-                        <div class="diagram-node diagram-movement">Slow<br>Movement</div>
-                        <div class="diagram-arrow">â†’</div>
-                        <div class="diagram-node diagram-shear">Shear<br>Stress</div>
-                        <div class="diagram-arrow">â†’</div>
-                        <div class="diagram-node diagram-atp">ATP<br>Production</div>
-                    </div>
-                </div>
+            <div class="stat">
+              <span class="stat-number">82</span>
+              <span class="stat-label">Years of Age</span>
             </div>
-        </div>
-    </section>
-
-    <section class="section brocades" id="brocades">
-        <div class="section-inner">
-            <div class="section-label">03 â€” The 8 Brocades</div>
-            <h2 class="section-title">Eight Movements,<br>One Flow</h2>
-            <p class="body-text max-w">Click each movement to see it performed. Follow along with the silhouette.</p>
-            
-            <div class="brocades-timeline">
-                <div class="timeline-line"></div>
-                
-                <div class="brocade-item" data-movement="1">
-                    <div class="brocade-number">01</div>
-                    <div class="brocade-content">
-                        <h3>Two Hands Hold<br>Up the Heavens</h3>
-                        <p>Stretches the triple burner, regulates qi flow throughout the entire body.</p>
-                    </div>
-                    <div class="brocade-silhouette" data-move="hands-up">
-                        <svg viewBox="0 0 120 200" class="silhouette-svg">
-                            <g class="silhouette-group">
-                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
-                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="30" y2="100" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="90" y2="100" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="brocade-item" data-movement="2">
-                    <div class="brocade-number">02</div>
-                    <div class="brocade-content">
-                        <h3>Drawing the Bow<br>to Shoot the Hawk</h3>
-                        <p>Opens the chest, strengthens the kidneys, and improves concentration.</p>
-                    </div>
-                    <div class="brocade-silhouette" data-move="bow-draw">
-                        <svg viewBox="0 0 120 200" class="silhouette-svg">
-                            <g class="silhouette-group">
-                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
-                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="20" y2="70" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="100" y2="60" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="35" y2="180" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="85" y2="180" stroke="currentColor" stroke-width="3"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="brocade-item" data-movement="3">
-                    <div class="brocade-number">03</div>
-                    <div class="brocade-content">
-                        <h3>Separate Heaven<br>and Earth</h3>
-                        <p>Regulates the spleen and stomach, improves digestion and metabolism.</p>
-                    </div>
-                    <div class="brocade-silhouette" data-move="heaven-earth">
-                        <svg viewBox="0 0 120 200" class="silhouette-svg">
-                            <g class="silhouette-group">
-                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
-                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="30" y2="30" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="90" y2="140" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="brocade-item" data-movement="4">
-                    <div class="brocade-number">04</div>
-                    <div class="brocade-content">
-                        <h3>Wise Owl Gazes<br>Backward</h3>
-                        <p>Releases neck tension, stimulates the nervous system, and calms the mind.</p>
-                    </div>
-                    <div class="brocade-silhouette" data-move="owl-gaze">
-                        <svg viewBox="0 0 120 200" class="silhouette-svg">
-                            <g class="silhouette-group">
-                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
-                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="35" y2="90" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="85" y2="90" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="brocade-item" data-movement="5">
-                    <div class="brocade-number">05</div>
-                    <div class="brocade-content">
-                        <h3>Swing the Head<br>and Shake the Tail</h3>
-                        <p>Releases heart fire, calms the spirit, and improves spinal flexibility.</p>
-                    </div>
-                    <div class="brocade-silhouette" data-move="swing-head">
-                        <svg viewBox="0 0 120 200" class="silhouette-svg">
-                            <g class="silhouette-group">
-                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
-                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="30" y2="80" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="90" y2="80" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="30" y2="180" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="90" y2="180" stroke="currentColor" stroke-width="3"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="brocade-item" data-movement="6">
-                    <div class="brocade-number">06</div>
-                    <div class="brocade-content">
-                        <h3>Two Hands Hold<br>the Feet</h3>
-                        <p>Strengthens the kidneys, tones the lower back, and improves flexibility.</p>
-                    </div>
-                    <div class="brocade-silhouette" data-move="hold-feet">
-                        <svg viewBox="0 0 120 200" class="silhouette-svg">
-                            <g class="silhouette-group">
-                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
-                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="40" y2="150" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="80" y2="150" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="45" y2="180" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="75" y2="180" stroke="currentColor" stroke-width="3"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="brocade-item" data-movement="7">
-                    <div class="brocade-number">07</div>
-                    <div class="brocade-content">
-                        <h3>Clench the Fists<br>and Glare Fiercely</h3>
-                        <p>Releases liver qi, strengthens muscles, and improves overall vitality.</p>
-                    </div>
-                    <div class="brocade-silhouette" data-move="clench-fists">
-                        <svg viewBox="0 0 120 200" class="silhouette-svg">
-                            <g class="silhouette-group">
-                                <circle cx="60" cy="30" r="12" fill="currentColor"/>
-                                <line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="30" y2="75" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="60" x2="90" y2="75" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="brocade-item" data-movement="8">
-                    <div class="brocade-number">08</div>
-                    <div class="brocade-content">
-                        <h3>Bouncing on<br>the Toes</h3>
-                        <p>Stimulates the spine, releases tension, and integrates all previous movements.</p>
-                    </div>
-                    <div class="brocade-silhouette" data-move="bounce-toes">
-                        <svg viewBox="0 0 120 200" class="silhouette-svg">
-                            <g class="silhouette-group">
-                                <circle cx="60" cy="25" r="12" fill="currentColor"/>
-                                <line x1="60" y1="37" x2="60" y2="105" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="55" x2="35" y2="85" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="55" x2="85" y2="85" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="105" x2="45" y2="175" stroke="currentColor" stroke-width="3"/>
-                                <line x1="60" y1="105" x2="75" y2="175" stroke="currentColor" stroke-width="3"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
+            <div class="stat">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Qi Flow</span>
             </div>
+          </div>
         </div>
-    </section>
-
-    <section class="section sacred" id="sacred">
-        <div class="section-inner">
-            <div class="section-label">04 â€” Sacred Art</div>
-            <h2 class="section-title">Three Paths<br>of Cultivation</h2>
-            
-            <div class="sacred-grid">
-                <div class="sacred-card">
-                    <div class="card-number">I</div>
-                    <h3>Standing<br>Meditation</h3>
-                    <p>Zhan Zhuang â€” the foundation of all Qi Gong practice. Standing like a tree, rooted yet growing. This practice builds internal awareness and cultivates the dantian.</p>
-                    <div class="card-accent"></div>
-                </div>
-                <div class="sacred-card">
-                    <div class="card-number">II</div>
-                    <h3>Silk<br>Reeling</h3>
-                    <p>Chan Si Gong â€” spiral movements that connect the entire body. Like unwinding silk from a cocoon, this practice reveals the hidden connections within.</p>
-                    <div class="card-accent"></div>
-                </div>
-                <div class="sacred-card">
-                    <div class="card-number">III</div>
-                    <h3>Five Animal<br>Frolics</h3>
-                    <p>Wu Qin Xi â€” embodying the movements of tiger, deer, monkey, bear, and crane. Each animal teaches a different quality of qi and movement.</p>
-                    <div class="card-accent"></div>
-                </div>
-            </div>
+        <div class="about-visual reveal-scale">
+          <div class="visual-frame">
+            <div class="frame-corner frame-corner--tl"></div>
+            <div class="frame-corner frame-corner--tr"></div>
+            <div class="frame-corner frame-corner--bl"></div>
+            <div class="frame-corner frame-corner--br"></div>
+            <span class="visual-frame-glyph">气</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section philosophy" id="philosophy">
-        <div class="section-inner">
-            <div class="section-label">05 â€” Philosophy</div>
-            <h2 class="section-title">The Way<br>of Qi</h2>
-            
-            <div class="philosophy-pillars">
-                <div class="pillar">
-                    <div class="pillar-icon">é“</div>
-                    <h3>The Dao</h3>
-                    <p>The natural way of the universe flows through all things. We do not create qi â€” we learn to move with it, to remove the obstacles that block its natural expression.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">æ°”</div>
-                    <h3>Qi Flow</h3>
-                    <p>Qi is the fundamental life force that animates all living things. When qi flows freely, health is maintained. When qi stagnates, disease arises. Our practice cultivates flow.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">ä¿®</div>
-                    <h3>Cultivation</h3>
-                    <p>Like tending a garden, qi cultivation requires patience, consistency, and presence. Each session deepens the relationship between mind, body, and spirit.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">å’Œ</div>
-                    <h3>Harmony</h3>
-                    <p>The goal is not mastery over nature, but harmony with it. We seek balance between yin and yang, effort and surrender, movement and stillness.</p>
-                </div>
-                <div class="pillar">
-                    <div class="pillar-icon">ç”Ÿ</div>
-                    <h3>Vitality</h3>
-                    <p>True vitality comes not from external stimulation but from internal cultivation. The qi gong practitioner radiates health from within, naturally and effortlessly.</p>
-                </div>
-            </div>
+  <!-- ===== MECHANISM — Interstitial Fluid ===== -->
+  <section class="section mechanism" id="mechanism">
+    <div class="section-inner">
+      <div class="section-label reveal">02 — The Mechanism</div>
+      <h2 class="section-title reveal">How Qi Gong<br>Actually Works</h2>
+      <div class="mechanism-grid">
+        <div class="mechanism-text">
+          <p class="body-text reveal">Qi Gong manipulates the <strong>interstitial fluid</strong> — the 20% of water not in blood cells. Specific slow movements create mechanical shear stress, which increases ATP (energy) production in the mitochondria.</p>
+          <p class="body-text reveal">This is not metaphor. This is cellular biology. The "energy" you feel is real — it is the hum of your cells waking up. The micro-circulation improvements measurable within a single session.</p>
+          <p class="body-text reveal">After practice, hold your hands apart. Feel the warmth. That is Qi — interstitial fluid responding to intentional movement. The body knows how to heal. We simply remove the obstacles.</p>
         </div>
-    </section>
-
-    <section class="section testimonials" id="testimonials">
-        <div class="section-inner">
-            <div class="section-label">06 â€” Stories</div>
-            <h2 class="section-title">Voices from<br>the Practice</h2>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">After years of chronic pain, Master Li's Qi Gong sessions gave me back my life. The movements are gentle yet powerful. I feel younger than I have in decades.</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">Sarah Chen</span>
-                        <span class="author-detail">Practicing for 5 years</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">I came skeptical and left transformed. The standing meditation alone changed how I understand my body. Qi is not mystical â€” it is profoundly practical.</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">Michael Torres</span>
-                        <span class="author-detail">Practicing for 3 years</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">The Five Animal Frolics brought playfulness back into my spiritual practice. Master Li teaches with such grace and humor. Every session is a gift.</p>
-                    <div class="testimonial-author">
-                        <span class="author-name">Lin Wei</span>
-                        <span class="author-detail">Practicing for 8 years</span>
-                    </div>
-                </div>
-            </div>
+        <div class="mechanism-diagram reveal-scale">
+          <div class="diagram-node">Slow<br>Movement</div>
+          <div class="diagram-arrow">→</div>
+          <div class="diagram-node">Shear<br>Stress</div>
+          <div class="diagram-arrow">→</div>
+          <div class="diagram-node">ATP<br>Production</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section journey" id="journey">
-        <div class="section-inner">
-            <div class="section-label">07 â€” Journey</div>
-            <h2 class="section-title">What to<br>Expect</h2>
-            
-            <div class="journey-steps">
-                <div class="journey-step">
-                    <div class="step-marker"></div>
-                    <div class="step-content">
-                        <h3>Arrival</h3>
-                        <p>Enter the studio space. Remove your shoes. Take a moment to transition from the outside world. Feel the bamboo beneath your feet.</p>
-                    </div>
-                </div>
-                <div class="journey-step">
-                    <div class="step-marker"></div>
-                    <div class="step-content">
-                        <h3>Breathing</h3>
-                        <p>Begin with standing meditation. Close your eyes. Feel the breath entering and leaving the body. Let the mind settle like sediment in water.</p>
-                    </div>
-                </div>
-                <div class="journey-step">
-                    <div class="step-marker"></div>
-                    <div class="step-content">
-                        <h3>Movement</h3>
-                        <p>Master Li guides you through flowing movements. There is no competition, no judgment. Simply follow the breath, follow the qi.</p>
-                    </div>
-                </div>
-                <div class="journey-step">
-                    <div class="step-marker"></div>
-                    <div class="step-content">
-                        <h3>Integration</h3>
-                        <p>Close with standing meditation. Feel the qi circulating. Notice the subtle shifts in awareness. Carry this peace into your day.</p>
-                    </div>
-                </div>
-            </div>
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services">
+    <div class="section-inner">
+      <div class="section-label reveal">03 — Services</div>
+      <h2 class="section-title reveal">Paths of<br>Cultivation</h2>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-card-number">I</div>
+          <h3>Standing<br>Meditation</h3>
+          <p>Zhan Zhuang — the foundation. Standing like a tree, rooted yet growing. Builds internal awareness and cultivates the dantian.</p>
+          <div class="service-card-accent"></div>
         </div>
-    </section>
-
-    <section class="section process" id="process">
-        <div class="section-inner">
-            <div class="section-label">09 â€” The 3-Step Process</div>
-            <h2 class="section-title">Before, During,<br>After</h2>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="process-phase">Before</div>
-                    <h3>Loosen Joints</h3>
-                    <p>Prepare the body by gently rotating each joint. Wake up the fascia. Create space for qi to move.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-phase">During</div>
-                    <h3>8 Movements</h3>
-                    <p>Broken Earth, Rowing the Boat, and six more flowing forms. Each movement targets a specific organ system and energy pathway.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-phase">After</div>
-                    <h3>The Heavy Glow</h3>
-                    <p>You will feel a 'heavy' glow in the palms. That is qi accumulating. Hold your hands apart â€” feel the field between them.</p>
-                </div>
-            </div>
+        <div class="service-card reveal">
+          <div class="service-card-number">II</div>
+          <h3>Silk<br>Reeling</h3>
+          <p>Chan Si Gong — spiral movements connecting the entire body. Like unwinding silk from a cocoon, revealing hidden connections within.</p>
+          <div class="service-card-accent"></div>
         </div>
-    </section>
-
-    <section class="section vow" id="vow">
-        <div class="section-inner">
-            <div class="section-label">10 â€” Practitioner's Vow</div>
-            <div class="vow-content">
-                <blockquote class="vow-quote">
-                    "I do not give you Qi. I help you remember that you are already made of it. The slow movement is not weakness â€” it is the speed at which the body actually heals."
-                </blockquote>
-                <div class="vow-attribution">â€” Master Li Junfeng</div>
-            </div>
+        <div class="service-card reveal">
+          <div class="service-card-number">III</div>
+          <h3>Five Animal<br>Frolics</h3>
+          <p>Wu Qin Xi — embodying tiger, deer, monkey, bear, and crane. Each animal teaches a different quality of qi and movement.</p>
+          <div class="service-card-accent"></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section faq" id="faq">
-        <div class="section-inner">
-            <div class="section-label">11 â€” Frequently Asked</div>
-            <h2 class="section-title">Questions &<br>Answers</h2>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">"Why so slow?"</div>
-                    <div class="faq-answer">Speed is not power; reach is power. Slow movement allows the body to actually feel what is happening. You cannot sense qi at the speed of stress.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">"Can I do this with an injury?"</div>
-                    <div class="faq-answer">Yes, adapt movement to pain-free range. Qi Gong meets you where you are. The practice heals â€” it does not harm.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">"What is the feeling in my hands?"</div>
-                    <div class="faq-answer">That is Qi â€” it's the warming of interstitial fluid. The increased circulation creates a palpable field of energy between your palms.</div>
-                </div>
-            </div>
+  <!-- ===== 8 BROCADES — Interactive ===== -->
+  <section class="section brocades" id="brocades">
+    <div class="section-inner">
+      <div class="section-label reveal">04 — The 8 Brocades</div>
+      <h2 class="section-title reveal">Eight Movements,<br>One Flow</h2>
+      <p class="body-text body-text--wide reveal" style="color: rgba(236,227,213,0.6);">Click each movement to see it performed. Follow along with the silhouette.</p>
+
+      <div class="brocades-timeline">
+        <div class="brocade-item reveal" data-movement="1">
+          <div class="brocade-num">01</div>
+          <div class="brocade-content">
+            <h3>Two Hands Hold<br>Up the Heavens</h3>
+            <p>Stretches the triple burner, regulates qi flow throughout the entire body.</p>
+          </div>
+          <div class="brocade-silhouette">
+            <svg viewBox="0 0 120 200"><g><circle cx="60" cy="30" r="12" fill="currentColor"/><line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="30" y2="30" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="90" y2="30" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/></g></svg>
+          </div>
         </div>
-    </section>
 
-    <section class="section lexicon" id="lexicon">
-        <div class="section-inner">
-            <div class="section-label">12 â€” Lexicon</div>
-            <h2 class="section-title">Words of<br>the Practice</h2>
-            
-            <div class="lexicon-grid">
-                <div class="lexicon-term">
-                    <div class="lexicon-word">Dantian</div>
-                    <div class="lexicon-def">The energy field (lower belly). Center of gravity, center of power.</div>
-                </div>
-                <div class="lexicon-term">
-                    <div class="lexicon-word">Jing</div>
-                    <div class="lexicon-def">Essence. The foundational substance of life, stored in the kidneys.</div>
-                </div>
-                <div class="lexicon-term">
-                    <div class="lexicon-word">Shen</div>
-                    <div class="lexicon-def">Spirit. The light of consciousness that radiates from the eyes.</div>
-                </div>
-            </div>
+        <div class="brocade-item reveal" data-movement="2">
+          <div class="brocade-num">02</div>
+          <div class="brocade-content">
+            <h3>Drawing the Bow<br>to Shoot the Hawk</h3>
+            <p>Opens the chest, strengthens the kidneys, and improves concentration.</p>
+          </div>
+          <div class="brocade-silhouette">
+            <svg viewBox="0 0 120 200"><g><circle cx="60" cy="30" r="12" fill="currentColor"/><line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="20" y2="70" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="100" y2="60" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="35" y2="180" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="85" y2="180" stroke="currentColor" stroke-width="3"/></g></svg>
+          </div>
         </div>
-    </section>
 
-    <section class="section try-now" id="try-now">
-        <div class="section-inner">
-            <div class="section-label">13 â€” Try This Now</div>
-            <div class="try-content">
-                <div class="try-instruction">
-                    <p class="try-step">Shake your hands vigorously for 10 seconds.</p>
-                    <p class="try-step">Hold them still.</p>
-                    <p class="try-step">Now count the pulse in your palms.</p>
-                    <p class="try-result">That is micro-circulation.</p>
-                </div>
-            </div>
+        <div class="brocade-item reveal" data-movement="3">
+          <div class="brocade-num">03</div>
+          <div class="brocade-content">
+            <h3>Separate Heaven<br>and Earth</h3>
+            <p>Regulates the spleen and stomach, improves digestion and metabolism.</p>
+          </div>
+          <div class="brocade-silhouette">
+            <svg viewBox="0 0 120 200"><g><circle cx="60" cy="30" r="12" fill="currentColor"/><line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="30" y2="30" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="90" y2="140" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/></g></svg>
+          </div>
         </div>
-    </section>
 
-    <section class="section events" id="events">
-        <div class="section-inner">
-            <div class="section-label">15 — Live Events</div>
-            <h2 class="section-title">Gatherings</h2>
-            <div class="events-list">
-                <p>Qi Gong in the Park – Daily 6AM</p>
-                <p>8 Brocades Workshop – Monthly</p>
-                <p>Tai Chi Basics – Weekly</p>
-            </div>
+        <div class="brocade-item reveal" data-movement="4">
+          <div class="brocade-num">04</div>
+          <div class="brocade-content">
+            <h3>Wise Owl Gazes<br>Backward</h3>
+            <p>Releases neck tension, stimulates the nervous system, and calms the mind.</p>
+          </div>
+          <div class="brocade-silhouette">
+            <svg viewBox="0 0 120 200"><g><circle cx="60" cy="30" r="12" fill="currentColor"/><line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="35" y2="90" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="85" y2="90" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/></g></svg>
+          </div>
         </div>
-    </section>
 
-    <section class="section gift" id="gift">
-        <div class="section-inner">
-            <div class="section-label">16 — Gift a Sanctuary</div>
-            <div class="gift-content">
-                <p>Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
-            </div>
+        <div class="brocade-item reveal" data-movement="5">
+          <div class="brocade-num">05</div>
+          <div class="brocade-content">
+            <h3>Swing the Head<br>and Shake the Tail</h3>
+            <p>Releases heart fire, calms the spirit, and improves spinal flexibility.</p>
+          </div>
+          <div class="brocade-silhouette">
+            <svg viewBox="0 0 120 200"><g><circle cx="60" cy="30" r="12" fill="currentColor"/><line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="30" y2="80" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="90" y2="80" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="30" y2="180" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="90" y2="180" stroke="currentColor" stroke-width="3"/></g></svg>
+          </div>
         </div>
-    </section>
 
-    <section class="section contact" id="contact">
-        <div class="section-inner">
-            <div class="section-label">14 â€” Contact</div>
-            <h2 class="section-title">Begin Your<br>Journey</h2>
-            
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-block">
-                        <h3>Location</h3>
-                        <p>200 Qi Road<br>Hangzhou, China 310000</p>
-                    </div>
-                    <div class="contact-block">
-                        <h3>Hours</h3>
-                        <p>Dawn Sessions: 5:30 AM<br>Evening Sessions: 6:00 PM<br>Private by appointment</p>
-                    </div>
-                    <div class="contact-block">
-                        <h3>Inquiries</h3>
-                        <p>qi@healersanctuary.com<br>+86 571 8888 0000</p>
-                    </div>
-                </div>
-                <div class="contact-cta">
-                    <p class="cta-text">The journey of a thousand miles begins with a single step.</p>
-                    <a href="mailto:qi@healersanctuary.com" class="cta-button"><span>Begin the Flow</span></a>
-                </div>
-            </div>
+        <div class="brocade-item reveal" data-movement="6">
+          <div class="brocade-num">06</div>
+          <div class="brocade-content">
+            <h3>Two Hands Hold<br>the Feet</h3>
+            <p>Strengthens the kidneys, tones the lower back, and improves flexibility.</p>
+          </div>
+          <div class="brocade-silhouette">
+            <svg viewBox="0 0 120 200"><g><circle cx="60" cy="30" r="12" fill="currentColor"/><line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="40" y2="150" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="80" y2="150" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="45" y2="180" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="75" y2="180" stroke="currentColor" stroke-width="3"/></g></svg>
+          </div>
         </div>
-    </section>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-brand">æ°” QI GONG</div>
-            <div class="footer-tagline">Move the Qi, Move the Life</div>
-            <div class="footer-contraindications">
-                <p><strong>Note:</strong> Not recommended during acute injury. Adapt movements to pain-free range. Consult your physician if you have severe balance issues or vertigo.</p>
-            </div>
-            <div class="footer-copy">Â© 2026 Healing Sanctuary. All rights reserved.</div>
+        <div class="brocade-item reveal" data-movement="7">
+          <div class="brocade-num">07</div>
+          <div class="brocade-content">
+            <h3>Clench the Fists<br>and Glare Fiercely</h3>
+            <p>Releases liver qi, strengthens muscles, and improves overall vitality.</p>
+          </div>
+          <div class="brocade-silhouette">
+            <svg viewBox="0 0 120 200"><g><circle cx="60" cy="30" r="12" fill="currentColor"/><line x1="60" y1="42" x2="60" y2="110" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="30" y2="75" stroke="currentColor" stroke-width="3"/><line x1="60" y1="60" x2="90" y2="75" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="40" y2="180" stroke="currentColor" stroke-width="3"/><line x1="60" y1="110" x2="80" y2="180" stroke="currentColor" stroke-width="3"/></g></svg>
+          </div>
         </div>
-    </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
-    <script src="script.js"></script>
-<script src="meta-layer.js"></script></body>
+        <div class="brocade-item reveal" data-movement="8">
+          <div class="brocade-num">08</div>
+          <div class="brocade-content">
+            <h3>Bouncing on<br>the Toes</h3>
+            <p>Stimulates the spine, releases tension, and integrates all previous movements.</p>
+          </div>
+          <div class="brocade-silhouette">
+            <svg viewBox="0 0 120 200"><g><circle cx="60" cy="25" r="12" fill="currentColor"/><line x1="60" y1="37" x2="60" y2="105" stroke="currentColor" stroke-width="3"/><line x1="60" y1="55" x2="35" y2="85" stroke="currentColor" stroke-width="3"/><line x1="60" y1="55" x2="85" y2="85" stroke="currentColor" stroke-width="3"/><line x1="60" y1="105" x2="45" y2="175" stroke="currentColor" stroke-width="3"/><line x1="60" y1="105" x2="75" y2="175" stroke="currentColor" stroke-width="3"/></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS — Before / During / After ===== -->
+  <section class="section process" id="process">
+    <div class="section-inner">
+      <div class="section-label reveal">05 — The 3-Step Process</div>
+      <h2 class="section-title reveal">Before, During,<br>After</h2>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="process-phase">Before</div>
+          <h3>Loosen Joints</h3>
+          <p>Prepare the body by gently rotating each joint. Wake up the fascia. Create space for qi to move through pathways that may have been dormant for years.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-phase">During</div>
+          <h3>8 Brocades Flow</h3>
+          <p>Eight flowing forms, each targeting a specific organ system. Broken Earth, Rowing the Boat, and six more movements that wake the body's innate intelligence.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-phase">After</div>
+          <h3>The Heavy Glow</h3>
+          <p>You will feel a "heavy" glow in the palms. That is qi accumulating. Hold your hands apart — feel the field between them. That is your birthright.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VOW ===== -->
+  <section class="section vow" id="vow">
+    <div class="section-inner">
+      <div class="section-label reveal">06 — Practitioner's Vow</div>
+      <div class="vow-content reveal">
+        <blockquote class="vow-quote">
+          I do not give you Qi. I help you remember that you are already made of it. The slow movement is not weakness — it is the speed at which the body actually heals.
+        </blockquote>
+        <div class="vow-attribution">— Master Liang Wei-Chen</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="section-inner">
+      <div class="section-label reveal">07 — Stories</div>
+      <h2 class="section-title reveal">Voices from<br>the Practice</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card-quote">"</div>
+          <p class="testimonial-card-text">After years of chronic pain, Master Liang's Qi Gong sessions gave me back my life. The movements are gentle yet powerful. I feel younger than I have in decades.</p>
+          <div class="testimonial-card-author">
+            <span class="author-name">Sarah Chen</span>
+            <span class="author-detail">Practicing for 5 years</span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card-quote">"</div>
+          <p class="testimonial-card-text">I came skeptical and left transformed. The standing meditation alone changed how I understand my body. Qi is not mystical — it is profoundly practical.</p>
+          <div class="testimonial-card-author">
+            <span class="author-name">Michael Torres</span>
+            <span class="author-detail">Practicing for 3 years</span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-card-quote">"</div>
+          <p class="testimonial-card-text">The Five Animal Frolics brought playfulness back into my spiritual practice. Master Liang teaches with such grace and humor. Every session is a gift.</p>
+          <div class="testimonial-card-author">
+            <span class="author-name">Lin Wei</span>
+            <span class="author-detail">Practicing for 8 years</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ — 6 Questions ===== -->
+  <section class="section faq" id="faq">
+    <div class="section-inner">
+      <div class="section-label reveal">08 — Frequently Asked</div>
+      <h2 class="section-title reveal">Questions &<br>Answers</h2>
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <div class="faq-item-question">Why is Qi Gong performed so slowly?</div>
+          <div class="faq-item-answer">Speed is not power; reach is power. Slow movement allows the body to actually feel what is happening. You cannot sense qi at the speed of stress. The slowness is precision — it gives your nervous system time to register and respond to each micro-shift in posture and breath.</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-item-question">Can I practice Qi Gong with an existing injury?</div>
+          <div class="faq-item-answer">Yes, adapt movement to your pain-free range. Qi Gong meets you where you are. The practice heals — it does not harm. Master Liang regularly modifies sequences for students with knee replacements, spinal fusions, and chronic conditions. Always consult your physician first.</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-item-question">What is the warming sensation in my hands?</div>
+          <div class="faq-item-answer">That is Qi — the warming of interstitial fluid. The increased circulation creates a palpable field of energy between your palms. It is measurable: thermal imaging shows temperature increases of 2–4°C in the hands after a single session. This is biology, not mysticism.</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-item-question">How is Qi Gong different from Tai Chi?</div>
+          <div class="faq-item-answer">Tai Chi is a martial art with complex choreographed forms. Qi Gong is simpler, more meditative, and focused specifically on health cultivation. Think of Tai Chi as a novel and Qi Gong as poetry — both are beautiful, but Qi Gong is more accessible for beginners and healing-focused practitioners.</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-item-question">How quickly will I notice results?</div>
+          <div class="faq-item-answer">Most students feel a shift in their first session — lighter shoulders, deeper breath, a sense of calm. Structural changes in circulation and ATP production begin within weeks of consistent practice. Master Liang recommends three sessions per week for twelve weeks to establish a foundation.</div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-item-question">Is Qi Gong a religion or spiritual practice?</div>
+          <div class="faq-item-answer">Qi Gong is neither a religion nor a philosophy — it is a technology of the body. While its roots touch Daoist and Buddhist traditions, the practice itself is purely physical and energetic. People of all faiths and none practice Qi Gong. The only belief required is that your body can heal itself.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTS — 2 Gatherings ===== -->
+  <section class="section events" id="events">
+    <div class="section-inner">
+      <div class="section-label reveal">09 — Gatherings</div>
+      <h2 class="section-title reveal">Upcoming<br>Events</h2>
+      <div class="events-list">
+        <div class="event-card reveal">
+          <div class="event-card-date">Every Dawn</div>
+          <h3>Sunrise Qi Gong<br>in the Park</h3>
+          <p>Greet the morning with movement. Join Master Liang for a free outdoor session among the ancient oaks. All levels welcome. Bring water, wear loose clothing, and arrive with an open heart.</p>
+          <div class="event-card-time">5:30 AM — 6:30 AM · Riverside Park</div>
+        </div>
+        <div class="event-card reveal">
+          <div class="event-card-date">Monthly Workshop</div>
+          <h3>Standing Meditation<br>Deep Dive</h3>
+          <p>A four-hour immersive workshop on Zhan Zhuang — the art of standing still. Learn the twelve foundational postures, discover your structural alignment, and feel qi accumulate in your dantian.</p>
+          <div class="event-card-time">First Saturday · 9:00 AM — 1:00 PM · Studio</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GIFT ===== -->
+  <section class="section gift" id="gift">
+    <div class="section-inner">
+      <div class="section-label reveal">10 — Gift a Sanctuary</div>
+      <h2 class="section-title reveal">Give the Gift<br>of Qi</h2>
+      <div class="gift-content reveal">
+        <p>Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
+        <a href="#contact" class="gift-btn">Gift a Session →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="section-inner">
+      <div class="section-label reveal">11 — Contact</div>
+      <h2 class="section-title reveal">Begin Your<br>Journey</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-block reveal">
+            <h3>Location</h3>
+            <p>42 Wudang Lane<br>Hangzhou, China 310000</p>
+          </div>
+          <div class="contact-block reveal">
+            <h3>Hours</h3>
+            <p>Dawn Sessions: 5:30 AM<br>Evening Sessions: 6:00 PM<br>Private by appointment</p>
+          </div>
+          <div class="contact-block reveal">
+            <h3>Inquiries</h3>
+            <p>qi@healersanctuary.com<br>+86 571 8888 0000</p>
+          </div>
+        </div>
+        <div class="contact-cta reveal">
+          <p class="cta-text">The journey of a thousand miles begins with a single breath.</p>
+          <a href="mailto:qi@healersanctuary.com" class="cta-button"><span>Begin the Flow</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-zen">
+        <div class="footer-zen-line">
+          <span class="footer-zen-glyph">道</span>
+        </div>
+      </div>
+
+      <div class="footer-brand">气 QI GONG</div>
+      <div class="footer-tagline">Move the Qi, Move the Life</div>
+
+      <div class="footer-quote reveal">
+        <p>"Out beyond ideas of wrongdoing and rightdoing, there is a field. I'll meet you there."</p>
+        <cite>— Rumi</cite>
+      </div>
+
+      <div class="footer-credits">
+        <div class="footer-credit-block">
+          <h4>Sanctuary</h4>
+          <p>Qi Gong Healing Sanctuary, Wudang Lane, Hangzhou. Founded on the principle that the body already knows how to heal — we simply remove the obstacles.</p>
+        </div>
+        <div class="footer-credit-block">
+          <h4>Master Liang</h4>
+          <p>Liǎng Wěichén, 82. Born in Wudang Mountains. Sixty years of practice. Teaching dawn sessions daily since 1978. Still learning.</p>
+        </div>
+        <div class="footer-credit-block">
+          <h4>Empathy Studio</h4>
+          <p>Designed and crafted by Empathy Studio. Every pixel placed with intention. Every word chosen with care. Built for healing.</p>
+        </div>
+      </div>
+
+      <div class="footer-copy">© 2026 Qi Gong Healing Sanctuary. All rights reserved. Not a substitute for medical advice.</div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="script.js"></script>
+
+</body>
 </html>

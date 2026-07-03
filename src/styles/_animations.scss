@@ -1,0 +1,112 @@
+// ============================================
+// HEALING SANCTUARIES — REVEAL ANIMATIONS
+// Section XXI: Motion Doctrine
+// "Motion exists to communicate. Never animate by habit."
+// ============================================
+@use 'tokens' as *;
+
+// --- Reveal: Fade Up ---
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity $duration-slowest $ease-out-expo,
+              transform $duration-slowest $ease-out-expo;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// --- Reveal: Fade In ---
+.reveal-fade {
+  opacity: 0;
+  transition: opacity $duration-slowest $ease-out-expo;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+// --- Reveal: Scale Up ---
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity $duration-slowest $ease-out-expo,
+              transform $duration-slowest $ease-out-expo;
+
+  &.is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// --- Reveal: Clip Path ---
+.reveal-clip {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path $duration-slowest $ease-out-expo;
+
+  &.is-visible {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+// --- Stagger Children ---
+.stagger-children {
+  > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity $duration-slow $ease-out-expo,
+                transform $duration-slow $ease-out-expo;
+  }
+
+  &.is-visible > * {
+    opacity: 1;
+    transform: translateY(0);
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.08}s;
+      }
+    }
+  }
+}
+
+// --- Reveal: Left ---
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity $duration-slowest $ease-out-expo,
+              transform $duration-slowest $ease-out-expo;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// --- Reveal: Right ---
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity $duration-slowest $ease-out-expo,
+              transform $duration-slowest $ease-out-expo;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// --- Reveal: Rotate ---
+.reveal-rotate {
+  opacity: 0;
+  transform: rotate(-3deg) scale(0.97);
+  transition: opacity $duration-slowest $ease-out-expo,
+              transform $duration-slowest $ease-out-expo;
+
+  &.is-visible {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}

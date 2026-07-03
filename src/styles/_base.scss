@@ -1,0 +1,169 @@
+// ============================================
+// HEALING SANCTUARIES — BASE STYLES
+// Foundation: FASHION-SOTD-GRANDMASTER.DOCTRINE
+// ============================================
+@use 'tokens' as *;
+
+// --- Reset ---
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; // Lenis handles smooth scroll
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body, 'Inter'), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: $font-size-base;
+  font-weight: $weight-regular;
+  line-height: $leading-normal;
+  color: var(--paper, #F5F0E8);
+  background-color: var(--ink, #0C0A08);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+// --- Selection ---
+::selection {
+  background-color: var(--signal, #C9A96E);
+  color: var(--ink, #0C0A08);
+}
+
+// --- Focus Visible ---
+:focus-visible {
+  outline: 2px solid var(--signal, #C9A96E);
+  outline-offset: 2px;
+}
+
+// --- Images ---
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+// --- Typography Base ---
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display, 'Playfair Display'), Georgia, serif;
+  font-weight: $weight-bold;
+  line-height: $leading-tight;
+  overflow-wrap: break-word;
+}
+
+p {
+  overflow-wrap: break-word;
+  max-width: 65ch;
+}
+
+a {
+  color: var(--signal, #C9A96E);
+  text-decoration: none;
+  transition: color $duration-fast $ease-out-expo;
+
+  &:hover {
+    color: var(--signal-hover, var(--signal, #C9A96E));
+    opacity: 0.8;
+  }
+}
+
+// --- Lists ---
+ul, ol {
+  list-style: none;
+}
+
+// --- Buttons ---
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+// --- Utility: Screen Reader Only ---
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// --- Utility: Section Container ---
+.section {
+  position: relative;
+  padding: $space-5xl $space-xl;
+
+  @media (min-width: $bp-desktop) {
+    padding: $space-6xl $space-3xl;
+  }
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// --- Utility: Reduced Motion ---
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// --- Scrollbar ---
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ink, #0C0A08);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--signal, #C9A96E);
+  border-radius: $radius-pill;
+}
+
+// --- Lenis ---
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}

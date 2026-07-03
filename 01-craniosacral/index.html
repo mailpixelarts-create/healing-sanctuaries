@@ -1,552 +1,457 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reiki Healing â€” Master Reiko Tanaka | Sedona, AZ</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Reiki Healing - Master Reiko Tanaka","description":"Channeling the Universal Life Force Energy","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reiki Healing — Master Reiko Tanaka | Sedona, AZ</title>
+  <meta name="description" content="Channeling the Universal Life Force Energy through Usui Shiki Ryoho. Three degrees of mastery. Seven lineages. One sanctuary.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.scss">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalBusiness","name":"Reiki Healing — Master Reiko Tanaka","description":"Channeling the Universal Life Force Energy through Usui Shiki Ryoho","address":{"@type":"PostalAddress","addressLocality":"Sedona","addressRegion":"AZ"},"medicalSpecialty":"Energy Healing"}
+  </script>
 </head>
 <body>
-    <canvas id="aura-canvas"></canvas>
-    <div id="aura-overlay"></div>
 
-    <nav class="side-nav">
-        <div class="nav-brand">RT</div>
-        <ul class="nav-links">
-            <li><a href="#home" class="active" data-section="home">Home</a></li>
-            <li><a href="#about" data-section="about">About</a></li>
-            <li><a href="#mechanism" data-section="mechanism">Mechanism</a></li>
-            <li><a href="#sacred-art" data-section="sacred-art">Services</a></li>
-            <li><a href="#process" data-section="process">Process</a></li>
-            <li><a href="#vow" data-section="vow">Vow</a></li>
-            <li><a href="#philosophy" data-section="philosophy">Philosophy</a></li>
-            <li><a href="#testimonials" data-section="testimonials">Stories</a></li>
-            <li><a href="#faq" data-section="faq">FAQ</a></li>
-            <li><a href="#try-this" data-section="try-this">Try This</a></li>
-            <li><a href="#contact" data-section="contact">Connect</a></li>
-        </ul>
-        <div class="nav-sigil">âœ¦</div>
-    </nav>
+  <!-- Loading Screen — Section III.A of heal.md -->
+  <div class="loader" id="loader">
+    <p class="loader__text">Silence loading...</p>
+    <p class="loader__subtext">Close your eyes. We'll tell you when to open them.</p>
+  </div>
 
-    <main class="content">
-        <section id="home" class="hero">
-            <div class="hero-bg">
-                <div class="sacred-geometry">
-                    <div class="geo-circle"></div>
-                    <div class="geo-circle"></div>
-                    <div class="geo-circle"></div>
-                    <div class="geo-circle"></div>
-                    <div class="geo-circle"></div>
-                </div>
+  <!-- Side Navigation — Unique to Reiki: Vertical sacred text -->
+  <nav class="side-nav" aria-label="Main navigation">
+    <div class="side-nav__brand">RT</div>
+    <ul class="side-nav__links">
+      <li><a href="#home" class="side-nav__link is-active" data-section="home">Home</a></li>
+      <li><a href="#about" class="side-nav__link" data-section="about">About</a></li>
+      <li><a href="#mechanism" class="side-nav__link" data-section="mechanism">Mechanism</a></li>
+      <li><a href="#services" class="side-nav__link" data-section="services">Services</a></li>
+      <li><a href="#process" class="side-nav__link" data-section="process">Process</a></li>
+      <li><a href="#vow" class="side-nav__link" data-section="vow">Vow</a></li>
+      <li><a href="#testimonials" class="side-nav__link" data-section="testimonials">Stories</a></li>
+      <li><a href="#faq" class="side-nav__link" data-section="faq">FAQ</a></li>
+      <li><a href="#events" class="side-nav__link" data-section="events">Events</a></li>
+      <li><a href="#contact" class="side-nav__link" data-section="contact">Connect</a></li>
+    </ul>
+    <div class="side-nav__sigil">✦</div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav__brand">RT</div>
+    <button class="mobile-nav__toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="content">
+
+    <!-- ==============================
+         SCENE I — INVITATION
+         Hero: Cinematic Frame
+    ============================== -->
+    <section id="home" class="hero">
+      <canvas class="hero-canvas" id="aura-canvas" aria-hidden="true"></canvas>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-symbol">
+          <div class="hero-symbol__kanji" aria-hidden="true">氣</div>
+          <div class="hero-symbol__glow"></div>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-line">Channeling</span>
+          <span class="title-line accent">the Universal</span>
+          <span class="title-line">Life Force</span>
+        </h1>
+
+        <p class="hero-subtitle">Master Reiko Tanaka · Usui Shiki Ryoho</p>
+
+        <div class="hero-scroll">
+          <span>Discover Your Flow</span>
+          <div class="hero-scroll__line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         SCENE II — IDENTITY
+         The Healer: Practitioner Bio
+    ============================== -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">01</span>
+          <h2 class="section-title">The Healer</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead reveal">With over two decades dedicated to the art of energy healing, Master Reiko Tanaka brings a profound depth of practice to her sanctuary in Sedona's red rock landscape.</p>
+
+            <p class="reveal">Having studied under seven distinct Reiki lineages, Master Reiko holds all three degrees of Usui Shiki Ryoho — the original system developed by Mikao Usui. Her journey began in Kyoto, where she trained under Grand Master Hayashi before bringing this sacred practice to the American Southwest.</p>
+
+            <p class="reveal">Each session is a unique convergence of ancient wisdom and intuitive guidance, creating a space where your body's innate healing intelligence can reawaken.</p>
+
+            <div class="origin-story reveal">
+              <p class="origin-story-text">"Master Reiko spent 12 years in corporate finance before a chance encounter with a Reiki master in Kyoto changed everything. The woman placed her hands over Reiko's chest and said, 'Your heart is running on cortisol.' Three sessions later, Reiko quit her job and never looked back."</p>
             </div>
-            
-            <div class="hero-content">
-                <div class="reiki-symbol">
-                    <div class="symbol-3d">
-                        <div class="kanji">æ°—</div>
-                        <div class="kanji-glow"></div>
-                    </div>
-                </div>
-                <h1 class="hero-title">
-                    <span class="title-line">Channeling</span>
-                    <span class="title-line accent">the Universal</span>
-                    <span class="title-line">Life Force</span>
-                </h1>
-                <p class="hero-subtitle">Master Reiko Tanaka Â· Usui Shiki Ryoho</p>
-                <div class="scroll-indicator">
-                    <span>Discover Your Flow</span>
-                    <div class="scroll-line"></div>
-                </div>
+          </div>
+
+          <div class="about-visual">
+            <div class="lineage-chart reveal">
+              <div class="lineage-node is-active">Usui</div>
+              <div class="lineage-node">Hayashi</div>
+              <div class="lineage-node">Takata</div>
+              <div class="lineage-node">Furumoto</div>
+              <div class="lineage-node">Doi</div>
+              <div class="lineage-node">Komiya</div>
+              <div class="lineage-node">Tanaka</div>
             </div>
-        </section>
-
-        <section id="about" class="section about">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">01</span>
-                    <h2 class="section-title">The Healer</h2>
-                </div>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p class="lead">With over two decades dedicated to the art of energy healing, Master Reiko Tanaka brings a profound depth of practice to her sanctuary in Sedona's red rock landscape.</p>
-                        <p>Having studied under seven distinct Reiki lineages, Master Reiko holds all three degrees of Usui Shiki Ryoho â€” the original system developed by Mikao Usui. Her journey began in Kyoto, where she trained under Grand Master Hayashi before bringing this sacred practice to the American Southwest.</p>
-                        <p>Each session is a unique convergence of ancient wisdom and intuitive guidance, creating a space where your body's innate healing intelligence can reawaken.</p>
-                        <div class="origin-story">
-                            <p class="origin-story-text">"Master Reiko spent 12 years in corporate finance before a chance encounter with a Reiki master in Kyoto changed everything. The woman placed her hands over Reiko's chest and said, 'Your heart is running on cortisol.' Three sessions later, Reiko quit her job and never looked back."</p>
-                        </div>
-                    </div>
-                    <div class="about-visual">
-                        <div class="lineage-chart">
-                            <div class="lineage-node active">Usui</div>
-                            <div class="lineage-node">Hayashi</div>
-                            <div class="lineage-node">Takata</div>
-                            <div class="lineage-node">Furumoto</div>
-                            <div class="lineage-node">Doi</div>
-                            <div class="lineage-node">Komiya</div>
-                            <div class="lineage-node">Tanaka</div>
-                        </div>
-                        <div class="credentials">
-                            <div class="credential">
-                                <span class="credential-number">III</span>
-                                <span class="credential-label">Shinpiden</span>
-                            </div>
-                            <div class="credential">
-                                <span class="credential-number">7</span>
-                                <span class="credential-label">Lineages</span>
-                            </div>
-                            <div class="credential">
-                                <span class="credential-number">20+</span>
-                                <span class="credential-label">Years</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="credentials reveal">
+              <div class="credential">
+                <span class="credential-number">III</span>
+                <span class="credential-label">Shinpiden</span>
+              </div>
+              <div class="credential">
+                <span class="credential-number">7</span>
+                <span class="credential-label">Lineages</span>
+              </div>
+              <div class="credential">
+                <span class="credential-number">20+</span>
+                <span class="credential-label">Years</span>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="mechanism" class="section mechanism">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">01A</span>
-                    <h2 class="section-title">The Mechanism</h2>
-                    <p class="section-subtitle">Science Bridge â€” This is physics, not faith.</p>
-                </div>
-                <div class="mechanism-content">
-                    <div class="mechanism-lead">
-                        <p class="lead">Reiki is not mysticism; it is the purposeful channeling of bio-electromagnetic energy to recalibrate the autonomic nervous system.</p>
-                    </div>
-                    <div class="mechanism-grid">
-                        <div class="mechanism-card">
-                            <div class="mechanism-icon">âš¡</div>
-                            <h3>Bio-Field Transfer</h3>
-                            <p>When the practitioner's hands hover 2â€“4 inches above the body, a measurable thermal transfer occurs â€” reducing serum cortisol levels by up to 30% and increasing vagal tone (heart rate variability).</p>
-                        </div>
-                        <div class="mechanism-card">
-                            <div class="mechanism-icon">ðŸ’§</div>
-                            <h3>Conductive Medium</h3>
-                            <p>The human body is 70% saline water, an excellent conductor of the practitioner's bio-field. We simply use the hands as antennas.</p>
-                        </div>
-                        <div class="mechanism-card">
-                            <div class="mechanism-icon">ðŸ“Š</div>
-                            <h3>Measurable Results</h3>
-                            <p>Supported by over 40 years of bio-field research at the University of California, Davis, and the International Center for Reiki Research.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- ==============================
+         SCENE III — CAMPAIGN
+         Mechanism: Science Bridge
+    ============================== -->
+    <section id="mechanism" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">02</span>
+          <h2 class="section-title">The Mechanism</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead reveal">Reiki is not faith. It is physics. The practitioner acts as a conduit for electromagnetic energy that already exists in the body — they simply help you remember how to access it.</p>
+
+            <p class="reveal">During a session, your brain shifts from beta (alert) to theta (deep meditative) brainwave states within minutes. Your heart rate slows. Your blood pressure drops. Your cortisol levels decrease measurably. This is not relaxation — this is your body entering its optimal healing state.</p>
+
+            <p class="reveal">The practitioner's hands do not heal. Your body heals. The hands simply remind your nervous system that it is safe to let go of the tension it has been holding — sometimes for years.</p>
+          </div>
+
+          <div class="about-visual">
+            <div class="lineage-chart reveal">
+              <div class="lineage-node is-active">Beta → Theta</div>
+              <div class="lineage-node">Cortisol ↓ 31%</div>
+              <div class="lineage-node">HRV ↑ 24%</div>
+              <div class="lineage-node">Parasympathetic ↑</div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="vow" class="section vow">
-            <div class="section-container">
-                <div class="vow-content">
-                    <div class="vow-label">Practitioner's Vow</div>
-                    <blockquote class="vow-text">
-                        "I do not heal you. You heal yourself. I am merely a tuning fork that vibrates at a stable frequency long enough for your chaotic signal to remember its original harmony. My hands are trained, but my presence is surrendered. I hold space. You do the work."
-                    </blockquote>
-                    <div class="vow-attribution">â€” Master Reiko Tanaka</div>
-                </div>
+    <!-- ==============================
+         SCENE IV — IMMERSION
+         Services: The Sacred Art
+    ============================== -->
+    <section id="services" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">03</span>
+          <h2 class="section-title">The Sacred Art</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <span class="service-card-number">01</span>
+            <h3 class="service-card-title">Foundation Session</h3>
+            <p class="service-card-desc">A 60-minute deep immersion. Full body energy assessment. Three passing sequences. Chakra balancing. Suitable for first-time visitors and those returning to their practice.</p>
+            <span class="service-card-price">£85</span>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-card-number">02</span>
+            <h3 class="service-card-title">Extended Healing</h3>
+            <p class="service-card-desc">A 90-minute session for those working through chronic conditions, deep emotional release, or spiritual emergence. Includes pre-session consultation and post-session integration guidance.</p>
+            <span class="service-card-price">£120</span>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-card-number">03</span>
+            <h3 class="service-card-title">Master Class Intensive</h3>
+            <p class="service-card-desc">A half-day immersion combining Reiki with guided meditation, energy anatomy study, and hands-on practice. For those called to deepen their understanding of energy work.</p>
+            <span class="service-card-price">£280</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         SCENE V — CRAFT
+         Process: Before / During / After
+    ============================== -->
+    <section id="process" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">04</span>
+          <h2 class="section-title">The Process</h2>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <span class="process-step-label">Before</span>
+            <h3 class="process-step-title">Arrive</h3>
+            <p class="process-step-desc">You will be asked to remove your shoes and any heavy jewellery. Lie down on the treatment table fully clothed. Close your eyes. Take three slow breaths. The practitioner will not speak again until the session is complete.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <span class="process-step-label">During</span>
+            <h3 class="process-step-title">Receive</h3>
+            <p class="process-step-desc">The practitioner places their hands on or just above your body in a series of positions. You may feel warmth, tingling, or pulsing. You may see colours. You may fall asleep. All responses are valid. There is nothing you need to do.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <span class="process-step-label">After</span>
+            <h3 class="process-step-title">Integrate</h3>
+            <p class="process-step-desc">Sit up slowly. Drink water. The practitioner will share what they sensed during the session. You may feel elated, emotional, or deeply tired. All of this is normal. Avoid alcohol for 24 hours. Sleep if you can.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         SCENE V — CRAFT
+         Vow: Practitioner's Oath
+    ============================== -->
+    <section id="vow" class="section vow">
+      <div class="section-inner">
+        <div class="section-header reveal" style="text-align:center;">
+          <span class="section-number">05</span>
+          <h2 class="section-title" style="display:inline-block;">The Vow</h2>
+        </div>
+
+        <blockquote class="vow-quote reveal">
+          "I vow to hold space without expectation. I vow to honour your body's wisdom above my own intuition. I vow to never impose my truth upon your healing. I vow to remember that I am a conduit, not a healer. The healing is yours. It always was."
+        </blockquote>
+        <p class="vow-author reveal">— Master Reiko Tanaka, Shinpiden</p>
+      </div>
+    </section>
+
+    <!-- ==============================
+         SCENE VI — TRANSFORMATION
+         Testimonials: Stories
+    ============================== -->
+    <section id="testimonials" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">06</span>
+          <h2 class="section-title">Stories</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <p class="service-card-desc">"I came in as a skeptic. I left as someone who felt energy for the first time in my life. The warmth in my palms was undeniable. I cried for 20 minutes afterward. Not from sadness — from relief."</p>
+            <span class="service-card-price">— James, 42, Software Engineer</span>
+          </div>
+
+          <div class="service-card reveal">
+            <p class="service-card-desc">"After my third session, I stopped taking sleeping pills. My body remembered how to rest. Master Reiko didn't heal me — she reminded me that I was already whole."</p>
+            <span class="service-card-price">— Sarah, 38, Architect</span>
+          </div>
+
+          <div class="service-card reveal">
+            <p class="service-card-desc">"The chronic pain in my shoulder — eight years of it — reduced by half after one session. By the third session, it was gone. I still don't fully understand how. But I don't need to."</p>
+            <span class="service-card-price">— David, 55, Musician</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         FAQ: 6 Expanded Questions
+         Source: heal.md Section II.1
+    ============================== -->
+    <section id="faq" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">07</span>
+          <h2 class="section-title">Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>What actually happens during a Reiki session?</summary>
+            <div class="faq-item__answer">
+              <p>The practitioner places their hands on or just above your body in a series of positions. They are not applying pressure. They are not manipulating tissue. They are acting as a conduit for universal life force energy — what the Japanese call 'ki.' Your body receives this energy and uses it where it is needed most. Some people feel warmth. Some feel nothing. Both are valid. The effects are cumulative.</p>
             </div>
-        </section>
+          </details>
 
-        <section id="sacred-art" class="section sacred-art">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">02</span>
-                    <h2 class="section-title">Sacred Art</h2>
-                </div>
-                <div class="art-grid">
-                    <article class="art-card">
-                        <div class="art-icon">
-                            <svg viewBox="0 0 100 100" class="art-svg">
-                                <circle cx="50" cy="50" r="45" class="art-circle"/>
-                                <path d="M50 20 L50 80 M20 50 L80 50" class="art-cross"/>
-                                <circle cx="50" cy="50" r="15" class="art-inner"/>
-                            </svg>
-                        </div>
-                        <h3 class="art-title">Palm Channeling</h3>
-                        <p class="art-desc">The practitioner's palms become conduits for universal energy, transmitting healing vibrations through directed Ki flow. Each hand position activates specific energy pathways.</p>
-                        <div class="art-duration">60â€“90 minutes</div>
-                    </article>
-
-                    <article class="art-card">
-                        <div class="art-icon">
-                            <svg viewBox="0 0 100 100" class="art-svg">
-                                <circle cx="50" cy="50" r="45" class="art-circle"/>
-                                <circle cx="50" cy="50" r="30" class="art-circle-dashed"/>
-                                <path d="M30 50 Q50 30 70 50 Q50 70 30 50" class="art-wave"/>
-                            </svg>
-                        </div>
-                        <h3 class="art-title">Distance Healing</h3>
-                        <p class="art-desc">Beyond physical proximity, energy transcends space and time. Through sacred symbols and focused intention, healing reaches across any distance.</p>
-                        <div class="art-duration">45 minutes</div>
-                    </article>
-
-                    <article class="art-card">
-                        <div class="art-icon">
-                            <svg viewBox="0 0 100 100" class="art-svg">
-                                <circle cx="50" cy="50" r="45" class="art-circle"/>
-                                <path d="M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z" class="art-star"/>
-                            </svg>
-                        </div>
-                        <h3 class="art-title">Aura Cleansing</h3>
-                        <p class="art-desc">Gentle purification of the electromagnetic field surrounding the body, releasing stagnant energy and restoring natural luminosity to each layer of the auric field.</p>
-                        <div class="art-duration">75 minutes</div>
-                    </article>
-                </div>
+          <details class="faq-item reveal">
+            <summary>How many sessions do I need?</summary>
+            <div class="faq-item__answer">
+              <p>For acute issues: 3–6 sessions. For chronic conditions: 8–12 sessions. For deep spiritual work: ongoing. There is no 'fix.' There is a process. Your body has been holding tension for years — it will not release it in 60 minutes. But you will feel a shift after the first session. Most people do.</p>
             </div>
-        </section>
+          </details>
 
-        <section id="process" class="section process">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">02A</span>
-                    <h2 class="section-title">The 3-Step Process</h2>
-                    <p class="section-subtitle">Before / During / After</p>
-                </div>
-                <div class="process-grid">
-                    <div class="process-step">
-                        <div class="process-number">01</div>
-                        <h3 class="process-title">Before</h3>
-                        <p class="process-text">Arrive hydrated. Wear loose, natural-fiber clothing. No caffeine 2 hours prior â€” it spikes your sympathetic nervous system and blocks the subtle signal.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-number">02</div>
-                        <h3 class="process-title">During</h3>
-                        <p class="process-text">You lie fully clothed on a treatment table. Dim lights, ambient silence. I place my hands in 12 standard positions (head, throat, chest, abdomen, knees, feet). You may feel warmth, tingling, cold, or nothing at all. All are correct.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-number">03</div>
-                        <h3 class="process-title">After</h3>
-                        <p class="process-text">Integration begins 24â€“48 hours post-session. You may experience vivid dreams, emotional releases, or deep fatigue. This is the body offloading stored stress. Hydrate heavily and rest.</p>
-                    </div>
-                </div>
+          <details class="faq-item reveal">
+            <summary>Is this the same as massage?</summary>
+            <div class="faq-item__answer">
+              <p>No. Massage manipulates muscle tissue. Reiki works with the energy field that surrounds and penetrates the body. There is no physical manipulation. You remain fully clothed. No oil is used. The practitioner's hands hover or rest gently. The effects are energetic, not mechanical.</p>
             </div>
-        </section>
+          </details>
 
-        <section id="philosophy" class="section philosophy">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">03</span>
-                    <h2 class="section-title">Philosophy</h2>
-                </div>
-                <div class="philosophy-grid">
-                    <div class="philosophy-pillar">
-                        <div class="pillar-icon">ä¸€</div>
-                        <h3 class="pillar-title">Ki Flow</h3>
-                        <p class="pillar-text">All life is animated by Ki â€” the vital force that flows through all living things. When this energy flows freely, health and vitality naturally emerge.</p>
-                    </div>
-                    <div class="philosophy-pillar">
-                        <div class="pillar-icon">äºŒ</div>
-                        <h3 class="pillar-title">Innate Intelligence</h3>
-                        <p class="pillar-text">The body possesses an inherent wisdom to heal itself. Reiki removes the blocks that prevent this natural intelligence from expressing itself fully.</p>
-                    </div>
-                    <div class="philosophy-pillar">
-                        <div class="pillar-icon">ä¸‰</div>
-                        <h3 class="pillar-title">Channel, Not Source</h3>
-                        <p class="pillar-text">The healer is a vessel, not the source of healing energy. Universal Ki flows through the practitioner to the recipient, guided by divine intelligence.</p>
-                    </div>
-                    <div class="philosophy-pillar">
-                        <div class="pillar-icon">å››</div>
-                        <h3 class="pillar-title">Holistic Integration</h3>
-                        <p class="pillar-text">Healing addresses body, mind, and spirit as one unified field. True wellness emerges when all dimensions of being are in harmonious alignment.</p>
-                    </div>
-                    <div class="philosophy-pillar">
-                        <div class="pillar-icon">äº”</div>
-                        <h3 class="pillar-title">Sacred Responsibility</h3>
-                        <p class="pillar-text">With the gift of channeling comes the commitment to continual self-purification. The healer must first embody what they offer to others.</p>
-                    </div>
-                </div>
+          <details class="faq-item reveal">
+            <summary>Can I combine Reiki with other treatments?</summary>
+            <div class="faq-item__answer">
+              <p>Yes. Reiki complements every form of medicine. It does not interfere with medication, physiotherapy, or counselling. In fact, many hospitals now offer Reiki alongside conventional treatment. The only precaution: avoid alcohol for 24 hours after a session, as your body is still processing.</p>
             </div>
-        </section>
+          </details>
 
-        <section id="testimonials" class="section testimonials">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">04</span>
-                    <h2 class="section-title">Stories</h2>
-                </div>
-                <div class="testimonial-stack">
-                    <div class="testimonial-card" data-index="1">
-                        <blockquote class="testimonial-quote">"After my first session, I felt a warmth I hadn't experienced in years. Master Reiko's presence alone is healing â€” she creates a space where transformation becomes inevitable."</blockquote>
-                        <div class="testimonial-author">
-                            <span class="author-name">Sarah M.</span>
-                            <span class="author-detail">Chronic pain recovery</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card" data-index="2">
-                        <blockquote class="testimonial-quote">"The distance healing session was profound. Even from three states away, I could feel the energy working through me. My anxiety has diminished in ways years of therapy hadn't achieved."</blockquote>
-                        <div class="testimonial-author">
-                            <span class="author-name">James K.</span>
-                            <span class="author-detail">Anxiety & spiritual disconnection</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card" data-index="3">
-                        <blockquote class="testimonial-quote">"I came as a skeptic. I left as a believer. The aura cleansing revealed layers of energetic residue I'd been carrying for decades. I walked out feeling thirty pounds lighter â€” spiritually."</blockquote>
-                        <div class="testimonial-author">
-                            <span class="author-name">Elena R.</span>
-                            <span class="author-detail">Energetic purification</span>
-                        </div>
-                    </div>
-                </div>
+          <details class="faq-item reveal">
+            <summary>What if I don't feel anything?</summary>
+            <div class="faq-item__answer">
+              <p>Not feeling anything does not mean it isn't working. Some people are more energetically敏感 than others. Some people fall asleep. Some people see colours. Some feel nothing at all — yet the shift happens at a cellular level. Trust the process. The body knows what to do with the energy, even if your conscious mind doesn't register it.</p>
             </div>
-        </section>
+          </details>
 
-        <section id="journey" class="section journey">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">05</span>
-                    <h2 class="section-title">Your Journey</h2>
-                </div>
-                <div class="journey-timeline">
-                    <div class="timeline-line"></div>
-                    <div class="journey-step" data-step="1">
-                        <div class="step-marker"></div>
-                        <div class="step-content">
-                            <h3 class="step-title">Arrival & Grounding</h3>
-                            <p class="step-text">Begin in our meditation garden, surrounded by Sedona's ancient red rocks. A herbal tea ceremony helps you transition from the outer world to this sacred space.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step" data-step="2">
-                        <div class="step-marker"></div>
-                        <div class="step-content">
-                            <h3 class="step-title">Consultation</h3>
-                            <p class="step-text">A gentle dialogue about your current state, intentions, and any areas of concern. This helps Master Reiko attune to your unique energy signature.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step" data-step="3">
-                        <div class="step-marker"></div>
-                        <div class="step-content">
-                            <h3 class="step-title">The Healing</h3>
-                            <p class="step-text">Rest comfortably on a heated table as Master Reiko channels universal Ki through gentle hand placements. Many experience warmth, tingling, or deep emotional release.</p>
-                        </div>
-                    </div>
-                    <div class="journey-step" data-step="4">
-                        <div class="step-marker"></div>
-                        <div class="step-content">
-                            <h3 class="step-title">Integration</h3>
-                            <p class="step-text">Time to slowly return, with guidance on integrating the session's benefits. Receive personalized recommendations for continued energetic hygiene.</p>
-                        </div>
-                    </div>
-                </div>
+          <details class="faq-item reveal">
+            <summary>Why do I feel emotional afterward?</summary>
+            <div class="faq-item__answer">
+              <p>Reiki activates the parasympathetic nervous system — your 'rest and digest' mode. When this system engages, suppressed emotions surface. This is not a side effect — this is the healing. Your body has been storing unprocessed grief, fear, or tension in its tissues. Reiki creates the safety for these emotions to release. Tears are not weakness. They are release.</p>
             </div>
-        </section>
+          </details>
+        </div>
+      </div>
+    </section>
 
-        <section id="faq" class="section faq">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">07</span>
-                    <h2 class="section-title">Questions & Doubts</h2>
-                    <p class="section-subtitle">Psychological FAQs â€” Addressing what you're really thinking.</p>
-                </div>
-                <div class="faq-list">
-                    <details class="faq-item">
-                        <summary class="faq-question">"I didn't feel anything. Am I broken?"</summary>
-                        <div class="faq-answer">
-                            <p>This is our #1 asked question. Approximately 40% of first-timers feel zero physical sensation. Your defensive fascia (connective tissue) often requires 2â€“3 sessions to soften its electrical resistance. Think of it as a frozen lake â€” the first session just thins the ice. Trust the silence; the shift is happening at a cellular level you cannot perceive.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">"Can Reiki cure my anxiety?"</summary>
-                        <div class="faq-answer">
-                            <p>It does not 'cure.' It creates a physiological environment where anxiety cannot sustain itself. By lowering cortisol and increasing GABA (the brain's inhibitory neurotransmitter), Reiki gives your nervous system a 60-minute holiday. From that rest, you choose new patterns.</p>
-                        </div>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-question">"Do I have to believe in it?"</summary>
-                        <div class="faq-answer">
-                            <p>Belief is irrelevant. The thermal energy transfers regardless of your skepticism. Placebo is a neurological effect, but bio-field transfer is a thermodynamic one. Bring your doubt â€” it won't block the frequency.</p>
-                        </div>
-                    </details>
-                </div>
+    <!-- ==============================
+         Events: 2 Expanded Descriptions
+         Source: heal.md Section II.1
+    ============================== -->
+    <section id="events" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">08</span>
+          <h2 class="section-title">Gatherings</h2>
+        </div>
+
+        <div class="events-grid">
+          <div class="event-card reveal">
+            <p class="event-card-date">Every second Saturday, 10 AM — 12 PM</p>
+            <h3 class="event-card-title">Reiki Shares — The Open Table</h3>
+            <p class="event-card-desc">A 2-hour open practice where anyone can receive or give Reiki. No appointment needed. No experience required. We pair up in twos. You place your hands on another person's shoulders. They place their hands on yours. You breathe. You listen. By the end, strangers have become mirrors. This is not a class. This is a communion. Free. Donations welcome.</p>
+          </div>
+
+          <div class="event-card reveal">
+            <p class="event-card-date">Monthly, full moon evening, 7 PM — 9:30 PM</p>
+            <h3 class="event-card-title">Distance Healing Circle</h3>
+            <p class="event-card-desc">Once a month, under the full moon, we gather to send Reiki to those who cannot be present. You bring a name — a friend, a family member, yourself. We hold that name in a circle of intention. The energy travels across any distance. The Japanese call this 'En no ren.' The connection of hearts across space. You will feel it. You will know it worked.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         Gift a Session
+         Source: heal.md Section II.I
+    ============================== -->
+    <section class="section gift">
+      <div class="section-inner" style="text-align:center;">
+        <div class="section-header reveal" style="text-align:center;">
+          <span class="section-number">09</span>
+          <h2 class="section-title" style="display:inline-block;">Send a Sanctuary</h2>
+        </div>
+
+        <p class="gift-desc reveal">You are not buying a treatment. You are offering someone the rarest gift: uninterrupted presence, warm hands, and the reminder that they are worthy of care. The recipient will receive a quiet, pressure-free invitation to choose their session and schedule at their convenience.</p>
+
+        <a href="#contact" class="btn btn--filled reveal">Gift a Session</a>
+      </div>
+    </section>
+
+    <!-- ==============================
+         Skeptic's Corner
+         Source: heal.md Section II.1
+    ============================== -->
+
+    <!-- ==============================
+         Contact
+    ============================== -->
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">10</span>
+          <h2 class="section-title">Connect</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead reveal">To book a session or ask a question, reach out directly. We respond within 24 hours.</p>
+
+            <div class="reveal" style="margin-top: 2rem;">
+              <p style="color: var(--paper); opacity: 0.7; margin-bottom: 0.5rem;">Sedona, Arizona</p>
+              <p style="color: var(--paper); opacity: 0.7; margin-bottom: 0.5rem;">By appointment only</p>
+              <p style="color: var(--signal);">reiko@healingsanctuary.com</p>
             </div>
-        </section>
+          </div>
 
-        <section id="try-this" class="section try-this">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">08</span>
-                    <h2 class="section-title">Try This Now</h2>
-                    <p class="section-subtitle">1-Minute Home Practice â€” Your Tan Tien Activation</p>
-                </div>
-                <div class="try-content">
-                    <div class="try-steps">
-                        <div class="try-step">
-                            <span class="try-num">1</span>
-                            <p>Place your right palm over your navel.</p>
-                        </div>
-                        <div class="try-step">
-                            <span class="try-num">2</span>
-                            <p>Rest your left palm over your right.</p>
-                        </div>
-                        <div class="try-step">
-                            <span class="try-num">3</span>
-                            <p>Breathe deeply into your belly for four counts, exhale for six.</p>
-                        </div>
-                        <div class="try-step">
-                            <span class="try-num">4</span>
-                            <p>Visualize a warm, golden coin sitting just beneath your skin.</p>
-                        </div>
-                        <div class="try-step">
-                            <span class="try-num">5</span>
-                            <p>Hold this hand placement for 2 minutes.</p>
-                        </div>
-                    </div>
-                    <div class="try-result">
-                        <p>You have just activated your <strong>Tan Tien</strong> â€” your primary energetic reservoir. Do this before every meal.</p>
-                    </div>
-                </div>
+          <div class="about-visual">
+            <div class="lineage-chart reveal">
+              <div class="lineage-node is-active">Sedona, AZ</div>
+              <div class="lineage-node">By Appointment</div>
+              <div class="lineage-node">24hr Response</div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="events" class="section events">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">06</span>
-                    <h2 class="section-title">Live Events</h2>
-                </div>
-                <div class="events-grid">
-                    <div class="event-item">
-                        <span class="event-name">Full Moon Sound Bath</span>
-                        <span class="event-detail">Next Saturday (Virtual)</span>
-                    </div>
-                    <div class="event-item">
-                        <span class="event-name">Qi Gong Dawn Circle</span>
-                        <span class="event-detail">Every Tuesday</span>
-                    </div>
-                    <div class="event-item">
-                        <span class="event-name">Distance Healing Circle</span>
-                        <span class="event-detail">1st Sunday of Month</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+  </main>
 
-        <section id="gift" class="section gift">
-            <div class="section-container">
-                <div class="gift-content">
-                    <h2 class="section-title">Gift a Sanctuary</h2>
-                    <p class="gift-text">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
-                </div>
-            </div>
-        </section>
+  <!-- Footer — Emotional Conclusion -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__brand">Reiki Healing</p>
+        <p class="footer__tagline">"The wound is the place where the Light enters you." — Rumi</p>
+        <div class="footer__sigil" aria-hidden="true">氣</div>
+      </div>
 
-        <section id="contact" class="section contact">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">07</span>
-                    <h2 class="section-title">Connect</h2>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-block">
-                            <h3 class="contact-label">Location</h3>
-                            <p class="contact-value">108 Palm Avenue<br>Sedona, AZ 86336</p>
-                        </div>
-                        <div class="contact-block">
-                            <h3 class="contact-label">Hours</h3>
-                            <p class="contact-value">Tuesday â€” Saturday<br>9:00 AM â€” 6:00 PM</p>
-                        </div>
-                        <div class="contact-block">
-                            <h3 class="contact-label">Appointments</h3>
-                            <p class="contact-value">By reservation only<br>Call or email to schedule</p>
-                        </div>
-                        <div class="contact-block">
-                            <h3 class="contact-label">Phone</h3>
-                            <p class="contact-value">(928) 555-0108</p>
-                        </div>
-                        <div class="contact-block">
-                            <h3 class="contact-label">Email</h3>
-                            <p class="contact-value">sanctuary@reikotanaka.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-form-wrapper">
-                        <form class="contact-form" id="contact-form">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" id="name" class="form-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" class="form-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="intention" class="form-label">Your Intention</label>
-                                <textarea id="intention" class="form-input form-textarea" rows="4"></textarea>
-                            </div>
-                            <button type="submit" class="form-submit">
-                                <span>Request Session</span>
-                                <div class="submit-line"></div>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div>
+        <p class="footer__heading">Lexicon</p>
+        <p class="footer__link">Ki — Life force energy</p>
+        <p class="footer__link">Rei — Universal spirit</p>
+        <p class="footer__link">Usui — The founder's surname</p>
+      </div>
 
-        <footer class="site-footer">
-            <div class="footer-content">
-                <div class="footer-grid">
-                    <div class="footer-col">
-                        <div class="footer-brand">Master Reiko Tanaka</div>
-                        <div class="footer-tagline">Channeling the Universal Life Force</div>
-                        <div class="footer-sigil">æ°—</div>
-                    </div>
-                    <div class="footer-col">
-                        <h4 class="footer-heading">Delivery</h4>
-                        <p class="footer-text">Available worldwide via remote-distance session (we use quantum entanglement protocols) OR in-person at our London and Kyoto healing sanctuaries.</p>
-                        <div class="footer-location">
-                            <strong>Sedona Sanctuary</strong><br>
-                            108 Palm Avenue, Sedona, AZ 86336
-                        </div>
-                        <div class="footer-location">
-                            <strong>London Sanctuary</strong><br>
-                            42 Harley Street, London W1G 9PR
-                        </div>
-                        <div class="footer-location">
-                            <strong>Kyoto Sanctuary</strong><br>
-                            15 Higashiyama, Kyoto 605-0862
-                        </div>
-                    </div>
-                    <div class="footer-col">
-                        <h4 class="footer-heading">Safety Notice</h4>
-                        <p class="footer-text">Reiki is a complementary therapy. It does not replace emergency medical care, prescribed medication, or surgical interventions. Not recommended for individuals with severe psychosis or those who have recently undergone organ transplants (due to the immune modulation effect). Always consult your physician if you are pregnant or have a pacemaker.</p>
-                    </div>
-                    <div class="footer-col">
-                        <h4 class="footer-heading">Lexicon</h4>
-                        <div class="lexicon-list">
-                            <div class="lexicon-item">
-                                <span class="lexicon-term">Hara</span>
-                                <span class="lexicon-def">The energetic center located three finger-widths below the navel. In Japanese tradition, this is where your life-force (Ki) originates.</span>
-                            </div>
-                            <div class="lexicon-item">
-                                <span class="lexicon-term">Byosen</span>
-                                <span class="lexicon-def">The physical sensation of 'roughness' or 'heat' a practitioner feels over a blocked area. The hands detect temperature differentials as small as 0.1Â°C.</span>
-                            </div>
-                            <div class="lexicon-item">
-                                <span class="lexicon-term">Ken'yoku</span>
-                                <span class="lexicon-def">The dry-brushing technique used to clear the practitioner's energy fields before a session.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="footer-bibliography">
-                        <p>Supported by over 40 years of bio-field research at the University of California, Davis, and the International Center for Reiki Research. Reiki is recognized as a complementary nursing intervention by the American Holistic Nurses Association.</p>
-                    </div>
-                    <div class="footer-cta">
-                        <a href="#contact" class="cta-button">Schedule Your Energy Audit</a>
-                        <span class="cta-sub">A 60-minute recalibration. In-person or remote.</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </main>
+      <div>
+        <p class="footer__heading">Navigate</p>
+        <a href="#about" class="footer__link">About</a>
+        <a href="#services" class="footer__link">Services</a>
+        <a href="#faq" class="footer__link">FAQ</a>
+        <a href="#contact" class="footer__link">Contact</a>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
-<script src="meta-layer.js"></script></body>
+    <div class="footer__legal">
+      <p class="footer__copy">© 2026 Reiki Healing. All healing is self-healing.</p>
+      <p class="footer__credit">Made with love by <a href="#">Empathy Studio</a> · Norman James</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
 </html>
-

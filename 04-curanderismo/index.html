@@ -1,403 +1,388 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meditation with Thich Minh Hanh | The Present Moment</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tiempos+Text:wght@400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Meditation - Thich Minh Hanh","description":"The Present Moment Is the Only Moment","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meditation with Ayo Okafor | Wabi-Sabi Precision</title>
+  <meta name="description" content="The wound is the place where the Light enters you. Meditation practice with Ayo Okafor — neuroscience of stillness, structural neuroplasticity, the art of sitting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiempos+Text:wght@400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Meditation — Ayo Okafor",
+    "description": "The wound is the place where the Light enters you.",
+    "medicalAudience": {
+      "@type": "PatientAudience",
+      "audienceType": "Patient"
+    }
+  }
+  </script>
 </head>
 <body>
-    <!-- Grain Overlay -->
-    <div class="grain-overlay"></div>
-    
-    <!-- Hero Section - Kinetic Typography -->
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-word" data-letter="N">N</h1>
-            <h1 class="hero-word" data-letter="O">O</h1>
-            <h1 class="hero-word" data-letter="W">W</h1>
-        </div>
-        <div class="hero-subtitle">
-            <p>The Present Moment Is the Only Moment</p>
-        </div>
-    </section>
 
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-        <div class="nav-container">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#mechanism" class="nav-link">Mechanism</a>
-            <a href="#process" class="nav-link">Process</a>
-            <a href="#sacred-art" class="nav-link">Sacred Art</a>
-            <a href="#vow" class="nav-link">Vow</a>
-            <a href="#faqs" class="nav-link">FAQs</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
-    </nav>
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader">
+    <div class="loader__word">SIT</div>
+    <div class="loader__sub">The present moment</div>
+  </div>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2 class="section-title">About Thich Minh Hanh</h2>
-                    <div class="about-text">
-                        <p>Thich Minh Hanh studied under the revered Thich Nhat Hanh at Plum Village, the global center of mindfulness practice in the south of France. For over twenty years, he has devoted his life to teaching the art of conscious living.</p>
-                        <p>His approach integrates ancient Zen traditions with modern mindfulness techniques, creating a practice that is both profound and accessible to contemporary seekers.</p>
-                        <p>Thich teaches that meditation is not an escape from life but a deep engagement with it â€" a way to touch the miracle of being alive in each breath.</p>
-                        <div class="origin-story">
-                            <p class="origin-story-text">"Thich Minh Hanh spent 8 years as a Buddhist monk in Plum Village before returning to teach secular meditation. He strips away the religion and leaves only the neuroscience."</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-container">
-                        <div class="image-placeholder" aria-label="Thich Minh Hanh meditation portrait">
-                            <div class="image-grain"></div>
-                        </div>
-                    </div>
-                </div>
+  <!-- FILM GRAIN OVERLAY -->
+  <div class="grain-overlay" id="grainOverlay">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <filter id="grainFilter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grainFilter)"/>
+    </svg>
+  </div>
+
+  <!-- TOP NAVIGATION -->
+  <nav class="top-nav" id="topNav">
+    <a href="#" class="top-nav__wordmark">Ayo Okafor</a>
+    <ul class="top-nav__links">
+      <li><a href="#about" class="top-nav__link" data-section="about">About</a></li>
+      <li><a href="#mechanism" class="top-nav__link" data-section="mechanism">Mechanism</a></li>
+      <li><a href="#services" class="top-nav__link" data-section="services">Services</a></li>
+      <li><a href="#process" class="top-nav__link" data-section="process">Process</a></li>
+      <li><a href="#vow" class="top-nav__link" data-section="vow">Vow</a></li>
+      <li><a href="#faqs" class="top-nav__link" data-section="faqs">FAQs</a></li>
+      <li><a href="#contact" class="top-nav__link" data-section="contact">Contact</a></li>
+    </ul>
+    <span class="top-nav__issue">Issue 04 — Curanderismo</span>
+    <button class="top-nav__toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-menu__link">About</a>
+    <a href="#mechanism" class="mobile-menu__link">Mechanism</a>
+    <a href="#services" class="mobile-menu__link">Services</a>
+    <a href="#process" class="mobile-menu__link">Process</a>
+    <a href="#vow" class="mobile-menu__link">Vow</a>
+    <a href="#faqs" class="mobile-menu__link">FAQs</a>
+    <a href="#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <span class="hero__issue-tag">Issue 04 — Curanderismo — Meditation</span>
+    <div class="hero__content">
+      <div class="hero__label">The Healing Sanctuary presents</div>
+      <h1 class="hero__title">
+        <span class="hero-word" data-reveal="Breath">S</span><span class="hero-word" data-reveal="Witness">I</span><span class="hero-word" data-reveal="Be">T</span>
+      </h1>
+      <p class="hero__subtitle">The wound is the place where the Light enters you. Practice the art of sitting with nothing to fix.</p>
+      <a href="#about" class="hero__issue">Begin the Practice &rarr;</a>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section__inner">
+      <span class="section__number">01</span>
+      <h2 class="section__title">About Ayo Okafor</h2>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>Ayo Okafor grew up in Lagos, Nigeria, where stillness was a radical act in a city that never stopped moving. At nineteen, she left for a ten-day silent retreat in Myanmar and never came back the same.</p>
+          <p>She studied neuroscience at UCL before returning to West Africa to teach meditation in hospitals, prisons, and schools. Her approach strips away the spiritual veneer and leaves only the mechanism: structural neuroplasticity, the rewiring of the brain through attention.</p>
+          <p>Ayo teaches that meditation is not relaxation. It is the discipline of watching the mind destroy itself — and surviving. The practice is simple. The results are not.</p>
+          <div class="about__origin">
+            <p class="about__origin-text">"Ayo spent 8 years studying contemplative neuroscience before teaching. She strips away the religion and leaves only the neuroscience. Her practice is rooted in both Buddhist vipassana and Western clinical research."</p>
+          </div>
+          <div class="about__credentials">
+            <div class="about__cred">
+              <span class="about__cred-number">12</span>
+              <span class="about__cred-label">Years Teaching</span>
             </div>
-        </div>
-    </section>
-
-    <!-- The Mechanism -->
-    <section id="mechanism" class="section mechanism-section">
-        <div class="container">
-            <h2 class="section-title">The Mechanism</h2>
-            <div class="mechanism-content">
-                <div class="mechanism-text">
-                    <p class="mechanism-statement">Meditation thickens the insular cortex (interoceptive awareness) and shrinks the amygdala (fear response). It is structural neuroplasticity, not relaxation.</p>
-                    <div class="mechanism-details">
-                        <div class="mechanism-item">
-                            <span class="mechanism-label">Insular Cortex</span>
-                            <span class="mechanism-desc">Thickens with practice â€” improves interoceptive awareness, the ability to sense your own body's signals.</span>
-                        </div>
-                        <div class="mechanism-item">
-                            <span class="mechanism-label">Amygdala</span>
-                            <span class="mechanism-desc">Shrinks with practice â€” reduces fear response, anxiety reactivity, and emotional volatility.</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="about__cred">
+              <span class="about__cred-number">4,200+</span>
+              <span class="about__cred-label">Students Trained</span>
             </div>
-        </div>
-    </section>
-
-    <!-- The 60-Second Bell -->
-    <section id="bell" class="bell-section">
-        <div class="container">
-            <div class="bell-content">
-                <h2 class="section-title">The 60-Second Bell</h2>
-                <p class="bell-description">A moment of pure presence. Press the bell and allow yourself to simply be.</p>
-                
-                <div class="bell-interface">
-                    <button id="bellButton" class="bell-button" aria-label="Start 60-second meditation timer">
-                        <span class="bell-icon">â—¯</span>
-                    </button>
-                    <div id="timerDisplay" class="timer-display">
-                        <div id="timerCircle" class="timer-circle"></div>
-                        <span id="timerText" class="timer-text">60</span>
-                    </div>
-                </div>
-                
-                <p class="bell-instruction">Ring the bell. Close your eyes. Breathe.</p>
+            <div class="about__cred">
+              <span class="about__cred-number">UCL</span>
+              <span class="about__cred-label">Neuroscience</span>
             </div>
+          </div>
         </div>
-    </section>
+        <div class="about__portrait reveal-scale">
+          <div class="about__portrait-img">
+            <div class="about__portrait-grain"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Sacred Art Section -->
-    <section id="sacred-art" class="section sacred-art-section">
-        <div class="container">
-            <h2 class="section-title">Sacred Art of Meditation</h2>
-            <div class="sacred-grid">
-                <div class="sacred-card">
-                    <div class="sacred-number">01</div>
-                    <h3>Mindful Breathing</h3>
-                    <p>The foundation of all practice. Following the breath as it moves through the body, anchoring awareness in the present. Each inhale is a homecoming, each exhale a letting go.</p>
-                    <div class="sacred-symbol">â—Ž</div>
-                </div>
-                <div class="sacred-card">
-                    <div class="sacred-number">02</div>
-                    <h3>Body Scan</h3>
-                    <p>A systematic journey through the physical form, releasing tension held in muscle and bone. The body becomes a landscape of sensation, each area a territory of awareness.</p>
-                    <div class="sacred-symbol">â—‰</div>
-                </div>
-                <div class="sacred-card">
-                    <div class="sacred-number">03</div>
-                    <h3>Walking Meditation</h3>
-                    <p>Movement as meditation. Each step becomes a deliberate act of presence, transforming ordinary motion into a sacred ritual. The path is the practice.</p>
-                    <div class="sacred-symbol">â—Ž</div>
-                </div>
+  <!-- MECHANISM -->
+  <section class="section mechanism" id="mechanism">
+    <div class="section__inner">
+      <span class="section__number">02</span>
+      <h2 class="section__title">The Mechanism</h2>
+      <p class="mechanism__statement reveal">Meditation thickens the insular cortex (interoceptive awareness) and shrinks the amygdala (fear response). It is structural neuroplasticity, not relaxation.</p>
+      <div class="mechanism__grid stagger-children">
+        <div class="mechanism__item">
+          <span class="mechanism__label">Insular Cortex</span>
+          <p class="mechanism__desc">Thickens with practice — improves interoceptive awareness, the ability to sense your own body's signals. You feel more, not less.</p>
+        </div>
+        <div class="mechanism__item">
+          <span class="mechanism__label">Amygdala</span>
+          <p class="mechanism__desc">Shrinks with practice — reduces fear response, anxiety reactivity, and emotional volatility. The alarm system recalibrates.</p>
+        </div>
+        <div class="mechanism__item">
+          <span class="mechanism__label">Prefrontal Cortex</span>
+          <p class="mechanism__desc">Thickens with practice — enhances executive function, impulse control, and decision-making. The conductor takes the podium.</p>
+        </div>
+        <div class="mechanism__item">
+          <span class="mechanism__label">Default Mode Network</span>
+          <p class="mechanism__desc">Quiets with practice — reduces rumination, self-referential thinking, and the narrative mind. The storyteller falls silent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="section__inner">
+      <span class="section__number">03</span>
+      <h2 class="section__title">Services</h2>
+      <div class="services__grid stagger-children">
+        <div class="services__card">
+          <span class="services__number">01</span>
+          <h3 class="services__title">One-to-One Sitting</h3>
+          <p class="services__desc">60 minutes of guided silence. Ayo sits with you. No instruction — just presence. The mind is observed, not corrected.</p>
+          <span class="services__price">$180 / session</span>
+        </div>
+        <div class="services__card">
+          <span class="services__number">02</span>
+          <h3 class="services__title">Group Sits</h3>
+          <p class="services__desc">Weekly 45-minute silent sits. Small groups of 6–10. The collective stillness amplifies the practice. No teacher — only mirrors.</p>
+          <span class="services__price">$40 / sit</span>
+        </div>
+        <div class="services__card">
+          <span class="services__number">03</span>
+          <h3 class="services__title">Clinical Protocol</h3>
+          <p class="services__desc">8-week structured program for anxiety, chronic pain, and insomnia. Evidence-based, trauma-informed. Meditation as medicine.</p>
+          <span class="services__price">$1,200 / program</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process" id="process">
+    <div class="section__inner">
+      <span class="section__number">04</span>
+      <h2 class="section__title">The 3-Step Process</h2>
+      <div class="process__steps stagger-children">
+        <div class="process__step">
+          <span class="process__label">Before</span>
+          <p class="process__text">Sit upright. Spine tall. Hands resting. Close the eyes. Let the room disappear.</p>
+        </div>
+        <div class="process__step">
+          <span class="process__label">During</span>
+          <p class="process__text">10 minutes of silent breath observation. No mantras. No counting. Just the inhale, the exhale, and the gap between.</p>
+        </div>
+        <div class="process__step">
+          <span class="process__label">After</span>
+          <p class="process__text">Thoughts will attack. That is the 'monkey mind' dying. Do not fight them. Watch them dissolve. Return to the breath.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOW -->
+  <section class="section vow" id="vow">
+    <div class="section__inner">
+      <div class="vow__symbol">&#9711;</div>
+      <blockquote class="vow__text reveal">
+        "I do not quiet your mind. I show you the door. You are the one who must choose to walk through it. The silence is not empty — it is full of everything you've been avoiding."
+      </blockquote>
+      <cite class="vow__author">— Ayo Okafor</cite>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials" id="testimonials">
+    <div class="section__inner">
+      <span class="section__number">05</span>
+      <h2 class="section__title">Voices of Transformation</h2>
+      <div class="testimonials__grid stagger-children">
+        <div class="testimonials__card">
+          <blockquote>
+            <p>"After twenty years of anxiety, I found peace in the spaces between breaths. Ayo taught me that I am not my thoughts — I am the awareness behind them."</p>
+          </blockquote>
+          <cite>— Sarah M., Tokyo</cite>
+        </div>
+        <div class="testimonials__card">
+          <blockquote>
+            <p>"The walking meditation changed everything. I walk differently now — each step is a prayer, each footfall a meditation. My whole day became the practice."</p>
+          </blockquote>
+          <cite>— David K., New York</cite>
+        </div>
+        <div class="testimonials__card">
+          <blockquote>
+            <p>"I came seeking calm and found something deeper — a radical acceptance of life as it is. The bell practice taught me to return, again and again, to what matters."</p>
+          </blockquote>
+          <cite>— Maya L., London</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — 6 Items -->
+  <section class="section faq" id="faqs">
+    <div class="section__inner">
+      <span class="section__number">06</span>
+      <h2 class="section__title">Frequently Asked</h2>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>"I can't stop thinking."</summary>
+          <div class="faq__answer">That is the point — to watch the thoughts, not stop them. The mind generates 6,000 thoughts per day. Meditation teaches you to observe them without attaching. The goal is not emptiness. It is non-reactivity.</div>
+        </details>
+        <details class="faq__item">
+          <summary>"Is 10 minutes enough?"</summary>
+          <div class="faq__answer">Yes. Consistency beats duration. Research shows measurable changes in the amygdala after just 8 weeks of daily 10-minute practice. The brain does not care about length. It cares about repetition.</div>
+        </details>
+        <details class="faq__item">
+          <summary>"Why do I feel angry after?"</summary>
+          <div class="faq__answer">Suppressed emotion rises first. When the mind quiets, what was buried surfaces. This is not a sign of failure — it is a sign the practice is working. Sit with it. Do not flee.</div>
+        </details>
+        <details class="faq__item">
+          <summary>"Can meditation replace therapy?"</summary>
+          <div class="faq__answer">No. Meditation is a complement, not a replacement. Therapy addresses specific conditions with clinical tools. Meditation trains the mind's general capacity for awareness. Use both.</div>
+        </details>
+        <details class="faq__item">
+          <summary>"I fell asleep. Did I fail?"</summary>
+          <div class="faq__answer">No. Your body needed rest. The practice is simply noticing — even the noticing of falling asleep is awareness. Sit upright next time. If sleep persists, it may be telling you something important.</div>
+        </details>
+        <details class="faq__item">
+          <summary>"How do I know it's working?"</summary>
+          <div class="faq__answer">You will not notice during the session. The changes happen in the spaces between — in your reactions, your sleep, your patience. Others will notice before you do. That is the nature of neuroplasticity.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS — 2 Expanded -->
+  <section class="section events" id="events">
+    <div class="section__inner">
+      <span class="section__number">07</span>
+      <h2 class="section__title">Live Events</h2>
+      <div class="events__grid stagger-children">
+        <div class="events__card">
+          <span class="events__date">Every Saturday — 6:30 AM</span>
+          <h3 class="events__title">The Morning Sit</h3>
+          <p class="events__desc">A 45-minute silent group meditation held in the studio at dawn. No instruction, no music, no引导. Just 20 cushions, the sound of breath, and the rising light. Open to all levels. Arrive five minutes early. Leave your phone at the door.</p>
+          <span class="events__detail">Drop-in &middot; $25 &middot; Capacity 20</span>
+        </div>
+        <div class="events__card">
+          <span class="events__date">First Weekend of Each Month</span>
+          <h3 class="events__title">The Monthly Retreat</h3>
+          <p class="events__desc">A two-day silent retreat — Saturday and Sunday, dawn to dusk. Three meals in silence. Walking meditation in the garden. Sitting in the hall. No speaking, no reading, no writing. Just you and the mind, locked in a room together until something breaks.</p>
+          <span class="events__detail">Registration Required &middot; $350 &middot; Capacity 12</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIFT -->
+  <section class="section gift" id="gift">
+    <div class="section__inner">
+      <h2 class="gift__title">Gift a Sanctuary</h2>
+      <p class="gift__desc">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
+      <a href="#contact" class="btn">Gift a Session &rarr;</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="section__inner">
+      <div class="contact__grid">
+        <div class="reveal">
+          <span class="section__number">08</span>
+          <h2 class="section__title" style="color: var(--paper);">Find Us</h2>
+          <p class="contact__name">Ayo Okafor</p>
+          <p class="contact__detail">14 Stillwater Lane<br>London, E2 7QJ<br>United Kingdom</p>
+          <p class="contact__detail">Sittings: Tuesday, Thursday, Saturday<br>6:30 AM — 8:00 AM GMT</p>
+        </div>
+        <div class="contact__form reveal">
+          <h3>Reach Out</h3>
+          <form id="contactForm">
+            <div class="contact__group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
             </div>
-        </div>
-    </section>
-
-    <!-- The 3-Step Process -->
-    <section id="process" class="section process-section">
-        <div class="container">
-            <h2 class="section-title">The 3-Step Process</h2>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="process-label">Before</div>
-                    <p>Sit upright.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-label">During</div>
-                    <p>10-min silent observation of the breath. No mantras.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-label">After</div>
-                    <p>Thoughts will attack. That is the 'monkey mind' dying.</p>
-                </div>
+            <div class="contact__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
             </div>
-        </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section id="philosophy" class="section philosophy-section">
-        <div class="container">
-            <h2 class="section-title">Philosophy</h2>
-            <div class="philosophy-grid">
-                <div class="philosophy-pillar">
-                    <h3>Present Moment Awareness</h3>
-                    <p>The past is a memory, the future is a projection. Only the now is real. We train the mind to rest here, in the immediacy of experience.</p>
-                </div>
-                <div class="philosophy-pillar">
-                    <h3>Non-Attachment</h3>
-                    <p>Observing thoughts and emotions without clinging or resistance. They arise, they pass. We are the sky, not the clouds.</p>
-                </div>
-                <div class="philosophy-pillar">
-                    <h3>Compassionate Inquiry</h3>
-                    <p>Looking deeply into the nature of suffering with kindness. Understanding transforms. The wound becomes the door to wisdom.</p>
-                </div>
-                <div class="philosophy-pillar">
-                    <h3>Embodied Stillness</h3>
-                    <p>Stillness is not the absence of movement but its deepest expression. In the body, we find the ground of being.</p>
-                </div>
-                <div class="philosophy-pillar">
-                    <h3>Interbeing</h3>
-                    <p>We are not separate. The breath connects us to all beings. Meditation reveals the profound interdependence of all life.</p>
-                </div>
+            <div class="contact__group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
             </div>
+            <button type="submit" class="contact__submit">Send Message</button>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Practitioner's Vow -->
-    <section id="vow" class="section vow-section">
-        <div class="container">
-            <div class="vow-content">
-                <div class="vow-mark">â—¯</div>
-                <blockquote class="vow-text">
-                    <p>"I do not quiet your mind. I show you the door. You are the one who must choose to walk through it. The silence is not emptyâ€”it is full of everything you've been avoiding."</p>
-                </blockquote>
-            </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <blockquote class="footer__quote">"The wound is the place where the Light enters you."</blockquote>
+      <cite class="footer__quote-author">— Rumi</cite>
+
+      <div class="footer__lexicon">
+        <h4 class="footer__lexicon-title">Lexicon</h4>
+        <div class="footer__lexicon-grid">
+          <div class="footer__lexicon-item">
+            <div class="footer__lexicon-term">Samatha</div>
+            <div class="footer__lexicon-def">Calm-abiding concentration. The settling of the mind into stillness.</div>
+          </div>
+          <div class="footer__lexicon-item">
+            <div class="footer__lexicon-term">Vipassana</div>
+            <div class="footer__lexicon-def">Insight into impermanence. Seeing things as they are, not as you wish.</div>
+          </div>
+          <div class="footer__lexicon-item">
+            <div class="footer__lexicon-term">Sankhara</div>
+            <div class="footer__lexicon-def">Mental formations. The thoughts and impulses that arise unbidden.</div>
+          </div>
+          <div class="footer__lexicon-item">
+            <div class="footer__lexicon-term">Anicca</div>
+            <div class="footer__lexicon-def">Impermanence. Everything arises, exists briefly, and dissolves.</div>
+          </div>
+          <div class="footer__lexicon-item">
+            <div class="footer__lexicon-term">Dukkha</div>
+            <div class="footer__lexicon-def">Suffering. The unsatisfactoriness of conditioned existence.</div>
+          </div>
+          <div class="footer__lexicon-item">
+            <div class="footer__lexicon-term">Anatta</div>
+            <div class="footer__lexicon-def">Non-self. The absence of a fixed, permanent identity.</div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section testimonials-section">
-        <div class="container">
-            <h2 class="section-title">Voices of Transformation</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <blockquote>
-                        <p>"After twenty years of anxiety, I found peace in the spaces between breaths. Thich taught me that I am not my thoughts â€” I am the awareness behind them."</p>
-                    </blockquote>
-                    <cite>â€” Sarah M., Tokyo</cite>
-                </div>
-                <div class="testimonial-card">
-                    <blockquote>
-                        <p>"The walking meditation changed everything. I walk differently now â€” each step is a prayer, each footfall a meditation. My whole day became the practice."</p>
-                    </blockquote>
-                    <cite>â€” David K., New York</cite>
-                </div>
-                <div class="testimonial-card">
-                    <blockquote>
-                        <p>"I came seeking calm and found something deeper â€” a radical acceptance of life as it is. The bell practice taught me to return, again and again, to what matters."</p>
-                    </blockquote>
-                    <cite>â€” Maya L., London</cite>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="footer__credits">
+        <p class="footer__copy">&copy; 2026 Meditation with Ayo Okafor. All moments reserved.</p>
+        <p class="footer__made-by">Made with love by <a href="#">Empathy Studio</a> &middot; <a href="#">Norman James</a></p>
+        <p class="footer__contraindications">Not recommended during active psychosis. If you experience severe anxiety or dissociation, stop and consult a mental health professional.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- FAQs -->
-    <section id="faqs" class="section faqs-section">
-        <div class="container">
-            <h2 class="section-title">FAQs</h2>
-            <div class="faqs-grid">
-                <div class="faq-item">
-                    <div class="faq-question">Q: "I can't stop thinking."</div>
-                    <div class="faq-answer">A: That is the point â€” to watch the thoughts, not stop them.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Q: "Is 10 minutes enough?"</div>
-                    <div class="faq-answer">A: Yes. Consistency beats duration.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Q: "Why do I feel angry after?"</div>
-                    <div class="faq-answer">A: Suppressed emotion rises first.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Journey Section -->
-    <section id="journey" class="section journey-section">
-        <div class="container">
-            <h2 class="section-title">Your Journey</h2>
-            <div class="journey-content">
-                <div class="journey-steps">
-                    <div class="journey-step">
-                        <div class="step-number">1</div>
-                        <h3>Arrival</h3>
-                        <p>Begin at the door. Leave the outside world behind. Take a moment to simply stand, to breathe, to arrive fully in this space.</p>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">2</div>
-                        <h3>Settling</h3>
-                        <p>Fifteen minutes of silent sitting. No instruction, no guidance. Just you and the breath, finding your natural rhythm together.</p>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">3</div>
-                        <h3>Guided Practice</h3>
-                        <p>Thich leads the group through one of the three sacred arts. Voice soft, pace slow, presence deep.</p>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">4</div>
-                        <h3>Sharing Circle</h3>
-                        <p>An invitation to speak, to listen, to witness. No advice, no fixing. Just the profound gift of being heard.</p>
-                    </div>
-                    <div class="journey-step">
-                        <div class="step-number">5</div>
-                        <h3>Closing Bell</h3>
-                        <p>Three bells. The first for the past, released. The second for the future, unborn. The third for this moment, alive.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lexicon -->
-    <section id="lexicon" class="section lexicon-section">
-        <div class="container">
-            <h2 class="section-title">Lexicon</h2>
-            <div class="lexicon-grid">
-                <div class="lexicon-item">
-                    <div class="lexicon-term">Samatha</div>
-                    <div class="lexicon-def">Calm-abiding concentration.</div>
-                </div>
-                <div class="lexicon-item">
-                    <div class="lexicon-term">Vipassana</div>
-                    <div class="lexicon-def">Insight into impermanence.</div>
-                </div>
-                <div class="lexicon-item">
-                    <div class="lexicon-term">Sankhara</div>
-                    <div class="lexicon-def">Mental formations (thoughts).</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Try This Now -->
-    <section id="try-now" class="section try-now-section">
-        <div class="container">
-            <div class="try-now-content">
-                <h2 class="section-title">Try This Now</h2>
-                <p class="try-now-instruction">Set a 3-min timer. Count every exhale from 1 to 10. Repeat. The moment you lose count, start over.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dynamic CTA -->
-    <section id="cta" class="section cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">The 10-Minute Reset</h2>
-                <p class="cta-subtitle">Your mind will resist. That is how you know it is working.</p>
-                <button class="cta-button" id="ctaButton">Begin Now</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Live Events -->
-    <section id="events" class="section events-section">
-        <div class="container">
-            <h2 class="section-title">Live Events</h2>
-            <div class="events-grid">
-                <div class="event-item">
-                    <span class="event-name">Silent Retreat</span>
-                    <span class="event-detail">Quarterly</span>
-                </div>
-                <div class="event-item">
-                    <span class="event-name">10-Minute Challenge</span>
-                    <span class="event-detail">Ongoing</span>
-                </div>
-                <div class="event-item">
-                    <span class="event-name">Mindfulness Workshop</span>
-                    <span class="event-detail">Monthly</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gift a Session -->
-    <section id="gift" class="section gift-section">
-        <div class="container">
-            <h2 class="section-title">Gift a Sanctuary</h2>
-            <p class="gift-text">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2 class="section-title">Find Us</h2>
-                    <div class="contact-details">
-                        <p class="healer-name">Thich Minh Hanh</p>
-                        <p class="address">1 Temple Road<br>Kyoto, Japan 604-8006</p>
-                        <p class="schedule">Sittings: Tuesday, Thursday, Saturday<br>7:00 AM â€” 8:30 AM JST</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Reach Out</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-contraindications">Not recommended during active psychosis. If you experience severe anxiety or dissociation, stop and consult a mental health professional.</p>
-            <p class="footer-text">Â© 2026 Meditation with Thich Minh Hanh. All moments reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-<script src="meta-layer.js"></script></body>
+  <script type="module" src="script.js"></script>
+  <script src="meta-layer.js"></script>
+</body>
 </html>

@@ -3,66 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chronokinesis â€” Ayurveda by Dr. Ananda Sharma</title>
+<title>Chronokinesis — Ayurveda by Dr. Priya Sharma</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Tiempos+Text:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.scss">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Ayurveda - Dr. Ananda Sharma","description":"Balance Is the Nature of Health","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
+{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Ayurveda - Dr. Priya Sharma","description":"Balance Is the Nature of Health","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
 </script>
 </head>
 <body>
 
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader__text">CHRONOKINESIS</div>
+  <div class="loader__subtext">Raw Earth Academic</div>
+</div>
+
 <!-- NAVIGATION -->
 <nav class="nav" id="nav">
-  <div class="nav__coords">29.8543Â° N, 78.3325Â° E</div>
+  <div class="nav__coords">29.8543° N, 78.3325° E</div>
   <div class="nav__links">
     <a href="#about" data-label="01">About</a>
     <a href="#mechanism" data-label="02">The Mechanism</a>
-    <a href="#process" data-label="03">The Process</a>
-    <a href="#art" data-label="04">Sacred Art</a>
-    <a href="#philosophy" data-label="05">Philosophy</a>
-    <a href="#lexicon" data-label="06">Lexicon</a>
-    <a href="#try-now" data-label="07">Try Now</a>
-    <a href="#compass" data-label="08">Prakriti Compass</a>
-    <a href="#journey" data-label="09">Journey</a>
-    <a href="#testimonials" data-label="10">Stories</a>
-    <a href="#faq" data-label="11">FAQ</a>
+    <a href="#services" data-label="03">Services</a>
+    <a href="#process" data-label="04">Process</a>
+    <a href="#compass" data-label="05">Prakriti Compass</a>
+    <a href="#journey" data-label="06">Journey</a>
+    <a href="#testimonials" data-label="07">Stories</a>
+    <a href="#faq" data-label="08">FAQ</a>
+    <a href="#events" data-label="09">Events</a>
+    <a href="#contact" data-label="10">Contact</a>
   </div>
   <div class="nav__tagline">Balance Is the Nature of Health</div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — Magazine Cover -->
 <section class="hero" id="hero">
-  <div class="hero__parallax">
-    <div class="hero__layer hero__layer--back" id="layerBack"></div>
-    <div class="hero__layer hero__layer--mid" id="layerMid"></div>
-    <div class="hero__layer hero__layer--front" id="layerFront"></div>
-    <div class="hero__celestial" id="celestial"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-cover">
+    <p class="hero-issue">Rishikesh, India — 249137 · Est. 2003</p>
+    <h1 class="hero-title">CHRONOKINESIS</h1>
+    <p class="hero-subtitle">Ayurveda · Ancient Science · Living Balance</p>
+    <p class="hero-byline">Dr. Priya Sharma</p>
+    <div class="hero-edition">
+      <span>Issue No. 08</span>
+      <span>Raw Earth Academic</span>
+    </div>
+    <a href="#compass" class="hero-cta">Find Your Constitution</a>
   </div>
-  <div class="hero__content">
-    <p class="hero__pre">Rishikesh, India â€” 249137</p>
-    <h1 class="hero__title">CHRONOKINESIS</h1>
-    <p class="hero__sub">Ayurveda Â· Ancient Science Â· Living Balance</p>
-    <p class="hero__healer">Dr. Ananda Sharma</p>
-    <a href="#compass" class="hero__cta">Find Your Constitution</a>
-  </div>
-  <div class="hero__scroll-indicator">
+  <div class="hero-scroll">
     <span>Scroll</span>
-    <div class="hero__scroll-line"></div>
+    <div class="hero-scroll__line"></div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="section about" id="about">
-  <div class="section__label">01 â€” About</div>
+  <div class="section__label">01 — About</div>
   <div class="section__grid">
     <div class="section__text">
-      <h2 class="section__heading">Dr. Ananda Sharma</h2>
+      <h2 class="section__heading">Dr. Priya Sharma</h2>
       <p class="section__body">Trained at Gujarat Ayurveda University, Dr. Sharma has spent over two decades translating ancient Ayurvedic texts into modern clinical practice. Her approach bridges the empirical rigor of classical Charaka Samhita with contemporary diagnostic methods.</p>
       <p class="section__body">Every consultation begins with a fundamental premise: your body already knows how to heal. The practitioner's role is to remove the obstacles that prevent that innate intelligence from expressing itself.</p>
-      <p class="section__body">"Dr. Ananda Sharma grew up watching his grandmother prescribe turmeric and ginger for every ailment in their village. He went to medical school to 'prove her wrong' and came out understanding she was right all along."</p>
+      <p class="section__body">"Dr. Priya Sharma grew up watching her grandmother prescribe turmeric and ginger for every ailment in their village. She went to medical school to 'prove her wrong' and came out understanding she was right all along."</p>
       <div class="about__details">
         <div class="about__detail">
           <span class="about__detail-label">Specialization</span>
@@ -74,14 +78,14 @@
         </div>
         <div class="about__detail">
           <span class="about__detail-label">Practice</span>
-          <span class="about__detail-value">Rishikesh, India â€” 22+ Years</span>
+          <span class="about__detail-value">Rishikesh, India — 22+ Years</span>
         </div>
       </div>
     </div>
     <div class="section__visual">
       <div class="about__image-frame">
         <div class="about__image-placeholder">
-          <span>Portrait of Dr. Ananda Sharma</span>
+          <span>Portrait of Dr. Priya Sharma</span>
         </div>
       </div>
     </div>
@@ -89,27 +93,27 @@
 </section>
 
 <!-- PRACTITIONER'S VOW -->
-<section class="section vow" id="vow">
+<section class="vow" id="vow">
   <div class="vow__inner">
     <div class="vow__label">The Practitioner's Vow</div>
-    <blockquote class="vow__quote">"I do not prescribe a diet. I read your constitution like a text written before you were born. The doshas are not labels â€” they are weather patterns. I help you dance with your climate."</blockquote>
-    <div class="vow__attribution">â€” Dr. Ananda Sharma</div>
+    <blockquote class="vow__quote">"I do not prescribe a diet. I read your constitution like a text written before you were born. The doshas are not labels — they are weather patterns. I help you dance with your climate."</blockquote>
+    <div class="vow__attribution">— Dr. Priya Sharma</div>
   </div>
 </section>
 
-<!-- THE MECHANISM -->
+<!-- THE MECHANISM — Tridosha Theory -->
 <section class="section mechanism" id="mechanism">
-  <div class="section__label">02 â€” The Mechanism</div>
+  <div class="section__label">02 — The Mechanism</div>
   <div class="section__grid">
     <div class="section__text">
       <h2 class="section__heading">Ayurveda Is Science, Not Mysticism</h2>
-      <p class="section__body">Ayurveda is metabolic phenotyping based on the three Doshas â€” Vata, Pitta, and Kapha. These are not metaphors. They are biological forces that correlate directly with modern microbiome composition and HLA (immune) gene expression.</p>
-      <p class="section__body">Your Prakriti â€” your birth constitution â€” is written into your genetic and epigenetic landscape. Ayurveda reads this text with a precision that modern diagnostics are only beginning to approximate.</p>
-      <p class="section__body">Every imbalance manifests first in the microbiome, then in the immune response, then in symptoms. Ayurveda intervenes at the root â€” the terrain, not the weeds.</p>
+      <p class="section__body">Ayurveda is metabolic phenotyping based on the three Doshas — Vata, Pitta, and Kapha. These are not metaphors. They are biological forces that correlate directly with modern microbiome composition and HLA (immune) gene expression.</p>
+      <p class="section__body">Your Prakriti — your birth constitution — is written into your genetic and epigenetic landscape. Ayurveda reads this text with a precision that modern diagnostics are only beginning to approximate.</p>
+      <p class="section__body">Every imbalance manifests first in the microbiome, then in the immune response, then in symptoms. Ayurveda intervenes at the root — the terrain, not the weeds.</p>
     </div>
     <div class="section__visual">
       <div class="mechanism__diagram">
-        <div class="mechanism__node mechanism__node--top">
+        <div class="mechanism__node">
           <span class="mechanism__node-label">Prakriti</span>
           <span class="mechanism__node-sub">Birth Constitution</span>
         </div>
@@ -129,8 +133,8 @@
           </div>
         </div>
         <div class="mechanism__line"></div>
-        <div class="mechanism__node mechanism__node--bottom">
-          <span class="mechanism__node-label">Microbiome Ã— HLA Expression</span>
+        <div class="mechanism__node">
+          <span class="mechanism__node-label">Microbiome × HLA Expression</span>
           <span class="mechanism__node-sub">Modern Correlate</span>
         </div>
       </div>
@@ -138,27 +142,50 @@
   </div>
 </section>
 
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="section__label">03 — Services</div>
+  <h2 class="section__heading section__heading--center">Three Pillars of Practice</h2>
+  <div class="services__grid">
+    <div class="service-card">
+      <div class="service-card__number">01</div>
+      <h3 class="service-card__title">Dosha Assessment</h3>
+      <p class="service-card__desc">A comprehensive constitutional analysis mapping your unique Prakriti — the ratio of Vata, Pitta, and Kapha that determines your physical, mental, and emotional tendencies.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-card__number">02</div>
+      <h3 class="service-card__title">Herbal Prescriptions</h3>
+      <p class="service-card__desc">Custom-formulated botanical protocols drawn from classical Ayurvedic pharmacopeia. Each prescription is calibrated to your dosha profile and current Vikriti (state of imbalance).</p>
+    </div>
+    <div class="service-card">
+      <div class="service-card__number">03</div>
+      <h3 class="service-card__title">Panchakarma</h3>
+      <p class="service-card__desc">Five-fold purification therapy — the cornerstone of Ayurvedic rejuvenation. A systematic process of eliminating deep-rooted toxins and restoring constitutional harmony.</p>
+    </div>
+  </div>
+</section>
+
 <!-- THE 3-STEP PROCESS -->
 <section class="section process" id="process">
-  <div class="section__label">03 â€” The 3-Step Process</div>
-  <h2 class="section__heading section__heading--center">Before Â· During Â· After</h2>
+  <div class="section__label">04 — The 3-Step Process</div>
+  <h2 class="section__heading section__heading--center">Before · During · After</h2>
   <div class="process__grid">
     <div class="process__step">
-      <div class="process__icon">â—¯</div>
+      <div class="process__icon">◉</div>
       <div class="process__phase">Before</div>
       <h3 class="process__title">Tongue-Scraping Upon Waking</h3>
       <p class="process__desc">Scrape the tongue to remove overnight Ama (toxins). This clears the digestive pathway and prepares the body to receive food with maximum absorption.</p>
     </div>
-    <div class="process__divider">â†’</div>
+    <div class="process__divider">→</div>
     <div class="process__step">
-      <div class="process__icon">â—ˆ</div>
+      <div class="process__icon">◈</div>
       <div class="process__phase">During</div>
       <h3 class="process__title">Mid-Day Meal Aligned to Agni</h3>
-      <p class="process__desc">Eat your largest meal when digestive fire (Agni) is strongest â€” typically between 12 and 2 PM. Respect your constitution's specific dietary needs.</p>
+      <p class="process__desc">Eat your largest meal when digestive fire (Agni) is strongest — typically between 12 and 2 PM. Respect your constitution's specific dietary needs.</p>
     </div>
-    <div class="process__divider">â†’</div>
+    <div class="process__divider">→</div>
     <div class="process__step">
-      <div class="process__icon">â‹</div>
+      <div class="process__icon">◇</div>
       <div class="process__phase">After</div>
       <h3 class="process__title">10-Minute Walking Digestion</h3>
       <p class="process__desc">Walk gently after eating. Movement aids peristalsis and prevents the stagnation that leads to digestive discomfort and Ama formation.</p>
@@ -166,75 +193,13 @@
   </div>
 </section>
 
-<!-- SACRED ART -->
-<section class="section art" id="art">
-  <div class="section__label">04 â€” Sacred Art</div>
-  <h2 class="section__heading section__heading--center">Three Pillars of Practice</h2>
-  <div class="art__grid">
-    <div class="art__card">
-      <div class="art__number">01</div>
-      <h3 class="art__title">Dosha Assessment</h3>
-      <p class="art__desc">A comprehensive constitutional analysis mapping your unique Prakriti â€” the ratio of Vata, Pitta, and Kapha that determines your physical, mental, and emotional tendencies.</p>
-      <div class="art__visual">
-        <div class="art__symbol">â—ˆ</div>
-      </div>
-    </div>
-    <div class="art__card">
-      <div class="art__number">02</div>
-      <h3 class="art__title">Herbal Prescriptions</h3>
-      <p class="art__desc">Custom-formulated botanical protocols drawn from classical Ayurvedic pharmacopeia. Each prescription is calibrated to your dosha profile and current Vikriti (state of imbalance).</p>
-      <div class="art__visual">
-        <div class="art__symbol">â‹</div>
-      </div>
-    </div>
-    <div class="art__card">
-      <div class="art__number">03</div>
-      <h3 class="art__title">Panchakarma</h3>
-      <p class="art__desc">Five-fold purification therapy â€” the cornerstone of Ayurvedic rejuvenation. A systematic process of eliminating deep-rooted toxins and restoring constitutional harmony.</p>
-      <div class="art__visual">
-        <div class="art__symbol">â—¯</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PHILOSOPHY -->
-<section class="section philosophy" id="philosophy">
-  <div class="section__label">05 â€” Philosophy</div>
-  <h2 class="section__heading section__heading--center">Foundations of Balance</h2>
-  <div class="philosophy__pillars">
-    <div class="philosophy__pillar">
-      <div class="philosophy__pillar-num">I</div>
-      <h3 class="philosophy__pillar-title">The Three Doshas</h3>
-      <p class="philosophy__pillar-text">Vata (air + ether), Pitta (fire + water), and Kapha (earth + water) are not merely body types â€” they are the fundamental forces governing all biological processes. Every person carries all three; health is their equilibrium.</p>
-    </div>
-    <div class="philosophy__pillar">
-      <div class="philosophy__pillar-num">II</div>
-      <h3 class="philosophy__pillar-title">Prakriti Is Intelligence</h3>
-      <p class="philosophy__pillar-text">Your birth constitution (Prakriti) is your blueprint for optimal living. Ayurveda does not treat disease â€” it restores alignment with your original nature.</p>
-    </div>
-    <div class="philosophy__pillar">
-      <div class="philosophy__pillar-num">III</div>
-      <h3 class="philosophy__pillar-title">Nature as Pharmacy</h3>
-      <p class="philosophy__pillar-text">Every healing substance exists within the natural world. Ayurveda's materia medica encompasses thousands of plants, minerals, and formulations â€” each carrying specific energetic signatures.</p>
-    </div>
-    <div class="philosophy__pillar">
-      <div class="philosophy__pillar-num">IV</div>
-      <h3 class="philosophy__pillar-title">Rhythm Is Medicine</h3>
-      <p class="philosophy__pillar-text">Circadian cycles, seasonal rhythms, and daily routines (Dinacharya) form the temporal framework of Ayurvedic health. Healing happens when we live in time with nature's patterns.</p>
-    </div>
-  </div>
-</section>
-
 <!-- PRAKRITI COMPASS -->
 <section class="section compass" id="compass">
-  <div class="section__label">08 â€” Prakriti Compass</div>
+  <div class="section__label">05 — Prakriti Compass</div>
   <h2 class="section__heading section__heading--center">Discover Your Constitution</h2>
-  <p class="compass__intro">Answer five questions honestly. Click the statement that resonates most deeply. Your Prakriti profile and herbal tea blend will be revealed.</p>
+  <p class="compass__intro">Answer six questions honestly. Click the statement that resonates most deeply. Your Prakriti profile and herbal tea blend will be revealed.</p>
   
-  <div class="compass__quiz" id="compassQuiz">
-    <!-- Questions will be populated by JavaScript -->
-  </div>
+  <div class="compass__quiz" id="compassQuiz"></div>
 
   <div class="compass__result" id="compassResult" style="display:none;">
     <div class="compass__result-inner">
@@ -253,7 +218,7 @@
 
 <!-- JOURNEY -->
 <section class="section journey" id="journey">
-  <div class="section__label">09 â€” Your Journey</div>
+  <div class="section__label">06 — Your Journey</div>
   <h2 class="section__heading section__heading--center">What to Expect</h2>
   <div class="journey__timeline">
     <div class="journey__step">
@@ -267,14 +232,14 @@
       <div class="journey__step-num">02</div>
       <div class="journey__step-content">
         <h3>Personalized Protocol</h3>
-        <p>Receive your custom treatment plan: herbal formulations, dietary guidelines, daily routines, and recommended therapies â€” all calibrated to your unique constitution.</p>
+        <p>Receive your custom treatment plan: herbal formulations, dietary guidelines, daily routines, and recommended therapies — all calibrated to your unique constitution.</p>
       </div>
     </div>
     <div class="journey__step">
       <div class="journey__step-num">03</div>
       <div class="journey__step-content">
         <h3>Healing Process</h3>
-        <p>Follow your protocol with regular check-ins. Ayurvedic healing is gradual and sustainable â€” working with your body's natural rhythms rather than against them.</p>
+        <p>Follow your protocol with regular check-ins. Ayurvedic healing is gradual and sustainable — working with your body's natural rhythms rather than against them.</p>
       </div>
     </div>
     <div class="journey__step">
@@ -289,83 +254,36 @@
 
 <!-- TESTIMONIALS -->
 <section class="section testimonials" id="testimonials">
-  <div class="section__label">10 â€” Stories</div>
+  <div class="section__label">07 — Stories</div>
   <h2 class="section__heading section__heading--center">Voices of Healing</h2>
   <div class="testimonials__grid">
     <div class="testimonials__card">
-      <div class="testimonials__quote">"After years of chronic fatigue, Dr. Sharma's approach changed everything. The herbal protocol she designed didn't just address symptoms â€” it rebuilt my energy from the foundation. I sleep deeply now. I wake with intention."</div>
+      <div class="testimonials__quote">"After years of chronic fatigue, Dr. Sharma's approach changed everything. The herbal protocol she designed didn't just address symptoms — it rebuilt my energy from the foundation. I sleep deeply now. I wake with intention."</div>
       <div class="testimonials__author">
         <span class="testimonials__name">Meera K.</span>
-        <span class="testimonials__detail">Vata-Pitta Constitution Â· Mumbai</span>
+        <span class="testimonials__detail">Vata-Pitta Constitution · Mumbai</span>
       </div>
     </div>
     <div class="testimonials__card">
       <div class="testimonials__quote">"The Panchakarma treatment was transformative. I came in carrying twenty years of accumulated stress in my shoulders. Dr. Sharma's hands and her knowledge of herbal oils released what no modern therapy could reach."</div>
       <div class="testimonials__author">
         <span class="testimonials__name">James R.</span>
-        <span class="testimonials__detail">Kapha Constitution Â· London</span>
+        <span class="testimonials__detail">Kapha Constitution · London</span>
       </div>
     </div>
     <div class="testimonials__card">
-      <div class="testimonials__quote">"I was skeptical. Then she explained my dosha profile with more precision than any blood test. The tea blend she prescribed for my digestion â€” ginger, cumin, fennel â€” three weeks and my IBS symptoms vanished."</div>
+      <div class="testimonials__quote">"I was skeptical. Then she explained my dosha profile with more precision than any blood test. The tea blend she prescribed for my digestion — ginger, cumin, fennel — three weeks and my IBS symptoms vanished."</div>
       <div class="testimonials__author">
         <span class="testimonials__name">Anika T.</span>
-        <span class="testimonials__detail">Pitta Constitution Â· Berlin</span>
+        <span class="testimonials__detail">Pitta Constitution · Berlin</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- LEXICON -->
-<section class="section lexicon" id="lexicon">
-  <div class="section__label">06 â€” Lexicon</div>
-  <h2 class="section__heading section__heading--center">Terms You'll Encounter</h2>
-  <div class="lexicon__grid">
-    <div class="lexicon__term">
-      <h3 class="lexicon__word">Agni</h3>
-      <p class="lexicon__def">Digestive fire. The metabolic force that transforms food into energy and awareness. Strong Agni = strong health.</p>
-    </div>
-    <div class="lexicon__term">
-      <h3 class="lexicon__word">Ama</h3>
-      <p class="lexicon__def">Toxins. The undigested residue that accumulates when Agni is weak or food is improperly combined. Ama is the root of disease.</p>
-    </div>
-    <div class="lexicon__term">
-      <h3 class="lexicon__word">Ojas</h3>
-      <p class="lexicon__def">Immunity and vitality. The subtle essence of all bodily tissues â€” the biological equivalent of resilience and radiance.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TRY THIS NOW -->
-<section class="section try-now" id="try-now">
-  <div class="try-now__inner">
-    <div class="try-now__label">Try This Now</div>
-    <h3 class="try-now__heading">Stoke Your Agni</h3>
-    <p class="try-now__text">Drink warm water with a pinch of ginger and lemon first thing in the morning. This simple act ignites your digestive fire and prepares your metabolism for the day.</p>
-    <div class="try-now__recipe">
-      <div class="try-now__recipe-label">Morning Agni Tonic</div>
-      <div class="try-now__recipe-items">
-        <span>1 cup warm water</span>
-        <span>Â½ inch fresh ginger, grated</span>
-        <span>Squeeze of lemon</span>
-      </div>
-      <p class="try-now__recipe-note">Do not add honey to hot liquids â€” it becomes Ama.</p>
-    </div>
-  </div>
-</section>
-
-<!-- DYNAMIC CTA -->
-<section class="section dynamic-cta" id="dynamicCta">
-  <div class="dynamic-cta__inner">
-    <h2 class="dynamic-cta__heading">Ready to Know Your Constitution?</h2>
-    <p class="dynamic-cta__text">Your Prakriti reveals the roadmap. Your Vikriti reveals the detour. Together, they chart your path back to balance.</p>
-    <a href="#compass" class="dynamic-cta__btn">Find Your Constitution</a>
   </div>
 </section>
 
 <!-- FAQ -->
 <section class="section faq" id="faq">
-  <div class="section__label">07 â€” Frequently Asked Questions</div>
+  <div class="section__label">08 — Frequently Asked Questions</div>
   <h2 class="section__heading section__heading--center">Common Inquiries</h2>
   <div class="faq__list">
     <div class="faq__item">
@@ -374,31 +292,68 @@
     </div>
     <div class="faq__item">
       <div class="faq__q">"Can I determine my Dosha online?"</div>
-      <div class="faq__a">It takes a pulse-reading. Online quizzes offer a starting point, but true Prakriti assessment requires Nadi Pariksha â€” the diagnostic art of reading pulse qualities that correlate with dosha composition.</div>
+      <div class="faq__a">It takes a pulse-reading. Online quizzes offer a starting point, but true Prakriti assessment requires Nadi Pariksha — the diagnostic art of reading pulse qualities that correlate with dosha composition.</div>
     </div>
     <div class="faq__item">
       <div class="faq__q">"Can I have coffee?"</div>
-      <div class="faq__a">Only if you are Vata. Pitta and Kapha cannot. Coffee aggravates Pitta's inflammatory tendencies and creates dependency in Kapha's already sluggish metabolism. Vata can handle moderate amounts â€” in the morning, with warm milk.</div>
+      <div class="faq__a">Only if you are Vata. Pitta and Kapha cannot. Coffee aggravates Pitta's inflammatory tendencies and creates dependency in Kapha's already sluggish metabolism. Vata can handle moderate amounts — in the morning, with warm milk.</div>
+    </div>
+    <div class="faq__item">
+      <div class="faq__q">"How long before I see results?"</div>
+      <div class="faq__a">Ayurveda works with your body's natural cycles. Most people notice shifts within 2–4 weeks. Deep constitutional change takes 3–6 months. This is not a quick fix — it is a permanent recalibration.</div>
+    </div>
+    <div class="faq__item">
+      <div class="faq__q">"Is Panchakarma safe for everyone?"</div>
+      <div class="faq__a">Panchakarma is prescribed only after thorough assessment. Contraindications include pregnancy, certain cardiac conditions, and acute illness. Dr. Sharma evaluates each candidate individually before recommending purification therapy.</div>
+    </div>
+    <div class="faq__item">
+      <div class="faq__q">"Can I follow Ayurveda alongside modern medicine?"</div>
+      <div class="faq__a">Yes, with transparency. Always inform both practitioners of all treatments. Ayurvedic herbs can interact with pharmaceuticals — particularly blood thinners, thyroid medications, and diabetes drugs. Coordination is essential.</div>
     </div>
   </div>
 </section>
 
-<!-- LIVE EVENTS -->
+<!-- EVENTS -->
 <section class="section events" id="events">
-  <div class="section__label">Events</div>
+  <div class="section__label">09 — Events</div>
   <h2 class="section__heading section__heading--center">Live Events</h2>
   <div class="events__list">
-    <p>Ayurvedic Cooking Class – Monthly</p>
-    <p>Dosha Assessment Day – Quarterly</p>
-    <p>Panchakarma Retreat – Annually</p>
+    <div class="event-card">
+      <div class="event-card__date">Jul 18, 2026</div>
+      <div class="event-card__info">
+        <h4>Dosha Assessment Workshop</h4>
+        <p>A half-day immersive workshop covering pulse reading basics, tongue diagnosis, and constitutional self-assessment techniques. Limited to 12 participants.</p>
+      </div>
+      <button class="event-card__btn">Join Waitlist</button>
+    </div>
+    <div class="event-card">
+      <div class="event-card__date">Sep 06, 2026</div>
+      <div class="event-card__info">
+        <h4>Seasonal Cleanse — Autumn Reset</h4>
+        <p>A guided 7-day Panchakarma preparation and gentle home cleanse aligned with the transition from Pitta season to Vata season. Includes daily check-ins and herbal kit.</p>
+      </div>
+      <button class="event-card__btn">Join Waitlist</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="section__label">10 — Contact</div>
+  <h2 class="section__heading section__heading--center">Begin Your Journey</h2>
+  <div class="dynamic-cta__inner">
+    <h2 class="dynamic-cta__heading">Ready to Know Your Constitution?</h2>
+    <p class="dynamic-cta__text">Your Prakriti reveals the roadmap. Your Vikriti reveals the detour. Together, they chart your path back to balance.</p>
+    <a href="#compass" class="dynamic-cta__btn">Find Your Constitution</a>
   </div>
 </section>
 
 <!-- GIFT A SESSION -->
-<section class="section gift" id="gift">
+<section class="gift" id="gift">
   <div class="gift__inner">
     <div class="gift__label">Gift a Sanctuary</div>
     <p class="gift__text">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
+    <a href="#contact" class="gift__btn">Gift a Session →</a>
   </div>
 </section>
 
@@ -407,7 +362,7 @@
   <div class="footer__grid">
     <div class="footer__col">
       <h4 class="footer__heading">Chronokinesis</h4>
-      <p class="footer__text">Ayurveda by Dr. Ananda Sharma</p>
+      <p class="footer__text">Ayurveda by Dr. Priya Sharma</p>
       <p class="footer__text">"Balance Is the Nature of Health"</p>
     </div>
     <div class="footer__col">
@@ -417,19 +372,23 @@
     </div>
     <div class="footer__col">
       <h4 class="footer__heading">Hours</h4>
-      <p class="footer__text">Mon â€” Sat: 7:00 AM â€” 6:00 PM</p>
+      <p class="footer__text">Mon — Sat: 7:00 AM — 6:00 PM</p>
       <p class="footer__text">Sunday: Closed for rest</p>
     </div>
+  </div>
+  <div class="footer__rumi">
+    <blockquote>"Let yourself be silently drawn by the strange pull of what you really love. It will not lead you astray."</blockquote>
+    <cite>— Rumi</cite>
   </div>
   <div class="footer__disclaimer">
     <p class="footer__disclaimer-text">Not a replacement for modern medicine. Herbal supplements may interact with pharmaceuticals. Always inform your Ayurvedic practitioner of current medications.</p>
   </div>
   <div class="footer__bottom">
-    <span>Â© 2026 Chronokinesis Ayurveda. All rights reserved.</span>
+    <span>© 2026 Chronokinesis Ayurveda. All rights reserved.</span>
+    <span class="footer__credit">Empathy Studio</span>
   </div>
 </footer>
 
-<script src="script.js"></script>
-<script src="meta-layer.js"></script></body>
+<script type="module" src="script.js"></script>
+</body>
 </html>
-

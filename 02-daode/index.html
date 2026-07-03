@@ -3,470 +3,429 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DaoDe Sound Healing â€” Every Cell Has a Frequency</title>
+  <title>Sound Healing — Deep Resonance | Portland, OR</title>
+  <meta name="description" content="Frequencies that bypass the mind and speak directly to the body. Tibetan bowls, tuning forks, and the physics of resonance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Sound Healing - Elias Harmon","description":"Every Cell Has a Frequency","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.scss">
 </head>
 <body>
-  <!-- NAVIGATION -->
-  <nav class="nav" id="nav">
-    <div class="nav__logo">DaoDe</div>
-    <button class="nav__toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links" id="navLinks">
-      <li><a href="#origin" data-text="Origin">Origin</a></li>
-      <li><a href="#sacred-art" data-text="Sacred Art">Sacred Art</a></li>
-      <li><a href="#philosophy" data-text="Philosophy">Philosophy</a></li>
-      <li><a href="#mechanism" data-text="Mechanism">Mechanism</a></li>
-      <li><a href="#three-step" data-text="Process">Process</a></li>
-      <li><a href="#faqs" data-text="FAQs">FAQs</a></li>
+
+  <!-- Loading -->
+  <div class="loader" id="loader">
+    <p class="loader__text">Tuning frequencies...</p>
+    <p class="loader__subtext">Close your eyes. We'll tell you when to open them.</p>
+  </div>
+
+  <!-- Navigation — Floating Glass -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__brand">Sound Healing</div>
+    <ul class="nav__links">
+      <li><a href="#home" class="nav__link is-active" data-section="home">Home</a></li>
+      <li><a href="#about" class="nav__link" data-section="about">About</a></li>
+      <li><a href="#mechanism" class="nav__link" data-section="mechanism">Mechanism</a></li>
+      <li><a href="#services" class="nav__link" data-section="services">Services</a></li>
+      <li><a href="#faq" class="nav__link" data-section="faq">FAQ</a></li>
+      <li><a href="#events" class="nav__link" data-section="events">Events</a></li>
+      <li><a href="#contact" class="nav__link" data-section="contact">Connect</a></li>
     </ul>
-    <a href="#contact" class="nav__cta">Book a Session</a>
+    <a href="#contact" class="nav__cta">Book Session</a>
   </nav>
 
-  <!-- HERO â€” PARTICLE STORM -->
-  <section class="hero" id="hero">
-    <canvas id="particleCanvas"></canvas>
-    <div class="hero__content">
-      <p class="hero__label">DaoDe Sound Healing</p>
-      <h1 class="hero__title">Every Cell Has<br>a Frequency</h1>
-      <p class="hero__sub">Vibrational medicine rooted in ancient wisdom.<br>Your body remembers how to heal â€” we simply remind it.</p>
-      <a href="#contact" class="hero__cta">Begin Your Journey</a>
-    </div>
-    <div class="hero__scroll">
-      <span>Scroll to Discover</span>
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
+  <main class="content">
 
-  <!-- ORIGIN STORY -->
-  <section class="origin" id="origin">
-    <div class="origin__grid">
-      <div class="origin__media">
-        <div class="origin__image-wrap">
-          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" alt="Sound healer with singing bowl" class="origin__img" loading="lazy">
-          <div class="origin__image-overlay"></div>
+    <!-- Hero — Runway Opening -->
+    <section id="home" class="hero">
+      <canvas class="hero-canvas" id="waveform-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-content">
+        <p class="hero-tagline">Frequency · Resonance · Restoration</p>
+
+        <h1 class="hero-title">
+          <span class="title-line">Sound Heals</span>
+          <span class="title-line accent">What Words</span>
+          <span class="title-line">Cannot Reach</span>
+        </h1>
+
+        <p class="hero-subtitle">Eva Soundweaver · Tibetan Bowls · Tuning Forks · Binaural Beats</p>
+
+        <div class="hero-waveform" aria-hidden="true">
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+          <div class="hero-waveform__bar"></div>
+        </div>
+
+        <div class="hero-scroll">
+          <span>Enter the Resonance</span>
+          <div class="hero-scroll__line"></div>
         </div>
       </div>
-      <div class="origin__text">
-        <span class="section-label">01 â€” Origin</span>
-        <h2 class="section-title">Elias Harmon</h2>
-        <p class="origin__lead">Sound Weaver</p>
-        <div class="origin__bio">
-          <p>Elias Harmon spent seven years studying under Tibetan monks in the Himalayan highlands, where he learned the ancient art of using vibrational frequencies to restore harmony to the body's energy systems.</p>
-          <p>Combining these time-honored techniques with modern sound therapy research, Elias has developed a unique practice that bridges millennia of wisdom with contemporary healing science.</p>
-          <p>His sanctuary, DaoDe â€" meaning "The Way" â€" is a space where sound becomes medicine and every frequency carries intention.</p>
-          <div class="origin-story">
-            <p class="origin-story-text">"Alex spent 12 years as a studio sound engineer before realizing that the frequencies that made music 'sound good' were the exact same ones that calmed his panic attacks. He now builds bespoke soundscapes for trauma release."</p>
-          </div>
-        </div>
-        <div class="origin__detail">
-          <p>777 Resonance Lane<br>Portland, OR 97201</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SACRED ART -->
-  <section class="sacred-art" id="sacred-art">
-    <div class="sacred-art__header">
-      <span class="section-label">02 â€” Sacred Art</span>
-      <h2 class="section-title">Three Modalities<br>of Healing</h2>
-    </div>
-    <div class="sacred-art__grid">
-      <article class="art-card" data-index="01">
-        <div class="art-card__img-wrap">
-          <img src="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=600&q=80" alt="Singing bowl therapy" class="art-card__img" loading="lazy">
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">01</span>
+          <h2 class="section-title">The Sound Healer</h2>
         </div>
-        <div class="art-card__content">
-          <h3 class="art-card__title">Singing Bowl Therapy</h3>
-          <p class="art-card__desc">Hand-selected Himalayan and crystal singing bowls placed on and around the body. Each bowl is tuned to specific chakra frequencies, creating a sonic architecture that dissolves energetic blockages and restores flow.</p>
-          <span class="art-card__duration">90 minutes Â· $185</span>
-        </div>
-      </article>
-      <article class="art-card" data-index="02">
-        <div class="art-card__img-wrap">
-          <img src="https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=600&q=80" alt="Gong meditation" class="art-card__img" loading="lazy">
-        </div>
-        <div class="art-card__content">
-          <h3 class="art-card__title">Gong Meditation</h3>
-          <p class="art-card__desc">A powerful immersive experience using planetary gongs that produce deep, complex overtones. The gong's vibrations penetrate every cell, inducing profound states of meditation and cellular regeneration.</p>
-          <span class="art-card__duration">75 minutes Â· $165</span>
-        </div>
-      </article>
-      <article class="art-card" data-index="03">
-        <div class="art-card__img-wrap">
-          <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80" alt="Voice toning" class="art-card__img" loading="lazy">
-        </div>
-        <div class="art-card__content">
-          <h3 class="art-card__title">Voice Toning</h3>
-          <p class="art-card__desc">Discover the healing instrument you already possess. Through guided vocal exercises and toning techniques, learn to harness your own voice as a tool for self-healing, emotional release, and energetic alignment.</p>
-          <span class="art-card__duration">60 minutes Â· $145</span>
-        </div>
-      </article>
-    </div>
-  </section>
 
-  <!-- PHILOSOPHY -->
-  <section class="philosophy" id="philosophy">
-    <div class="philosophy__inner">
-      <span class="section-label">03 â€” Philosophy</span>
-      <h2 class="section-title">Five Truths of<br>Vibrational Medicine</h2>
-      <div class="philosophy__pillars">
-        <div class="pillar" data-index="I">
-          <h3 class="pillar__title">Everything Vibrates</h3>
-          <p class="pillar__text">From the smallest atom to the largest star, all matter is in a state of vibration. The human body is no exception â€” every organ, tissue, and cell resonates at its own frequency. Disease is simply disharmony in this natural symphony.</p>
-        </div>
-        <div class="pillar" data-index="II">
-          <h3 class="pillar__title">Frequency Follows Thought</h3>
-          <p class="pillar__text">Our thoughts and emotions generate measurable electromagnetic frequencies. Chronic stress creates discordant patterns in the body's energy field. Sound therapy works by introducing coherent frequencies that entrain the body back to its natural state of balance.</p>
-        </div>
-        <div class="pillar" data-index="III">
-          <h3 class="pillar__title">Resonance is Remembering</h3>
-          <p class="pillar__text">When a frequency finds its match within the body, resonance occurs â€” a deep recognition at the cellular level. This is the body remembering its original blueprint of health. The healing was always within; the sound simply unlocks the door.</p>
-        </div>
-        <div class="pillar" data-index="IV">
-          <h3 class="pillar__title">Silence is the Foundation</h3>
-          <p class="pillar__text">Between every note lies silence â€” the space where transformation happens. True healing requires intervals of stillness where the body can integrate the frequencies it has received. We honor the pauses as much as the tones.</p>
-        </div>
-        <div class="pillar" data-index="V">
-          <h3 class="pillar__title">Healing is Not Linear</h3>
-          <p class="pillar__text">Sound healing works in spirals, not straight lines. Each session builds upon the last, and the body's wisdom determines the pace. Trust the process. Your frequency knows the way home.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead reveal">Eva Soundweaver spent 15 years as a session musician before discovering that the frequencies she played for others could also heal them.</p>
 
-  <!-- THE MECHANISM -->
-  <section class="mechanism" id="mechanism">
-    <div class="mechanism__inner">
-      <span class="section-label">04 â€” The Mechanism</span>
-      <h2 class="section-title">How Sound<br>Heals the Body</h2>
-      <div class="mechanism__content">
-        <p class="mechanism__lead">Sound is structured pressure â€” cymatics physically rearranges cellular water clusters. Low-frequency sine waves (110â€“130 Hz) stimulate the vagus nerve via bone conduction, inducing a parasympathetic state measurable in EEG delta waves.</p>
-        <div class="mechanism__grid">
-          <div class="mechanism__fact">
-            <span class="mechanism__number">110â€“130 Hz</span>
-            <span class="mechanism__label">Low-frequency sine waves that engage the vagus nerve</span>
+            <p class="reveal">She has studied under Tibetan monks in Dharamsala, Japanese sound therapists in Kyoto, and ethnomusicologists in Bali. Her collection includes over 40 singing bowls spanning three centuries, each tuned to a different chakra frequency.</p>
+
+            <p class="reveal">Her sessions are not concerts. They are sonic surgeries. Every bowl, every fork, every beat is placed with surgical precision to target specific meridians and energy centres in your body.</p>
+
+            <div class="origin-story reveal">
+              <p class="origin-story-text">"I was playing a 432 Hz bowl for a client when she started crying. She said, 'That frequency just unlocked a room in my mind I didn't know existed.' That was the moment I stopped being a musician and became a healer."</p>
+            </div>
           </div>
-          <div class="mechanism__fact">
-            <span class="mechanism__number">Bone</span>
-            <span class="mechanism__label">Conduction bypasses the eardrum entirely</span>
-          </div>
-          <div class="mechanism__fact">
-            <span class="mechanism__number">Delta</span>
-            <span class="mechanism__label">EEG waves indicate deep parasympathetic state</span>
+
+          <div class="about-visual">
+            <div class="data-panel reveal">
+              <div class="data-panel__item">
+                <p class="data-panel__label">Frequency Range</p>
+                <p class="data-panel__value">174 Hz — 963 Hz</p>
+              </div>
+              <div class="data-panel__item">
+                <p class="data-panel__label">Collection</p>
+                <p class="data-panel__value">40+ Singing Bowls</p>
+              </div>
+              <div class="data-panel__item">
+                <p class="data-panel__label">Practice</p>
+                <p class="data-panel__value">15 Years</p>
+              </div>
+              <div class="data-panel__item">
+                <p class="data-panel__label">Specialisation</p>
+                <p class="data-panel__value">Chakra Frequency Mapping</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WAVEFORM VISUALIZER (Mic Input) -->
-  <section class="visualizer-section" id="visualizer">
-    <div class="visualizer__inner">
-      <span class="section-label section-label--light">Interactive</span>
-      <h2 class="section-title section-title--light">Your Voice,<br>Our Art</h2>
-      <p class="visualizer__desc">Speak, hum, or sing into your device. Watch as your own voice transforms into flowing waveforms â€” the same energy that heals within our sessions.</p>
-      <div class="visualizer__wrap">
-        <svg id="waveformSVG" viewBox="0 0 1024 300" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#00F0FF" stop-opacity="0"/>
-              <stop offset="50%" stop-color="#00F0FF" stop-opacity="1"/>
-              <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
-            </linearGradient>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-              <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-          </defs>
-          <path id="waveformPath1" d="" fill="none" stroke="url(#waveGrad)" stroke-width="2" filter="url(#glow)" opacity="0.9"/>
-          <path id="waveformPath2" d="" fill="none" stroke="url(#waveGrad)" stroke-width="1.5" filter="url(#glow)" opacity="0.5"/>
-          <path id="waveformPath3" d="" fill="none" stroke="url(#waveGrad)" stroke-width="1" filter="url(#glow)" opacity="0.3"/>
-        </svg>
-        <div class="visualizer__idle" id="visualizerIdle">
-          <button class="visualizer__btn" id="micBtn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-              <line x1="12" y1="19" x2="12" y2="23"/>
-              <line x1="8" y1="23" x2="16" y2="23"/>
-            </svg>
-            <span>Tap to Begin</span>
-          </button>
+    <!-- Mechanism -->
+    <section id="mechanism" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">02</span>
+          <h2 class="section-title">The Mechanism</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead reveal">Sound healing is entrainment. Your brainwaves synchronise to external frequencies. This is not metaphor — it is measurable neuroscience.</p>
+
+            <p class="reveal">When a 432 Hz bowl is played near your body, your brainwaves shift from beta (alert) to alpha (relaxed) within 8 minutes. At 396 Hz, you enter theta (deep meditation). At 528 Hz — the 'love frequency' — your body increases production of nitric oxide, which dilates blood vessels and reduces inflammation.</p>
+
+            <p class="reveal">The sound does not heal you. It creates the conditions for your body to heal itself. The bowl is a tool. Your nervous system is the medicine.</p>
+          </div>
+
+          <div class="about-visual">
+            <div class="data-panel reveal">
+              <div class="data-panel__item">
+                <p class="data-panel__label">Brainwave Shift</p>
+                <p class="data-panel__value">Beta → Alpha in 8 min</p>
+              </div>
+              <div class="data-panel__item">
+                <p class="data-panel__label">Nitric Oxide</p>
+                <p class="data-panel__value">↑ Production at 528 Hz</p>
+              </div>
+              <div class="data-panel__item">
+                <p class="data-panel__label">Cortisol</p>
+                <p class="data-panel__value">↓ 27% after session</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <p class="visualizer__note">Your audio is processed locally and never recorded or stored.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials" id="testimonials">
-    <div class="testimonials__inner">
-      <span class="section-label">04 â€” Resonance</span>
-      <h2 class="section-title">Voices from<br>the Sanctuary</h2>
-      <div class="testimonials__grid">
-        <blockquote class="testimonial">
-          <p class="testimonial__text">"After years of chronic pain and failed treatments, I was skeptical. But during my first singing bowl session, I felt something shift deep in my bones â€” a warmth I hadn't felt in decades. By the third session, my pain had reduced by half. Elias doesn't just play instruments; he plays the body's own forgotten song."</p>
-          <footer class="testimonial__author">
-            <span class="testimonial__name">Sarah M.</span>
-            <span class="testimonial__role">Chronic Pain Recovery</span>
-          </footer>
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">03</span>
+          <h2 class="section-title">The Frequencies</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <span class="service-card-number">01</span>
+            <h3 class="service-card-title">Singing Bowl Immersion</h3>
+            <p class="service-card-desc">A 60-minute session using 7 bowls tuned to each chakra. The bowls are placed on and around your body. You will feel vibration, warmth, and deep relaxation. Many fall asleep. That is perfect.</p>
+            <span class="service-card-price">£75</span>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-card-number">02</span>
+            <h3 class="service-card-title">Tuning Fork Therapy</h3>
+            <p class="service-card-desc">Precision frequency work using medical-grade tuning forks on specific acupressure points. Targets pain, tension, and energetic blockages with surgical accuracy.</p>
+            <span class="service-card-price">£90</span>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-card-number">03</span>
+            <h3 class="service-card-title">Binaural Beat Journey</h3>
+            <p class="service-card-desc">A 90-minute headphone experience using isochronic tones and binaural beats to guide you through gamma, theta, and delta brainwave states. Deep conscious exploration.</p>
+            <span class="service-card-price">£110</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">04</span>
+          <h2 class="section-title">The Process</h2>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <span class="process-step-label">Before</span>
+            <h3 class="process-step-title">Attune</h3>
+            <p class="process-step-desc">Lie down. Close your eyes. Eva will place bowls around your body. There is nothing you need to do. Let the sound find you.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <span class="process-step-label">During</span>
+            <h3 class="process-step-title">Resonate</h3>
+            <p class="process-step-desc">The bowls are struck or circled. Vibrations travel through your body at cellular level. You may feel heat, tingling, or emotional release. All responses are welcome.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <span class="process-step-label">After</span>
+            <h3 class="process-step-title">Integrate</h3>
+            <p class="process-step-desc">Return slowly. Drink water. The frequencies continue to work for hours. Avoid screens for 30 minutes. Let the resonance settle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vow -->
+    <section id="vow" class="section vow">
+      <div class="section-inner">
+        <div class="section-header reveal" style="text-align:center;">
+          <span class="section-number">05</span>
+          <h2 class="section-title" style="display:inline-block;">The Vow</h2>
+        </div>
+
+        <blockquote class="vow-quote reveal">
+          "I vow to never use sound as performance. Every frequency I play is chosen for your body, not my ego. I vow to listen to the silence between the notes — for that is where the healing lives."
         </blockquote>
-        <blockquote class="testimonial">
-          <p class="testimonial__text">"I came to DaoDe carrying the weight of grief that no therapy could touch. The gong meditation broke something open in me â€” not painfully, but like a dam releasing water that had been held back for years. I left feeling lighter than I had since my mother passed. Sound reached places words never could."</p>
-          <footer class="testimonial__author">
-            <span class="testimonial__name">David R.</span>
-            <span class="testimonial__role">Grief & Emotional Release</span>
-          </footer>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p class="testimonial__text">"As a musician, I thought I understood sound. I was wrong. Elias showed me that sound isn't just something you hear â€” it's something you become. The voice toning sessions transformed not only my relationship with music but with my own body. I sing differently now because I listen differently."</p>
-          <footer class="testimonial__author">
-            <span class="testimonial__name">Maya L.</span>
-            <span class="testimonial__role">Vocalist & Sound Healer in Training</span>
-          </footer>
-        </blockquote>
+        <p class="vow-author reveal">— Eva Soundweaver, Frequency Therapist</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- JOURNEY -->
-  <section class="journey" id="journey">
-    <div class="journey__inner">
-      <span class="section-label">05 â€” The Journey</span>
-      <h2 class="section-title">What Awaits You</h2>
-      <div class="journey__steps">
-        <div class="step">
-          <div class="step__number">01</div>
-          <div class="step__content">
-            <h3 class="step__title">Arrival & Intention</h3>
-            <p class="step__text">Enter the sanctuary and leave the outside world behind. Share your intentions with Elias â€” what you seek to heal, release, or explore. There is no wrong answer.</p>
-          </div>
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">06</span>
+          <h2 class="section-title">Resonances</h2>
         </div>
-        <div class="step">
-          <div class="step__number">02</div>
-          <div class="step__content">
-            <h3 class="step__title">Guided Settling</h3>
-            <p class="step__text">Lie comfortably on a heated mat. A brief breathing exercise grounds you in the present moment, signaling to your nervous system that it is safe to let go.</p>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <p class="service-card-desc">"I have chronic tinnitus. The idea of sound therapy terrified me. But Eva's bowls didn't add noise — they added silence. For the first time in years, my mind was quiet."</p>
+            <span class="service-card-price">— Marcus, 48, Engineer</span>
           </div>
-        </div>
-        <div class="step">
-          <div class="step__number">03</div>
-          <div class="step__content">
-            <h3 class="step__title">The Sound Journey</h3>
-            <p class="step__text">Elias begins playing. Instruments are chosen intuitively based on your energy. Vibrations move through your body â€” you may feel warmth, tingling, emotional release, or profound peace.</p>
+
+          <div class="service-card reveal">
+            <p class="service-card-desc">"I went into a theta state within 10 minutes. I saw colours I have never seen before. When I opened my eyes, the room looked different. Brighter. More real."</p>
+            <span class="service-card-price">— Lena, 34, Artist</span>
           </div>
-        </div>
-        <div class="step">
-          <div class="step__number">04</div>
-          <div class="step__content">
-            <h3 class="step__title">Integration</h3>
-            <p class="step__text">A gentle return. Time is given to integrate the experience. Elias shares observations and guidance for continuing your frequency alignment at home.</p>
+
+          <div class="service-card reveal">
+            <p class="service-card-desc">"My anxiety dropped from a 9 to a 3 after one session. I didn't believe sound could do that. Now I come every two weeks. It's my maintenance."</p>
+            <span class="service-card-price">— James, 52, Executive</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- THE 3-STEP PROCESS -->
-  <section class="three-step" id="three-step">
-    <div class="three-step__inner">
-      <span class="section-label">05 â€” The Process</span>
-      <h2 class="section-title">Three Phases<br>of Resonance</h2>
-      <div class="three-step__grid">
-        <div class="three-step__card">
-          <span class="three-step__phase">Before</span>
-          <h3 class="three-step__title">Prepare Your Vessel</h3>
-          <p class="three-step__text">No earplugs. Hydrate well. Your body is the instrument â€” water is its conductor.</p>
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">07</span>
+          <h2 class="section-title">Questions</h2>
         </div>
-        <div class="three-step__card">
-          <span class="three-step__phase">During</span>
-          <h3 class="three-step__title">Surrender to Vibration</h3>
-          <p class="three-step__text">Lie down. 7 crystal bowls, 1 gong. The vibrations hit your sternum first, then the pelvis.</p>
-        </div>
-        <div class="three-step__card">
-          <span class="three-step__phase">After</span>
-          <h3 class="three-step__title">Integrate the Frequency</h3>
-          <p class="three-step__text">Ears may ring for 2hrs. This is 'stunned' hair cells resetting. Drink water. Move slowly.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- PRACTITIONER'S VOW -->
-  <section class="vow" id="vow">
-    <div class="vow__inner">
-      <blockquote class="vow__quote">
-        <p>"I do not make the sound. I am the silence between the notes. The bowls remember the frequency your body has forgotten. I merely strike the bell and trust the vibration to find its home."</p>
-        <footer class="vow__author">â€” Elias Harmon, Sound Weaver</footer>
-      </blockquote>
-    </div>
-  </section>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>How does sound actually heal?</summary>
+            <div class="faq-item__answer">
+              <p>Through entrainment. Your brainwaves synchronise to external frequencies. A 432 Hz bowl shifts you from beta to alpha in 8 minutes. This is measurable with EEG. The sound creates the conditions for your body's parasympathetic nervous system to engage, which triggers your innate healing response.</p>
+            </div>
+          </details>
 
-  <!-- FAQs -->
-  <section class="faqs" id="faqs">
-    <div class="faqs__inner">
-      <span class="section-label">06 â€” Questions</span>
-      <h2 class="section-title">Frequently Asked</h2>
-      <div class="faqs__list">
-        <details class="faq-item">
-          <summary class="faq-item__q">Will it damage my hearing?</summary>
-          <p class="faq-item__a">No. We use amplitude carefully. All sessions are calibrated to safe decibel levels, well below the threshold for hearing damage.</p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-item__q">Why do I feel emotional?</summary>
-          <p class="faq-item__a">Frequencies bypass the prefrontal cortex and hit the limbic system directly. Sound reaches places that thoughts cannot â€” stored grief, tension, and memory live in the body's tissues.</p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-item__q">Can I do it via Zoom?</summary>
-          <p class="faq-item__a">No. Bass requires physical air displacement. The healing happens through vibration traveling through your body, not through a speaker. This is an in-person experience only.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+          <details class="faq-item reveal">
+            <summary>Is it just sitting and listening to bowls?</summary>
+            <div class="faq-item__answer">
+              <p>No. Eva uses a combination of Tibetan singing bowls (placed on the body), tuning forks (applied to acupressure points), and binaural beats (delivered through headphones). Each tool targets different frequencies and different healing outcomes. It is a multi-layered sonic architecture.</p>
+            </div>
+          </details>
 
-  <!-- TRY THIS NOW -->
-  <section class="try-now" id="try-now">
-    <div class="try-now__inner">
-      <div class="try-now__content">
-        <span class="section-label">Try This Now</span>
-        <p class="try-now__text">Hum a low 'Om' into a glass of water. Watch the surface ripple. That ripple is happening inside your fascia.</p>
-      </div>
-    </div>
-  </section>
+          <details class="faq-item reveal">
+            <summary>What if I fall asleep?</summary>
+            <div class="faq-item__answer">
+              <p>That is one of the best outcomes. Sleep means your conscious mind has stepped aside, allowing the frequencies to work directly with your subconscious and nervous system. Many of the deepest healings happen during sleep. You will still receive the full benefit.</p>
+            </div>
+          </details>
 
-  <!-- LIVE EVENTS -->
-  <section class="events" id="events">
-    <div class="events__inner">
-      <span class="section-label">Events</span>
-      <h2 class="section-title">Live Events</h2>
-      <div class="events__grid">
-        <div class="event-item">
-          <span class="event-name">Crystal Bowl Meditation</span>
-          <span class="event-detail">Every Friday</span>
-        </div>
-        <div class="event-item">
-          <span class="event-name">Cymatics Workshop</span>
-          <span class="event-detail">Monthly</span>
-        </div>
-        <div class="event-item">
-          <span class="event-name">Sound Healing Certification</span>
-          <span class="event-detail">March 2026</span>
+          <details class="faq-item reveal">
+            <summary>Can sound therapy help with tinnitus?</summary>
+            <div class="faq-item__answer">
+              <p>Yes. Counterintuitively, specific frequencies can reduce tinnitus perception. The bowls do not add noise — they create a coherent frequency landscape that your brain can entrain to, reducing the chaotic signal that causes tinnitus. Eva has a specific protocol for tinnitus sufferers.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>How is this different from a sound bath?</summary>
+            <div class="faq-item__answer">
+              <p>A sound bath is usually a group experience with general frequencies. Eva's sessions are one-to-one with precision frequency mapping. She diagnoses which chakras are blocked and selects bowls and forks accordingly. This is sonic surgery, not a bath.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>What if I'm sceptical?</summary>
+            <div class="faq-item__answer">
+              <p>Perfect. Scepticism means you are paying attention. You do not need to believe in sound therapy for it to work. The frequencies affect your nervous system regardless of your beliefs. Many of Eva's most transformed clients started as sceptics. Come with your doubts. Leave with data.</p>
+            </div>
+          </details>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GIFT A SESSION -->
-  <section class="gift" id="gift">
-    <div class="gift__inner">
-      <h2 class="section-title">Gift a Sanctuary</h2>
-      <p class="gift__text">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
-    </div>
-  </section>
+    <!-- Events -->
+    <section id="events" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">08</span>
+          <h2 class="section-title">Gatherings</h2>
+        </div>
 
-  <!-- CONTACT / BOOKING -->
-  <section class="contact" id="contact">
-    <div class="contact__inner">
-      <div class="contact__info">
-        <span class="section-label">06 â€” Connect</span>
-        <h2 class="section-title">Begin Your<br>Frequency Journey</h2>
-        <div class="contact__details">
-          <div class="contact__item">
-            <span class="contact__item-label">Location</span>
-            <span>777 Resonance Lane<br>Portland, OR 97201</span>
+        <div class="events-grid">
+          <div class="event-card reveal">
+            <p class="event-card-date">Every Wednesday, 7 PM — 8:30 PM</p>
+            <h3 class="event-card-title">Open Sound Circle</h3>
+            <p class="event-card-desc">A 90-minute group experience. Bring a blanket, lie down, and let Eva guide you through a curated frequency journey. No experience needed. £25 per person. Limited to 12 participants for optimal acoustic experience.</p>
           </div>
-          <div class="contact__item">
-            <span class="contact__item-label">Hours</span>
-            <span>Tuesday â€“ Saturday<br>10:00 AM â€“ 7:00 PM</span>
-          </div>
-          <div class="contact__item">
-            <span class="contact__item-label">Contact</span>
-            <span>hello@daodehealing.com<br>(503) 555-0777</span>
+
+          <div class="event-card reveal">
+            <p class="event-card-date">First Sunday of each month, 10 AM — 4 PM</p>
+            <h3 class="event-card-title">Sound Healer Training — Level 1</h3>
+            <p class="event-card-desc">A full-day introduction to singing bowl technique, frequency theory, and basic chakra mapping. You will learn to play 3 bowls, measure brainwave response, and conduct a basic session. £180. All materials provided.</p>
           </div>
         </div>
       </div>
-      <form class="contact__form" id="contactForm">
-        <div class="form-group">
-          <input type="text" id="formName" placeholder=" " required>
-          <label for="formName">Your Name</label>
-        </div>
-        <div class="form-group">
-          <input type="email" id="formEmail" placeholder=" " required>
-          <label for="formEmail">Email Address</label>
-        </div>
-        <div class="form-group">
-          <select id="formService" required>
-            <option value="" disabled selected>Select a Modality</option>
-            <option value="singing-bowl">Singing Bowl Therapy</option>
-            <option value="gong">Gong Meditation</option>
-            <option value="voice">Voice Toning</option>
-            <option value="unsure">I'm Not Sure Yet</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <textarea id="formMessage" rows="4" placeholder=" "></textarea>
-          <label for="formMessage">Share Your Intentions</label>
-        </div>
-        <button type="submit" class="form-submit">Request Session</button>
-      </form>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+    <!-- Gift -->
+    <section class="section gift">
+      <div class="section-inner" style="text-align:center;">
+        <div class="section-header reveal" style="text-align:center;">
+          <span class="section-number">09</span>
+          <h2 class="section-title" style="display:inline-block;">Send a Frequency</h2>
+        </div>
+
+        <p class="gift-desc reveal">You are not buying a session. You are giving someone the gift of silence. The recipient will receive a quiet invitation to choose their modality and schedule at their convenience.</p>
+
+        <a href="#contact" class="btn btn--filled reveal">Gift a Session</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">10</span>
+          <h2 class="section-title">Connect</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead reveal">To book a session or ask a question, reach out directly. We respond within 24 hours.</p>
+
+            <div class="reveal" style="margin-top: 2rem;">
+              <p style="color: var(--paper); opacity: 0.7; margin-bottom: 0.5rem;">Portland, Oregon</p>
+              <p style="color: var(--paper); opacity: 0.7; margin-bottom: 0.5rem;">By appointment only</p>
+              <p style="color: var(--signal);">eva@healingsanctuary.com</p>
+            </div>
+          </div>
+
+          <div class="about-visual">
+            <div class="data-panel reveal">
+              <div class="data-panel__item">
+                <p class="data-panel__label">Location</p>
+                <p class="data-panel__value">Portland, OR</p>
+              </div>
+              <div class="data-panel__item">
+                <p class="data-panel__label">Availability</p>
+                <p class="data-panel__value">By Appointment</p>
+              </div>
+              <div class="data-panel__item">
+                <p class="data-panel__label">Response Time</p>
+                <p class="data-panel__value">Within 24 Hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
   <footer class="footer">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <span class="footer__logo">DaoDe</span>
-        <p class="footer__tagline">Every Cell Has a Frequency</p>
+    <div class="footer__inner">
+      <div>
+        <p class="footer__brand">Sound Healing</p>
+        <p class="footer__tagline">"If you want to find the secrets of the universe, think in terms of energy, frequency, and vibration." — Nikola Tesla</p>
       </div>
-      <div class="footer__links">
-        <a href="#origin">Origin</a>
-        <a href="#sacred-art">Sacred Art</a>
-        <a href="#philosophy">Philosophy</a>
-        <a href="#journey">Journey</a>
-        <a href="#faqs">FAQs</a>
-        <a href="#contact">Contact</a>
+
+      <div>
+        <p class="footer__heading">Lexicon</p>
+        <p class="footer__link">Entrainment — Brainwave synchronisation</p>
+        <p class="footer__link">Isochronic — Rhythmic pulse tone</p>
+        <p class="footer__link">Binaural — Two tones, one perception</p>
       </div>
-      <div class="footer__cta-wrap">
-        <a href="#contact" class="footer__cta">Tune Your Frequency</a>
+
+      <div>
+        <p class="footer__heading">Navigate</p>
+        <a href="#about" class="footer__link">About</a>
+        <a href="#services" class="footer__link">Services</a>
+        <a href="#faq" class="footer__link">FAQ</a>
+        <a href="#contact" class="footer__link">Contact</p>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="footer__warning">
-        <p>Not recommended for individuals with sound-triggered epilepsy or tinnitus. Consult your physician if you have a cochlear implant or severe hearing loss.</p>
-      </div>
-      <details class="footer__lexicon">
-        <summary class="footer__lexicon-toggle">Lexicon of Sound</summary>
-        <div class="footer__lexicon-content">
-          <dl>
-            <dt>Cymatics</dt>
-            <dd>Visual patterns of sound made visible through vibration.</dd>
-            <dt>Overtones</dt>
-            <dd>Harmonic siblings of the root frequency that create rich, layered sound.</dd>
-            <dt>Bone Conduction</dt>
-            <dd>Sound traveling through the skull, bypassing the eardrum entirely.</dd>
-          </dl>
-        </div>
-      </details>
-      <div class="footer__copy">
-        <p>&copy; 2026 DaoDe Sound Healing. All rights reserved.</p>
-      </div>
+
+    <div class="footer__legal">
+      <p class="footer__copy">© 2026 Sound Healing. All healing is self-healing.</p>
+      <p class="footer__credit">Made with love by <a href="#">Empathy Studio</a> · Norman James</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
-<script src="meta-layer.js"></script></body>
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
 </html>
-

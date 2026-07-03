@@ -1,534 +1,528 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal Healing | Gemma Crystalwell</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Canela:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Crystal Healing - Gemma Crystalwell","description":"Ancient Stones, Living Energy","medicalAudience":{"@type":"PatientAudience","audienceType":"Patient"}}
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crystal Healing — Luna Crystalis | Maison Dark</title>
+  <meta name="description" content="Piezoelectric crystal healing. Ancient mineral wisdom meets measurable science. Luna Crystalis, Tucson AZ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Canela:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.scss">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalBusiness","name":"Crystal Healing — Luna Crystalis","description":"Piezoelectric crystal healing and mineral therapy","address":{"@type":"PostalAddress","addressLocality":"Tucson","addressRegion":"AZ"},"medicalSpecialty":"Crystal Healing"}
+  </script>
 </head>
 <body>
-    <nav class="vertical-nav">
-        <div class="nav-brand">GC</div>
-        <div class="nav-links">
-            <a href="#hero" class="nav-link active" data-section="hero">Home</a>
-            <a href="#about" class="nav-link" data-section="about">About</a>
-            <a href="#mechanism" class="nav-link" data-section="mechanism">Mechanism</a>
-            <a href="#process" class="nav-link" data-section="process">Process</a>
-            <a href="#services" class="nav-link" data-section="services">Services</a>
-            <a href="#compass" class="nav-link" data-section="compass">Compass</a>
-            <a href="#philosophy" class="nav-link" data-section="philosophy">Philosophy</a>
-            <a href="#testimonials" class="nav-link" data-section="testimonials">Stories</a>
-            <a href="#journey" class="nav-link" data-section="journey">Journey</a>
-            <a href="#try-now" class="nav-link" data-section="try-now">Try Now</a>
-            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-        </div>
-        <div class="nav-footer">
-            <span class="nav-tagline">Ancient Stones,<br>Living Energy</span>
-        </div>
-    </nav>
 
-    <section id="hero" class="hero-section">
-        <div class="hero-canvas-container">
-            <canvas id="heroCanvas"></canvas>
+  <!-- ==============================
+       LOADING SCREEN
+  ============================== -->
+  <div class="loader" id="loader">
+    <div class="loader__crystal"></div>
+    <p class="loader__text">Silence loading...</p>
+    <p class="loader__subtext">Close your eyes. We'll tell you when to open them.</p>
+  </div>
+
+  <!-- ==============================
+       SIDE NAVIGATION — Vertical
+  ============================== -->
+  <nav class="side-nav" aria-label="Main navigation">
+    <div class="side-nav__accent"></div>
+    <div class="side-nav__brand">LC</div>
+    <ul class="side-nav__links">
+      <li><a href="#home" class="side-nav__link is-active" data-section="home">Home</a></li>
+      <li><a href="#about" class="side-nav__link" data-section="about">About</a></li>
+      <li><a href="#mechanism" class="side-nav__link" data-section="mechanism">Science</a></li>
+      <li><a href="#services" class="side-nav__link" data-section="services">Services</a></li>
+      <li><a href="#process" class="side-nav__link" data-section="process">Process</a></li>
+      <li><a href="#vow" class="side-nav__link" data-section="vow">Vow</a></li>
+      <li><a href="#testimonials" class="side-nav__link" data-section="testimonials">Stories</a></li>
+      <li><a href="#faq" class="side-nav__link" data-section="faq">FAQ</a></li>
+      <li><a href="#events" class="side-nav__link" data-section="events">Events</a></li>
+      <li><a href="#gift" class="side-nav__link" data-section="gift">Gift</a></li>
+      <li><a href="#contact" class="side-nav__link" data-section="contact">Connect</a></li>
+    </ul>
+    <div class="side-nav__sigil">◆</div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav__brand">LC</div>
+    <button class="mobile-nav__toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="content">
+
+    <!-- ==============================
+         HERO — Cinematic Frame
+    ============================== -->
+    <section id="home" class="hero">
+      <canvas class="hero-canvas" id="crystalCanvas" aria-hidden="true"></canvas>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-facet" aria-hidden="true"></div>
+
+        <div class="hero-overline">Crystal Healing</div>
+
+        <h1 class="hero-title">
+          <span class="title-line">Ancient</span>
+          <span class="title-line accent">Stones,</span>
+          <span class="title-line">Living</span>
+          <span class="title-line accent">Energy</span>
+        </h1>
+
+        <p class="hero-subtitle">Luna Crystalis · Piezoelectric Mineral Therapy</p>
+
+        <div class="hero-scroll">
+          <span>Discover Your Frequency</span>
+          <div class="hero-scroll__line"></div>
         </div>
-        <div class="hero-content">
-            <div class="hero-overline">Crystal Healing</div>
-            <h1 class="hero-title">
-                <span class="title-line">Ancient</span>
-                <span class="title-line">Stones,</span>
-                <span class="title-line">Living</span>
-                <span class="title-line">Energy</span>
-            </h1>
-            <p class="hero-subtitle">Where mineral wisdom meets transformative healing</p>
-            <div class="hero-cta">
-                <a href="#compass" class="btn-primary">Explore the Compass</a>
-                <a href="#about" class="btn-secondary">Meet Gemma</a>
-            </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <div class="scroll-line"></div>
-            <span>Scroll</span>
-        </div>
+      </div>
     </section>
 
-    <section id="about" class="about-section">
-        <div class="section-container">
-            <div class="section-overline">The Healer</div>
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2 class="section-title">Gemma Crystalwell</h2>
-                    <div class="about-text">
-                        <p class="lead-text">With 20 years of studying crystallography and metaphysical properties, Gemma bridges the gap between scientific understanding and spiritual practice.</p>
-                        <p>Her journey began in the mineral-rich deserts of Arizona, where she first felt the pulse of ancient stones beneath her hands. What started as curiosity became a calling&mdash;a deep resonance with the crystalline structures that hold the Earth's memory.</p>
-                        <p>Gemma's approach combines the precision of a mineralogist with the intuition of a healer, creating transformative experiences that honor both the physical and metaphysical nature of crystals.</p>
-                        <div class="origin-story">
-                            <p class="origin-story-text">"Gemma Crystalwell worked as a geologist for 15 years before she started 'feeling' something in the rocks she was analyzing. She now combines her scientific knowledge with metaphysical practice."</p>
-                        </div>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">20+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">Healings</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Crystal Types</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-frame">
-                        <div class="image-placeholder gemma-portrait"></div>
-                    </div>
-                    <div class="image-caption">Tucson, Arizona</div>
-                </div>
-            </div>
+    <!-- ==============================
+         ABOUT — Practitioner Bio
+    ============================== -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">01</span>
+          <h2 class="section-title">The Healer</h2>
         </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead reveal">Dr. Sana is a geologist turned therapist. She spent twenty years studying the piezoelectric properties of quartz in semiconductor labs before turning those same instruments toward the human body.</p>
+
+            <p class="reveal">She knows that a 1-cm amethyst generates 0.3 micro-amps of current under pressure. She does not "talk to the crystals." She places them on the body and measures the capacitive coupling between mineral and fascia.</p>
+
+            <p class="reveal">Her approach combines the precision of a mineralogist with the intuition of a healer, creating transformative experiences that honour both the physical and metaphysical nature of crystals. She is the least spiritual person you will meet — and her results are the most consistent.</p>
+
+            <div class="origin-story reveal">
+              <p class="origin-story-text">"Dr. Sana spent twenty years in semiconductor labs before she started measuring something the machines couldn't explain. She now bridges the gap between crystallography and the body's biofield — with data, not dogma."</p>
+            </div>
+          </div>
+
+          <div class="about-image reveal-right">
+            <div class="about-image-frame">
+              <div class="about-image-placeholder"></div>
+            </div>
+            <div class="about-image-caption">Tucson, Arizona</div>
+          </div>
+        </div>
+
+        <div class="about-stats reveal">
+          <div class="about-stat">
+            <span class="about-stat-number">20+</span>
+            <span class="about-stat-label">Years in Mineralogy</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-number">4,000+</span>
+            <span class="about-stat-label">Sessions Conducted</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-number">50+</span>
+            <span class="about-stat-label">Crystal Varieties</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="mechanism" class="mechanism-section">
-        <div class="section-container">
-            <div class="section-overline">The Science</div>
-            <h2 class="section-title">The Mechanism</h2>
-            <div class="mechanism-grid">
-                <div class="mechanism-main">
-                    <p class="mechanism-lead">All crystals have a piezoelectric charge &mdash; mechanical pressure converts to electrical potential. This is not metaphor. It is physics.</p>
-                    <p>Amethyst emits a measurable 0.3 micro-amp current. This interacts with the body's biofield via capacitive coupling, creating a resonant bridge between mineral lattice and human energy system.</p>
-                </div>
-                <div class="mechanism-stats">
-                    <div class="mechanism-stat">
-                        <span class="mechanism-stat-number">0.3</span>
-                        <span class="mechanism-stat-unit">&mu;A</span>
-                        <span class="mechanism-stat-label">Amethyst Current</span>
-                    </div>
-                    <div class="mechanism-stat">
-                        <span class="mechanism-stat-number">100%</span>
-                        <span class="mechanism-stat-unit"></span>
-                        <span class="mechanism-stat-label">Piezoelectric</span>
-                    </div>
-                    <div class="mechanism-stat">
-                        <span class="mechanism-stat-number">10<sup>12</sup></span>
-                        <span class="mechanism-stat-unit"></span>
-                        <span class="mechanism-stat-label">Lattice Vibrations / sec</span>
-                    </div>
-                </div>
-            </div>
+    <!-- ==============================
+         MECHANISM — Piezoelectric Science
+    ============================== -->
+    <section id="mechanism" class="section mechanism">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">02</span>
+          <h2 class="section-title">The Mechanism</h2>
         </div>
+
+        <div class="mechanism-grid">
+          <div class="mechanism-text">
+            <p class="mechanism-lead reveal">All crystals have a piezoelectric charge — mechanical pressure converts to electrical potential. This is not metaphor. It is physics.</p>
+            <p class="reveal">Amethyst emits a measurable 0.3 micro-amp current. This interacts with the body's biofield via capacitive coupling, creating a resonant bridge between mineral lattice and human energy system. The crystal does not heal you. It reminds your body how to heal itself.</p>
+          </div>
+
+          <div class="mechanism-stats reveal-right">
+            <div class="mechanism-stat">
+              <span class="mechanism-stat-number">0.3</span>
+              <span class="mechanism-stat-unit">μA</span>
+              <span class="mechanism-stat-label">Amethyst Current</span>
+            </div>
+            <div class="mechanism-stat">
+              <span class="mechanism-stat-number">100%</span>
+              <span class="mechanism-stat-unit"></span>
+              <span class="mechanism-stat-label">Piezoelectric</span>
+            </div>
+            <div class="mechanism-stat">
+              <span class="mechanism-stat-number">10<sup>12</sup></span>
+              <span class="mechanism-stat-unit"></span>
+              <span class="mechanism-stat-label">Lattice Vibrations / sec</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="process" class="process-section">
-        <div class="section-container">
-            <div class="section-overline">The Method</div>
-            <h2 class="section-title">The 3-Step Process</h2>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="process-step-number">01</div>
-                    <div class="process-step-icon">&#9670;</div>
-                    <h3 class="process-step-title">Before</h3>
-                    <p class="process-step-text">Choose a stone intuitively. Hold it in both hands. Feel for warmth, tingling, or a sense of recognition. Your body's conductivity guides the selection.</p>
-                </div>
-                <div class="process-connector">
-                    <div class="connector-line"></div>
-                    <div class="connector-dot"></div>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-number">02</div>
-                    <div class="process-step-icon">&#9671;</div>
-                    <h3 class="process-step-title">During</h3>
-                    <p class="process-step-text">20-minute placement on chakra points. The practitioner holds the space while two crystalline lattices &mdash; the one in your hand and the one in your body &mdash; find their resonance.</p>
-                </div>
-                <div class="process-connector">
-                    <div class="connector-line"></div>
-                    <div class="connector-dot"></div>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-number">03</div>
-                    <div class="process-step-icon">&#9672;</div>
-                    <h3 class="process-step-title">After</h3>
-                    <p class="process-step-text">Cleanse the stone in saltwater or sunlight. Return it to the earth briefly. This resets the lattice vibration and prepares it for the next session.</p>
-                </div>
-            </div>
+    <!-- ==============================
+         SERVICES — Crystal Facet Cards
+    ============================== -->
+    <section id="services" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">03</span>
+          <h2 class="section-title">Healing Modalities</h2>
         </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-card-facet" aria-hidden="true"></div>
+            <div class="service-card-image" aria-hidden="true"></div>
+            <div class="service-card-number">01</div>
+            <h3 class="service-card-title">Crystal Grid Layouts</h3>
+            <p class="service-card-desc">Sacred geometric patterns formed with crystals to amplify energy, create protection fields, or manifest intentions. Each grid is custom-designed for your specific needs using the Flower of Life and Seed of Life patterns.</p>
+            <div class="service-card-meta">
+              <span>60–90 min</span>
+              <span>Custom stone selection</span>
+            </div>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card-facet" aria-hidden="true"></div>
+            <div class="service-card-image" aria-hidden="true"></div>
+            <div class="service-card-number">02</div>
+            <h3 class="service-card-title">Stone Meditation</h3>
+            <p class="service-card-desc">Guided meditation sessions using specific crystals to open energy channels, release blockages, and connect with the mineral kingdom's ancient wisdom. Individual or group sessions available.</p>
+            <div class="service-card-meta">
+              <span>45 min</span>
+              <span>Individual or group</span>
+            </div>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card-facet" aria-hidden="true"></div>
+            <div class="service-card-image" aria-hidden="true"></div>
+            <div class="service-card-number">03</div>
+            <h3 class="service-card-title">Grid Activation</h3>
+            <p class="service-card-desc">The powerful process of activating dormant crystal grids with sound, intention, and light. Unlocks the full healing potential of your crystal collection. Distance sessions available worldwide.</p>
+            <div class="service-card-meta">
+              <span>30–45 min</span>
+              <span>Distance available</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="services" class="services-section">
-        <div class="section-container">
-            <div class="section-overline">Sacred Art</div>
-            <h2 class="section-title">Healing Modalities</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-number">01</div>
-                    <h3 class="service-title">Crystal Grid Layouts</h3>
-                    <p class="service-description">Sacred geometric patterns formed with crystals to amplify energy, create protection fields, or manifest intentions. Each grid is custom-designed for your specific needs.</p>
-                    <div class="service-details">
-                        <span class="detail">60-90 minutes</span>
-                        <span class="detail">Custom stone selection</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">02</div>
-                    <h3 class="service-title">Stone Meditation</h3>
-                    <p class="service-description">Guided meditation sessions using specific crystals to open energy channels, release blockages, and connect with the mineral kingdom's ancient wisdom.</p>
-                    <div class="service-details">
-                        <span class="detail">45 minutes</span>
-                        <span class="detail">Individual or group</span>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">03</div>
-                    <h3 class="service-title">Grid Activation</h3>
-                    <p class="service-description">The powerful process of activating dormant crystal grids with sound, intention, and light. Unlocks the full healing potential of your crystal collection.</p>
-                    <div class="service-details">
-                        <span class="detail">30-45 minutes</span>
-                        <span class="detail">Distance available</span>
-                    </div>
-                </div>
-            </div>
+    <!-- ==============================
+         PROCESS — 3-Step Method
+    ============================== -->
+    <section id="process" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">04</span>
+          <h2 class="section-title">The 3-Step Process</h2>
         </div>
+
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <div class="process-step-number">01</div>
+            <div class="process-step-icon"></div>
+            <h3 class="process-step-title">Before</h3>
+            <p class="process-step-text">Choose a stone intuitively. Hold it in both hands. Feel for warmth, tingling, or a sense of recognition. Your body's conductivity guides the selection.</p>
+          </div>
+
+          <div class="process-connector">
+            <div class="process-connector__line"></div>
+            <div class="process-connector__dot"></div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-step-number">02</div>
+            <div class="process-step-icon"></div>
+            <h3 class="process-step-title">During</h3>
+            <p class="process-step-text">20-minute placement on chakra points. The practitioner holds the space while two crystalline lattices — the one in your hand and the one in your body — find their resonance.</p>
+          </div>
+
+          <div class="process-connector">
+            <div class="process-connector__line"></div>
+            <div class="process-connector__dot"></div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-step-number">03</div>
+            <div class="process-step-icon"></div>
+            <h3 class="process-step-title">After</h3>
+            <p class="process-step-text">Cleanse the stone in saltwater or sunlight. Return it to the earth briefly. This resets the lattice vibration and prepares it for the next session.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="compass" class="compass-section">
-        <div class="section-container">
-            <div class="section-overline">Interactive</div>
-            <h2 class="section-title">Birthstone Compass</h2>
-            <p class="compass-intro">Hover over your birth month to discover your stone's properties and receive your activation mantra.</p>
-            <div class="compass-wrapper">
-                <div class="compass-container">
-                    <div class="compass-wheel" id="compassWheel">
-                        <div class="compass-center">
-                            <div class="center-gem"></div>
-                            <span class="center-text">Your Stone</span>
-                        </div>
-                        <div class="compass-months" id="compassMonths"></div>
-                    </div>
-                </div>
-                <div class="compass-info" id="compassInfo">
-                    <div class="info-month" id="infoMonth">January</div>
-                    <div class="info-stone" id="infoStone">Garnet</div>
-                    <div class="info-formula" id="infoFormula">Fe&#8323;Al&#8322;(SiO&#8324;)&#8323;</div>
-                    <div class="info-properties" id="infoProperties">
-                        <span>Protection</span>
-                        <span>Vitality</span>
-                        <span>Passion</span>
-                    </div>
-                    <div class="info-mantra">
-                        <span class="mantra-label">Activation Mantra</span>
-                        <div class="mantra-text" id="mantraText"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ==============================
+         VOW — Practitioner's Oath
+    ============================== -->
+    <section id="vow" class="section vow">
+      <div class="vow-facet" aria-hidden="true"></div>
+      <div class="section-header vow-overline reveal">
+        <span class="section-number">05</span>
+        <h2 class="section-title">The Practitioner's Vow</h2>
+      </div>
+      <blockquote class="vow-quote reveal">
+        I do not choose the stone. The stone chooses you. My role is to hold the space while two crystalline lattices — the one in your hand and the one in your body — find their resonance.
+      </blockquote>
+      <div class="vow-author reveal">— Dr. Sana, Crystallographer & Healer</div>
     </section>
 
-    <section id="philosophy" class="philosophy-section">
-        <div class="section-container">
-            <div class="section-overline">Philosophy</div>
-            <h2 class="section-title">The Crystalline Path</h2>
-            <div class="philosophy-grid">
-                <div class="philosophy-pillar">
-                    <div class="pillar-icon">&#9671;</div>
-                    <h3 class="pillar-title">Mineral Memory</h3>
-                    <p class="pillar-text">Crystals are ancient libraries, holding millions of years of geological and energetic information within their molecular structures.</p>
-                </div>
-                <div class="philosophy-pillar">
-                    <div class="pillar-icon">&#9671;</div>
-                    <h3 class="pillar-title">Resonant Healing</h3>
-                    <p class="pillar-text">Every crystal vibrates at a specific frequency. When matched with human energy fields, they create harmonious resonance for deep healing.</p>
-                </div>
-                <div class="philosophy-pillar">
-                    <div class="pillar-icon">&#9671;</div>
-                    <h3 class="pillar-title">Sacred Geometry</h3>
-                    <p class="pillar-text">The geometric patterns within crystals mirror the fundamental structures of the universe, connecting microcosm to macrocosm.</p>
-                </div>
-                <div class="philosophy-pillar">
-                    <div class="pillar-icon">&#9671;</div>
-                    <h3 class="pillar-title">Living Partnership</h3>
-                    <p class="pillar-text">Crystals are not tools but partners in healing. They respond to intention, grow with you, and choose their human keepers.</p>
-                </div>
-            </div>
+    <!-- ==============================
+         TESTIMONIALS
+    ============================== -->
+    <section id="testimonials" class="section testimonials">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">06</span>
+          <h2 class="section-title">Voices from the Grid</h2>
         </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">After my first crystal grid session with Dr. Sana, I felt a shift I cannot explain. Chronic pain that plagued me for years began to dissolve. The Amethyst grid she created became my anchor through chemotherapy.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar"></div>
+              <div>
+                <span class="testimonial-card__name">Sarah M.</span>
+                <span class="testimonial-card__detail">Phoenix, AZ</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">Dr. Sana's stone meditation class opened something inside me. I connected with emotions I'd buried for decades. The Rose Quartz she placed on my heart chakra — I wept for the first time in years.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar"></div>
+              <div>
+                <span class="testimonial-card__name">David K.</span>
+                <span class="testimonial-card__detail">Sedona, AZ</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">The grid activation session transformed my home. My family noticed the energy shift immediately. My daughter, who struggled with anxiety, began sleeping through the night for the first time in months.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar"></div>
+              <div>
+                <span class="testimonial-card__name">Linda R.</span>
+                <span class="testimonial-card__detail">Tucson, AZ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="vow" class="vow-section">
-        <div class="section-container">
-            <div class="vow-content">
-                <div class="vow-icon">&#9671;</div>
-                <div class="section-overline vow-overline">The Practitioner's Vow</div>
-                <blockquote class="vow-text">
-                    &ldquo;I do not choose the stone. The stone chooses you. My role is to hold the space while two crystalline lattices&mdash;the one in your hand and the one in your body&mdash;find their resonance.&rdquo;
-                </blockquote>
-                <div class="vow-attribution">&mdash; Gemma Crystalwell</div>
-            </div>
+    <!-- ==============================
+         FAQ — 6 Items from heal.md
+    ============================== -->
+    <section id="faq" class="section faq">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">07</span>
+          <h2 class="section-title">Frequently Asked</h2>
         </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>"Is it just a placebo?"</summary>
+            <div class="faq-item__answer">
+              <p>Placebo is 30% effective in clinical trials. Crystals, in bio-field studies, show a 60% effectiveness rate — double placebo. Placebo is neurological; crystals are piezoelectric. They generate a measurable voltage. That voltage interacts with your body's electrolyte field. It is physics, not suggestion.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>"Which stone is 'best' for me?"</summary>
+            <div class="faq-item__answer">
+              <p>The one you are drawn to. We mean this literally: if you hold a tray of 10 stones and your hand moves toward one without you thinking, that is your body's conductivity interacting with the stone's electrical signature. Your body "recognises" frequencies that match its deficit. Trust the reach.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>"Can I wear my crystal every day?"</summary>
+            <div class="faq-item__answer">
+              <p>Yes, but be mindful of toxicity. Some crystals (malachite, cinnabar) contain copper or mercury. Do not wear them against bare skin. Use quartz, amethyst, rose quartz, or black tourmaline for daily wear. Always clean them with saltwater or sage weekly — they absorb electromagnetic "noise" from devices.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>"Do I need to 'charge' my crystal?"</summary>
+            <div class="faq-item__answer">
+              <p>Sunlight and moonlight are common. However, the actual mechanism is thermal — sunlight excites the electrons in the crystal lattice. That charge dissipates over time. We recommend charging under a full moon for 6 hours. It is not magical; it is thermodynamic.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>"Can I use crystals with other modalities?"</summary>
+            <div class="faq-item__answer">
+              <p>Yes. In fact, we encourage it. The crystal acts as a "conductor" for Reiki or acupuncture needles. It focuses the signal. Many of our practitioners combine modalities. The whole is greater than the sum of the parts.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>"Why do some crystals cost thousands?"</summary>
+            <div class="faq-item__answer">
+              <p>Rarity, clarity, and size. A high-grade natural amethyst geode from Uruguay has unique geological formations. It is not "more healing" than a cheap one — it is just a rarer frequency. A small, clear quartz is 90% as effective as a massive one. We have both. You choose.</p>
+            </div>
+          </details>
+        </div>
+      </div>
     </section>
 
-    <section id="testimonials" class="testimonials-section">
-        <div class="section-container">
-            <div class="section-overline">Stories</div>
-            <h2 class="section-title">Voices from the Grid</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">&ldquo;</div>
-                    <p class="testimonial-text">After my first crystal grid session with Gemma, I felt a shift I cannot explain. Chronic pain that plagued me for years began to dissolve. The Amethyst grid she created became my anchor through chemotherapy.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <span class="author-name">Sarah M.</span>
-                            <span class="author-detail">Phoenix, AZ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">&ldquo;</div>
-                    <p class="testimonial-text">Gemma's stone meditation class opened something inside me. I connected with emotions I'd buried for decades. The Rose Quartz she placed on my heart chakra&mdash;I wept for the first time in years.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <span class="author-name">David K.</span>
-                            <span class="author-detail">Sedona, AZ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">&ldquo;</div>
-                    <p class="testimonial-text">The grid activation session transformed my home. My family noticed the energy shift immediately. My daughter, who struggled with anxiety, began sleeping through the night for the first time in months.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <span class="author-name">Linda R.</span>
-                            <span class="author-detail">Tucson, AZ</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ==============================
+         EVENTS — 2 Events from heal.md
+    ============================== -->
+    <section id="events" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">08</span>
+          <h2 class="section-title">Live Events</h2>
         </div>
+
+        <div class="events-grid">
+          <div class="event-card reveal">
+            <div class="event-card__date">Every Second Saturday · 2 PM – 5 PM</div>
+            <h3 class="event-card__title">Crystal Grid Workshop</h3>
+            <p class="event-card__desc">A 3-hour deep-dive into building geometric arrays (sacred geometry) for specific intentions: sleep, focus, grief protection, or abundance. You will learn the "Flower of Life" and "Seed of Life" patterns. You leave with your own 1-cm grid, a handful of small tumbled stones, and a printed diagram. This is a craft, not a cult.</p>
+          </div>
+
+          <div class="event-card reveal">
+            <div class="event-card__date">Monthly, Last Saturday · 4 PM</div>
+            <h3 class="event-card__title">Full Moon Ceremony</h3>
+            <p class="event-card__desc">Hosted by a certified gemologist from the London Gemological Institute. Bring your own stone — whether from a gift shop, a riverbed, or a jewellery box. We identify it chemically, tell you its Mohs hardness, and explain its actual, geological origin. No woo. Just data. And you get to keep the labelled card.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="faqs" class="faqs-section">
-        <div class="section-container">
-            <div class="section-overline">Questions</div>
-            <h2 class="section-title">Frequently Asked</h2>
-            <div class="faqs-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span class="faq-q-label">Q</span>
-                        <h3>&ldquo;Is it just a placebo?&rdquo;</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <span class="faq-a-label">A</span>
-                        <p>Placebo is 30% effective. Crystals are 60% effective in clinical biofield studies. The measurable piezoelectric response and biofield interaction go beyond expectation effects.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span class="faq-q-label">Q</span>
-                        <h3>&ldquo;Which stone is best?&rdquo;</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <span class="faq-a-label">A</span>
-                        <p>The one you are drawn to. Your body's conductivity guides you. Trust the recognition you feel when a stone resonates with your energy field.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span class="faq-q-label">Q</span>
-                        <h3>&ldquo;Can I wear it?&rdquo;</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <span class="faq-a-label">A</span>
-                        <p>Yes. Proximity is key. Wearable crystals maintain a continuous capacitive link with your biofield, providing steady energetic support throughout the day.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- ==============================
+         GIFT A SESSION
+    ============================== -->
+    <section id="gift" class="section gift">
+      <div class="section-inner">
+        <div class="section-header reveal" style="text-align: center;">
+          <span class="section-number">09</span>
+          <h2 class="gift-title">Give the Gift of Silence</h2>
         </div>
+        <p class="gift-desc reveal">Struggling to find the words to comfort someone you love? You don't need them. A healing session is a language that bypasses explanation.</p>
+        <p class="gift-desc reveal">Purchase an anonymous 60-minute session for a friend, partner, or family member. They choose the modality that calls to them. You choose the peace of knowing you offered them a space to land.</p>
+        <p class="gift-desc reveal" style="opacity: 0.5; font-size: 0.9rem;">No awkward conversations. No "you should try this." Just a quiet invitation sent to their inbox, with no pressure to respond. The gift does not expire. It waits patiently, like a lamp left on in a hallway.</p>
+        <div class="reveal" style="text-align: center; margin-top: 2rem;">
+          <a href="#contact" class="btn">Send a Sanctuary</a>
+        </div>
+      </div>
     </section>
 
-    <section id="journey" class="journey-section">
-        <div class="section-container">
-            <div class="section-overline">The Journey</div>
-            <h2 class="section-title">What to Expect</h2>
-            <div class="journey-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>01 &mdash; Consultation</h3>
-                        <p>We begin with a deep conversation about your intentions, health history, and energetic sensitivities. This helps me understand which crystals will serve you best.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>02 &mdash; Stone Selection</h3>
-                        <p>Together, we select from over 50 crystal varieties. I'll guide you to feel each stone's energy and identify which ones resonate with your current needs.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>03 &mdash; The Session</h3>
-                        <p>Lying comfortably, you'll experience the subtle warmth and vibration of crystals placed on and around your body. Many report seeing colors or feeling waves of peace.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>04 &mdash; Integration</h3>
-                        <p>After the session, we discuss your experience. I provide guidance on crystal care, home practices, and recommend stones for continued healing between sessions.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- ==============================
+         CONTACT
+    ============================== -->
+    <section id="contact" class="section contact">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-number">10</span>
+          <h2 class="section-title">Begin Your Journey</h2>
         </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-block reveal">
+              <h3>Location</h3>
+              <p>456 Mineral Lane<br>Tucson, AZ 85701</p>
+            </div>
+            <div class="contact-block reveal">
+              <h3>Hours</h3>
+              <p>Tuesday – Saturday<br>10:00 AM – 6:00 PM</p>
+            </div>
+            <div class="contact-block reveal">
+              <h3>Contact</h3>
+              <p>hello@lunacrystalis.com<br>(520) 555-0147</p>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group reveal">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group reveal">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group reveal">
+              <label for="intent">Your Intention</label>
+              <select id="intent" name="intent">
+                <option value="">Select a focus</option>
+                <option value="grid">Crystal Grid Layout</option>
+                <option value="meditation">Stone Meditation</option>
+                <option value="activation">Grid Activation</option>
+                <option value="consultation">General Consultation</option>
+              </select>
+            </div>
+            <div class="form-group reveal">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn reveal">Send Message</button>
+          </form>
+        </div>
+      </div>
     </section>
 
-    <section id="try-now" class="try-now-section">
-        <div class="section-container">
-            <div class="section-overline">Experience</div>
-            <h2 class="section-title">Try This Now</h2>
-            <div class="try-now-content">
-                <div class="try-now-card">
-                    <div class="try-now-gem">&#9670;</div>
-                    <p class="try-now-instruction">Hold a quartz crystal in your left palm. Squeeze it.</p>
-                    <p class="try-now-result">The voltage generated is enough to fire a single neuron. Your body just responded.</p>
-                    <div class="try-now-data">
-                        <div class="try-now-stat">
-                            <span class="try-stat-label">Voltage Generated</span>
-                            <span class="try-stat-value">~1.2V</span>
-                        </div>
-                        <div class="try-now-stat">
-                            <span class="try-stat-label">Neurons Fired</span>
-                            <span class="try-stat-value">1</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ==============================
+         FOOTER — Full-Width Dark Editorial
+    ============================== -->
+    <footer class="footer">
+      <div class="footer-divider" aria-hidden="true">
+        <div class="footer-divider__facet"></div>
+        <div class="footer-divider__facet"></div>
+        <div class="footer-divider__facet"></div>
+      </div>
 
-    <section id="cta" class="cta-section">
-        <div class="section-container">
-            <div class="cta-content">
-                <h2 class="cta-title">Claim Your Stone</h2>
-                <p class="cta-text">Every crystal carries a signature frequency. Yours is waiting. Book a session and let the stone choose you.</p>
-                <a href="#contact" class="btn-primary cta-button">Book a Session</a>
-            </div>
+      <div class="footer__inner">
+        <div class="footer__col">
+          <p class="footer__quote">"The wound is the place where the Light enters you."</p>
+          <p class="footer__quote-attr">— Rumi</p>
         </div>
-    </section>
 
-    <!-- Live Events -->
-    <section id="events" class="events-section">
-        <div class="section-container">
-            <div class="section-overline">Events</div>
-            <h2 class="section-title">Live Events</h2>
-            <div class="events-grid">
-                <div class="event-item">
-                    <span class="event-name">Crystal Grid Workshop</span>
-                    <span class="event-detail">Monthly</span>
-                </div>
-                <div class="event-item">
-                    <span class="event-name">Birthstone Ceremony</span>
-                    <span class="event-detail">Full Moons</span>
-                </div>
-                <div class="event-item">
-                    <span class="event-name">Mineral Show Trip</span>
-                    <span class="event-detail">Annually</span>
-                </div>
-            </div>
+        <div class="footer__col">
+          <div class="footer__brand">Luna Crystalis</div>
+          <p class="footer__tagline">Ancient Stones, Living Energy<br>456 Mineral Lane, Tucson, AZ 85701</p>
         </div>
-    </section>
 
-    <!-- Gift a Session -->
-    <section id="gift" class="gift-section">
-        <div class="section-container">
-            <h2 class="section-title">Gift a Sanctuary</h2>
-            <p class="gift-text">Struggling to explain what you're going through? Gift a 60-minute anonymous session to a friend. They choose the modality. You pay the peace.</p>
+        <div class="footer__col">
+          <div class="footer__heading">Navigate</div>
+          <a href="#home" class="footer__link">Home</a>
+          <a href="#about" class="footer__link">About</a>
+          <a href="#services" class="footer__link">Services</a>
+          <a href="#faq" class="footer__link">FAQ</a>
+          <a href="#contact" class="footer__link">Contact</a>
         </div>
-    </section>
+      </div>
 
-    <section id="contact" class="contact-section">
-        <div class="section-container">
-            <div class="section-overline">Connect</div>
-            <h2 class="section-title">Begin Your Journey</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-block">
-                        <h3>Location</h3>
-                        <p>456 Mineral Lane<br>Tucson, AZ 85701</p>
-                    </div>
-                    <div class="contact-block">
-                        <h3>Hours</h3>
-                        <p>Tuesday &ndash; Saturday<br>10:00 AM &ndash; 6:00 PM</p>
-                    </div>
-                    <div class="contact-block">
-                        <h3>Contact</h3>
-                        <p>hello@gemmacrystalwell.com<br>(520) 555-0147</p>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="intent">Your Intention</label>
-                        <select id="intent" name="intent">
-                            <option value="">Select a focus</option>
-                            <option value="grid">Crystal Grid Layout</option>
-                            <option value="meditation">Stone Meditation</option>
-                            <option value="activation">Grid Activation</option>
-                            <option value="consultation">General Consultation</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-main">
-                    <div class="footer-brand">Gemma Crystalwell</div>
-                    <div class="footer-tagline">Ancient Stones, Living Energy</div>
-                    <div class="footer-address">456 Mineral Lane, Tucson, AZ 85701</div>
-                </div>
-                <div class="footer-contraindications">
-                    <h4 class="footer-heading">Important Notice</h4>
-                    <p>Not a replacement for medical treatment. Do not ingest crystal-infused water unless you know the mineral composition. Some stones (malachite, cinnabar) are toxic when wet.</p>
-                </div>
-                <div class="footer-lexicon">
-                    <h4 class="footer-heading">Lexicon</h4>
-                    <dl class="lexicon-list">
-                        <dt>Piezoelectric</dt>
-                        <dd>Electric charge from pressure.</dd>
-                        <dt>Mohs Scale</dt>
-                        <dd>Hardness of mineral.</dd>
-                        <dt>Selenite</dt>
-                        <dd>High-vibration cleansing stone.</dd>
-                    </dl>
-                </div>
-            </div>
-        </div>
+      <div class="footer__legal">
+        <p class="footer__copy">© 2026 Luna Crystalis. Not a replacement for medical treatment. Do not ingest crystal-infused water unless you know the mineral composition.</p>
+        <p class="footer__credit">Made with love by <a href="#">Empathy Studio · Norman James</a></p>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
-<script src="meta-layer.js"></script></body>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
 </html>

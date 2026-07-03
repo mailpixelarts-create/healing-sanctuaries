@@ -1,0 +1,1147 @@
+// ============================================
+// 03-KABIRAJI — YOGA: ORGANIC MORPHIC EDITORIAL
+// Design DNA: Warm earth editorial, organic morphic shapes, chakra energy
+// Hero: Beauty Macro — extreme detail, texture emphasis
+// Signature: Chakra wheel navigation (7 petals, radial)
+// ============================================
+@use '../../src/styles/tokens' as *;
+@use '../../src/styles/meta-layers';
+
+// ─── Site Tokens ───
+:root {
+  --ink: #2B1810;
+  --paper: #F2EDE4;
+  --signal: #E85D04;
+  --surface: #3D2A1E;
+  --ghost: rgba(232, 93, 4, 0.06);
+  --ghost-strong: rgba(232, 93, 4, 0.12);
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --flow: 1.6s;
+
+  // Chakra spectrum
+  --chakra-root: #C1272D;
+  --chakra-sacral: #E85D04;
+  --chakra-solar: #D4A843;
+  --chakra-heart: #3A7D44;
+  --chakra-throat: #2E6B9E;
+  --chakra-third-eye: #4B0082;
+  --chakra-crown: #8B5CF6;
+}
+
+// ─── Reset ───
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: $weight-light;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: $leading-relaxed;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+// ─── Loading Screen ───
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: $z-max;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  transition: opacity 0.8s $ease-out-expo, visibility 0.8s;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &__text {
+    font-family: var(--font-display);
+    font-size: $font-size-xl;
+    font-weight: $weight-semibold;
+    color: var(--signal);
+    opacity: 0;
+    animation: loaderFade 1.2s $ease-out-expo forwards;
+  }
+
+  &__subtext {
+    font-family: var(--font-body);
+    font-size: $font-size-xs;
+    font-weight: $weight-light;
+    color: var(--paper);
+    opacity: 0;
+    margin-top: $space-md;
+    letter-spacing: $tracking-widest;
+    text-transform: uppercase;
+    animation: loaderFade 1.2s $ease-out-expo 0.4s forwards;
+  }
+
+  &__chakra-dots {
+    display: flex;
+    gap: $space-md;
+    margin-top: $space-2xl;
+
+    span {
+      width: 8px;
+      height: 8px;
+      border-radius: $radius-round;
+      opacity: 0;
+      animation: dotPulse 1.4s $ease-out-expo forwards;
+
+      &:nth-child(1) { background: var(--chakra-root); animation-delay: 0.1s; }
+      &:nth-child(2) { background: var(--chakra-sacral); animation-delay: 0.2s; }
+      &:nth-child(3) { background: var(--chakra-solar); animation-delay: 0.3s; }
+      &:nth-child(4) { background: var(--chakra-heart); animation-delay: 0.4s; }
+      &:nth-child(5) { background: var(--chakra-throat); animation-delay: 0.5s; }
+      &:nth-child(6) { background: var(--chakra-third-eye); animation-delay: 0.6s; }
+      &:nth-child(7) { background: var(--chakra-crown); animation-delay: 0.7s; }
+    }
+  }
+}
+
+@keyframes loaderFade {
+  to { opacity: 1; }
+}
+
+@keyframes dotPulse {
+  0% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1.4); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+// ─── Chakra Wheel Navigation ───
+.chakra-nav {
+  position: fixed;
+  top: $space-xl;
+  right: $space-xl;
+  z-index: $z-nav;
+
+  @media (max-width: $bp-mobile) {
+    top: $space-lg;
+    right: $space-lg;
+  }
+}
+
+.chakra-toggle {
+  width: 52px;
+  height: 52px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  position: relative;
+  z-index: $z-above;
+  transition: transform 0.5s $ease-out-expo;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+
+  svg {
+    display: block;
+  }
+}
+
+.chakra-wheel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s $ease-out-expo, width 0s 0.4s, height 0s 0.4s;
+
+  &.open {
+    pointer-events: auto;
+    opacity: 1;
+    width: 340px;
+    height: 340px;
+    margin-left: -170px;
+    margin-top: -170px;
+    transition: opacity 0.4s $ease-out-expo;
+  }
+}
+
+.chakra-petal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  margin: -22px;
+  border-radius: $radius-round;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  font-weight: $weight-semibold;
+  transform: translate(
+    calc(cos(var(--angle)) * 130px),
+    calc(sin(var(--angle)) * 130px)
+  );
+  opacity: 0;
+  transition: transform 0.6s $ease-out-expo, opacity 0.4s $ease-out-expo, background 0.3s;
+
+  &.open &,
+  .chakra-wheel.open & {
+    opacity: 1;
+  }
+
+  .chakra-wheel.open &:nth-child(1) { transition-delay: 0.05s; }
+  .chakra-wheel.open &:nth-child(2) { transition-delay: 0.08s; }
+  .chakra-wheel.open &:nth-child(3) { transition-delay: 0.11s; }
+  .chakra-wheel.open &:nth-child(4) { transition-delay: 0.14s; }
+  .chakra-wheel.open &:nth-child(5) { transition-delay: 0.17s; }
+  .chakra-wheel.open &:nth-child(6) { transition-delay: 0.2s; }
+  .chakra-wheel.open &:nth-child(7) { transition-delay: 0.23s; }
+
+  &:hover {
+    background: var(--signal);
+    transform: translate(
+      calc(cos(var(--angle)) * 130px),
+      calc(sin(var(--angle)) * 130px)
+    ) scale(1.15);
+  }
+
+  &::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-family: var(--font-body);
+    font-style: normal;
+    font-size: 0.65rem;
+    font-weight: $weight-light;
+    letter-spacing: $tracking-wider;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  // Chakra-specific petal colors
+  &:nth-child(1) { background: var(--chakra-root); }
+  &:nth-child(2) { background: var(--chakra-sacral); }
+  &:nth-child(3) { background: var(--chakra-solar); }
+  &:nth-child(4) { background: var(--chakra-heart); }
+  &:nth-child(5) { background: var(--chakra-throat); }
+  &:nth-child(6) { background: var(--chakra-third-eye); }
+  &:nth-child(7) { background: var(--chakra-crown); }
+
+  &:nth-child(1):hover { background: var(--chakra-root); }
+  &:nth-child(2):hover { background: var(--chakra-sacral); }
+  &:nth-child(3):hover { background: var(--chakra-solar); }
+  &:nth-child(4):hover { background: var(--chakra-heart); }
+  &:nth-child(5):hover { background: var(--chakra-throat); }
+  &:nth-child(6):hover { background: var(--chakra-third-eye); }
+  &:nth-child(7):hover { background: var(--chakra-crown); }
+}
+
+// ─── Hero ───
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-canvas-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+#heroCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: $space-xl;
+}
+
+.hero-label {
+  font-family: var(--font-body);
+  font-size: $font-size-xs;
+  font-weight: $weight-light;
+  letter-spacing: $tracking-ultra;
+  text-transform: uppercase;
+  margin-bottom: $space-xl;
+  opacity: 0.7;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: $weight-semibold;
+  font-size: $font-size-hero;
+  line-height: $leading-tight;
+  margin-bottom: $space-lg;
+
+  em {
+    font-style: italic;
+    color: var(--signal);
+  }
+}
+
+.hero-sub {
+  font-size: $font-size-base;
+  font-weight: $weight-light;
+  letter-spacing: $tracking-wider;
+  margin-bottom: $space-3xl;
+  opacity: 0.7;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: $space-md $space-2xl;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: $font-size-sm;
+  font-weight: $weight-light;
+  letter-spacing: $tracking-wider;
+  text-transform: uppercase;
+  transition: background var(--flow) $ease-out-expo, color var(--flow) $ease-out-expo, transform 0.3s $ease-out-expo;
+
+  &:hover {
+    background: var(--ink);
+    color: var(--paper);
+    transform: translateY(-2px);
+  }
+
+  &.secondary {
+    border-color: var(--signal);
+    color: var(--signal);
+
+    &:hover {
+      background: var(--signal);
+      color: var(--paper);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: $space-xl;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-sm;
+  font-size: $font-size-xs;
+  font-weight: $weight-light;
+  letter-spacing: $tracking-wider;
+  text-transform: uppercase;
+  opacity: 0.5;
+  animation: scrollBounce 2s $ease-out-expo infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+// ─── Sections (Base) ───
+.section {
+  padding: $space-5xl $space-xl;
+  position: relative;
+
+  @media (max-width: $bp-mobile) {
+    padding: $space-4xl $space-lg;
+  }
+}
+
+.section-inner {
+  max-width: $bp-desktop;
+  margin: 0 auto;
+}
+
+.section-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: $weight-semibold;
+  font-size: $font-size-sm;
+  color: var(--signal);
+  display: block;
+  margin-bottom: $space-sm;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: $weight-semibold;
+  font-size: $font-size-3xl;
+  margin-bottom: $space-xl;
+  line-height: $leading-tight;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--signal);
+    margin-top: $space-md;
+  }
+}
+
+.section-intro {
+  font-size: $font-size-md;
+  font-weight: $weight-light;
+  opacity: 0.7;
+  margin-bottom: $space-3xl;
+  max-width: 600px;
+}
+
+// ─── About ───
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: $space-4xl;
+  align-items: start;
+
+  @media (max-width: $bp-desktop-sm) {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+.about-image-placeholder {
+  aspect-ratio: 3 / 4;
+  background: var(--ghost-strong);
+  border: 1px solid rgba(43, 24, 16, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: $weight-semibold;
+  font-size: $font-size-lg;
+  color: var(--signal);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--signal) 0%, transparent 70%);
+    opacity: 0.06;
+    animation: morphBlob 8s ease-in-out infinite;
+  }
+}
+
+@keyframes morphBlob {
+  0%, 100% { border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%; }
+  25% { border-radius: 60% 40% 30% 70% / 40% 60% 40% 60%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  75% { border-radius: 50% 40% 50% 60% / 35% 55% 65% 45%; }
+}
+
+.about-lead {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: $weight-semibold;
+  font-size: $font-size-lg;
+  line-height: $leading-relaxed;
+  margin-bottom: $space-xl;
+}
+
+.about-text p {
+  margin-bottom: $space-lg;
+  opacity: 0.85;
+  font-weight: $weight-light;
+}
+
+.origin-story {
+  margin-top: $space-2xl;
+  padding: $space-xl;
+  border-left: 2px solid var(--signal);
+  background: var(--ghost);
+
+  &-text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: $weight-semibold;
+    font-size: $font-size-base;
+    line-height: $leading-relaxed;
+    color: var(--surface);
+  }
+}
+
+// ─── Mechanism ───
+.mechanism-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: $weight-semibold;
+  font-size: $font-size-xl;
+  line-height: $leading-relaxed;
+  max-width: 800px;
+  color: var(--ink);
+  opacity: 0.85;
+  margin-bottom: $space-2xl;
+}
+
+.mechanism-details {
+  display: grid;
+  gap: $space-xl;
+  max-width: 700px;
+}
+
+.mechanism-item {
+  padding-left: $space-xl;
+  border-left: 1px solid var(--ghost-strong);
+
+  h3 {
+    font-family: var(--font-display);
+    font-weight: $weight-semibold;
+    font-size: $font-size-lg;
+    margin-bottom: $space-sm;
+  }
+
+  p {
+    opacity: 0.8;
+    font-weight: $weight-light;
+    line-height: $leading-relaxed;
+  }
+}
+
+// ─── Services (3 Cards) ───
+.art-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-2xl;
+
+  @media (max-width: $bp-desktop-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.art-card {
+  padding: $space-3xl $space-2xl;
+  background: var(--ghost);
+  border: 1px solid rgba(43, 24, 16, 0.06);
+  transition: transform 0.5s $ease-out-expo, box-shadow 0.5s $ease-out-expo;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--signal), transparent);
+    opacity: 0;
+    transition: opacity 0.5s $ease-out-expo;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(43, 24, 16, 0.08);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.art-card-icon {
+  margin-bottom: $space-xl;
+}
+
+.art-card-title {
+  font-family: var(--font-display);
+  font-weight: $weight-semibold;
+  font-size: $font-size-xl;
+  margin-bottom: $space-md;
+}
+
+.art-card p {
+  font-size: $font-size-sm;
+  font-weight: $weight-light;
+  opacity: 0.8;
+  line-height: $leading-relaxed;
+}
+
+.art-card-price {
+  display: block;
+  margin-top: $space-lg;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: $weight-semibold;
+  font-size: $font-size-md;
+  color: var(--signal);
+}
+
+// ─── Process (Before / During / After) ───
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-2xl;
+
+  @media (max-width: $bp-desktop-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-step {
+  padding: $space-2xl;
+  background: var(--ghost);
+  border: 1px solid rgba(43, 24, 16, 0.06);
+  position: relative;
+}
+
+.process-label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: $weight-semibold;
+  font-size: $font-size-lg;
+  color: var(--signal);
+  display: block;
+  margin-bottom: $space-md;
+}
+
+.process-step h3 {
+  font-family: var(--font-display);
+  font-weight: $weight-semibold;
+  font-size: $font-size-lg;
+  margin-bottom: $space-sm;
+}
+
+.process-step p {
+  opacity: 0.85;
+  line-height: $leading-relaxed;
+  font-weight: $weight-light;
+}
+
+// ─── Practitioner's Vow ───
+.vow {
+  padding: $space-6xl $space-xl;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--paper) 0%,
+    rgba(232, 93, 4, 0.03) 50%,
+    var(--paper) 100%
+  );
+
+  @media (max-width: $bp-mobile) {
+    padding: $space-4xl $space-lg;
+  }
+}
+
+.vow-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: $weight-semibold;
+  font-size: $font-size-2xl;
+  line-height: $leading-relaxed;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--ink);
+  opacity: 0.9;
+  border: none;
+  padding: 0;
+  position: relative;
+
+  &::before,
+  &::after {
+    font-size: $font-size-4xl;
+    color: var(--signal);
+    opacity: 0.15;
+    position: absolute;
+  }
+
+  &::before {
+    content: '\201C';
+    top: -30px;
+    left: -30px;
+  }
+
+  &::after {
+    content: '\201D';
+    bottom: -50px;
+    right: -30px;
+  }
+}
+
+.vow-author {
+  margin-top: $space-2xl;
+  font-family: var(--font-body);
+  font-size: $font-size-sm;
+  font-weight: $weight-light;
+  color: var(--signal);
+  letter-spacing: $tracking-wider;
+}
+
+// ─── Testimonials ───
+.testimonial-grid {
+  display: grid;
+  gap: $space-2xl;
+}
+
+.testimonial {
+  padding: $space-2xl;
+  background: var(--ghost);
+  border-left: 3px solid var(--signal);
+  position: relative;
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: $space-md;
+    right: $space-2xl;
+    font-family: var(--font-display);
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--signal);
+    opacity: 0.1;
+  }
+
+  p {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: $weight-semibold;
+    font-size: $font-size-md;
+    line-height: $leading-relaxed;
+    margin-bottom: $space-md;
+  }
+
+  cite {
+    font-style: normal;
+    font-family: var(--font-body);
+    font-size: $font-size-sm;
+    font-weight: $weight-light;
+    opacity: 0.6;
+  }
+}
+
+// ─── FAQs ───
+.faq-list {
+  display: grid;
+  gap: 0;
+  max-width: 700px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(43, 24, 16, 0.08);
+
+  summary {
+    padding: $space-xl 0;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: $weight-semibold;
+    font-size: $font-size-md;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+
+    &::after {
+      content: '+';
+      font-size: $font-size-xl;
+      color: var(--signal);
+      transition: transform 0.3s $ease-out-expo;
+    }
+
+    &[open]::after {
+      transform: rotate(45deg);
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      color: var(--signal);
+    }
+  }
+}
+
+.faq-a {
+  padding: 0 0 $space-xl;
+  opacity: 0.75;
+  font-size: $font-size-sm;
+  font-weight: $weight-light;
+  line-height: $leading-relaxed;
+}
+
+// ─── Events ───
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-2xl;
+
+  @media (max-width: $bp-desktop-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.event-card {
+  padding: $space-2xl;
+  background: var(--ghost);
+  border: 1px solid rgba(43, 24, 16, 0.06);
+  transition: border-color 0.3s $ease-out-expo;
+
+  &:hover {
+    border-color: rgba(232, 93, 4, 0.2);
+  }
+
+  &-date {
+    font-family: var(--font-body);
+    font-size: $font-size-xs;
+    font-weight: $weight-light;
+    color: var(--signal);
+    letter-spacing: $tracking-widest;
+    text-transform: uppercase;
+    margin-bottom: $space-md;
+  }
+
+  &-title {
+    font-family: var(--font-display);
+    font-weight: $weight-semibold;
+    font-size: $font-size-xl;
+    margin-bottom: $space-md;
+  }
+
+  &-desc {
+    font-size: $font-size-sm;
+    font-weight: $weight-light;
+    opacity: 0.7;
+    line-height: $leading-relaxed;
+  }
+}
+
+// ─── Gift ───
+.gift {
+  text-align: center;
+  padding: $space-6xl $space-xl;
+  background: var(--surface);
+
+  @media (max-width: $bp-mobile) {
+    padding: $space-4xl $space-lg;
+  }
+
+  &-title {
+    font-family: var(--font-display);
+    font-weight: $weight-semibold;
+    font-size: $font-size-3xl;
+    color: var(--paper);
+    margin-bottom: $space-lg;
+  }
+
+  &-text {
+    font-size: $font-size-md;
+    font-weight: $weight-light;
+    color: var(--paper);
+    opacity: 0.7;
+    max-width: 600px;
+    margin: 0 auto $space-2xl;
+    line-height: $leading-relaxed;
+  }
+}
+
+// ─── Contact ───
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: $space-3xl;
+  align-items: start;
+
+  @media (max-width: $bp-desktop-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: $weight-semibold;
+  font-size: $font-size-xl;
+  margin-bottom: $space-md;
+}
+
+.contact-info p {
+  margin-bottom: $space-sm;
+  opacity: 0.8;
+  font-weight: $weight-light;
+}
+
+.map-placeholder {
+  aspect-ratio: 16 / 9;
+  background: var(--ghost);
+  border: 1px solid rgba(43, 24, 16, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: $weight-semibold;
+  color: var(--signal);
+  font-size: $font-size-lg;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 40%, var(--signal) 0%, transparent 50%),
+      radial-gradient(circle at 70% 60%, var(--signal) 0%, transparent 50%);
+    opacity: 0.04;
+  }
+}
+
+// ─── Dynamic CTA ───
+.cta-centered {
+  text-align: center;
+}
+
+.cta-large {
+  font-size: $font-size-base;
+  padding: $space-xl $space-4xl;
+}
+
+// ─── Footer ───
+.footer {
+  padding: $space-4xl $space-xl;
+  background: linear-gradient(
+    180deg,
+    var(--ink) 0%,
+    var(--surface) 100%
+  );
+  color: var(--paper);
+
+  &__inner {
+    max-width: $bp-desktop;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: $space-3xl;
+
+    @media (max-width: $bp-desktop-sm) {
+      grid-template-columns: 1fr;
+      gap: $space-xl;
+    }
+  }
+
+  &__brand {
+    font-family: var(--font-display);
+    font-size: $font-size-xl;
+    font-weight: $weight-semibold;
+    color: var(--signal);
+    margin-bottom: $space-md;
+  }
+
+  &__tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: $font-size-md;
+    font-weight: $weight-semibold;
+    color: var(--paper);
+    opacity: 0.8;
+    line-height: $leading-relaxed;
+    margin-bottom: $space-xl;
+    max-width: 500px;
+  }
+
+  &__heading {
+    font-family: var(--font-body);
+    font-size: $font-size-xs;
+    font-weight: $weight-light;
+    color: var(--signal);
+    text-transform: uppercase;
+    letter-spacing: $tracking-widest;
+    margin-bottom: $space-lg;
+  }
+
+  &__link {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: $weight-light;
+    color: var(--paper);
+    opacity: 0.5;
+    text-decoration: none;
+    margin-bottom: $space-sm;
+    transition: opacity 0.15s;
+
+    &:hover {
+      opacity: 1;
+      color: var(--signal);
+    }
+  }
+
+  &__legal {
+    margin-top: $space-3xl;
+    padding-top: $space-xl;
+    border-top: 1px solid rgba(242, 237, 228, 0.1);
+    text-align: center;
+  }
+
+  &__copy {
+    font-size: $font-size-xs;
+    font-weight: $weight-light;
+    color: var(--paper);
+    opacity: 0.3;
+    letter-spacing: $tracking-wider;
+  }
+
+  &__credit {
+    font-size: $font-size-xs;
+    font-weight: $weight-light;
+    color: var(--paper);
+    opacity: 0.3;
+    margin-top: $space-sm;
+
+    a {
+      color: var(--signal);
+      opacity: 0.5;
+      transition: opacity 0.15s;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.footer-organic-divider {
+  width: 100%;
+  height: 1px;
+  margin: $space-2xl 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(232, 93, 4, 0.3),
+    transparent
+  );
+}
+
+// ─── Lexicon (inline in footer) ───
+.lexicon-inline {
+  margin-top: $space-xl;
+
+  &-entry {
+    display: flex;
+    align-items: baseline;
+    gap: $space-sm;
+    margin-bottom: $space-sm;
+    font-size: $font-size-sm;
+    font-weight: $weight-light;
+    opacity: 0.6;
+  }
+
+  &-term {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: $weight-semibold;
+    color: var(--signal);
+    white-space: nowrap;
+  }
+}
+
+// ─── Reduced Motion ───
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-hint {
+    animation: none;
+  }
+
+  .about-image-placeholder::before {
+    animation: none;
+  }
+}
+
+// ─── Detox Mode ───
+body.is-detox {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  canvas,
+  .hero-canvas-wrap,
+  .chakra-nav,
+  .hs-emergency,
+  .hs-tracker,
+  .hs-translation,
+  .hs-detox {
+    display: none !important;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: $space-4xl $space-xl;
+  }
+
+  .section {
+    padding: $space-2xl $space-xl;
+  }
+}

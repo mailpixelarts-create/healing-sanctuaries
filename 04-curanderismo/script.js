@@ -1,235 +1,265 @@
-// DOM Elements
-const heroWords = document.querySelectorAll('.hero-word');
-const bellButton = document.getElementById('bellButton');
-const timerDisplay = document.getElementById('timerDisplay');
-const timerCircle = document.getElementById('timerCircle');
-const timerText = document.getElementById('timerText');
-const sections = document.querySelectorAll('.section');
+// ============================================
+// 04-CURANDERISMO — MEDITATION: WABI-SABI PRECISION
+// Signature Interaction: SVG noise grain overlay + hero words expand/glow on hover
+// "One memorable interaction. Not many. One."
+// ============================================
 
-// Kinetic Typography - Mouse Movement
-let mouseX = window.innerWidth / 2;
-let mouseY = window.innerHeight / 2;
-let currentX = mouseX;
-let currentY = mouseY;
+import { gsap, ScrollTrigger, initSectionReveals, refreshScrollTrigger } from '../src/utils/motion.js';
 
-document.addEventListener('mousemove', (e) => {
+// ============================================
+// LOADING SCREEN
+// ============================================
+function initLoader() {
+  const loader = document.getElementById('loader');
+  if (!loader) return;
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      loader.classList.add('is-hidden');
+    }, 1800);
+  });
+}
+
+// ============================================
+// FILM GRAIN OVERLAY — SVG noise at 3% opacity
+// ============================================
+function initGrainOverlay() {
+  const overlay = document.getElementById('grainOverlay');
+  if (!overlay) return;
+
+  let frame = 0;
+
+  function animateGrain() {
+    frame++;
+    // Shift the SVG turbulence seed every 4 frames for subtle grain movement
+    if (frame % 4 === 0) {
+      const turbulence = overlay.querySelector('feTurbulence');
+      if (turbulence) {
+        turbulence.setAttribute('seed', Math.floor(Math.random() * 100));
+      }
+    }
+    requestAnimationFrame(animateGrain);
+  }
+
+  animateGrain();
+
+  // Respect reduced motion
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motionQuery.matches) {
+    const turbulence = overlay.querySelector('feTurbulence');
+    if (turbulence) turbulence.setAttribute('seed', '0');
+  }
+}
+
+// ============================================
+// NAVIGATION — Tracking + Mobile
+// ============================================
+function initNavTracking() {
+  const sections = document.querySelectorAll('.section, .hero');
+  const navLinks = document.querySelectorAll('.top-nav__link');
+  const topNav = document.getElementById('topNav');
+  let lastScroll = 0;
+
+  // Active section tracking
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach((link) => {
+            link.classList.toggle('is-active', link.dataset.section === id);
+          });
+        }
+      });
+    },
+    { rootMargin: '-40% 0px -60% 0px' }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  // Hide/show nav on scroll
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 200) {
+      topNav.classList.toggle('is-hidden', currentScroll > lastScroll && currentScroll > 400);
+    } else {
+      topNav.classList.remove('is-hidden');
+    }
+    lastScroll = currentScroll;
+  }, { passive: true });
+
+  // Mobile menu toggle
+  const toggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (toggle && mobileMenu) {
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('is-open');
+      toggle.classList.toggle('is-active');
+    });
+
+    mobileMenu.querySelectorAll('.mobile-menu__link').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+      });
+    });
+  }
+
+  // Smooth scroll for all nav links
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+}
+
+// ============================================
+// HERO — Parallax + Word Interactions
+// ============================================
+function initHero() {
+  const heroContent = document.querySelector('.hero__content');
+  const heroWords = document.querySelectorAll('.hero-word');
+
+  if (heroContent) {
+    // Parallax on scroll
+    gsap.to(heroContent, {
+      y: 80,
+      opacity: 0,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1,
+      },
+    });
+  }
+
+  // Hero word hover — expand + glow + reveal word
+  heroWords.forEach((word) => {
+    word.addEventListener('mouseenter', () => {
+      gsap.to(word, {
+        scale: 1.15,
+        color: '#D62828',
+        textShadow: '0 0 60px rgba(214, 40, 40, 0.5)',
+        duration: 0.5,
+        ease: 'expo.out',
+      });
+    });
+
+    word.addEventListener('mouseleave', () => {
+      gsap.to(word, {
+        scale: 1,
+        color: '#FCF9F2',
+        textShadow: '0 0 0px rgba(214, 40, 40, 0)',
+        duration: 0.6,
+        ease: 'elastic.out(1, 0.5)',
+      });
+    });
+  });
+
+  // Mouse parallax on hero words
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let currentX = mouseX;
+  let currentY = mouseY;
+
+  document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-});
+  });
 
-function animateHero() {
+  function animateHeroMouse() {
     currentX += (mouseX - currentX) * 0.05;
     currentY += (mouseY - currentY) * 0.05;
-    
+
     heroWords.forEach((word, index) => {
-        const rect = word.getBoundingClientRect();
-        const wordCenterX = rect.left + rect.width / 2;
-        const wordCenterY = rect.top + rect.height / 2;
-        
-        const deltaX = (currentX - window.innerWidth / 2) * 0.1 * (index + 1);
-        const deltaY = (currentY - window.innerHeight / 2) * 0.1 * (index + 1);
-        
-        word.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+      const deltaX = (currentX - window.innerWidth / 2) * 0.08 * (index + 1);
+      const deltaY = (currentY - window.innerHeight / 2) * 0.08 * (index + 1);
+      word.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
     });
-    
-    requestAnimationFrame(animateHero);
+
+    requestAnimationFrame(animateHeroMouse);
+  }
+
+  // Only run mouse parallax on desktop
+  if (window.innerWidth > 768) {
+    animateHeroMouse();
+  }
 }
 
-animateHero();
+// ============================================
+// SECTION REVEALS — GSAP powered
+// ============================================
+function initScrollAnimations() {
+  initSectionReveals();
 
-// Scroll Animations
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
-const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+  // Refresh after fonts load
+  if (document.fonts) {
+    document.fonts.ready.then(() => {
+      setTimeout(refreshScrollTrigger, 100);
     });
-}, observerOptions);
+  }
 
-sections.forEach(section => {
-    sectionObserver.observe(section);
-});
+  window.addEventListener('load', () => {
+    setTimeout(refreshScrollTrigger, 200);
+  });
+}
 
-// Web Audio API - Gong Sound
-let audioContext = null;
+// ============================================
+// CONTACT FORM
+// ============================================
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
 
-function initAudio() {
-    if (!audioContext) {
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+      // Show success feedback
+      const btn = form.querySelector('.contact__submit');
+      const originalText = btn.textContent;
+      btn.textContent = 'Message Sent';
+      btn.style.background = '#D62828';
+      btn.style.borderColor = '#D62828';
+      btn.style.color = '#FCF9F2';
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        btn.style.color = '';
+        form.reset();
+      }, 3000);
     }
-    return audioContext;
+  });
 }
 
-function playGong() {
-    const ctx = initAudio();
-    const now = ctx.currentTime;
-    
-    // Create oscillator for gong sound
-    const oscillator = ctx.createOscillator();
-    const gainNode = ctx.createGain();
-    
-    oscillator.type = 'sine';
-    oscillator.frequency.setValueAtTime(110, now);
-    oscillator.frequency.exponentialRampToValueAtTime(55, now + 2);
-    
-    gainNode.gain.setValueAtTime(0.8, now);
-    gainNode.gain.exponentialRampToValueAtTime(0.001, now + 4);
-    
-    oscillator.connect(gainNode);
-    gainNode.connect(ctx.destination);
-    
-    oscillator.start(now);
-    oscillator.stop(now + 4);
-    
-    // Add harmonics for richer sound
-    const oscillator2 = ctx.createOscillator();
-    const gainNode2 = ctx.createGain();
-    
-    oscillator2.type = 'sine';
-    oscillator2.frequency.setValueAtTime(220, now);
-    oscillator2.frequency.exponentialRampToValueAtTime(110, now + 2);
-    
-    gainNode2.gain.setValueAtTime(0.3, now);
-    gainNode2.gain.exponentialRampToValueAtTime(0.001, now + 3);
-    
-    oscillator2.connect(gainNode2);
-    gainNode2.connect(ctx.destination);
-    
-    oscillator2.start(now);
-    oscillator2.stop(now + 3);
-    
-    // Add resonance
-    const oscillator3 = ctx.createOscillator();
-    const gainNode3 = ctx.createGain();
-    
-    oscillator3.type = 'sine';
-    oscillator3.frequency.setValueAtTime(55, now);
-    oscillator3.frequency.exponentialRampToValueAtTime(27.5, now + 3);
-    
-    gainNode3.gain.setValueAtTime(0.5, now);
-    gainNode3.gain.exponentialRampToValueAtTime(0.001, now + 5);
-    
-    oscillator3.connect(gainNode3);
-    gainNode3.connect(ctx.destination);
-    
-    oscillator3.start(now);
-    oscillator3.stop(now + 5);
+// ============================================
+// INITIALIZE
+// ============================================
+function init() {
+  initLoader();
+  initGrainOverlay();
+  initNavTracking();
+  initHero();
+  initScrollAnimations();
+  initContactForm();
 }
 
-// 60-Second Timer
-let timerInterval = null;
-let timeLeft = 60;
-let isTimerActive = false;
-
-function startTimer() {
-    if (isTimerActive) {
-        stopTimer();
-        return;
-    }
-    
-    // Play initial gong
-    playGong();
-    
-    isTimerActive = true;
-    timeLeft = 60;
-    
-    // Update UI
-    bellButton.classList.add('ringing');
-    timerDisplay.classList.add('active');
-    timerCircle.classList.add('active');
-    timerText.classList.add('active');
-    
-    // Start countdown
-    timerInterval = setInterval(() => {
-        timeLeft--;
-        timerText.textContent = timeLeft;
-        
-        if (timeLeft <= 0) {
-            stopTimer();
-            // Play final gong
-            setTimeout(playGong, 500);
-        }
-    }, 1000);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
 }
-
-function stopTimer() {
-    clearInterval(timerInterval);
-    isTimerActive = false;
-    
-    // Reset UI
-    bellButton.classList.remove('ringing');
-    timerDisplay.classList.remove('active');
-    timerCircle.classList.remove('active');
-    timerText.classList.remove('active');
-    
-    // Reset timer
-    setTimeout(() => {
-        timerText.textContent = '60';
-        timeLeft = 60;
-    }, 1800);
-}
-
-bellButton.addEventListener('click', startTimer);
-
-// Smooth Scrolling for Navigation
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Contact Form
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Simple form validation
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        if (name && email && message) {
-            // Show success message
-            alert('Thank you for your message. We will respond within 24 hours.');
-            contactForm.reset();
-        }
-    });
-}
-
-// Parallax Effect for Hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero-section');
-    
-    if (hero) {
-        const heroHeight = hero.offsetHeight;
-        if (scrolled < heroHeight) {
-            hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-            hero.style.opacity = 1 - (scrolled / heroHeight);
-        }
-    }
-});
-
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    // Add visible class to first section
-    setTimeout(() => {
-        sections[0].classList.add('visible');
-    }, 100);
-});
