@@ -148,3 +148,34 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 - Each site has unique Design DNA (colors, typography, navigation, hero, signature interaction)
 - All sites use `<script type="module">` for Vite compatibility
 - All sites include loading screen, footer with Rumi quote + Empathy Studio credit
+
+---
+
+## v0.5 — 2026-07-03
+
+### Phase 6-7: Content Integration & System Pages
+
+**System Pages Created (from heal.md §III):**
+- `404.html` — "You have wandered off the path..." with Return Home link
+- `booking-confirmation.html` — "Your space is held." with reschedule policy
+- `gift-confirmation.html` — "Your gift is on its way." with seed metaphor
+- `pause-confirmation.html` — "Your sanctuary has been paused." with door metaphor
+- `error.html` — "Something has gone quiet." with breath reminder
+
+**Content Integration (14 sites updated):**
+- All 14 sites' events sections updated to match heal.md expanded event descriptions exactly
+- Sites updated: 01-Reiki, 02-Sound Healing, 03-Yoga, 05-Breathwork, 06-Crystal Healing, 07-Aromatherapy, 08-Ayurveda, 09-Acupuncture, 10-Chakra Balancing, 11-Herbalism, 12-Shamanic Journeying, 13-Qi Gong, 14-Art Therapy
+- All 6 FAQs per site already present from v0.4
+- All practitioner bios and ambient audio descriptions already present from v0.4
+
+**Vite Config Updated:**
+- Added 5 system page entry points (404, booking-confirmation, gift-confirmation, pause-confirmation, error)
+
+**Build Output:**
+- Vite build: 63 modules, 4.22s
+- 19 HTML files (14 sites + 5 system pages)
+- Total CSS: ~400KB (gzipped: ~90KB)
+- Total JS: ~220KB (gzipped: ~80KB)
+
+**Known Warnings (non-blocking):**
+- 5 sites reference `meta-layer.js` via non-module `<script>` tags (04, 05, 09, 10, 11) — 404 at runtime, legacy from deleted files

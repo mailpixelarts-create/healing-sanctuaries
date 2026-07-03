@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost — Healing Sanctuaries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0C0A08;
+      color: #F5F0E8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      text-align: center;
+      padding: 4rem 2rem;
+      max-width: 600px;
+    }
+    .page__sigil {
+      font-size: 4rem;
+      color: #C9A96E;
+      opacity: 0.3;
+      margin-bottom: 2rem;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .page__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+    .page__text {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #F5F0E8;
+      opacity: 0.8;
+      margin-bottom: 2.5rem;
+    }
+    .page__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #C9A96E;
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .page__link:hover {
+      background: rgba(201, 169, 110, 0.1);
+      border-color: #C9A96E;
+    }
+    .page__credit {
+      margin-top: 4rem;
+      font-size: 0.75rem;
+      color: #F5F0E8;
+      opacity: 0.3;
+      letter-spacing: 0.05em;
+    }
+    .page__credit a {
+      color: #C9A96E;
+      opacity: 0.6;
+      text-decoration: none;
+    }
+    .page__credit a:hover { opacity: 1; }
+    @media (prefers-reduced-motion: reduce) {
+      .page__sigil { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="page__sigil" aria-hidden="true">✦</div>
+    <h1 class="page__title">You have wandered off the path.</h1>
+    <p class="page__text">That is not a mistake—it is a detour. Sometimes the forest leads you exactly where you need to go, even when the map says otherwise.</p>
+    <a href="/" class="page__link">⟵ Return Home</a>
+    <p class="page__credit">Made with love by <a href="#">Empathy Studio</a> · Norman James</p>
+  </main>
+</body>
+</html>

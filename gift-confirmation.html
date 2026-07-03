@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Sent — Healing Sanctuaries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0C0A08;
+      color: #F5F0E8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      text-align: center;
+      padding: 4rem 2rem;
+      max-width: 640px;
+      animation: fadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .page__icon {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .page__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .page__text {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #F5F0E8;
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+    }
+    .page__text em {
+      color: #C9A96E;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+    }
+    .page__divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(201, 169, 110, 0.3);
+      margin: 2rem auto;
+    }
+    .page__cta {
+      display: inline-flex;
+      padding: 1rem 2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #C9A96E;
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      margin-top: 1rem;
+    }
+    .page__cta:hover { background: rgba(201, 169, 110, 0.1); border-color: #C9A96E; }
+    .page__credit {
+      margin-top: 4rem;
+      font-size: 0.75rem;
+      color: #F5F0E8;
+      opacity: 0.3;
+    }
+    .page__credit a { color: #C9A96E; opacity: 0.6; text-decoration: none; }
+    @media (prefers-reduced-motion: reduce) { .page__icon { animation: none; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="page__icon" aria-hidden="true">✦</div>
+    <h1 class="page__title">Your gift is on its way.</h1>
+    <p class="page__text">The recipient will receive a quiet, pressure-free invitation to choose their modality and schedule their session.</p>
+    <p class="page__text"><em>You have just planted a seed of calm in someone else's chaos.</em> You do not need to check if they use it. The gift is the offering, not the outcome.</p>
+    <div class="page__divider"></div>
+    <p class="page__text">A receipt has been sent to your email. You will not be charged until the recipient redeems the session.</p>
+    <a href="/" class="page__cta">⟵ Return to Sanctuary</a>
+    <p class="page__credit">Made with love by <a href="#">Empathy Studio</a> · Norman James</p>
+  </main>
+</body>
+</html>
