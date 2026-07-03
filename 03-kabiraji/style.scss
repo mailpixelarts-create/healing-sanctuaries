@@ -1106,31 +1106,3 @@ button {
   }
 }
 
-// ─── Detox Mode ───
-body.is-detox {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  canvas,
-  .hero-canvas-wrap,
-  .chakra-nav,
-  .hs-emergency,
-  .hs-tracker,
-  .hs-translation,
-  .hs-detox {
-    display: none !important;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: $space-4xl $space-xl;
-  }
-
-  .section {
-    padding: $space-2xl $space-xl;
-  }
-}

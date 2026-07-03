@@ -1424,20 +1424,3 @@ p {
   }
 }
 
-// ============================================
-// DETOX MODE
-// ============================================
-body.is-detox {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  .grain-overlay,
-  .top-nav,
-  .hero__scroll {
-    display: none !important;
-  }
-
-  .section { padding: $space-2xl $space-xl; }
-}

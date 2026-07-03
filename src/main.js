@@ -9,8 +9,6 @@ import { initScrollReveals, initParallax, initSectionReveals, initMagneticButton
 import { SANCTUARIES, detectCurrentSanctuary } from './utils/sanctuary-nav.js';
 import {
   initOutcomeTracker,
-  initEmergencyReset,
-  initDetoxMode,
   initTranslation,
   addStructuredData,
 } from './utils/meta-layers.js';
@@ -29,8 +27,6 @@ function initSystems() {
 
   // Meta-layers
   initOutcomeTracker();
-  initEmergencyReset();
-  initDetoxMode();
 
   // Refresh ScrollTrigger after images load
   window.addEventListener('load', () => {

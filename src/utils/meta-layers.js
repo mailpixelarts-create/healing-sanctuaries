@@ -75,68 +75,6 @@ export function initSkepticsCorner(data) {
   document.body.appendChild(corner);
 }
 
-// --- Emergency Reset ---
-export function initEmergencyReset() {
-  const reset = document.createElement('div');
-  reset.className = 'hs-emergency';
-  reset.innerHTML = `
-    <button class="hs-emergency__trigger" aria-label="Emergency breathing reset">Reset</button>
-    <div class="hs-emergency__overlay">
-      <div class="hs-emergency__circle"></div>
-      <p class="hs-emergency__text">Breathe in...</p>
-      <p class="hs-emergency__subtext">Place one hand on your chest. Feel the warmth.</p>
-    </div>
-  `;
-  document.body.appendChild(reset);
-
-  const trigger = reset.querySelector('.hs-emergency__trigger');
-  const overlay = reset.querySelector('.hs-emergency__overlay');
-  const circle = reset.querySelector('.hs-emergency__circle');
-  const text = reset.querySelector('.hs-emergency__text');
-  const subtext = reset.querySelector('.hs-emergency__subtext');
-
-  const phases = [
-    { text: 'Breathe in...', subtext: 'Through your nose. Slowly. Feel your lungs expand.', duration: 4000, scale: 1.4 },
-    { text: 'Hold...', subtext: 'You are safe. This moment is yours.', duration: 7000, scale: 1.4 },
-    { text: 'Breathe out...', subtext: 'Let everything go. You don\'t have to hold it anymore.', duration: 8000, scale: 1 },
-    { text: 'You are safe.', subtext: 'Take another breath whenever you are ready.', duration: 3000, scale: 1 },
-  ];
-
-  trigger.addEventListener('click', () => {
-    overlay.classList.add('is-active');
-    let phase = 0;
-
-    function runPhase() {
-      if (phase >= phases.length) {
-        overlay.classList.remove('is-active');
-        return;
-      }
-      const p = phases[phase];
-      text.textContent = p.text;
-      subtext.textContent = p.subtext;
-      circle.style.transition = `transform ${p.duration}ms ease-in-out`;
-      circle.style.transform = `scale(${p.scale})`;
-      phase++;
-      setTimeout(runPhase, p.duration);
-    }
-    runPhase();
-  });
-}
-
-// --- Digital Detox Mode ---
-export function initDetoxMode() {
-  const btn = document.createElement('button');
-  btn.className = 'hs-detox';
-  btn.textContent = 'DETOX';
-  btn.setAttribute('aria-label', 'Enter distraction-free mode');
-  document.body.appendChild(btn);
-
-  btn.addEventListener('click', () => {
-    document.body.classList.toggle('is-detox');
-    btn.textContent = document.body.classList.contains('is-detox') ? 'EXIT' : 'DETOX';
-  });
-}
-
 // --- Translation Layer ---
 export function initTranslation(translations) {
   if (!translations) return;

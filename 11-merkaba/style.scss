@@ -1168,40 +1168,6 @@ section:not(#hero) {
   }
 }
 
-// --- Detox Mode ---
-body.is-detox {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  canvas,
-  .hero-canvas,
-  .hero-overlay,
-  .sacred-geometry,
-  #bottomNav,
-  .hs-emergency,
-  .hs-tracker,
-  .hs-translation {
-    display: none !important;
-  }
-
-  .hero {
-    height: auto;
-    min-height: auto;
-  }
-
-  .hero-sequence,
-  .hero-overlay,
-  .hero-progress {
-    display: none;
-  }
-
-  section:not(#hero) {
-    padding: $space-2xl $space-lg;
-  }
-}
-
 // --- Reduced Motion (§LXVI) ---
 @media (prefers-reduced-motion: reduce) {
   *,

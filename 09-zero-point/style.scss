@@ -1703,36 +1703,6 @@ img {
   opacity: 0.4;
 }
 
-// ============================================
-// DETOX MODE
-// ============================================
-body.is-detox {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  canvas,
-  .hero-canvas,
-  .hero-overlay,
-  .nav,
-  .mobile-nav,
-  .hs-emergency,
-  .hs-tracker,
-  .hs-translation {
-    display: none !important;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: $space-4xl $space-xl;
-  }
-
-  .section {
-    padding: $space-2xl $space-xl;
-  }
-}
-
 // --- Reduced Motion (§LXVI) ---
 @media (prefers-reduced-motion: reduce) {
   *,
