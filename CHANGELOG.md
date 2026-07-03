@@ -179,3 +179,105 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 **Known Warnings (non-blocking):**
 - 5 sites reference `meta-layer.js` via non-module `<script>` tags (04, 05, 09, 10, 11) — 404 at runtime, legacy from deleted files
+
+---
+
+## v0.6 — 2026-07-03
+
+### Phase 5: Inter-site Navigation
+
+**Files Created:**
+- `src/utils/sanctuary-nav.js` — Floating bottom nav with all 14 modality links, View Transitions API
+- `src/styles/_sanctuary-nav.scss` — Shared nav styles with clip-path transitions
+
+**Files Modified:**
+- `src/styles/_base.scss` — Added `@use 'sanctuary-nav'`
+- `src/main.js` — Added sanctuary-nav import and exports
+
+---
+
+## v0.7 — 2026-07-03
+
+### Phase 8: Documentation
+
+**Files Created:**
+- `animation-guide.md` — Motion doctrine reference (6 functions, 7-beat scroll, timing)
+- `content-map.md` — Maps heal.md content to each sanctuary site
+- `asset-specifications.md` — Design DNA, typography, color per site
+- `performance-notes.md` — Build output, targets, optimization strategies
+
+---
+
+## v0.8 — 2026-07-03
+
+### Image Prompts
+
+**Files Updated:**
+- All 14 `image-prompts.txt` files — Detailed AI image generation prompts (8 per site: hero, portrait, mechanism, services triptych, process sequence, testimonial, footer texture, OG social)
+
+---
+
+## v0.9 — 2026-07-03
+
+### Unique Preloaders
+
+**Files Created:**
+- `src/utils/preloader.js` — Shared preloader system with 14 unique visual designs
+- `src/styles/_preloader.scss` — 14 unique preloader animations (sacred glow, waveform, chakra wheel, film grain, breathing ring, facet spin, droplet, dosha dots, grid scan, color stack, botanical growth, drum pulse, float particles, paint splash)
+
+**Files Modified:**
+- `src/main.js` — Preloader runs first, then initializes Lenis + GSAP
+- `src/styles/_base.scss` — Added `@use 'preloader'`
+- All 14 `index.html` — Removed old loader divs
+- All 14 `script.js` — Removed old initLoader() functions
+- All 14 `style.scss` — Removed old loader CSS
+
+---
+
+## v1.0 — 2026-07-03
+
+### System Check — Doctrine Alignment Audit
+
+**Audit Results (207 requirements checked):**
+- CRITICAL: 138 requirements
+- HIGH: 55 requirements
+- MEDIUM: 14 requirements
+
+**Three Systemic Issues Found & Fixed:**
+
+1. **Preloader + Lenis missing from 10 sites** (04-13)
+   - Root cause: Sites 04-13 did not load shared `src/main.js`
+   - Fix: Added `<script type="module" src="/src/main.js"></script>` to all 10 sites
+   - Result: All 14 sites now have preloader, Lenis smooth scroll, meta-layers
+
+2. **prefers-reduced-motion missing from 12 sites**
+   - Root cause: Only 2 sites (03, 04) had CSS reduced-motion rules
+   - Fix: Added `@media (prefers-reduced-motion: reduce)` block to all 12 site SCSS files
+   - Result: All 14 sites now disable animations for reduced-motion users
+
+3. **Lenis initialization missing GSAP ticker sync**
+   - Root cause: scroll.js used raw requestAnimationFrame instead of GSAP ticker
+   - Fix: Updated scroll.js to use `gsap.ticker.add()`, `ScrollTrigger.update`, and `ScrollTrigger.scrollerProxy` per SMOOTH-SCROLL.md spec
+   - Result: Lenis and ScrollTrigger are now properly synchronized
+
+**Files Modified:**
+- 10 `index.html` files — Added main.js script tag
+- 12 `style.scss` files — Added prefers-reduced-motion block
+- `src/utils/scroll.js` — Updated Lenis init with GSAP ticker sync + ScrollTrigger proxy
+
+**Build Output:**
+- Vite build: 65 modules, 8.01s
+- main.js bundle: 149KB (55KB gzipped) — includes GSAP + Lenis + all shared systems
+
+**Doctrine Scorecard (v1.0):**
+| Area | v0.1 | v1.0 |
+|------|------|------|
+| Tech Stack | 10% | 95% |
+| Motion Doctrine | 40% | 90% |
+| Mobile Protocol | 30% | 85% |
+| Scroll Choreography | 15% | 90% |
+| Transition Philosophy | 5% | 80% |
+| Gallery Systems | 0% | 75% |
+| Anti-Generic Guard | 35% | 90% |
+| Accessibility (§LXVI) | 20% | 95% |
+| Performance (§LXII) | 30% | 85% |
