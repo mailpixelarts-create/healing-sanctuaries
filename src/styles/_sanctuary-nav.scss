@@ -1,0 +1,194 @@
+// Sanctuary Navigation — Inter-site continuity
+// Shared across all 14 sanctuaries
+
+.sanctuary-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9990;
+  background: rgba(12, 10, 8, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(201, 169, 110, 0.12);
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 0;
+  overflow: hidden;
+
+  &.is-visible {
+    transform: translateY(0);
+  }
+
+  &__toggle {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 9991;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(12, 10, 8, 0.9);
+    border: 1px solid rgba(201, 169, 110, 0.3);
+    color: #C9A96E;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      background: rgba(201, 169, 110, 0.15);
+      border-color: #C9A96E;
+      transform: scale(1.05);
+    }
+
+    &.is-active {
+      background: #C9A96E;
+      color: #0C0A08;
+    }
+  }
+
+  &__scroll {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0.75rem 1rem;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: rgba(245, 240, 232, 0.4);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+
+    &:hover {
+      color: rgba(245, 240, 232, 0.8);
+    }
+
+    &--active {
+      color: #C9A96E;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #C9A96E;
+      }
+    }
+
+    &--home {
+      color: #C9A96E;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__num {
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    opacity: 0.5;
+  }
+}
+
+// View Transition API support
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: fade-out 0.3s ease-out;
+}
+
+::view-transition-new(root) {
+  animation: fade-in 0.4s ease-in;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.98); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  .sanctuary-nav {
+    transition: none;
+
+    &__toggle {
+      transition: none;
+    }
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+// View transition names for key elements
+.hero,
+.hero-content,
+.header,
+.top-nav,
+.side-nav,
+.edge-nav {
+  view-transition-name: hero;
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  .sanctuary-nav {
+    &__toggle {
+      bottom: 1rem;
+      right: 1rem;
+      width: 42px;
+      height: 42px;
+      font-size: 1rem;
+    }
+
+    &__scroll {
+      padding: 0.5rem 0.75rem;
+    }
+
+    &__item {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.55rem;
+    }
+  }
+}
