@@ -8,7 +8,6 @@ import { initLenis } from './utils/scroll.js';
 import { initScrollReveals, initParallax, initSectionReveals, initMagneticButtons, initTextSplits, refreshScrollTrigger } from './utils/motion.js';
 import { SANCTUARIES, detectCurrentSanctuary } from './utils/sanctuary-nav.js';
 import {
-  initVisitorModal,
   initOutcomeTracker,
   initEmergencyReset,
   initDetoxMode,
@@ -29,7 +28,6 @@ function initSystems() {
   initTextSplits();
 
   // Meta-layers
-  initVisitorModal();
   initOutcomeTracker();
   initEmergencyReset();
   initDetoxMode();

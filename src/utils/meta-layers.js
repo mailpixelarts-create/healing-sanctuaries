@@ -1,36 +1,7 @@
 // ============================================
 // HEALING SANCTUARIES — SHARED META-LAYERS
-// 11 behavioral layers per Section II of heal.md
+// Behavioral layers per Section II of heal.md
 // ============================================
-
-// --- First-Time Visitor Modal ---
-export function initVisitorModal() {
-  if (sessionStorage.getItem('hs-visited')) return;
-
-  const modal = document.createElement('div');
-  modal.className = 'hs-modal';
-  modal.innerHTML = `
-    <div class="hs-modal__overlay"></div>
-    <div class="hs-modal__content">
-      <p class="hs-modal__question">What are you feeling right now?</p>
-      <div class="hs-modal__options">
-        <button class="hs-modal__option" data-feeling="anxious">Tight chest. Racing mind.</button>
-        <button class="hs-modal__option" data-feeling="aching">Physically aching. Exhausted.</button>
-        <button class="hs-modal__option" data-feeling="disconnected">Disconnected. Numb.</button>
-        <button class="hs-modal__option" data-feeling="curious">Just curious.</button>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(modal);
-
-  modal.querySelectorAll('.hs-modal__option').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      sessionStorage.setItem('hs-visited', 'true');
-      modal.classList.add('is-hiding');
-      setTimeout(() => modal.remove(), 600);
-    });
-  });
-}
 
 // --- Outcome Tracker ---
 export function initOutcomeTracker() {
