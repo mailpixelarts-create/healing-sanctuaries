@@ -105,6 +105,16 @@ $paper-dark: #8A847C;
   }
 }
 
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 .hero-canvas {
   width: 100%;
   height: 100%;
@@ -274,10 +284,10 @@ $paper-dark: #8A847C;
     overflow: hidden;
   }
 
-  &-placeholder {
+  &-img {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, $surface 0%, $signal-dark 50%, $surface 100%);
+    object-fit: cover;
   }
 
   &-caption {
@@ -377,6 +387,18 @@ $paper-dark: #8A847C;
   }
 }
 
+.mechanism-image {
+  margin-top: var(--space-xl);
+  border: 1px solid rgba($signal, 0.2);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
 .mechanism-stats {
   display: flex;
   flex-direction: column;
@@ -423,6 +445,18 @@ $paper-dark: #8A847C;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
+  }
+}
+
+.services-banner {
+  margin-bottom: var(--space-2xl);
+  border: 1px solid rgba($signal, 0.2);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
@@ -524,13 +558,18 @@ $paper-dark: #8A847C;
     margin-bottom: var(--space-md);
   }
 
-  &__icon {
-    width: 60px;
-    height: 60px;
+  &__image {
+    width: 120px;
+    height: 120px;
     margin: 0 auto var(--space-md);
-    background: $surface;
-    border: 1px solid rgba($signal, 0.3);
+    overflow: hidden;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__title {
@@ -637,6 +676,18 @@ $paper-dark: #8A847C;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
+  }
+}
+
+.testimonials-banner {
+  margin-bottom: var(--space-2xl);
+  border: 1px solid rgba($signal, 0.2);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
@@ -947,6 +998,24 @@ $paper-dark: #8A847C;
 .footer {
   padding: var(--space-3xl) var(--space-lg) var(--space-xl);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.15;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
   &__crystal-divider {
     display: flex;
@@ -954,6 +1023,8 @@ $paper-dark: #8A847C;
     justify-content: center;
     gap: var(--space-md);
     margin-bottom: var(--space-2xl);
+    position: relative;
+    z-index: 1;
   }
 
   &__crystal {
@@ -972,6 +1043,8 @@ $paper-dark: #8A847C;
   &__inner {
     max-width: 600px;
     margin: 0 auto var(--space-2xl);
+    position: relative;
+    z-index: 1;
   }
 
   &__brand {
@@ -1038,6 +1111,8 @@ $paper-dark: #8A847C;
   &__legal {
     padding-top: var(--space-xl);
     border-top: 1px solid rgba($signal, 0.1);
+    position: relative;
+    z-index: 1;
   }
 
   &__copy {

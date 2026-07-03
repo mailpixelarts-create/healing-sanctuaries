@@ -161,10 +161,19 @@
   }
 }
 
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .hero-canvas {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
 }
 
 .hero-overlay {
@@ -176,12 +185,12 @@
     rgba(12, 10, 8, 0.4) 50%,
     rgba(12, 10, 8, 0.8) 100%
   );
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   padding: $space-xl;
 }
@@ -345,6 +354,16 @@
   }
 }
 
+// --- About Portrait ---
+.about-portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: $radius-lg;
+  border: 1px solid var(--ghost);
+  margin-bottom: $space-xl;
+}
+
 .origin-story {
   margin-top: $space-2xl;
   padding: $space-xl;
@@ -420,6 +439,29 @@
     text-transform: uppercase;
     letter-spacing: $tracking-wider;
     margin-top: $space-xs;
+  }
+}
+
+// --- Mechanism Image ---
+.mechanism-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: $radius-lg;
+  border: 1px solid var(--ghost);
+  margin-bottom: $space-xl;
+}
+
+// --- Services Triptych ---
+.services-triptych {
+  margin-bottom: $space-3xl;
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    border-radius: $radius-lg;
+    border: 1px solid var(--ghost);
   }
 }
 
@@ -516,6 +558,14 @@
   border: 1px solid var(--ghost);
   position: relative;
 
+  &__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: $radius-md;
+    margin-bottom: $space-xl;
+  }
+
   &::before {
     content: counter(step, decimal-leading-zero);
     font-family: var(--font-mono);
@@ -547,6 +597,19 @@
     color: var(--paper);
     opacity: 0.7;
     line-height: $leading-relaxed;
+  }
+}
+
+// --- Testimonials Visual ---
+.testimonials-visual {
+  margin-bottom: $space-3xl;
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    border-radius: $radius-lg;
+    border: 1px solid var(--ghost);
   }
 }
 
@@ -762,10 +825,22 @@
   padding: $space-4xl $space-xl;
   border-top: 1px solid var(--ghost);
   background: var(--ink);
+  position: relative;
+  overflow: hidden;
 
   @media (max-width: $bp-mobile) {
     margin-left: 0;
     padding: $space-2xl $space-lg;
+  }
+
+  &__texture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    pointer-events: none;
   }
 
   &__inner {
@@ -774,6 +849,8 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: $space-3xl;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: $bp-desktop-sm) {
       grid-template-columns: 1fr;
@@ -831,6 +908,8 @@
     padding-top: $space-xl;
     border-top: 1px solid var(--ghost);
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
   &__copy {
@@ -868,6 +947,7 @@ body.is-detox {
   canvas,
   .hero-canvas,
   .hero-overlay,
+  .hero-bg-image,
   .sacred-geometry,
   .side-nav,
   .mobile-nav,

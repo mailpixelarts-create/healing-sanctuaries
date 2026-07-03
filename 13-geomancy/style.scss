@@ -143,6 +143,16 @@
   background: var(--paper);
 }
 
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.35;
+}
+
 #physicsCanvas {
   position: absolute;
   inset: 0;
@@ -359,11 +369,22 @@
   justify-content: center;
   overflow: hidden;
 
+  &-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
   &-glyph {
     font-size: 10rem;
     color: var(--signal);
     opacity: 0.25;
     line-height: 1;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -373,6 +394,7 @@
   height: 32px;
   border-color: var(--signal);
   border-style: solid;
+  z-index: 2;
 
   &--tl { top: -6px; left: -6px; border-width: 2px 0 0 2px; }
   &--tr { top: -6px; right: -6px; border-width: 2px 2px 0 0; }
@@ -404,13 +426,36 @@
   }
 
   &-diagram {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-3xl $space-2xl;
+    background: rgba(236, 227, 213, 0.05);
+    border: 1px solid rgba(236, 227, 213, 0.08);
+    overflow: hidden;
+
+    @media (max-width: $bp-tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+  }
+
+  .diagram-overlay {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: $space-lg;
-    padding: $space-3xl $space-2xl;
-    background: rgba(236, 227, 213, 0.05);
-    border: 1px solid rgba(236, 227, 213, 0.08);
 
     @media (max-width: $bp-tablet) {
       flex-direction: column;
@@ -428,6 +473,7 @@
   line-height: $leading-snug;
   color: var(--paper);
   min-width: 110px;
+  background: var(--surface);
   transition: background $duration-normal $ease-out-expo;
 
   &:hover {
@@ -451,6 +497,11 @@
 .services {
   background: var(--paper);
 
+  &-triptych {
+    margin-bottom: $space-4xl;
+    overflow: hidden;
+  }
+
   &-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -461,6 +512,14 @@
       grid-template-columns: 1fr;
     }
   }
+}
+
+.triptych-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--ghost);
 }
 
 .service-card {
@@ -655,11 +714,20 @@
     padding: $space-3xl $space-2xl;
     border: 1px solid var(--ghost);
     transition: all $duration-slow $ease-out-expo;
+    overflow: hidden;
 
     &:hover {
       border-color: var(--signal);
       background: var(--ghost);
     }
+  }
+
+  &-step-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: $space-xl;
+    display: block;
   }
 
   &-phase {
@@ -740,6 +808,11 @@
 .testimonials {
   background: var(--paper);
 
+  &-garden {
+    margin-bottom: $space-4xl;
+    overflow: hidden;
+  }
+
   &-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -750,6 +823,13 @@
       grid-template-columns: 1fr;
     }
   }
+}
+
+.garden-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
 }
 
 .testimonial-card {
@@ -1075,11 +1155,28 @@
     right: 0;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--signal), transparent);
+    z-index: 2;
+  }
+
+  &-texture-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  &-texture-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.08;
   }
 
   &-inner {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
   }
 
   &-zen {

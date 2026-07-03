@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Shamanic Journeying OG Share">
+  <defs>
+    <radialGradient id="drumGlow" cx="50%" cy="68%" r="35%" fx="50%" fy="72%">
+      <stop offset="0%" stop-color="#ffb15a"/>
+      <stop offset="35%" stop-color="#d47a2a"/>
+      <stop offset="100%" stop-color="#7a3b0f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="centerPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe4b8"/>
+      <stop offset="18%" stop-color="#ffb656"/>
+      <stop offset="100%" stop-color="#b85e1a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- black -->
+  <rect width="1200" height="630" fill="#050304"/>
+  <!-- concentric sound waves -->
+  <g fill="none" stroke="#c8853a" opacity="0.9" stroke-width="1.5" filter="url(#soft)">
+    <circle cx="600" cy="370" r="140" opacity="0.9"/>
+    <circle cx="600" cy="370" r="210" opacity="0.62"/>
+    <circle cx="600" cy="370" r="285" opacity="0.44"/>
+    <circle cx="600" cy="370" r="365" opacity="0.30"/>
+    <circle cx="600" cy="370" r="450" opacity="0.20"/>
+    <circle cx="600" cy="370" r="540" opacity="0.12"/>
+    <circle cx="600" cy="370" r="640" opacity="0.07"/>
+  </g>
+  <g fill="none" stroke="#ffbf6b" opacity="0.55" stroke-width="1" filter="url(#glow)">
+    <circle cx="600" cy="370" r="175" />
+    <circle cx="600" cy="370" r="320" />
+    <circle cx="600" cy="370" r="495" />
+  </g>
+  <!-- underlight -->
+  <ellipse cx="600" cy="520" rx="210" ry="70" fill="url(#drumGlow)" opacity="0.85"/>
+  <!-- drum -->
+  <g>
+    <!-- shadow -->
+    <ellipse cx="600" cy="410" rx="180" ry="28" fill="#000" opacity="0.5" filter="url(#soft)"/>
+    <!-- drum body -->
+    <ellipse cx="600" cy="370" rx="172" ry="168" fill="#1a120c" stroke="#3a2414" stroke-width="10"/>
+    <!-- hide -->
+    <ellipse cx="600" cy="370" rx="152" ry="148" fill="#2a1a0f"/>
+    <ellipse cx="600" cy="370" rx="152" ry="148" fill="#3b2616" opacity="0.65"/>
+    <!-- hide texture rings -->
+    <circle cx="600" cy="370" r="118" fill="none" stroke="#4a2e19" stroke-width="1" opacity="0.35"/>
+    <circle cx="600" cy="370" r="78" fill="none" stroke="#4a2e19" stroke-width="1" opacity="0.28"/>
+    <circle cx="600" cy="370" r="38" fill="none" stroke="#5a3820" stroke-width="1" opacity="0.3"/>
+    <!-- shamanic markings -->
+    <g stroke="#5c3820" opacity="0.55" fill="none" stroke-width="1.3">
+      <path d="M600 240 L600 500 M470 370 L730 370"/>
+      <path d="M508 278 L692 462 M692 278 L508 462"/>
+    </g>
+    <!-- center pulse 4.5Hz -->
+    <circle cx="600" cy="370" r="22" fill="url(#centerPulse)" opacity="0.95"/>
+    <circle cx="600" cy="370" r="4.5" fill="#fff2d6" />
+    <!-- lacing -->
+    <g fill="none" stroke="#b67a3f" stroke-width="1" opacity="0.38">
+      <path d="M448 370 C460 340, 545 325, 600 325 C655 325, 740 340, 752 370"/>
+      <path d="M448 370 C460 400, 545 415, 600 415 C655 415, 740 400, 752 370"/>
+    </g>
+  </g>
+  <!-- feathers (subtle) -->
+  <g stroke="#6b4a2a" fill="none" opacity="0.45" stroke-width="1">
+    <path d="M520 520 C512 545 508 565 514 585"/>
+    <path d="M600 522 C600 550 595 570 600 592"/>
+    <path d="M680 520 C688 545 692 565 686 585"/>
+  </g>
+  <!-- title -->
+  <text x="600" y="148" text-anchor="middle" fill="#e9d9c4" font-family="'Georgia', 'Times New Roman', serif" font-size="42" letter-spacing="6" font-weight="400" opacity="0.96">SHAMANIC JOURNEYING</text>
+  <text x="600" y="180" text-anchor="middle" fill="#c8915a" font-family="Georgia, serif" font-size="13" letter-spacing="5.5" opacity="0.88">MYTHOLOGICAL NOIR • 4.5Hz</text>
+  <!-- bottom tag -->
+  <text x="600" y="592" text-anchor="middle" fill="#7a5b38" font-family="Georgia, serif" font-size="11" letter-spacing="3">THE DRUM BEATS • THE BRAIN FOLLOWS • THE SPIRIT TRAVELS</text>
+</svg>

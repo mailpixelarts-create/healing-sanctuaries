@@ -6,6 +6,46 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## v1.2 — 2026-07-03
+
+### Image Integration — All 14 Sites
+
+**290 images integrated across all 14 sites.**
+
+**Per site (average 20 images each):**
+- Hero background image
+- Practitioner portrait
+- Mechanism/science image
+- Services triptych or individual service images
+- 3 process step images
+- Testimonial room/background image
+- Footer texture
+- OG social share image
+
+**Files modified:**
+- All 14 `index.html` files — added `<img>` tags for all sections
+- All 14 `style.scss` files — added image styling (object-fit, aspect-ratio, opacity, blend modes)
+
+**Image styling per site:**
+| Site | Hero | Portrait | Services | Process | Footer |
+|------|------|----------|----------|---------|--------|
+| 01 | Full-bleed, 25% opacity | 4:5 aspect | Panoramic triptych | 4:3 steps | Marble texture |
+| 02 | Full-bleed, 25% opacity | 4:5 aspect | Individual cards | 16:10 steps | Ocean texture |
+| 03 | Full-bleed, 25% opacity | Circular | Panoramic triptych | 4:3 steps | Subtle texture |
+| 04 | Full-bleed, 35% opacity | Framed | Panoramic triptych | 4:3 steps | Washi texture |
+| 05 | Full-bleed, low opacity | Framed | Panoramic triptych | 16:9 steps | Clinical tile |
+| 06 | Split layout, full cover | 3:4 aspect | Full-width banner | Hexagonal clips | Texture overlay |
+| 07 | Full-bleed, behind canvas | 3:4 aspect | Panoramic triptych | 4:3 steps | Botanical texture |
+| 08 | Full-bleed, 25% opacity | Framed | Individual cards | 4:3 steps | Sandstone texture |
+| 09 | Full-bleed, 15% opacity | Framed with glow | Panoramic triptych | Contained steps | Circuit texture |
+| 10 | Blend mode overlay | Circular with glow | Panoramic triptych | Fixed height | Subtle texture |
+| 11 | Background frames | Circular | Individual cards | Individual cards | Texture overlay |
+| 12 | Full-bleed with filter | Circular | Individual cards | Step images | Leather texture |
+| 13 | Full-bleed, 35% opacity | Corner-framed | Full-width triptych | Full-width steps | Texture overlay |
+| 14 | Full-bleed, 60% luminosity | Framed | Full-width triptych | 160px steps | Texture overlay |
+
+---
+
 ## v1.1 — 2026-07-03
 
 ### Visual Uniqueness Audit — Fix 06-Johrei Clone

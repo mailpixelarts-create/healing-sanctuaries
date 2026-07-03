@@ -44,6 +44,8 @@
   inset: 0;
   opacity: 0;
   transition: opacity 0.15s ease;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-frame.active {
@@ -207,6 +209,21 @@ section:not(#hero) {
   background: linear-gradient(180deg, var(--ink) 0%, #222e1d 50%, var(--ink) 100%);
 }
 
+.about-portrait {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto $space-3xl;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--ghost);
+}
+
+.about-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .about-details {
   display: flex;
   justify-content: center;
@@ -245,6 +262,18 @@ section:not(#hero) {
 // --- Mechanism ---
 #mechanism {
   background: linear-gradient(180deg, var(--ink) 0%, #1a2616 50%, var(--ink) 100%);
+}
+
+.mechanism-image {
+  max-width: 800px;
+  margin: $space-3xl auto;
+}
+
+.mechanism-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--ghost);
 }
 
 .mechanism-diagram {
@@ -340,6 +369,11 @@ section:not(#hero) {
   position: relative;
   transition: all var(--ease-mechanical);
 
+  &-image {
+    margin: -50px -30px 30px;
+    overflow: hidden;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -399,6 +433,13 @@ section:not(#hero) {
   }
 }
 
+.service-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
 // --- Process ---
 #process {
   background: linear-gradient(180deg, var(--ink) 0%, #1a2616 50%, var(--ink) 100%);
@@ -430,6 +471,11 @@ section:not(#hero) {
   text-align: left;
   position: relative;
   transition: all var(--ease-mechanical);
+
+  &-image {
+    margin: -50px -30px 24px;
+    overflow: hidden;
+  }
 
   &::before {
     content: '';
@@ -480,6 +526,13 @@ section:not(#hero) {
   font-weight: 300;
 }
 
+.process-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
 // --- Vow ---
 #vow {
   background: linear-gradient(180deg, var(--ink) 0%, #1a2616 50%, var(--ink) 100%);
@@ -514,6 +567,19 @@ section:not(#hero) {
 // --- Testimonials ---
 #testimonials {
   background: var(--ink);
+}
+
+.testimonials-image {
+  max-width: 800px;
+  margin: 0 auto $space-3xl;
+}
+
+.testimonials-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--ghost);
 }
 
 .testimonials-grid {
@@ -830,6 +896,22 @@ section:not(#hero) {
   border-top: 1px solid var(--ghost);
   background: linear-gradient(180deg, var(--ink) 0%, #151d12 50%, #0d120a 100%);
   overflow: hidden;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+
+  &-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   // Botanical specimen border
   &::before {

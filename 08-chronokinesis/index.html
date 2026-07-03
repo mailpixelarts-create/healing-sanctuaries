@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chronokinesis — Ayurveda by Dr. Priya Sharma</title>
+<meta property="og:image" content="images/08-og-social-share.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Tiempos+Text:wght@400;500;700&display=swap" rel="stylesheet">
@@ -35,7 +36,9 @@
 
 <!-- HERO — Magazine Cover -->
 <section class="hero" id="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg">
+    <img src="images/01-hero-prakriti-compass.jpg" alt="Prakriti compass" class="hero-bg__img">
+  </div>
   <div class="hero-cover">
     <p class="hero-issue">Rishikesh, India — 249137 · Est. 2003</p>
     <h1 class="hero-title">CHRONOKINESIS</h1>
@@ -79,9 +82,7 @@
     </div>
     <div class="section__visual">
       <div class="about__image-frame">
-        <div class="about__image-placeholder">
-          <span>Portrait of Dr. Priya Sharma</span>
-        </div>
+        <img src="images/02-dr-vikram-portrait.jpg" alt="Portrait of Dr. Priya Sharma" class="about__image">
       </div>
     </div>
   </div>
@@ -107,30 +108,33 @@
       <p class="section__body">Every imbalance manifests first in the microbiome, then in the immune response, then in symptoms. Ayurveda intervenes at the root — the terrain, not the weeds.</p>
     </div>
     <div class="section__visual">
-      <div class="mechanism__diagram">
-        <div class="mechanism__node">
-          <span class="mechanism__node-label">Prakriti</span>
-          <span class="mechanism__node-sub">Birth Constitution</span>
-        </div>
-        <div class="mechanism__line"></div>
-        <div class="mechanism__node-row">
+      <div class="mechanism__diagram-wrap">
+        <img src="images/03-dosha-venn-diagram.jpg" alt="Dosha Venn diagram showing Vata, Pitta, Kapha" class="mechanism__diagram-img">
+        <div class="mechanism__diagram">
           <div class="mechanism__node">
-            <span class="mechanism__node-label">Vata</span>
-            <span class="mechanism__node-sub">Air + Ether</span>
+            <span class="mechanism__node-label">Prakriti</span>
+            <span class="mechanism__node-sub">Birth Constitution</span>
           </div>
+          <div class="mechanism__line"></div>
+          <div class="mechanism__node-row">
+            <div class="mechanism__node">
+              <span class="mechanism__node-label">Vata</span>
+              <span class="mechanism__node-sub">Air + Ether</span>
+            </div>
+            <div class="mechanism__node">
+              <span class="mechanism__node-label">Pitta</span>
+              <span class="mechanism__node-sub">Fire + Water</span>
+            </div>
+            <div class="mechanism__node">
+              <span class="mechanism__node-label">Kapha</span>
+              <span class="mechanism__node-sub">Earth + Water</span>
+            </div>
+          </div>
+          <div class="mechanism__line"></div>
           <div class="mechanism__node">
-            <span class="mechanism__node-label">Pitta</span>
-            <span class="mechanism__node-sub">Fire + Water</span>
+            <span class="mechanism__node-label">Microbiome × HLA Expression</span>
+            <span class="mechanism__node-sub">Modern Correlate</span>
           </div>
-          <div class="mechanism__node">
-            <span class="mechanism__node-label">Kapha</span>
-            <span class="mechanism__node-sub">Earth + Water</span>
-          </div>
-        </div>
-        <div class="mechanism__line"></div>
-        <div class="mechanism__node">
-          <span class="mechanism__node-label">Microbiome × HLA Expression</span>
-          <span class="mechanism__node-sub">Modern Correlate</span>
         </div>
       </div>
     </div>
@@ -143,16 +147,25 @@
   <h2 class="section__heading section__heading--center">Three Pillars of Practice</h2>
   <div class="services__grid">
     <div class="service-card">
+      <div class="service-card__img-wrap">
+        <img src="images/04a-services-tongue-scraping.jpg" alt="Tongue scraping practice" class="service-card__img">
+      </div>
       <div class="service-card__number">01</div>
       <h3 class="service-card__title">Dosha Assessment</h3>
       <p class="service-card__desc">A comprehensive constitutional analysis mapping your unique Prakriti — the ratio of Vata, Pitta, and Kapha that determines your physical, mental, and emotional tendencies.</p>
     </div>
     <div class="service-card">
+      <div class="service-card__img-wrap">
+        <img src="images/04b-services-oil-pulling.jpg" alt="Oil pulling therapy" class="service-card__img">
+      </div>
       <div class="service-card__number">02</div>
       <h3 class="service-card__title">Herbal Prescriptions</h3>
       <p class="service-card__desc">Custom-formulated botanical protocols drawn from classical Ayurvedic pharmacopeia. Each prescription is calibrated to your dosha profile and current Vikriti (state of imbalance).</p>
     </div>
     <div class="service-card">
+      <div class="service-card__img-wrap">
+        <img src="images/04c-services-abhyanga.jpg" alt="Abhyanga massage" class="service-card__img">
+      </div>
       <div class="service-card__number">03</div>
       <h3 class="service-card__title">Panchakarma</h3>
       <p class="service-card__desc">Five-fold purification therapy — the cornerstone of Ayurvedic rejuvenation. A systematic process of eliminating deep-rooted toxins and restoring constitutional harmony.</p>
@@ -166,6 +179,9 @@
   <h2 class="section__heading section__heading--center">Before · During · After</h2>
   <div class="process__grid">
     <div class="process__step">
+      <div class="process__step-img-wrap">
+        <img src="images/05a-process-morning.jpg" alt="Morning routine" class="process__step-img">
+      </div>
       <div class="process__icon">◉</div>
       <div class="process__phase">Before</div>
       <h3 class="process__title">Tongue-Scraping Upon Waking</h3>
@@ -173,6 +189,9 @@
     </div>
     <div class="process__divider">→</div>
     <div class="process__step">
+      <div class="process__step-img-wrap">
+        <img src="images/05b-process-midday.jpg" alt="Midday meal" class="process__step-img">
+      </div>
       <div class="process__icon">◈</div>
       <div class="process__phase">During</div>
       <h3 class="process__title">Mid-Day Meal Aligned to Agni</h3>
@@ -180,6 +199,9 @@
     </div>
     <div class="process__divider">→</div>
     <div class="process__step">
+      <div class="process__step-img-wrap">
+        <img src="images/05c-process-evening.jpg" alt="Evening walk" class="process__step-img">
+      </div>
       <div class="process__icon">◇</div>
       <div class="process__phase">After</div>
       <h3 class="process__title">10-Minute Walking Digestion</h3>
@@ -251,6 +273,9 @@
 <section class="section testimonials" id="testimonials">
   <div class="section__label">07 — Stories</div>
   <h2 class="section__heading section__heading--center">Voices of Healing</h2>
+  <div class="testimonials__visual">
+    <img src="images/06-testimonial-pharmacy.jpg" alt="Ayurvedic pharmacy" class="testimonials__pharmacy-img">
+  </div>
   <div class="testimonials__grid">
     <div class="testimonials__card">
       <div class="testimonials__quote">"After years of chronic fatigue, Dr. Sharma's approach changed everything. The herbal protocol she designed didn't just address symptoms — it rebuilt my energy from the foundation. I sleep deeply now. I wake with intention."</div>
@@ -354,6 +379,9 @@
 
 <!-- FOOTER -->
 <footer class="footer">
+  <div class="footer__sandstone">
+    <img src="images/07-footer-sandstone.svg" alt="" class="footer__sandstone-img">
+  </div>
   <div class="footer__grid">
     <div class="footer__col">
       <h4 class="footer__heading">Chronokinesis</h4>

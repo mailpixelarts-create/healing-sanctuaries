@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Weathered drum hide texture">
+  <defs>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+    </filter>
+    <filter id="cracks">
+      <feTurbulence type="turbulence" baseFrequency="0.015 0.08" numOctaves="2" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="2"/>
+    </filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%" fx="50%" fy="45%">
+      <stop offset="0%" stop-color="#1a120c"/>
+      <stop offset="100%" stop-color="#0E0A08"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a1d14" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0c0806" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- base -->
+  <rect width="1200" height="600" fill="#0E0A08"/>
+  <rect width="1200" height="600" fill="url(#vignette)"/>
+  <!-- leather blotches -->
+  <g opacity="0.45" filter="url(#cracks)">
+    <ellipse cx="320" cy="210" rx="190" ry="120" fill="#1c1410"/>
+    <ellipse cx="780" cy="380" rx="260" ry="140" fill="#18110d"/>
+    <ellipse cx="600" cy="150" rx="340" ry="80" fill="#1a1310" opacity="0.5"/>
+    <ellipse cx="950" cy="240" rx="120" ry="90" fill="#221712"/>
+    <ellipse cx="210" cy="460" rx="150" ry="70" fill="#1f1611"/>
+  </g>
+  <!-- hand-worn highlights -->
+  <g fill="none" stroke="#2d211a" stroke-width="1.2" opacity="0.35">
+    <path d="M 80 140 C 240 200 380 120 560 180 S 820 240 1040 160"/>
+    <path d="M 60 320 C 260 280 480 360 700 310 S 980 260 1140 300"/>
+    <path d="M 120 480 C 340 440 560 520 800 460 S 1000 420 1120 470"/>
+  </g>
+  <!-- crack veins -->
+  <g fill="none" stroke="#0a0503" stroke-width="0.9" opacity="0.55">
+    <path d="M420 80 L410 220 L445 340 L430 520"/>
+    <path d="M680 40 L705 260 L690 480 L710 590"/>
+    <path d="M150 120 C220 210 180 300 260 380"/>
+    <path d="M980 90 C950 220 1010 340 960 480"/>
+    <path d="M 0 200 C 300 230 500 190 800 240 950 260 1050 220 1200 250" stroke-width="0.6" opacity="0.4"/>
+  </g>
+  <!-- grain overlay -->
+  <rect width="1200" height="600" filter="url(#grain)" opacity="1"/>
+  <rect width="1200" height="600" fill="url(#sheen)"/>
+  <!-- subtle stitch / lacing marks like drum edge -->
+  <g fill="none" stroke="#3a2a1f" stroke-width="1" opacity="0.25" stroke-dasharray="18 36">
+    <rect x="24" y="24" width="1152" height="552" rx="14"/>
+  </g>
+  <text x="600" y="568" text-anchor="middle" fill="#3a2d24" font-family="Georgia, serif" font-size="11" letter-spacing="3" opacity="0.6">DRUM HIDE • #0E0A08 • SHAMANIC JOURNEYING</text>
+</svg>

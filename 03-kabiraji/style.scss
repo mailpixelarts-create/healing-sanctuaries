@@ -217,10 +217,23 @@ button {
   overflow: hidden;
 }
 
-.hero-canvas-wrap {
+.hero-bg-image {
   position: absolute;
   inset: 0;
   z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+  }
+}
+
+.hero-canvas-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 #heroCanvas {
@@ -316,6 +329,7 @@ button {
   letter-spacing: $tracking-wider;
   text-transform: uppercase;
   opacity: 0.5;
+  z-index: 2;
   animation: scrollBounce 2s $ease-out-expo infinite;
 }
 
@@ -387,37 +401,11 @@ button {
   }
 }
 
-.about-image-placeholder {
+.about-portrait {
+  width: 100%;
   aspect-ratio: 3 / 4;
-  background: var(--ghost-strong);
+  object-fit: cover;
   border: 1px solid rgba(43, 24, 16, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: $weight-semibold;
-  font-size: $font-size-lg;
-  color: var(--signal);
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, var(--signal) 0%, transparent 70%);
-    opacity: 0.06;
-    animation: morphBlob 8s ease-in-out infinite;
-  }
-}
-
-@keyframes morphBlob {
-  0%, 100% { border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%; }
-  25% { border-radius: 60% 40% 30% 70% / 40% 60% 40% 60%; }
-  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-  75% { border-radius: 50% 40% 50% 60% / 35% 55% 65% 45%; }
 }
 
 .about-lead {
@@ -452,6 +440,18 @@ button {
 }
 
 // ─── Mechanism ───
+.mechanism-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-4xl;
+  align-items: start;
+
+  @media (max-width: $bp-desktop-sm) {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
 .mechanism-text {
   font-family: var(--font-display);
   font-style: italic;
@@ -488,7 +488,27 @@ button {
   }
 }
 
+.mechanism-image {
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid rgba(43, 24, 16, 0.08);
+  }
+}
+
 // ─── Services (3 Cards) ───
+.services-triptych {
+  margin-bottom: $space-3xl;
+}
+
+.triptych-image {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  border: 1px solid rgba(43, 24, 16, 0.08);
+}
+
 .art-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -572,6 +592,16 @@ button {
   background: var(--ghost);
   border: 1px solid rgba(43, 24, 16, 0.06);
   position: relative;
+}
+
+.process-step-image {
+  margin-bottom: $space-xl;
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
 }
 
 .process-label {
@@ -658,6 +688,27 @@ button {
 }
 
 // ─── Testimonials ───
+.testimonials-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-3xl;
+  align-items: start;
+
+  @media (max-width: $bp-desktop-sm) {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+.testimonials-studio-image {
+  img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border: 1px solid rgba(43, 24, 16, 0.08);
+  }
+}
+
 .testimonial-grid {
   display: grid;
   gap: $space-2xl;
@@ -897,6 +948,16 @@ button {
     var(--surface) 100%
   );
   color: var(--paper);
+  position: relative;
+  overflow: hidden;
+
+  &-texture-overlay {
+    position: absolute;
+    inset: 0;
+    background: url('images/footer-texture.png') center / cover no-repeat;
+    opacity: 0.06;
+    pointer-events: none;
+  }
 
   &__inner {
     max-width: $bp-desktop;
@@ -904,6 +965,8 @@ button {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: $space-3xl;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: $bp-desktop-sm) {
       grid-template-columns: 1fr;
@@ -962,6 +1025,8 @@ button {
     padding-top: $space-xl;
     border-top: 1px solid rgba(242, 237, 228, 0.1);
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
   &__copy {
@@ -1037,10 +1102,6 @@ button {
   }
 
   .scroll-hint {
-    animation: none;
-  }
-
-  .about-image-placeholder::before {
     animation: none;
   }
 }

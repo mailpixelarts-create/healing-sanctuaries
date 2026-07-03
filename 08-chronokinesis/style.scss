@@ -165,16 +165,28 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(58,44,36,0.15) 0%, rgba(58,44,36,0.05) 40%, rgba(181,97,51,0.12) 100%),
-    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(181,97,51,0.03) 40px, rgba(181,97,51,0.03) 41px),
-    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(181,97,51,0.03) 40px, rgba(181,97,51,0.03) 41px);
   z-index: 0;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(58,44,36,0.5) 0%, rgba(58,44,36,0.2) 40%, rgba(181,97,51,0.3) 100%);
+    z-index: 1;
+  }
 }
 
 .hero-cover {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   max-width: 1000px;
   padding: $space-3xl $space-xl;
@@ -409,18 +421,11 @@
   }
 }
 
-.about__image-placeholder {
+.about__image {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--ghost) 0%, rgba(181,97,51,0.05) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: $font-size-xs;
-  letter-spacing: $tracking-widest;
-  text-transform: uppercase;
-  color: var(--signal);
-  opacity: 0.6;
+  object-fit: cover;
+  display: block;
 }
 
 // --- Vow ---
@@ -465,6 +470,17 @@
 }
 
 // --- Mechanism ---
+.mechanism__diagram-wrap {
+  position: relative;
+}
+
+.mechanism__diagram-img {
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: $space-xl;
+  display: block;
+}
+
 .mechanism__diagram {
   display: flex;
   flex-direction: column;
@@ -543,6 +559,26 @@
     background: var(--ghost);
   }
 
+  &__img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    margin-bottom: $space-xl;
+    border: 1px solid var(--ghost);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform $duration-slow $ease-out-expo;
+  }
+
+  &:hover &__img {
+    transform: scale(1.03);
+  }
+
   &__number {
     font-family: var(--font-display);
     font-size: $font-size-3xl;
@@ -591,6 +627,26 @@
   &:hover {
     border-color: var(--signal);
     background: var(--ghost);
+  }
+
+  &-img-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    margin-bottom: $space-lg;
+    border: 1px solid var(--ghost);
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform $duration-slow $ease-out-expo;
+  }
+
+  &:hover &-img {
+    transform: scale(1.03);
   }
 }
 
@@ -834,11 +890,25 @@
 }
 
 // --- Testimonials ---
+.testimonials__visual {
+  width: 100%;
+  margin-bottom: $space-2xl;
+  overflow: hidden;
+  border: 1px solid var(--ghost);
+}
+
+.testimonials__pharmacy-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
 .testimonials__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: $space-xl;
-  margin-top: $space-3xl;
+  margin-top: $space-xl;
 
   @media (max-width: $bp-desktop-sm) {
     grid-template-columns: 1fr;
@@ -1089,6 +1159,25 @@
   background: linear-gradient(180deg, var(--ink) 0%, var(--surface) 40%, #5C3D24 100%);
   color: var(--paper);
   padding: $space-5xl $space-xl $space-2xl;
+  position: relative;
+  overflow: hidden;
+
+  &__sandstone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    overflow: hidden;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  &__sandstone-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   &__grid {
     max-width: 1200px;
@@ -1098,6 +1187,8 @@
     gap: $space-3xl;
     padding-bottom: $space-3xl;
     border-bottom: 1px solid rgba(245, 234, 216, 0.1);
+    position: relative;
+    z-index: 1;
 
     @media (max-width: $bp-desktop-sm) {
       grid-template-columns: 1fr;
@@ -1126,6 +1217,8 @@
     border-top: 1px solid rgba(245, 234, 216, 0.1);
     border-bottom: 1px solid rgba(245, 234, 216, 0.1);
     margin-bottom: $space-2xl;
+    position: relative;
+    z-index: 1;
 
     blockquote {
       font-family: var(--font-body);
@@ -1153,6 +1246,8 @@
     margin: 0 auto;
     padding: $space-xl 0;
     border-top: 1px solid rgba(245, 234, 216, 0.1);
+    position: relative;
+    z-index: 1;
 
     &-text {
       font-size: $font-size-xs;
@@ -1172,6 +1267,8 @@
     flex-direction: column;
     align-items: center;
     gap: $space-sm;
+    position: relative;
+    z-index: 1;
 
     span {
       font-size: $font-size-xs;

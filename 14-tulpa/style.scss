@@ -38,6 +38,17 @@
   background: var(--ink);
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.6;
+  mix-blend-mode: luminosity;
+}
+
 .hero-grid {
   position: absolute;
   inset: 0;
@@ -292,21 +303,6 @@
   overflow: hidden;
   transform: rotate(2deg);
 
-  &::before {
-    content: 'ZARA';
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-size: 4rem;
-    font-weight: 700;
-    color: var(--signal-1);
-    opacity: 0.2;
-    transform: rotate(-5deg);
-  }
-
   &::after {
     content: '';
     position: absolute;
@@ -316,7 +312,15 @@
     height: 40%;
     background: linear-gradient(to top, var(--signal-2), transparent);
     opacity: 0.3;
+    pointer-events: none;
   }
+}
+
+.about-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .about-credentials {
@@ -392,6 +396,18 @@
   background: rgba(51, 102, 255, 0.05);
 }
 
+.mechanism-visual {
+  position: relative;
+}
+
+.mechanism-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid var(--signal-3);
+  margin-bottom: $space-xl;
+}
+
 .mechanism-stats {
   display: flex;
   flex-direction: column;
@@ -425,6 +441,23 @@
 }
 
 // --- Services ---
+.services-triptych {
+  margin-bottom: $space-3xl;
+}
+
+.services-triptych-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 5px solid var(--ink);
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -526,6 +559,20 @@
   }
 }
 
+.process-step-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: $space-lg;
+  border: 3px solid var(--ink);
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
 // --- Vow ---
 .vow {
   text-align: center;
@@ -569,6 +616,23 @@
 }
 
 // --- Testimonials ---
+.testimonials-visual {
+  margin-bottom: $space-3xl;
+}
+
+.testimonials-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 5px solid var(--ink);
+  filter: sepia(20%) grayscale(10%);
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: sepia(0%) grayscale(0%);
+  }
+}
+
 .testimonial-stack {
   display: grid;
   gap: $space-2xl;
@@ -837,12 +901,27 @@
   }
 }
 
+.footer-texture {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.08;
+}
+
+.footer-texture-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: $space-3xl;
+  position: relative;
 
   @media (max-width: $bp-desktop-sm) {
     grid-template-columns: 1fr;
@@ -921,6 +1000,7 @@
   text-align: center;
   font-size: $font-size-xs;
   opacity: 0.4;
+  position: relative;
 
   a {
     color: var(--signal-1);
@@ -1006,7 +1086,7 @@ body.is-detox {
   }
 }
 
-// --- Reduced Motion (§LXVI) ---
+// --- Reduced Motion (LXVI) ---
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

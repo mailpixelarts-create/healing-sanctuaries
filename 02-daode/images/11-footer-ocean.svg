@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800">
+  <defs>
+    <linearGradient id="water" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#060A10"/>
+      <stop offset="55%" stop-color="#0d2033"/>
+      <stop offset="85%" stop-color="#255c8a"/>
+      <stop offset="100%" stop-color="#4A90D9"/>
+    </linearGradient>
+    <filter id="caustic">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="3" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.29  0 0 0 0 0.56  0 0 0 0 0.85  0 0 0 0.9 0"/>
+      <feComponentTransfer><feFuncA type="gamma" amplitude="1" exponent="3" offset="0"/></feComponentTransfer>
+    </filter>
+    <linearGradient id="fade" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="topmask"><rect width="1600" height="800" fill="url(#fade)"/></mask>
+  </defs>
+  <rect width="1600" height="800" fill="url(#water)"/>
+  <g mask="url(#topmask)" opacity="0.5">
+    <rect width="1600" height="800" filter="url(#caustic)"/>
+  </g>
+</svg>

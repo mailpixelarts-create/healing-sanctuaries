@@ -287,10 +287,19 @@ p {
     background: var(--ink);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     z-index: 0;
+    overflow: hidden;
 
     @media (min-width: $bp-desktop) {
       clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
     }
+  }
+
+  &__bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    mix-blend-mode: luminosity;
   }
 
   &__issue-tag {
@@ -528,8 +537,13 @@ p {
     &-img {
       width: 100%;
       height: 100%;
-      background: var(--ink);
       position: relative;
+    }
+
+    &-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     &-grain {
@@ -606,6 +620,20 @@ p {
     color: var(--paper);
   }
 
+  &__visual {
+    margin-bottom: $space-3xl;
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius-md;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.85;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -643,6 +671,19 @@ p {
 // ============================================
 .services {
   background: var(--paper);
+
+  &__visual {
+    margin-bottom: $space-3xl;
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius-md;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   &__grid {
     display: grid;
@@ -752,6 +793,25 @@ p {
     }
   }
 
+  &__step-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: $radius-md;
+    margin-bottom: $space-lg;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $duration-slow $ease-out-expo;
+  }
+
+  &__step:hover &__photo {
+    transform: scale(1.03);
+  }
+
   &__label {
     font-size: $font-size-xs;
     color: var(--signal);
@@ -809,6 +869,19 @@ p {
 // ============================================
 .testimonials {
   background: var(--paper);
+
+  &__visual {
+    margin-bottom: $space-3xl;
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius-md;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   &__grid {
     display: grid;
@@ -1090,6 +1163,7 @@ p {
   color: var(--paper);
   border-top: 1px solid rgba(252, 249, 242, 0.06);
   position: relative;
+  overflow: hidden;
 
   &::before {
     content: '';
@@ -1106,9 +1180,28 @@ p {
     );
   }
 
+  &__washi {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    overflow: hidden;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  &__washi-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &__inner {
     max-width: 1100px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
   }
 
   &__quote {

@@ -1775,6 +1775,83 @@ body.is-detox {
   .section { padding: $space-2xl $space-xl; }
 }
 
+// --- Image Styles ---
+.hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
+
+.about-portrait {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--signal);
+  margin-bottom: $space-xl;
+  box-shadow: 0 0 40px var(--ghost);
+  animation: portraitPulse 4s ease-in-out infinite;
+}
+
+@keyframes portraitPulse {
+  0%, 100% { box-shadow: 0 0 40px var(--ghost); }
+  50% { box-shadow: 0 0 60px var(--ghost-strong); }
+}
+
+.mechanism-image {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto $space-xl;
+  display: block;
+  border: 1px solid var(--ghost);
+  border-radius: $radius-sm;
+}
+
+.services-triptych {
+  text-align: center;
+  margin-bottom: $space-3xl;
+}
+
+.services-triptych-image {
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid var(--ghost);
+  border-radius: $radius-sm;
+}
+
+.process-step-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: $radius-sm;
+  margin-bottom: $space-xl;
+  border: 1px solid var(--ghost);
+}
+
+.section-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.footer-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
 // --- Scrollbar ---
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--ink); }
