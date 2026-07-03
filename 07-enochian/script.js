@@ -110,18 +110,6 @@ function initAmberCanvas() {
   }
 }
 
-// --- Loading Screen ---
-function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loader.classList.add('is-hidden');
-    }, 2200);
-  });
-}
-
 // --- Circular Navigation Toggle ---
 function initCircularNav() {
   const toggle = document.getElementById('navToggle');
@@ -369,7 +357,6 @@ function initScrollAnimations() {
 
 // --- Initialize Everything ---
 function init() {
-  initLoader();
   initAmberCanvas();
   initCircularNav();
   initOlfactoryMemoryTest();

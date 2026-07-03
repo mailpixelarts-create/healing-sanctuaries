@@ -76,15 +76,6 @@ function initWaveformCanvas() {
   }
 }
 
-// --- Loading Screen ---
-function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-  window.addEventListener('load', () => {
-    setTimeout(() => loader.classList.add('is-hidden'), 2000);
-  });
-}
-
 // --- Nav Scroll Effect ---
 function initNavScroll() {
   const nav = document.querySelector('.nav');
@@ -144,7 +135,6 @@ function initScrollAnimations() {
 
 // --- Initialize ---
 function init() {
-  initLoader();
   initWaveformCanvas();
   initNavScroll();
   initNavTracking();

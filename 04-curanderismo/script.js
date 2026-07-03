@@ -7,20 +7,6 @@
 import { gsap, ScrollTrigger, initSectionReveals, refreshScrollTrigger } from '../src/utils/motion.js';
 
 // ============================================
-// LOADING SCREEN
-// ============================================
-function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loader.classList.add('is-hidden');
-    }, 1800);
-  });
-}
-
-// ============================================
 // FILM GRAIN OVERLAY — SVG noise at 3% opacity
 // ============================================
 function initGrainOverlay() {
@@ -250,7 +236,6 @@ function initContactForm() {
 // INITIALIZE
 // ============================================
 function init() {
-  initLoader();
   initGrainOverlay();
   initNavTracking();
   initHero();

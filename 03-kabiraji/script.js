@@ -11,20 +11,6 @@ import { gsap, ScrollTrigger, initScrollReveals, initParallax, initSectionReveal
   // ─── Reduced Motion Check ───
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ─── Loading Screen ───
-  const loader = document.getElementById('loader');
-  function hideLoader() {
-    if (loader) {
-      loader.classList.add('is-hidden');
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 900);
-    }
-  }
-  window.addEventListener('load', () => {
-    setTimeout(hideLoader, 1800);
-  });
-
   // ─── Chakra Wheel Navigation ───
   const toggle = document.getElementById('chakraToggle');
   const wheel = document.getElementById('chakraWheel');

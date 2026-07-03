@@ -7,25 +7,6 @@ import { gsap, ScrollTrigger } from '../src/utils/motion.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* ── Loading Screen ───────────────────────────── */
-function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-
-  window.addEventListener('load', () => {
-    gsap.to(loader, {
-      opacity: 0,
-      duration: 0.6,
-      delay: 2.2,
-      ease: 'power2.out',
-      onComplete: () => {
-        loader.classList.add('is-hidden');
-        initHeroSequence();
-      },
-    });
-  });
-}
-
 /* ── Hero: 600vh Scroll-Driven Image Sequence ─── */
 function initHeroSequence() {
   const hero = document.getElementById('hero');
@@ -264,7 +245,7 @@ function initFooterReveal() {
 
 /* ── Initialize Everything ─────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
-  initLoader();
+  initHeroSequence();
   initScrollReveals();
   initBottomNav();
   initSmoothScroll();

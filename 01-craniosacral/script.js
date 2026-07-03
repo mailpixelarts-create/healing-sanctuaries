@@ -143,18 +143,6 @@ function initAuraCanvas() {
   }
 }
 
-// --- Loading Screen ---
-function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loader.classList.add('is-hidden');
-    }, 2000);
-  });
-}
-
 // --- Active Nav Tracking ---
 function initNavTracking() {
   const sections = document.querySelectorAll('.section, .hero');
@@ -242,7 +230,6 @@ function initScrollAnimations() {
 
 // --- Initialize Everything ---
 function init() {
-  initLoader();
   initAuraCanvas();
   initNavTracking();
   initScrollAnimations();

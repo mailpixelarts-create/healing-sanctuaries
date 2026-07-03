@@ -69,66 +69,6 @@ img {
 }
 
 // ============================================
-// LOADING SCREEN
-// ============================================
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: $z-max;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--ink);
-  transition: opacity 0.8s $ease-out-expo, visibility 0.8s;
-
-  &.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  &__crystal {
-    width: 60px;
-    height: 60px;
-    clip-path: $facet-hexagon;
-    background: linear-gradient(135deg, var(--signal), rgba(123, 63, 74, 0.3));
-    animation: loaderRotate 3s ease-in-out infinite;
-    margin-bottom: $space-2xl;
-  }
-
-  &__text {
-    font-family: var(--font-display);
-    font-size: $font-size-lg;
-    font-weight: $weight-light;
-    color: var(--paper);
-    opacity: 0;
-    animation: loaderFade 1.2s $ease-out-expo 0.3s forwards;
-  }
-
-  &__subtext {
-    font-family: var(--font-body);
-    font-size: $font-size-sm;
-    color: var(--signal);
-    margin-top: $space-md;
-    opacity: 0;
-    letter-spacing: $tracking-widest;
-    text-transform: uppercase;
-    animation: loaderFade 1.2s $ease-out-expo 0.6s forwards;
-  }
-}
-
-@keyframes loaderFade {
-  to { opacity: 1; }
-}
-
-@keyframes loaderRotate {
-  0%, 100% { transform: rotate(0deg) scale(1); clip-path: $facet-hexagon; }
-  33% { clip-path: $facet-diamond; }
-  66% { clip-path: $facet-octagon; }
-}
-
-// ============================================
 // VERTICAL NAVIGATION
 // ============================================
 .side-nav {

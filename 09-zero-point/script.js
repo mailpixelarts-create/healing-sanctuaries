@@ -175,26 +175,6 @@ class PressurePointExplorer {
 }
 
 // ============================================
-// LOADING SCREEN
-// ============================================
-function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-
-  gsap.to(loader, {
-    opacity: 0,
-    duration: 0.8,
-    delay: 2.5,
-    ease: 'expo.out',
-    onComplete: () => {
-      loader.classList.add('is-hidden');
-      loader.style.display = 'none';
-      initHeroSequence();
-    },
-  });
-}
-
-// ============================================
 // HERO SEQUENCE — Runway Opening
 // ============================================
 function initHeroSequence() {
@@ -418,8 +398,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => matrix.resize());
   }
 
-  // Loading Screen
-  initLoader();
+  // Hero Sequence (was triggered by loader onComplete)
+  initHeroSequence();
 
   // Pressure Point Explorer
   new PressurePointExplorer();

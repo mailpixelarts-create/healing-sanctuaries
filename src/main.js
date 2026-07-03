@@ -1,8 +1,9 @@
 // ============================================
 // HEALING SANCTUARIES — MAIN ENTRY POINT
-// Initializes shared systems per site
+// Preloader → Lenis → GSAP → Meta-layers
 // ============================================
 
+import { initPreloader } from './utils/preloader.js';
 import { initLenis } from './utils/scroll.js';
 import { initScrollReveals, initParallax, initSectionReveals, initMagneticButtons, initTextSplits, refreshScrollTrigger } from './utils/motion.js';
 import { SANCTUARIES, detectCurrentSanctuary } from './utils/sanctuary-nav.js';
@@ -15,8 +16,8 @@ import {
   addStructuredData,
 } from './utils/meta-layers.js';
 
-// --- Initialize Core Systems ---
-function init() {
+// --- Initialize everything after preloader exits ---
+function initSystems() {
   // Lenis smooth scroll
   initLenis();
 
@@ -39,12 +40,24 @@ function init() {
   });
 }
 
+// --- Entry point: preloader first, then systems ---
+function boot() {
+  // Check if there's an existing loader from the old system
+  const oldLoader = document.getElementById('loader');
+  if (oldLoader) oldLoader.remove();
+
+  // Run preloader, then init all systems
+  initPreloader(() => {
+    initSystems();
+  });
+}
+
 // Run on DOM ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('DOMContentLoaded', boot);
 } else {
-  init();
+  boot();
 }
 
 // Export for site-specific scripts
-export { initLenis, initScrollReveals, initParallax, initSectionReveals, initMagneticButtons, initTextSplits, refreshScrollTrigger, addStructuredData, SANCTUARIES, detectCurrentSanctuary };
+export { initLenis, initScrollReveals, initParallax, initSectionReveals, initMagneticButtons, initTextSplits, refreshScrollTrigger, SANCTUARIES, detectCurrentSanctuary };

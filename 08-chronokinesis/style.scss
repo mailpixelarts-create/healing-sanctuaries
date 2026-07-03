@@ -20,49 +20,6 @@
   --font-body: 'Tiempos Text', Georgia, serif;
 }
 
-// --- Loading Screen ---
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: $z-max;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--ink);
-  transition: opacity 0.8s $ease-out-expo, visibility 0.8s;
-
-  &.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  &__text {
-    font-family: var(--font-display);
-    font-size: $font-size-lg;
-    color: var(--paper);
-    letter-spacing: $tracking-wider;
-    opacity: 0;
-    animation: loaderFade 1.2s $ease-out-expo forwards;
-  }
-
-  &__subtext {
-    font-family: var(--font-body);
-    font-size: $font-size-sm;
-    color: var(--signal);
-    margin-top: $space-md;
-    opacity: 0;
-    letter-spacing: $tracking-widest;
-    text-transform: uppercase;
-    animation: loaderFade 1.2s $ease-out-expo 0.4s forwards;
-  }
-}
-
-@keyframes loaderFade {
-  to { opacity: 1; }
-}
-
 // --- Navigation ---
 .nav {
   position: fixed;

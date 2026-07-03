@@ -8,20 +8,6 @@ import { gsap, ScrollTrigger, initSectionReveals, refreshScrollTrigger } from '.
 
 const SIGNALS = ['#FF3366', '#33FF66', '#3366FF'];
 
-// --- Loading Screen ---
-function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loader.classList.add('is-hidden');
-      // Start grid collapse after loader hides
-      setTimeout(initGridCollapse, 300);
-    }, 2200);
-  });
-}
-
 // --- Grid Collapse Hero (4x4 tiles with 3D rotation) ---
 function initGridCollapse() {
   const grid = document.getElementById('heroGrid');
@@ -365,11 +351,11 @@ function initScrollAnimations() {
 
 // --- Initialize Everything ---
 function init() {
-  initLoader();
   initFingerPaint();
   scheduleGlitches();
   initLabelGlitch();
   initScrollAnimations();
+  setTimeout(initGridCollapse, 300);
 }
 
 if (document.readyState === 'loading') {

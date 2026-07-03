@@ -262,17 +262,6 @@ loadProgress();
 // LOADING SCREEN
 // ============================================
 
-function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loader.classList.add('is-hidden');
-    }, 2000);
-  });
-}
-
 // ============================================
 // NAVIGATION — Scroll State
 // ============================================
@@ -449,7 +438,6 @@ function initServiceCardTilt() {
 // ============================================
 
 function init() {
-  initLoader();
   initNavScroll();
   initSmoothScroll();
   initHeroParallax();

@@ -16,7 +16,6 @@ import {
 // INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-  initLoader();
   initHeroCanvas();
   initNavigation();
   initCrystalFacets();
@@ -26,26 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallax();
   initContactForm();
 });
-
-// ============================================
-// LOADING SCREEN
-// ============================================
-function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-
-  gsap.to(loader, {
-    opacity: 0,
-    duration: 0.8,
-    delay: 2,
-    ease: 'power2.inOut',
-    onComplete: () => {
-      loader.classList.add('is-hidden');
-      loader.style.pointerEvents = 'none';
-      refreshScrollTrigger();
-    },
-  });
-}
 
 // ============================================
 // HERO CANVAS — Crystal Lattice Mesh

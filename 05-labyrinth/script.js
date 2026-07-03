@@ -6,7 +6,6 @@
 import { gsap, ScrollTrigger, initScrollReveals, initSectionReveals, initMagneticButtons, refreshScrollTrigger } from '../src/utils/motion.js';
 
 // --- DOM Elements ---
-const loader = document.getElementById('loader');
 const nav = document.getElementById('nav');
 const breathCounter = document.getElementById('breathCounter');
 const pacerShape = document.getElementById('pacerShape');
@@ -20,18 +19,8 @@ const countHold = document.getElementById('countHold');
 const countExhale = document.getElementById('countExhale');
 const mobileToggle = document.getElementById('mobileToggle');
 
-// --- Loading Screen ---
-window.addEventListener('load', () => {
-  gsap.to(loader, {
-    opacity: 0,
-    duration: 0.8,
-    delay: 1.5,
-    ease: 'power2.out',
-    onComplete: () => {
-      loader.classList.add('is-hidden');
-      initAnimations();
-    },
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  initAnimations();
 });
 
 // --- Navigation Scroll ---

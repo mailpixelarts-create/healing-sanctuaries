@@ -133,27 +133,6 @@ function stopCurrentTone() {
   }
 }
 
-// --- Preloader ---
-const loader = document.getElementById('loader');
-
-function hideLoader() {
-  if (loader) {
-    loader.classList.add('is-hidden');
-    document.body.style.overflow = '';
-    initAllAnimations();
-  }
-}
-
-window.addEventListener('load', () => {
-  document.body.style.overflow = 'hidden';
-  setTimeout(hideLoader, 1800);
-});
-
-if (document.readyState === 'complete') {
-  document.body.style.overflow = 'hidden';
-  setTimeout(hideLoader, 1800);
-}
-
 // --- Initialize All Animations ---
 function initAllAnimations() {
   initScrollReveals();
@@ -592,4 +571,11 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+// --- Initialize ---
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAllAnimations);
+} else {
+  initAllAnimations();
 }

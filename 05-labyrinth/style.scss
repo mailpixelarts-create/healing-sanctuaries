@@ -24,52 +24,6 @@
   --glow: 0 0 30px rgba(255, 0, 85, 0.3);
 }
 
-// --- Loading Screen ---
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: $z-max;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--ink);
-  transition: opacity 0.8s $ease-out-expo, visibility 0.8s;
-
-  &.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  &__cursor {
-    font-family: var(--font-body);
-    font-size: $font-size-3xl;
-    color: var(--signal);
-    animation: blink 1s step-end infinite;
-  }
-
-  &__text {
-    font-family: var(--font-body);
-    font-size: $font-size-xs;
-    color: var(--paper);
-    opacity: 0;
-    margin-top: $space-lg;
-    letter-spacing: $tracking-widest;
-    text-transform: uppercase;
-    animation: loaderFade 1.2s $ease-out-expo 0.3s forwards;
-  }
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-@keyframes loaderFade {
-  to { opacity: 0.5; }
-}
-
 // --- Navigation (Terminal Top Bar) ---
 .nav {
   position: fixed;

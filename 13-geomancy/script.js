@@ -4,24 +4,6 @@
 // ============================================
 
 // --------------------------------------------
-// PRELOADER
-// --------------------------------------------
-function initPreloader() {
-  const preloader = document.getElementById('preloader');
-  if (!preloader) return;
-
-  document.body.style.overflow = 'hidden';
-
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      preloader.classList.add('hidden');
-      document.body.style.overflow = '';
-      initHeroEntrance();
-    }, 2200);
-  });
-}
-
-// --------------------------------------------
 // HERO ENTRANCE
 // --------------------------------------------
 function initHeroEntrance() {
@@ -553,7 +535,7 @@ function initCursorGlow() {
 // INIT
 // --------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-  initPreloader();
+  initHeroEntrance();
   initNavRing();
   initPhysics();
   initScrollReveals();
