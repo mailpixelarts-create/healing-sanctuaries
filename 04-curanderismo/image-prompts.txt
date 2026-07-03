@@ -1,50 +1,34 @@
-# Image Prompts for Meditation Website
-# 20 prompts for generating images
+# 04 — Meditation: Wabi-Sabi Precision
+## Image Prompts
 
-1. Minimalist meditation portrait, elderly Asian monk in simple robes, soft natural light, wabi-sabi aesthetic, film grain texture, shallow depth of field, serene expression
+### Hero Image — Film Grain & Word Hover
+A close-up photograph of a human eye in extreme macro, filling the entire frame. The iris is dark brown, almost black, with subtle gold flecks. Reflected in the pupil is a tiny, perfect circle of light — a candle flame. The image is overlaid with a fine film grain texture that gives it the quality of a 35mm photograph from the 1970s. The grain is not noise — it is texture, warmth, the evidence of a physical medium. The mood is intimate, precise, and still. The eye is not looking at the camera — it is looking inward. 16:9 aspect ratio.
 
-2. Ancient Japanese temple garden, morning mist, stone lanterns, raked gravel, bamboo grove, zen atmosphere, muted earth tones
+### About Section — Leo Portrait
+A portrait of a man in his mid-40s, seated on a simple wooden bench in an empty room. He wears a plain grey t-shirt and dark trousers. His posture is upright but not rigid — the posture of someone who has sat for thousands of hours. His hands rest on his thighs, palms down. His eyes are open but unfocused, gazing at a point just beyond the camera. The room is bare: white walls, concrete floor, a single window. The light is flat, even, unforgiving. He looks like a man who has stopped pretending. Medium shot, 50mm, natural light. 3:2 aspect ratio.
 
-3. Close-up of hands in meditation mudra, weathered skin, soft lighting, minimal composition, warm tones, intimate portrait detail
+### Mechanism Section — The Neuroscience of Stillness
+A split image: on the left, a brain scan (fMRI) showing the default mode network lit up in red — the "monkey mind." On the right, the same brain scan after 8 weeks of meditation — the red has dimmed to a soft amber, and the prefrontal cortex glows with calm blue activity. The two scans are separated by a thin gold line. Below each scan, a small label: "Before" and "After." The background is warm cream. The image is clinical but hopeful — proof that stillness changes the brain. 16:9 aspect ratio.
 
-4. Zen garden with single stone, perfectly raked concentric circles, morning dew, minimalist composition, black and white photography
+### Services Section — Three Cards
+Three vertical panels showing meditation techniques:
+1. **Breath Awareness**: A person seated cross-legged, eyes closed. A translucent gold circle hovers at their nostrils, representing the breath. The circle expands on inhale, contracts on exhale. Minimal, elegant.
+2. **Body Scan**: A person lying down, eyes closed. A thin gold line traces from the crown of the head down through the body, illuminating each body part sequentially. The line is precise, clinical.
+3. **Open Monitoring**: A person seated, eyes half-open, gaze soft. Around their head, faint gold symbols appear and dissolve — thoughts arising and passing. The symbols are abstract, not legible. The person does not engage.
+Warm cream background, gold accents, clean editorial style. 3:1 triptych.
 
-5. Meditation hall interior, tatami mats, shoji screens, natural wood, soft diffused light, empty space, peaceful atmosphere
+### Process Section — Three Steps
+Three images showing the arc of a meditation session:
+1. **The Bell**: A close-up of a brass meditation bell being struck. The moment of impact — the hammer just touching the metal. A single gold ring emanates from the bell. The background is dark. The sound is visible.
+2. **The Sit**: A wide shot of a person sitting alone in a bare room. The room is empty except for the person and a cushion. The light is flat, even. The person is perfectly still. The stillness is the subject.
+3. **The Return**: The same person, now standing, reaching for the door handle. The room behind them is empty, unchanged. But something in their posture has shifted — a lightness, a settling. The session is over. The practice continues.
+Wabi-sabi aesthetic throughout — imperfect, honest, real. 1:1 per image.
 
-6. Mountain landscape at dawn, misty peaks, solitary figure in distance, vast emptiness, wabi-sabi imperfection, film photography aesthetic
+### Testimonial Section
+An empty meditation room. A single zafu (cushion) sits on a mat in the center of a bare room. The walls are white plaster, slightly uneven. The floor is dark wood. A single shaft of afternoon light crosses the room, illuminating dust motes suspended in the air. The dust motes are the only movement. The room is profoundly still. No people. The silence is the subject. 16:9 aspect ratio.
 
-7. Tea ceremony setup, rustic ceramic bowl, simple arrangement, natural materials, soft focus, warm earth tones, intimate still life
+### Footer Background
+A seamless texture of handmade Japanese paper (washi) in warm cream (#E8E0D4). The paper has visible fibers, slight irregularities, and subtle variations in tone. The texture is organic, imperfect, beautiful in its imperfection. It evokes the wabi-sabi aesthetic — finding beauty in the incomplete, the impermanent, the imperfect. 2:1 aspect ratio.
 
-8. Walking path through bamboo forest, dappled sunlight, single figure in meditation, sense of movement and stillness combined
-
-9. Breathing exercise visualization, abstract mist patterns, soft gradients, minimal design, zen color palette
-
-10. Body scan meditation concept, human silhouette with energy points, soft glow, minimalist illustration style
-
-11. Temple bell detail, weathered bronze, patina texture, simple composition, dramatic lighting, symbol of mindfulness
-
-12. Meditation cushion (zafu) on wooden floor, natural light, minimal interior, wabi-sabi aesthetic, imperfect beauty
-
-13. Lotus flower emerging from water, morning dew, soft focus, symbol of enlightenment, natural imperfection
-
-14. Stone pathway through garden, stepping stones, moss growing between, passage of time, wabi-sabi philosophy
-
-15. Incense smoke rising, soft curves against dark background, ephemeral beauty, mindfulness symbol
-
-16. Calligraphy brush strokes, zen circle (ensō), ink on paper, imperfect perfection, meditation in motion
-
-17. Sunrise over Japanese garden, golden hour light, long shadows, new day, presence and awareness
-
-18. Water droplet on leaf, macro photography, moment of stillness, reflection, mindfulness in nature
-
-19. Empty meditation space, minimalist room, single cushion, natural light, void as potential, zen aesthetics
-
-20. Hands holding prayer beads, weathered wood texture, simple rings, meditation tool, intimate detail shot
-
-# Style Notes:
-- All images should have film grain texture overlay
-- Muted color palette: earth tones, soft whites, deep blacks
-- Shallow depth of field where appropriate
-- Wabi-sabi aesthetic: imperfect, incomplete, transient beauty
-- Natural lighting preferred
-- Minimal composition with negative space
+### OG / Social Share Image
+A brass meditation bell centered in a dark frame. The bell is struck — a single gold ring emanates outward, filling the frame. The ring is not perfect — it wobbles slightly, as sound waves do. The background is pure black. The bell is warm, golden, aged. The image is minimal, precise, and resonant. 1.91:1 aspect ratio (1200x630px).

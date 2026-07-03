@@ -1,102 +1,47 @@
-HERBALISM — Image Prompts (20)
-Outsider Art Digital × Botanical Dark
+# 11 — Herbalism: Botanical Dark Process
+## Image Prompts
 
-Prompt 1: Dandelion seed-head in extreme close-up, individual seeds catching golden hour light against a dark forest floor background, shallow depth of field, botanical photography style, moody and atmospheric, --ar 16:9
-Style: Macro botanical photography, dark editorial
-Mood: Transient, beautiful, fragile
-Lighting: Golden hour side-light
+### Hero Image — 600vh Scroll Sequence
+A long, vertical image designed to be scrolled through — a botanical journey from seed to tincture. The image is divided into 6 sequential panels, each a different stage:
+1. **Seed**: A single seed in dark earth, backlit. Roots extend downward. A green shoot emerges upward. The earth is rich, black, alive.
+2. **Growth**: A young plant — dandelion, perhaps — pushing through soil toward light. The leaves are bright green, the stem is thin but determined. Morning dew on the leaves.
+3. **Harvest**: A weathered hand (Old Tom's hand) pulling a plant from the earth, roots and all. The roots are long, tangled, covered in dark soil. The hand is stained black from walnuts.
+4. **Preparation**: The plant material spread on a wooden chopping board. A knife lies beside it. The plant has been chopped — roots, leaves, flowers separated into piles. The board is scarred, well-used.
+5. **Extraction**: The chopped plant material packed into a glass jar, covered with clear vodka. The liquid is turning color — amber, green, brown — as the alcohol extracts the active compounds. The jar sits on a dark shelf.
+6. **Tincture**: A small amber dropper bottle, filled with the finished tincture. A hand-written label reads "Dandelion Root — March 2026." The bottle is small, potent, alive with extracted plant intelligence.
+The overall aesthetic is dark botanical — deep greens, rich browns, earth tones on black. Each panel flows into the next. 1:6 aspect ratio (tall vertical).
 
-Prompt 2: Time-lapse sequence frame of a dandelion seed-head slowly decaying, seeds dispersing into wind, dark moody background, cinematic color grading with deep greens and amber tones
-Style: Cinematic nature photography
-Mood: Impermanent, poetic, earthy
-Lighting: Diffused natural light
+### About Section — Old Tom Portrait
+A portrait of a 72-year-old man, weathered, sitting on a tree stump in a woodland clearing. He wears a worn waxed jacket, muddy boots, and a flat cap. His hands are stained black from walnut husks. He holds a single dandelion root up to the light, examining it. His eyes are sharp, present, alive. The woodland behind him is deciduous — oaks, birches, the understory thick with wild garlic and foxglove. The light is dappled, filtering through leaves. He looks like a man who knows every plant within 50 miles. Medium shot, natural light. 3:2 aspect ratio.
 
-Prompt 3: Wild medicinal herbs arranged in a dark apothecary setting, glass bottles, dried flowers, mortar and pestle, Outsider Art aesthetic with slightly distorted perspectives
-Style: Still life photography, dark editorial
-Mood: Ancient, mysterious, handcrafted
-Lighting: Candlelight and window light
+### Mechanism Section — Plant Chemistry
+A scientific illustration showing the chemical compounds in a common medicinal plant — Echinacea purpurea. The plant is shown in full — root, stem, leaf, flower — with callouts to its active compounds:
+- Alkamides (anti-inflammatory)
+- Polysaccharides (immune-modulating)
+- Caffeic acid derivatives (antioxidant)
+- Alkaloids (immune-stimulating)
 
-Prompt 4: Sage Wildroot foraging in a misty Pacific Northwest forest, silhouette among towering ferns and moss-covered trees, golden light filtering through canopy
-Style: Environmental portrait, documentary
-Mood: Solitary, reverent, connected
-Lighting: Dappled forest light
+Each compound is shown as a molecular structure. The background is dark, the illustration is detailed but not cluttered. The style is Botanical Journal — authoritative, beautiful. 16:9 aspect ratio.
 
-Prompt 5: Close-up of hands pressing a wildflower specimen between pages of an old book, dried petals and leaves, dark wooden table surface, warm amber tones
-Style: Detail photography, editorial
-Mood: Deliberate, intimate, archival
-Lighting: Soft directional light
+### Services Section — Three Cards
+Three vertical panels showing herbal practices:
+1. **Foraging**: A person kneeling in a woodland, examining a plant at ground level. A field guide lies open beside them. The person is focused, respectful. The woodland is lush, green, alive.
+2. **Tincture Making**: Hands packing chopped plant material into a glass jar. The jar is half-full. The hands are careful, deliberate. The plant material is fresh — leaves still green, roots still damp.
+3. **Administration**: A hand holding a dropper bottle, squeezing a single drop onto the tongue. The drop is amber, viscous. The tongue is extended, receptive. The moment is precise — medicine meets body.
+Dark botanical palette — greens, browns, earth tones on black. 3:1 triptych.
 
-Prompt 6: Glass tincture bottles filled with amber liquid arranged on a rustic wooden shelf, botanical labels handwritten, dark background with warm highlights
-Style: Product photography, apothecary aesthetic
-Mood: Medicinal, artisanal, precise
-Lighting: Backlit glass, warm glow
+### Process Section — Three Steps
+Three images showing the tincture-making process:
+1. **The Chop**: Close-up of a knife chopping fresh plant material on a scarred wooden board. The knife is old, well-maintained. The plant material is a wild herb — perhaps yarrow or nettle. The cuts are rough, not precise. Old Tom does not believe in precision; he believes in intuition.
+2. **The Steep**: A glass jar filled with plant material and vodka, sitting on a dark shelf. The liquid is slowly changing color — from clear to amber. A handwritten label on the jar reads the date. The jar will sit for 6 weeks. Time is an ingredient.
+3. **The Drop**: A single drop of finished tincture falling from a dropper into a small glass. The drop is amber, backlit, caught mid-air. The drop is the culmination — months of growth, harvest, preparation, patience. The drop is medicine.
+Dark, earthy, process-focused. 1:1 per image.
 
-Prompt 7: A single pressed Echinacea specimen on aged paper, handwritten botanical notes around it, dark ink on cream paper, scientific illustration meets Outsider Art
-Style: Mixed media photography, botanical illustration
-Mood: Studied, organic, personal
-Lighting: Even, flat document lighting
+### Testimonial Section
+Old Tom's apothecary workshop at dusk. Wooden shelves line the walls, each shelf holding glass jars of dried herbs, tinctures in amber bottles, and bundles of dried plants. A mortar and pestle sits on the workbench, stained with the residue of today's work. A single candle burns, casting warm shadows. The room smells of earth, alcohol, and dried leaves. No people. The workshop holds forty years of knowledge in its walls. 16:9 aspect ratio.
 
-Prompt 8: Dandelion roots being harvested from dark rich soil, hands covered in earth, morning mist in background, close-up detail shot
-Style: Documentary photography, earthy
-Mood: Grounded, essential, raw
-Lighting: Overcast morning light
+### Footer Background
+A seamless texture of dried herbal material — a collage of dried leaves, roots, flowers, and bark. The materials are scattered across a dark surface, overlapping, creating a rich botanical tapestry. The colors are muted greens, browns, and ochres. The texture is organic, Process, alive with the memory of growth. 2:1 aspect ratio.
 
-Prompt 9: Infused herbal oil in a glass jar, golden liquid with suspended plant material, backlit to show translucency, dark kitchen background
-Style: Still life photography, warm editorial
-Mood: Patient, transformative, alive
-Lighting: Backlit, golden tones
-
-Prompt 10: Medicinal tea being poured from a ceramic pot into a handmade cup, steam rising, dark wood surface, herbs scattered nearby, intimate domestic scene
-Style: Lifestyle photography, warm dark tones
-Mood: Comforting, ritualistic, slow
-Lighting: Warm interior light
-
-Prompt 11: Calendula flowers growing in terra cotta pots on a kitchen windowsill, morning light streaming through glass, dark interior frame
-Style: Interior photography, botanical
-Mood: Nurturing, bright within darkness, alive
-Lighting: Window light, high contrast
-
-Prompt 12: St. John's Wort flowers in full bloom on a sunlit hillside, Pacific Northwest landscape in background, vivid yellow against deep green
-Style: Landscape photography, botanical
-Mood: Wild, radiant, abundant
-Lighting: Full summer sunlight
-
-Prompt 13: Valerian root being dug from garden soil with a hand trowel, dark earth, morning dew on surrounding plants, close-up detail
-Style: Garden photography, earthy
-Mood: Subterranean, potent, honest
-Lighting: Soft morning diffused light
-
-Prompt 14: A herbalist's workspace overhead view, mortar and pestle, dried herbs in bowls, glass vials, handwritten notes, dark wooden surface
-Style: Flat lay photography, editorial
-Mood: Methodical, creative, artisanal
-Lighting: Even overhead soft light
-
-Prompt 15: German chamomile flowers floating in a bowl of water, sunlight creating patterns on the surface, macro detail of petals
-Style: Macro photography, ethereal
-Mood: Gentle, luminous, delicate
-Lighting: Natural light, water reflections
-
-Prompt 16: Dandelion root roasting slowly in a cast iron pan, dark kitchen, steam rising, close-up of the transformation from pale root to dark amber
-Style: Process photography, culinary
-Mood: Transformative, patient, alchemical
-Lighting: Low warm kitchen light
-
-Prompt 17: A flower essence preparation in progress, fresh blossoms floating in a glass bowl of spring water on a sunlit stone ledge, dark garden background
-Style: Documentary photography, ritual
-Mood: Sacred, simple, intentional
-Lighting: Natural sunlight through water
-
-Prompt 18: Pressed specimen collection spread across a dark wooden desk, multiple herbarium sheets, botanical drawings, old field guides, overhead perspective
-Style: Flat lay photography, archival
-Mood: Collected, scholarly, personal
-Lighting: Even, slightly warm
-
-Prompt 19: Misty Portland forest trail in autumn, golden and amber leaves, path disappearing into fog, the wild pharmacy of nature
-Style: Landscape photography, atmospheric
-Mood: Mysterious, inviting, ancient
-Lighting: Diffused foggy light
-
-Prompt 20: Final hero frame — a dandelion seed-head silhouetted against a dark twilight sky, a single seed catching the last light as it drifts away, extreme shallow depth of field
-Style: Cinematic nature photography, poetic
-Mood: Release, beauty in ending, transient
-Lighting: Twilight, single highlight
+### OG / Social Share Image
+A single amber dropper bottle centered in a dark frame. From the dropper, a single amber drop falls — caught mid-air, perfectly round. Below the drop, a small cluster of fresh herbs (dandelion, nettle, yarrow) catches the light. The background is pure black. The image is earthy, potent, and iconic. 1.91:1 aspect ratio (1200x630px).

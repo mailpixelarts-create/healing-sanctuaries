@@ -1,42 +1,34 @@
-IMAGE PROMPTS — Art Therapy: Luna Chromatic
-============================================
+# 14 — Art Therapy: Maximalist Outsider
+## Image Prompts
 
-1. A chaotic collage of hand-painted squares in clashing neon colors (hot pink, acid green, electric blue) overlapping with crayon textures and paint drips on white canvas, maximalist outsider art style
+### Hero Image — Finger-Paint Canvas
+A close-up photograph of a child's hand — covered in wet, multicolored paint — pressing onto a large sheet of white paper. The paint is thick, visceral, alive with color: red, blue, yellow, green, all mixing at the edges where fingers meet paper. The hand is mid-press, the paint squishing outward from under the fingers. The paper is already covered with previous marks — scribbles, lines, dots, shapes that are not quite anything but mean everything. The background is the white paper, now a battlefield of color. The overall aesthetic is maximalist outsider — raw, unplanned, beautiful in its chaos. The image communicates: you do not need to be good. You need to be honest. 16:9 aspect ratio.
 
-2. Close-up of fingers covered in thick wet paint pressing into raw clay, tactile art therapy session, warm studio lighting, expressionistic photography
+### About Section — Zara Portrait
+A portrait of a woman in her 40s, seated in an art therapy studio. She wears a paint-stained smock over simple clothes. Her hands are clean — she does not make the art; she holds the space for others to make theirs. Her expression is present, warm, unhurried. Behind her, the studio is a riot of color — children's artwork covers the walls, shelves overflow with crayons and pastels, a large table is covered with paper and supplies. The room is chaotic, alive, joyful. She looks like a woman who has learned that silence speaks louder than words. Medium shot, natural light. 3:2 aspect ratio.
 
-3. A large mandala drawn in thick crayon and watercolor on floor paper, concentric circles in primary colors bleeding into each other, overhead view
+### Mechanism Section — Externalization of Stress
+A scientific diagram showing the amygdala's response to externalized stress. On the left: a brain scan showing the amygdala lit up in red — "Internalized stress." On the right: the same brain, but the amygdala is dimmer, and the prefrontal cortex is more active — "After externalization through art." A label reads: "Drawing delegates the threat to the paper." The background is white, the style is neuroscience but accessible. 16:9 aspect ratio.
 
-4. Abstract expressionist painting with violent brushstrokes in red, yellow, and black, paint splattered across a white studio wall, emotional release captured in pigment
+### Services Section — Three Cards
+Three vertical panels showing art therapy practices:
+1. **Scribble**: A hand holding a piece of black charcoal, making rapid, messy scribbles on white paper. The scribbles are aggressive, raw, unfiltered. The charcoal leaves thick, dark marks. The motion is visible in the blur of the hand.
+2. **Clay Work**: Two hands pressing into a lump of wet clay on a table. The clay is being shaped — not into anything recognizable, but into a form that represents weight, pressure, emotion. The hands are strong, deliberate.
+3. **Blind Contour**: A person drawing their own hand without looking at the paper. The eyes are fixed on the hand; the charcoal moves on the paper below. The resulting drawing is wobbly, imperfect, honest. The person smiles at the result.
+Maximalist palette — white paper, bold colors, raw materials. 3:1 triptych.
 
-5. A woman with paint-stained hands holding a lump of red clay shaped into a heart, tears on her face but smiling, raw emotional portrait
+### Process Section — Three Steps
+Three images showing the Scribble to Self session:
+1. **The Blank Page**: A large sheet of white paper on a table. A hand reaches for a piece of charcoal. The paper is empty, waiting. The moment before the first mark — the moment of pure potential. Close-up, bright light.
+2. **The Scribble**: The same paper, now covered in rapid, aggressive scribbles. The charcoal has been pressed hard — the marks are deep, dark, visceral. The hand is still moving, fast, uncontrolled. The scribble is not art; it is release.
+3. **The Question**: The finished scribble lies on the table. It is a mess of lines, angles, and pressure. A hand rests beside it, still holding the charcoal. The question hangs in the air: "What did your hand know that your mouth didn't?" The answer is in the marks. The marks are the truth.
+Maximalist outsider palette — black charcoal on white paper, raw, honest. 1:1 per image.
 
-6. Collage of art therapy materials scattered on a wooden table: broken crayons, smudged pastels, tubes of acrylic paint squeezed flat, wrinkled paper with mandala fragments
+### Testimonial Section
+An art therapy studio after a session. The table is covered with paper — some with scribbles, some with drawings, some torn in half. Charcoal dust covers the surface. A jar of water holds used brushes. The walls are covered with children's artwork — bright, chaotic, alive. The room is messy, productive, full of the residue of expression. No people. The room holds the marks of everyone who has been here. 16:9 aspect ratio.
 
-7. Children's finger painting on butcher paper, chaotic swirls of rainbow colors, handprints overlapping, innocent outsider art aesthetic
+### Footer Background
+A seamless texture of layered, torn paper in multiple colors — white, cream, newsprint, kraft paper. The papers overlap, creating a collage effect. On top of the papers, faint charcoal marks are visible — scribbles, lines, dots. The texture is chaotic, handmade, and alive with the evidence of creative process. 2:1 aspect ratio.
 
-8. A dark studio with a single spotlight illuminating a white canvas covered in frantic charcoal marks and violent splashes of pink and blue paint
-
-9. Macro shot of paint mixing on canvas palette: hot pink swirling into acid green creating marbled organic patterns, wet glossy texture
-
-10. A woman dancing barefoot in a paint-splattered room, motion blur, colorful footprints trailing behind her on white floor, music and movement therapy
-
-11. Stacked clay bowls in various stages of creation, some perfect, some collapsed, raw earth tones mixed with painted bright accents, kiln shelf
-
-12. Overhead view of a circle of people sitting on the floor drawing mandalas together, colored pencils and markers scattered, communal healing ritual
-
-13. Abstract portrait made entirely of torn magazine clippings and paint, collage art therapy, face fragmented into multiple emotions and colors
-
-14. A child's hand painting a rainbow directly onto a white wall with finger paint, joyful abandon, messy colorful fingerprint art
-
-15. Split composition: left side shows a person curled up in grey tones, right side shows the same person painting intensely with explosive color, transformation through art
-
-16. Close-up of a mandala in progress, half completed in precise geometric lines, half dissolving into chaotic expressionistic splashes, order becoming chaos
-
-17. A studio corner with floor-to-ceiling canvases leaning against walls, each covered in different styles: abstract, figurative, text-based, outsider art collection
-
-18. Hands kneading red clay on a pottery wheel, clay splattered on forearms, warm amber lighting, therapeutic tactile process
-
-19. Music notes and sound waves visualized as colorful paint splashes radiating from a speaker, synesthesia-inspired digital art
-
-20. A completed therapy painting hanging in a clean white gallery space: raw, emotional, imperfect, vibrant with layered textures and hidden text beneath the paint
+### OG / Social Share Image
+A hand covered in multicolored paint, centered in a dark frame. The hand is open, palm facing the camera. The paint is thick, visceral, alive — red, blue, yellow, green, all mixing at the edges. From the fingertips, paint drips downward in slow streams. The background is pure black. The image is raw, colorful, and iconic. 1.91:1 aspect ratio (1200x630px).

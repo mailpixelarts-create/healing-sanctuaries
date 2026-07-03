@@ -1,42 +1,34 @@
-IMAGE PROMPTS — Devi Sunflowerr Yoga (03-kabiraji)
-═══════════════════════════════════════════════════
+# 03 — Yoga: Organic Editorial
+## Image Prompts
 
-1. Hero: Fluid human silhouette in Mountain Pose, morphing terracotta organic blobs, warm Balinese sunrise, ink (#2B1810) background with paper (#F2EDE4) glow, editorial photography style, minimalist composition, soft diffused light
+### Hero Image — Chakra Wheel
+A top-down photograph of a person in a cross-legged meditation pose, shot from directly above. Around their body, seven glowing orbs of light are arranged in a vertical line from the base of the spine to the crown of the head — red, orange, yellow, green, blue, indigo, violet. Each orb pulses softly, casting its color onto the dark floor beneath. The background is warm dark brown (#1A1612). The person wears simple white cotton clothing. The image is symmetrical, sacred, and organic. The chakra colors are vivid but not neon — they feel natural, like colored glass catching sunlight. 1:1 aspect ratio.
 
-2. Hero: Organic morphic silhouette transitioning from Mountain to Downward Dog, terracotta (#E85D04) ink blobs, fluid motion blur, cinematic wide aspect ratio, ethereal mist, sacred geometry overlay
+### About Section — Elena Portrait
+A portrait of a woman in her mid-30s, seated in a yoga studio with natural light streaming through large windows. She is not in a pose — she is sitting casually, one leg tucked under her, hands resting on her knee. She wears simple, earth-toned athletic wear. Her expression is calm, present, unhurried. Behind her, the studio is warm wood and natural light. Plants on the windowsill. A stack of yoga blocks in the corner. She looks like someone who has made peace with her body. Medium shot, natural light, 85mm. 3:2 aspect ratio.
 
-3. Portrait: Devi Sunflowerr in white linen, seated cross-legged, Ubud rice terrace background, golden hour light, editorial fashion portrait, soft focus, warm tones, serene expression
+### Mechanism Section — The Breath-Body Connection
+A scientific illustration showing the connection between breath and the nervous system. On the left: a pair of lungs inhaling, rendered in warm tones. On the right: a nervous system diagram, with the vagus nerve highlighted in gold, running from the brainstem down through the chest and abdomen. A dotted line connects the diaphragm to the vagus nerve, showing the mechanical link. The background is warm cream (#F5EDE3). Clean, educational, but not clinical. The style is editorial illustration, not medical textbook. 16:9 aspect ratio.
 
-4. Asana: Warrior II pose silhouette, organic terracotta blob form, frangipani petals floating, Bali temple garden, dramatic side lighting, cinematic depth of field
+### Services Section — Three Cards
+Three vertical panels showing yoga practices:
+1. **Hip Opener**: A person in a deep pigeon pose, shot from the side. Warm natural light. The body is relaxed, not straining. The pose looks like surrender, not effort.
+2. **Shoulder Release**: A person standing, arms wrapped around themselves in a self-hug, head bowed. The pose suggests release, not performance. Warm tones.
+3. **Spinal Twist**: A person seated, twisting gently to one side. The spine is long, the twist is subtle. The image emphasizes length, not rotation.
+All three: warm natural light, earth tones, minimal background. 3:1 triptych.
 
-5. Asana: Tree Pose with flowing fabric, organic morphic human form, lush tropical foliage, dappled sunlight, terracotta color grading, editorial composition
+### Process Section — Three Steps
+Three images showing the arc of a Slow Flow class:
+1. **Dawn Arrival**: A person stepping onto a yoga mat in a dim studio, the first light of dawn visible through a window. The room is still, quiet, waiting. Wide shot.
+2. **Deep Hold**: Close-up of a person's hands pressing into the mat during a pose. The fingers are spread, the knuckles are white with gentle pressure. The detail is intimate, focused.
+3. **Savasana**: The person lying flat on their back, arms at their sides, eyes closed. The room is now fully lit by morning sun. The light falls across their body in warm stripes. Peaceful, complete.
+Warm, organic, natural. 1:1 per image.
 
-6. Pranayama: Close-up hands in Anjali Mudra, incense smoke wisps forming organic shapes, warm terracotta tones, soft bokeh background, meditative atmosphere
+### Testimonial Section
+An empty yoga studio at dawn. A single mat is unrolled in the center of the room. Morning light streams through floor-to-ceiling windows, casting long golden shadows across the wooden floor. A block and strap rest beside the mat. The room smells of wood and sweat and quiet. No people. The space holds the memory of practice. 16:9 aspect ratio.
 
-7. Pranayama: Breath visualization — organic ink-like particles emanating from nostrils, terracotta on cream background, abstract editorial style, flowing motion
+### Footer Background
+A seamless texture of woven organic cotton in warm cream and brown tones. The weave is visible, tactile, handmade. The texture suggests natural materials, earth, grounding. Warm palette: cream, tan, soft brown. 2:1 aspect ratio.
 
-8. Meditation: Seated figure in lotus position, surrounded by concentric organic rings (chakra wheel reference), terracotta gradients, Ubud jungle backdrop, golden light rays
-
-9. Studio Interior: Balinese yoga studio, teak wood floors, frangipani arrangements, open air bamboo structure, morning light streaming in, terracotta cushions, editorial interior photography
-
-10. Sacred Art: Asana Practice card — dynamic warrior flow sequence, organic morphic human forms, terracotta ink splashes, white background, editorial layout
-
-11. Sacred Art: Pranayama card — breath visualization, organic smoke forms, terracotta particles, cream background, minimalist editorial design
-
-12. Sacred Art: Meditation card — concentric circles forming lotus shape, organic terracotta gradients, sacred geometry, clean editorial composition
-
-13. Philosophy: Abstract union concept — two organic terracotta forms merging, fluid motion, cream background, symbolic of yoking breath to body, editorial abstract art
-
-14. Journey: Ubud sunrise over rice terraces, golden hour, mist rising, terracotta warm color grade, cinematic wide format, ethereal atmosphere
-
-15. Testimonials: Client in savasana pose, surrounded by soft terracotta organic shapes, peaceful studio setting, warm diffused light, editorial wellness photography
-
-16. Contact: Balinese lotus pond at sunset, terracotta light reflections, stone path, tropical flowers, cinematic color grading, inviting atmosphere
-
-17. Texture: Organic terracotta ink wash texture, fluid organic shapes, cream (#F2EDE4) base, subtle noise grain, suitable for background overlay
-
-18. Pattern: Chakra wheel sacred geometry pattern, seven circles with organic terracotta fills, minimalist line work, cream background, editorial pattern design
-
-19. Detail: Frangipani flower close-up on teak wood surface, terracotta color grading, shallow depth of field, warm golden light, editorial macro photography
-
-20. Landscape: Ubud jungle canopy at golden hour, terracotta warm tones, mist and light rays, cinematic composition, ethereal Balinese atmosphere, suitable for full-width section background
+### OG / Social Share Image
+Seven colored orbs arranged in a vertical line against a dark background (#1A1612). From bottom to top: red, orange, yellow, green, blue, indigo, violet. Each orb glows softly, casting a faint halo of its color. The orbs are perfectly spaced, perfectly round, perfectly balanced. The image is minimal, sacred, and iconic. 1.91:1 aspect ratio (1200x630px).

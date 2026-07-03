@@ -1,39 +1,34 @@
-1. Hero background: Luminous gold Rei/Ki kanji symbol 気 emerging from matte-black void, sacred geometry patterns radiating outward, 3D perspective, volumetric lighting, cinematic atmosphere, 8K resolution
+# 01 — Reiki: Sacred Luxury
+## Image Prompts
 
-2. Palm Channeling: Close-up of hands with golden energy flowing between palms, sacred geometry overlay, dark background, ethereal glow, spiritual healing concept, photorealistic
+### Hero Image — Aura Particle Field
+A dark editorial photograph of a pair of hands hovering 6 inches above a resting human body, shot from a low angle. The hands emit a soft, warm antique gold glow (#C9A96E) that radiates outward in concentric rings of light. Tiny luminous particles float upward from the palms like embers from a fire. The background is deep charcoal (#0C0A08) with subtle sacred geometry patterns — interlocking circles and the Flower of Life — rendered in faint gold wireframe. The lighting is intimate, focused only on the hands and the glow, with the rest falling into shadow. Shot on a medium format camera, shallow depth of field, f/2.8. The mood is reverent, luxurious, and ancient. No text. No people's faces visible. 16:9 aspect ratio.
 
-3. Distance Healing: Abstract visualization of energy transmission across space, golden light beams connecting two points, cosmic background, universal life force concept, minimal composition
+### About Section — Maya Portrait
+A portrait of a woman in her late 30s, seated in a minimalist dark studio. She wears a simple black linen garment. Her hands rest on her knees, palms facing upward. Her eyes are closed in quiet concentration. A faint gold light emanates from her fingertips — subtle, almost imperceptible, like the afterimage of a candle. The background is textured dark plaster, warm-toned black. The lighting is Rembrandt-style — one soft light source from the upper left, casting gentle shadows across her face. The mood is clinical yet sacred. She looks like a scientist who has found God in a laboratory. Medium shot, 85mm lens, film grain. 3:2 aspect ratio.
 
-4. Aura Cleansing: Human silhouette surrounded by layers of luminous energy field, golden particles being released, dark sanctuary setting, spiritual purification, cinematic lighting
+### Mechanism Section — The Science Bridge
+A split-image composition. On the left: a close-up of a hospital heart monitor showing a steady rhythm, rendered in cool blue-green tones. On the right: the same rhythm visualized as golden light waves emanating from a pair of hands, warm-toned. The two halves are separated by a thin gold line. The background is dark charcoal. The image suggests the bridge between clinical measurement and energy healing. Clean, editorial, scientific. No text. 16:9 aspect ratio.
 
-5. Master Reiko portrait: Elegant Japanese woman in meditation pose, soft golden light illuminating face, serene expression, dark clothing against dark background, sacred geometry subtle overlay
+### Services Section — Three Cards
+Three vertical panels side by side, each showing a different Reiki hand position:
+1. Hands hovering above the crown of the head — gold light pooling at the crown
+2. Hands placed on the heart center — warm glow radiating from the chest
+3. Hands hovering above the feet — soft gold light grounding downward
+Each panel is a close-up, dark background, shallow depth of field. The hands are relaxed, precise, intentional. The gold glow is consistent across all three. Clean editorial layout. 3:1 aspect ratio (triptych).
 
-6. Healing sanctuary interior: Minimalist meditation space, dark walls with subtle sacred geometry patterns, single golden light source, meditation cushion, candles, tranquil atmosphere
+### Process Section — Three Steps
+Three sequential images showing the progression of a Reiki session:
+1. **Arrival**: A person lying on a treatment table in a dim room, candlelight, practitioner standing at the head. Wide shot, atmospheric.
+2. **Treatment**: Close-up of hands hovering above the body, gold particles floating between hands and skin. Intimate, warm.
+3. **Integration**: The person sitting up, eyes closed, hands resting on their lap, a faint glow still visible around their shoulders. Peaceful, resolved.
+Dark editorial tone throughout. Cinematic lighting. 1:1 aspect ratio per image.
 
-7. Red Rock landscape: Sedona Arizona red rock formations at golden hour, spiritual energy visible in light rays, desert healing landscape, cinematic wide shot
+### Testimonial Section
+A soft-focus photograph of an empty treatment room. A massage table draped in white linen. A single candle burning on a dark wooden side table. Gold light filters through a sheer curtain. The room is warm, inviting, sacred. The emptiness suggests the space after a session — the echo of healing. No people. Medium shot, natural light. 16:9 aspect ratio.
 
-8. Sacred geometry pattern: Complex mandala design in gold lines on black background, mathematical precision, spiritual symbolism, infinite recursive pattern, high contrast
+### Footer Background
+A seamless texture of dark marble with gold veins running through it. The veins are thin, organic, and luminous — as if the marble itself is alive with energy. The overall tone is deep charcoal (#0C0A08) with subtle gold (#C9A96E) highlights. The texture should tile horizontally. 2:1 aspect ratio.
 
-9. Ki energy visualization: Flowing streams of golden energy moving through human body meridians, dark background, anatomical yet spiritual, subtle glow effects
-
-10. Reiki symbols: Traditional Japanese Reiki kanji characters in gold, arranged in sacred formation, dark textured background, calligraphy style, spiritual significance
-
-11. Meditation garden: Serene outdoor space with desert plants, stone pathway, golden hour lighting, distant red rocks, peaceful sanctuary, healing environment
-
-12. Energy healing session: Overhead view of person lying on treatment table, practitioner's hands channeling golden energy, soft ambient lighting, intimate healing moment
-
-13. Universal life force: Abstract cosmic visualization, golden energy particles connecting all things, dark space background, interconnection concept, vast and intimate
-
-14. Spiritual journey: Pathway through desert landscape leading to distant light, golden hour, symbolic journey, transformation concept, leading lines composition
-
-15. Chakra alignment: Seven energy centers visualized in golden light along spine, dark background, balanced energy flow, spiritual anatomy, minimal design
-
-16. Sacred hands: Detailed hands in mudra position, golden energy emanating from fingertips, dark background, spiritual gesture, photorealistic detail
-
-17. Energy field layers: Multiple concentric golden rings surrounding central point, representing auric layers, dark background, sacred geometry, spiritual concept
-
-18. Healing light: Single beam of golden light descending from above, illuminating space below, divine connection, spiritual awakening, minimal composition
-
-19. Japanese calligraphy: Masterfully written Reiki characters in gold ink on dark paper, brush stroke texture, traditional art, spiritual writing, museum quality
-
-20. Sanctuary entrance: Wooden doorway framed by desert plants, warm golden light emanating from within, welcoming spiritual space, architectural detail, evening atmosphere
+### OG / Social Share Image
+A minimalist composition: a single pair of hands cupped together, palms up, in the center of a dark frame. A small, perfect sphere of golden light floats just above the palms. The background is pure black. The light casts soft shadows on the hands. The image is symmetrical, sacred, and iconic. Perfect for social sharing. 1.91:1 aspect ratio (1200x630px).

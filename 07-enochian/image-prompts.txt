@@ -1,22 +1,34 @@
-IMAGE PROMPTS — Aromatherapy / Flora Botanica
+# 07 — Aromatherapy: Botanical Quiet
+## Image Prompts
 
-1. Hero background — dark amber honey fluid flowing in viscous slow motion, macro photography, warm golden light, abstract organic patterns, luxury editorial aesthetic
-2. Portrait of a woman herbalist in her 40s with silver-streaked auburn hair, standing in a Grasse distillery, soft natural light, wearing linen, surrounded by glass bottles
-3. Essential oil blending station — dark wood table, antique brass dropper bottles, fresh botanicals, beeswax candle, overhead view, moody editorial styling
-4. Lavender field at golden hour in Provence, rolling hills, soft focus foreground, warm amber tones, cinematic composition
-5. Cedar forest in winter, morning mist between ancient trees, warm light filtering through branches, earth tones, contemplative mood
-6. Close-up of hands holding a glass amber bottle of essential oil, soft backlight, warm golden glow, shallow depth of field
-7. Bergamot fruit cut in half on dark stone surface, dramatic side lighting, rich green and amber tones, luxury food photography style
-8. Aromatic meditation scene — person seated cross-legged on linen cushion, beeswax candles in background, diffuser mist rising, soft warm lighting
-9. Vintage Grasse perfume laboratory, wooden drawers filled with dried botanicals, copper alembic still, warm candlelight, heritage aesthetic
-10. Sandalwood chips and oil in a brass bowl, smoke wisping upward, dark background, dramatic lighting, ritualistic atmosphere
-11. Peppermint leaves with morning dew, extreme close-up, vivid green against dark earth, crisp detail, botanical illustration quality
-12. Scent journey installation — seven glass cloches arranged in a line on dark wood shelf, each containing a different botanical specimen, museum lighting
-13. Orange grove at sunset, golden light through citrus trees, warm amber palette, dreamy soft focus, Mediterranean atmosphere
-14. Luxury apothecary shelf with amber glass bottles, dried flowers, handwritten labels, dark wood, warm editorial lighting
-15. Woman's hands pressing essential oil blend into client's wrist, close-up, soft focus background, intimate healing moment, warm tones
-16. Dried lavender bundles hanging from wooden ceiling beams in French farmhouse, natural light from window, rustic elegance
-17. Abstract macro photography of essential oil droplets in water, amber and gold tones, refraction patterns, artistic scientific aesthetic
-18. Beeswax candles in various stages of burning on dark stone surface, warm golden glow, wax drips, meditative atmosphere
-19. Grasse hillside village at dawn, terracotta roofs, olive trees, soft morning light, old world French charm
-20. Final sanctuary image — dark room lit by single beam of light falling on a wooden table with a single amber bottle, dust particles visible in light, sacred geometry, minimal composition
+### Hero Image — Olfactory Memory Test
+A close-up photograph of a woman's nose and closed eyes, shot from the side in profile. Her face is serene, peaceful. Just below her nose, a sprig of dried lavender is held — the lavender is in sharp focus, every tiny flower visible. The woman's face is slightly soft-focus, suggesting she is deep in the act of smelling. A faint golden mist emanates from the lavender, drifting toward her nostrils. The background is warm cream (#F5EDE3). The mood is intimate, sensory, and quiet. The image makes you want to inhale. 16:9 aspect ratio.
+
+### About Section — Eva Portrait
+A portrait of a woman in her 40s, seated in a botanical workshop. She is surrounded by glass bottles, dried herbs, and distillation equipment. She wears a simple linen apron. Her eyes are closed — she is listening, not smelling (she has no sense of smell). Her hands rest on a mortar and pestle. The workshop is warm, cluttered but organized, filled with natural light. Dried flowers hang from the ceiling. She looks like a woman who has turned loss into purpose. Medium shot, natural light. 3:2 aspect ratio.
+
+### Mechanism Section — The Olfactory Nerve Pathway
+A scientific diagram showing the direct pathway from the nose to the brain. A cross-section of the human head shows the nasal cavity, the olfactory bulb (highlighted in gold), and the direct neural connection to the amygdala (emotion) and hippocampus (memory). A label reads: "3 seconds from nose to emotion." The thalamus is shown, but the pathway bypasses it — a dotted line shows the "usual" route through the thalamus, while the solid gold line shows the direct olfactory route. Clean, educational, warm tones. 16:9 aspect ratio.
+
+### Services Section — Three Cards
+Three vertical panels showing aromatherapy applications:
+1. **Diffusion**: A ceramic diffuser emitting a fine mist, backlit by warm light. The mist is visible, catching the light. A few drops of essential oil sit in the diffuser's basin. The scene is calm, domestic, inviting.
+2. **Topical**: A close-up of hands applying a diluted oil blend to a wrist. The oil glistens on the skin. A small amber glass bottle sits beside the hands. The application is gentle, precise.
+3. **Inhalation**: A person holding a tissue with two drops of essential oil, inhaling deeply. The eyes are closed, the expression is peaceful. A faint golden aura surrounds the person's head — the olfactory pathway made visible.
+Warm botanical palette — cream, green, gold. 3:1 triptych.
+
+### Process Section — Three Steps
+Three images showing the Blend Your Own Tincture workshop:
+1. **The Ingredients**: A wooden table with small glass bottles of essential oils arranged in a semicircle — citrus (top note), floral (middle note), woody (base note). Dried flowers and fresh herbs are scattered around. Warm, inviting, abundant.
+2. **The Mixing**: Hands carefully dropping essential oil from a pipette into a small roller bottle. The oil catches the light as it falls. The hands are precise, focused. The moment is creative, intentional.
+3. **The Result**: A hand holding up a finished 5-ml roller bottle, backlit by warm light. The oil inside is a pale gold. A hand-written label reads the recipient's name. The bottle is small, personal, precious.
+Warm botanical palette throughout. 1:1 per image.
+
+### Testimonial Section
+An empty botanical workshop at dusk. Glass bottles line wooden shelves, each catching the last light of day. Dried herbs hang in bundles from the ceiling. A mortar and pestle sit on the workbench. A single sprig of rosemary lies on the table, as if someone was just here. The room smells of earth and plants and time. No people. The workshop holds the memory of hands. 16:9 aspect ratio.
+
+### Footer Background
+A seamless texture of dried botanical specimens pressed onto handmade paper. The specimens are rosemary, lavender, mint, and eucalyptus — each identifiable, each slightly faded with age. The paper is warm cream, the specimens are muted greens and purples. The texture is delicate, organic, and herbarium-like. 2:1 aspect ratio.
+
+### OG / Social Share Image
+A single essential oil bottle (amber glass, black dropper cap) centered in a dark frame. From the dropper, a single golden drop falls — caught mid-air, perfectly round. Below the drop, a small lavender sprig catches the light. The background is pure black. The image is minimal, sensory, and iconic. 1.91:1 aspect ratio (1200x630px).

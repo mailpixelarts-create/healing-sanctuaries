@@ -1,99 +1,40 @@
-Prompt 1: Sacred drum resting on animal hide in candlelit ceremonial space, smoke wisps
-Style: Documentary photography, intimate
-Mood: Ancient, sacred, powerful
-Lighting: Candlelight with smoke haze
+# 12 — Shamanic Journeying: Mythological Noir
+## Image Prompts
 
-Prompt 2: Shamanic practitioner in trance state, eyes closed, drum beating, desert landscape behind
-Style: Portrait photography, ethereal
-Mood: Deep, connected, transcendent
-Lighting: Golden hour desert light
+### Hero Image — Drum Beat Interaction
+A dark, atmospheric photograph of a shamanic drum — a round frame drum covered in deer hide — suspended in mid-air against a black background. The drum is lit from below, casting long shadows upward. From the drum's surface, visible sound waves emanate in concentric circles — but instead of light, the waves are rendered as shifts in the darkness itself, like ripples in black water. At the center of the drum, a single point glows amber — the 4.5Hz heartbeat. The drum appears ancient, worn, sacred. The overall mood is mythological noir — dark, powerful, and deeply still. 16:9 aspect ratio.
 
-Prompt 3: Red rock formations of Sedona at dawn, mystical atmosphere, spirit energy visible
-Style: Landscape photography, mystical
-Mood: Powerful, ancient, alive
-Lighting: Dawn light with atmospheric haze
+### About Section — Carlos Portrait
+A portrait of a man in his 50s, seated in a dimly lit room. He wears a simple dark shirt. His hands rest on his knees, palms down. His expression is calm, measured, authoritative — the face of an anthropologist who has seen things he cannot fully explain. Behind him, the wall is adorned with Shipibo textile patterns — intricate, geometric, white on dark. A single candle burns on a small table. The light is warm, flickering, casting moving shadows. He looks like a man who walks between worlds and takes notes. Medium shot, candlelight. 3:2 aspect ratio.
 
-Prompt 4: Close-up of drumming hands, motion blur, rhythmic energy captured
-Style: Action photography, dynamic
-Mood: Rhythmic, primal, focused
-Lighting: Warm candlelight
+### Mechanism Section — Theta Brainwave State
+A scientific diagram showing brainwave frequencies. A horizontal spectrum shows:
+- Beta (13-30Hz) — normal waking consciousness
+- Alpha (8-13Hz) — relaxed awareness
+- Theta (4-7Hz) — deep meditation, dream state
+- Delta (0.5-4Hz) — deep sleep
 
-Prompt 5: Soul retrieval ceremony, practitioner journeying, ethereal spirit forms surrounding
-Style: Conceptual photography, spiritual
-Mood: Otherworldly, healing, profound
-Lighting: Blue and amber spirit light
+The Theta range (4-7Hz) is highlighted in amber. A label reads: "4.5Hz drum beat entrains brain to Theta state." Below the spectrum, a comparison: normal brainwave pattern (chaotic, multi-frequency) vs. drum-entrained pattern (rhythmic, unified, 4.5Hz). The background is dark, the style is neuroscience — authoritative, precise. 16:9 aspect ratio.
 
-Prompt 6: Desert altar with sacred objects, feathers, crystals, dried herbs, candles burning
-Style: Still life photography, ceremonial
-Mood: Sacred, grounded, powerful
-Lighting: Warm firelight
+### Services Section — Three Cards
+Three vertical panels showing shamanic journeying elements:
+1. **The Drum**: A close-up of a drumstick striking a deer-hide drum. The moment of impact — the hide deforming slightly, the sound visible as a ripple. The drum is backlit, amber glow. The strike is precise, intentional.
+2. **The Journey**: A person lying down, eyes closed, in a dark room. Above their body, a translucent figure rises — the "journeyer" leaving the physical form. The figure is semi-transparent, glowing faintly amber. The body below is still, grounded.
+3. **The Power Animal**: A dark forest at night. Between the trees, two amber eyes glow — the eyes of a power animal (wolf, hawk, or snake). The animal is not fully visible, only suggested. The forest is dense, ancient, alive with unseen presences.
+Mythological noir palette — dark, amber, shadowy. 3:1 triptych.
 
-Prompt 7: Smoke rising through candlelight, forming spirit shapes, ethereal
-Style: Abstract photography, mystical
-Mood: Transcendent, mysterious, beautiful
-Lighting: Single candle flame
+### Process Section — Three Steps
+Three images showing the Upper World Journey:
+1. **The Descent**: A person seated in a dark room, eyes closed, holding a drum. The room is lit only by a single candle. The person's body is still, but their "spirit" figure (translucent, amber) begins to rise from the crown of the head. The journey begins.
+2. **The Ascent**: The spirit figure climbing a "ladder of light" — a vertical column of amber light that extends upward into darkness. The figure is small, determined, ascending. The ladder is not physical — it is made of intention. The darkness above is vast, unknown.
+3. **The Meeting**: The spirit figure standing before a larger figure — the "spirit guide" (an archetypal elder, genderless, luminous). The two figures face each other in a space that is neither dark nor light — it is amber, warm, neutral. The guide speaks. The journeyer listens. The question is asked. The answer is received.
+Mythological noir palette throughout. 1:1 per image.
 
-Prompt 8: Eyes of shaman in deep trance, pupils dilated, ancient wisdom visible
-Style: Macro portrait, intense
-Mood: Profound, connected, seeing
-Lighting: Low warm light
+### Testimonial Section
+An empty ceremonial room at night. A single drum hangs on the wall, lit by a candle on the floor. The drum's surface catches the candlelight, creating moving shadows. The floor is covered with animal skins and woven mats. The walls are dark, undecorated except for the drum. The room is still, charged, waiting. It holds the memory of thousands of journeys. No people. The drum waits for the next beat. 16:9 aspect ratio.
 
-Prompt 9: Extraction healing ceremony, dark energy being pulled from body into crystal
-Style: Conceptual photography, healing
-Mood: Transformative, powerful, releasing
-Lighting: Contrast of dark and healing light
+### Footer Background
+A seamless texture of dark, weathered leather — the surface of an old drum hide. The leather is cracked, worn, stained with use. The texture is organic, ancient, and tactile. The color is dark brown-black (#0E0A08), with subtle variations in tone where the leather has been handled. The texture suggests years of drumming, years of journeys. 2:1 aspect ratio.
 
-Prompt 10: Sacred geometry drum pattern, painted on hide, symbolic
-Style: Still life photography, ceremonial
-Mood: Ancient, symbolic, meaningful
-Lighting: Soft directional light
-
-Prompt 11: Spirit journey landscape, lower world forest with glowing paths, otherworldly
-Style: Conceptual photography, visionary
-Mood: Mysterious, inviting, ancient
-Lighting: Bioluminescent forest glow
-
-Prompt 12: Four directional candles in ceremonial arrangement, smoke spiraling upward
-Style: Still life photography, ritual
-Mood: Sacred, balanced, powerful
-Lighting: Multiple candle flames
-
-Prompt 13: Desert night sky with stars, Sedona red rocks silhouette, spirit world above
-Style: Landscape photography, cosmic
-Mood: Vast, connected, infinite
-Lighting: Starlight with horizon glow
-
-Prompt 14: Ancestor spirits visible in smoke, translucent forms watching over ceremony
-Style: Conceptual photography, ancestral
-Mood: Protective, loving, present
-Lighting: Smoke-filtered candlelight
-
-Prompt 15: Hands holding sacred herbs, offering to fire, smoke rising
-Style: Detail photography, devotional
-Mood: Reverent, offering, connected
-Lighting: Fire glow
-
-Prompt 16: Shamanic mask resting on altar, surrounded by crystals and feathers
-Style: Still life photography, ceremonial
-Mood: Ancient, powerful, protective
-Lighting: Dramatic side lighting
-
-Prompt 17: Lower world entrance, cave mouth with ethereal light within, beckoning
-Style: Conceptual photography, mysterious
-Mood: Inviting, transformative, deep
-Lighting: Otherworldly interior glow
-
-Prompt 18: Upper world sky realm, clouds with spirit beings, luminous
-Style: Conceptual photography, celestial
-Mood: Elevated, peaceful, wise
-Lighting: Celestial golden light
-
-Prompt 19: Integration moment, person returning from journey, eyes opening with new sight
-Style: Portrait photography, awakening
-Mood: Transformed, present, seeing
-Lighting: Soft morning light
-
-Prompt 20: Complete ceremonial circle, fire at center, practitioners around, smoke forming vortex
-Style: Documentary photography, communal
-Mood: United, powerful, sacred
-Lighting: Fire at center with surrounding darkness
+### OG / Social Share Image
+A shamanic drum centered in a dark frame. The drum is lit from below, casting amber light upward. From the drum's surface, concentric circles emanate outward — visible sound waves in amber. The waves expand to fill the frame. The background is pure black. The image is mythological, powerful, and iconic. 1.91:1 aspect ratio (1200x630px).

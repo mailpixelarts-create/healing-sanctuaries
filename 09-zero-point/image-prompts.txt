@@ -1,62 +1,34 @@
-ZERO POINT — Image Prompts
-================================
+# 09 — Acupuncture: Cyberpunk Terminal
+## Image Prompts
 
-1. Hero Background
-   "Dark green matrix code rain falling on black background, digital typography, cyberpunk aesthetic, glowing green characters, high contrast, cinematic, 4K"
+### Hero Image — Pressure Point Explorer
+A translucent human body rendered in wireframe, shown from the front, arms slightly extended. The body is rendered in neon green (#00FF88) lines on a black background, like a holographic medical display. Across the body, 361 acupuncture points are marked as small glowing dots — each one a different brightness depending on its importance. The 12 primary meridians are traced as flowing green lines connecting the points. At the center of the chest, a single point glows brighter than the rest — the heart point (HT7). Data overlays float around the body: "LI4 — Large Intestine 4 — Analgesic Point," "SP6 — Spleen 6 — Contraindicated in Pregnancy." The aesthetic is cyberpunk medical — Blade Runner meets TCM textbook. 16:9 aspect ratio.
 
-2. Dr. Wei Portrait
-   "Portrait of an elderly Chinese acupuncturist, serene expression, traditional robes, soft green lighting, professional studio shot, cinematic color grading, 8K"
+### About Section — Kenji Portrait
+A portrait of a man in his late 30s, wearing a black t-shirt and surgical gloves. He holds a single acupuncture needle between his thumb and forefinger, examining it against the light. The needle is impossibly thin — a single hair of stainless steel. His eyes are focused, precise. The background is a dark treatment room, medical equipment faintly visible in shadow. The light is clinical, green-tinted. He looks like a surgeon who chose needles over scalpels. Medium close-up, sharp focus. 3:2 aspect ratio.
 
-3. Acupuncture Needles Close-up
-   "Extreme close-up of fine acupuncture needles on sterile surface, metallic gleam, shallow depth of field, medical precision, dark moody lighting, macro photography"
+### Mechanism Section — The Gate Control Theory
+A scientific diagram showing the Gate Control Theory of Pain. A cross-section of the spinal cord shows two nerve pathways: a pain signal (red) traveling up from the body, and an acupuncture stimulus (green) traveling from the hand. Where they meet at the dorsal horn, the green signal "gates" the red signal — blocking it. A label reads: "Acupuncture stimulates A-delta fibers, closing the pain gate." The background is dark, the style is neuroscience journal — precise, authoritative. 16:9 aspect ratio.
 
-4. Moxibustion Steam
-   "Smoldering moxa stick releasing aromatic smoke, warm orange glow against dark background, atmospheric, ritualistic, cinematic lighting, 4K"
+### Services Section — Three Cards
+Three vertical panels showing acupuncture applications:
+1. **Ear Acupuncture (Nada)**: A close-up of a human ear with 5 small acupuncture needles placed at specific points. The ear is rendered in wireframe green, with the needles shown as bright green dots. Data overlay: "Sympathetic, Shen Men, Point Zero, Endocrine, Thalamus."
+2. **Body Meridian**: A full-body wireframe showing the Large Intestine meridian running from the index finger to the face. The meridian is highlighted in bright green. A needle is shown at LI4 (the Hegu point) on the hand.
+3. **Electroacupuncture**: Two needles inserted in a patient's lower back, connected by thin wires to a small device. The device sends visible green electrical pulses through the wires to the needles. The pulses are rhythmic, precise.
+Cyberpunk medical aesthetic. 3:1 triptych.
 
-5. Cupping Therapy
-   "Glass cups on patient's back, circular marks visible, therapeutic atmosphere, soft lighting, clinical yet ancient aesthetic, professional photography"
+### Process Section — Three Steps
+Three images showing the acupuncture experience:
+1. **Diagnosis**: Kenji's gloved hand on a patient's wrist, reading the pulse. A small screen beside him shows a real-time ECG waveform in green. The room is dark, the screen is the primary light source. Clinical, precise.
+2. **Insertion**: Extreme close-up of a needle touching skin. The moment of contact — the skin dimpling slightly, the needle beginning to penetrate. The needle is backlit, glowing green. The image is sharp, clinical, beautiful.
+3. **Retention**: A wide shot of the patient lying still with needles in place. The room is dark except for the green glow of the needles. A monitor shows stable vital signs. The patient's eyes are closed. The needles are working. The body is listening.
+Cyberpunk clinical palette throughout. 1:1 per image.
 
-6. Meridian Diagram
-   "Anatomical meridian map overlay on human body, glowing green lines on dark skin, futuristic medical visualization, data visualization aesthetic, 8K"
+### Testimonial Section
+An empty acupuncture treatment room. A treatment table with a white sheet. A small tray of needles sits on a steel cart beside the table — the needles arranged in order of size, from 0.16mm to 0.35mm. A monitor on the wall shows a flat green line — a heartbeat. The room is dark, clinical, quiet. The needles are ready. The room waits for the next patient. 16:9 aspect ratio.
 
-7. Beijing Clinic Exterior
-   "Traditional Chinese medicine clinic facade at night, neon signage in green, rain-slicked streets, cyberpunk meets ancient, cinematic wide shot"
+### Footer Background
+A seamless texture of dark circuit board traces in neon green (#00FF88) on black. The traces are thin, precise, and form organic patterns that resemble meridian lines. The texture is technical, digital, and medical — like the schematic of a body that is also a machine. 2:1 aspect ratio.
 
-8. Treatment Room
-   "Minimalist acupuncture treatment room, clean lines, green accent lighting, single treatment table, professional medical space, architectural photography"
-
-9. Needle Insertion Detail
-   "Precision needle insertion between fingers, human hand, delicate technique, soft focus background, medical expertise, warm lighting, 4K"
-
-10. Qi Flow Visualization
-    "Abstract visualization of qi energy flowing through body, green luminous streams, dark background, digital art, data visualization style"
-
-11. Herbal Medicine Cabinet
-    "Traditional Chinese medicine herbal cabinet, hundreds of small drawers, ancient wood, warm lighting, cultural heritage, museum quality photography"
-
-12. Pulse Diagnosis
-    "Doctor's fingers on patient's wrist, pulse diagnosis technique, intimate moment, soft lighting, professional medical photography, 8K"
-
-13. Patient Journey Diagram
-    "Infographic showing patient journey from consultation to treatment, minimal green lines on black, data visualization, Swiss design aesthetic"
-
-14. Acupuncture Point Map
-    "Detailed acupuncture point illustration, hundreds of numbered points, medical diagram, clean lines, educational, green on black, 4K"
-
-15. Healing Hands
-    "Elderly practitioner's hands, weathered but precise, holding acupuncture needles, soft green backlighting, portrait of expertise, cinematic"
-
-16. Modern Clinic Interior
-    "Contemporary acupuncture clinic reception, minimalist design, green accent wall, waiting area, professional medical interior, architectural photography"
-
-17. Treatment Preparation
-    "Sterile needles arranged in precise pattern on white tray, medical preparation, clean, organized, professional healthcare, macro photography"
-
-18. Night Practice
-    "Acupuncture clinic at night, single green neon light, rain on windows, atmospheric, cyberpunk interior, cinematic mood lighting"
-
-19. Patient Testimonial Scene
-    "Serene patient lying on treatment table, needles in place, peaceful expression, soft green ambient light, healing atmosphere, 8K"
-
-20. Brand Identity
-    "ZERO POINT logo, minimalist typography, green on black, Swiss precision design, medical authority, corporate identity, vector clean lines"
+### OG / Social Share Image
+A wireframe human body centered in a dark frame, arms extended. The body is rendered in neon green lines. Acupuncture points glow at key locations — LI4, ST36, LV3, HT7, DU20. Thin green lines connect the points along meridians. The background is pure black. The image is clinical, futuristic, and iconic. 1.91:1 aspect ratio (1200x630px).

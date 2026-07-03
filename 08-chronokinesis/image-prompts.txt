@@ -1,68 +1,34 @@
-CHRONOKINESIS — Image Generation Prompts
-=========================================
-Aesthetic: Raw Earth × Academic Monograph
-Style Reference: Hand-drawn textures, muted earth tones, paper-like grain
-Color Palette: #3A2C24 (ink), #F5EAD8 (paper), #B56133 (signal)
+# 08 — Ayurveda: Raw Earth Academic
+## Image Prompts
 
----
+### Hero Image — Prakriti Compass
+A top-down photograph of a brass compass lying on aged parchment paper. The compass needle points not to North, but to one of three labeled points: VATA (air/space), PITTA (fire/water), KAPHA (earth/water). Each point is a different color — Vata is blue-grey, Pitta is amber-red, Kapha is green-brown. The compass is ornate, antique, with Sanskrit characters etched into the bezel. The parchment beneath has faded botanical illustrations of herbs. The overall aesthetic is raw earth meets academic — like an 18th-century physician's desk. The lighting is warm, directional, casting long shadows. 16:9 aspect ratio.
 
+### About Section — Dr. Vikram Portrait
+A portrait of a man in his 60s, seated in a traditional Ayurvedic clinic. He wears a simple white kurta. His hands are on a patient's wrist — he is reading the pulse (Nadi Pariksha). His eyes are closed in concentration. The clinic is warm wood, with shelves of glass jars containing herbs and powders. A brass oil vessel sits on the desk. The light is natural, coming from a window to his left. He looks like a man who has spent decades listening to bodies. Medium close-up, warm tones. 3:2 aspect ratio.
 
-1. HERO LAYER — BACK (Mountains)
-"A hand-drawn mountain range in muted brown ink on aged cream paper. Loose crosshatching technique. Three distinct mountain ridges receding into distance. Texture of old book illustration. Minimal color: raw umber and sepia tones. No sky detail — just the peaks against warm paper."
+### Mechanism Section — The Dosha System
+An infographic showing the three Doshas as overlapping circles (Venn diagram style). Vata (air/space) is blue, Pitta (fire/water) is red-orange, Kapha (earth/water) is green. Each circle contains its associated qualities: Vata = dry, light, cold, mobile. Pitta = hot, sharp, oily, mobile. Kapha = heavy, slow, oily, stable. The overlapping areas show shared qualities. The background is warm parchment (#E8DDD0). The style is academic but accessible — like a well-designed textbook illustration. 16:9 aspect ratio.
 
-2. HERO LAYER — MID (River Valley)
-"A flowing river valley illustrated in loose ink strokes. Meandering water paths cutting through rolling hills. Style of antique botanical cartography. Warm browns and faded ochre. Paper texture visible. Top-down perspective suggesting a map illustration."
+### Services Section — Three Cards
+Three vertical panels showing Ayurvedic practices:
+1. **Tongue Scraping**: A close-up of a copper tongue scraper being drawn across a tongue. The copper catches warm light. The image is clinical but not unappealing — it looks like a morning ritual, not a medical procedure.
+2. **Oil Pulling**: A person swishing coconut oil in their mouth, cheeks slightly puffed. The person is in a bathroom, morning light visible. The oil glistens. The ritual is mundane but sacred.
+3. **Abhyanga (Self-Oil Massage)**: A person pouring warm sesame oil from a brass vessel onto their forearm. The oil is golden, viscous, catching the light. The pour is slow, deliberate. The body is oiled, glowing.
+Raw earth palette — brown, gold, cream. 3:1 triptych.
 
-3. HERO LAYER — FRONT (Fields)
-"Foreground terrain of agricultural fields rendered in heavy dark ink. Dense crosshatching suggesting fertile earth. Low horizon line. Style of vintage agricultural survey illustration. Dark brown and near-black tones against aged paper."
+### Process Section — Three Steps
+Three images showing the daily Ayurvedic routine:
+1. **Morning (Brahma Muhurta)**: A person rising before dawn, the sky outside the window a deep blue-grey. They reach for a copper water vessel on the bedside table. The room is still, quiet, dark. The day begins before the world does.
+2. **Midday (Pachakala)**: A person eating a simple meal — rice, dal, vegetables — from a brass thali. The food is warm, steaming. The person eats with their hands, slowly, attentively. The meal is medicine.
+3. **Evening (Sandhya)**: A person sitting cross-legged on the floor, eyes closed, a small flame (diya) burning in front of them. The room is dark except for the flame. The flame flickers. The day ends in stillness.
+Warm earth tones throughout. 1:1 per image.
 
-4. CELESTIAL BODY (Sun/Moon)
-"A hand-drawn sun rendered as a circular form with radiating lines. Style of astronomical diagram from 18th century. Warm amber and sepia. Minimal — just the orb with suggested light rays. On cream paper background."
+### Testimonial Section
+An Ayurvedic pharmacy — wooden shelves floor to ceiling, each shelf lined with glass jars containing powders, dried herbs, and oils. The jars are labeled in Hindi and English. A brass scale sits on the counter, with a small pile of turmeric powder on one side. The room is warm, amber-lit, and smells of earth and spice. It is a room where medicine is made by hand. No people. The pharmacy holds the knowledge of generations. 16:9 aspect ratio.
 
-5. DR. ANANDA SHARMA PORTRAIT
-"Portrait of an Indian woman in her 50s, serene expression, wearing simple cotton clothing. Hand-drawn illustration style. Muted earth tones. Warm brown ink on cream paper. Suggests wisdom and calm authority. Academic monograph illustration style."
+### Footer Background
+A seamless texture of raw, unpolished sandstone in warm earth tones — tan, ochre, sienna. The stone is rough, granular, tactile. The texture suggests the earth itself, the raw materials of Ayurveda, the unprocessed power of nature. The color palette is warm, grounding, and ancient. 2:1 aspect ratio.
 
-6. DOSHA ASSESSMENT — SYMBOL
-"Abstract symbol representing dosha assessment: three overlapping circles in hand-drawn ink style. Minimal, clean. Raw umber and sepia. On aged paper texture. Style of medical illustration diagram."
-
-7. HERBAL PRESCRIPTIONS — BOTANICAL
-"Hand-drawn botanical illustration of medicinal herbs: ginger root, turmeric, ashwagandha. Style of Ayurvedic pharmacy reference plate. Detailed line work in brown ink on cream paper. Label lines suggesting a pharmacopoeia plate."
-
-8. PANCHAKARMA — THERAPY SCENE
-"Abstract illustration of hands performing Ayurvedic oil massage. Loose ink strokes suggesting movement and flow. Warm brown tones on cream paper. Style of vintage medical illustration. Minimal background, focus on gesture."
-
-9. VATA DOSHA — ILLUSTRATION
-"Hand-drawn illustration representing Vata dosha: swirling air patterns, bare tree branches, feathers. Style of esoteric symbol plate. Light, airy composition. Sepia and raw umber on aged paper."
-
-10. PITTA DOSHA — ILLUSTRATION
-"Hand-drawn illustration representing Pitta dosha: flame-like forms, water ripples, intense geometric patterns. Style of alchemical diagram. Warm amber and deep brown ink on cream paper. Suggests controlled fire."
-
-11. KAPHA DOSHA — ILLUSTRATION
-"Hand-drawn illustration representing Kapha dosha: dense earth formations, still water, lush botanical growth. Style of geological survey illustration. Heavy ink lines, dark brown on aged paper. Suggests stability and weight."
-
-12. HERBAL TEA BLEND — VATA
-"Hand-drawn illustration of loose tea herbs: ginger, cinnamon sticks, cardamom pods, licorice root. Arranged on aged paper. Style of apothecary reference plate. Warm brown ink, sepia tones. Suggests warmth and grounding."
-
-13. HERBAL TEA BLEND — PITTA
-"Hand-drawn illustration of cooling herbs: rose petals, fennel seeds, coriander, mint leaves. Delicate line work in brown ink on cream paper. Style of botanical pharmacopoeia. Light, airy composition."
-
-14. HERBAL TEA BLEND — KAPHA
-"Hand-drawn illustration of stimulating herbs: tulsi leaves, black peppercorns, ginger, cloves, lemon peel. Bold ink strokes in dark brown on aged paper. Style of Ayurvedic materia medica plate."
-
-15. RISHIKESH LANDSCAPE
-"Landscape view of Rishikesh, India. Hand-drawn illustration style: Ganges river, temple spires, Himalayan foothills. Muted earth tones, brown ink on cream paper. Style of vintage travel illustration. Atmospheric perspective."
-
-16. RIVER QUOTE DIVIDER
-"Decorative divider element: flowing water rendered in simple ink lines. Horizontal orientation. Brown ink on cream paper. Style of antique book ornament. Minimal, elegant."
-
-17. PILLAR OF PHILOSOPHY — ICON
-"Small icon for philosophy section: lotus flower rendered in simple ink strokes. Style of medical reference illustration. Brown ink on aged paper. Minimal, symbolic."
-
-18. JOURNEY STEP — CONSULTATION ICON
-"Icon representing Ayurvedic consultation: two facing profiles suggesting dialogue. Hand-drawn in brown ink. Style of vintage medical diagram. Simple, symbolic on cream paper."
-
-19. JOURNEY STEP — HERBAL ICON
-"Icon representing herbal medicine: mortar and pestle with botanical elements. Hand-drawn ink illustration. Style of apothecary reference plate. Brown ink on aged paper."
-
-20. FOOTER TEXTURE
-"Seamless paper texture in warm cream (#F5EAD8) with subtle fiber grain visible. Suggests handmade paper or old book page. Uniform, no distinct marks — just material texture."
+### OG / Social Share Image
+A brass compass centered on aged parchment. The compass needle points upward, glowing amber. Around the compass, three words are arranged in a triangle: VATA, PITTA, KAPHA — each in its associated color. The background is warm parchment (#E8DDD0). The image is academic, grounding, and iconic. 1.91:1 aspect ratio (1200x630px).

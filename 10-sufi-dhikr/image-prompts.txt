@@ -1,102 +1,52 @@
-CHAKRA BALANCING — Image Prompts
-Afrofuturist × Sacred Geometry Aesthetic
+# 10 — Chakra Balancing: Afrofuturist Sacred
+## Image Prompts
 
-Prompt 1: Afrofuturist woman in meditation pose, seven glowing chakra points along spine, golden sacred geometry background
-Style: Digital art, Afrofuturism
-Mood: Empowered, spiritual, cosmic
-Lighting: Bioluminescent glow, deep purple ambient
+### Hero Image — Chakra Color Cycling
+A full-body silhouette of a person in a meditation pose, shown from the front. The silhouette is pure black against a deep indigo-black background (#0E0A14). Running vertically through the center of the body, from the base of the spine to the crown of the head, is a column of seven luminous orbs — each a different color:
+- Root (Muladhara): Deep red (#FF0000) at the base
+- Sacral (Svadhisthana): Orange (#FF6B00) below the navel
+- Solar Plexus (Manipura): Yellow (#FFD700) at the stomach
+- Heart (Anahata): Green (#00CC66) at the chest
+- Throat (Vishuddha): Blue (#0066FF) at the throat
+- Third Eye (Ajna): Indigo (#4B0082) between the brows
+- Crown (Sahasrara): Violet (#8B00FF) at the top of the head
 
-Prompt 2: Flower of life sacred geometry pattern in gold on deep indigo background, chakra symbols integrated
-Style: Geometric art, spiritual
-Mood: Infinite, orderly, transcendent
-Lighting: Soft golden emanation
+Each orb pulses with light, casting its color onto the surrounding silhouette. The colors bleed into each other at the edges, creating a rainbow gradient. The overall effect is Afrofuturist — sacred geometry meets digital art. 16:9 aspect ratio.
 
-Prompt 3: Close-up of hands holding glowing crystal at heart center, green light radiating outward
-Style: Macro photography, healing
-Mood: Nurturing, powerful, intimate
-Lighting: Soft green bioluminescence
+### About Section — Priya Portrait
+A portrait of a woman in her 40s, wearing a white coat over a colorful sari. She is in a clinic, but the clinic is vibrant — the walls are painted in chakra colors, and a small altar with crystals and candles sits on her desk. She holds a color wheel in one hand, pointing to the green (heart) section. Her expression is warm, precise, authoritative. She looks like a doctor who has learned to speak in color. Medium shot, warm lighting. 3:2 aspect ratio.
 
-Prompt 4: Split-screen composition — left side burning red/orange root energy, right side icy violet crown energy
-Style: Conceptual photography, duality
-Mood: Tension, balance, transformation
-Lighting: Contrasting warm and cool
+### Mechanism Section — Chakra-Endocrine Mapping
+A diagram showing the 7 chakras mapped to the 7 major endocrine glands. On the left, the chakra symbols with their Sanskrit names. On the right, the endocrine glands with their medical names. Dotted lines connect each pair:
+- Root → Adrenals
+- Sacral → Gonads
+- Solar Plexus → Pancreas
+- Heart → Thymus
+- Throat → Thyroid
+- Third Eye → Pituitary
+- Crown → Pineal
 
-Prompt 5: West African woman performing color therapy, seven colored lights projected on body
-Style: Documentary photography, cultural
-Mood: Healing, ancestral, modern
-Lighting: Spectrum of chakra colors
+The background is deep indigo. The style is educational but sacred — medical diagrams infused with spiritual geometry. 16:9 aspect ratio.
 
-Prompt 6: Sacred geometry mandala with chakra lotus petals, gold on black, Afrofuturist design elements
-Style: Digital illustration, geometric
-Mood: Cosmic, ordered, beautiful
-Lighting: Inner golden glow
+### Services Section — Three Cards
+Three vertical panels showing chakra practices:
+1. **Color Breathing**: A person seated, breathing in colored light. Red light enters on inhale, fills the base of the spine. The light is visible, translucent, moving upward. The person's eyes are closed, focused inward.
+2. **Gland Visualization**: A close-up of a person's throat, with a glowing blue orb visible at the thyroid gland. The orb pulses gently. The person's mouth is slightly open, as if speaking a mantra. The blue light illuminates the neck from within.
+3. **Sound Frequency**: A person seated with headphones, eyes closed. Above each chakra, a musical note is displayed — C, D, E, F, G, A, B. The notes glow in their respective chakra colors. Sound waves emanate from the notes.
+Afrofuturist palette — deep purples, neon colors on dark backgrounds. 3:1 triptych.
 
-Prompt 7: Sound bath scene with singing bowls arranged in chakra pattern, practitioner in meditation
-Style: Environmental photography, healing space
-Mood: Resonant, peaceful, powerful
-Lighting: Warm amber candlelight
+### Process Section — Three Steps
+Three images showing the 7-Week Journey:
+1. **Week 1 — Root**: A person standing barefoot on red earth, arms at their sides. Red light glows at the base of their spine. The earth beneath their feet seems to pulse with the same red. The image is grounded, heavy, stable.
+2. **Week 4 — Heart**: The same person, now standing in a green garden. Green light glows at their chest. Their arms are open, extended. The green light extends outward from their heart, connecting with the green of the plants. The image is open, compassionate, alive.
+3. **Week 7 — Crown**: The same person, seated in meditation. Violet light glows at the crown of their head, extending upward in a column of light that disappears beyond the frame. The person is still, luminous, complete. The journey is finished. The journey is beginning.
+Afrofuturist sacred palette. 1:1 per image.
 
-Prompt 8: Seven singing bowls in rainbow sequence, close-up detail, brass and copper textures
-Style: Still life photography, instruments
-Mood: Harmonic, precise, sacred
-Lighting: Warm metallic reflections
+### Testimonial Section
+An empty meditation room painted in deep indigo (#0E0A14). Seven candles are arranged in a vertical line on the far wall, each a different chakra color. The candles are lit, their flames flickering. The light from the candles casts colored shadows on the floor. The room is still, sacred, waiting. The candles are the only light source. No people. The room holds the frequency. 16:9 aspect ratio.
 
-Prompt 9: Afrofuturist healer's hands hovering over client's spine, visible energy threads connecting chakras
-Style: Artistic photography, energy work
-Mood: Transmitted, healing, intimate
-Lighting: Ethereal golden threads
+### Footer Background
+A seamless texture of deep indigo fabric with subtle gold thread woven through it in sacred geometry patterns — the Flower of Life, the Seed of Life, the Sri Yantra. The fabric is rich, tactile, and suggests both African textile traditions and cosmic architecture. The gold thread catches light, creating a subtle shimmer. 2:1 aspect ratio.
 
-Prompt 10: Chakra wheel spinning, motion blur creating rainbow spiral, sacred geometry overlay
-Style: Long exposure photography, abstract
-Mood: Dynamic, balanced, cosmic
-Lighting: Prismatic light trails
-
-Prompt 11: Geometric pattern dissolving into energy flow, transition from order to movement
-Style: Experimental photography, conceptual
-Mood: Transformation, fluidity, awakening
-Lighting: Gradient spectrum
-
-Prompt 12: Close-up of third eye area with indigo light, geometric patterns projected on face
-Style: Portrait photography, mystical
-Mood: Intuitive, powerful, seeing
-Lighting: Deep indigo spotlight
-
-Prompt 13: Root chakra visualization — red earth tones, grounding roots extending downward
-Style: Nature photography, symbolic
-Mood: Grounded, stable, foundational
-Lighting: Warm earth tones, sunrise
-
-Prompt 14: Heart chakra scene — green garden with sacred geometry overlay, healer in center
-Style: Landscape photography, spiritual
-Mood: Open, loving, healing
-Lush green ambient light
-
-Prompt 15: Crown chakra — violet light descending from above, geometric halo pattern
-Style: Conceptual photography, divine
-Mood: Connected, enlightened, cosmic
-Lighting: Violet celestial light
-
-Prompt 16: Seven colored crystals arranged in chakra formation on dark surface, each glowing
-Style: Macro photography, crystals
-Mood: Precise, powerful, aligned
-Lighting: Individual crystal illumination
-
-Prompt 17: Afrofuturist temple interior with geometric windows casting colored light patterns
-Style: Architectural photography, sacred space
-Mood: Welcoming, geometric, spiritual
-Lighting: Colored light through patterns
-
-Prompt 18: practitioner performing sound healing with tuning forks at different chakra points
-Style: Documentary photography, healing practice
-Mood: Precise, resonant, focused
-Lighting: Clean, clinical yet warm
-
-Prompt 19: Energy assessment scene — healer's hands reading client's aura, visible color field
-Style: Artistic photography, energy reading
-Mood: Perceptive, intuitive, diagnostic
-Lighting: Soft auric field glow
-
-Prompt 20: Final image of balanced chakra system, all seven centers glowing equally, person in perfect alignment
-Style: Cinematic photography, completion
-Mood: Balanced, whole, aligned
-Lighting: Full spectrum harmonious glow
+### OG / Social Share Image
+Seven glowing orbs arranged in a vertical line against a pure black background. From bottom to top: red, orange, yellow, green, blue, indigo, violet. Each orb is a perfect sphere of light, each a different size (larger at the base, smaller at the crown). Thin gold lines connect the orbs, forming the chakra column. The image is sacred, digital, and iconic. 1.91:1 aspect ratio (1200x630px).

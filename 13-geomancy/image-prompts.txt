@@ -1,20 +1,34 @@
-1. "Minimalist hero shot of hands in cloud hands position, golden hour light, cinematic depth of field, muted earth tones, 16:9"
-2. "Aerial view of ancient Chinese tea plantation with morning mist, qi energy visualized as subtle golden streams, photorealistic"
-3. "Silhouette of person performing Zhan Zhuang standing meditation at sunrise, mountain backdrop, ethereal glow, fine art photography"
-4. "Close-up of weathered hands performing silk reeling exercise, soft natural light, shallow depth of field, documentary style"
-5. "Five animal frolics: tiger pose, dynamic movement, dust particles in light beams, cinematic motion blur"
-6. "Master Li portrait, serene expression, traditional clothing, natural bamboo background, warm lighting, editorial photography"
-7. "Minimalist interior of qi gong studio, bamboo floors, natural light streaming through rice paper screens, architectural photography"
-8. "Abstract visualization of qi flow through meridian lines, soft golden particles on dark background, digital art"
-9. "Dragon and tiger qigong movement, double exposure with mountains, artistic interpretation, muted palette"
-10. "Group qi gong class in park setting, morning light filtering through trees, candid documentary photography"
-11. "Textural close-up of ancient Chinese calligraphy scroll, ink on rice paper, macro photography, warm tones"
-12. "Person meditating by lotus pond, reflection in water, serene atmosphere, fine art landscape photography"
-13. "Traditional Chinese medicine herbs and tools arranged on wooden surface, overhead shot, natural lighting"
-14. "Bamboo forest path with sunlight streaming through, leading lines, minimalist composition, zen aesthetic"
-15. "Hands forming energy ball between palms, visible light distortion effect, dark background, conceptual photography"
-16. "Mountain landscape at dawn with single figure practicing qigong, vast scale, atmospheric perspective, cinematic wide shot"
-17. "Ink wash painting style illustration of qi gong movement, traditional Chinese art aesthetic, flowing lines"
-18. "Modern qi gong studio interior, clean lines, natural materials, warm minimalist design, architectural visualization"
-19. "Close-up of flowing water over smooth stones, representing qi flow, long exposure, serene nature photography"
-20. "Person performing crane stance, balance and grace, golden hour backlight, silhouette against sky, fine art photography"
+# 13 — Qi Gong: Surrealist Meditative
+## Image Prompts
+
+### Hero Image — Matter.js Physics
+A surrealist photograph of a person standing in a meditation pose, but the "qi" around them is rendered as floating physical objects — stones, water droplets, leaves, and light particles — all suspended in mid-air as if gravity has been suspended. The objects orbit the person's body in slow, elliptical paths, like planets around a sun. The person is centered, still, grounded. The floating objects are in motion, alive, responsive to the person's breath. The background is warm cream (#E8E0D4). The overall effect is surrealist meditation — Magritte meets Tai Chi. The image suggests that stillness creates movement, and movement creates stillness. 16:9 aspect ratio.
+
+### About Section — Master Liang Portrait
+A portrait of an 82-year-old man, standing in a garden at dawn. He wears simple white cotton clothing — loose trousers and a long-sleeved shirt. His posture is perfect — spine straight, shoulders relaxed, knees slightly bent. His hands are held in front of his abdomen, palms facing each other, as if holding an invisible ball. The ball of qi is visible as a faint golden glow between his palms. His face is wrinkled, peaceful, alive with quiet intelligence. The garden behind him is misty, with bamboo and pine trees. The light is soft, diffused, early morning. He moves so slowly that watching him is like watching a glacier. Medium-wide shot, natural light. 3:2 aspect ratio.
+
+### Mechanism Section — Micro-Circulation
+A scientific diagram showing the effect of slow movement on micro-circulation. A cross-section of muscle tissue shows capillaries (red) and interstitial fluid (blue). On the left: "Fast movement" — capillaries are compressed, fluid is stagnant. On the right: "Slow, mindful movement" — capillaries are dilated, fluid is flowing freely. A label reads: "Slow contraction acts as a second heart." The background is warm cream. The style is physiology textbook — precise, clear. 16:9 aspect ratio.
+
+### Services Section — Three Cards
+Three vertical panels showing Qi Gong exercises:
+1. **8 Brocades — Drawing the Bow**: A person in a wide stance, one hand pulling back as if drawing a bowstring, the other hand extended forward. The posture is strong, grounded. A faint golden line traces the energy path from the extended hand to the pulling hand.
+2. **5 Animal Play — Crane**: A person standing on one leg, arms extended like wings. The posture is balanced, elegant, alive with the spirit of the crane. A faint golden outline of a crane overlays the person's body.
+3. **Zhan Zhuang — Standing Like a Tree**: A person standing still, arms rounded as if embracing a tree. The posture is fixed, grounded, eternal. Roots (visualized as golden lines) extend from the feet into the earth. The person is a tree.
+Surrealist meditative palette — cream, gold, soft shadows. 3:1 triptych.
+
+### Process Section — Three Steps
+Three images showing the arc of a Qi Gong session:
+1. **The Opening**: A person standing in a garden, arms at their sides, eyes closed. They take a single breath. On the inhale, their arms rise slowly — so slowly that the movement is barely perceptible. The qi (golden glow) begins to gather at the dantian (lower abdomen). Wide shot, misty garden.
+2. **The Flow**: The person performing the 8 Brocades — slow, deliberate movements, each held for 3 seconds. The qi flows through the body in golden lines, following the meridians. Close-up of the hands, the qi visible between the palms. The movement is hypnotic, precise.
+3. **The Stillness**: The person standing in Zhan Zhuang — completely still, arms rounded, knees bent. The qi has settled into a warm glow around the entire body. The garden is quieter. The light is softer. The person has become the tree. The session is over. The practice continues.
+Surrealist meditative palette throughout. 1:1 per image.
+
+### Testimonial Section
+An empty garden at dawn. A single stone path winds through bamboo and pine. Morning mist hangs in the air, catching the first light. A stone bench sits beside the path, worn smooth by decades of sitting. The garden is still, patient, alive with the memory of slow movement. No people. The garden holds the practice. 16:9 aspect ratio.
+
+### Footer Background
+A seamless texture of aged rice paper with subtle gold flecks scattered across it. The paper is warm cream, slightly textured, with visible fibers. The gold flecks catch light, creating a gentle shimmer. The texture suggests the intersection of earth and sky, the material and the spiritual. 2:1 aspect ratio.
+
+### OG / Social Share Image
+A person standing in a meditation pose, centered in a dark frame. Around their body, golden particles float in slow orbits — leaves, stones, light. The particles form a gentle spiral pattern, suggesting both movement and stillness. The background is pure black. The image is surrealist, meditative, and iconic. 1.91:1 aspect ratio (1200x630px).

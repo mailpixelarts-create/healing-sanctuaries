@@ -1,62 +1,34 @@
-Crystal Healing Website — Image Prompts
-========================================
+# 06 — Crystal Healing: Maison Dark
+## Image Prompts
 
-1. Hero Background — Faceted Amethyst Geode
-A massive amethyst geode split open revealing deep purple crystalline formations, dramatic side lighting casting long geometric shadows, dark moody atmosphere, cinematic color grading with burgundy and deep violet tones, macro detail on crystal facets, editorial photography style
+### Hero Image — Facet Clip-Paths
+A single amethyst crystal cluster, photographed against a pure black background. The crystal is lit from the side, revealing its internal structure — layers of purple, lilac, and white banding. The light catches the facets, creating sharp geometric reflections. Overlaid on the crystal are thin gold lines tracing its facets — like an architectural blueprint of the stone's geometry. The gold lines are precise, delicate, and follow the exact angles of the crystal's natural structure. The overall effect is Maison Cartier meets geology — luxury and science unified. The image is cropped tight, filling the frame. 16:9 aspect ratio.
 
-2. Hero Overlay Texture — Mineral Dust
-Fine amethyst crystal dust particles suspended in warm light beams against a near-black background, volumetric lighting, microscopic detail, ethereal atmosphere, high-end editorial
+### About Section — Dr. Sana Portrait
+A portrait of a woman in her 50s, wearing a white lab coat over a dark blouse. She is in a geology lab, surrounded by rock samples, microscopes, and equipment. She holds a small amethyst crystal up to the light, examining it with the focus of a jeweler. Her glasses are perched on her nose. The lab is well-lit but not clinical — warm wood benches, organized chaos. She looks like a scientist who has found beauty in data. Medium close-up, natural lab lighting. 3:2 aspect ratio.
 
-3. Gemma Portrait — The Healer
-Professional portrait of a woman in her 40s with silver-streaked dark hair, wearing minimal earth-toned linen, holding a large clear quartz point, soft natural window light, dark studio background, editorial fashion photography, shallow depth of field
+### Mechanism Section — Piezoelectric Properties
+A scientific diagram showing the piezoelectric effect in quartz. A quartz crystal is shown in cross-section, with its molecular lattice visible. An arrow indicates pressure being applied to one end. On the opposite end, a small spark of electricity emanates — measured in micro-amps (0.3μA). The diagram is labeled: "Pressure → Lattice deformation → Charge separation." The background is dark. The style is Materials Science textbook — authoritative, precise. 16:9 aspect ratio.
 
-4. Crystal Grid Layout — Rose Quartz & Clear Quartz
-Top-down view of a sacred geometry crystal grid featuring rose quartz hearts and clear quartz points arranged in a flower of life pattern on dark slate, warm accent lighting from below, editorial product photography
+### Services Section — Three Cards
+Three vertical panels showing crystal applications:
+1. **Grid Layout**: A top-down view of a crystal grid — seven crystals arranged in the Flower of Life pattern on a dark surface. Gold lines connect the crystals, forming sacred geometry. The crystals glow faintly at their tips.
+2. **Body Placement**: A person lying down with five crystals placed on their body — crown, throat, heart, solar plexus, root. Each crystal emits a faint glow matching its color. The body is relaxed, receptive.
+3. **Meditation Hold**: A close-up of cupped hands holding a clear quartz point. The crystal catches light and refracts it into tiny rainbows on the palms. The hands are still, reverent.
+Maison dark palette — black, gold, crystal tones. 3:1 triptych.
 
-5. Stone Meditation Scene
-Serene meditation space with dozens of candles, a reclining figure surrounded by arranged crystals on a dark velvet cloth, soft amber glow, bokeh lights, cinematic composition, dark luxury aesthetic
+### Process Section — Three Steps
+Three images showing the crystal healing experience:
+1. **Selection**: A tray of 10 crystals arranged on black velvet. A hand reaches toward one — the fingers are mid-motion, drawn to a specific stone. The selection is intuitive, not deliberate. Close-up, warm light on the crystals.
+2. **Placement**: The practitioner's hands placing a crystal on the client's chest. The crystal is rose quartz, soft pink. The hands are precise, gentle. The placement is exact — over the heart center. The background is dark.
+3. **Resonance**: A wide shot of the client lying with crystals on their body. A faint glow surrounds each crystal — the piezoelectric effect made visible. The room is dark except for the crystal light. The client is still, receptive, held.
+Maison aesthetic throughout — dark, luxurious, precise. 1:1 per image.
 
-6. Grid Activation — Energy Burst
-Abstract visualization of crystal grid activation — concentric rings of light emanating from a central clear quartz point, amethyst and citrine clusters along the rings, dark background with luminous energy waves, digital art meets editorial photography
+### Testimonial Section
+A dark room with a single display case in the center. Inside the case, a large amethyst geode from Uruguay is lit from below. The geode's interior is a cathedral of purple crystals, each facet catching the light differently. The case is black glass, the pedestal is dark marble. The room is otherwise empty. The geode is the only subject — ancient, patient, beautiful. No people. Museum-quality presentation. 16:9 aspect ratio.
 
-7. Amethyst Cluster Close-Up
-Macro photography of a raw amethyst cluster with dramatic purple-to-clear gradient, individual crystal points catching warm side light, water droplets on facets, extreme detail, dark moody background
+### Footer Background
+A seamless texture of polished black marble with thin gold veins. The veins are organic, branching, luminous — as if gold has been poured into the cracks of volcanic rock. The overall tone is pure black (#0C0A08) with gold (#C9A96E) highlights. The texture suggests luxury, depth, and the geological patience of crystal formation. 2:1 aspect ratio.
 
-8. Crystal Grid — Star Tetrahedron
-Star tetrahedron crystal grid arrangement with black tourmaline base points and selenite towers, photographed from low angle with dramatic rim lighting, dark studio environment, editorial product shot
-
-9. Mineral Library
-Wall of glass-fronted wooden cabinets displaying organized crystal specimens, each illuminated by small warm lights, dark wood and leather textures, vintage apothecary aesthetic, wide angle editorial interior
-
-10. Raw Crystal Collection
-Artful arrangement of raw unpolished crystals — citrine, amethyst, rose quartz, black tourmaline — on a dark stone surface, side lighting revealing natural fracture patterns, editorial still life photography
-
-11. Tucson Desert Landscape at Sunset
-Arizona desert landscape at golden hour with saguaro cacti silhouetted against a deep amber and burgundy sky, mineral-rich red earth in foreground, cinematic wide composition, editorial landscape
-
-12. Crystal Point Macro — Light Refraction
-Single clear quartz crystal point with light refracting through it creating rainbow spectrum on dark surface, extreme macro photography, shallow depth of field, editorial product detail
-
-13. Healing Session Atmosphere
-Dimly lit healing room with a treatment table draped in cream linen, crystals arranged around the perimeter, warm candlelight creating dancing shadows, soft focus on background, editorial interior photography
-
-14. Birthstone Collection — Full Set
-Twelve birthstones arranged in a perfect circle on a dark matte surface, each stone lit from below creating glowing pools of color — garnet to tanzanite gradient, overhead editorial product photography
-
-15. Crystal Grid Mandala
-Elaborate crystal mandala viewed from directly above — hundreds of small tumbled stones in concentric color rings transitioning from dark center to light edges, sacred geometry pattern, studio lighting, editorial flat lay
-
-16. Selenite Tower Formation
-Tall selenite crystal towers standing like architectural columns against a dark background, dramatic uplighting creating ethereal glow through translucent mineral, editorial architectural photography style
-
-17. Mineral Cross-Section
-Cut and polished agate slice revealing concentric banding patterns in deep reds, purples and cream, backlit to show translucency, extreme detail macro photography, dark background
-
-18. Crystal Healing Hands
-Close-up of hands holding a large smoky quartz point with smaller amethyst stones scattered around, warm directional lighting, shallow depth of field, editorial hand detail photography, dark background
-
-19. Sacred Geometry Overlay
-Abstract overlay of sacred geometry patterns — flower of life, Metatron's cube — rendered in thin gold lines over a dark amethyst crystal texture, digital art meets editorial design, subtle luminosity
-
-20. Footer Texture — Amethyst Cave Interior
-Wide view inside an amethyst geode cave, massive crystal formations on walls and ceiling, a single warm light source creating dramatic shadows and purple reflections, cinematic editorial photography, dark luxury atmosphere
+### OG / Social Share Image
+A single clear quartz crystal point centered in a dark frame. The crystal is backlit, creating a bright white glow at its core. From the core, thin gold lines radiate outward along the crystal's facets — like a starburst or a faceted diamond. The background is pure black. The image is luxurious, precise, and iconic. 1.91:1 aspect ratio (1200x630px).

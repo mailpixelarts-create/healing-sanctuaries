@@ -1,51 +1,34 @@
-========================================
-DaoDe Sound Healing — Image Generation Prompts
-Aesthetic: Haute Couture Kinetic × Deep Ocean
-========================================
+# 02 — Sound Healing: Deep Ocean Kinetic
+## Image Prompts
 
-1. A massive Tibetan singing bowl made of thousands of glowing cyan particles floating in deep indigo-black space, particles drifting and shimmering, photorealistic, dark cinematic lighting, 8K
+### Hero Image — Waveform Visualizer
+A wide cinematic shot of a dark room illuminated only by the glow of a massive crystal singing bowl in the center. The bowl is translucent, catching blue-white light from within. Sound waves are visible as concentric ripples emanating from the bowl, rendered as luminous blue (#4A90D9) oscilloscope lines that fill the air like the rings of Saturn. The floor is reflective black, mirroring the waves. The background is deep ocean blue-black (#060A10). Particles of light drift upward like bioluminescent plankton. The mood is immersive, hypnotic, and vast. Shot on anamorphic lens, 2.39:1 aspect ratio.
 
-2. Sound healer Elias Harmon sitting in lotus position surrounded by concentric rings of sound waves visualized as translucent cyan light, dark ocean-toned studio, moody editorial photography
+### About Section — Alex Portrait
+A portrait of a man in his early 40s, wearing headphones around his neck, eyes closed, head slightly tilted as if listening to something far away. He is in a dark recording studio, surrounded by audio equipment — mixing boards, speakers, cables. But the equipment is shrouded in shadow; only his face is lit. The light is cool blue, coming from below — as if the light itself is a sound frequency. His expression is peaceful, almost transcendent. He looks like a man who found silence in noise. Medium close-up, 50mm, shallow DOF. 3:2 aspect ratio.
 
-3. Close-up of hands gently striking a large antique brass singing bowl, ripples of cyan light emanating from the bowl like sound waves, dark background, dramatic lighting, fine art photography
+### Mechanism Section — Frequency Spectrum
+An abstract visualization of sound frequencies. A horizontal spectrum showing the range from 20Hz to 20,000Hz. The therapeutic range (100Hz–500Hz) is highlighted in bright blue (#4A90D9), while the rest fades to dark grey. Within the highlighted range, specific healing frequencies are marked: 110Hz, 128Hz, 130Hz, 432Hz. The visualization looks like a medical scan or an oscilloscope readout. Clean, scientific, minimal. Dark background. 16:9 aspect ratio.
 
-4. Aerial view of a dark sanctuary room with multiple crystal singing bowls arranged in a sacred geometry pattern, each bowl emitting soft cyan glow, minimal and luxurious interior design
+### Services Section — Three Cards
+Three vertical panels showing sound healing instruments:
+1. **Crystal Singing Bowl**: A frosted white crystal bowl on a dark surface, glowing faintly from within. Blue light refracts through the crystal. Close-up, shallow DOF.
+2. **Gong**: A large bronze gong suspended in a dark room. A mallet strikes the center, sending visible blue ripples through the air. Dramatic side-lighting.
+3. **Tuning Fork**: A steel tuning fork held above a person's forearm. The fork vibrates, and the air around it shimmers with blue energy waves. Macro shot.
+Consistent deep blue-black palette across all three. 3:1 triptych.
 
-5. Abstract macro photograph of water surface with intricate sound wave patterns creating sacred geometry, cyan and deep indigo tones, ultra-detailed, dark moody lighting
+### Process Section — Three Steps
+Three images showing the progression of a sound healing session:
+1. **Preparation**: A person lying on a mat in a candlelit room, surrounded by crystal bowls and gongs. Wide shot, atmospheric, warm-cool contrast.
+2. **Immersion**: Close-up of the person's chest rising and falling, with visible blue sound waves passing through their body. The waves are rendered as translucent light. Intimate, powerful.
+3. **Stillness**: The same person in the same position, but now the waves have settled. The room is quieter. A faint blue glow lingers on their skin. Peaceful, resolved.
+Cinematic, dark, immersive. 1:1 per image.
 
-6. A Tibetan monk in deep meditation with visible sound frequency waves rendered as flowing cyan lines surrounding his body, dark temple interior, cinematic color grading
+### Testimonial Section
+An empty sound healing room after a session. Crystal bowls are scattered across the floor, some still faintly glowing. A single gong hangs in the background, catching a sliver of blue light. The floor is dark wood, reflecting the bowls' glow. The air feels thick with residual vibration. No people. The silence is visible. Medium shot, atmospheric. 16:9 aspect ratio.
 
-7. Modern sound therapy studio with a client lying on a heated mat surrounded by singing bowls and gong instruments, warm ambient lighting, interior design photography, dark ocean palette
+### Footer Background
+A seamless texture of deep ocean water, viewed from below the surface looking up. Dark blue-black (#060A10) at the bottom, transitioning to a slightly lighter blue (#4A90D9) at the top where light filters through. Subtle caustic light patterns dance across the surface. The texture should evoke depth, pressure, and the sound of water. 2:1 aspect ratio.
 
-8. Large planetary gong being played with a soft mallet, concentric sound waves visualized as cyan particle ripples expanding outward, dramatic side lighting, dark studio
-
-9. Crystal singing bowl with visible vibrations creating patterns in water placed beside it, cyan and white light, dark background, fine art still life photography
-
-10. Abstract visualization of human body outline filled with flowing cyan frequency waves and chakra points glowing, dark background, digital art, holographic effect
-
-11. Voice toning session: a woman with eyes closed, mouth slightly open, visible sound waves emanating from her throat rendered as flowing cyan light particles, editorial portrait
-
-12. Himalayan mountain landscape at dawn with a lone figure meditating, sound waves visualized as subtle cyan rings expanding across the valley, cinematic wide shot, atmospheric
-
-13. Interior of a luxurious sound healing sanctuary with dark walls, plush mats, brass instruments, cyan accent lighting, architectural interior photography, minimal and sacred
-
-14. Macro detail of gong surface with intricate engravings catching cyan light, visible vibration patterns, dark background, fine art photography, ultra-detailed
-
-15. Abstract sound wave landscape: flowing cyan and indigo frequency patterns resembling ocean waves, digital art, dark background, kinetic energy captured in still image
-
-16. Hands holding a small hand pan drum, cyan sound particles rising from the instrument like fireflies, dark moody setting, editorial photography
-
-17. Sound waves passing through human brain illustration, synapses firing in cyan light, dark background, scientific meets mystical aesthetic, digital art
-
-18. A collection of tuning forks arranged on dark velvet, each fork emitting subtle cyan light trails showing their frequency, product photography, luxury aesthetic
-
-19. Underwater scene with bioluminescent particles forming the shape of a singing bowl, deep ocean blue tones with cyan accents, ethereal and dreamlike, fine art photography
-
-20. Final branding shot: the word "DaoDe" in elegant serif typography with cyan sound wave animations flowing through the letters, dark background, motion blur effect, cinematic title card
-
-========================================
-NOTES:
-- All images should maintain the Deep Ocean palette: dark ink blacks, cyan (#00F0FF) accents, subtle indigo
-- Mood: sacred, luxurious, cinematic, serene yet powerful
-- Avoid bright/white backgrounds — everything lives in darkness
-- Typography in any text overlays should feel haute couture editorial
+### OG / Social Share Image
+A single crystal singing bowl centered in a dark frame. The bowl emits concentric blue rings of light that expand outward, filling the frame. The rings are perfectly circular, like ripples in still water. The background is pure black. The image is hypnotic, symmetrical, and iconic. 1.91:1 aspect ratio (1200x630px).

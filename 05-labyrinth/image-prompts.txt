@@ -1,20 +1,34 @@
-1. Cinematic portrait of Dr. Aira Vasiliev, 40s, sharp features, clinical white coat, dramatic lighting, Berlin architecture background, medical precision aesthetic, brutalist composition
-2. Abstract geometric shape expanding and contracting, dark ink background, glowing signal red edges, minimal, medical equipment precision, macro photography style
-3. Breath visualization, air currents rendered as light trails, dark background, clinical environment, high contrast, brutalist architecture elements
-4. Wim Hof method cold exposure, ice bath scene, dramatic lighting, medical monitoring equipment, Berlin industrial space, sharp focus
-5. Pranayama hands position, close-up, dramatic side lighting, clinical precision, minimal background, medical documentation style
-6. Box breathing diagram, four equal squares, brutalist typography, signal red accents, technical drawing aesthetic, medical precision
-7. Holotropic breathwork session, participants in circle, dramatic overhead lighting, industrial Berlin space, raw concrete, medical precision atmosphere
-8. 4-7-8 breathing technique visualization, geometric timing diagram, brutalist mono font, clinical colors, technical precision
-9. Dr. Aira Vasiliev's Berlin clinic, 42 Breath Lane, exterior shot, brutalist architecture, clinical signage, dramatic shadows
-10. Breath measurement equipment, medical precision instruments, macro photography, dark background, signal red indicators
-11. Respiratory system anatomical illustration, brutalist style, medical precision, minimal, ink and paper colors
-12. Cold therapy session, industrial Berlin space, dramatic lighting, medical monitoring, raw concrete walls, precision atmosphere
-13. Breath pattern visualization, waveform display, medical monitoring screen, brutalist interface, signal red data points
-14. Pranayama practice space, minimal interior, dramatic light shafts, clinical precision, Berlin industrial architecture
-15. Medical precision breathing apparatus, brutalist design, macro photography, dark background, signal red accents
-16. Breath meditation circle, overhead view, dramatic lighting, industrial Berlin space, medical precision arrangement
-17. Respiratory therapist session, clinical documentation style, dramatic side lighting, minimal background, precision focus
-18. Breath energy visualization, particle effects, dark background, signal red bursts, medical precision mapping
-19. Dr. Aira Vasiliev hands demonstrating technique, macro photography, clinical precision, dramatic lighting
-20. Berlin breathwork clinic interior, brutalist architecture, medical equipment, dramatic natural light, precision composition
+# 05 — Breathwork: Clinical Precision
+## Image Prompts
+
+### Hero Image — 4-7-8 Breathing Pacer
+A minimalist diagram of the human respiratory system, rendered in clean white lines against a dark clinical background (#0A0C0E). The lungs are shown in cross-section, with the diaphragm highlighted in blue (#5B9BD5). Superimposed over the lungs is a circular timer: the outer ring is divided into three segments — 4 (inhale, blue), 7 (hold, amber), 8 (exhale, blue). The timer is mid-cycle, the "hold" segment glowing amber. The overall aesthetic is medical-precise, like a diagram from a respiratory therapy textbook — but elevated to art. The image communicates: this is a technology of breath. 16:9 aspect ratio.
+
+### About Section — Jake Portrait
+A portrait of a man in his late 30s, standing at the edge of a swimming pool, still in his wetsuit. He is looking down at the water, his reflection visible on the surface. His posture is relaxed but alert — the body of an athlete who has learned to control his physiology. The pool is indoor, clinical blue tiles, fluorescent lighting. The water is perfectly still. He looks like a man who has stared into the deep and brought something back. Medium shot, natural light, slight green-blue color cast. 3:2 aspect ratio.
+
+### Mechanism Section — The Chemistry of Calm
+A scientific diagram showing the CO2-O2 exchange in the alveoli. On the left: a normal breath cycle, with CO2 (red) and O2 (blue) molecules in balance. On the right: an extended exhale breath cycle, with CO2 building up (more red molecules) and O2 being absorbed more efficiently (blue molecules concentrated). A text label reads: "Extended exhale increases alveolar CO2 by 40%." The background is dark clinical blue. The diagram is precise, labeled, but not cluttered. The style is Nature journal — authoritative, clean. 16:9 aspect ratio.
+
+### Services Section — Three Cards
+Three vertical panels showing breathwork techniques:
+1. **Box Breathing**: A square timer with four equal sides — inhale 4, hold 4, exhale 4, hold 4. The timer is mid-cycle, one side glowing blue. Clinical, precise. A Navy SEAL symbol faintly visible in the background.
+2. **Wim Hof Method**: A person exhaling forcefully, head tilted back. Visible breath vapor in cold air. The person is outdoors, snow visible. The breath is powerful, visible, real.
+3. **Holotropic**: A person lying down, eyes closed, breathing continuously. The breath is visible as a translucent blue wave passing through the body. The wave is continuous, unbroken. The person is in a deep state.
+Dark clinical palette, blue accents. 3:1 triptych.
+
+### Process Section — Three Steps
+Three images showing the arc of a breathwork session:
+1. **The Setup**: A person lying on a mat in a clinical room. A timer on the wall shows 4:7:8. The room is sparse, clean, white. The person's hands rest on their belly. The belly rises.
+2. **The Hold**: Close-up of the person's face, eyes closed, mouth slightly open. A visible tension in the jaw — the effort of holding. A single bead of sweat on the temple. The timer shows 7. The hold is the hardest part.
+3. **The Release**: The person exhales — a long, slow, controlled release. The tension dissolves from the face. The timer shows 8. The body softens into the mat. The release is relief. The release is freedom.
+Clinical blue-white palette throughout. 1:1 per image.
+
+### Testimonial Section
+An empty breathwork room. A row of mats on a white floor. Each mat has a paper bag beside it — the brown paper bags used to breathe into during intense sessions. One bag is crumpled, as if someone has used it and left. The room is clean, clinical, but not cold. The light is soft, diffused. The room holds the echo of breath. No people. 16:9 aspect ratio.
+
+### Footer Background
+A seamless texture of clinical white tile with subtle blue-grey grout lines. The tile is slightly worn — not dirty, but used. The texture evokes a hospital corridor, a swimming pool changing room, a laboratory. The feeling is clean, precise, and slightly sterile. The blue-grey tone (#5B9BD5 at 20% opacity) gives it warmth. 2:1 aspect ratio.
+
+### OG / Social Share Image
+A circular timer divided into three segments — 4, 7, 8 — centered in a dark frame. The "4" segment is blue, the "7" is amber, the "8" is blue. A thin white line separates the segments. In the center, a small lung icon. The background is pure dark (#0A0C0E). The image is minimal, clinical, and iconic. 1.91:1 aspect ratio (1200x630px).
