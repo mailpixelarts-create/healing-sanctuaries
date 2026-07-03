@@ -6,6 +6,44 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## v1.1 — 2026-07-03
+
+### Visual Uniqueness Audit — Fix 06-Johrei Clone
+
+**Audit Results:** 207 requirements checked, 13/14 sites look genuinely different.
+
+**Problem Found:** 06-Johrei and 01-Craniosacral were structurally identical:
+- Same side nav (80px fixed left, vertical text)
+- Same hero offset (margin-left: 80px)
+- Same footer grid (3-col, margin-left: 80px)
+- Same card style (bordered, surface bg, top-bar-on-hover)
+- Only accent color differed (gold vs. rose)
+
+**Fix Applied:** Complete redesign of 06-Johrei
+
+**06-Johrei New Design DNA:**
+- **Nav**: Bottom floating crystal tray (fixed bottom, centered, hexagonal icons)
+- **Hero**: Split layout (text left, canvas right with crystal facets)
+- **Cards**: Hexagonal crystal-facet cards (clip-path hexagons, offset diamond decoration)
+- **Footer**: Single-column centered with crystal divider
+- **Fonts**: Added IBM Plex Mono (mono) alongside Canela
+- **Process connectors**: Hexagonal dots instead of circles
+
+**Files Modified:**
+- `06-johrei/index.html` — Restructured hero, nav, footer
+- `06-johrei/style.scss` — Complete visual redesign
+
+**Before/After Comparison:**
+| Element | 01-Craniosacral | 06-Johrei (before) | 06-Johrei (after) |
+|---------|----------------|--------------------|--------------------|
+| Nav | Side nav, 80px | Side nav, 80px | Bottom floating crystal tray |
+| Hero | Centered canvas | Centered canvas | Split layout (text + canvas) |
+| Cards | Bordered, top-bar | Bordered, top-bar | Hexagonal crystal-facet |
+| Footer | 3-col grid | 3-col grid | Single-column centered |
+| Accent | Gold | Rose | Rose (kept) |
+
+---
+
 ## v0.1 — 2026-07-03
 
 ### System Check & Doctrine Alignment
